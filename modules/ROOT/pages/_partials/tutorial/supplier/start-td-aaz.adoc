@@ -1,0 +1,17 @@
+. In the *CONFIGURATION* section of the left-hand navigation pane on the <<img-endpoints>> (or any other APM Configuration page), click *Transaction Designer*.
++
+The <<img-td-aaz>> appears.
+
+[[img-td-aaz]]
+
+image::yc/td-aaz.png[img-td-aaz, title="Transaction Designer Page"]
+
+[start=2]
+
+. On the <<img-td-aaz>>, click *Create Template*.
++
+The <<img-td-new-aaz>> appears.
+
+[[img-td-new-aaz]]
+
+image::yc/td-new-aaz.png[img-td-new-aaz, title="Transaction Design Page"]

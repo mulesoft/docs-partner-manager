@@ -1,0 +1,18 @@
+= Environments
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+include::{partialsdir}/edit-home-partner-settings.adoc[]
+[start=3]
+
+. On the Administration Page, in the left hand navigation pane, click *Environments*.
++
+The <<img-environments>> appears.
+
+[[img-environments]]
+image::environments.png[title="Environments Page"]
+
+== Get Environment Information
+
+The information on the <<img-environments>> is required when using xref:partner-manager-connector.adoc[Partner Manager Connector].

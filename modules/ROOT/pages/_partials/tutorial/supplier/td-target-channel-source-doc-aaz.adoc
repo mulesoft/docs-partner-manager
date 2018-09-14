@@ -1,0 +1,18 @@
+// To Create the Source Document Type for the Target Channel
+
+. On the <<img-td-target-channel-in-progress-aaz>>, in the Source Document panel of the Target Channel section, click *New Document*. +
+The <<img-td-new-source-doc-aaz>> appears.
+
+[[img-td-new-source-doc-aaz]]
+
+image::yc/td-new-source-doc-aaz.png[img-td-new-source-doc-aaz, title="Source Document Page"]
+
+[start=2]
+
+. On the <<img-td-new-source-doc-aaz>>, in the *Standard* listbox, click the down-arrow, then select *JSON*.
++
+The *Message Type* box appears.
+. In the *Message Type* box, type *PurchaseOrder*.
+. Click *Save*.
++
+The <<img-td-target-channel-in-progress-aaz>> appears, displaying the Document Type you added.

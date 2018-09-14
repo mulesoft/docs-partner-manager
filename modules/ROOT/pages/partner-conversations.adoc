@@ -1,0 +1,129 @@
+= Partner Conversations
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+When you create a  _Partner Conversation_, you establish a sequence of events between your company and a trading partner. You can track each event in the sequence of the conversation as it proceeds from the first event to the last.
+
+This page provides instructing for creating and editing Partner Conversations. For information about tracking Conversations, see  xref:transaction-monitoring.adoc[Transaction Monitoring].
+
+include::{partialsdir}/edit-settings.adoc[]
+
+[start=3]
+
+. In the *CONFIGURATION* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *Partner Conversations*.
++
+The <<img-partner-conversations>> appears.
+
+[[img-partner-conversations]]
+
+image::partner-conversations.png[title="Partner Conversations Page"]
+
+[start=4]
+
+. From this page, you can:
+
+* <<Add a New Partner Conversation>>
+* <<Edit an Existing Partner Conversation>>
+
+== Edit an Existing Partner Conversation
+
+. On the <<img-partner-conversations>>, click the Partner Conversation you want to edit.
++
+The <<img-partner-conversation-edit>> appears.
+
+[[img-partner-conversation-edit]]
+
+image::partner-conversation-edit.png[title="Partner Conversation-Edit Page"]
+
+[start=2]
+
+. On the <<img-partner-conversation-edit>>, you can:
+* <<Add a New Step>>
+* <<Edit an Existing Step>>
+
+== Add a New Partner Conversation
+
+. On the <<img-partner-conversations>>, click *New*.
++
+The <<img-partner-conversation>> appears.
+
+[[img-partner-conversation]]
+
+image::partner-conversation.png[title="Partner Conversation Page"]
+
+[start=2]
+
+. In the *Name* box, type a name for this process.
+. Click *Save*.
++
+The <<img-partner-conversation-steps>> appears.
+
+[[img-partner-conversation-steps]]
+
+image::partner-conversation-steps.png[title="Partner Conversation Steps Page"]
+
+== Add a New Step
+. On the <<img-partner-conversation-steps>>, in the *Steps* section, click *New*. +
+The <<img-partner-conversation-define-step>> appears.
+
+[[img-partner-conversation-define-step]]
+
+image::partner-conversation-define-step.png[title="Partner Conversation Define-Step Page"]
+
+[start=2]
+
+ . In the *Direction* dropdown listbox, click the down-arrowhead, then click either *INBOUND* or *OUTBOUND*.
+
+ . Click the *Document Definition* box.
++
+The *Pick a document* box appears.
+
+. In the *Pick a document* box, click the row that corresponds to the document for which you want to define a process, then click *Use selected*.
++
+The <<img-partner-conversation-steps>> reappears, with the direction and document you selected in the preceding steps shown.
+. Click *Save* to save the definition.
++
+The <<img-partner-conversation-step-added>> appears.
+
+[[img-partner-conversation-step-added]]
+
+image::partner-conversation-step-added.png[title="Partner Conversation Step-Added Page"]
+
+== Add Additional Steps
+
+. On the <<img-partner-conversation-step-added>>, click *New*.
++
+The <<img-partner-conversation-add-another-step>> appears.
+
+[[img-partner-conversation-add-another-step]]
+
+image::partner-conversation-add-another-step.png[title="Partner Conversation Add-Another-Step-Page"]
+
+[start=2]
+
+. Enter values for direction and definition, as in the previous steps.
+
+. In the *Document Definition Properties* dropdown listbox, click the down-arrowhead, then select a property.
++
+NOTE: For a property to appear in this list, it must have been defined in xref:document-types.adoc[Document Types].
+
+. In the *Other Document Definition Properties* dropdown listbox, click the down-arrowhead, then select a property.
++
+NOTE: For a property to appear in this list, it must have been defined in xref:document-types.adoc[Document Types].
+
+. In the *New Correlation Type Name* box, enter a name for this correlation type, then click *Create*.
+. Click *Save*. +
+The <<img-partner-conversation-step-added>> appears.
++
+To add another step, repeat the previous steps.
+
+== Edit an Existing Step
+
+. On the <<img-partner-conversation-edit>>, in the *Step* column, click the number that corresponds to the step you want to edit.
++
+The <<img-partner-conversation-define-step>> appears.
+. Edit information that pertains to the step as appropriate.
++
+For more information, see <<Add a New Step>>.
+. Click *Save*.

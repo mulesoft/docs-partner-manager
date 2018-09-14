@@ -1,0 +1,55 @@
+. On the <<img-partner-configuration>>, click *AAZFasteners*.
++
+The <<img-company-information-aaz>> appears.
+
+[[img-company-information-aaz, Company Information Page]]
+
+image::yc/company-information-aaz.png[img-company-information-yc, title="Company Information Page"]
+
+[start=2]
+
+. In the *Partners* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *Identifiers*.
++
+The <<img-identifiers-aaz>> appears.
+
+[[img-identifiers-aaz, Identifiers Page]]
+
+image::yc/identifiers-aaz.png[img-identifiers-aaz, title="Identifiers Page"]
+
+[start=3]
+
+. On the <<img-identifiers-aaz>>, click *New*.
++
+The <<img-identifier-new>> appears.
+
+[[img-identifier-new, New Identifier Page]]
+
+image::identifier-new.png[img-identifier-new, title="New Identifier Page"]
+
+[start=4]
+
+. In the *Type* box, click the down-arrow.
++
+A list of identifier types appears.
+. From the list, select *X12-ISA*.
++
+More identifier boxes appear.
++
+(The specific boxes that appear depend on your choice in this step.)
+. In the *Interchange ID Qualifier (ISA)* listbox, click the down-arrow.
++
+A list of qualifiers appears.
+. *AAZFasteners* and *AcmeHomeSupply* do not use standards-based identifiers, so *ZZ (Mutually Defined)* is the appropriate choice.
+. In the *Interchange ID (ISA)* box, type *AAZ*.
++
+
+. Click *Save* to save the new identifier.
++
+The <<img-identifiers-x12-added-aaz2>> appears.
+
+
+[[img-identifiers-x12-added-aaz2, Identifiers Page (Identifier Added)]]
+
+image::yc/identifiers-x12-added-aaz2.png[img-identifiers-x12-added-aaz2, title="Identifiers Page (X12-ISA Identifier Added)"]
+
+Note that the Identifier you added in the preceding steps (*X12-ISA*) now appears.

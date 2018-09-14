@@ -1,0 +1,158 @@
+= EDI X12 Order Processing Example
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords: b2b, edi, x12, order, processing, example
+
+This example shows how to process an X12 850 document, export data to a CSV file, and generate a 997 acknowledgement using the File endpoint, xref:x12-module.adoc[X12 Module], xref:3.9@mule-runtime::using-mel-with-batch-processing.adoc[Using MEL with Batch Processing] module, and xref:3.9@mule-runtime::dataweave.adoc[DataWeave].
+
+== Prerequisites
+
+Before going further, install Anypoint Studio, the EDI Module in Anypoint Studio, and be familiar with the basic concepts of Mule applications.
+
+== Concepts
+
+The example application is comprised of two flows and a batch process.
+
+These do the following:
+
+* ReceiveOrdersFromPartner: Reads in an EDI file, validates it, sends it off for processing, and triggers the sending of an acknowledgment.
+* Process850s: This batch job processes each record and outputs them to a CSV file with the item ID, quantity, and price.
+* SendAck: Send a 997 acknowledgment generated from the first flow.
+
+image::x12-order-processing-flow.png[X12 Order Processing Studio Flow]
+
+== XML for Example
+
+[source,xml,linenums]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw"
+    xmlns:edifact-edi="http://www.mulesoft.org/schema/mule/edifact-edi" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata"
+    xmlns:tls="http://www.mulesoft.org/schema/mule/tls"
+    xmlns:weave="http://www.mulesoft.org/schema/mule/ee/weave"
+    xmlns:x12-edi="http://www.mulesoft.org/schema/mule/x12-edi"
+    xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:json="http://www.mulesoft.org/schema/mule/json"
+    xmlns:mulexml="http://www.mulesoft.org/schema/mule/xml"
+    xmlns:edi="http://www.mulesoft.org/schema/mule/edi"
+    xmlns:cmis="http://www.mulesoft.org/schema/mule/cmis"
+    xmlns:magento="http://www.mulesoft.org/schema/mule/magento"
+    xmlns:batch="http://www.mulesoft.org/schema/mule/batch"
+    xmlns:sap="http://www.mulesoft.org/schema/mule/sap"
+    xmlns:db="http://www.mulesoft.org/schema/mule/db"
+    xmlns:odata="http://www.mulesoft.org/schema/mule/odata"
+    xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking"
+    xmlns:ws="http://www.mulesoft.org/schema/mule/ws"
+    xmlns:data-mapper="http://www.mulesoft.org/schema/mule/ee/data-mapper" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+    xmlns:sfdc="http://www.mulesoft.org/schema/mule/sfdc"
+    xmlns:file="http://www.mulesoft.org/schema/mule/file"
+    xmlns="http://www.mulesoft.org/schema/mule/core"
+    xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+    xmlns:spring="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-current.xsd
+http://www.mulesoft.org/schema/mule/cmis
+http://www.mulesoft.org/schema/mule/cmis/current/mule-cmis.xsd
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core
+http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http
+http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/sfdc
+http://www.mulesoft.org/schema/mule/sfdc/current/mule-sfdc.xsd
+http://www.mulesoft.org/schema/mule/ee/data-mapper
+http://www.mulesoft.org/schema/mule/ee/data-mapper/current/mule-data-mapper.xsd
+http://www.mulesoft.org/schema/mule/file
+http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/ws
+http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking
+http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/odata
+http://www.mulesoft.org/schema/mule/odata/current/mule-odata.xsd
+http://www.mulesoft.org/schema/mule/db
+http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/sap
+http://www.mulesoft.org/schema/mule/sap/current/mule-sap.xsd
+http://www.mulesoft.org/schema/mule/batch
+http://www.mulesoft.org/schema/mule/batch/current/mule-batch.xsd
+http://www.mulesoft.org/schema/mule/magento
+http://www.mulesoft.org/schema/mule/magento/current/mule-magento.xsd
+http://www.mulesoft.org/schema/mule/edi
+http://www.mulesoft.org/schema/mule/edi/current/mule-edi.xsd
+http://www.mulesoft.org/schema/mule/xml
+http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd
+http://www.mulesoft.org/schema/mule/json
+http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/x12-edi
+http://www.mulesoft.org/schema/mule/x12-edi/current/mule-x12-edi.xsd
+http://www.mulesoft.org/schema/mule/ee/weave
+http://www.mulesoft.org/schema/mule/ee/weave/current/weave.xsd
+http://www.mulesoft.org/schema/mule/tls
+http://www.mulesoft.org/schema/mule/tls/current/mule-tls.xsd
+http://www.mulesoft.org/schema/mule/edifact-edi
+http://www.mulesoft.org/schema/mule/edifact-edi/current/mule-edifact-edi.xsd
+http://www.mulesoft.org/schema/mule/ee/dw
+http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd">
+
+<!--     <context:property-placeholder location="classpath:conf.properties" />
+ -->
+    <x12-edi:config name="TheMart" doc:name="EDI" groupIdSelf="RECEIVER" interchangeIdQualifierSelf="ZZ"
+    interchangeIdSelf="RECEIVER" groupIdPartner="SENDER" interchangeIdPartner="SENDER" interchangeIdQualifierPartner="ZZ" >
+        <x12-edi:schemas>
+            <x12-edi:schema>/x12/005010/850.esl</x12-edi:schema>
+            <x12-edi:schema>/x12/005010/855.esl</x12-edi:schema>
+        </x12-edi:schemas>
+    </x12-edi:config>
+
+    <flow name="ReceiveOrdersFromPartner" >
+        <file:inbound-endpoint path="input" moveToPattern="processed.edi" moveToDirectory="processed" responseTimeout="10000" doc:name="File"/>
+        <x12-edi:read config-ref="TheMart" doc:name="Read EDI Doc"/>
+        <logger message="#[payload.TransactionSets.v005010['850']]" level="INFO" doc:name="Logger"/>
+        <flow-ref name="Process850s" doc:name="Process850s"/>
+        <flow-ref name="SendAck" doc:name="SendAck"/>
+    </flow>
+    <flow name="Process850s" processingStrategy="asynchronous">
+        <set-payload value="#[payload.TransactionSets.v005010['850']]" doc:name="Extract 850s"/>
+        <dw:transform-message doc:name="Transform Message" metadata:id="ID">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/csv
+---
+payload.Detail."0100_PO1_Loop" map {
+	OrderId: $.'0100_PO1'.PO101[0],
+	Amount: $.'0100_PO1'.PO104[0] * $.'0100_PO1'.PO102[0]
+}]]></dw:set-payload>
+        </dw:transform-message>
+        <file:outbound-endpoint path="output" outputPattern="export.csv" responseTimeout="10000" doc:name="File"/>
+    </flow>
+    <flow name="SendAck"  processingStrategy="asynchronous">
+        <set-payload value="#[ ['TransactionSets' : ['v5010' : ['997' : payload.FunctionalAcksGenerated] ] ] ]" doc:name="Create EDI Message"/>
+        <x12-edi:write config-ref="TheMart" doc:name="Send 997"/>
+        <file:outbound-endpoint path="output" outputPattern="ack.edi" responseTimeout="10000" doc:name="File"/>
+    </flow>
+
+</mule>
+----
+
+You can add this project flow to Anypoint Studio to test.
+
+////
+== Steps to Run the Example
+
+To run this example:
+
+// . Download the application by clicking the link:{attachmentsdir}/x12-850-processing.zip[EDI X12 850 Processing zip file].
+// . Import the application into Anypoint Studio by going to the File menu, clicking Import, and selecting Anypoint Studio Generated Deployable Archives. Then click Next, select the downloaded application, and click Finish.
+. Right-click the Read EDI Doc message processor and click Add X12 EDI libraries to project.
+. Right-click the imported project folder, "x12-850-processing", select Run As, and click Mule Application.
+. Inside the project is a file in src/test/resources called "TheMart.edi". Create a copy and place it in the input folder.
+. After a few seconds, two files are created in the output directory. "ack.edi" contains the 997 acknowledgement and the "export.csv" file which contains the exported items from the 850.
+////
+
+== See Also
+
+* https://forums.mulesoft.com[MuleSoft Forum].
+* https://support.mulesoft.com[Contact MuleSoft Support].

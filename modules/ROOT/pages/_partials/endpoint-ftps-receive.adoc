@@ -1,0 +1,193 @@
+== FTPS Receive Settings
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+| Server Address
+| Server address to which inbound B2B documents are delivered.
+
+Required?::
+Yes
+
+Valid values::
+Alphanumeric
+
+Default::
+
+`localhost`
+
+
+
+| Port
+| Specific inbound port to be used with this trading partner. Set the host of your FTP server, this can be an IP address or a host name.
+
+Required?::
+Yes
+
+Valid values::
+
+Numeric
+
+Default::
+
+`990`
+
+
+
+| User Name
+| The user name you specify for this FTPS instance.
+
+Required?::
+Yes
+
+Valid values::
+
+Alphanumeric
+
+Default::
+
+None
+
+
+
+| Password
+| The password you are using with this trading partner.
+
+Required?::
+Yes
+
+Valid values::
+
+Alphanumeric
+
+Default::
+
+None
+
+
+
+| Transfer Mode
+| For ease of client use, use passive mode when possible.
+
+Required?::
+Yes
+
+Valid values::
+
+* 'Active'
+* 'Passive'
+
+Default::
+
+`Passive`
+
+
+
+| SSL Mode
+| Method of invoking client security
+
+Required?::
+Yes
+
+Valid values::
+`Explicit`::
+Uses standard FTPS commands and replies.
+
+`Implicit`::
+Requires a Transport Layer Security to be established at the beginning of the connection.
+
+Default::
+
+`Implicit`
+
+
+
+| Enable Server Validation (Checkbox)
+| Selecting this checkbox validates the servers identity; only JKS format is supported at this time.
+
+Default::
+
+Not selected
+
+
+
+| Path
+| Specific FTPS file location where inbound documents will reside.
+
+Required?::
+No
+
+Valid values::
+
+Alphanumeric
+
+Default::
+
+`/`
+
+
+
+| Filename
+
+| Required?::
+No
+
+Valid values::
+
+Numeric
+
+Default::
+
+`None`
+
+
+
+| Move to directory
+| Places the files in the specified directory until they complete uploading.
+
+Required?::
+No
+
+Valid values::
+
+Alphanumeric
+
+Default::
+
+`None`
+
+
+
+
+| Polling frequency
+
+| Required?::
+No
+
+Valid values::
+
+Alphanumeric
+
+Default::
+
+`1000`
+
+
+
+
+| Maximum Number of Download Threads
+| Controls the concurrency level at a given time.
+
+Required?::
+No
+
+Valid values::
+
+Numeric
+
+Default::
+
+`None`
+
+|===

@@ -1,0 +1,112 @@
+= Channels
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+A _channel_ provides a means of specifying, for a given partner:
+
+Type:: Source or Target
+Document:: As created in xref:document-types.adoc[Document Types]
+Document Map:: As created in xref:maps.adoc[Maps]
+Endpoint:: As created in xref:endpoints.adoc[Endpoints]
+
+include::{partialsdir}/edit-settings.adoc[]
+[start=3]
+
+. In the *CONFIGURATION* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *Channels*.
++
+The <<img-channels>> appears.
+
+[[img-channels]]
+
+image::channels.png[title="Channels Page"]
+
+[start=4]
+
+. From this page, you can:
+
+* <<Edit an Existing Channel>>
+* <<Add a New Channel>>
+
+== Edit an Existing Channel
+
+. On the <<img-channels>>, click the channel you want to edit.
++
+The <<img-channel>> appears.
+
+== Add a New Channel
+
+. On the <<img-channels>>, click *New*.
++
+The <<img-channel>> appears.
+
+[[img-channel]]
+
+image::channel.png[title="Channel Page"]
+
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+
+| Name
+
+| Name for this channel
+
+Required?::
+Yes
+
+Default::
+
+None
+
+
+| Type
+
+| Required?::
+Yes
+
+Valid values::
+
+`Source`\|`Target`
+
+Default::
+
+None
+
+| Document
+
+| Required?::
+No
+
+////
+Valid values:: <Documentation in progress>
+////
+
+Default::
+
+None
+
+
+| Document channel
+
+| Required?::
+No
+
+
+// Valid values:: <Documentation in progress>
+
+Default::
+None
+
+| Endpoint
+
+| Required?::
+No
+
+// Valid values:: <Documentation in progress>
+
+Default::
+
+|===

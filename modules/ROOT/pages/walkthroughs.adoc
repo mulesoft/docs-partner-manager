@@ -1,0 +1,9 @@
+= Walkthroughs
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+* link:/anypoint-b2b/as2-and-edi-x12-purchase-order-walkthrough[AS2 and EDI X12 Purchase Order Walkthrough]
+* link:/anypoint-b2b/ftps-and-edi-x12-purchase-order-walkthrough[FTPS and EDI X12 Purchase Order Walkthrough]
+* xref:transaction-tracking-walkthrough.adoc[Transaction Tracking Walkthrough]

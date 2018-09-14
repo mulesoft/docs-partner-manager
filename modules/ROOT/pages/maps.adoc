@@ -1,0 +1,99 @@
+= Maps
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Configuring a _map_ for a partner enables you to specify:
+
+include::{partialsdir}/edit-settings.adoc[]
+[start=3]
+
+. In the *CONFIGURATION* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *Maps*.
++
+The <<img-maps>> appears.
+
+[[img-maps]]
+
+image::maps.png[title="Maps Page"]
+
+[start=4]
+
+. From this page, you can:
+
+* <<Edit an Existing Map>>
+* <<Add a New Map>>
+
+== Edit an Existing Map
+
+. On the <<img-maps>>, click the map you want to edit.
++
+The <<img-map>> appears.
+
+== Add a New Map
+
+. On the <<img-maps>>, click *New*.
++
+The <<img-map>> appears.
+
+[[img-map]]
+
+image::map.png[title="Map Page"]
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+| Name
+
+| Name for this map.
+
+Required?::
+No
+
+Default::
+
+None
+
+|===
+
+== Source Document, Target Document
+
+When you click either the Source Document or the Target Document box, the Pick document selection page appears. You can select from available documents.
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+| Mapping Type
+
+| Select a mapping type from the dropdown listbox.
+
+Required?::
+No
+
+Valid values::
+
+* 'Dataweave'
+* 'XSLT'
+
+Default::
+
+None
+
+| Select file containing map definition
+
+| Click *Choose File*, then choose a file from the selection window.
+
+
+Required?::
+
+
+
+Valid values::
+
+
+Default::
+
+None
+
+|===

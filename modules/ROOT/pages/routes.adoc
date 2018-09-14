@@ -1,0 +1,165 @@
+= Routes
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Configuring a _route_ for a partner enables you to specify:
+
+include::{partialsdir}/edit-settings.adoc[]
+[start=3]
+
+. In the *CONFIGURATION* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *Routes*.
++
+The <<img-routes>> appears.
+
+[[img-routes]]
+
+image::routes.png[title="Routes Page"]
+
+[start=4]
+
+. From this page, you can:
+
+* <<Edit an Existing Route>>
+* <<Add a New Route>>
+
+== Edit an Existing Route
+
+. On the <<img-routes>>, click the route you want to edit.
++
+The <<img-route>> appears.
+
+== Add a New Route
+
+. On the <<img-routes>>, click *New*.
++
+The <<img-route>> appears.
+
+[[img-route]]
+
+image::route.png[title="Route Page"]
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Name
+|Type a name for this channel.
+
+Valid values:: xref:glossary.adoc#sects[Standard APM field format]
+
+
+|===
+
+== Source Channel, Target Channel
+
+When you click either the Source Channel or the Target Channel box, the Pick a Channel selection page appears. You can make the following selections:
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Partnership
+
+| Required?::
+No
+
+
+Default::
+
+None
+
+|Name
+
+| Required?::
+No
+
+
+Default::
+
+None
+
+|===
+
+
+
+
+
+////
+
+|Standard
+
+
+
+Required?::
+No
+
+Valid values:: <Documentation in progress>
+
+
+
+Default::
+
+None
+
+|Version
+
+
+
+Required?::
+No
+
+Valid values:: <Documentation in progress>
+
+
+
+Default::
+
+None
+
+|Message Type
+
+
+
+Required?::
+No
+
+Valid values:: <Documentation in progress>
+
+
+
+Default::
+
+None
+
+| Type
+
+Select a type from the dropdown listbox.
+
+Required?::
+No
+
+Valid values:: <Documentation in progress>
+
+
+
+Default::
+
+None
+
+== Transport
+
+
+
+Required?::
+No
+
+Valid values:: <Documentation in progress>
+
+
+
+Default::
+
+<value | None>
+
+////

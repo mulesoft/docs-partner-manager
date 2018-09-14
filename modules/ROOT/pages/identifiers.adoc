@@ -1,0 +1,67 @@
+= Identifiers
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+include::{partialsdir}/edit-settings.adoc[]
+
+[start=3]
+
+. In the *Partners* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *Identifiers*.
++
+The <<img-identifiers>> appears.
+
+[[img-identifiers, Identifiers Page]]
+
+image::identifiers.png[title="Identifiers Page"]
+
+[start=4]
+
+. From this page, you can:
+* <<Edit Identity Settings>>
+* <<Create New Identity Settings>>
+
+== Edit Identity Settings
+. On the <<img-identifiers>>, click the value in the *Type* column of the identifier you want to edit.
++
+The <<img-identifier-edit>> appears.
+
+[[img-identifier-edit, Identifier Page]]
+
+image::identifier-edit.png[title="Identifier Page"]
+
+[start=2]
+
+. Edit settings as appropriate.
+
+
+== Create New Identity Settings
+
+. On the <<img-identifiers>>, click *New*.
++
+The <<img-identifier-new>> appears.
+
+[[img-identifier-new, New Identifier Page]]
+
+image::identifier-new.png[title="New Identifier Page"]
+
+[step=21]
+
+. In the *Type* box, click the down-arrowhead.
++
+The list of types appears.
+. Click the type of identifier you want to create.
++
+More identifier boxes appear. The specific boxes that appear depend on your choice in this step.
+. Enter values in the boxes.
+. Click *Save* to save the new identifier.
+
+
+////
+. In the *AS2 Identity* box, enter the trading partner-assigned name associated with this trading partner’s Production AS2 ID.
+. Click *Choose File* to select and upload this trading partner’s AS2 Certificate.
++
+The *Certificate Name*, *Expiration* and *Thumbprint* fields populate when an AS2 certificate is uploaded.
+. If this partner has a http://www.dnb.com/duns-number.html[unique nine-digit DUNS (data universal number system) number], enter it in the *DUNS Number* box.
+. Click *Save* to save your entries.
+////

@@ -1,0 +1,103 @@
+= EDIFACT Settings - Inbound (Read)
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+== Header Settings (UNB)
+
+[%header,cols="3s,7a"]
+
+|===
+|Setting |Description
+
+|Request Acknowledgements - UNB 9
+|This drop-down setting correlates to the EDIFACT document CONTRL. This document acts as a functional acknowledgement accepting or rejecting the documents sent.
+
+Required?::
+Yes
+
+Valid values::
+
+* `1 (Acknowledgement requested)`
+* `2 (Confirmation of receipt only)`
+
+
+Default::
+
+None provided
+
+
+
+|Interchange Sender ID (UNB 2.1)
+|EDIFACT Interchange ID for your EDIFACT trading partner; auto-populated with the value entered in <<Interchange ID - UNB>>. If no value appears in this box, you must enter a value in <<Interchange ID - UNB>>.
+
+
+
+|Interchange sender ID qualifier (UNB 2.2)
+|Trading partners EDIFACT qualifier, auto-populated from <<Interchange ID qualifier - UNB>>. If no value appears in the box, you must enter a value in <<Interchange ID qualifier - UNB>>.
+
+
+
+|Interchange Receiver ID (UNB 3.1)
+|Your company’s EDIFACT Interchange Receiver ID; auto-populated from <<EDIFACT Identity Settings>>. If no value appears in the box, you must enter a value in <<EDIFACT Identity Settings>>.
+
+
+
+|Interchange receiver ID qualifier (UNB 3.2)
+|Auto-populated from <<EDIFACT Identity Settings>>. If no value appears in the box, you must enter a value in <<EDIFACT Identity Settings>>.
+
+|===
+
+== Parser Settings
+
+There are eight optional parser settings that can be chosen for your trading partners inbound documents. The fields are listed below. The expected behavior if these options are checked is a CONTRL stating a failure will be sent for the condition.
+
+*	*Fail document when value length outside allowed range*
+
+*	*Fail document when invalid character in value*
+
+*	*Fail document if value is repeated too many times*
+
+*	*Fail document if unknown segments are used*
+
+*	*Fail document when segments are out of order*
+
+*	*Fail document when unused segments are included*
+
+*	*Fail document when too many repeats of a segment*
+
+== Terminator/Delimiter settings
+
+These settings specify which special characters a trading partner wants to use as separators and terminators in the EDIFACT data. The min/max for this field is 1. All these fields are editable.
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Data element separator character
+|The default value is “+”
+
+|Component element separator character
+|The default value is “:”
+
+|Repetition separator character
+|The default value is “*”
+
+|Segment terminator character
+|The default value is “ ‘ “
+
+|Release character
+|The default value is “? “
+
+|String substitution character
+|Character to be used to replace invalid characters in string values; no default given.
+
+|Control Number settings
+
+|These settings, if checked, will require unique inbound control numbers on all inbound documents for this trading partner. The settings are:
+
+*	Require unique Message Reference Numbers
+*	Require unique Interchange Control Numbers
+*	Require unique Group Numbers
+
+|===

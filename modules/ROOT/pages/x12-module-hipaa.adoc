@@ -1,0 +1,429 @@
+= X12 Module HIPAA
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords: b2b, x12, schema, module, edi
+
+In addition to the base X12 standards, the X12 Module also supports the HIPAA (Health Insurance Portability and Accountability Act) standards based on X12 version 005010.
+
+The X12 Module HIPAA support includes:
+
+* X12 HIPAA EDI message-reading, message-validation, and message-writing
+* Integration with DataSense and DataWeave
+* HIPAA message packs for 005010X212, 005010X214B3, 005010X217, 005010X218, 005010X220A1, 005010X221A1, 005010X222A1, 005010X222A2, 005010X223A2, 005010X223A3, 005010X224A2, 005010X224A3, and 005010X279A1
+* The ability to customize the base X12 HIPAA schemas
+
+Most aspects of using HIPAA with the X12 Module are the same as using standard X12. The main differences are:
+
+* The form of the schemas
+* Extent and type of validation performed
+* Data structure representation
+
+The supplied HIPAA schemas use different structures from base X12 schemas. The structure used for HIPAA reflects the way in which the same segments are used in different locations in a transaction set for different purposes, and often with different requirements for code sets and field usages. To help distinguish between the different usages, the HIPAA schemas use full names as segment keys. This differs from the approach used with basic X12 standards, where the segment keys use a numeric prefix along with the segment tag.
+
+HIPAA schemas also include details of code sets defined for elements. Data is validated against these code sets both when parsing and writing transaction sets.
+
+This page helps provides details of using the X12 Module for HIPAA transaction sets, and how usage differs from standard X12.
+
+== Configuration for HIPAA Usage
+
+To use the X12 Module connector for HIPAA transaction sets you must:
+
+* Select one or more HIPAA schemas to be used.
+* Set the snipValidationType configuration parameter to 'TYPE2_HIPAA'
+
+=== Determining the HIPAA Schema Location
+
+To use the connector, you need to know the locations of the schemas in your project. If you're using the out of the box HIPAA schemas and not customizing anything, the schema location follows the  `/hipaa/{version}/{transaction-set}.esl` pattern. For example, if you're using the `005010X222A2` version and the 837 transaction set, your schema location is `/hipaa/005010X222A2/837.esl`.
+
+If you're using a modified HIPAA schema, you should put your schemas under a directory in src/main/app and refer to the location using `${app.home}`. For example, if you've put your HIPAA 837 schema under src/main/app/mypartner/837.esl, your schema location is `${app.home}/mypartner/837.esl`.
+
+== Configuring the X12 Module
+
+After you install the connector and configure your schema(s), you can start using the connector.
+
+=== Visual Editor
+
+Follow these steps to create a global X12 module configuration in a Mule application:
+
+. Click the Global Elements tab at the base of the canvas, then click Create.
+. In the Choose Global Type wizard, use the filter to locate and select, X12 Module, then click OK.
+. Configure the parameters according to the connector reference.
+. Click OK to save the global connector configurations.
+. Return to the Message Flow tab in Studio.
+
+=== XML Editor or Standalone
+
+Ensure that you have included the EDI name spaces in your configuration file.
+
+Follow these steps to configure a EDI module in your application.
+
+. Create a global ServiceNow configuration outside and above your flows, using the following global configuration code.
++
+[source,xml,linenums]
+----
+<x12-edi:config name="X12_EDI" snipValidationType="TYPE2_HIPAA" doc:name="X12 EDI">
+    <x12-edi:schemas>
+        <x12-edi:schema>/hipaa/005010X212/276.esl</x12-edi:schema>
+    </x12-edi:schemas>
+</x12-edi:config>
+----
++
+. Configure the connector for use with your trading partner(s) using the guide below.
+
+After you set up a global element for your X12 module, configure the schemas, acknowledgments, IDs, and the parser options.
+
+=== Setting Your Schema Locations
+
+You can only configure schema locations in the Anypoint Studio XML view.
+
+Using the schema locations determined above, switch to the XML view by clicking Configuration XML in Studio and modify your X12 module configuration to include a list of all the schemas you wish to include by adding an `edi:schema` element for each document type:
+
+[source,xml,linenums]
+----
+<x12-edi:config name="X12_EDI" snipValidationType="TYPE2_HIPAA" doc:name="X12 EDI">
+    <x12-edi:schemas>
+        <x12-edi:schema>/hipaa/005010X212/276.esl</x12-edi:schema>
+    </x12-edi:schemas>
+</x12-edi:config>
+----
+
+=== Setting your X12 Interchange IDs
+
+You can configure the interchange ID, interchange ID qualifier, and group application ID for you and your trading partner on the X12 Module connector configuration.
+
+The Self Identification parameters identify your side of the trading partner relationship, while the Partner Identification parameters identify your trading partner. The values you set are used when writing EDI messages to supply the interchange ID, interchange ID qualifier, or group application ID, and are verified in receive messages. If you don't want to restrict incoming messages, you can leave these blank, and set the values for outgoing messages on the write operation or the actual outgoing message. Values set on the write operation override the connector configuration, and values set directly on the message override both the connector configuration and any values set on the write operation.
+
+== Understanding X12 Message Structure
+
+The connector enables reading or writing of X12 documents into or from the canonical EDI message structure. This structure is represented as a hierarchy of Java Maps and Lists, which can be manipulated using DataWeave or code. Each transaction has its own structure, as defined in the schemas and previously outlined.
+
+The message itself contains the following keys (some of which only apply to either the read operation or the write operation, as indicated):
+
+[%header%autowidth.spread]
+|===
+|Key name |Description
+|Delimiters (optional) |The delimiters used for the message (set based on the last interchange processed by a read operation). If set for a write operation, this overrides the values in the module configuration. The characters in the string are interpreted based on position, in the following order: (data separator), (sub-element separator), (repetition separator, or `U` if none), (segment terminator).
+|Errors (read only) |A list of all errors including non-fatal errors found in parsing the message. See the X12Error structure description in the Reading and Validating EDI Messages section below.
+|FunctionalAcksGenerated (read only) |A list of 997 or 999 acknowledgments as configured that were generated by the module during the read operation. To send an acknowledgment, see the Sending Acknowledgments section below.
+|Group (write only) |Map of GS group header segment values used as defaults when writing groups.
+|Interchange (write only) |Map of ISA interchange header segment values used as defaults when writing interchanges.
+|InterchangeAcksGenerated (read only) |A list of TA1 acknowledgments that were generated by the module during the read operation.
+|InterchangeAcksReceived (read only) |A list of TA1 acknowledgments that were received by the module during the read operation.
+|InterchangeAcksToSend (write only) |A list of TA1 acknowledgments that are to be sent by the module during the write operation.
+|Transactions |A hierarchy of the transaction sets that were read by the module during a read operation, or which are to be sent by the module during a write operation. The value of this top-level key is a map with standard versions as keys, in the form v005010 (for instance). For example, if you are using version 005010 850 and 855 transaction sets, the Transactions would contain a map with on key, v005010. The value of this key would be another map, this one with two keys, 850 and 855. Each of these would contain a list of individual 850 and 855 transaction sets that you could then process. If you're using 997 functional acknowledgments, 997 is the key for a list of 997 transaction sets.
+|===
+
+Individual transaction sets have their own maps, with the following keys:
+
+[%header%autowidth.spread]
+|===
+|Key name |Description
+|Detail |Map of segments or loops from the detail section of the transaction set. Values are maps for segments or loops which occur at most once, lists of maps for values which may be repeated.
+|Errors (read only) |A list of errors which are associated with the transaction set. (See the X12Error class description in the Reading and Validating EDI Messages section below.)
+|Group |Map of GS group header segment values. When reading a message, this map is the actual data from the enclosing group (a single map linked from all transaction sets in the group). When writing a message, these values are used for creating the enclosing group Values not populated in this map default to the values from the Group map at the message level.
+|Heading |Map of segments or loops from the heading section of the transaction set. Values are maps for segments or loops that occur at most once, and lists of maps for values that may be repeated.
+|Id |Transaction ID, which must match the key of the containing transaction list.
+|Interchange |Map of ISA interchange header segment values. When reading a message, this map is the actual data from the enclosing interchange (a single map linked from all transaction sets in the interchange). When writing a message, these values are used for creating the enclosing interchange (gathering transactions with the same interchange values into a single interchange, regardless of whether the actual maps are the same or not). Values not populated in this map default to the values from the Interchange map at the message level.
+|Name |Transaction set name.
+|SetHeader |Map of ST transaction set header segment values. This gives the actual header data for a read operation, and allows you to provide overrides for configuration settings for a write operation.
+|Summary |Map of segments or loops from the summary section of the transaction set. Values are maps for segments or loops which occur at most once, and lists of maps for values which may be repeated.
+|===
+
+HIPAA schemas aren't divided into `heading`, `detail`, and `summary` portions as with X12 schemas. They instead use multiple areas which can be combined in various ways. See the Areas section below for details.
+
+Generated 997/999 functional acknowledgment transactions differ from received messages in their handling of interchange information:
+
+[%header%autowidth.spread]
+|===
+|Key name |Description
+|Interchange |Map of ISA interchange header segment values. For functional acknowledgments generated by receive processing, this map is a copy of the data for the containing interchange with sender and receiver identification components (ISA05/ISA06 and ISA07/ISA08) interchanged. When writing a message, these values are used for creating the enclosing interchange (gathering transactions with the same interchange values into a single interchange, regardless of whether the actual maps are the same or not). Values not populated in this map default to the values from the Interchange map at the message level.
+|===
+
+TA1 interchange acknowledgments are in the form of maps representing the TA1 segment data and linked to data on the corresponding interchange:
+
+[%header%autowidth.spread]
+|===
+|Key name |Description
+|Interchange |Map of ISA interchange header segment values. For TA1 acknowledgments generated by receive processing, this map is a copy of the data for the interchange matching the TA1 with sender and receiver identification components (ISA05/ISA06 and ISA07/ISA08) interchanged. When writing a message, these values are used for creating the enclosing interchange (gathering transactions with the same interchange values into a single interchange, regardless of whether the actual maps are the same or not). Values not populated in this map default to the values from the Interchange map at the message level.
+|===
+
+== Time Fields
+
+All X12 and HIPAA Time fields are represented as Integer values for the number of milliseconds.
+For example, if a message has the value `024020`, its DataWeave mapping
+appears as `9620000` milliseconds.
+
+The value `024020` is in the format "HHMMSS", so if we convert it to milliseconds, we need to do:
+
+----
+(02*3600000) + (40*60000) + (20*1000) = 9620000
+----
+
+== Reading and Validating HIPAA EDI Messages
+
+To read a HIPAA message, search the palette for "X12 EDI" and drag the X12 module into a flow. Then, go to the properties view, select the connector configuration you created above and select the Read operation. This operation reads any byte stream into the structure described by your X12 schemas.
+
+The X12 module validates the message when it reads it in. Message validation includes checking the syntax and content of envelope segments ISA, GS, GE, and IEA as well as the actual transaction sets in the message. Normally errors are both logged and accumulated and reported in either TA1 technical acknowledgment segments or 997 acknowledgment transaction sets, and all accepted transaction sets (whether error free or with non-fatal errors) are passed on for processing as part of the output message Map. Errors in reading the input data results in exceptions being thrown.
+
+// image:x12-module-4.png[]
+
+Error data entered in the receive data map uses the X12Error class, a read-only JavaBean with the following properties:
+
+[%header%autowidth.spread]
+|===
+|Property |Description
+|segment |The zero-based index within the input of the segment causing the error.
+|segTag |The tag for the segment causing the error.
+|fatal |Flag for a fatal error, meaning the associated transaction set, group, or interchange was rejected as a result of the error.
+|errorType |Enumeration for the different types of errors defined by the X12 standards: INTERCHANGE_NOTE, GROUP_SYNTAX, TRANSACTION_SYNTAX, SEGMENT_SYNTAX, or ELEMENT_SYNTAX.
+|errorCode |Error code, as defined by the X12 standard for the indicated type of error.
+|errorText |Text description of the error.
+|errorLevel |Enumeration for the different levels of errors: ROOT_LEVEL, INTERCHANGE_LEVEL, GROUP_LEVEL, or TRANSACTION_LEVEL.
+|interchangeId |Interchange identifier, if errorLevel INTERCHANGE_LEVEL or above.
+|groupId |Group identifier, if errorLevel GROUP_LEVEL or TRANSACTION_LEVEL.
+|transactionId |Interchange identifier, if errorLevel TRANSACTION_LEVEL.
+|===
+
+Error data is returned by the read operation as optional lists with the Errors key at every level of the data structure. At the transaction set level, this list contains non-fatal errors encountered during the parsing of that transaction set. At the interchange level, this list contains errors (both fatal and non-fatal) for transaction sets with fatal errors. At the root level of the read, this list contains both interchange errors and every other error reported at any nested level.
+
+== Writing HIPAA EDI Messages
+
+To write an outgoing message, construct an outgoing HIPAA EDI message according to the structure as defined above. For example, this sample creates an outgoing EDI message which is written to a file.
+
+[source,xml,linenums]
+----
+  ...
+<x12-edi:write config-ref="Walmart" doc:name="Send 855"/>
+<file:outbound-endpoint responseTimeout="10000" doc:name="File" path="output" outputPattern="ack.edi"/>
+----
+
+== Sending Functional Acknowledgments
+
+As with X12, sending generated functional acknowledgments (997 or 999 transaction sets) for HIPAA is the same as writing any other EDI message, except you set the transactions to the acknowledgments that were generated during the read operation. For example:
+
+[source,xml,linenums]
+----
+<x12-edi:read config-ref="Walmart" doc:name="Read EDI Doc"/>
+  ...
+<dw:transform-message doc:name="Create Outgoing Message">
+            <dw:input-payload doc:sample="InMessage.dwl"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+{
+    TransactionSets: {
+        v005010: {
+            '997' : payload.FunctionalAcksGenerated
+        }
+    }
+}]]></dw:set-payload>
+</dw:transform-message>
+<x12-edi:write config-ref="Walmart" doc:name="Send 997"/>
+<file:outbound-endpoint responseTimeout="10000" doc:name="File" path="output" outputPattern="ack.edi"/>
+----
+
+The generated functional acknowledgments have interchange data set up for sending back to the sender of the original message, so you don't need to change anything in the transactions to do the send.
+
+If you use 999 acknowledgments, add any required CTX segments yourself to the basic structure generated by the X12 Module.
+However, this connector does not track implementation convention changes to the base transaction set structure.
+
+== Sending Interchange Acknowledgments
+
+Sending interchange acknowledgments (TA1 segments) works the same as for X12: just set the value of the InterchangeAcksToSend key in the message map to the list of TA1 segment maps to be sent. The generated TA1 segments have interchange data set up for sending back to the sender of the original message, so you don't need to change anything in the segment data to do the send.
+
+== HIPAA Schema Definitions
+
+The X12 Module uses a YAML format called ESL (for EDI Schema Language) to represent both standard X12 and HIPAA schemas. The HIPAA standards are based on X12, but modify the corresponding X12 base standards in several respects including:
+
+* Multiple specialized definitions of HL (Hierarchical Level) loops, where a basic loop structure defined in X12 is expanded into several variations, often nested.
+* Modular loop definitions which may be reused at different points in the definition.
+* Distinguishing between different uses of a repeated segment by code values in a particular element.
+* Changing usage requirements for segments and segment components.
+
+To represent these features of HIPAA, the ESL schema definitions are very different from standard X12 schemas. Here's a partial example, taken from the schema for the 005010X222A2 837 transaction set:
+
+[source,yaml,linenums]
+----
+form: HIPAA
+version: '005010X222A2'
+structures:
+- id: '837'
+  name: 'Health Care Claim'
+  class: 'HC'
+  areas:
+  - code: '1'
+    items:
+    - { idRef: 'ST_TransactionSetHeader', position: '0050', usage: M }
+    - { idRef: 'BHT_BeginningOfHierarchicalTransaction', position: '0100', usage: M }
+    - groupId: '1000A_Loop'
+      usage: O
+      items:
+      - { idRef: 'NM1_SubmitterName', position: '0200', usage: M }
+      - { idRef: 'PER_SubmitterEDIContactInformation', position: '0450', usage: M, count: 2 }
+    - groupId: '1000B_Loop'
+      usage: O
+      items:
+      - { idRef: 'NM1_ReceiverName', position: '0500', usage: M }
+  - code: '2'
+    items:
+    - groupId: '2000A_Loop'
+      count: '>1'
+      usage: M
+      items:
+      - { idRef: 'HL_BillingProviderHierarchicalLevel', position: '0010', usage: I }
+      - { idRef: 'PRV_BillingProviderSpecialtyInformation', position: '0030', usage: O }
+      - { idRef: 'CUR_ForeignCurrencyInformation', position: '0100', usage: O }
+      - groupId: '2010AA_Loop'
+        usage: O
+        items:
+        - { idRef: 'NM1_BillingProviderName', position: '0150', usage: M }
+        - { idRef: 'N3_BillingProviderAddress', position: '0250', usage: M }
+        - { idRef: 'N4_BillingProviderCityStateZIPCode', position: '0300', usage: M }
+        - { idRef: 'REF_BillingProviderTaxIdentification', position: '0350', usage: M }
+        - { idRef: 'REF_BillingProviderUPINLicenseInformation', position: '0360', usage: O, count: 2 }
+        - { idRef: 'PER_BillingProviderContactInformation', position: '0400', usage: O, count: 2 }
+      - { area: '3', usage: O }
+      - { area: '4', count: '>1', usage: O }
+  - code: '3'
+    items:
+    - groupId: '2010AB_Loop'
+      usage: O
+      items:
+      - { idRef: 'NM1_PayToAddressName', position: '0150', usage: O }
+      - { idRef: 'N3_PayToAddressADDRESS', position: '0250', usage: M }
+      - { idRef: 'N4_PayToAddressCityStateZIPCode', position: '0300', usage: M }
+    - groupId: '2010AC_Loop'
+      usage: O
+      items:
+      - { idRef: 'NM1_PayToPlanName', position: '0450', usage: O }
+      - { idRef: 'N3_PayToPlanAddress', position: '0550', usage: M }
+      - { idRef: 'N4_PayToPlanCityStateZIPCode', position: '0600', usage: M }
+      - { idRef: 'REF_PayToPlanSecondaryIdentification', position: '0650', usage: O }
+      - { idRef: 'REF_PayToPlanTaxIdentificationNumber', position: '0655', usage: M }
+----
+
+=== Areas Key
+
+In the above schema portion, the areas key has a value array of individual area definitions. Areas are similar to the breakdown of normal X12 transaction sets into header, detail, and summary sections, but provide much finer granularity - rather than the three fixed portions of a transaction set defined in X12, there may be twenty or more areas defined in a HIPAA transaction set.
+
+Each area is a reusable component of the definition. It is identified by a code character value, which by convention may be a single digit or single alpha character.
+
+Areas are referenced for inclusion in the definition with an area item in the component list. In an X12 schema definition, the list of components of a group or area may contain only segments, groups, and a group variation called wrapped, which is used for LS/LE loops, in X12 terms. In a HIPAA schema definition, the list of components may also contains area references. The effect of referencing an area is the same as if all the components of the area were inserted in the definition at the point of the reference.
+
+Referring back to the above schema portion, at the end of the components list for area code 2, there are references to areas 3 and 4, with area 4 optionally repeating.
+
+The data structure for HIPAA messages maintains the X12 division into Heading, Detail, and Summary sections. The Heading is always the area with the lowest sort order code, the Detail is the next one (including all referenced areas), and the Summary is the highest sort order code.
+
+=== Code Sets
+
+Below is another portion of the same 005010X222A2 837 transaction set schema as used above, this portion showing the BHT_BeginningOfHierarchicalTransaction segment definition:
+
+[source,yaml,linenums]
+----
+- id: 'BHT_BeginningOfHierarchicalTransaction'
+  name: 'Beginning of Hierarchical Transaction'
+  varTag: 'BHT'
+  values:
+  - { id: '1005', name: 'Hierarchical Structure Code', usage: M, codeSet: { '0019': 'Information Source, Subscriber, Dependent' }, type: ID, length: 4 }
+  - { id: '353', name: 'Transaction Set Purpose Code', usage: M, codeSet: { '00': 'Original', '18': 'Reissue' }, type: ID, length: 2 }
+  - { id: '127', name: 'Originator Application Transaction Identifier', usage: M, type: AN, minLength: 1, maxLength: 50 }
+  - { id: '373', name: 'Transaction Set Creation Date', usage: M, type: DT, length: 8 }
+  - { id: '337', name: 'Transaction Set Creation Time', usage: M, type: TM, minLength: 4, maxLength: 8 }
+  - { id: '640', name: 'Claim or Encounter Identifier', usage: M, codeSet: { 'RP': 'Reporting', 'CH': 'Chargeable', '31': 'Subrogation Demand' }, type: ID, length: 2 }
+----
+
+The first, second, and last elements in this segment define codeSet values, in the form of an array of key-value pairs. The key in each pair is a particular value for the field which is allowed by the HIPAA standard, while the value for the key is the text description of that value from the standard.
+
+The X12 EDI Connector enforces these code sets for HIPAA documents, signaling an error if a transaction set uses an undefined value for a field (that is, a value not listed as a key in the codeSet) either when parsing or writing. In some cases, such as the first element of the BHT definition, only a single value is allowed. In other cases there may be many potential values.
+
+=== Segment variants
+
+Below is a third portion of the same 005010X222A2 837 transaction set schema, this one showing two different DTP segment definitions:
+
+[source,yaml,linenums]
+----
+- id: 'DTP_DateAccident'
+  name: 'Date - Accident'
+  varTag: 'DTP'
+  values:
+  - { id: '374', name: 'Date Time Qualifier', usage: M, varValue: true, codeSet: { '439': 'Accident' }, type: ID, length: 3 }
+  - { id: '1250', name: 'Date Time Period Format Qualifier', usage: M, codeSet: { 'D8': 'Date Expressed in Format CCYYMMDD' }, type: ID, minLength: 2, maxLength: 3 }
+  - { id: '1251', name: 'Accident Date', usage: M, type: AN, minLength: 1, maxLength: 35 }
+- id: 'DTP_DateAcuteManifestation'
+  name: 'Date - Acute Manifestation'
+  varTag: 'DTP'
+  values:
+  - { id: '374', name: 'Date Time Qualifier', usage: M, varValue: true, codeSet: { '453': 'Acute Manifestation of a Chronic Condition' }, type: ID, length: 3 }
+  - { id: '1250', name: 'Date Time Period Format Qualifier', usage: M, codeSet: { 'D8': 'Date Expressed in Format CCYYMMDD' }, type: ID, minLength: 2, maxLength: 3 }
+  - { id: '1251', name: 'Acute Manifestation Date', usage: M, type: AN, minLength: 1, maxLength: 35 }
+----
+
+These two definitions apply to different instances of the DTP segment, as part of the 2300 Claim Information loop. In the transaction set structure these uses of the DTP segment occur essentially in the same position, matching two possible occurrences of a repeating DTP segment in the base X12 standard. But because the two uses of the segment are supplying different information, the HIPAA standard gives them different names and interprets the DTP03 field in different ways.
+
+In this case the data value in the first field of the segment, the Date Time Qualifier field, identifies which variation of the segment is actually used. Since the code set for this field has different values for each of these uses, the value present in the field tells whether the DTP segment in a parsed document is a DTP_DateAccident or a DTP_DateAcuteManifestation (or any of several other uses of the DTP segment in the same position). The `varValue: true` flag in the schema definition indicates that this first field is used in this way to distinguish between variations.
+
+Note that even though the value of this field is effectively fixed for each use of the segment, it still must be set correctly when writing data. If you supply a different value for this field, or don't supply a value, you get an error when writing.
+
+=== Syntax Rules
+
+Here's a final example from the 005010X222A2 837 transaction set schema, to illustrate how syntax rules are represented:
+
+[source,yaml,linenums]
+----
+- id: 'N4_PayerCityStateZIPCode'
+  name: 'Payer City, State, ZIP Code'
+  varTag: 'N4'
+  values:
+  - { id: '19', name: 'Payer City Name', usage: M, type: AN, minLength: 2, maxLength: 30 }
+  - { id: '156', name: 'Payer State or Province Code', usage: O, type: ID, length: 2 }
+  - { id: '116', name: 'Payer Postal Zone or ZIP Code', usage: O, type: ID, minLength: 3, maxLength: 15 }
+  - { id: '26', name: 'Country Code', usage: O, type: ID, minLength: 2, maxLength: 3 }
+  - { id: '309', name: 'Location Qualifier', usage: U, type: ID, minLength: 1, maxLength: 2 }
+  - { id: '310', name: 'Location Identifier', usage: U, type: AN, minLength: 1, maxLength: 30 }
+  - { id: '1715', name: 'Country Subdivision Code', usage: O, type: ID, minLength: 1, maxLength: 3 }
+  rules:
+  - { type: E, items: [2, 7] }
+  - { type: C, items: [6, 5] }
+  - { type: C, items: [7, 4] }
+----
+
+Syntax rules are used in X12 and HIPAA to define relationships between values within a
+segment or composite. The rules are included in the schema at the same level as the
+list of values. The code for the type of rule is the same as used by X12 and HIPAA
+specifications, and the list of items gives the numbers of the values governed by the rule.
+
+In the case of the above example, the three rules say that:
+
+* Only one of N402 or N407 may be present (`{ type: E, items: [2, 7] }`)
+* If N406 is present, then N405 is required (`{ type: C, items: [6, 5] }`)
+* If N407 is present, then N404 is required (`{ type: C, items: [7, 4] }`)
+
+
+== Modifying Schemas
+
+Due to the differences between standard X12 and HIPAA schemas, the use of overlay schemas to modify a base
+definition is not supported for HIPAA. Instead, the recommended approach to use for modifications is to
+extract the supplied HIPAA schema from inside the edi-schemas-x12-{version}.jar included in the
+connector (which contains both standard X12 and HIPAA schemas) and modify the extracted schema to use
+directly. Unlike X12 schemas, which as supplied use a base set of segment, composite, and element
+definitions, the HIPAA schemas are self-contained. This makes it easy to make changes to the schema
+without needing to work with multiple files.
+
+== Recommended Types of Testing from WEDI
+
+* Type 1: EDI syntax integrity testing – Testing of the EDI file for valid segments, segment order, element attributes, testing for numeric values in numeric data elements, validation of X12 or NCPDP syntax, and compliance with X12 and NCPDP rules. This validates the basic syntactical integrity of the EDI submission.
+
+* Type 2: HIPAA syntactical requirement testing – Testing for HIPAA Implementation Guide-specific syntax requirements, such as limits on repeat counts, used and not used qualifiers, codes, elements, and segments. Also included in this type is testing for HIPAA required or intra-segment situational data elements, testing for non-medical code sets as laid out in the Implementation Guide, and values and codes noted in the Implementation Guide via an X12 code list or table.
++
+** As the connector cannot determine a course of action for intra-segment situational data elements, Intra-segment situational data elements are not covered by X12 EDI Connector. Users need to set a validation logic outside of the connector.
+
+== See Also
+
+* xref:release-notes::connector/x12-edifact-modules-release-notes.adoc[Release Notes].
+* link:{attachmentsdir}/x12-hipaa_5010.zip[X12 Module HIPAA Anypoint Studio project].
+* http://www.x12.org/x12-work-products/x12-transaction-sets.cfm[ASC X12 Transaction Sets].
+* https://en.wikipedia.org/wiki/X12_Document_List[X12 Document List].
+* http://mulesoft.github.com/edi-module[EDI module reference].
+* https://forums.mulesoft.com[MuleSoft Forum]
+* https://support.mulesoft.com[Contact MuleSoft Support]

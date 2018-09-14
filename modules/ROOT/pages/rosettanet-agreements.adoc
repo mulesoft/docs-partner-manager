@@ -1,0 +1,152 @@
+= RosettaNet Agreements
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Configuring a _agreement type_ for a partner means specifying a *Name* and
+
+include::{partialsdir}/edit-settings.adoc[]
+[start=3]
+
+. In the *CONFIGURATION* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *RosettaNet Agreements*.
++
+The <<img-agreements>> appears.
+
+[[img-agreements]]
+
+image::agreements.png[title="RosettaNet Agreements Page"]
+
+[start=4]
+
+. From this page, you can:
+
+* <<Edit an Existing Agreement>>
+* <<Add a New Agreement>>
+
+== Edit an Existing Agreement
+
+. On the <<img-agreements>>, click the Agreement you want to edit.
++
+The <<img-agreement-edit>> appears.
+
+
+[[img-agreement-edit]]
+
+image::agreement-edit.png[title="Existing Agreement Page"]
+
+. Edit settings as appropriate. +
+For information about editing specific settings, see <<Add a New Agreement>>.
+
+CAUTION: Changing the values for *Name* or *Message Type* may disrupt existing processes that refer to the existing values.
+
+== Add a New Agreement
+
+. Click *New*. The <<img-agreement>> appears.
+
+[[img-agreement]]
+
+image::agreement.png[title="Agreement Page"]
+
+Enter settings as appropriate.
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|RosettaNet PIP
+
+|Click this box then, on the *Pick a RosettaNet PIP* popup, select the PIP with which you want to work; then click *Use Selected*.
+
+Required:: Yes
+
+Default:: None
+
+|Self Role
+|Click the drop-down listbox to select
+
+Valid Values:: *Initiator* or *Responder*
+
+Required:: Yes
+
+|Self Identifier
+
+|Select a value from the drop-down listbox.
+
+Required:: Yes
+
+Default:: None
+
+|Self Location Code
+
+|
+
+Required:: Yes
+
+Default:: None
+
+
+|Partner Identifier
+
+|
+
+Required:: Yes
+
+Default:: None
+
+
+|Partner Location Code
+
+|
+
+Required:: No
+
+Default:: None
+
+
+|Signing Override
+
+|
+
+Required:: Yes
+
+Default:: None
+
+
+|RNIF Send Endpoint
+
+|
+
+Required:: Yes
+
+Default:: None
+
+|RNIF Receive Endpoint
+
+|
+
+Required:: Yes
+
+Default:: None
+
+|Service Path
+
+|
+
+Required:: No
+
+Default:: None
+
+|Global Usage Code
+
+|
+
+Required:: Yes
+
+Default:: None
+
+|===
+
+
+== Checkboxes
+
+Required Secure Transport:: Select this checkbox if you want to require that the next transmission use secure transport.

@@ -1,0 +1,30 @@
+// Configure the Target Endpoint
+
+. On the <<img-td-target-channel-in-progress-aaz>>, click *New Endpoint*.
++
+The <<img-td-new-endpoint-aaz>> appears.
+
+[[img-td-new-endpoint-aaz]]
+
+image::yc/td-new-endpoint-aaz.png[img-td-new-endpoint-aaz, title="Endpoint Page"]
+
+[start=2]
+
+. In the *Protocol* listbox, click the down-arrow to expand the list of available protocols.
++
+From the list, click *HTTP*.
++
+Notice that the the *Type* box, is populated with the appropriate value (*SEND*).
++
+The <<img-td-new-endpoint-aaz>> expands to include more settings.
+. Scroll down to the *Operation Settings* section.
++
+In the *Host* box, type *0.0.0.0*.
+. In the *Port* box, type *8086*.
+. In the *Path* box, type */PurchaseOrder*.
+. In the *Authentication* listbox, click the down-arrow to expand the list of available methods.
++
+From the list, click *None*.
+. Click *Save*.
++
+The <<img-td-target-channel-in-progress-aaz>> appears.

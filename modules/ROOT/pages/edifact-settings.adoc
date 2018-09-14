@@ -1,0 +1,23 @@
+= EDIFACT Settings
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+EDIFACT (Electronic Data Interchange For Administration, Commerce and Transport) provides a set of standard messages which allow multi-country and multi-industry business document exchanges. EDIFACT is widely used across Europe.
+
+include::{partialsdir}/edit-settings.adoc[]
+
+[start=3]
+
+. In the *FORMAT DEFAULTS* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *EDIFACT*.
++
+The <<img-edifact-settings>> appears.
+
+[[img-edifact-settings]]
+
+image::edifact-settings.png[title="EDIFACT Settings Page"]
+
+
+* xref:edifact-identity-settings.adoc[EDIFACT Identity Settings]
+* xref:edifact-settings-inbound-(read).adoc[EDIFACT Inbound (Read) Settings]
+* xref:edifact-settings-outbound-(write).adoc[EDIFACT Outbound (Write) Settings]

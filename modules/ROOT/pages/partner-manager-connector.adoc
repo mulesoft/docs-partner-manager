@@ -1,0 +1,186 @@
+= Partner Manager Connector
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords: b2b, edi, anypoint partner manager, apm, pmc, partner manager connector
+
+NOTE: Current instances of the Partner Manager Connector will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+
+This page provides information about Partner Manager Connector (PMC), including:
+
+* <<Overview>>.
+* <<Installing the Connector>>.
+* <<Configuring the Connector>>.
+* <<Supported Operations>>.
+
+== Overview
+
+PMC provides connectivity to Anypoint Partner Manager (APM). The connector allows the management of APM-enabled connectors from APM and tracking of B2B exchanges.
+
+== To Install this Connector
+
+. In Anypoint Studio, click the Exchange icon in the Studio taskbar.
+. Click Login in Anypoint Exchange.
+. Search for the connector and click Install.
+. Follow the prompts to install the connector.
+
+When Studio has an update, a message displays in the lower right corner, which you can click to install the update.
+
+== Configuring the Connector
+
+The method for configuring the connector depends on whether you want to have _payload_ (that is, message content) persistence and, if you do, what mechanism you use to facilitate it.
+
+* <<Configuration Without Payload Persistence>>.
+* <<Configuration Using Amazon S3 for Payload Persistence>>.
+* <<Configuration Using a Mule Flow for Payload Persistence>>.
+
+=== Configuration Without Payload Persistence
+
+. From Anypoint Studio, select the *Global Elements* view and press *Create*.
+. Enter _Partner Manager_ in the filter.
+. Choose *Basic Configuration* and click *OK*.
+. In the *API Key* attribute, enter your private API key which is generated from APM portal.
+. Enter in the *Environment ID* attribute the CloudHub environment you want PMC to run in.
+. Press *OK*.
+
+=== Configuration Using Amazon S3 for Payload Persistence
+
+. From Anypoint Studio, select the *Global Elements* view and press *Create*.
+. Enter _Partner Manager_ in the filter.
+. Choose *Amazon S3 File Storage* and click *OK*.
+. In the *API Key* attribute, enter your private API key which is generated from APM portal.
+. Enter in the *Environment ID* attribute the CloudHub environment you want PMC to run in.
+. Enter the settings of the S3 bucket to be used for storing files. These settings are obtained from your AWS console.
+. Press *OK*.
+
+=== Configuration Using a Mule Flow for Payload Persistence
+
+. From Anypoint Studio, select the *Global Elements* view and press *Create*.
+. Enter _Partner Manager_ in the filter.
+. Choose *Custom File Storage* and click *OK*.
+. In the *API Key* attribute, enter your private API key which is generated from APM portal.
+. Enter in the *Environment ID* attribute the CloudHub environment you want PMC to run in.
+. Type in the name of the flow to be used for persisting files in the *Flow Name* attribute.
+. Optionally, inside the File URL attribute, set a MEL expression to read the file URL from the message produced by the flow.
+. Press *OK*.
+
+== Supported Operations
+
+The connector supports the following operations:
+
+* <<Track Transmission>>.
+* <<Track Document>>.
+* <<Track Error>>.
+* <<Resolve Routes>>.
+* <<Start Transactions Replay>>.
+* <<End Transactions Replay>>.
+* <<Search>>.
+* <<Propagate Endpoint Properties>>.
+* <<Harvest Endpoint Properties>>.
+* <<Harvest Document Properties>>.
+* <<Lookup>>.
+* <<Update Transaction Status>>.
+* <<Retrieve Payload>>.
+* <<Get Partnership By Identifiers>>.
+* <<Get Events By Transaction ID>>.
+* <<Start Errors Notification>>.
+* <<End Errors Notification>>.
+* <<Evaluate Transaction Release Status>>.
+* <<Start Transactions Release>>.
+* <<End Transactions Release>>.
+
+=== Track Transmission
+
+Track transmissions originating from sources other than APM-enabled connectors like
+the filesystem. User-defined metadata can also be tracked as part of the transmission.
+The connector expects metadata to be a _java.util.Map_. Nested maps represent nested metadata.
+You have the option to define the map inline via the *Object Browser*, or alternatively,
+specify from the attribute its location in the Mule message. The reserved key "label" can be used in
+metadata to label a transmission. A transmission label allows you to easily distinguish
+between different transmissions in APM portal.
+
+=== Track Document
+
+Track documents like XML documents. The _Document_ attribute must be set accordingly
+for APM to inspect the document and perform tasks such as property extraction.
+User-defined metadata can also be tracked as part of the document. The connector expects metadata to be
+a _java.util.Map_. Nested maps represent nested metadata. You have the option to
+define the map inline via the *Object Browser*, or alternatively, specify from the attribute its location in the
+Mule message.  The reserved key "label" can be used in metadata to label a document.
+A document label allows you to easily distinguish between different documents in APM portal.
+
+=== Track Error
+
+Track errors originating from transactions, documents, transmissions, or business processes. The origin of the error is
+selected from _source_ attribute and the ID identifying the source is set in the _sourceId_ attribute.
+
+=== Resolve Routes
+
+Fetch routes that have a source channel matching the document type and transport type. An empty _java.util.List_ is
+returned if no routes could be found.
+
+=== Start Transactions Replay
+
+Fetch replayable transactions and set them as replaying. Replaying transactions that have timed out
+and are identified as such through the _Replaying Timeout_ attribute are included with the result set.
+
+=== End Transactions Replay
+
+Mark transactions, identified by the given list of transaction IDs, as replayed.
+
+=== Search
+
+Search a resource with xref:anypoint-partner-manager-api.adoc#partner-manager-query-language[APM's query language].
+
+=== Propagate Endpoint Properties
+
+Copy the transmission session's endpoint properties in the key *properties* to outbound properties.
+
+=== Harvest Endpoint Properties
+
+Read the Mule event's endpoint properties and place them in the transmission session under the key *properties*.
+
+=== Harvest Document Properties
+
+Read the Mule event's document properties and place them in the transmission session under the key *properties*.
+
+=== Lookup
+
+Find lookup entries matching the given set of name-value fields and table name. Set the _key_ attribute to ensure
+no more than a single lookup entry is returned.
+
+=== Update Transaction Status
+
+Update a transaction's status to *ACTIVE* or *INACTIVE.
+
+=== Retrieve Payload
+
+Fetch a transmission or a document's raw content from the given URL using the security scheme configured in APM.
+
+=== Get Partnership By Identifiers
+
+Find a partnership by the partner's identifier.
+
+=== Get Events By Transaction ID
+
+Fetches the events (i.e., business document, transmissions, and error) of a transaction given its ID.
+
+=== Start Errors Notification
+
+Fetches notifiable errors and marks their notification status to _NOTIFYING_.
+
+=== End Errors Notification
+
+Marks the notification status of errors, identified by the given list of error IDs, to _NOTIFIED_.
+
+=== Evaluate Transaction Release Status
+
+Evaluates if the route has a status window and in that case sets the transaction's release status to ON HOLD or INACTIVE.
+
+=== Start Transactions Release
+
+Fetches releasable transactions and marks their release status to _RELEASING_.
+
+=== End Transactions Release
+
+Marks the release status of transactions, identified by the given list of transaction IDs, to _RELEASED_.

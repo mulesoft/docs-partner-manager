@@ -1,0 +1,15 @@
+= Key Concepts
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords: Anypoint b2b Anypoint Partner Manager concepts
+
+NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+
+The following pages explain key Anypoint Partner Manager (APM) concepts:
+
+* xref:b2b-transaction-processing-framework.adoc[B2B Transaction-Processing Framework]
+* xref:resolution-processes.adoc[Resolution Processes]
+* xref:tracking.adoc[Tracking]
+
+For more information, see xref:anypoint-partner-manager.adoc[Anypoint Partner Manager].

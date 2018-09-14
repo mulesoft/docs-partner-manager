@@ -1,0 +1,62 @@
+= On-Hold and Inactive Windows
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+You can configure windows (periods of time) during which partners or transactions are on-hold or inactive.
+
+include::{partialsdir}/edit-settings.adoc[]
+[start=3]
+
+. In the *CONFIGURATION* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *On-Hold/Inactive*.
++
+The <<img-on-hold-inactive>> appears.
+
+[[img-on-hold-inactive]]
+
+image::on-hold-inactive.png[title="On-Hold/Inactive Page"]
+
+
+== To Add a New Partner Status Window
+
+. On the <<img-on-hold-inactive>>, in the *Partner Status Windows* section, click *Create New Window*. +
+The <<img-partner-status-window-add>> appears.
+
+[[img-partner-status-window-add]]
+
+image::partner-status-window-add.png[title="Partner Status Window Page"]
+
+[start=2]
+
+. On the <<img-partner-status-window-add>>, in the *Type* box, click the down-arrow to expose the drop-down list.
+. From the drop-down list, to create an on-hold window, click *ON-HOLD*. +
+To create an inactive window, click *INACTIVE*.
+. Use the calendars and dropdown lists in the Time Bar to identify the start and end dates and times for the window.
+. Click *Save* to save the window.
+
+
+== To Add a New Transaction Status Window
+
+. On the <<img-on-hold-inactive>>, in the *Transaction Status Windows* section, click *Create New Window*. +
+The <<img-transaction-status-window-add>> appears.
+
+[[img-transaction-status-window-add]]
+
+image::transaction-status-window-add.png[title="Transaction Status Window Page"]
+
+[start=2]
+
+. On the <<img-transaction-status-window-add>>, in the *Type* box, click the down-arrow to expose the drop-down list.
+. From the drop-down list, to create an on-hold window, click *ON-HOLD*. + To create an inactive window, click *INACTIVE*.
+. Use the calendars and dropdown lists in the Time Bar to identify the start and end dates and times for the window.
+. To add a channel, in the *Channel* section, click *Add Channel*. +
+The Pick a Channel Window appears.
+. Select a channel, then click *Use selected*.
+. Click *Save* to save the window.
+
+== To Edit an On-Hold or Inactive Window
+
+. On the <<img-on-hold-inactive>>, in the section that corresponds to the type of window you want to edit, identify the window you wan to edit and click it. +
+The  appropriate page appears.
+. On the page, make changes as appropriate.
+. Click *Save* to save your changes.

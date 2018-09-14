@@ -1,0 +1,74 @@
+== JMS Receive Settings
+
+=== Global Config Settings
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|JMS Connection Type
+|Select a connection type from the listbox. If you select *Other*, a box appears in which you can enter an alphanumeric connection type not in the listbox list.
+Required?: Yes +
+Type: Alphanumeric +
+Default: `TIBCO EMS`
+
+
+| URL Protocol
+| Populates based on the value selected for *JMS Connection Type* +
+Type: Read-only +
+Default: `tibjmsnaming`
+
+
+| Host
+|
+Required: Yes +
+Type: string +
+Default: None
+
+
+| Port
+|
+Required:Yes +
+Type: integer +
+Default: None
+
+
+| Username
+| Required?: Yes +
+Type: string +
+Default: None
+
+| Password
+| Required?: Yes +
+Type: string +
+Default: None
+
+|===
+
+=== Operation Settings
+
+[%header,cols="3s,7a"]
+|===
+
+|Setting |Description
+
+| Queue/Topic
+| Select the appropriate radio button +
+Type: Radio button +
+Default: *Queue*
+
+
+| Queue Name
+|
+Required?: Yes +
+Type: xref:glossary.adoc#sects[Standard APM field format] +
+Default: None
+
+
+| Exchange Pattern
+| Select either the *One-Way* or the *Request-Response* radio button +
+Type: Radio button +
+Default: *One-Way*
+
+
+|===

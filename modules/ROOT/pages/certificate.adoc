@@ -1,0 +1,29 @@
+= Certificate
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+The <<img-certificate>> enables you to upload an AS2 or RNIF certificate for the partner you selected on the xref:partner-configuration.adoc#img-partner-configuration[Partner Configuration Page].
+
+include::{partialsdir}/edit-settings.adoc[]
+
+[start=3]
+
+. In the *Partners* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *Certificate*.
++
+The <<img-certificate>> appears.
+
+[[img-certificate, Certificate Page]]
+
+image::certificate.png[title="Certificate Page"]
+
+[start=4]
+
+. Click *Choose File*, then select the certificate file you want to upload.
+. Click *Upload Certificate* to upload the certificate.
+
+////
+The *Certificate Name*, *Expiration* and *Thumbprint* fields populate when a certificate is uploaded.
+. If this partner has a http://www.dnb.com/duns-number.html[unique nine-digit DUNS (data universal number system) number], enter it in the *DUNS Number* box.
+. Click *Save* to save your entries.
+////

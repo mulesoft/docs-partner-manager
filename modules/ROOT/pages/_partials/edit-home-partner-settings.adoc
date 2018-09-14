@@ -1,0 +1,11 @@
+== Get Started
+
+NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+
+These settings are editable for your company (as identified on the
+xref:partner-configuration.adoc#img-partner-configuration[Partner Configuration Page]) only.
+
+. xref:anypoint-partner-manager.adoc#start-anypoint-manager[Start APM].
+When the xref:anypoint-partner-manager.adoc#img-apm-start[Transaction Monitoring Page] appears, return to this page and procede to the next step.
+. In the left-hand navigation pane, click *Administration*. The
+Administration Page appears.

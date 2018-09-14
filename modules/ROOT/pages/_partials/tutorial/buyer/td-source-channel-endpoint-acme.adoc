@@ -1,0 +1,46 @@
+// Create the Buyer Receive Endpoint
+
+. On the <<img-td-source-channel-in-progress-doc-added-acme>>, click *Possible Endpoints*.
++
+The <<img-td-possible-endpoints-acme>> appears.
+
+[[img-td-possible-endpoints-acme]]
+
+image::partner/td-possible-endpoints-acme.png[img-td-possible-endpoints-acme,  title="Possible Endpoints Page"]
+
+
+[start=2]
+
+
+. On the <<img-td-possible-endpoints-acme>>, click *Add New Endpoint*.
++
+The <<img-td-endpoint-acme>> appears.
+
+[[img-td-endpoint-acme]]
+
+image::partner/td-endpoint-acme.png[img-td-endpoint-acme, title="Endpoint Page"]
+
+[start=3]
+
+
+. In the *Protocol* listbox, click the down-arrow to expand the list of available protocols.
++
+From the list, click *AS2*.
+
+. Notice that the the *Type* box, is populated with the appropriate value (*RECEIVE*).
++
+The <<img-td-endpoint-acme>> expands to include more settings.
+. Select the *Default for AcmeHomeSupply* checkbox.
+. In the *URL* box, type *http://localhost:8085/edi*.
+. Check the *Message Encrypted* and *Message Signed* checkboxes.
+. Click *Save*.
++
+The Possible Endpoints Page appears.
+. On the Possible Endpoints Page, click the left end of the *AS2-Receive* endpoint row.
++
+On the <<img-td-possible-endpoints-no-property-acme>> the row expands to identify that a property is missing.
+
+
+[[img-td-possible-endpoints-no-property-acme]]
+
+image::partner/td-possible-endpoints-no-property-acme.png[img-td-possible-endpoints-no-property-acme, title="Possible Endpoints Page"]

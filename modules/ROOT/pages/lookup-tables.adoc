@@ -1,0 +1,134 @@
+= Lookup Tables
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Anypoint Partner Manager (APM) enables you to create, populate and edit a _lookup table_.  A lookup table is a table that facilitates transaction processing by associating values. For example, this page shows how to create a lookup table that associates internal partner product codes with customer product codes.
+
+include::{partialsdir}/edit-home-partner-settings.adoc[]
+
+. If you want to create a lookup table or edit the name, fields or keys for an existing table, go to <<Administer a Lookup Table>>.
+The fields you add will become the columns of the table.
++
+If you want to enter data for a table, go to <<Working with Lookup Table Data>>.
+The data that you add for each field will populate the rows of the field.
+
+== Administer a Lookup Table
+
+. In the *ADMINISTRATION* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *Lookup Tables Admin*.
++
+The <<img-lookup-tables-admin>> appears.
+
+[[img-lookup-tables-admin]]
+
+image::lookup-tables-admin.png[title="Lookup Tables Admin Page"]
+
+. You can now:
+* <<Create a Lookup Table>> or
+* <<Administer an Existing Lookup Table>>
+
+== Create a Lookup Table
+
+This section shows you how to use the APM user interface to create a lookup table. Alternatively, you can create a lookup table through calls to the xref:anypoint-partner-manager-api.adoc[Anypoint Partner Manager API]; see xref:lookup-tables-programmatic.adoc[Create a Lookup Table]. See xref:lookup-tables-programmatic.adoc[Create a Lookup Table] also for instructions for querying a table.
+
+=== To Create a Lookup Table
+
+. On the <<img-lookup-tables-admin>>, click *New*.
+The <<img-lookup-table>> appears.
+
+[[img-lookup-table]]
+
+image::lookup-table.png[lookup,title="Lookup Table Page"]
+
+[start=2]
+
+. On the <<img-lookup-table>>, in the *Name* box, enter a name for this lookup table, then click *Save*.
++
+The *Add Field* and *Add Key* bars appear.
++
+Because a lookup table must have at least one field before you can add a key to it, go to <<Add a Field>>.
+
+== Administer an Existing Lookup Table
+
+. On the <<img-lookup-tables-admin>>, click the table with which you want to work.
++
+The <<img-lookup-table>> for the table appears.
++
+You can now:
+
+* <<Add a Field>>
+* <<Add a Key>>
+
+===  Add a Field
+
+. On the <<img-lookup-tables-admin>>, click the table with which you want to work.
++
+The <<img-lookup-table>> for the table appears.
+. Click *Add Field*.
++
+The *Add Lookup Table Field* box appears; enter a name for a field you want to add, then click *Save Field*.
++
+The *Add Lookup Table Field* box closes.
++
+The <<img-lookup-table>> displays the key or keys you have addded.
+The new field name appears in the *Name* column of the table.
++
+To add another field, repeat this step.
++
+To add a key, go to <<Add a Key>>.
+
+=== Add a Key
+
+. On the <<img-lookup-tables-admin>>, click the table with which you want to work.
++
+The <<img-lookup-table>> for the table appears.
+. Click *Add Key*.
++
+The *Add Lookup Table Key* box appears.
+. In the *Key Name* box, enter a name for the key you want to add.
+. In the *Field* dropdown listbox, click the down-arrowheadhead.
++
+Any fields added for this table appear.
+. Click a field that you want to be part of a key, then click *Add Field To Key*.
+. Repeat the previous step to add another key. When the key is complete, click *Save Key*
++
+The *Add Lookup Table Key* box closes.
++
+The <<img-lookup-table>> displays the key or keys you have addded.
+
+== Working with Lookup Table Data
+
+. In the *ADMINISTRATION* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *Lookup Tables Data Entry*.
++
+The <<img-lookup-tables-data-entry>> appears.
+
+[[img-lookup-tables-data-entry]]
+
+image::lookup-tables-data-entry.png[title="Lookup Tables Data Entry Page"]
+
+. In the *Lookup Tables* dropdown listbox, click the down-arrowhead, then click the table for which you want to add or edit data.
+
+=== Add Data
+
+. Perform the steps in <<Working with Lookup Table Data>> to select the table with which you want to work.
+. On the <<img-lookup-tables-data-entry>>, click *Add Entry*.
++
+The *Add Lookup Table Entry* box appears.
+. In the field boxes, enter data that corresponds to table fields. When you have entered a set of data, click *Add Lookup Table Entry*.
++
+The *Add Lookup Table Entry* box closes.
++
+The <<img-lookup-tables-data-entry>> displays the data you have added as a new row.
+To add another row, repeat the preceding steps.
+
+== Duplicate, Edit, or Delete Data
+
+. Perform the steps in <<Working with Lookup Table Data>> to select the table with which you want to work.
+. On the <<img-lookup-tables-data-entry>>, identify the row with which you want to work.
++
+To duplicate the row, click the Duplicate icon (the leftmost of the three icons at the right end of the row.)
++
+To edit the row, click the Edit icon (the middle of the three icons.)
++
+To delete the row, click *X* (the rightmost of the three icons.)
+.

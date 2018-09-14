@@ -1,0 +1,71 @@
+= Promotion Scenarios
+
+NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+
+This section identifies common scenarios for promoting partners from one environment to another. For more information, see  xref:partner-configuration.adoc#promoting-a-partner[Promoting a Partner].
+
+
+In each of these scenarios, a trading partner *P1* has been created in an environment *E1*. In the table below, that partner is therefore identified as *P1~E1~*. +
+Another partner *P1* has been created in environment *E2* (*P1~E2~* below). In some scenarios, *P1~E2~* was created by promoting *P1~E1~* from *E1* to *E2*.
+
+In the last scenario, an additional trading partner *P2* has been created in environment *E2* (*P2~E2~* below).
+
+
+[%header,cols="3,1,1,3"]
+[grid=all]
+|===
+
+|Scenario
+|Override +
+Certificates +
+Checkbox
+|Keep +
+Identifiers +
+Checkbox
+|Result
+
+.2+.^|*P1~E1~* has previously been promoted to *P1~E2~*
+|Selected
+|Either selected or not selected
+|If *P1~E1~* contains any new cerfificates, they will be copied to *P1~E2~*
+
+|Not Selected
+|Either selected or not selected
+|*P1~E1~* will not be copied to *P1~E2~*
+
+
+
+.2+.^|*P1~E1~* and *P1~E2~* were identical at some point, but a set of identifiers (types and values) has subsequently been configured for AS2, EDI X12 and EDIFACT in *P1~E1~*.
+.6+.^|Either selected or not selected
+|Selected
+|*P1~E1~* identifiers will be copied to *P1~E2~* because the copied data may need  information associated with the identifiers (for example Endpoints, or Document Definitions)
+
+|Not selected
+|*P1~E1~* identifiers will be copied to *P1~E2~* because the copied data may need  information associated with the identifiers (for example Endpoints, or Document Definitions)
+
+
+
+|*P1~E1~* and *P1~E2~* were identical at some point, but a set of identifiers (types and values) has subsequently been configured for AS2, EDI X12 and EDIFACT in *P1~E1~* and in addition, _E2 has another partner (say, P1~E3~) that coincidentally has the same identifiers (that is, types & values) as **P1~E2~**_.
+|Either selected or not selected
+|Promotion fails, because having the same set of identifiers (types and values) more than once causes an error.
+
+
+
+.2+.^|*P1~E1~* and *P1~E2~* were identical at some point. Subsequently, a set of identifiers (types and values) has  been configured for AS2, EDI X12 and EDIFACT in *P1~E1~* and a _different_ set  of identifiers (types and values) has  been configured for AS2, EDI X12 and EDIFACT in *P1~E2~*.
+|Selected
+|*P1~E1~* values replace *P1~E2~* values.
+
+
+|Not selected
+|*P1~E2~* values are not replaced.
+
+
+
+|*P1~E1~* has a set of identifiers (types and values) for AS2, EDI X12 and EDIFACT. +
+*P2~E2~*, for whatever reason, has exactly the same set of identifiers as *P1~E1~*.
+|Either selected or not selected
+|Promotion fails, because having the same set of identifiers (types and values) more than once (that is, in both *P1~E2~* and *P2~E2~*) causes an error.
+
+
+
+|===

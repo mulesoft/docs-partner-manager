@@ -1,0 +1,65 @@
+== SMTP Send Settings
+
+=== Operation Settings
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Host
+|
+Required?: Yes +
+Type: Alphanumeric +
+
+|Port
+|
+Required?: Yes +
+Type: Numeric
+
+|Username
+|
+Required?: No +
+Type: Alphanumeric +
+
+|Password
+|
+Required?: No +
+Type: Alphanumeric +
+|===
+
+=== Email Settings
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|From
+|
+Required?: No
+Type: Alphanumeric +
+
+|To
+|
+Required?: No
+Type: Alphanumeric +
+
+|Cc
+|
+Required?: No
+Type: Alphanumeric +
+
+|Bcc
+|
+Required?: No
+Type: Alphanumeric +
+
+|Reply To
+|
+Required?: No
+Type: Alphanumeric +
+
+|Subject
+|
+Required?: No
+Type: Alphanumeric +
+|===

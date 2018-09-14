@@ -1,0 +1,74 @@
+= Anypoint B2B
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords: b2b, edi, portal
+
+Anypoint B2B enables Mule users to connect with trading partners using EDI over AS2, FTP, and other protocols. Anypoint B2B integrates seamlessly into the Mule runtime.
+
+NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+
+== About this Page
+
+This page introduces Anypoint B2B and links to pages that provide Anypoint B2B implementation examples in the context of Anypoint Studio, Mule’s graphical user interface. In addition, we provide configuration details for implementing Anypoint B2B in Anypoint Studio's XML Editor.
+
+== Overview
+
+Anypoint B2B includes the following:
+
+* EDI Module
+** EDI message-reading, message-validation, and message-writing capability
+** xref:edi-tradacoms.adoc[TRADACOMS EDI Support]
+** Integration with DataSense and DataWeave
+** X12 message packs for 4010 and 5010
+** X12 HIPAA module
+** xref:supported-edi-document-types.adoc[EDIFACT message packs] for versions D.93A, D.95B, D.96A, D.98B, D.99A, D.99B, D.00A, D.01B, D.02A, and D.03a
+** Ability to define your own schemas or to customize the base X12/EDIFACT schemas
+
+* xref:anypoint-partner-manager.adoc[Anypoint Partner Manager (APM)]
+** xref:partner-configuration.adoc[Partner Configuration]
+** xref:transaction-monitoring.adoc[Transaction Monitoring]
+
+* xref:as2-connector.adoc[AS2 Connector]
+* xref:ftps-connector.adoc[FTPS Connector]
+
+* xref:partner-manager-connector.adoc[Partner Manager Connector]
+** Controls connectivity between Anypoint Partner Manager and enabled connectors
+** Enables message tracking for non-EDI message types
+
+== Requirements
+
+* Mule 3.6.0 and later
+* Anypoint Studio, Version 5.0 (March 2015 or later)
+
+== Prerequisites
+
+This page assumes that you are familiar with:
+
+* Mule
+* xref:3.8@mule-runtime::anypoint-connectors.adoc[Anypoint Connectors]
+* The Anypoint Studio interface (for information about the interface, see
+xref:6@studio::index.adoc[Anypoint Studio Essentials]).
+To increase your familiarity with Studio, consider completing one or more
+xref:6@studio::basic-studio-tutorial.adoc[Anypoint Studio Tutorials].
+* xref:3.8@mule-runtime::mule-concepts.adoc#flows[Mule Flows]
+* xref:3.8@mule-runtime::global-elements.adoc[Mule Global Elements]
+
+
+== Getting Started
+
+* xref:anypoint-partner-manager.adoc[Anypoint Partner Manager]
+* xref:x12-module.adoc[X12 Module] (http://mulesoft.github.io/edi-module/x12/[Reference])
+* xref:edifact-module.adoc[EDIFACT Module] (http://mulesoft.github.io/edi-module/edifact/[Reference])
+* xref:ftps-connector.adoc[FTPS Connector] (http://modusintegration.github.io/mule-connector-ftps/[Reference])
+* xref:as2-connector.adoc[AS2 Connector - 2.0.0] (http://modusintegration.github.io/mule-connector-as2/[Reference])
+* xref:edi-x12-order-processing-example.adoc[X12 Order Processing Example]
+* xref:supported-edi-document-types.adoc[Supported EDI Document Types]
+
+== Release Notes
+
+* xref:release-notes::partner-manager/anypoint-partner-manager-release-notes.adoc[Anypoint Partner Manager Release Notes]
+* xref:release-notes::connector/partner-manager-connector-release-notes.adoc[Partner Manager Connector Release Notes]
+* xref:release-notes::connector/as2-connector-release-notes.adoc[AS2 Connector Release Notes]
+* xref:release-notes::connector/ftps-connector-release-notes.adoc[FTPS Connector Release Notes]
+* xref:release-notes::connector/x12-edifact-modules-release-notes.adoc[X12/EDIFACT EDI Modules Release Notes]

@@ -1,0 +1,597 @@
+= Document Types
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Configuring a _document type_ for a partner means configuring settings specific to that document type.
+
+include::{partialsdir}/edit-settings.adoc[]
+[start=3]
+
+. In the *CONFIGURATION* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *Document Types*.
++
+The <<img-documents>> appears.
+
+[[img-documents]]
+
+image::documents.png[title="Documents Page"]
+
+[start=4]
+
+. From this page, you can:
+
+* <<Edit an Existing Document>>
+* <<Add a New Document>>
+
+== Edit an Existing Document
+
+. On the <<img-documents>>, click the document you want to edit.
++
+The <<img-document-edit>> appears.
+
+
+[[img-document-edit]]
+
+image::document-edit.png[title="Existing Document Page"]
+
+. Edit settings as appropriate. +
+For information about editing specific settings, see <<Add a New Document>>.
+
+CAUTION: Changing the values for *Name* or *Message Type* may disrupt existing processes that refer to the existing values.
+
+== Add a New Document
+
+. Click *New*.
+The <<img-document>> appears.
+
+[[img-document]]
+
+image::document.png[title="Document Page"]
+
+. Enter settings as appropriate.
+. To add a new property, see <<Document Properties>>.
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Name
+
+|Name for this document type
+
+Required:: Yes
+
+Default:: Auto-populates based on the following values:
+* *Company name* (see xref:partners.adoc[Partners] and xref:company-information.adoc[Company Information])
+* *Standard* (see <<Format>>)
+* *Version* (see <<Format>>)
+
+NOTE: If you choose to change the default, then subsequently want to revert to it, click *Auto Fill*.
+
+|===
+
+== Format
+
+Valid values for *Format* fields depend on the choice you make for *Standard*.
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Standard
+
+|Select a standard from the dropdown listbox. Based on the standard you select, the appropriate settings options appear. For guidance on these settings, click the link that corresponds to the standard you choose in *Valid values*.
+
+Required?::
+No
+
+Valid values::
+
+* `X12` (see <<Format (X12)>>)
+* `EDIFACT` (see <<Format (EDIFACT)>>)
+* 'CSV' (see <<Format (CSV)>>)
+* 'XML' (see <<Format (XML)>>)
+* 'JSON' (see <<Format (JSON)>>)
+* 'RosettaNet' (see <<Format (RosettaNet)>>)
+
+
+Default::
+
+None
+
+|===
+
+== Format (X12)
+
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Version
+|Select a value from the dropdown listbox, or enter a different value.
+
+Required?::
+Yes
+
+Valid values::
+
+See listbox
+
+Default::
+
+None
+
+|Message Types
+
+|Select a value from the dropdown listbox, or enter a different value.
+
+Required?::
+Yes
+
+Valid values::
+
+See listbox
+
+Default::
+
+None
+
+
+
+|Default Checkboxes
+
+|Select either of these checkboxes in order to use the values selected in the corresponding sections of xref:x12-settings.adoc[x12-Settings].
+
+Deselect either of these boxes if you want to choose different values than those chosen as defaults.
+
+Default::
+
+Selected
+
+
+
+|Schema
+
+|Click *Choose File*, then choose a file from the selection window.
+
+NOTE: In the file type box of the selection window, select *All Files*.
+
+Required?::
+No
+
+Default::
+
+None
+
+|Document Properties
+
+|This section enables you to select a standard-specific label and specify a path for a given document. For more information, see <<Document Properties>>.
+
+|===
+
+
+== Format (EDIFACT)
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Version
+
+|Select a value from the dropdown listbox, or enter a different value.
+
+Required?::
+Yes
+
+Valid values::
+
+Alphanumeric
+
+Default::
+
+None
+
+
+
+|Message Type
+
+|Select a value from the dropdown listbox, or enter a different value.
+
+Required?::
+Yes
+
+Valid values::
+
+See listbox
+
+Default::
+
+None
+
+
+
+|Default Checkboxes
+
+|Select either of these checkboxes in order to use the values selected in the corresponding sections of
+xref:edifact-settings.adoc[EDIFACT].
+
+Deselect either of these boxes if you want to choose different values than those chosen as defaults.
+
+Default::
+
+Selected
+
+
+
+|Schema
+
+|Click *Choose File*, then choose a file from the selection window.
+
+NOTE: In the file type box of the selection window, select *All Files*.
+
+Required?::
+No
+
+Default::
+
+None
+
+|Document Properties
+
+|This section enables you to select a standard-specific label and specify a path for a given document. For more information, see <<Document Properties>>.
+
+|===
+
+
+== Format (CSV)
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Version
+
+|Select a value from the dropdown listbox, or enter a different value.
+
+Required?::
+No
+
+Valid values::
+
+* `4010`
+* `5010`
+
+Default::
+
+None
+
+
+
+|Message Type
+
+|Select a value from the dropdown listbox, or enter a different value.
+
+Required?::
+Yes
+
+Valid values::
+
+See listbox
+
+Default::
+
+None
+
+
+
+|Use default Outbound CSV for partner
+
+|Select this checkbox in order to use the values selected in the corresponding sections of xref:csv-settings.adoc[CSV-Settings].
+
+Deselect this checkbox if you want to choose different values than those chosen as defaults.
+
+Default::
+
+Selected
+
+|===
+
+If you deselect the *Use default Outbound CSV for partner* checkbox, the following fields appear.
+
+
+
+== Outbound (Write)
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Delimiter
+
+|Separates data in a document or message
+
+Valid values:: xref:glossary.adoc#sects[Standard APM field format]
++
+It is common to use a comma or pipe character (*\|*) as a delimiter.
+
+|Has Header Row
+
+|Select this checkbox to include a header row for CSV Inbound documents
+
+Deselect the checkbox to omit header rows.
+
+|===
+
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Use default Inbound CSV for partner
+
+|Select this checkbox in order to use the values selected in the corresponding sections of xref:csv-settings.adoc[CSV-Settings].
+
+Deselect this checkbox if you want to choose different values than those chosen as defaults.
+
+Default::
+
+Selected
+
+|===
+
+If you deselect the *Use default Inbound CSV for partner* checkbox, the following fields appear.
+
+=== Inbound (Read)
+
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Delimiter
+
+|Separates data in a document or message
+
+Valid values:: xref:glossary.adoc#sects[Standard APM field format]
++
+It is common to use a comma or pipe character (*\|*) as a delimiter.
+
+
+
+|Has Header Row
+
+|Select this checkbox to include a header row for CSV Inbound documents
+
+Deselect the checkbox to omit header rows.
+
+
+|===
+
+
+
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+
+
+|Schema
+
+|Click *Choose File*, then choose a file from the selection window.
+
+NOTE: In the file type box of the selection window, select *All Files*.
+
+Required?::
+No
+
+Default::
+
+None
+
+|Document Properties
+
+|This section enables you to select a standard-specific label and specify a path for a given document. For more information, see <<Document Properties>>.
+
+|===
+
+
+== Format (XML)
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Namespace
+
+|Type a value in the box.
+
+Required?::
+No
+
+Valid values:: xref:glossary.adoc#sects[Standard APM field format]
+
+
+Default::
+
+None
+
+
+
+|Root Node
+
+|Type a value in the box.
+
+Required?::
+Yes
+
+Valid values:: Must conform to XML naming rules (see http://www.w3schools.com/xml/xml_elements.asp)
+
+
+Default::
+
+None
+
+
+|Schema
+
+|Click *Choose File*, then choose a file from the selection window.
+A
+NOTE: In the file type box of the selection window, select *All Files*.
+
+Required?::
+No
+
+Default::
+
+None
+
+|Document Properties
+
+|This section enables you to select a standard-specific label and specify a path for a given document. For more information, see <<Document Properties>>.
+
+|===
+
+
+== Format (JSON)
+[%header,cols="3s,7a"]
+
+|===
+
+|Setting |Description
+
+|Message Type
+
+| Required?::
+Yes
+
+Valid values:: xref:glossary.adoc#sects[Standard APM field format]
+
+Default::
+
+None
+
+
+|Schema
+
+|Click *Choose File*, then choose a file from the selection window.
+
+NOTE: In the file type box of the selection window, select *All Files*.
+
+Required?::
+No
+
+Default::
+
+None
+
+|Document Properties
+
+|This section enables you to select a standard-specific label and specify a path for a given document. For more information, see <<Document Properties>>.
+
+|===
+
+
+
+== Format (RosettaNet)
+[%header,cols="3s,7a"]
+
+|===
+
+|Setting |Description
+
+|Message Type
+
+| Required?::
+Yes
+
+Valid values:: xref:glossary.adoc#sects[Standard APM field format]
+
+Default::
+
+None
+
+
+|Version
+
+|Select a value from the dropdown listbox.
+
+Required?::
+Yes
+
+Default::
+
+None
+
+|Schema
+
+|Click *Choose File*, then choose a file from the selection window.
+
+NOTE: In the file type box of the selection window, select *All Files*.
+
+Required?::
+No
+
+Default::
+
+None
+
+|Document Properties
+
+|This section enables you to select a standard-specific label and specify a path for a given document. For more information, see <<Document Properties>>.
+
+|===
+
+=== Document Properties
+
+These settings, which must be configured independently for each format, enable you to select a standard-specific label and specify a path for a given document.
+
+==== Add New Document Properties
+
+On the <<img-documents>>, click *New Property*. The *Add Property* box appears.
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Property
+
+|Choose an appropriate label for this document from the listbox.
+
+Required?::
+No
+
+Valid values:: See listbox.
+
+
+Default::
+
+|Property Source Type
+
+|Choose an appropriate label for this document from the listbox.
+
+Required?::
+No
+
+Valid values:: See listbox
+
+
+Default::
+
+None
+
+|Path
+
+|Type the path for the location of this document.
+
+Required?::
+No
+
+Valid Values:: XPath for XML Documents, JsonPath for others
+
+Default::
+
+None
+
+|===

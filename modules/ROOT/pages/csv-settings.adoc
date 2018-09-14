@@ -1,0 +1,65 @@
+= CSV Settings
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+include::{partialsdir}/edit-settings.adoc[]
+
+[start=3]
+
+. In the *Partners* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *CSV*.
++
+The <<img-csv-settings>> appears.
+
+[[img-csv-settings]]
+
+image::csv-settings.png[title="CSV Settings Page"]
+
+
+== Inbound (Read)
+
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Delimiter
+
+|Separates data in a document or message
+
+Valid values:: xref:glossary.adoc#sects[Standard APM field format]
++
+It is common to use a comma or pipe character (*\|*) as a delimiter.
+
+
+
+|Has Header Row
+
+|Select this checkbox to include a header row for CSV Inbound documents
+
+Deselect the checkbox to omit header rows.
+
+
+|===
+
+== Outbound (Write)
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Delimiter
+
+|Separates data in a document or message
+
+Valid values:: xref:glossary.adoc#sects[Standard APM field format]
++
+It is common to use a comma or pipe character (*\|*) as a delimiter.
+
+|Has Header Row
+
+|Select this checkbox to include a header row for CSV Inbound documents
+
+Deselect the checkbox to omit header rows.
+
+|===

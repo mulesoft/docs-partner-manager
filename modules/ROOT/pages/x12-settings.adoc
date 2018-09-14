@@ -1,0 +1,23 @@
+= X12 Settings
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+X12 standards define the structure, format, and content of business transactions conducted through Electronic Data Interchange (EDI) and are used in conjunction with AS2 or FTPS as transport for these documents.
+
+include::{partialsdir}/edit-settings.adoc[]
+
+[start=3]
+
+. In the *FORMAT DEFAULTS* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *X12*.
++
+The <<img-x12-settings>> appears.
+
+[[img-x12-settings]]
+
+image::x12-settings.png[title="X12 Settings Page"]
+
+
+* xref:x12-identity-settings.adoc[X12 Identity Settings]
+* xref:x12-inbound-(read)-settings.adoc[X12 Inbound (Read) Settings]
+* xref:x12-outbound-(write)-settings.adoc[X12 Outbound (Write) Settings]

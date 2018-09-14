@@ -1,0 +1,199 @@
+= EDIFACT Settings - Outbound (Write)
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+== Header Settings (UNB)
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Interchange Sender ID (UNB 2.1)
+|This field is the EDI Interchange ID for your Company. This is auto populated from
+<<EDIFACT Identity Settings>>.
+
+
+
+|Interchange sender ID qualifier (UNB 2.2)
+|This is a field for your EDIFACT Interchange sender ID qualifier. This is auto populated from
+<<EDIFACT Identity Settings - Home Org>>.
+
+
+
+|Interchange Receiver ID (UNB 3.1)
+|This field is your trading partners EDIFACT Interchange Receiver ID. This is auto populated from
+<<Interchange ID - UNB>>.
+
+
+
+|Interchange receiver ID qualifier (UNB 3.2)
+|This field is your trading partners EDIFACT Interchange Receiver ID qualifier. This is auto populated from
+<<Interchange ID qualifier - UNB>>.
+
+
+
+|Request Acknowledgements (UNB 9)
+|Indicates if your trading partner requires EDIFACT document acknowledgements; correlates to the EDIFACT document CONTRL.
+
+Required?::
+No
+
+Valid values::
+
+* `1 (Acknowledgement requested)`
+* `2 (Confirmation of receipt only)`
+
+Default::
+
+None provided
+
+
+
+|Default test indicator (UNB 11)
+|Checkbox; select if you are testing EDIFACT documents (Outbound) with this trading partner.
+
+Required?::
+No
+
+Default::
+Not selected
+
+
+
+|Syntax version (UNB 1.2)
+
+|Required?::
+No
+
+Valid values::
+* `2`
+* `3`
+* `4`
+Default::
+
+`4`
+
+
+
+|Parser Settings (checkboxes)
+
+|* *Always send UNA*
+* *Fail document when invalid character in value*
+
+|Terminator/Delimiter
+
+|These settings specify which special characters your Company wants to use with a trading partner to separate and use as terminators in the EDIFACT data. The min/max for this field is 1. All these fields are editable.
+
+Data element separator character::
+The default value is “+”
+
+Component element separator character::
+The default value is “:”
+
+Repetition separator character::
+The default value is “*”
+
+Segment terminator character::
+The default value is “ ‘ “
+
+Release character::
+The default value is “? “
+
+Line ending between segments::
+Drop-down box that enables you  to specify on your outbound data you
+would like CR (Carriage return) or Line feed (LF) or Line feed carriage return (LFCR) or none.
+
+String substitution character::
+Character to be used to replace invalid characters in string values; no default given.
+
+|Character Set and Encoding
+
+|Message character encoding
+
+Required?::
+No
+
+Valid values::
+
+* `ONOA (ISO 646)`
+* `UNOB (ISO 646)`
+* `UNOC (ISO 8859-1)`
+* `UNOD (ISO 8859-2)`
+* `UNOE (ISO 8859-5)`
+* `UNOF (ISO 8859-7)`
+* `UNOG (ISO 8859-3)`
+* `UNOH (ISO 8859-4)`
+* `UNOI (ISO 8859-6)`
+* `UNOJ (ISO 8859-8)`
+* `UNOK (ISO 8859-9)`
+* `UTF8`
+
+Default::
+`UNOA (ISO 646)`
+
+|===
+
+
+== Control Number Settings
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Initial Interchange Control Reference
+|A whole number can be specified in the Initial Interchange Control Reference number to begin on your outbound documents with this Trading Partner. If a single digit is specified it will be padded with leading zeros.
+
+Required?::
+No
+
+Valid values::
+
+Alphanumeric
+
+Default::
+
+`None`
+
+
+
+|Initial Message Reference Number
+
+|A whole number can be specified to begin on your outbound documents with this Trading Partner. If a single digit is specified it will be padded with leading zeros.
+
+
+Required?::
+ No
+
+Valid values::
+
+ Alphanumeric
+
+Default::
+
+ `None`
+
+
+
+|Initial Group Reference
+ A whole number can be specified to begin on your outbound documents with this Trading Partner. If a single digit is specified it will be padded with leading zeros.
+
+
+Required?::
+ No
+
+Valid values::
+Alphanumeric
+
+Default::
+ `None`
+
+
+
+ Checkbox options:
+
+ *	Use groups
+ *	Use unique Message Reference Numbers
+ *	Use unique Group Reference Numbers
+
+|===

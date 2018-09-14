@@ -1,0 +1,23 @@
+= Administration
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+
+Use these pages to configure administrative settings for your company.
+
+Your company may have been set up during the provisioning process. If so, its name appears at the top of the Name list on the Partner Configuration Page, identified as *Your company*.
+
+include::{partialsdir}/edit-home-partner-settings.adoc[]
+
+[start=3]
+
+. In the left-hand navigation pane, click the page name that corresponds to the settings with which you want to work.
++
+The page that you clicked in the left-hand pane appears. For information about the page, click the corresponding link in the following list.
+
+* xref:environments.adoc[Environments]
+* xref:error-codes.adoc[Error Codes]
+* xref:security.adoc[Security]
+* xref:lookup-tables.adoc[Lookup Tables Administration]

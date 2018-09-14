@@ -1,0 +1,48 @@
+= Errors View
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+
+== Content Area
+Each row has 5 columns
+
+From:: What partner the error came from
+To:: Who it was going to
+Date:: Date and time at which the error occurred
+Error Code:: Code associated with the error
+
+=== Detail Pane
+Displays detailed information specific to the error code
+
+=== Filters
+
+You can filter errors based on:
+
+Date::
+* Today
+* Past 48 Hours
+* This Week
+* This Month
+
+From:: Select a date from calendar; only errors that occurred after that date will appear.
+To:: Select a date from calendar; only errors that occurred before that date will appear.
+
+Error code / type:: For example, *4- Languishing*
+
+Error Source::
+* Transmission
+* Transaction
+* Errors
+* Document
+
+Error ID::
+Enter a specific error identifier.
+
+
+=== To show all errors
+Click *Clear filters*.
+
+=== Top Bar
+* *Related error source* button will appear when a row is selected. This will allow you to view the transaction, transmission, or document associated with the error.

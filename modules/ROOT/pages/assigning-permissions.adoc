@@ -1,0 +1,46 @@
+= Assigning Permissions
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+
+The following table identifies permissions you can assign, as well as the privileges and scope that correspond to those privileges. For detailed information about how to use Anypoint Platform to assign these permissions, see xref:access-management::index.adoc[Access Management] and xref:access-management::managing-permissions.adoc[Managing Permissions].
+
+***
+---
+* * *
+- - -
+
+[%header,cols="1,3,2"]
+
+|===
+|Permission
+|Privileges
+|Scope
+
+|View Partners
+|Can view all partners and their information and settings.
+|Assigned per environment
+
+|Manage Partners
+|In addition to privileges of View Partners, can add new partners and update information and settings for partners.
+|Assigned per environment
+
+|View Transactions
+|Can view data in the B2B Transactions monitoring screen.
+|Assigned per environment
+
+|Manage Transactions
+|In addition to privileges of View Transactions, can replay transactions.
+|Assigned per environment
+
+|Partners Administrator
+|In addition to all the  privileges of Manage Partners and Manage Transactions, can generate new Api Keys for the organization and promote Partner settings across environments.
+|Assigned per Business Group
+|===
+
+== More information
+
+* xref:access-management::index.adoc[Access Management]
+* xref:access-management::managing-permissions.adoc[Managing Permissions]

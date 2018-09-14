@@ -1,0 +1,74 @@
+= Error Codes
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+include::{partialsdir}/edit-home-partner-settings.adoc[]
+
+[start=3]
+
+. On the Administration Page, in the left hand navigation pane, click *Error Codes*.
++
+The <<img-error-codes>> appears.
+
+[[img-error-codes]]
+
+image::error-codes.png[title="Error Codes Page"]
+
+[start=4]
+
+. On this page, you can:
+* <<Add a new Error Code>>
+* <<Edit an Existing Error Code>>
+
+== Add a New Error Code
+
+. On the <<img-error-codes>>, click *New*.
++
+The <<img-error-code>> appears.
+
+[[img-error-code]]
+
+image::error-codes.png[error-code,title="Error Code Page"]
+
+[start=2]
+
+. Enter required settings (see <<Error Code Settings>>). +
+. Enter optional settings where relevant for this partner.
+. Click *Save* to save settings.
+
+== Edit an Existing Error Code
+
+. On the <<img-error-codes>>, in the *Code* column, click the code you want to edit.
+. Edit required settings (see <<Error Code Settings>>). +
+. Edit optional settings where relevant for this partner.
+. Click *Save* to save settings.
+
+== Error Code Settings
+
+[%header,cols="3s,7a"]
+|===
+|Name |Description
+
+|Code
+|Value to identify this error +
+Type: integer +
+Required: Yes +
+Default: None
+
+|Severity
+|Select a severity level from the listbox. +
+Type: Dropdown listbox +
+Default: `WARNING`
+
+|Label | &nbsp; +
+Type: string +
+Required: Yes +
+Default: None
+
+|Default Message | &nbsp; +
+Type: string +
+Required: No +
+Default: None
+
+|===

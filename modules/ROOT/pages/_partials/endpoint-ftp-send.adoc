@@ -1,0 +1,124 @@
+== FTP Send Settings
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+| Server Address
+|Address from which outbound documents are sent.
+
+Required?::
+Yes
+
+Valid values::
+Alphanumeric
+
+Default::
+
+`localhost`
+
+
+
+| Port
+| Specific outbound port to be used with this trading partner. Set the host of the partner's FTP server; this can be an IP address or a host name.
+
+Required?::
+Yes
+
+Valid values::
+
+Numeric
+
+Default::
+
+`990`
+
+
+
+| User Name
+
+| Required?::
+Yes
+
+Valid values::
+
+Alphanumeric
+
+Default::
+
+None
+
+
+
+| Password
+
+| Required?::
+Yes
+
+Valid values::
+
+Alphanumeric
+
+Default::
+
+None
+
+
+| Transfer Mode
+| For ease of client use, use passive mode when possible.
+
+Required?::
+Yes
+
+Valid values::
+
+`Active`\|`Passive`
+
+Default::
+
+`Passive`
+
+
+
+| Path
+
+| Required?::
+No
+
+Valid values::
+
+Alphanumeric
+
+Default::
+
+`/`
+
+
+| Filename
+
+| Required?::
+No
+
+Valid values::
+
+Numeric
+
+Default::
+
+`None`
+
+
+| Upload Temporary Directory
+
+| Required?::
+No
+
+Valid values::
+
+Alphanumeric
+
+Default::
+
+`None`
+
+|===

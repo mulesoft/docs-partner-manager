@@ -1,0 +1,178 @@
+= RosettaNet PIPs
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Configuring a _PIP type_ for a partner means specifying a *Name* and *Process Code*.
+
+include::{partialsdir}/edit-settings.adoc[]
+[start=3]
+
+. In the *CONFIGURATION* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *RosettaNet PIPs*.
++
+The <<img-pips>> appears.
+
+[[img-pips]]
+
+image::pips.png[title="RosettaNet PIPs Page"]
+
+[start=4]
+
+. From this page, you can:
+
+* <<Edit an Existing PIP>>
+* <<Add a New PIP>>
+
+== Edit an Existing PIP
+
+. On the <<img-pips>>, click the PIP you want to edit.
++
+The <<img-pip-edit>> appears.
+
+
+[[img-pip-edit]]
+
+image::pip-edit.png[title="Existing PIP Page"]
+
+. Edit settings as appropriate. +
+For information about editing specific settings, see <<Add a New PIP>>.
+
+CAUTION: Changing the values for *Name* or *Process Code* may disrupt processes that refer to the existing values.
+
+== Add a New PIP
+
+. Click *New*. The PIP page appears.
+The <<img-pip>> appears.
+
+[[img-pip]]
+
+image::pip.png[title="PIP Page"]
+
+Enter settings as appropriate.
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Name
+
+|Name for this PIP type
+
+Required:: Yes
+
+Default:: Auto-populates based on the following values:
+* *Company name* (see xref:partners.adoc[Partners] and xref:company-information.adoc[Company Information])
+* *Process Code* (see below)
+
+NOTE: If you choose to change the default, then subsequently want to revert to it, click *Auto Fill*.
+
+
+|PIP Code
+
+|
+
+Required?::
+No
+
+
+Default::
+
+None
+
+
+|Process Code
+|
+
+Required?::
+Yes
+
+Default::
+
+None
+
+
+|Transaction Code
+
+|
+
+Required?::
+Yes
+
+Default::
+None
+
+
+|Activity Identifier
+
+|
+Required?::
+Yes
+
+Default::
+None
+
+|Retry Count
+
+|
+
+Required?::
+No
+
+Default::
+
+None
+
+|===
+
+=== Checkboxes
+
+Require Sync:: Check this box to specify that the message exchange is to be completed synchronously.
+Require Async:: Check this box to specify that the message exchange is to be completed asynchronously.
+One-PIP:: Check this box if the transaction with which this PIP is associated proceed only from Partner _A_ to Partner _B_ only, as opposed to from both Partner _A_ to Partner _B_ and from Partner _B_ to Partner _A_.
+NOTE:  An initiator of a synchronous single-action PIP must specify that the
+message exchange is to be completed synchronously.
+
+
+== Initiator Action
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Document Definition
+
+|To select a document definition, click the box, then choose from the *Pick a Document* popup window.
+
+|Initiator Action Code
+|
+
+Required:: Yes
+
+Default:: None
+
+|Initiator Partner Role
+|
+Required:: Yes
+
+Default:: None
+
+|Initiator Service Code
+|
+Required:: Yes
+
+Default:: None
+
+|Initiator Time to Acknowledge
+|
+Required:: Yes
+
+Valid Values:: Numbers
+
+Default:: None
+
+|===
+
+=== Checkboxes
+
+Initiator Require Signed Action:: Check this box if you want to require that the receiver or a message respond with a _business action_ message that is, a message of a business nature, such as a purchase order.
+Initiator Require Signed Acknowledge:: Check this box if you want to require that the receive of a message respond with an acknowledgement (or _signal message_) of message receipt.

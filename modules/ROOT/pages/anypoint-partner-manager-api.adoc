@@ -1,0 +1,79 @@
+= Anypoint Partner Manager API
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+
+Clients often want to interact with Anypoint Partner Manager (APM)
+programmatically to automate their processing tasks.
+APM has two distinct APIs that clients can call:
+
+* *Trading Partner Management Service API* (TPM Service API) - Manages partner-related configurations such as document definitions. +
+*Download URL:*
+https://anypoint.mulesoft.com/b2b/tpm/api/definition/api.raml +
+*Experiment URL:* https://anypoint.mulesoft.com/b2b/tpm/api/console/index.html
+* *Tracker API* - Gives you access to run-time data such as transactions and business documents. +
+*Download URL:*
+https://anypoint.mulesoft.com/b2b/tracker/api/definition/api.raml +
+*Experiment URL:*
+https://anypoint.mulesoft.com/b2b/tracker/api/console/index.html
+
+== Partner Manager Query Language
+
+Resources having the _Searchable_ trait can be queried through the *q* query parameter
+using Partner Manager Query Language (PMQL). PMQL is a SQL-like language giving you
+the ability to search for resources by fields other than the resource ID. Before diving into the syntax,
+here are a few examples of queries expressed in PMQL:
+
+[listing]
+name == 'AS2 Receive'
+
+[listing]
+documentPropertyValue =like= 'MuleSoft%'
+
+[listing]
+processedAt > '2016-04-29 00:00:00' and processedAt <= '2016-04-29 00:00:01'
+
+[listing]
+standard =in= ('X12', 'EDIFACT') and (direction == 'INBOUND' or messageType == 'PO') and processedAt >= '2016-01-01 00:00:00'
+
+A PMQL expression is composed of one or more comparisons, related to each other with logical operators:
+
+* Logical AND: `and`
+* Logical OR: `or`
+
+By default, the AND operator takes precedence, that is,
+it is evaluated before any OR operators are.
+However, a parenthesized expression can be used to change the precedence,
+yielding whatever the contained expression yields.
+
+A comparison is composed of a selector, an operator, and an argument:
+
+[listing]
+comparison = selector, comparison operator, arguments
+
+== PMQL Selector
+
+A selector identifies a field of the resource representation to filter by. It can be
+any non-empty Unicode string that does not contain reserved characters (see below) or a white space.
+
+== PMQL Comparison Operator
+
+A comparison operator can be any one of the following:
+
+* Equal to: `==`
+* Not equal to: `!=`
+* Less than: `<`
+* Less than or equal to: `&lt;=`
+* Greater than operator: `>`
+* Greater than or equal to: `>=`
+* In: `=in=`
+* Like: `=like=`
+
+== PMQL Argument
+
+An argument can be a single value, or multiple values in parenthesis separated by comma.
+Multiple values can only be used with operators that support such argument types like
+the _IN_ operator. An argument value that does not contain any reserved character or a
+white space can be unquoted, other arguments must be enclosed in single or double quotes.

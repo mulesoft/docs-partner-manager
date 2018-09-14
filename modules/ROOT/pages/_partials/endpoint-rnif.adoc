@@ -1,0 +1,58 @@
+== RNIF Settings
+
+RNIF Settings pertain to trading partner-specific RNIF settings such as *Receive Http Reference*.
+
+=== Receive
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+| Receive Http Reference
+
+| Name of global HTTP listener connector configuration for this organization’s endpoint.
+
+Required?:: Yes
+
+Valid values::
+
+String
+
+Default::
+
+None
+
+| Service Path
+
+| Path relative to the *Receive Http Reference*; required for multiple paths under a single server
+
+Valid values::
+String
+
+Required::
+Yes
+
+Default::
+None
+
+|===
+
+
+=== Send
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+| Send Http Reference
+
+| Name of global HTTP request connector configuration for partner organization’s endpoint.
+
+Valid values::
+String
+
+Required?::
+No
+
+Default::
+None

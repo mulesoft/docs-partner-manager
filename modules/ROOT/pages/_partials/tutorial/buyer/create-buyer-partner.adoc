@@ -1,0 +1,15 @@
+// Create Buyer Partner
+
+. On the <<img-td-target-channel-in-progress-aaz>>, in the left-hand navigation pane, click *Partners*. +
+The <<img-partner-configuration>> appears.
+. On the <<img-partner-configuration>>, click *Create New Partner*. +
+The <<img-company-information>> appears.
+
+[[img-company-information, Company Information Page]]
+
+image::company-information.png[img-company-information, title="Company Information Page"]
+
+[start=3]
+
+. On the <<img-company-information>>, in the *Company Name* box, type *AcmeHomeSupply*.
+. Click *Save*.

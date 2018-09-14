@@ -1,0 +1,52 @@
+== IMAP Receive Settings
+
+=== General Settings
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Backup Folder
+|
+Required?: No +
+Type: Alphanumeric +
+
+|Mailbox Folder
+|
+Required?: No +
+Type: Alphanumeric +
+
+|Move to Folder
+|
+Required?: No +
+Type: Alphanumeric +
+
+|===
+
+
+=== Operation Settings
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Host
+|
+Required?: Yes +
+Type: Alphanumeric +
+
+|Port
+|
+Required?: Yes +
+Type: Numeric
+
+|Username
+|
+Required?: No +
+Type: Alphanumeric +
+
+|Password
+|
+Required?: No +
+Type: Alphanumeric +
+|===

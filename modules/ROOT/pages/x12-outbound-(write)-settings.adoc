@@ -1,0 +1,432 @@
+= X12 Settings - Outbound (Write)
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Envelope Headers (ISA)
+
+|The fields in this section enable you to set envelope header options.
+
+|Auth Info. Qualifier (ISA 01)
+|The most common value is `00`; rarely is another used.
+
+Required?::
+No
+
+Valid values::
+* `00`
+* `01`
+* `02`
+* `03`
+* `04`
+* `05`
+* `06`
+
+Default::
+
+`00`
+
+
+
+|Authorization Information (ISA 02)
+|NOTE: If the value in the previous box (ISA 01) is `00` (the default), then this box is disabled.
+
+Required?::
+No
+
+Valid values::
+
+Alphanumeric
+
+Default::
+
+Ten blanks
+
+
+
+|Security Inf. Qualifier (ISA 03)
+|In the dropdown listbox, enter a value for this trading partner.
+
+Required?::
+Yes
+
+Valid values::
+
+* `00`
+* `01`
+
+Default::
+
+`00`
+
+NOTE:	If the value in (ISA 03) is 01, then a valid password value is required in ISA 04.
+
+
+
+|Security Information (ISA 04)
+
+|NOTE: If the value in the previous box (ISA 03) is `00` (the default), then this box is disabled.
+
+Required?::
+No
+
+Valid values::
+
+Alphanumeric
+
+Default::
+
+None
+
+
+
+|Interchange sender ID qualifier (ISA 05)
+|This value populates based on the value saved in <<Interchange ID qualifier - ISA>>
+
+Required?::
+Yes (must be entered and saved in <<Interchange ID qualifier - ISA>>)
+
+
+
+|Interchange sender ID (ISA 06)
+|This value populates based on the value entered and saved in <<Interchange ID - ISA>>
+
+Required?::
+Yes (must be entered and saved in <<Interchange ID - ISA>>)
+
+
+
+
+|Interchange receiver ID qualifier (ISA 07)
+|This value populates based on the value entered and saved in <<Interchange ID qualifier - ISA>>
+
+Required?::
+Yes (must be entered and saved in <<Interchange ID qualifier - ISA>>)
+
+
+
+|Interchange receiver ID (ISA 08)
+|This value populates based on the value entered and saved in <<Interchange ID - ISA>>
+
+Required?::
+Yes (must be entered and saved in <<Interchange ID - ISA>>)
+
+
+
+Repetition separator character (ISA 11)::
+Drop-down listbox that enables you to choose a repetition character.
+
+Required?::
+No
+
+Valid values::
+
+* `U`
+* `^`
+* `+`
+
+Default::
+
+`^`
+
+
+
+|Interchange Control Version (ISA 12)
+|Drop-down listbox that enables you to choose which X12 version you use. If you choose `Custom`, another box appears in which you can enter an numeric value of your choice. Currently `004010` and `005010` are the supported X12 versions.
+
+Required?::
+No
+
+Valid values::
+
+* `004010 (4010)`
+* `005010 (5010)``
+* `Custom`
+
+Default::
+
+`004010 (4010)`
+
+
+
+|Request Interchange Acknowledgements (ISA 14)
+|Drop-down list that enables you to choose whether or not a 997 message is required.
+
+Required?::
+Yes
+
+Valid values::
+
+* `0 (997 not required)`
+* `1 (997 required)`
+
+Default::
+
+* `1 (997 required)`
+
+
+
+|Default Interchange usage indicator (ISA 15)
+|Indicates whether  you are in Test or Production with this trading partner.
+
+
+Required?::
+Yes
+
+Valid values::
+
+* `Production`
+* `Test`
+
+Default::
+
+`Production`
+
+
+
+|Component element separator character (ISA 16)
+|Indicates the character used to separate data.
+"*>*" is a commonly used character.
+
+
+Required?::
+No
+
+Valid values::
+Most special characters excluding numbers; must be a single character.
+
+Alphanumeric
+
+Default::
+
+`>`
+
+|===
+
+
+== Group Headers (GS)
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+|Version identifier code suffix (GS 08)
+|Enables you to identify the X12 version being used in the outbound message.
+
+Required?::
+Yes
+
+Valid values::
+
+12 characters, alphanumeric
+
+Default::
+
+`004010`
+
+|===
+
+== Terminator/Delimiter
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+|Segment terminator character
+|Identifies the end of X12 segment.
+"*~*" is a commonly used terminator character.
+
+Required?::
+ No
+
+Valid values::
+Most special characters; must only be a single character only.
+
+Default::
+ `~`
+
+
+
+|Data Element Delimiter
+|Separates data elements from each other.
+One of the most common values used in this field is “***”
+
+
+Required?::
+No
+
+Valid values::
+
+Most special characters except whole numbers; must be a single character only.
+
+Default::
+
+`*`
+
+
+
+|String substitution character
+Character to be used to replace invalid characters in string values.
+Sends `null` to the server if has no value
+
+Required?::
+No
+
+Valid values::
+Most special characters except whole numbers; must be a single character only.
+
+Default::
+
+None provided
+
+|===
+
+== Character Set and Encoding
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Character Set
+|Drop-down listbox enabling choice of three character sets.
+
+Valid values::
+
+* *Basic* +
+This character set includes:
+** Uppercase letters `A` through `Z`
+** Digits `0` through `9`
+** Special characters +
+`! “ & ’ ( ) * + , - . / : ; ? =`
+** The character created by pressing the space bar.
+
+* *Extended* +
+This character set includes:
+** All characters in the Basic character set
+** Lowercase letters `a` through `z`
+** Select language characters
+** Other special characters: +
+`% @ [ ] _ { } \ \| < > ~ # $`
+
+* *Unrestricted* character set - includes all characters.
+
+Default::
+`Basic`
+
+
+
+|Character Encoding
+|Drop-down listbox enabling you to select character encoding.
+
+Required?::
+Yes
+
+Valid values::
+
+* `ASCII`
+* `ISO-8859-1`
+* `IBM 1047`
+
+Default::
+
+`ASCII`
+
+
+
+|Line ending between segment
+|Drop-down listbox that enables you to specify the type of line-ending you want on your outbound data
+Options include Carriage return (`CR`), Line feed (`LF`), Line feed carriage return (`LFCR`) or none.
+
+
+Required?::
+Yes
+
+Valid values::
+
+* `None`
+* `CR`
+* `LF`
+* `LFCR`
+
+Default::
+
+`None`
+
+|===
+
+== Control Number Settings
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Initial Interchange control number (ISA 13)
+|You can use this box to specify a whole number to appear in the ISA control number that begins your outbound documents with a Trading Partner. If a single digit is specified it will be padded with leading zeros.
+
+
+Required?::
+ No
+
+Valid values::
+ Alphanumeric
+
+Default::
+ `1`
+
+
+
+|Initial GS control number (GS 06)
+|You can use this box to specify a whole number to appear in the GS control number that begins your outbound documents with a Trading Partner. If a single digit is specified it will be padded with leading zeros.
+
+
+Required?::
+ No
+
+Valid values::
+ Alphanumeric
+
+Default::
+ `1`
+
+
+
+|Initial transaction set control numbers (ST 02)
+|You can use this box to specify a whole number to appear in the ST control number that begins your outbound documents with a Trading Partner. If a single digit is specified it will be padded with leading zeros.
+
+
+Required?::
+ No
+
+Valid values::
+ Alphanumeric
+
+Default::
+ `1`
+
+
+
+|Implementation Convention reference (ST 03)
+|Used in the Healthcare space in X12 versions 5010 and above.
+
+Required?::
+No
+
+Valid values::
+
+Alphanumeric
+
+Default::
+
+None provided
+
+
+
+|Require unique GS control numbers (GS06)
+|Select this checkbox to require unique GS control numbers.
+
+|Require unique transaction set control numbers (ST02)
+Select this checkbox to require unique transaction set control numbers.
+
+|===

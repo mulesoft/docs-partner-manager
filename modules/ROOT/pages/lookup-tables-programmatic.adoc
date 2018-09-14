@@ -1,0 +1,114 @@
+= Lookup Tables
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+
+Anypoint Partner Manager (APM) enables you to create, populate, and edit a _lookup table_.  A lookup table is a table that facilitates transaction processing by associating values. For example, this page shows how to create a lookup table that associates home partner product codes with trading partner product codes.
+
+== Creating a Lookup Table
+
+You can create a lookup table using either the:
+
+* xref:lookup-tables.adoc#creating-a-lookup-table[Anypoint Partner Manager user interface]
+* xref:anypoint-partner-manager-api.adoc[Anypoint Partner Manager API].
+
+This section shows how to make API calls using https://curl.haxx.se/[curl] to create a three-column, two-key table.
+
+=== To Create a Lookup Table
+
+. Create the table:
++
+----
+curl -X POST -d
+'{
+  "name": "ProductCodes"
+ }' "https://anypoint.mulesoft.com/b2b/tpm/api/lookupTables?environmentId=yourEnvironmentId&apiKey=yourAPIKey"
+
+----
++
+The API returns a table ID, which you use in subsequent calls.
+
+. Add a field:
++
+----
+
+curl -X POST -d
+'{
+  "name": "InternalProductCode"
+}' "http://anypoint.mulesoft.com/b2b/tpm/api/lookupTables/yourTableId/fields?environmentId=yourEnvironmentId&apiKey=yourAPIKey"
+----
++
+The API returns an ID for the field.
+
+. Use the same syntax to add two more fields:
++
+----
+curl -X POST -d
+'{
+  "name": "PartnerName"
+}' "http://anypoint.mulesoft.com/b2b/tpm/api/lookupTables/yourTableId/fields?environmentId=yourEnvironmentId&apiKey=yourAPIKey"
+----
++
+----
+curl -X POST -d
+'{
+  "name": "PartnerProductCode"
+}' "http://anypoint.mulesoft.com/b2b/tpm/api/lookupTables/yourTableId/fields?environmentId=yourEnvironmentId&apiKey=yourAPIKey"
+----
++
+The API returns IDs for each field.
+
+. Add keys (inbound and outbound)
++
+*Inbound*
++
+The Inbound key is the unique combination of the first and second fields.
++
+-----
+curl -X POST -H
+ '{
+  "name": "InboundProductCodes",
+  "fieldIds": [
+      "fieldId1",
+      "fieldId2"
+        ]
+ }' "http://anypoint.mulesoft.com/b2b/tpm/api/lookupTables/yourTableId/keys?environmentId=yourEnvironmentId&apiKey=yourAPIKey"
+-----
++
+*Outbound*
++
+The Inbound key is the unique combination of the second and third fields.
++
+-----
+curl -X POST -H
+ '{
+  "name": "InboundProductCodes",
+  "fieldIds": [
+      "fieldId2",
+      "fieldId3
+        ]
+ }' "http://anypoint.mulesoft.com/b2b/tpm/api/lookupTables/yourTableId/keys?environmentId=yourEnvironmentId&apiKey=yourAPIKey"
+-----
+. Use Anypoint Partner Manager to populate the table (see <<Add a Row to a Table>>).
+
+. Query the API to incorporate table data:
++
+----
+curl -X GET -H  "http://anypoint.mulesoft.com/b2b/tpm/api/lookupTables/lookup?key=OutboundProductCodes&lookupTable=ProductCodes&fields=InternalProductCode:Int1001%26PartnerName:Beta&environmentId=yourEnvironmentId1&apiKey=yourAPIKey"
+----
++
+NOTE: To query the lookup table from within a Mule flow, see xref:3.8@mule-runtime::consuming-a-rest-api.adoc[Consuming a REST API].
+
+
+== Working with a Lookup Table
+
+AFter you have created a lookup table, you can use the Anypoint Partner Manager user interface to:
+
+* Filter existing tables
+* Add a row to a table
+* Edit a table row
+* Delete a table row
+
+For more information, see  xref:lookup-tables.adoc#working-with-a-lookup-table[Working with a Lookup Table].

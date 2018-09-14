@@ -1,0 +1,42 @@
+= More information
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+
+== Configuring Trading Partners
+
+** xref:partners.adoc[Partners]
+*** xref:company-information.adoc[Company Information]
+*** xref:identifiers.adoc[Identifiers]
+*** xref:administration.adoc[Administration] (Home partner only)
+
+** xref:format-defaults.adoc[Format Defaults]
+*** xref:x12-settings.adoc[X12 Settings]
+*** xref:edifact-settings.adoc[EDIFACT]
+*** xref:csv-settings.adoc[CSV Settings]
+
+** xref:configuration.adoc[Configuration]
+*** xref:document-types.adoc[Document Types]
+*** xref:endpoints.adoc[Endpoints]
+*** xref:maps.adoc[Maps]
+*** xref:channels.adoc[Channels]
+*** xref:routes.adoc[Routes]
+*** xref:partner-conversations.adoc[Partner Conversations]
+
+
+== About Anypoint Partner Manager
+
+* xref:partner-configuration.adoc[Partner Configuration]
+* xref:transaction-monitoring.adoc[Transaction Monitoring]
+* xref:working-with-environments.adoc[Working with Environments]
+* xref:key-concepts.adoc[Anypoint Partner Manager Key Concepts]
+* xref:anypoint-partner-manager-api.adoc[Anypoint Partner Manager API]
+
+== About Anypoint B2B
+
+* link:/anypoint-b2b/as2-and-edi-x12-purchase-order-walkthrough[AS2 and EDI X12 Purchase Order Walkthrough]
+* link:/anypoint-b2b/ftps-and-edi-x12-purchase-order-walkthrough[FTPS and EDI X12 Purchase Order Walkthrough]
+* xref:transaction-tracking-walkthrough.adoc[Transaction Tracking Walkthrough]
+* xref:glossary.adoc[Anypoint Partner Manager Glossary]

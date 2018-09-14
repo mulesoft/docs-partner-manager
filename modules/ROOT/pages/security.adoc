@@ -1,0 +1,176 @@
+= Security
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+include::{partialsdir}/edit-home-partner-settings.adoc[]
+
+[start=3]
+
+. In the *Partners* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *Security*.
++
+The <<img-security>> appears.
+
+[[img-security]]
+
+image::security.png[title="Security Page"]
+
+[start=4]
+. On this page, you can:
+* <<Create a New API Key>>
+* <<Specify a Method for Authenticating Persisted Messages>>
+
+== Create a New API Key
+
+WARNING: The API Key is used by any Mule application across your entire Master xref:access-management::organization.adoc[Organization] that communicates with Anypoint Partner Manager. Therefore, before you create a new API Key, coordinate with your organization's MuleSoft administrator to ensure that none of your organization's processes are using an existing API Key because, if they are, creating a new API Key will cause them to cease functioning. In that case, instead of creating a new API Key, use the existing API Key.
+
+. On the <<img-security>>, click *Create a new API key*.
++
+The <<img-api-key-warning>> appears.
+
+
+[[img-api-key-warning]]
+
+image::api-key-warning.png[title="API Key Warning Page"]
+
+[start=2]
+
+. Read the <<img-api-key-warning>> carefully.
++
+If, after you have read <<img-api-key-warning>>, you are sure you want to create the key, on <<img-api-key-warning>>, click *Generate*.
+
+== Specify a Method for Authenticating Persisted Messages
+
+. In *Persisted Message Authentication Settings*, click the *Scheme* dropdown list. +
+A list of available authentication methods appears.
+. Click the method you want to use. +
+Settings specific to the method you choose appear.
+. Enter values for the method-specific settings. +
+For more information, click the method you chose:
+
+* <<S3 Bucket>>
+* <<Basic Auth>>
+* <<ClientId / Secret>>
+* <<API Key>>
+* <<PingFederate OAuth - Client Credentials>>
+
+
+. Click *Save* to save settings.
+
+== S3 Bucket
+
+[%header,cols="3s,7a"]
+|===
+|Name |Description
+
+|Access Key ID
+|
+Type: string +
+Required: Yes, if this method is selected from the *Scheme* dropdown list. +
+Default: None
+
+|Security Key
+|
+Type: string +
+Required: Yes, if this method is selected from the *Scheme* dropdown list. +
+Default: None
+
+|Bucket Name
+|
+Type: string +
+Required: Yes, if this method is selected from the *Scheme* dropdown list. +
+Default: None
+
+|Region
+|
+Type: string +
+Required: Yes, if this method is selected from the *Scheme* dropdown list. +
+Default: None
+
+|===
+
+== Basic Auth
+
+[%header,cols="3s,7a"]
+|===
+|Name |Description
+
+|Username
+|
+Type: string +
+Required: Yes, if this method is selected from the *Scheme* dropdown list. +
+Default: None
+
+|Password
+|
+Type: string +
+Required: Yes, if this method is selected from the *Scheme* dropdown list. +
+Default: None
+
+|===
+
+== ClientId / Secret
+
+[%header,cols="3s,7a"]
+|===
+|Name |Description
+
+|ClientId
+|
+Type: string +
+Required: Yes, if this method is selected from the *Scheme* dropdown list. +
+Default: None
+
+|Secret
+|
+Type: string +
+Required: Yes, if this method is selected from the *Scheme* dropdown list. +
+Default: None
+
+|===
+
+== API Key
+
+[%header,cols="3s,7a"]
+|===
+|Name |Description
+
+|API Key
+|
+Type: string +
+Required: Yes, if this method is selected from the *Scheme* dropdown list. +
+Default: None
+
+|Http Header
+|
+Type: string +
+Required: No +
+Default: None
+
+|===
+
+== PingFederate OAuth - Client Credentials
+
+[%header,cols="3s,7a"]
+|===
+|Name |Description
+
+|Token Url
+|
+Type: string +
+Required: Yes, if this method is selected from the *Scheme* dropdown list. +
+Default: None
+
+|Client ID
+|
+Type: string +
+Required: Yes, if this method is selected from the *Scheme* dropdown list. +
+Default: None
+
+|Client Secret
+|
+Type: string +
+Required: Yes, if this method is selected from the *Scheme* dropdown list. +
+Default: None
+
+|===

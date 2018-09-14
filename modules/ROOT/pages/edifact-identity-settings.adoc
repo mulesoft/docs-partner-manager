@@ -1,0 +1,48 @@
+= EDIFACT Identity Settings
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Interchange ID qualifier - UNB
+|Enter your trading partners EDIFACT Interchange ID qualifier here. Choose from commonly used EDIFACT qualifiers or enter a custom qualifier.
+
+
+Required?::
+No
+
+Valid values::
+
+* `8`
+* `9`
+* `12`
+* `14`
+* `16`
+* `ZZZ`
+* `Custom`
+
+
+Default::
+
+None provided
+
+
+
+|Interchange ID - UNB
+|Enter your trading partners EDIFACT Interchange ID here.
+
+Required?::
+No
+
+Valid values::
+
+Alphanumeric, 35 character maximum
+
+Default::
+
+None provided
+
+|===

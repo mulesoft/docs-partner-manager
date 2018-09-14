@@ -1,0 +1,50 @@
+= Documents View
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+
+== Content Area
+
+* Each row has 6 columns
+From:: Who the document was sent to
+To:: Who it was sent to
+Date:: Date and time at which the document was sent
+Standard:: The standard used
+Message Type:: The type of the messaging
+Direction:: Inbound or Outbound
+Label:: Short information describing the document
+
+== Detail Pane
+
+* Contains information associated with the document
+* Message Payload can be viewed through the link provided
+* All IDs can be copied though the copy button to the right of the ID
+
+== Filters
+
+Date::
+* Today
+* Past 48 Hours
+* This Week
+* This Month
+
+From:: Select a date from calendar; only errors that occurred after that date will appear.
+To:: Select a date from calendar; only errors that occurred before that date will appear.
+Direction:: Inbound or Outbound
+Partner:: Filter by the Partner that is associated with the document
+Message Type:: Filter for message type field containing string
+Property Name:: Filter for document having property name
+Property Value:: Filter for document having property value containing string
+Standard:: Filter by the standard
+Document ID:: Filter by document id
+
+=== To show all documents
+
+Click *Clear filters*.
+
+== Top Bar
+
+* A *Transaction* button will appear when a document is selected
+** This will take you to the *Transaction* view and highlight this specific document

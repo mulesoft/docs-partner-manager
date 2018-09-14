@@ -1,0 +1,39 @@
+= Company Information
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+
+== Enter Company Information
+
+=== Add a New Partner
+
+. On the Company Information Page, if you are adding a new partner, enter the name of the partner in the *Company Name* box.
+. Click the *Save* bar.
+
+== Enter Contact Information
+
+. The name of the partner you selected on the Trading Partners Page (or added on this page, as a new partner) appears in the *Company Name* box. If appropriate, you can change it.
+. In the *Contacts* section of the *Company information* page, enter the following:
+
+** *Contact type* +
+(In the dropdown listbox, select *Technical*, *Business*, or *Both*.)
+. After you enter a contact type, you can enter the following contact-specific information. All fields are xref:glossary.adoc#sects[standard APM field format].
+
+** *First Name*
+** *Last Name*
+** *Title*
+** *E-mail*
+** *Office Phone*
+** *Mobile Phone*
+** *Fax*
+** *Country*
+** *Address Line 1*
+** *Address Line 2*
+** *City*
+** *State*
+** *Postal Code*
+
+
+. Click *Save* to save the values you entered in the previous steps.

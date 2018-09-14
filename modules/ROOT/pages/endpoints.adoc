@@ -1,0 +1,230 @@
+= Endpoints
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+An _endpoint_ is the entry point to a service, a process, or a queue or topic destination in service-oriented architecture. In APM, an endpoint defines the protocol, address, and other details specific to an exchange of messages between partners.
+
+
+include::{partialsdir}/edit-settings.adoc[]
+
+[start=3]
+. In the *CONFIGURATION* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *Endpoints*.
++
+The <<img-endpoints>> appears.
++
+[[img-endpoints]]
+image::endpoints.png[title="Endpoints Page"]
+
+. From this page, you can:
+
+* <<Edit an Existing Endpoint>>
+* <<Add a New Endpoint>>
+
+== Edit an Existing Endpoint
+
+. On the <<img-endpoints>>, in the *Name* column, click the endpoint you want to edit.
++
+The <<img-endpoint-settings-a>> appears. The settings that appear depend on the values for *Protocol* and *Type*.
++
+[[img-endpoint-settings-a]]
+image::endpoint-settings.png[title="Endpoint Page"]
+
+. To edit the Endpoint Name, Protocol, or Type, go to <<choose,Choose Endpoint Name, Protocol, and Type>>.
++
+To edit settings specific to the existing Name, Protocol, and Type, go to the appropriate Protocol-Type combination in <<Protocol/Type-Specific Endpoint Settings
+>>.
+
+== Add a New Endpoint
+
+. On the <<img-endpoints>>, click *New*.
++
+The <<img-endpoint-add>> appears.
++
+[[img-endpoint-add]]
+image::endpoint.png[endpoint-add,title="Add New Endpoint Page"]
+
+. Go to <<choose,Choose Endpoint Name, Protocol, and Type>>.
++
+NOTE: If you are working with other partners, you can change an existing endpoint, but you cannot add a new endpoint.
+
+=== [[choose]]Choose Endpoint Name, Protocol and Type
+
+////
+Commented out endpoint-add image? It shows up in Dan's reports if commented out? kris 7/2/2017
+////
+
+. On the <<img-endpoint-add>>, enter the appropriate settings.
++
+When you have entered settings for *Name*, *Protocol* and *Type*, the <<img-endpoint-add>> becomes the <<img-endpoint-settings-a>>.
++
+For information about Protocol- and Type-specific settings, go to the corresponding section in <<To Enter Protocol/Type-Specific Endpoint Settings>>.
++
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Name
+
+|Name for this endpoint
+
+Required:: Yes
+
+Default:: Auto-populates based on the following values:
+* *Company name* (see xref:partners.adoc[Partners] and xref:company-information.adoc[Company Information])
+* *Protocol*
+* *Type*
+
+If you choose to change the default, then subsequently want to revert to it, click *Auto Fill*.
+
+
+|Protocol
+
+|Protocol for this endpoint
+
+Required?::
+No
+
+Valid values::
+
+* 'AS2'
+* 'FTP'
+* 'FTPS'
+* 'SFTP'
+* 'HTTP'
+* 'JMS'
+* 'SMTP'
+* 'POP3'
+* 'IMAP'
+* 'RNIF'
+
+Default::
+
+None
+
+|Type
+
+|Type of endpoint
+
+Required?::
+
+No
+
+Valid values::
+
+* 'SEND'
+* 'RECEIVE'
+
+Default::
+
+None
+
+|Default for _partner_ checkbox
+
+|Select this box if you want the choices you make for this endpoint to apply to all endpoints for this partner.
+
+|===
++
+When you have entered settings for *Name*, *Protocol* and *Type*, additional settings specific to the protocol-type combination appear; the <<img-endpoint-add>> becomes the <<img-endpoint-settings-b>>. For  information about the additional settings, go to the appropriate Protocol-Type combination in <<To Enter Protocol/Type-Specific Endpoint Settings>>.
++
+[[img-endpoint-settings-b]]
+image::endpoint-settings.png[title="Endpoint Page"]
+
+== Protocol/Type-Specific Endpoint Settings
+
+For a given endpoint, the values you select for *Protocol* and *Type* determine which additional settings appear. These additional settings are a subset of the settings provided in the corresponding xref:3.8@mule-runtime::anypoint-connectors.adoc[Anypoint Connector].
+
+=== To Enter Protocol/Type-Specific Endpoint Settings
+
+Choose the section that corresponds to the Protocol-Type of the Endpoint for which you are entering settings.
+
+* <<AS2 Send Settings>>
+* <<AS2 Receive Settings>>
+* <<FTP Send Settings>>
+* <<FTPS Send Settings>>
+* <<FTPS Receive Settings>>
+* <<SFTP Send Settings>>
+* <<SFTP Receive Settings>>
+* <<HTTP Send Settings>>
+* <<HTTP Receive Settings>>
+* <<JMS Send Settings>>
+* <<JMS Receive Settings>>
+* <<SMTP Send Settings>>
+* <<POP3 Receive Settings>>
+* <<IMAP Receive Settings>>
+* <<RNIF Settings>>
+
+=== To Save Endpoint Settings
+
+See xref:partner-configuration.adoc#saving-settings[Saving Settings].
+
+
+
+=== To Add an Endpoint Property
+
+. Click *Add Endpoint Property*.
++
+The *Add Property* box appears. Refer to the table that follows for adding property settings.
++
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Property Type
+|Dropdown listbox that includes types of properties you can track
+
+Required?::
+Yes
+
+Default::
+`None`
+
+|Property Source Type
+|Dropdown listbox that includes valid sources of trackable properties
+
+Required?::
+Yes
+
+Valid values:: `Inbound Properties`
++
+`Outbound Properties`
++
+`Constant`
++
+`MEL Expression`
+
+Default::
+`None`
+
+|Property Source
+|Identifies source for this property
+
+Required?::
+Yes
+
+Valid values::
++
+* Valid XPath expression (for XML documents)
++
+* Valid JSONPath expression (for JSON or EDI documents)
+
+
+
+|===
+
+
+include::{partialsdir}/endpoint-as2-send.adoc[]
+include::{partialsdir}/endpoint-as2-receive.adoc[]
+include::{partialsdir}/endpoint-ftp-send.adoc[]
+include::{partialsdir}/endpoint-ftps-send.adoc[]
+include::{partialsdir}/endpoint-ftps-receive.adoc[]
+include::{partialsdir}/endpoint-sftp-send.adoc[]
+include::{partialsdir}/endpoint-sftp-receive.adoc[]
+include::{partialsdir}/endpoint-http-send.adoc[]
+include::{partialsdir}/endpoint-http-receive.adoc[]
+include::{partialsdir}/endpoint-jms-send.adoc[]
+include::{partialsdir}/endpoint-jms-receive.adoc[]
+include::{partialsdir}/endpoint-smtp-send.adoc[]
+include::{partialsdir}/endpoint-pop3-receive.adoc[]
+include::{partialsdir}/endpoint-imap-receive.adoc[]
+include::{partialsdir}/endpoint-rnif.adoc[]

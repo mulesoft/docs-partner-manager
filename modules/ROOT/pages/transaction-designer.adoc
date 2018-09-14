@@ -1,0 +1,50 @@
+= Transaction Designer
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+_Transaction Designer_ is an APM feature that enables you to design the _elements_ of a transaction. Transaction elements include:
+
+* Document Types
+* Endpoints
+* Channels
+* Maps
+
+
+Transaction Designer enables you to configure these elements from a central page that displays the elements along with their completion status, and what steps may remain in order to complete them. To see how to use this feature to create a transaction that receives a Purchase Order, see  xref:apm-tutorial-td.adoc[Anypoint Partner Manager Tutorial: Designing a Transaction].
+
+
+include::{partialsdir}/edit-settings.adoc[]
+[start=3]
+
+. In the *CONFIGURATION* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *Transaction Designer*.
++
+The <<img-transaction-designer>> appears.
+
+[[img-transaction-designer]]
+
+image::transaction-designer.png[title=Transaction Designer Page]
+
+[start=4]
+
+. From this page, you can:
+
+* <<Design a New Transaction>>
+* <<Start Designing a New Transaction from a Template>>
+* <<Create a New Transaction Design Template>>
+
+== Design a New Transaction
+
+When you choose this method of designing a transaction, you start from scratch. This gives you complete control over the channels, documents, endpoints, and maps that make up the transaction. However, you also have to make the choices required to create those elements.
+
+== Start Designing a New Transaction from a Template
+
+When you start designing a new transaction from an existing template, the elements created when that template was created (and subsequently modified, if applicable) are available to you. For example, you could use the template created in xref:apm-tutorial-td.adoc[Anypoint Partner Manager Tutorial: Designing a Transaction] for a template for purchase orders from partners other than Acme Home Supply (the partner in the tutorial).
+
+== Create a New Transaction Design Template
+
+A _Transaction Design Template_ is a template that you create to facilitate future transaction design. When you create a Transaction Design Template, you identify elements that are constant across multiple transactions, then create and save them in the template so that you don't have to create them again.
+
+For example, you might create a template for receiving a Purchase Order from a customer. The process of creating such a template is documented in xref:apm-tutorial-td.adoc[Anypoint Partner Manager Tutorial: Designing a Transaction].
+
+Transaction Design Templates typically leave one or more elements to be completed at the time a new transaction is created. For example, in xref:apm-tutorial-td.adoc[Anypoint Partner Manager Tutorial: Designing a Transaction], you open a template in order to xref:apm-tutorial-td.adoc#design-a-source-channel[Design a Source Channel] that is not present in the template itself.

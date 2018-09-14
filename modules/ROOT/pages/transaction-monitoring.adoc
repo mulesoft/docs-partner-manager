@@ -1,0 +1,59 @@
+= Transaction Monitoring
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+
+Anypoint Partner Manager (APM) enables you to monitor B2B _transaction_ data.
+A transaction is the full set of end-to-end events (including transmissions, documents, and errors) involved in processing a transmission.
+
+You can:
+
+* Filter to find the specific transaction data for which you are looking
+* Review and monitor errors and acknowledgements.
+* Search for metadata
+
+This page identifies the APM components you use to monitor transactions; see also xref:tracking-scenarios.adoc[Tracking Scenarios].
+
+== Get Started
+
+. xref:anypoint-partner-manager.adoc#start-anypoint-manager[Start APM].
+The <<img-transaction-monitoring>> appears.
+
+[[img-transaction-monitoring]]
+
+image::transaction-monitoring.png[title="Transaction Monitoring Page"]
+
+[step=2]
+
+. By default, this page presents data for today's transactions.
++
+To change the time period, see xref:central-pane-elements.adoc#overview-for-em-timeframe-em-dropdown-list[Overview for _timeframe_ Dropdown List].
++
+To change the type of data displayed, see xref:central-pane-elements.adoc#view-dropdown-list[View Dropdown List].
+
+
+== Page Elements
+
+
+The <<img-transaction-monitoring>> consists of the following elements:
+
+Anypoint Platform Header:: At the top of every page.
+* Menu on the left enables you to switch to other Anypoint applications.
+* *?* button provides access to support resources.
+* _Master Organization_ name appears at top right. For more information, see xref:access-management::organization.adoc[Organization].
+
+Navigation Sidebar (left):: Use this sidebar to move from page to page.
+
+Top Bar::
+* Fixed on scroll
+* Provides all action buttons associated with any selection you might have made.
+
+Detail Sidebar (right)::
+* Provides the details of what you have selected in the Central Pane.
+* Most IDs have a copy button to the far right of them.
+** Clicking on this will add the ID to your clip board.
+
+Central Pane:: Presents content associated with the selection in the Navigation Sidebar. +
+For information about elements that can appear within this pane, see xref:central-pane-elements.adoc[Central Pane elements].

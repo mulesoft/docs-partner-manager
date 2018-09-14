@@ -1,0 +1,15 @@
+. On the <<img-identifiers-x12-added-aaz>>, click *New*.
++
+The <<img-identifier-new>> appears.
+
+. In the *Type* box, click the down-arrowhead.
++
+A list of identifier types appears.
+. From the list, select *AS2*.
++
+The *AS2 Identity* box appears.
+. In the *AS2 Identity* box, type *AAZ*.
+
+. Click *Save* to save the new identifier.
+
+The <<img-identifiers-x12-added-aaz>> appears.

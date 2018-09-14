@@ -1,0 +1,70 @@
+= Transactions View
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+
+The Transactions View is the default view for B2B Transactions page.
+
+== Content Area
+
+The Content Area displays a table consisting of rows, each of which presents data specific to a transaction.
+
+===  Transaction rows
+
+Each row has five columns, each of which present data about a specific type of data.
+
+Column 1 (not labeled): Transaction completion status:: Contains either a green checkmark or a red '!'.
+* A green checkmark means the transaction was successful
+* A red '!' means that an error occurred somewhere in the transaction.
+
+Column 2 (not labeled): Replay status:: This column may contain:
+* A blue partial circle with an arrowhead pointing right, which means that the transaction has been replayed
+* A gray partial circle with an arrowhead pointing left, which means that the transaction is a replay of another transaction
+* A gray circle with two sequential arrows, which means the transaction is currently being replayed
+
+Column 3 (From):: The partner from whom the transaction originated
+
+Column 4 (To):: To whom the transaction was destined
+
+Column 5 (Date):: Date and time at which the transaction occurred
+
+=== Transaction Event rows
+
+To view detailed information for the events that comprise a transaction, click anywhere in a transaction row. A new table appears beneath the transaction row. Events appear in inverse chronological order (oldest first). Columns are:
+
+From:: Partner from whom the event originated
+To:: Partner to whom the event was sent
+Type:: Event type
+Direction:: Either *Inbound* or *Outbound*
+Date:: Date and time at which the event occurred
+Label:: Indicates what happened in the event
+
+=== Transaction Detail Pane
+This pane appears on the right side of the page. In addition to information displayed in the <<Transaction row>>, it displays the *Transaction ID*.
+
+If a transaction has been replayed, a *view replays* link appears, enabling you to view replays for the transaction.
+
+
+=== Filters
+
+You can filter transactions based on:
+
+Date::
+* Today
+* Past 48 Hours
+* This Week
+* This Month
+
+From:: Select a date from calendar; only transactions that occurred after that date will appear.
+To:: Select a date from calendar; only transactions that occurred before that date will appear.
+Partner:: Configured partners. For more information, see xref:partner-configuration.adoc[Partner Configuration].
+Transaction ID:: ID that you enter. When a Transaction ID filter is set, you can choose to include the replayed transactions originated from that Transaction ID.
+
+
+==== To show all transactions
+Click *Clear filters*.
+
+=== Top Bar
+* The *Replay* button will appear if transaction you have selected can be replayed.

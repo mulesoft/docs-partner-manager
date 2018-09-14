@@ -1,0 +1,100 @@
+= Anypoint Partner Manager
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+
+Anypoint Partner Manager (APM) provides a single web-based user interface for <<Transaction Monitoring>>, <<Partner Configuration>>, and <<Administration>>.
+
+== Transaction Monitoring
+
+Because B2B transactions often communicate contractual obligations between companies, it is desirable (and often necessary) to track all transmissions sent or received, storing the  transmission content as well as metadata (such as data and time the transmission was sent or received, the identity of the partner, and success or failure of processing). APM provides a simple, secure, and integrated mechanism for tracking transactions within MuleSoft flows. Uses for this data include
+
+* Non-repudiation.
+* Correlation of acknowledgments.
+* Error correction.
+* Auditing.
+
+For more information, see xref:transaction-monitoring.adoc[Transaction Monitoring].
+
+== Partner Configuration
+
+APM provides the ability to edit, store, and retrieve configuration settings for the transport and format of B2B messages. For example, EDI messages are often sent over the AS2 protocol in order to ensure security and integrity of the transmissions. Each trading partner may have different AS2 settings; for example, each partner will have its own certificate. In addition, different partners may use different format protocols such as EDI X12, EDIFACT, or XML, and they may use different options within those protocols. APM allows this configuration data to be managed outside of your Mule applications, so that they can be reviewed without looking at the code and updated without re-deploying your Mule flows.
+
+For more information, see xref:partner-configuration.adoc[Partner Configuration].
+
+== Administration
+
+Your company is considered a trading partner in that all the settings you can configure for a trading partner, you can configure for your company. However, APM also offers other settings that apply only to your company, such as xref:security.adoc[security] settings.
+
+For more information, see xref:administration.adoc[Administration].
+
+== Key Concepts
+
+Tracking metadata discussed in <<Partner Configuration>> is stored in a database in CloudHub, and the actual transmission content is saved to an S3 bucket or to a customer-provided transmission persistence storage. Find more information about this and other conceptual topics in
+xref:key-concepts.adoc[Key Concepts].
+
+
+== Examples
+
+In the most common scenario, APM is used in conjunction with Anypoint Studio, Partner Manager Connector, and other MuleSoft connectors. Find information about this and other APM use cases in xref:examples.adoc[Examples].
+
+== Start Anypoint Manager
+
+. https://anypoint.mulesoft.com/apiplatform[Sign up] to use Anypoint Platform.
+. Log into Anypoint Platform.
+The <<img-anypoint-platform-application-selection>> appears.
+
+[[img-anypoint-platform-application-selection]]
+image::anypoint-platform-application-selection.png[title="Anypoint Platform Application Selection Page"]
+
+[start=3]
+
+. On the Anypoint Platform application selection screen, in the *Manage* drop-down listbox, click *Partner Manager*.
++
+The <<img-apm-start>> appears.
++
+For more information, see  xref:transaction-monitoring.adoc[Transaction Monitoring].
+
+[[img-apm-start]]
+image::apm-start.png[title="Transaction Monitoring Page"]
+
+[start=4]
+
+. To configure or edit the configuration of a trading partner, see xref:partner-configuration.adoc[Partner Configuration].
++
+To edit or configure settings for your company, see xref:administration.adoc[Administration].
+
+
+
+
+== Access Management
+
+Use xref:access-management::index.adoc[Anypoint Access Management] to create APM  xref:access-management::users.adoc[users] and manage their xref:access-management::roles.adoc[roles].
+
+APM roles include the following:
+
+[%header,cols="1,3,1"]
+|===
+|Task |Privilege |Scope
+
+|View Partners
+|Can view all partners and their information and settings.
+.4+.^|Assigned per environment
+
+|Manage Partners
+|In addition to privileges of View Partners, can add new partners and update information and settings for partners.
+
+|View Transactions
+|Can view data in the B2B Transactions monitoring screen.
+
+
+|Manage Transactions
+|In addition to privileges of View Transactions, can replay transactions.
+
+|Administer Partners
+|In addition to all the  privileges of Manage Partners and Manage Transactions, can generate new Api Keys for the organization and promote Partner settings across environments.
+|Assigned per Business Group. Has privileges in all environments in the Business Group.
+
+|===

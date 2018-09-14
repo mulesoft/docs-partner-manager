@@ -1,0 +1,62 @@
+= Tracking
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+
+For a given message, Anypoint Partner Manager (APM) facilitates storage of:
+
+Payload:: The content of the message
+
+Metadata:: Data about the message
+
+The xref:b2b-transaction-processing-framework.adoc#partner-manager-connector[Partner Manager Connector] posts:
+
+* Metadata from
+xref:b2b-transaction-processing-framework.adoc#customer-built-flows[Customer-Built Flows]
+to the xref:b2b-transaction-processing-framework.adoc#tracking-api[Tracking API]
+* Payload data within
+xref:b2b-transaction-processing-framework.adoc#customer-built-flows[Customer-Built Flows]
+ to Tracking Data Storage.
+
+The customer then uses xref:anypoint-partner-manager.adoc[Anypoint Partner Manager] to request and view metadata and payload data, a process which includes the xref:b2b-transaction-processing-framework.adoc#trading-partner-management-api[Trading Partner Management API] and Tracking Data Storage. <<img-tracking-storage-and-retrieval>> illustrates this process
+
+
+
+[[img-tracking-storage-and-retrieval]]
+image::tracking-storage-and-retrieval.png[title="Tracking: Storage and Retrieval"]
+
+== Payload Tracking
+
+APM payload tracking is designed to allow extensive customer control. You decide the following:
+
+* Where payloads are stored
+* For how long payloads are stored
+* Who has access to payloads
+
+=== Metadata Tracking
+
+Metadata tracking is used for searching and viewing. Customers define properties to track, such as:
+
+* Date and time
+* Sender
+* Recipient
+* Payload URL - This URL points to the message payload and is part of metadata tracking; the message payload itself is part of <<Payload Tracking>>.
+
+== Tracking Data Storage
+
+You can store tracking data in either of two ways.
+
+=== Amazon S3
+
+Amazon Simple Storage Service (Amazon S3), provides developers and IT teams with secure, durable, highly-scalable cloud storage. Using this method, you need only create an account and configure account credentials in APM.
+
+=== Customer-Selected Storage
+
+This method enables a customer to store its message data at a location of its choice. For example, data can be stored in an on-premises database.
+
+////
+== Synchronous and Asynchronous processing
+The  has a new setting that allows you to choose syn or async
+////

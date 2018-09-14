@@ -1,0 +1,57 @@
+= Examples
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords: b2b, portal, partner, manager, environments
+
+NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+
+This page identifies examples of  xref:anypoint-partner-manager.adoc[Anypoint Partner Manager] in use.
+
+For conceptual information, see xref:key-concepts.adoc[Key Concepts].
+
+For information about the procedures you would use to implement a given example, see xref:partner-configuration.adoc[Configure Trading Partners] and xref:transaction-monitoring.adoc[Transaction Monitoring].
+
+
+== End-to-End Use Case
+
+In this example, a user performs a series of configuration tasks in APM and Anypoint Studio, resulting in the ability to view events and track transmissions.
+
+=== In APM
+
+* Enter home organization settings
+* Enter external trading partner settings
+
+=== In Anypoint Studio
+
+. Create your flow.
+. Configure the Partner Manager Connector.
+. Configure Partner Manager-enabled connectors to use the Partner Manager Connector.
+. Use standard MuleSoft connectors and processors to complete the processing and integration of the message into downstream systems as required.
+
+=== Back in APM
+
+Go to the B2B Transmissions area of APM to view tracked events and messages.
+
+// include::_sources/content-based-routing-example.adoc[]
+
+
+// Promotion Scenarios
+include::{partialsdir}/promotion-scenarios.adoc[leveloffset=+1]
+
+////
+=== Rough draft graphic for certs promo
+
+removed image PromoteIDsOffCertsOn kris 7/1/2017
+
+
+include::{partialsdir}/promotion-scenarios.adoc[leveloffset=+1]
+
+//=== Rough draft graphic for certs promo
+
+removed image PromoteIDsOffCertsOn\
+
+////
+
+// Tracking Scenarios
+include::{partialsdir}/tracking-scenarios.adoc[leveloffset=+1]

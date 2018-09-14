@@ -1,0 +1,20 @@
+// To Create the Source Document Type for the Source Channel
+
+. On the <<img-td-source-channel-in-progress-acme>>, click *New Document*. +
+The <<img-td-new-source-doc-acme>> appears.
+
+[[img-td-new-source-doc-acme]]
+
+image::partner/td-new-source-doc-acme.png[img-td-new-source-doc-acme, title="Source Document Page"]
+
+[start=2]
+
+. On the <<img-td-new-source-doc-acme>>, in the *Standard* listbox, click the down-arrow, then select *X12*.
+. In the *Version* listbox, select *4010*.
+. In the *Message Type* listbox, select *PO (850 Purchase Order)*.
+. Click *Save*. +
+The <<img-td-source-channel-in-progress-doc-added-acme>> appears, displaying the Document Type you added.
+
+[[img-td-source-channel-in-progress-doc-added-acme]]
+
+image::partner/td-source-channel-in-progress-doc-added-acme.png[img-td-source-channel-in-progress-doc-added-acme, title="Source Channel in-progress Page"]

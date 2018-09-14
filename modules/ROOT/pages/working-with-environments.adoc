@@ -1,0 +1,102 @@
+= Working with Environments
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+
+include::{partialsdir}/promotion-scenarios.adoc[leveloffset=+1]
+
+
+== Rough Draft Graphic For Certs Promo
+
+image::promoteidsoffcertson.png["rough draft graphic,cert promotion scenario"]
+
+////
+</New Text
+
+
+
+
+<Begin Existing Text>
+////
+
+
+== Exporting Partners from an Environment
+
+Anypoint Partner Manager (APM) provides the ability to export Partners for backup purposes. These Partners can be imported back into APM later. Please consult the <<Importing Partners Into A Specific Environment>> section for more information.
+Exporting partners involves a series of steps. From the partners list:
+
+. Select one or more partners from list. This will cause the "Export" button will be enabled.
+. Click on the "Export" button. This will pop up a confirmation window listing all the partners that will be exported. You can hit "Dismiss" to cancel the process.
+. Hit the Export button on the window. This will start the export process and, after completion, it will download a plain-text file with the selected partners and their associated data.
+
+Please not that the file is automatically named. The file name pattern consists of the words "partners_export" and has a current-date suffix, e.g. "partners_export_2016-07-12.txt"
+
+== Importing Partners Into A Specific Environment
+
+Anypoint Partner Manager (APM) provides the ability to import <<Partners>> that were previously backed up using the export functionality. Please consult the <<Exporting partners from an environment>> section for more information.
+Only users with the appropriate role or permissions will be able to import partners. The destination environment may already have the same partners that are being imported. If this is the case, data from the partners being imported will override the data of the existing partners.
+Importing partners involves a series of steps, starting from the partners list screen:
+
+. Find the "New Partner" on the top right. Click on the little arrow pointing down next to the button and select "Import". This will pop up the "Import" window. You can hit "Dismiss" to cancel the process.
+. Select the "target environment", this is the environment into which the partners will be imported. Hit "Next".
+. Select the file with the partners (which was previoulsy exported) by hitting "Choose File" and browsing through your file system. At this point you can hit "Back" to change the selected target environment, if needed.
+. Select whether the partners being imported will keep their identifiers when matching existing or previoulsy imported partners on the target environment.
+. Select whether the partners being imported will keep their AS2 certificates or use the certificates from the matching existing, or previoulsy imported partners on the target environment. Hit import to start the process.
+
+== Promoting Partners Into A Specific Environment
+
+Anypoint Partner Manager (APM) provides the ability to "promote", i.e. "copy", <<Partners>> from one environment to another.
+Only users with the appropriate role or permissions will be able to promote partners. This process involves a series of steps, starting from the partners list screen:
+
+. Select one or more partners to promote from the list.
+. Hit the "Promote" button. This will pop up the "Promote" window listing the partners to be promoted. You can hit "Dismiss" to cancel the process.
+. Select the "target environment", this is the environment into which the partners will be promoted. Hit "Next" to go to the next step. Alternatively, you can hit "Back" to change the selected target environment, if needed.
+. Select whether the partners being promoted will keep their identifiers when matching existing or previoulsy imported partners on the target environment.
+. Select whether the partners being imported will keep their AS2 certificates or use the certificates from the matching existing, or previoulsy promoted partners on the target environment. Hit import to start the process.
+////
+
+== Promotion Scenarios
+Promotion of partners is a more complex procedure than import.
+Suppose a partner was created on an Environment ENV_A and then promoted to ENV_B. Subsequently, the same partner can be promoted over and over again from ENV_A to ENV_B. Each time promotion happens, the values for the partner in the target environment will be updated using the values of that partner in the source environment.
+However, depending on certain conditions, not all of the values will be updated (specifically Identifiers and AS2 Certificates) or even the promotion can be rejected altogether. These conditions are grouped into specific scenarios, afecting the result of the promotion process. Following is a description of the possible scenarios and their outcomes:
+
+=== Certificates and promotions
+
+* Suppose there's a partner P1 on the source environment E1.
+* And suppose P1 has already been promoted to a target environment E2.
+* Promoting P1 from E1 to E2 again, but selecting "Override Certificates", should update the certificate on E2 with the certificate that P1 has on E1. Alternatively, not selecting "Override Certificates" should leave the P1's certificates on E2 untouched.
+
+=== Identifiers and Promotions
+
+==== Scenario 1
+
+* Suppose there's a partner P1 on the source environment E1.
+* And suppose there is the same partner P1 on some target environment E2. This may have been caused by a previous promotion. At this point P1 in E1 and P1 in E2 are exact copies.
+* Now suppose a set of identifiers (types and values) for AS2, EDI X12 and EDIFACT have been configured for P1.
+* Promoting P1 from E1 to E2, selecting "Keep Existing Identifiers", will try to "copy" P1 into E2. As P1 in ENV2 does not have any identifiers, these will be copied anyway from E1 because the date being copied over may need the identifiers information (for example Endpoints, or Document Definitions)
+* Alternatively, Promoting P1 from E1 to E2, not selecting "Keep Existing Identifiers", will _also_ try to copy P1 into E2, including the identifiers. This is part of the normal promotion procedure (i.e. copying a partner from one environment to another)
+
+Please note that in this scenario, should the target environment P2 have _any_ other partner (say, PX) that coincidentally has the same identifiers (i.e. types & values) as P1, the promotion will fail. This is because having the same set of identifiers (types and values) more than once is illegal.
+
+==== Scenario 2
+
+* Suppose there's a partner P1 on the source environment E1.
+* And suppose there is the same partner P1 on some target environment E2. This may have been caused by a previous promotion. At this point P1 in E1 and P1 in E2 are exact copies.
+* Now suppose a set of identifiers (types and values) for AS2, EDI X12 and EDIFACT have been configured for P1. Then, suppose a _different_ set of identifiers (types and values) for AS2, EDI X12 and EDIFACT have been configured for P1 in E2.
+* Promoting P1 from E1 to E2, selecting "Keep Existing Identifiers", will try to "copy" P1 into E2. As P1 in ENV2 have different identifiers (types & values), these will be copied over to E2 as part of the normal promotion procedure (remember that it is intended to copy partners from one environment to another, and subsequent "copies" updated the values from the source environment on the target environment)
+* Alternatively, Promoting P1 from E1 to E2, not selecting "Keep Existing Identifiers", will leave the identifiers set for P1 in E2 untouched. This is just normal procedure as this option is basically telling not to touch the identifiers in the target environment.
+
+==== Scenario 3
+
+* Suppose there's a partner P1 on the source environment E1.
+* And suppose there is the same partner P1 on some target environment E2. This may have been caused by a previous promotion. At this point P1 in E1 and P1 in E2 are exact copies.
+* Now suppose a set of identifiers (types and values) for AS2, EDI X12 and EDIFACT have been configured for P1 in E2. At this point P1 has some identifiers set in E2, while the copy held in E1 does not.
+* Promoting P1 from E1 to E2, not selecting "Keep Existing Identifiers", will do nothing with the identifiers in E2. This is because the promotion process cannot deliberately delete the identifiers that may have been defined in E2, as they may be needed in existing Document Definitions or endpoints (remember that it is intended to make copies of partners from one environment to another)
+* Alternatively, promoting P1 from E1 to E2, but selecting "Keep Existing Identifiers", will do nothing with the identifiers in E2. This is just normal procedure as this option is basically telling not to touch the identifiers in the target environment.
+
+==== Scenario 4: Conflicting Identifiers and Promotions
+* Suppose there's a partner P1 on the source environment E1. Suppose P1 has a set of identifiers (types and values) for AS2, EDI X12 and EDIFACT.
+* And suppose there is a partner P2 on some target environment E2. Suppose P2 has, for whatever reason, the exact same set of identifiers as P1 on E1
+* Promoting P1 from E1 to E2, while selecting "Keep Existing Identifiers", will try to "copy" P1 into E2. This will cause that a set of identifiers be created in E2. However, having the same identifier values more than once is illegal, so promotion will fail. The "Promotion" window will display a message informing about this situation.

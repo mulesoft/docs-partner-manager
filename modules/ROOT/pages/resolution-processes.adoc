@@ -1,0 +1,83 @@
+= Resolution Processes
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+
+
+Anypoint Partner Manager (APM) offers a flexible approach to setting up different kinds of configurations
+for xref:b2b-transaction-processing-framework.adoc#document-type[document types], xref:b2b-transaction-processing-framework.adoc#endpoints[endpoints], and xref:routes.adoc[routes]. For example, you can configure
+a catch-all document type for a given standard. You can then apply this
+definition to a trading partner in case
+a document does not match any of the defined document types. Going
+even further, you can configure a global catch-all for this standard such that it
+is applied to all your partners. In order to support this level of flexibility,
+configurations are defined at the partner or the home organization level.
+APM attempts to resolve a configuration at the home organization level should
+it fail to resolve it at the partner level. This page describes in
+the resolution process for each type of configuration.
+
+== Endpoint Resolution
+
+Endpoint resolution begins when an APM-managed connector pulls down its
+configuration from APM. The resolution outputs the endpoint that the connector
+reads to configure itself.
+
+=== Resolution variables
+
+Resolving the following variables drives the process, as shown in <<img-resolve-endpoint>>.
+
+* Partner
+* Endpoint type (send or receive)
+* Transport type (for example, AS2)
+* Document standard (for example, X12)
+* Document version
+* Document message type
+
+
+[[img-resolve-endpoint]]
+image::resolve-endpoint.png[title="Endpoint Resolution"]
+
+== Document Type Resolution
+
+As mentioned above, you can configure a document type to cover
+different message types and versions. Leaving a document type's message
+type and version undefined implicitly means that the document type can be
+applied to any document for the given standard. Alternatively, you can explicitly
+set message type and version to the reserved keyword *ANY* to attain the same
+behavior. APM always tries to match a document to the most specific
+document type before trying to match the document to a more general
+document type.
+<<img-resolve-document-definition>> shows the
+sequence of determinations APM goes through to arrive at the document
+definition to use during route resolution or tracking.
+
+[[img-resolve-document-definition]]
+image::resolve-document-definition.png[title="Document definition resolution flowchart"]
+
+APM comes with pre-configured read-only document types for X12 and EDIFACT
+that are defined on the home organization. An X12 or EDIFACT document that is not
+covered by any user-defined document type _always_ matches to one of
+these pre-defined document types.
+
+
+== Routes Resolution
+
+Calling Partner Manager Connector's _resolve-route_ operation triggers routes
+resolution in APM which, similar to endpoint resolution, is driven by the following
+factors:
+
+* Partner
+* Transport type (for example, AS2)
+* Document standard (for example, X12)
+* Document version
+* Document message type
+
+Taking a closer look, notice that the endpoint type is not included in
+the list of factors determining the output of routes. The is because the process
+assumes the endpoint to be always of type _receive_. <<img-resolve-routes>>
+illustrates APM's logic for resolving routes.
+
+[[img-resolve-routes]]
+image::resolve-routes.png[title="Routes resolution flowchart"]

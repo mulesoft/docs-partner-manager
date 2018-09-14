@@ -1,0 +1,148 @@
+= Partner Configuration
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+
+To configure a trading partnership using Anypoint Partner Manager (APM), you must:
+
+. Configure settings for your company
++
+NOTE: Your company may have been set up during the provisioning process. If so, its name appears at the top of the *Name* list on the Trading Partner Page, identified as *YOUR COMPANY*.
+
+. Configure settings for a trading partner
+
+== Get Started
+
+. xref:anypoint-partner-manager.adoc#start-anypoint-manager[Start APM].
+The xref:anypoint-partner-manager.adoc#img-apm-start[Transaction Monitoring Page] appears.
+. In the left-hand navigation pane, click *Partner Configuration*.
+The <<img-partner-configuration>> appears.
+
+
+[[img-partner-configuration]]
+image::partner-configuration.png[title="Partner Configuration Page"]
+
+[start=2]
+
+== Create and Configure Partners
+
+. On the <<img-partner-configuration>>:
++
+To add or edit settings for the _Home Partner_ (*Your company* on the
+<<img-partner-configuration>>), in the *Name* table, click the name of your company.
++
+To add a new partner, click *New Partner*.
++
+To edit settings for an existing trading partner, in the *Name* table, click the name of the partner.
++
+The <<img-company-information>> appears.
+
+
+
+[[img-company-information]]
+image::company-information.png[title="Company Information Page"]
+
+[start=2]
+
+. To add or edit company information, see xref:company-information.adoc[Company Information].
++
+Notice that the left-hand navigation pane of the <<img-company-information>> includes a number of different types of partner settings.
+To add or edit settings for any of these settings types, click the page name in the left-hand navigation pane. See the following sections for information about the settings on each page.
+
+=== Partner Settings
+** xref:company-information.adoc[Company Information]
+** xref:identifiers.adoc[Identifiers]
+
+
+=== Default Settings for Message Format
+** xref:x12-settings.adoc[X12 Settings]
+** xref:edifact-settings.adoc[EDIFACT]
+** xref:csv-settings.adoc[CSV Settings]
+
+=== Configuration Settings
+** xref:document-types.adoc[Document Types]
+** xref:endpoints.adoc[Endpoints]
+** xref:maps.adoc[Maps]
+** xref:channels.adoc[Channels]
+** xref:routes.adoc[Routes]
+** xref:partner-conversations.adoc[Partner Conversations]
+
+
+== Saving Settings
+
+On each page, a red bar appears on the lateral margins of boxes that correspond to required settings. When each required setting on a given page contains a valid value, the *Save* box at the top of the page is enabled.
+
+To save new settings, click *Save*.
+
+== Exporting Partners
+
+Anypoint Partner Manager (APM) provides the ability to export partners for:
+
+* Use in another environment
+* Backup purposes
+
+These partners can be imported back into APM later; see <<Importing Partners>> section for more information.
+
+=== To Export a Partner
+
+. xref:anypoint-partner-manager.adoc#start-anypoint-manager[Start APM]. +
+In the left-hand navigation pane, click *Partner Configuration*. The <<img-partner-configuration>> appears.
+. On the <<img-partner-configuration>>, in the *Name* table, select the radio button or radio buttons of the partner or partners you want to export. +
+On the <<img-partner-configuration>>, the *Promote* and *Export* buttons appear to the left of the *New Partner* button.
+. Click the *Export* button. +
+The Export Dialog Box appears; it lists the partners that will be exported.
+Click *Export* to export these partners.
+To abort the export, click *Dismiss*. +
+The export process begins. +
+When the process completes, it downloads a plain-text file that includes data for the selected partner or partners.
+
+NOTE: The downloaded file is automatically named. The file name pattern consists of the words *partners_export*, to which the current date is appended. +
+For example, *partners_export_2016-07-12.txt*
+
+
+== Importing Partners
+
+APM provides the ability to import Partners that have been exported (see <<Exporting Partners>> for more information.
+Only users with the appropriate role or permissions are able to import partners.
+
+NOTE: If a specific partner exists in an environment and you import that partner into the environment, data from the imported partner replaces the data of the existing partner.
+
+=== To Import a Partner
+
+. On the <<img-partner-configuration>>, click *Import* on the top right.
++
+The *Import partners* box appears, displaying a list of environments into which you can import an environment.
+. To continue, select an environment from the *Environment* list, then click *Next*. +
+. Click *Choose File*. +
+A file selection window appears. From the window, select the file that contains the data of the partner you want to import. +
+Select the *Keep existing identifiers* box if you want the partner you are importing to keeps its identifiers. +
+If this box is deselected, then identifiers for this partner that already exist in the environment you selected in the previous step will not be over-written. +
+Select the *Override Certificates* checkbox if you want the partner you are importing to keep its AS2 certificates. +
+If this checkbox is deselected, then certificates for this partner that exist in the environment you selected in the previous step will not be over-written.
+. Click *Import*.
+
+== Promoting a Partner
+APM provides the ability to _promote_ - that is, copy, a trading partner from one environment to another. For information about scenarios in which you might want to promote a partner, see xref:examples.adoc#promotion-scenarios[Promotion Scenarios].
+
+
+NOTE: Only users with the appropriate role or permissions will be able to promote partners.
+
+=== To Promote a Partner
+
+. On the <<img-partner-configuration>>, click the selection box at the left end of the row that corresponds to the partner you want to promote.
+. Click *Promote* at the top right. +
+The *Promote partners* box opens, displaying the partner to be promoted.
++
+Select the *Keep existing identifiers* box if you want the partner you are promoting to keeps its identifiers. +
+If, on the other hand, this box is deselected, then identifiers for this partner that already exist in the environment you selected in the previous step will not be over-written. +
+Select the *Override Certificates* checkbox if you want the partner you are promoting to keep its AS2 certificates. +
+If this checkbox is deselected, then certificates for this partner that exist in the environment you selected in the previous step will not be over-written.
++
+To continue, click *Next*. +
+. In the *Promote partners* box, select the environment to which you want to promote the partner, then click *Promote*.
+click *Choose File*. +
+A file selection window appears. From the window, select the file that contains the data of the partner you want to promote. +
+
+. Click *Promote*.

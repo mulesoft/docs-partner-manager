@@ -1,0 +1,31 @@
+. In the *CONFIGURATION* section of the left-hand navigation pane on the <<img-endpoints>> (or any other APM Configuration page), click *Transaction Designer*.
++
+The <<img-td-acme>> appears.
+
+[[img-td-acme]]
+
+image::partner/td-acme.png[img-td-aaz, title="Transaction Designer Page"]
+
+[start=2]
+
+. On the <<img-td-acme>>, click *Start from template*.
++
+The <<img-td-pick-a-template-acme>> appears.
+
+[[img-td-pick-a-template-acme]]
+
+image::partner/td-pick-a-template-acme.png[img-td-pick-a-template-acme, title="Pick a Template Page"]
+
+[start=3]
+
+. On the <<img-td-pick-a-template-acme>>, select *TargetPurchaseOrder*.
++
+The <<img-td-new-acme>> appears.
+
+NOTE: The *Name* box shows that you are working on a copy of the *TargetPurchaseOrder* template, as opposed to the template itself.
+This enables you to build your transaction without changing the template from which you are starting it. +
+You can edit a template from the Pick a Template Page, but you must be working with *YOUR COMPANY* - in this case, AAZFasteners - to do so
+
+[[img-td-new-acme]]
+
+image::partner/td-new-acme.png[img-td-new-acme, title="Transaction Design Page"]
