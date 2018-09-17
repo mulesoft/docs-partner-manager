@@ -1,4 +1,5 @@
 .xref:index.adoc[Anypoint B2B]
+* xref:index.adoc[About Anypoint B2B]
 * xref:edifact-module.adoc[EDIFACT Module]
 * xref:edi-tradacoms.adoc[TRADACOMS EDI]
 * xref:x12-module.adoc[X12 Module]
