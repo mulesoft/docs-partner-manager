@@ -7,7 +7,7 @@ This section identifies scenarios in which Anypoint Partner Manager (APM) is use
 
 == Replaying an Incomplete Transaction
 
-On the link:/anypoint-b2b/monitor-b2b-transactions[B2B Transactions Page], the Transactions View includes a table in which each row corresponds to a transaction.  The first column shows transaction completion status, as follows:
+On the xref:transaction-monitoring.adoc[B2B Transactions Page], the Transactions View includes a table in which each row corresponds to a transaction.  The first column shows transaction completion status, as follows:
 
 Green checkmark:: Indicates a complete transaction.
 Red exclamation point (*!*):: Indicates a transaction has one or more errors that prevented completion.
@@ -84,7 +84,7 @@ Often, a partner requires specific information relating to a transaction, transm
 
 == Finding Transmissions
 
-. On *View Dropdown List* of the link:/anypoint-b2b/monitor-b2b-transactions[B2B Transactions Page], choose *Transmissions*.
+. On *View Dropdown List* of the xref:transaction-monitoring.adoc[B2B Transactions Page], choose *Transmissions*.
 +
 The Transmissions View appears.
 +
@@ -102,7 +102,7 @@ If you need to find out more information about a transmission or just where it e
 
 == Finding Documents
 
-. On *View Dropdown List* of the link:/anypoint-b2b/monitor-b2b-transactions[B2B Transactions Page], choose *Documents*.
+. On *View Dropdown List* of the xref:transaction-monitoring.adoc[B2B Transactions Page], choose *Documents*.
 +
 The Documents View appears.
 . In the *Document ID* filter, enter the Document ID that the partner provided you.
