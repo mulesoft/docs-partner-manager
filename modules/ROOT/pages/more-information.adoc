@@ -36,7 +36,5 @@ NOTE: Current Anypoint Partner Manager solutions will continue to be supported i
 
 == About Anypoint B2B
 
-* link:/anypoint-b2b/as2-and-edi-x12-purchase-order-walkthrough[AS2 and EDI X12 Purchase Order Walkthrough]
-* link:/anypoint-b2b/ftps-and-edi-x12-purchase-order-walkthrough[FTPS and EDI X12 Purchase Order Walkthrough]
 * xref:transaction-tracking-walkthrough.adoc[Transaction Tracking Walkthrough]
 * xref:glossary.adoc[Anypoint Partner Manager Glossary]
