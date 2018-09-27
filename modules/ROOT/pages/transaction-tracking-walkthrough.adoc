@@ -63,29 +63,26 @@ This walkthrough shows you how to leverage the Anypoint B2B Platform to track B2
 
 . Launch Anypoint Studio and create a new Mule project.
 . Switch to the *Global Elements* view and create a Partner Manager Connector configuration.
-////
-as described in the link:/anypoint-b2b/as2-and-edi-x12-purchase-order-walkthrough[AS2 and X12 Purchase Order Walkthrough].
-////
 . Go back to the *Message Flow* view. Drag the *File Connector* from the palette to the canvas in order to create a message source:
 +
 image::transmission-tracking-walk-1.png[]
-+
+
 . Configure the *File Connector* message source to read from a directory called `outbox`:
 +
 image::transmission-tracking-walk-2.png[]
-+
+
 . Add an *Object to String* transformer after the message source in order to read from the file stream:
 +
 image::transmission-tracking-walk-3.png[]
-+
+
 . Drag the *Partner Manager Connector* from the palette and add it to the flow:
 +
 image::transmission-tracking-walk-4.png[]
-+
+
 . Select as *Connector Configuration* the config that you created in step 2. Select *Track transmission* for the *operation*:
 +
 image::transmission-tracking-walk-5.png[]
-+
+
 . Configure the *Track transmission* operation as follows:
 +
 [%autowidth.spread]
@@ -103,22 +100,18 @@ image::transmission-tracking-walk-6.png[]
 In addition to the above, click on Create Object manually which is located next to the *Metadata* attribute. This action brings up the *Object Builder* that allows you to define the metadata to be saved as part of the transmission. Define the metadata entries as shown in the screenshot below:
 +
 image::transmission-tracking-walk-7.png[]
-+
+
 . Add a *File Connector* to the flow such that the purchase order is written out to a different directory called `inbox`:
 +
 image::transmission-tracking-walk-8.png[]
-+
+
 . Right-click the project and run the application as a Mule project:
 +
 image::transmission-tracking-walk-9.png[]
 +
 If you have enabled S3 storage in the Partner Manager Connector config, then you need to add the AWS and S3 parameters to the Mule application VM arguments.
-////
-Consult the link:/anypoint-b2b/as2-and-edi-x12-purchase-order-walkthrough[AS2 and X12 Purchase Order Walkthrough] for information on how to add the parameters.
-////
-+
+
 . Put the example XML listed in <<Running the Example>> in the `outbox` directory. You should see the file moved to the `inbox` directory.
-+
 . Access the Anypoint Partner Manager and go to the B2B transmissions view to confirm that the exchange was tracked:
 +
 image::transmission-tracking-walk-10.png[]
