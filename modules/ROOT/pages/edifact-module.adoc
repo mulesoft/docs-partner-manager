@@ -33,8 +33,7 @@ When Studio has an update, a message displays in the lower right corner, which y
 
 == Using the EDIFACT Module via Maven
 
-To use the EDIFACT Module in conjunction with Maven, see link:http://mulesoft.github.io/edi-module/edifact/guide/install.html[
-Mule EDI Anypoint EDIFACT Connector].
+To use the EDIFACT Module in conjunction with Maven, see http://mulesoft.github.io/edi-module/edifact/guide/install.html[Mule EDI Anypoint EDIFACT Connector].
 
 == EDI Schema Language
 
