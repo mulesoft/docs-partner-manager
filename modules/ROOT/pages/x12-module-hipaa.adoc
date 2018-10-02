@@ -421,7 +421,7 @@ without needing to work with multiple files.
 == See Also
 
 * xref:release-notes::connector/x12-edifact-modules-release-notes.adoc[Release Notes].
-* link:{attachmentsdir}/x12-hipaa_5010.zip[X12 Module HIPAA Anypoint Studio project].
+// * link:{attachmentsdir}/x12-hipaa_5010.zip[X12 Module HIPAA Anypoint Studio project].
 * http://www.x12.org/x12-work-products/x12-transaction-sets.cfm[ASC X12 Transaction Sets].
 * https://en.wikipedia.org/wiki/X12_Document_List[X12 Document List].
 * http://mulesoft.github.com/edi-module[EDI module reference].
