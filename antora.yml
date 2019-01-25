@@ -1,0 +1,5 @@
+name: partner-manager
+title: Partner Manager
+version: v2.0
+nav:
+- modules/ROOT/nav.adoc
