@@ -15,81 +15,69 @@ endif::[]
 [[secta]]
 *A*
 
+Activity:: Role-based document transaction tracking (for send and receive) based on rules, actions, and functions.
+
+Anypoint Partner Manager:: A single web-based user interface for Partner Configuration, Document flow  and Transaction Monitoring. The functionality that serves as a translation layer between internal systems and the various formats (X12, EDIFACT, XML, CSV, and others) and transport protocols (AS2, FTP/S, and others) commonly used in electronic transactions between companies.
+
 Activity API:: Provides users with the ability to obtain transaction status???
-
-[[sectb]]
-*B*
-
-B2B Transaction:: Denotes the end-to-end processing of a single instance of a document from the receipt at an endpoint all the way to the desired Business Service.  A TransactionId can be used to find metadata and persisted payloads for the transaction at each stage.
-
-B2B Transaction Definition:: The full configuration that configures how a document is processed between two partners.
-
-B2B transaction-processing solution:: Functionality that serves as a translation layer between internal systems and the various formats (X12, EDIFACT, XML, CSV, and others) and transport protocols (AS2, FTP/S, and others) commonly used in electronic transactions between companies.
-
-B2B Transaction-Processing Framework:: B2B transaction-processing solution that enables developers to build a single set of xref:mule-runtime::index.adoc[Mule Runtime] flows that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:anypoint-partner-manager.adoc[Anypoint Partner Manager] (APM)
-
-[[sectd]]
-*D*
-
-Document:: An instance of a structured payload data being passed through the B2B system.  Synonymous with other terms commonly used in various integration-related domains such as file, interchange, payload, message, and transaction.
-
-Document Definition:: A specific document format that is configured in the system.  A Document Definition is identified by the following pieces of information: Partner, Standard, Version, and Message Type. Schemas, Maps, and Document Properties are associated with a Document Definition.
-
-Document Properties:: Document Properties are data fields that are extracted from received documents for the purpose of correlation, duplicate checking, and searching in the B2B Transactions screen.  Document Properties are configured for Document Definitions.  The user provides the Name of the property and the path (XPath for XML, JSONPath for others) for retrieving the property from the document.  These properties are extracted and stored by the Tracking service.
 
 [[secte]]
 *E*
 
-Environment ID:: String that uniquely identifies an xref:access-management::environments.adoc[environment].
+Endpoint:: Defines the protocol, address, and other details specific to an exchange of messages between partners such as Acknowledgement, Source Endpoint, and Target Endpoint.
 
-External Partner:: Any company registered in APM that is not the Home Partner.
+[[sectg]]
+*G*
+
+Global Validation and Acknowledgement settings:: Default Host settings that apply to all partners. More here???
 
 [[secth]]
 *H*
 
-Home Partner:: The company that is subscribing to Partner Manager, considered the “internal” partner.
+Host:: The company that is subscribing to the Host in Partner Manager.
 
-[[sectl]]
-*L*
+[[secti]]
+*I*
 
-Lookup Table:: A table that facilitates transaction processing by associating values.
+Identifier:: Uniquely identifies a particular Partner. Identifiers have a Type and Qualifier that indicate the identifier scheme and Value.
 
 [[sectm]]
 *M*
 
-Map:: Stores map type (XSLT or DataWeave) and script for transforming from one Document Definition to another Document Definition.
+Map:: Stores map type (XSLT or DataWeave) and scripting for transforming from one Message to another.
+
+[[secto]]
+*O*
+
+Onboarding:: The process of setting up a trading partner. Includes identifiers, endpoints, and message flows. Also known as Partners Configuration.
 
 [[sectp]]
 *P*
 
-Partner:: A company that exchanges B2B messages.
-
-Partner Identifier:: A predefined identifier of a particular Partner.  Partner Identifiers have Type and Qualifier that indicate the identifier scheme and Value.
+Partner Manager API:: Manages partner-related configurations such as document definitions and partner profiles.
 
 [[sectr]]
 *R*
 
-Route:: Connects a source Channel to a Target Channel.
+Retry:: A redo of a message type that has previously failed.
 
 [[sects]]
 *S*
 
-Schema:: The schema is stored with the Document Definition and is one of the following depending on the message type:
-
-* XML: XSD file
-* CSV: (NA)
-* EDI: EDI Schema Language (ESL) file
-
-
-Standard APM Field Format:: Describes fields for which valid values can include letters, numbers, or the dash ( *-* ) and underscore ( *_* ) characters.
+Source Endpoint:: The origin of the message flow that includes an endpoint and a message type. Hosted by the Host Partner and are often defined by a Host API.???
 
 [[sectt]]
 *T*
 
-Transaction:: The end-to-end processing of a single instance of a document from receipt at an endpoint all the way to the desired Business Service.  A TransactionId can be used to find metadata and persisted payloads for the transaction at each stage.
+Target Endpoint:: Final destination endpoint. Hosted by the Host Partner and are often defined by a Host API. Depending on the direction, this is either an endpoint for sending to a partner or a target at the host if receiving from a partner.???
 
-Transaction Definition:: The full configuration that configures how a document is processed between two partners.
+Trading Partner:: Any external company with which your company does business and is registered in Anypoint Partner Manager that is not the Host Partner. Your company itself is also considered a Trading Partner. Must have at least a name and identifier associated with it.
 
-Transaction-processing solution:: Functionality that serves as a translation layer between internal systems and the various formats (X12, EDIFACT, XML, CSV, and others) and transport protocols (AS2, FTP/S, and others) commonly used in electronic transactions between companies.
+Transaction:: End-to-end aspect between target and source is the document flow.
 
-Transaction-Processing Framework:: B2B transaction-processing solution that enables developers to build a single set of xref:mule-runtime::index.adoc[Mule Runtime] flows that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:anypoint-partner-manager.adoc[Anypoint Partner Manager] (APM)
+Transmission:: An event in which a bundle of messages are sent between partner and host. For example, map or transmission to a B2B payload.
+
+[[sectv]]
+*V*
+
+Validation:: Part of the processing of the transaction within the system. For EDI???
