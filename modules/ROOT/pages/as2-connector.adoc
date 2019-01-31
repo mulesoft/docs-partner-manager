@@ -120,6 +120,7 @@ You can set placeholders in each property and define them in the mule-app.proper
 == Example of a Send Use Case
 
 image::as2-use-case-1-flow.png[AS2 Use Case 1 flow]
+Please note, that currently it is not possible to specify both receiver and secured receiver module ports.
 
 [use-case-2]
 == Example of a Receive Source Use Case
