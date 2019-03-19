@@ -1,2 +1,3 @@
-.xref:index.adoc[Anypoint B2B 2.0]
-* xref:index.adoc[Anypoint B2B 2.0]
+.xref:index.adoc[B2B 2.0]
+* xref:index.adoc[B2B 2.0]
+* xref:B2B-overview.adoc[B2B Solutions]
