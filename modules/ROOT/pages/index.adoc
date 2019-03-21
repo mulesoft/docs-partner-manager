@@ -1,7 +1,22 @@
-= Anypoint B2B 2.0
+= B2B Solutions
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :keywords: b2b, edi, portal
 
-== Edit this page
+== B2B Solutions
+
+B2B (Business-to-Business) EDI is the use of Electronic Data Interchange (EDI) by enterprises to carry out business transactions such as purchasing goods from each other.
+B2B enables Mule users to connect with trading partners using (APIs?) and EDI Message formats over AS2, FTP, and other protocols. B2B solutions integrate seamlessly into the Mule runtime.
+
+== About this Page
+
+This page introduces B2B Solutions and links to pages that provide Anypoint Partner Manager implementation examples in the context of Anypoint Studio, Mule’s graphical user interface. In addition, we provide configuration details for implementing B2B Solutions in Anypoint Studio's XML Editor.
+
+== Beta Documentation
+
+* xref:setup.adoc[Anypoint Partner Manager Setup]
+* xref:x12-identity-settings.adoc[X12 Identity Settings]
+* xref:x12-receive-read-settings.adoc[X12 Receive Read Settings]
+* xref:document-types.adoc[Document Types]
+* xref:endpoints.adoc[Endpoints]
