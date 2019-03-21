@@ -26,7 +26,7 @@ The Anypoint Platform also enables our customers to map EDI messages to their en
 
 == Message Formats
 
-EDIFACT, HL7, Tradacoms, X12, X12 HIPAA, CSV, XML, JSON (each item will have a link to its individual intro page).
+EDIFACT, HL7, Tradacoms, X12 (Beta), X12 HIPAA, CSV, XML, JSON (each item will have a link to its individual intro page).
 
 == Transport Protocols
 
@@ -34,6 +34,6 @@ FTP, FTPS, SFTP, JMS, SMTP, HL7 MLLP (only HL7 MLLP has its individual intro pag
 
 == Exchanges
 
-AS2, RNIF (each item will have it’s individual intro page)
+AS2, RNIF (each item has it’s individual intro page)
 
 |===
