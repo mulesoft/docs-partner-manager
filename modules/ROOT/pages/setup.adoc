@@ -13,24 +13,21 @@ You should have familiarity with the following concepts:
 * EDI Message formats
 * Your own network of endpoints for listening to and sending messages
 * Schemas
-* Edit transformations using Dataweave
-* Certificates
+* Transformations using Dataweave
+* Handling X.509 Certificates
 * Partner Information
 
-You will need to be able to troubleshoot and diagnose errors produced in these areas and take or recommend corrective actions.
-In addition, you should have a working knowledge or AS2, Troubleshooting and Error Correction, Filters, HIPAA (industry specific), Lookups, Promote, TRADACOMS, Transmissions, and X12.
+You will need to have the ability to troubleshoot and diagnose errors produced in these areas and take or recommend corrective actions.
 
 === Anypoint Partner Manager Workflow High-Level Overview
 
 This is a high-level overview of the workflow for setting up, configuring, and using Anypoint Partner Manager. If you are new to Anypoint Partner Manager, you can read this for further understanding.
 
-. Preparing to Install Anypoint Partner Manager. Overview of the installation/setup process. Includes mention of registering a server group and adding it in Runtime Manager and adding users with roles. +
-. Review the system and network requirements. +
-Before using Anypoint Partner Manager, you must make decisions about... You must also understand how...
-. Business Trading Partner Onboarding. Set yourself up as a host partner, then configure your business trading partners. Then create a message flow between you and your partners. +
-. Message Flow Setup. Configure the path a message takes between your backend systems and a partner. Then activate the message flow by deploying it. +
-The setup sequence for receiving a message flow are: Receiving partner info > receiving endpoint > source message type > document map > target host.
-. Monitor & Track. Once you deploy message flows, monitor and track the transmissions and messages sent between you and your partners. +
+. Preparing to Setup Anypoint Partner Manager - Includes mention of registering a server group and adding it in Runtime Manager and adding users with roles. +
+. Review the system and network requirements - Before using Anypoint Partner Manager, you must make decisions about the URL's that you will use to send and/or receive B2B messages as you interact with your trading partners. +
+. Trading Partner Onboardin - Set yourself up as a host partner, then configure partners you interact with. A partner can be a purchaser, a supplier, or reseller. then proceed to create a message flow between you and your partners. +
+. Message Flow Setup - Configure the path a B2B message takes between your backend systems and a partner. Then activate the message flow by deploying it. +
+. Monitor Activity - Once you deploy message flows, monitor and track the transmissions and messages sent between you and your partners. +
 
 === Pre-Setup Checklist
 
@@ -39,8 +36,8 @@ Before you set up your message flows to send and receive messages with your part
 For each trading partner you'll need the following:
 * Name
 * Identifiers
-* The formats for the messages to send to each other (for example, X12, EDIFACT, XML, and so forth) and the validation and acknowledgment requirements (such as TA1, 997, 999, and so forth).
-* What message types to send to one another. For example, a purchase order in X12 is an 850 message type. You'll also need to know which X12 version you'll be using with them.
+* The formats for the messages to send to each other (for example, X12, EDIFACT, XML, and so forth), the associated validations and the need for acknowledgment (such as TA1, 997, 999, and so forth).
+* Identify the message types to send to one another. For example, a purchase order in X12 is an 850 message type. You'll also need to know which X12 version you'll be using with them.
 * Certificate public key (if using AS2)
 * If you are sending them messages, you'll also need the endpoints to where you will send them.
 
@@ -52,24 +49,21 @@ As the host, you need information about your organization's systems:
 === Setup and Configuration
 
 Verify that you have the following:
-* Anypoint Platform Manager user account with Anypoint Partner Manager access
-Note to reviewers-How are role assignments for Partner Manager set up?
-There will be 2 deployment models to document: (Reviewers, which will be there for Beta?)
-- Cloud- a subscription that gets activated. (What about the Hybrid setup?)
-- On-prem - will have installation steps.
- Reviewers -Is this true? Be sure you have registered a Server group and added it in Runtime Manager. Name it something applicable such as B2B Server. (The steps to do this are in the Runtime doc: https://docs.mulesoft.com/runtime-manager/server-group-create)
+- Anypoint Platform Manager user account with Anypoint Partner Manager access
+- Appropriate roles allocated for users to access anypoint Partner Manager. role allocation happens from the 'Access Management' console of the Anypoint platform.
+- If your Mule runtimes are not on cloudHub, setup a server group with the name "B2BServers". The steps to setup your server group are in the Runtime doc: https://docs.mulesoft.com/runtime-manager/server-group-create.
 
-NOTE: If you are unable to access Anypoint Partner Manager, see your MuleSoft account administrator for assistance.
+NOTE: If you are unable to access Anypoint Partner Manager, contact your MuleSoft representative for assistance.
 
-* Anypoint Studio with Mule 4.0 and the following connectors (reviewers please verify the connector versions):
+* Anypoint Studio with Mule 4.0 and the latest versions of the following connectors, as applicable to your use case:
 
 * Transport Protocols
-- AS2 v2.1.0
-- FTPS v2.0.0
+- AS2
+- FTPS
 * Message formats
-- X12 v1.2.2
+- X12
 * Other
-- Object Store v2.1.0? (What is this?)
+- Object Store v2
 
 
 == Add and Configure Trading Partners
@@ -79,7 +73,7 @@ When you log into Partner Manager you see (Screenshot of the Partner Manager win
 NOTE: If your business was set up during the provisioning process, its name is at the top of the Name list on the Partner Page. [Reviewers - What to do if it is not?]
 . 2.  Select your environment. Depending on how you are working, you see the Environment you should be using. +
 . 3. To add a new partner, select *Partners* from the left-hand navigation and click the *New Partner* button. +
-. 4. Add the company and contact information and click *Create Partner*. This is all you need to create a partner. +
+. 4. Add the company and at least one identifier and click *Create Partner*. This is all you need to create a partner. +
 
 To edit settings for an existing trading partner, use the links on the upper left to navigate to the Partners area. From the page for the New Partner you can add:
 * Information to help you and your team identify this partner along with contact information in the About: field. The fields are: First Name
@@ -120,7 +114,7 @@ To set up Receive from partner:
 == Transports and Exchanges
 
 The EDI format support for X12 via Anypoint Partner Manager.
-There is support for transport protocols - AS2, SFTP, FTPS, HTTPS, SMTP, JMS
+There is support for transport protocols - AS2, SFTP, HTTPS
 
 == Transaction Reporting
 
