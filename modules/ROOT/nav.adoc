@@ -1,0 +1,3 @@
+.xref:index.adoc[B2B Solutions]
+* xref:index.adoc[Parner Manager]
+
