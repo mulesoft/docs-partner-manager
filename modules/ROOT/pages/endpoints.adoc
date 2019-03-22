@@ -34,15 +34,9 @@ No
 Valid values::
 
 * 'AS2'
-* 'FTP'
-* 'FTPS'
 * 'SFTP'
 * 'HTTP'
-* 'JMS'
-* 'SMTP'
-* 'POP3'
-* 'IMAP'
-* 'RNIF'
+* 'HTTPS'
 
 Default::
 
@@ -77,19 +71,12 @@ Choose the section that corresponds to the Protocol-Type of the Endpoint for whi
 
 * <<AS2 Send Settings>>
 * <<AS2 Receive Settings>>
-* <<FTP Send Settings>>
-* <<FTPS Send Settings>>
-* <<FTPS Receive Settings>>
 * <<SFTP Send Settings>>
 * <<SFTP Receive Settings>>
 * <<HTTP Send Settings>>
 * <<HTTP Receive Settings>>
-* <<JMS Send Settings>>
-* <<JMS Receive Settings>>
-* <<SMTP Send Settings>>
-* <<POP3 Receive Settings>>
-* <<IMAP Receive Settings>>
-* <<RNIF Settings>>
+* <<HTTPS Send Settings>>
+* <<HTTPS Receive Settings>>
 
 == Endpoint Property Settings
 
