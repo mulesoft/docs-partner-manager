@@ -1,0 +1,39 @@
+= B2B Solutions and Overview
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+== B2B Solutions and Overview
+
+B2B (Business-to-Business) EDI is the use of Electronic Data Interchange (EDI) by enterprises to carry out business transactions such as purchasing goods from each other.
+B2B enables Mule users to connect with trading partners using (APIs?) and EDI Message formats over AS2, FTP, and other protocols. B2B solutions integrate seamlessly into the Mule runtime.
+
+Introduces B2B and links to pages that provide B2B implementation examples in the context of Anypoint Studio, Mule’s graphical user interface. In addition, provides links to configuration details for implementing Anypoint B2B in Anypoint Studio’s XML Editor.
+
+== Anypoint Partner Manager
+
+Through its web interface, Anypoint Partner Manager enables effective setup and management of a large number of trading partners.
+Additionally, via the ability to track and report on transaction progress, Partner Manager drives greater operational efficiency while managing B2B transactions.
+With Anypoint Partner Manager you can:
+
+* Set up message flows to receive and send messages between your backend systems and your partners.
+* View and monitor how these trading partner messages are being processed in the system in case of failure in order to take corrective action.
+* Filter transactions.
+
+== Platform Capabilities
+
+The Anypoint Platform also enables our customers to map EDI messages to their enterprise systems.
+
+== Message Formats
+
+EDIFACT, HL7, Tradacoms, X12 (Beta), X12 HIPAA, CSV, XML, JSON (each item will have a link to its individual intro page).
+
+== Transport Protocols
+
+FTP, FTPS, SFTP, JMS, SMTP, HL7 MLLP (only HL7 MLLP has its individual intro page)
+
+== Exchanges
+
+AS2, RNIF (each item has it’s individual intro page)
+
+|===

@@ -1,0 +1,83 @@
+= Anypoint Partner Manager Glossary
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+
+:keywords: Anypoint B2B Anypoint Partner Manager
+
+<<secta,A>> <<sectb,B>> <<sectc,C>> <<sectd,D>> <<secte,E>> <<sectf,F>> <<sectg,G>> <<secth,H>> <<secti,I>> <<sectj,J>> <<sectk,K>> <<sectl,L>> <<sectm,M>> <<sectn,N>> <<secto,O>> <<sectp,P>> <<sectq,Q>> <<sectr,R>> <<sects,S>> <<sectt,T>>
+
+////
+<<sectu,U>> <<sectv,V>> <<sectw,W>> <<sectx,X>> <<secty,Y>> <<sectz,Z>>
+////
+
+[[secta]]
+*A*
+
+Activity:: Role-based document transaction tracking (for send and receive) based on rules, actions, and functions.
+
+Anypoint Partner Manager:: A single web-based user interface for Partner Configuration, Document flow  and Transaction Monitoring. The functionality that serves as a translation layer between internal systems and the various formats (X12, EDIFACT, XML, CSV, and others) and transport protocols (AS2, FTP/S, and others) commonly used in electronic transactions between companies.
+
+Activity API:: Provides users with the ability to obtain transaction status???
+
+[[secte]]
+*E*
+
+Endpoint:: Defines the protocol, address, and other details specific to an exchange of messages between partners such as Acknowledgement, Source Endpoint, and Target Endpoint.
+
+[[sectg]]
+*G*
+
+Global Validation and Acknowledgement settings:: Default Host settings that apply to all partners. More here???
+
+[[secth]]
+*H*
+
+Host:: The company that is subscribing to the Host in Partner Manager.
+
+[[secti]]
+*I*
+
+Identifier:: Uniquely identifies a particular Partner. Identifiers have a Type and Qualifier that indicate the identifier scheme and Value.
+
+[[sectm]]
+*M*
+
+Map:: Stores map type (XSLT or DataWeave) and scripting for transforming from one Message to another.
+
+[[secto]]
+*O*
+
+Onboarding:: The process of setting up a trading partner. Includes identifiers, endpoints, and message flows. Also known as Partners Configuration.
+
+[[sectp]]
+*P*
+
+Partner Manager API:: Manages partner-related configurations such as document definitions and partner profiles.
+
+[[sectr]]
+*R*
+
+Retry:: A redo of a message type that has previously failed.
+
+[[sects]]
+*S*
+
+Source Endpoint:: The origin of the message flow that includes an endpoint and a message type. Hosted by the Host Partner and are often defined by a Host API.???
+
+[[sectt]]
+*T*
+
+Target Endpoint:: Final destination endpoint. Hosted by the Host Partner and are often defined by a Host API. Depending on the direction, this is either an endpoint for sending to a partner or a target at the host if receiving from a partner.???
+
+Trading Partner:: Any external company with which your company does business and is registered in Anypoint Partner Manager that is not the Host Partner. Your company itself is also considered a Trading Partner. Must have at least a name and identifier associated with it.
+
+Transaction:: End-to-end aspect between target and source is the document flow.
+
+Transmission:: An event in which a bundle of messages are sent between partner and host. For example, map or transmission to a B2B payload.
+
+[[sectv]]
+*V*
+
+Validation:: Part of the processing of the transaction within the system. For EDI???
