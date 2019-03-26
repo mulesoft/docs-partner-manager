@@ -34,6 +34,7 @@ This is a high-level overview of the workflow for setting up, configuring, and u
 Before you set up your message flows to send and receive messages with your partners, you'll need to collect information from them. You'll also need to understand how your backend systems work. In preparation, use this checklist before you start.
 
 For each trading partner you'll need the following:
+
 * Name
 * Identifiers
 * The formats for the messages to send to each other (for example, X12, EDIFACT, XML, and so forth), the associated validations and the need for acknowledgment (such as TA1, 997, 999, and so forth).
@@ -42,6 +43,7 @@ For each trading partner you'll need the following:
 * If you are sending them messages, you'll also need the endpoints to where you will send them.
 
 As the host, you need information about your organization's systems:
+
 * Your organization's endpoints for receiving messages from partners. The endpoints for routing those messages to your backend systems (Targets) and the endpoints for picking up messages from those systems and sending them to partners (Sources).
 * Your organization's EDI message type preferences, if they exist.
 * Any identifiers and certificates you use when you send messages to your partners.
@@ -49,9 +51,10 @@ As the host, you need information about your organization's systems:
 === Setup and Configuration
 
 Verify that you have the following:
-- Anypoint Platform Manager user account with Anypoint Partner Manager access
-- Appropriate roles allocated for users to access anypoint Partner Manager. role allocation happens from the 'Access Management' console of the Anypoint platform.
-- If your Mule runtimes are not on cloudHub, setup a server group with the name "B2BServers". The steps to setup your server group are in the Runtime doc: https://docs.mulesoft.com/runtime-manager/server-group-create.
+
+* Anypoint Platform Manager user account with Anypoint Partner Manager access
+* Appropriate roles allocated for users to access anypoint Partner Manager. role allocation happens from the 'Access Management' console of the Anypoint platform.
+* If your Mule runtimes are not on cloudHub, setup a server group with the name "B2BServers". The steps to setup your server group are in the Runtime doc: https://docs.mulesoft.com/runtime-manager/server-group-create.
 
 NOTE: If you are unable to access Anypoint Partner Manager, contact your MuleSoft representative for assistance.
 
@@ -60,8 +63,10 @@ NOTE: If you are unable to access Anypoint Partner Manager, contact your MuleSof
 * Transport Protocols
 - AS2
 - FTPS
+
 * Message formats
 - X12
+
 * Other
 - Object Store v2
 
@@ -69,26 +74,18 @@ NOTE: If you are unable to access Anypoint Partner Manager, contact your MuleSof
 == Add and Configure Trading Partners
 
 When you log into Partner Manager you see (Screenshot of the Partner Manager window to come):
-. 1. Log in. You see the AnyPoint Partner Manager UI. +
+
+. Log in. You see the AnyPoint Partner Manager UI. +
 NOTE: If your business was set up during the provisioning process, its name is at the top of the Name list on the Partner Page. [Reviewers - What to do if it is not?]
-. 2.  Select your environment. Depending on how you are working, you see the Environment you should be using. +
-. 3. To add a new partner, select *Partners* from the left-hand navigation and click the *New Partner* button. +
-. 4. Add the company and at least one identifier and click *Create Partner*. This is all you need to create a partner. +
+. Select your environment. Depending on how you are working, you see the Environment you should be using. +
+. To add a new partner, select *Partners* from the left-hand navigation and click the *New Partner* button. +
+. Add the company and at least one identifier and click *Create Partner*. This is all you need to create a partner. +
 
 To edit settings for an existing trading partner, use the links on the upper left to navigate to the Partners area. From the page for the New Partner you can add:
-* Information to help you and your team identify this partner along with contact information in the About: field. The fields are: First Name
--Last Name
--Title
--E-mail
--Office Phone
--Mobile Phone
--Fax
--Country
--Address Line 1
--Address Line 2
--City
--State
--Postal Code
+
+* Information to help you and your team identify this partner along with contact information in the About: field. The fields are: 
+
+First Name, Last Name, Title, E-mail, Office Phone, Mobile Phone, Fax, Country, Address Line 1, Address Line 2, City, State, Postal Code
 
 * A certificate public key for receiving messages through AS2.
 * Endpoints for sending messages.
@@ -101,15 +98,16 @@ You can set up a Message Flow for Sending and Receiving from a partner.
 === Receive from a Partner
 
 To set up Receive from partner:
-. 1. Select Message Flows from the left-hand navigation. +
-. 2. Click the *New Message Flow* button and select Receive from partner from the drop-down menu. +
-. 3. Associate an existing partner that you created, or click the *New Partner button* to create one. +
-. 4. If you are creating one, fill in the receiving endpoint. +
-. 5. Select the Source message. +
-. 6. Import the Dataweave script for the Map file. +
-. 7. Select the Target document type. +
-. 8. Click the *Done* button when the setup is complete. +
-. 9. Click the *Deploy* to make the flow live. +
+
+. Select Message Flows from the left-hand navigation. +
+. Click the *New Message Flow* button and select Receive from partner from the drop-down menu. +
+. Associate an existing partner that you created, or click the *New Partner button* to create one. +
+. If you are creating one, fill in the receiving endpoint. +
+. Select the Source message. +
+. Import the Dataweave script for the Map file. +
+. Select the Target document type. +
+. Click the *Done* button when the setup is complete. +
+. Click the *Deploy* to make the flow live. +
 
 == Transports and Exchanges
 
