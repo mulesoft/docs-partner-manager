@@ -1,0 +1,74 @@
+= Document Types
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Configuring a document type for a partner means configuring settings specific to that document type.
+== Format (X12)
+
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Version
+|Select a value from the dropdown listbox, or enter a different value.
+
+Required?::
+Yes
+
+Valid values::
+
+See listbox
+
+Default::
+
+None
+
+|Message Types
+
+|Select a value from the dropdown listbox, or enter a different value.
+
+Required?::
+Yes
+
+Valid values::
+
+See listbox
+
+Default::
+
+None
+
+
+
+|Default Checkboxes
+
+|Select either of these checkboxes in order to use the values selected in the corresponding sections x12-Settings.
+
+Deselect either of these boxes if you want to choose different values than those chosen as defaults.
+
+Default::
+
+Selected
+
+
+
+|Schema
+
+|Click *Choose File*, then choose a file from the selection window.
+
+NOTE: In the file type box of the selection window, select *All Files*.
+
+Required?::
+No
+
+Default::
+
+None
+
+|Document Properties
+
+|This section enables you to select a standard-specific label and specify a path for a given document. For more information, see ???
+
+|===
