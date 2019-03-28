@@ -21,36 +21,36 @@ You will need to have the ability to troubleshoot and diagnose errors produced i
 
 === Anypoint Partner Manager Workflow High-Level Overview
 
-This is a high-level overview of the workflow for setting up, configuring, and using Anypoint Partner Manager. If you are new to Anypoint Partner Manager, you can read this for further understanding.
+This is a high-level overview of the workflow to set up, configure, and use Anypoint Partner Manager. If you are new to Anypoint Partner Manager you can read this for further understanding.
 
 . Preparing to Setup Anypoint Partner Manager - Includes mention of registering a server group and adding it in Runtime Manager and adding users with roles. +
 . Review the system and network requirements - Before using Anypoint Partner Manager, you must make decisions about the URL's that you will use to send and/or receive B2B messages as you interact with your trading partners. +
-. Trading Partner Onboardin - Set yourself up as a host partner, then configure partners you interact with. A partner can be a purchaser, a supplier, or reseller. then proceed to create a message flow between you and your partners. +
-. Message Flow Setup - Configure the path a B2B message takes between your backend systems and a partner. Then activate the message flow by deploying it. +
-. Monitor Activity - Once you deploy message flows, monitor and track the transmissions and messages sent between you and your partners. +
+. Trading Partner Onboarding - Set up your own configurations and the proceed to configure partners you interact with. A partner can be a purchaser, a supplier, or reseller. Subsequently, create a message flow between you and your partners. +
+. Configure Message Flows - Configure the path a B2B message takes between your backend systems and a partner. Then activate the message flow by deploying it. +
+. Monitor Activity - Once you deploy message flows, monitor, and track the transmissions and messages sent between you and your partners. +
 
 === Pre-Setup Checklist
 
 Before you set up your message flows to send and receive messages with your partners, you'll need to collect information from them. You'll also need to understand how your backend systems work. In preparation, use this checklist before you start.
 
 For each trading partner you'll need the following:
-* Name
-* Identifiers
+* Name of the Partner.
+* Identifiers (such as X12 ISA, UNB, and so forth).
 * The formats for the messages to send to each other (for example, X12, EDIFACT, XML, and so forth), the associated validations and the need for acknowledgment (such as TA1, 997, 999, and so forth).
-* Identify the message types to send to one another. For example, a purchase order in X12 is an 850 message type. You'll also need to know which X12 version you'll be using with them.
-* Certificate public key (if using AS2)
-* If you are sending them messages, you'll also need the endpoints to where you will send them.
+* Identify the message types to use. For example, a purchase order in X12 is an 850 message type. You'll also need to know which X12 version you'll be using with them (such as 004010, 005010, and so forth).
+* Certificate public key (if using AS2 transport).
+* You will also need endpoints depending on the direction of interactions with your partner.
 
-As the host, you need information about your organization's systems:
-* Your organization's endpoints for receiving messages from partners. The endpoints for routing those messages to your backend systems (Targets) and the endpoints for picking up messages from those systems and sending them to partners (Sources).
-* Your organization's EDI message type preferences, if they exist.
-* Any identifiers and certificates you use when you send messages to your partners.
+As the host, you need the following information about your organization:
+* Your organization's endpoints to receive messages from partners. The endpoints for routing those messages to your backend systems. Similarly, you will need the endpoints to pick up messages from your backend systems, to send them to partners.
+* Your organization's EDI message type preferences.
+* Any identifiers and certificates you need to use.
 
 === Setup and Configuration
 
 Verify that you have the following:
-- Anypoint Platform Manager user account with Anypoint Partner Manager access
-- Appropriate roles allocated for users to access anypoint Partner Manager. role allocation happens from the 'Access Management' console of the Anypoint platform.
+- Anypoint Platform user account with Anypoint Partner Manager access
+{NOT FOR BETA} - Appropriate roles allocated for users to access Anypoint Partner Manager. Roles are allocated via 'Access Management' in Anypoint Platform.
 - If your Mule runtimes are not on cloudHub, setup a server group with the name "B2BServers". The steps to setup your server group are in the Runtime doc: https://docs.mulesoft.com/runtime-manager/server-group-create.
 
 NOTE: If you are unable to access Anypoint Partner Manager, contact your MuleSoft representative for assistance.
