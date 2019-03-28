@@ -27,7 +27,7 @@ ANSI X12, X12 HIPAA, EDIFACT, HL7, Tradacoms, CSV, XML, JSON (each item will hav
 
 == Transport Protocols
 
-FTP, FTPS, SFTP, JMS, SMTP, HL7 MLLP (only HL7 MLLP has its individual intro page)
+HTTP(S), FTP, FTPS, SFTP, JMS, SMTP, HL7 MLLP (only HL7 MLLP has its individual intro page)
 
 == Exchanges
 
