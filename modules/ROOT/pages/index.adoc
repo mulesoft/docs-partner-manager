@@ -17,5 +17,5 @@ This page introduces MuleSoft's B2B Solutions and links to pages that provide de
 * xref:setup.adoc[Anypoint Partner Manager Setup]
 * xref:x12-identity-settings.adoc[X12 Identity Settings]
 * xref:x12-receive-read-settings.adoc[X12 Receive Read Settings]
-* xref:document-types.adoc[Document Types]
+* xref:document-types.adoc[Message Types]
 * xref:endpoints.adoc[Endpoints]
