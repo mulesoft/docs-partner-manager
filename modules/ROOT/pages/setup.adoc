@@ -69,26 +69,15 @@ NOTE: If you are unable to access Anypoint Partner Manager, contact your MuleSof
 == Add and Configure Trading Partners
 
 When you log into Partner Manager you see (Screenshot of the Partner Manager window to come):
-. 1. Log in. You see the AnyPoint Partner Manager UI. +
+
+. Log in. You see the AnyPoint Partner Manager UI. +
 NOTE: If your business was set up during the provisioning process, its name is at the top of the Name list on the Partner Page. [Reviewers - What to do if it is not?]
-. 2.  Select your environment. Depending on how you are working, you see the Environment you should be using. +
-. 3. To add a new partner, select *Partners* from the left-hand navigation and click the *New Partner* button. +
-. 4. Add the company and at least one identifier and click *Create Partner*. This is all you need to create a partner. +
+. Select your environment. Depending on how you are working, you see the Environment you should be using. +
+. To add a new partner, select *Partners* from the left-hand navigation and click the *New Partner* button. +
+. Add the company and at least one identifier and click *Create Partner*. This is all you need to create a partner. +
 
 To edit settings for an existing trading partner, use the links on the upper left to navigate to the Partners area. From the page for the New Partner you can add:
-* Information to help you and your team identify this partner along with contact information in the About: field. The fields are: First Name
--Last Name
--Title
--E-mail
--Office Phone
--Mobile Phone
--Fax
--Country
--Address Line 1
--Address Line 2
--City
--State
--Postal Code
+* Information to help you and your team identify this partner along with contact information in the About: field. The fields are:Trading Partner's Name, Primary contact name for the Trading Partner, Description of the trading partner, Email Id, Contact #, Website URL, Country, Address - line 1; line 2; City; state; postal code, logo
 
 * A certificate public key for receiving messages through AS2.
 * Endpoints for sending messages.
