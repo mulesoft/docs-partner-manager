@@ -90,15 +90,16 @@ You can set up a Message Flow for Sending and Receiving from a partner.
 === Receive from a Partner
 
 To set up Receive from partner:
-. 1. Select Message Flows from the left-hand navigation. +
-. 2. Click the *New Message Flow* button and select Receive from partner from the drop-down menu. +
-. 3. Associate an existing partner that you created, or click the *New Partner button* to create one. +
-. 4. If you are creating one, fill in the receiving endpoint. +
-. 5. Select the Source message. +
-. 6. Import the Dataweave script for the Map file. +
-. 7. Select the Target document type. +
-. 8. Click the *Done* button when the setup is complete. +
-. 9. Click the *Deploy* to make the flow live. +
+
+. Select Message Flows from the left-hand navigation. +
+. Click the *New Message Flow* button and select Receive from partner from the drop-down menu. +
+. Associate an existing partner that you created, or click the *New Partner button* to create one. +
+. If you are creating one, fill in the receiving endpoint. +
+. Select the Source message. +
+. Import the Dataweave script for the Map file. +
+. Select the Target document type. +
+. Click the *Done* button when the setup is complete. +
+. Click the *Deploy* to make the flow live. +
 
 == Transports and Exchanges
 
