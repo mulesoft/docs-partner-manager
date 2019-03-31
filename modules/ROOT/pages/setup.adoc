@@ -46,19 +46,11 @@ NOTE: If you are unable to access Anypoint Partner Manager, please contact your 
 ** Message formats.
 *** X12 - minimum connector version 2.0.1.
 
-* You need to designate runtimes to deploy the B2B Gateway i.e. the Mule application that processes your B2B transactions. If your Mule runtimes are not on CloudHub, setup a server group via Anypoint Runtime Manager. The steps to setup your server group are in [Runtime Manager documentation](https://docs.mulesoft.com/runtime-manager/server-group-create).
+* You need to designate runtimes to deploy the B2B Gateway i.e. the Mule application that processes your B2B transactions. Please ensure you have the needed runtime capacity to handle your B2B transaction load. If you are not sure about the capacity you need to handle your B2B transactions, please contact your MuleSoft representative.
 
 NOTE: The server group associated to your B2B Gateway need to be named "B2BServerGroup" (the name is case sensitive).
 
 * A storage to persist your B2B message payloads. Anypoint Partner Manager enables you to connect your own storage (such as a database, Amazon S3, Azure Blob Storage, and so forth). To connect to your storage, you will need to establish an API that can be registered with Anypoint Partner Manager to connect to the storage.
-
-** Setting up the Storage
-
-*** Download the pre-packaged API and integration implementation from here.
-*** Deploy the Mule app on your runtime.
-*** Note down the API address configurations (host, port, path, and so forth) that you will use later to associate the storage within Anypoint Partner Manager.
-
-_**Note to Maria** - Please obtain the link from anypoint Exchange for the pre-packaged API and integration app from Manik / Pablo_
 
 === Setup Checklist
 
@@ -84,9 +76,25 @@ As the host, you need the following information about your organization:
 
 Anypoint Partner Manager makes it easy to send and receive B2B messages with your trading partners. There are three main steps required to get started using the application:
 
-- [Add and Configure Trading Partners](https://github.com/mulesoft/docs-partner-manager/blob/docs-4446-beta-docs-review/modules/ROOT/pages/setup.adoc#add-and-configure-trading-partners)
-- [Create and Deploy a Message Flow](https://github.com/mulesoft/docs-partner-manager/blob/docs-4446-beta-docs-review/modules/ROOT/pages/setup.adoc#create-a-message-flow)
-- View Activities
+- Configure your Profile
+- Configure Trading Partners
+- Configure your Payload Storage
+- Associate Runtimes for Deployment
+- Allocate Partner Manager Roles
+
+_**Maria** - Please link the bullet points above to the section headers that follow below_
+
+=== Configure your Profile
+
+The first thing that you'll want to do is to configure your own profile. Your profile defines important information used to identify you with your partners. Select tab with your organizations name from the left-hand side menu to get started configuring your profile.
+
+The Profile selection contains everything that is relevant to your identity in a B2B exchange. It also contains global settings that can be used across several B2B message flows. There are a number of settings available for various configurations, however, the majority are optional. To get started you will need to specify the following:
+
+- Identifiers - Specify one or more identifiers that identify your organization during B2B exchanges. Identifiers are information that you will give your trading partner when exchanging profile information. Your partners will use this value to load the settings for your profile, so they can process your requests. Examples of identifiers for your organizations include:
+** AS2 Identifier - the value that you set here will be sent in the headers of AS2 transmissions that you initiate
+** X12 ISA - the value that you set here will be sent in the Interchange header of X12 messages that you initiate
+** X12 GS - the value that you set here will be sent in the Group header of X12 messages that you initiate
+
 
 === Add and Configure Trading Partners
 
@@ -125,6 +133,30 @@ _**Note to Maria** - Please add an image of the contacts section here_
 
 * Add more *Identifiers* or edit previously added Identifiers.
 * Add a *Certificate* associated to your use of the AS2 protocol.
+
+
+=== Configure your Payload Storage
+
+* Download the pre-packaged API and integration implementation from here.
+* Deploy the Mule app on your runtime.
+* Note down the API address configurations (host, port, path, and so forth) that you will use later to associate the storage within Anypoint Partner Manager.
+
+_**Note to Maria** - Please obtain the link from anypoint Exchange for the pre-packaged API and integration app from Manik / Pablo_
+
+
+=== Associating Runtimes
+
+If your Mule runtimes are not on CloudHub, setup a server group via Anypoint Runtime Manager. The steps to setup your server group are in [Runtime Manager documentation](https://docs.mulesoft.com/runtime-manager/server-group-create).
+
+
+=== Allocate Partner Manager Roles {_**NOT FOR BETA**_}
+
+_**Maria** - please use the details in the document linked for the B2B roles ==> https://docs.google.com/document/d/1KgCPD2U51VnlkiWvBqzRyIJ8X8r5b41o1RTidtaqfYE/edit?usp=sharing _}
+
+
+
+- [Create and Deploy a Message Flow](https://github.com/mulesoft/docs-partner-manager/blob/docs-4446-beta-docs-review/modules/ROOT/pages/setup.adoc#create-a-message-flow)
+- View Activities
 
 === Create and Deploy a Message Flow
 
