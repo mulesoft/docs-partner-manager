@@ -46,7 +46,7 @@ NOTE: If you are unable to access Anypoint Partner Manager, please contact your 
 ** Message formats.
 *** X12 - minimum connector version 2.0.1.
 
-* You need to designate runtimes to deploy the B2B Gateway i.e. the Mule application that processes your B2B transactions. If your Mule runtimes are not on CloudHub, setup a server group via Anypoint Runtime Manager. The steps to setup your server group are in [Runtime Manager documentation](https://docs.mulesoft.com/runtime-manager/server-group-create/).
+* You need to designate runtimes to deploy the B2B Gateway i.e. the Mule application that processes your B2B transactions. If your Mule runtimes are not on CloudHub, setup a server group via Anypoint Runtime Manager. The steps to setup your server group are in [Runtime Manager documentation](https://docs.mulesoft.com/runtime-manager/server-group-create).
 
 NOTE: The server group associated to your B2B Gateway need to be named "B2BServerGroup" (the name is case sensitive).
 
@@ -80,7 +80,13 @@ As the host, you need the following information about your organization:
 * Any identifiers and certificates you need to use.
 * Your storage information to persist the B2B payloads.
 
-== Getting Started with Partner Onboarding
+== Getting Started with Anypoint Partner Manager
+
+Anypoint Partner Manager makes it easy to send and receive B2B messages with your trading partners. There are three main steps required to get started using the application:
+
+- Add and Configure Trading Partners
+- Create and Deploy a Message Flow
+- View Activities
 
 === Add and Configure Trading Partners
 
@@ -123,7 +129,7 @@ _**Note to Maria** - Please add an image of the contacts section here_
 * Endpoints for sending messages.
 * Message types and message flows.
 
-=== Create a Message Flow for Messages to Partners
+=== Create a Message Flow
 
 You can set up a Message Flow for Sending and Receiving from a partner.
 
