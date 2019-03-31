@@ -58,7 +58,7 @@ NOTE: The server group associated to your B2B Gateway need to be named "B2BServe
 *** Deploy the Mule app on your runtime.
 *** Note down the API address configurations (host, port, path, and so forth) that you will use later to associate the storage within Anypoint Partner Manager.
 
-_**Note to Maria** - Please obtain the link to the pre-packaged API and integration app from Manik / Pablo_
+_**Note to Maria** - Please obtain the link from anypoint Exchange for the pre-packaged API and integration app from Manik / Pablo_
 
 === Setup Checklist
 
