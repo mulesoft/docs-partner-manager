@@ -14,7 +14,7 @@ You should have familiarity with the following concepts:
 * Your own network of endpoints for listening to and sending messages
 * EDI Message Schemas
 * Transformations using Dataweave
-* Handling X.509 Certificates
+* Handling X.509 Certificates _(needed only if using AS2 protocol for transport)_
 * Partner Information
 
 You will need to have the ability to troubleshoot and diagnose errors produced in these areas and take or recommend corrective actions.
