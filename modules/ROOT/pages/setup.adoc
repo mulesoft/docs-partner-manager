@@ -33,12 +33,12 @@ Verify that you have the following:
 - Anypoint Platform user account with Anypoint Partner Manager access
 {NOT FOR BETA} - Appropriate roles allocated for users to access Anypoint Partner Manager. Roles are allocated via 'Access Management' in Anypoint Platform.
 
-_**Note to Maria** - Please add an image of the Anypoint Platform page that shows Partner Manager on the _
+_**Note to Maria** - Please add an image of the Anypoint Platform page that shows Partner Manager on the_
 
 NOTE: If you are unable to access Anypoint Partner Manager, please contact your MuleSoft representative for assistance.
 
 * Minimum Software Requirements
-- Mule runtime 4.1.1 or higher.
+- Mule runtime 4.1.1 or higher
 - Anypoint Studio 7.1 or higher
 - The latest versions of the following connectors, as applicable to your use case:
 ** Transport Protocols
@@ -49,7 +49,7 @@ NOTE: If you are unable to access Anypoint Partner Manager, please contact your 
 - Other
 ** Object Store v2
 
-* You need to designate a set of rumtimes to deploy the B2B Gateway i.e. the Mule app that processes your B2B transactions. If your Mule runtimes are not on CloudHub, setup a server group via Anypoint Runtime Manager. The steps to setup your server group are in the Runtime doc: https://docs.mulesoft.com/runtime-manager/server-group-create.
+* You need to designate runtimes to deploy the B2B Gateway i.e. the Mule application that processes your B2B transactions. If your Mule runtimes are not on CloudHub, setup a server group via Anypoint Runtime Manager. The steps to setup your server group are in the Runtime doc: https://docs.mulesoft.com/runtime-manager/server-group-create.
 
 NOTE: The server group associated to your B2B Gateway need to be named "B2BServerGroup" (name is case sensitive).
 
