@@ -89,7 +89,17 @@ _**Maria** - Please link the bullet points above to the section headers that fol
 
 The first thing that you'll want to do is to configure your own profile. Your profile defines important information used to identify you with your partners. Select the tab with your organizations name from the left-hand side menu to get started configuring your profile.
 
-The Profile selection contains everything that is relevant to your identity in a B2B exchange. It also contains global settings that can be used across several B2B message flows. There are a number of settings available for various configurations, however, the majority are optional. To get started you will need to specify the following:
+The Profile selection contains everything that is relevant to your identity in a B2B exchange. It also contains global settings that can be used across several B2B message flows. There are a number of settings available for various configurations, however, the majority are optional. 
+
+To get started, when you log into Anypoint Platform and navigate to Anypoint Partner Manager you see this related UI.(Screenshot of the Partner Manager window to come): +
+
+NOTE: If your business was set up during the provisioning process, its name is at the top of the Name list on the Partner Page.  _**Maria - not sure what this line means**_
+
+first select your execution *environment* from the top left. You will use Partner Manager in the chosen Environment.
+
+NOTE: Please do not use the 'Design' environment.
+
+Now specify the following:
 
 - **Identifiers** - Specify one or more identifiers that identify your organization during B2B exchanges. Identifiers are information that you will give your trading partner when exchanging profile information. Your partners will use this value to load the settings for your profile, so they can process your requests. Examples of identifiers for your organizations include:
 ** AS2 Identifier - the value that you set here will be sent in the headers of AS2 transmissions that you initiate
@@ -121,15 +131,10 @@ Once the API is setup, navigate back to your organization's profile and navigate
 * Configure the authentication needed to access the API. The options include - Non, Basic Authentication, OAuth Token, Client Credentials, and API Key
 
 
+All other configurations on the your organization's profile are optional at this point. Many of these details will be populated as you setup the Message flows later on.
+
+
 === Add and Configure Trading Partners
-
-. When you log into Anypoint Platform and navigate to Anypoint Partner Manager you see related UI.(Screenshot of the Partner Manager window to come): +
-
-NOTE: If your business was set up during the provisioning process, its name is at the top of the Name list on the Partner Page._**Maria - not sure what this line means**_
-
-. Select your execution *environment* from the top left. You will use Partner Manager in the chosen Environment. +
-
-NOTE: Please do not use the 'Design' environment.
 
 . To add a new partner, select *Partners* from the left-hand navigation and click the *New Partner* button. +
 . Add the 'Partner Name' and at least one identifier and click *Create Partner*. This is all you need to create a new partner. +
