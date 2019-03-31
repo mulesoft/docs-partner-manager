@@ -5,14 +5,14 @@ endif::[]
 
 
 
-== Setup & Config - Partner Integration Onboarding
+== Getting Started with Partner Onboarding
 
 This describes the general requirements to set up and use Anypoint Partner Manager.
 You should have familiarity with the following concepts:
 
 * EDI Message formats
 * Your own network of endpoints for listening to and sending messages
-* Schemas
+* EDI Message Schemas
 * Transformations using Dataweave
 * Handling X.509 Certificates
 * Partner Information
@@ -21,13 +21,13 @@ You will need to have the ability to troubleshoot and diagnose errors produced i
 
 === Anypoint Partner Manager Workflow High-Level Overview
 
-This is a high-level overview of the workflow to set up, configure, and use Anypoint Partner Manager. If you are new to Anypoint Partner Manager you can read this for further understanding.
+This is a high-level overview of the workflow to configure and use Anypoint Partner Manager. If you are new to Anypoint Partner Manager you can read this for further understanding.
 
-. Preparing to Setup Anypoint Partner Manager - Includes mention of registering a server group and adding it in Runtime Manager and adding users with roles. +
-. Review the system and network requirements - Before using Anypoint Partner Manager, you must make decisions about the URL's that you will use to send and/or receive B2B messages as you interact with your trading partners. +
-. Trading Partner Onboarding - Set up your own configurations and the proceed to configure partners you interact with. A partner can be a purchaser, a supplier, or reseller. Subsequently, create a message flow between you and your partners. +
+. Preparing to Setup Anypoint Partner Manager - Includes registering a server group and adding it in Anypoint Runtime Manager. Additionally includes details about allocating users with roles. +
+. Review the System and Network Requirements - Before using Anypoint Partner Manager, you must make decisions about the URL's that you will use to send and/or receive B2B messages as you interact with your partners. +
+. On-Boarding Technical Details of your Partner  - Set up your own organization's configurations and then proceed to configure partners you interact with. A partner can be a purchaser, a supplier, or reseller. Subsequently, create a message flow between you and your partners to enable B2B transactions. +
 . Configure Message Flows - Configure the path a B2B message takes between your backend systems and a partner. Then activate the message flow by deploying it. +
-. Monitor Activity - Once you deploy message flows, monitor, and track the transmissions and messages sent between you and your partners. +
+. Monitor Activity - Once you deploy message flows, monitor and track the transmission of messages sent between you and your partners. +
 
 === Pre-Setup Checklist
 
@@ -35,48 +35,56 @@ Before you set up your message flows to send and receive messages with your part
 
 For each trading partner you'll need the following:
 * Name of the Partner.
-* Identifiers (such as X12 ISA, UNB, and so forth).
-* The formats for the messages to send to each other (for example, X12, EDIFACT, XML, and so forth), the associated validations and the need for acknowledgment (such as TA1, 997, 999, and so forth).
-* Identify the message types to use. For example, a purchase order in X12 is an 850 message type. You'll also need to know which X12 version you'll be using with them (such as 004010, 005010, and so forth).
-* Certificate public key (if using AS2 transport).
+* Identifiers (such as AS2 Identifier, X12 ISA, UNB, and so forth).
+* Formats for the messages to send to each other (for example, X12, EDIFACT, XML, and so forth), the associated validations and the need for acknowledgment (such as TA1, 997, 999, and so forth).
+* Identify the message types to use. For example, a purchase order in X12 is a 850 mesage. Following the example, you will also need to know which X12 version you'll be using in your transactions (such as 004010, 005010, and so forth).
+* X.509 Certificate (if using AS2 transport).
 * You will also need endpoints depending on the direction of interactions with your partner.
 
 As the host, you need the following information about your organization:
 * Your organization's endpoints to receive messages from partners. The endpoints for routing those messages to your backend systems. Similarly, you will need the endpoints to pick up messages from your backend systems, to send them to partners.
 * Your organization's EDI message type preferences.
 * Any identifiers and certificates you need to use.
+* A store for your B2B message payloads. Anypoint Partner Manager enables you to connect your own storage (such as a database, Amazon S3, Azure Blob Storage, and so forth). To connect to your storage, you will need to establish an API that cna be registered with Anypoint Partner Manager to connect to the storage.
 
 === Setup and Configuration
 
 Verify that you have the following:
 - Anypoint Platform user account with Anypoint Partner Manager access
 {NOT FOR BETA} - Appropriate roles allocated for users to access Anypoint Partner Manager. Roles are allocated via 'Access Management' in Anypoint Platform.
-- If your Mule runtimes are not on cloudHub, setup a server group with the name "B2BServers". The steps to setup your server group are in the Runtime doc: https://docs.mulesoft.com/runtime-manager/server-group-create.
+- If your Mule runtimes are not on cloudHub, setup a server group with the name "B2BServerGroup" (name is case sensitive). The steps to setup your server group are in the Runtime doc: https://docs.mulesoft.com/runtime-manager/server-group-create.
 
 NOTE: If you are unable to access Anypoint Partner Manager, contact your MuleSoft representative for assistance.
 
-* Anypoint Studio with Mule 4.0 and the latest versions of the following connectors, as applicable to your use case:
-
-* Transport Protocols
-- AS2
-- FTPS
-* Message formats
-- X12
-* Other
-- Object Store v2
+* Minimum Software Requirements
+- Mule runtime 4.1.1 or higher.
+- Anypoint Studio 7.1 or higher
+- The latest versions of the following connectors, as applicable to your use case:
+** Transport Protocols
+*** AS2 - minimum verison 4.0.2
+*** SFTP - minimum verison 1.2.4
+** Message formats
+*** X12 - minimum verison 2.0.1
+- Other
+** Object Store v2
 
 
 == Add and Configure Trading Partners
 
-When you log into Partner Manager you see (Screenshot of the Partner Manager window to come):
+When you log into Anypoint Partner Manager you see (Screenshot of the Partner Manager window to come):
 
 . Log in. You see the AnyPoint Partner Manager UI. +
-NOTE: If your business was set up during the provisioning process, its name is at the top of the Name list on the Partner Page. [Reviewers - What to do if it is not?]
-. Select your environment. Depending on how you are working, you see the Environment you should be using. +
-. To add a new partner, select *Partners* from the left-hand navigation and click the *New Partner* button. +
-. Add the company and at least one identifier and click *Create Partner*. This is all you need to create a partner. +
 
-To edit settings for an existing trading partner, use the links on the upper left to navigate to the Partners area. From the page for the New Partner you can add:
+NOTE: If your business was set up during the provisioning process, its name is at the top of the Name list on the Partner Page.
+
+. Select your environment. Depending on how you are working, you see the Environment you should be using. +
+
+NOTE: Please do not use the 'Design' environment.
+
+. To add a new partner, select *Partners* from the left-hand navigation and click the *New Partner* button. +
+. Add the 'Partner Name' and at least one identifier and click *Create Partner*. This is all you need to create a new partner. +
+
+To edit settings for an existing trading partner, use the links on the upper left to navigate to the 'Partners' tab. From the page for the New Partner you can add:
 * Information to help you and your team identify this partner along with contact information in the About: field. The fields are:Trading Partner's Name, Primary contact name for the Trading Partner, Description of the trading partner, Email Id, Contact #, Website URL, Country, Address - line 1; line 2; City; state; postal code, logo
 
 * A certificate public key for receiving messages through AS2.
