@@ -34,7 +34,7 @@ Verify that you have the following:
 - Anypoint Platform user account with Anypoint Partner Manager access {_**NOT FOR BETA**_}
 - Appropriate roles allocated for users to access Anypoint Partner Manager. Roles are allocated via the 'Access Management' section in Anypoint Platform.
 
-_**Note to Maria** - Please add an image of the Anypoint Platform page that shows Partner Manager on the_
+_**Note to Maria** - Please add an image of the landing page of Anypoint Platform page that shows Partner Manager_
 
 NOTE: If you are unable to access Anypoint Partner Manager, please contact your MuleSoft representative for assistance.
 
@@ -48,7 +48,9 @@ NOTE: If you are unable to access Anypoint Partner Manager, please contact your 
 ** Message formats.
 *** X12 - minimum connector version 2.0.1.
 
-* You need to designate runtimes to deploy the B2B Gateway i.e. the Mule application that processes your B2B transactions. Please ensure you have the needed runtime capacity to handle your B2B transaction load. If you are not sure about the capacity you need to handle your B2B transactions, please contact your MuleSoft representative.
+* You need to designate runtimes to deploy the B2B Gateway i.e. the Mule application that processes your B2B transactions. 
+
+NOTE: Please ensure you have the needed runtime capacity to handle your B2B transaction load. If you are not sure about the capacity you need to handle your B2B transactions, please contact your MuleSoft representative.
 
 * A storage to persist your B2B message payloads.
 
@@ -110,10 +112,13 @@ Steps to setup the API are mentioned below:
 * Deploy the Mule app on your runtime.
 * Note down the API address configurations (host, port, path, and so forth) that you will use later to associate the storage within Anypoint Partner Manager.
 
-Once the API is setup, navigate back to your 
+_**Note to Maria** - Please obtain the link from Anypoint Exchange for the pre-packaged API and integration app from Manik / Pablo_
 
-_**Note to Maria** - Please obtain the link from anypoint Exchange for the pre-packaged API and integration app from Manik / Pablo_
+Once the API is setup, navigate back to your organization's profile and navigate to the **Payload Storage** section
 
+* Click the Edit button
+* Provide the following details based on the API configuration you setup earlier - Host, Port, Path. Defaults for the Connection timeout and Response timeout can be modified, per your needs
+* Configure the authentication needed to access the API. The options include - Non, Basic Authentication, OAuth Token, Client Credentials, and API Key
 
 
 === Add and Configure Trading Partners
