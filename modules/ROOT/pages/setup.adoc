@@ -99,7 +99,7 @@ To edit settings for an existing trading partner, use the links on the upper lef
 ** Email Id of the Contact
 ** Phone number of the Contact
 
-NOTE: Up to 3 contacts can be added.
+** NOTE: Up to 3 contacts can be added.
 
 * A certificate public key for receiving messages through AS2.
 * Endpoints for sending messages.
