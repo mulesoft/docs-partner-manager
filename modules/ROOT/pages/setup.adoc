@@ -46,7 +46,7 @@ NOTE: If you are unable to access Anypoint Partner Manager, please contact your 
 ** Message formats.
 *** X12 - minimum connector version 2.0.1.
 
-* You need to designate runtimes to deploy the B2B Gateway i.e. the Mule application that processes your B2B transactions. If your Mule runtimes are not on CloudHub, setup a server group via Anypoint Runtime Manager. The steps to setup your server group are in the Runtime doc: https://docs.mulesoft.com/runtime-manager/server-group-create.
+* You need to designate runtimes to deploy the B2B Gateway i.e. the Mule application that processes your B2B transactions. If your Mule runtimes are not on CloudHub, setup a server group via Anypoint Runtime Manager. The steps to setup your server group are in [Runtime Manager documentation](https://docs.mulesoft.com/runtime-manager/server-group-create).
 
 NOTE: The server group associated to your B2B Gateway need to be named "B2BServerGroup" (the name is case sensitive).
 
