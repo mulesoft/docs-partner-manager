@@ -4,8 +4,6 @@ include::_attributes.adoc[]
 endif::[]
 
 
-== Getting Started with Partner Onboarding
-
 This describes the general requirements to set up and use Anypoint Partner Manager.
 You should have familiarity with the following concepts:
 
@@ -72,8 +70,9 @@ As the host, you need the following information about your organization:
 * Any identifiers and certificates you need to use.
 * A store for your B2B message payloads. Anypoint Partner Manager enables you to connect your own storage (such as a database, Amazon S3, Azure Blob Storage, and so forth). To connect to your storage, you will need to establish an API that cna be registered with Anypoint Partner Manager to connect to the storage.
 
+== Getting Started with Partner Onboarding
 
-== Add and Configure Trading Partners
+=== Add and Configure Trading Partners
 
 When you log into Anypoint Partner Manager you see (Screenshot of the Partner Manager window to come):
 
@@ -114,11 +113,11 @@ _**Note to Maria** - Please add an image of the contacts section here_
 * Endpoints for sending messages.
 * Message types and message flows.
 
-== Create a Message Flow for Messages to Partners
+=== Create a Message Flow for Messages to Partners
 
 You can set up a Message Flow for Sending and Receiving from a partner.
 
-=== Receive from a Partner
+==== Receive from a Partner
 
 To set up Receive from partner:
 
