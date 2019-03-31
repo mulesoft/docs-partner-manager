@@ -34,6 +34,7 @@ This is a high-level overview of the workflow to configure and use Anypoint Part
 Before you set up your message flows to send and receive messages with your partners, you'll need to collect information from them. You'll also need to understand how your backend systems work. In preparation, use this checklist before you start.
 
 For each trading partner you'll need the following:
+
 * Name of the Partner.
 * Identifiers (such as AS2 Identifier, X12 ISA, UNB, and so forth).
 * Formats for the messages to send to each other (for example, X12, EDIFACT, XML, and so forth), the associated validations and the need for acknowledgment (such as TA1, 997, 999, and so forth).
@@ -42,6 +43,7 @@ For each trading partner you'll need the following:
 * You will also need endpoints depending on the direction of interactions with your partner.
 
 As the host, you need the following information about your organization:
+
 * Your organization's endpoints to receive messages from partners. The endpoints for routing those messages to your backend systems. Similarly, you will need the endpoints to pick up messages from your backend systems, to send them to partners.
 * Your organization's EDI message type preferences.
 * Any identifiers and certificates you need to use.
@@ -50,6 +52,7 @@ As the host, you need the following information about your organization:
 === Setup and Configuration
 
 Verify that you have the following:
+
 - Anypoint Platform user account with Anypoint Partner Manager access
 {NOT FOR BETA} - Appropriate roles allocated for users to access Anypoint Partner Manager. Roles are allocated via 'Access Management' in Anypoint Platform.
 - If your Mule runtimes are not on cloudHub, setup a server group with the name "B2BServerGroup" (name is case sensitive). The steps to setup your server group are in the Runtime doc: https://docs.mulesoft.com/runtime-manager/server-group-create.
