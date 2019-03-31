@@ -4,8 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 
 
-This describes the general requirements to set up and use Anypoint Partner Manager.
-You should have familiarity with the following concepts:
+This page describes the general requirements to set up and use Anypoint Partner Manager. You should have familiarity with the following concepts:
 
 * EDI Message formats
 * Your own network of endpoints for listening to and sending messages
@@ -17,7 +16,7 @@ You will need to have the ability to troubleshoot and diagnose errors produced i
 
 === Anypoint Partner Manager Workflow
 
-This is a high-level overview of the workflow to configure and use Anypoint Partner Manager.
+Below, find a high-level overview of the workflow to configure and use Anypoint Partner Manager.
 
 . Preparing to Setup Anypoint Partner Manager - Includes registering a server group and adding it in Anypoint Runtime Manager. Additionally includes details about allocating users with roles. +
 . Review the System and Network Requirements - Before using Anypoint Partner Manager, you must make decisions about the URL's that you will use to send and/or receive B2B messages as you interact with your partners. +
@@ -30,37 +29,36 @@ This is a high-level overview of the workflow to configure and use Anypoint Part
 
 Verify that you have the following:
 
-- Anypoint Platform user account with Anypoint Partner Manager access
-{NOT FOR BETA} - Appropriate roles allocated for users to access Anypoint Partner Manager. Roles are allocated via 'Access Management' in Anypoint Platform.
+- Anypoint Platform user account with Anypoint Partner Manager access {_**NOT FOR BETA**_}
+- Appropriate roles allocated for users to access Anypoint Partner Manager. Roles are allocated via the 'Access Management' section in Anypoint Platform.
 
 _**Note to Maria** - Please add an image of the Anypoint Platform page that shows Partner Manager on the_
 
 NOTE: If you are unable to access Anypoint Partner Manager, please contact your MuleSoft representative for assistance.
 
 * Minimum Software Requirements
-- Mule runtime 4.1.1 or higher
-- Anypoint Studio 7.1 or higher
+- Mule runtime 4.1.1 or higher.
+- Anypoint Studio 7.1 or higher.
 - The latest versions of the following connectors, as applicable to your use case:
-** Transport Protocols
-*** AS2 - minimum verison 4.0.2
-*** SFTP - minimum verison 1.2.4
-** Message formats
-*** X12 - minimum verison 2.0.1
-- Other
-** Object Store v2
+** Transport Protocols.
+*** AS2 - minimum connector version 4.0.2.
+*** SFTP - minimum connector version 1.2.4.
+** Message formats.
+*** X12 - minimum connector version 2.0.1.
 
 * You need to designate runtimes to deploy the B2B Gateway i.e. the Mule application that processes your B2B transactions. If your Mule runtimes are not on CloudHub, setup a server group via Anypoint Runtime Manager. The steps to setup your server group are in the Runtime doc: https://docs.mulesoft.com/runtime-manager/server-group-create.
 
-NOTE: The server group associated to your B2B Gateway need to be named "B2BServerGroup" (name is case sensitive).
+NOTE: The server group associated to your B2B Gateway need to be named "B2BServerGroup" (the name is case sensitive).
 
-* A storage for your B2B message payloads. Anypoint Partner Manager enables you to connect your own storage (such as a database, Amazon S3, Azure Blob Storage, and so forth). To connect to your storage, you will need to establish an API that can be registered with Anypoint Partner Manager to connect to the storage.
+* A storage to persist your B2B message payloads. Anypoint Partner Manager enables you to connect your own storage (such as a database, Amazon S3, Azure Blob Storage, and so forth). To connect to your storage, you will need to establish an API that can be registered with Anypoint Partner Manager to connect to the storage.
 
-Setting up the Storage
+** Setting up the Storage
 
-* Download the pre-packaged API and integration implementation from here.
-* Deploy the Mule app on your runtime.
-* 
+*** Download the pre-packaged API and integration implementation from here.
+*** Deploy the Mule app on your runtime.
+*** Note down the API address configurations (host, port, path, and so forth) that you will use later to associate the storage within Anypoint Partner Manager.
 
+_**Note to Maria** - Please obtain the link to the pre-packaged API and integration app from Manik / Pablo_
 
 === Setup Checklist
 
@@ -80,6 +78,7 @@ As the host, you need the following information about your organization:
 * Your organization's endpoints to receive messages from partners. The endpoints for routing those messages to your backend systems. Similarly, you will need the endpoints to pick up messages from your backend systems, to send them to partners.
 * Your organization's EDI message type preferences.
 * Any identifiers and certificates you need to use.
+* Your storage information to persist the B2B payloads.
 
 == Getting Started with Partner Onboarding
 
