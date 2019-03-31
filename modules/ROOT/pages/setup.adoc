@@ -90,44 +90,41 @@ Anypoint Partner Manager makes it easy to send and receive B2B messages with you
 
 === Add and Configure Trading Partners
 
-When you log into Anypoint Partner Manager you see (Screenshot of the Partner Manager window to come):
+. When you log into Anypoint Platform and navigate to Anypoint Partner Manager you see related UI.(Screenshot of the Partner Manager window to come): +
 
-. Log in. You see the AnyPoint Partner Manager UI. +
+NOTE: If your business was set up during the provisioning process, its name is at the top of the Name list on the Partner Page._**Maria - not sure what this line means**_
 
-NOTE: If your business was set up during the provisioning process, its name is at the top of the Name list on the Partner Page.
-
-. Select your environment. Depending on how you are working, you see the Environment you should be using. +
+. Select your execution *environment* from the top left. You will use Partner Manager in the chosen Environment. +
 
 NOTE: Please do not use the 'Design' environment.
 
 . To add a new partner, select *Partners* from the left-hand navigation and click the *New Partner* button. +
 . Add the 'Partner Name' and at least one identifier and click *Create Partner*. This is all you need to create a new partner. +
 
-To edit settings for an existing trading partner, use the links on the upper left to navigate to the 'Partners' tab. From the page for the specific Partner, you can add information to help you and your team identify this partner along with contact information in the About: field. The information that can be made available here includes:
+To edit settings for an existing trading partner, use the links on the upper left to navigate to the *Partners* tab. From the page for the specific Partner, you can add detailed information related to the partner. The information that can be made available here includes:
 
-* Partner's Name,
-* Description of the Partner
-* A Logo for the Partner via a png or svg file
+* Partner's Name.
+* Description of the Partner.
+* A Logo for the Partner via a png or svg file.
 
 _**Note to Maria** - Please add an image of the Partners details here_
 
-* A Corporate Address that includes - Street Name and Number, City, State, Country, and Postal Code
+* A Corporate Address that includes - Street Name and Number, City, State, Country, and Postal Code.
 
 _**Note to Maria** - Please add an image of the address section here_
 
-* Contacts that includes:
+* Contacts that include:
 ** Contact's Name
 ** Type of Contact - Business Contact, Technical Contact, or Other Contact
 ** Email Id of the Contact
 ** Phone number of the Contact
 
-NOTE: Up to 3 contacts can be added.
+NOTE: Up to three contacts can be added.
 
 _**Note to Maria** - Please add an image of the contacts section here_
 
-* A certificate public key for receiving messages through AS2.
-* Endpoints for sending messages.
-* Message types and message flows.
+* Add more *Identifiers* or edit previously added Identifiers.
+* Add a *Certificate* associated to your use of the AS2 protocol.
 
 === Create and Deploy a Message Flow
 
