@@ -84,7 +84,7 @@ As the host, you need the following information about your organization:
 
 Anypoint Partner Manager makes it easy to send and receive B2B messages with your trading partners. There are three main steps required to get started using the application:
 
-- Add and Configure Trading Partners
+- [Add and Configure Trading Partners](https://github.com/mulesoft/docs-partner-manager/blob/docs-4446-beta-docs-review/modules/ROOT/pages/setup.adoc#add-and-configure-trading-partners)
 - Create and Deploy a Message Flow
 - View Activities
 
