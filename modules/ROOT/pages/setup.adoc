@@ -4,7 +4,6 @@ include::_attributes.adoc[]
 endif::[]
 
 
-
 == Getting Started with Partner Onboarding
 
 This describes the general requirements to set up and use Anypoint Partner Manager.
@@ -15,11 +14,10 @@ You should have familiarity with the following concepts:
 * EDI Message Schemas
 * Transformations using Dataweave
 * Handling X.509 Certificates _(needed only if using AS2 protocol for transport)_
-* Partner Information
 
 You will need to have the ability to troubleshoot and diagnose errors produced in these areas and take or recommend corrective actions.
 
-=== Anypoint Partner Manager Workflow High-Level Overview
+=== Anypoint Partner Manager Workflow
 
 This is a high-level overview of the workflow to configure and use Anypoint Partner Manager. If you are new to Anypoint Partner Manager you can read this for further understanding.
 
@@ -29,7 +27,7 @@ This is a high-level overview of the workflow to configure and use Anypoint Part
 . Configure Message Flows - Configure the path a B2B message takes between your backend systems and a partner. Then activate the message flow by deploying it. +
 . Monitor Activity - Once you deploy message flows, monitor and track the transmission of messages sent between you and your partners. +
 
-=== Pre-Setup Checklist
+=== Setup Checklist
 
 Before you set up your message flows to send and receive messages with your partners, you'll need to collect information from them. You'll also need to understand how your backend systems work. In preparation, use this checklist before you start.
 
