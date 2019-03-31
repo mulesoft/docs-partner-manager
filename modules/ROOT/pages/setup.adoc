@@ -17,7 +17,7 @@ You will need to have the ability to troubleshoot and diagnose errors produced i
 
 === Anypoint Partner Manager Workflow
 
-This is a high-level overview of the workflow to configure and use Anypoint Partner Manager. If you are new to Anypoint Partner Manager you can read this for further understanding.
+This is a high-level overview of the workflow to configure and use Anypoint Partner Manager.
 
 . Preparing to Setup Anypoint Partner Manager - Includes registering a server group and adding it in Anypoint Runtime Manager. Additionally includes details about allocating users with roles. +
 . Review the System and Network Requirements - Before using Anypoint Partner Manager, you must make decisions about the URL's that you will use to send and/or receive B2B messages as you interact with your partners. +
@@ -33,6 +33,8 @@ Verify that you have the following:
 - Anypoint Platform user account with Anypoint Partner Manager access
 {NOT FOR BETA} - Appropriate roles allocated for users to access Anypoint Partner Manager. Roles are allocated via 'Access Management' in Anypoint Platform.
 
+_**Note to Maria** - Please add an image of the Anypoint Platform page that shows Partner Manager on the _
+
 NOTE: If you are unable to access Anypoint Partner Manager, please contact your MuleSoft representative for assistance.
 
 * Minimum Software Requirements
@@ -47,7 +49,17 @@ NOTE: If you are unable to access Anypoint Partner Manager, please contact your 
 - Other
 ** Object Store v2
 
-* If your Mule runtimes are not on CloudHub, setup a server group with the name "B2BServerGroup" (name is case sensitive). The steps to setup your server group are in the Runtime doc: https://docs.mulesoft.com/runtime-manager/server-group-create.
+* You need to designate a set of rumtimes to deploy the B2B Gateway i.e. the Mule app that processes your B2B transactions. If your Mule runtimes are not on CloudHub, setup a server group via Anypoint Runtime Manager. The steps to setup your server group are in the Runtime doc: https://docs.mulesoft.com/runtime-manager/server-group-create.
+
+NOTE: The server group associated to your B2B Gateway need to be named "B2BServerGroup" (name is case sensitive).
+
+* A storage for your B2B message payloads. Anypoint Partner Manager enables you to connect your own storage (such as a database, Amazon S3, Azure Blob Storage, and so forth). To connect to your storage, you will need to establish an API that can be registered with Anypoint Partner Manager to connect to the storage.
+
+Setting up the Storage
+
+* Download the pre-packaged API and integration implementation from here.
+* Deploy the Mule app on your runtime.
+* 
 
 
 === Setup Checklist
@@ -68,7 +80,6 @@ As the host, you need the following information about your organization:
 * Your organization's endpoints to receive messages from partners. The endpoints for routing those messages to your backend systems. Similarly, you will need the endpoints to pick up messages from your backend systems, to send them to partners.
 * Your organization's EDI message type preferences.
 * Any identifiers and certificates you need to use.
-* A store for your B2B message payloads. Anypoint Partner Manager enables you to connect your own storage (such as a database, Amazon S3, Azure Blob Storage, and so forth). To connect to your storage, you will need to establish an API that cna be registered with Anypoint Partner Manager to connect to the storage.
 
 == Getting Started with Partner Onboarding
 
