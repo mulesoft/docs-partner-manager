@@ -14,9 +14,7 @@ This page describes the general requirements to set up and use Anypoint Partner 
 
 You will need to have the ability to troubleshoot and diagnose errors produced in these areas and take or recommend corrective actions.
 
-=== Anypoint Partner Manager Workflow
-
-**SECTION NEEDS TO BE MOVED ELSEWHERE**
+=== Anypoint Partner Manager Workflow **MARIA - THIS SECTION NEEDS TO BE MOVED ELSEWHERE. This page is not appropriate for it**
 
 Below, find a high-level overview of the workflow to configure and use Anypoint Partner Manager.
 
@@ -85,6 +83,7 @@ Anypoint Partner Manager makes it easy to send and receive B2B messages with you
 
 _**Maria** - Please link the bullet points above to the section headers that follow below_
 
+
 === Configure your Profile
 
 The first thing that you'll want to do is to configure your own profile. Your profile defines important information used to identify you with your partners. Select the tab with your organizations name from the left-hand side menu to get started configuring your profile.
@@ -99,24 +98,23 @@ first select your execution *environment* from the top left. You will use Partne
 
 NOTE: Please do not use the 'Design' environment.
 
-Now specify the following:
+Now configure the following:
 
-- **Identifiers** - Specify one or more identifiers that identify your organization during B2B exchanges. Identifiers are information that you will give your trading partner when exchanging profile information. Your partners will use this value to load the settings for your profile, so they can process your requests. Examples of identifiers for your organizations include:
+- *Identifiers* - Specify one or more identifiers that identify your organization during B2B exchanges. Identifiers are information that you will give your trading partner when exchanging profile information. Your partners will use this value to load the settings for your profile, so they can process your requests. Identifiers for your organization can include:
 ** AS2 Identifier - the value that you set here will be sent in the headers of AS2 transmissions that you initiate
 ** X12 ISA - the value that you set here will be sent in the Interchange header of X12 messages that you initiate
 ** X12 GS - the value that you set here will be sent in the Group header of X12 messages that you initiate
 
-
-- **Certificates** - Certificates are needed when using the AS2 protocol. The certificate your provide here signs outgoing messages to your partners and decrypts incoming transmissions. The AS2 port uses a private key certificate in PKCS#12 format (that is, a .pfx or .p12 file). To provide your certificate, follow the steps mentioned below:
+- *Certificates* - Certificates are needed when using the AS2 protocol. The certificate your provide here signs outgoing messages to your partners and decrypts incoming transmissions. The AS2 port uses a private key certificate in PKCS#12 format (that is, a .pfx or .p12 file). To provide your certificate, follow the steps mentioned below:
 ** Click the *New* button
 ** In the modal window, click on the *choose file* button
 ** Upload the private certificate belonging to your organization
 
 NOTE: Your public key certificate is not used by the application. It is used by your partner to encrypt messages to you.
 
-- **Payload Storage** - Anypoint Partner Manager enables you to connect your own storage (such as a database, Amazon S3, Azure Blob Storage, and so forth) to store the incoming B2B message payload. To connect to your storage, you will need to establish an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage. 
+- *Payload Storage* - Anypoint Partner Manager enables you to connect your own storage (such as a database, Amazon S3, Azure Blob Storage, and so forth) to store the incoming B2B message payload. To connect to your storage, you will need to establish an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage. 
 
-Steps to setup the API are mentioned below:
+Steps to setup the API for your storage are mentioned below:
 
 * Download the pre-packaged API and integration implementation from Anypoint Exchange.
 * Deploy the Mule app on your runtime.
@@ -126,20 +124,31 @@ _**Note to Maria** - Please obtain the link from Anypoint Exchange for the pre-p
 
 Once the API is setup, navigate back to your organization's profile and navigate to the **Payload Storage** section
 
-* Click the Edit button
-* Provide the following details based on the API configuration you setup earlier - Host, Port, Path. Defaults for the Connection timeout and Response timeout can be modified, per your needs
-* Configure the authentication needed to access the API. The options include - Non, Basic Authentication, OAuth Token, Client Credentials, and API Key
+* Click the Edit button.
+* Provide the following details based on the API configuration you setup earlier - Host, Port, Path. Default values provided for the Connection timeout and Response timeout can be modified, per your needs.
+* Configure the authentication needed to access the API. The options include - Non, Basic Authentication, OAuth Token, Client Credentials, and API Key.
 
 
-All other configurations on the your organization's profile are optional at this point. Many of these details will be populated as you setup the Message flows later on.
+_All other configurations on the your organization's profile are optional at this point. Many of these details will be populated as you setup the Message flows later on._
 
 
 === Add and Configure Trading Partners
 
+Typically trading partners will provide the specific settings required to connect to their endpoints. Just as with your organization's profile, most of the settings for your partners are optional. In most cases you will only configure the following fields for each partner:
+
+- Partner Profile
+- Identifiers
+- Partner endpoints
+- Partner Certificates
+
+==== Add a new Partner
+
 . To add a new partner, select *Partners* from the left-hand navigation and click the *New Partner* button. +
 . Add the 'Partner Name' and at least one identifier and click *Create Partner*. This is all you need to create a new partner. +
 
-To edit settings for an existing trading partner, use the links on the upper left to navigate to the *Partners* tab. From the page for the specific Partner, you can add detailed information related to the partner. The information that can be made available here includes:
+==== Edit a Partner's Profile
+
+To edit a partner profile, use the links on the upper left to navigate to the *Partners* tab. From the page for the specific Partner, you can add detailed information related to the partner. The information that can be made available here includes:
 
 * Partner's Name.
 * Description of the Partner.
@@ -161,8 +170,17 @@ NOTE: Up to three contacts can be added.
 
 _**Note to Maria** - Please add an image of the contacts section here_
 
-* Add more *Identifiers* or edit previously added Identifiers.
-* Add a *Certificate* associated to your use of the AS2 protocol.
+* *Identifiers* - The identifier helps to identify your partner in a B2B transmission, just like your organization's identifier, identifies you. Your trading partner will provide you with their identifier as part of their profile information. When you send outgoing requests to your trading partner, the identifier is used in the header of the request to indicate the recipient. To add more Identifiers, click the *New* button within the Identifiers section in your partner's profile. Provide the necessary details. Identifiers for your partner can include:
+** AS2 Identifier - the value that you set here will be used in the headers of AS2 transmissions that you initiate
+** X12 ISA - the value that you set here will be used in the Interchange header of X12 messages that you initiate
+** X12 GS - the value that you set here will be used in the Group header of X12 messages that you initiate
+
+* *Certificate* - Configure one or more digital certificates for each partner, if they need to use the AS2 protocol. Each partner will provide the certificates required for communication with their servers. Anypoint Partner Manager accepts X.509 public key certificates (files with .cer, .der, or .pem extensions). Often, if your partner has acquired a certificate from a commercial certificate authority, your partner will provide you with all the certificates in the certificate chain, in addition to the public key certificate. In this case, it is only necessary to configure the leaf certificate (the last one issued in the chain). To configure your partner's certificate within the *Certificates* section of your partner's profile, follow the steps mentioned below:
+** Click the *New* button
+** In the modal window, click on the *choose file* button
+** Upload the private certificate provided by your partner
+
+_**Note to Maria** - Please request Manik / Pablo to review the certificates section_
 
 
 === Associating Runtimes
