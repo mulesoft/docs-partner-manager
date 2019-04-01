@@ -194,28 +194,8 @@ NOTE: The server group associated to your B2B Gateway needs to be named *B2BServ
 
 _**Maria** - please detail out the roles available by using the details in the document linked here ==> https://docs.google.com/document/d/1KgCPD2U51VnlkiWvBqzRyIJ8X8r5b41o1RTidtaqfYE/edit?usp=sharing _}
 
-*REVIEW FROM HERE*
 
-- [Create and Deploy a Message Flow](https://github.com/mulesoft/docs-partner-manager/blob/docs-4446-beta-docs-review/modules/ROOT/pages/setup.adoc#create-a-message-flow)
-- View Activities
-
-=== Create and Deploy a Message Flow
-
-You can set up a Message Flow for Sending and Receiving from a partner.
-
-==== Receive from a Partner
-
-To set up Receive from partner:
-
-. Select Message Flows from the left-hand navigation. +
-. Click the *New Message Flow* button and select Receive from partner from the drop-down menu. +
-. Associate an existing partner that you created, or click the *New Partner button* to create one. +
-. If you are creating one, fill in the receiving endpoint. +
-. Select the Source message. +
-. Import the Dataweave script for the Map file. +
-. Select the Target document type. +
-. Click the *Done* button when the setup is complete. +
-. Click the *Deploy* to make the flow live. +
+Once the setup above has been completed, you can now proceed to send and receive files securely over the Internet with you partner. To do so, you will need to *Create and Deploy a Message Flows*. Message flows are the ability within Anypoint Partner Manager to setup the appropriate configurations to either send a message to the partner, or receive a message from your partner. The configurations typically include setting up the endpoint URL, configuring EDI message defaults for validations and acknowledgements, and finally setting up your transformations associated to yout B2B messages. Furthermore, once you have message flows configured and deployed, you can track activities associated to the flows. Leverage the related links at the end of this page to setup message flows.
 
 == Transports and Exchanges
 
@@ -223,6 +203,8 @@ The EDI format support for X12 via Anypoint Partner Manager.
 There is support for transport protocols - AS2, SFTP, HTTPS
 
 == Transaction Reporting
+
+**THIS SECTION NEEDS TO BE A SEPARATE PAGE**
 
 [Reviewers-will any of this be there for Beta?]
 Audit tracking leveraging core Anypoint platform capabilities
