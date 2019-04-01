@@ -170,12 +170,12 @@ NOTE: Up to three contacts can be added.
 
 _**Note to Maria** - Please add an image of the contacts section here_
 
-* *Identifiers* - The identifier helps to identify your partner in a B2B transmission, just like your organization's identifier, identifies you. Your trading partner will provide you with their identifier as part of their profile information. When you send outgoing requests to your trading partner, the identifier is used in the header of the request to indicate the recipient. To add more Identifiers, click the *New* button within the Identifiers section in your partner's profile. Provide the necessary details. Identifiers for your partner can include:
+* *Identifiers* - Similar to your owne organization's identifier, your partner's identifier helps to identify them in B2B transmissions. When you send outgoing requests to your trading partner, the identifier is used in the header of the request to indicate the recipient. To add more identifiers, click the *New* button within the identifiers section in your partner's profile and provide the necessary details depending on the type of identifier.
 ** AS2 Identifier - the value that you set here will be used in the headers of AS2 transmissions that you initiate
 ** X12 ISA - the value that you set here will be used in the Interchange header of X12 messages that you initiate
 ** X12 GS - the value that you set here will be used in the Group header of X12 messages that you initiate
 
-* *Certificate* - Configure one or more digital certificates for each partner, if they need to use the AS2 protocol. Each partner will provide the certificates required for communication with their servers. Anypoint Partner Manager accepts X.509 public key certificates (files with .cer, .der, or .pem extensions). Often, if your partner has acquired a certificate from a commercial certificate authority, your partner will provide you with all the certificates in the certificate chain, in addition to the public key certificate. In this case, it is only necessary to configure the leaf certificate (the last one issued in the chain). To configure your partner's certificate within the *Certificates* section of your partner's profile, follow the steps mentioned below:
+* *Certificate* - To exchange B2B mesages over AS2 with your partner, you will need to configure one or more digital certificates for each partner. Each partner will provide the certificates required for communication with their servers. Anypoint Partner Manager accepts X.509 public key certificates (files with .cer, .der, or .pem extensions). Often, if your partner has acquired a certificate from a commercial certificate authority, your partner will provide you with all the certificates in the certificate chain, in addition to the public key certificate. In this case, it is only necessary to configure the leaf certificate (the last one issued in the chain). To configure your partner's certificate within the *Certificates* section of your partner's profile, follow the steps mentioned below:
 ** Click the *New* button
 ** In the modal window, click on the *choose file* button
 ** Upload the private certificate provided by your partner
@@ -185,16 +185,16 @@ _**Note to Maria** - Please request Manik / Pablo to review the certificates sec
 
 === Associate Runtimes for Deployment
 
-The B2B Gateway that is deployed by anypoint Runtime Manager, execute on your Mule runtimes. If your Mule runtimes are not on CloudHub, setup a server group via Anypoint Runtime Manager so that the B2B Gateway can be successfully deployed. The steps to setup your server group are in [Runtime Manager documentation](https://docs.mulesoft.com/runtime-manager/server-group-create).
+The B2B Gateway that is deployed by Anypoint Partner Manager executes on your Mule runtimes. Setup a server group via Anypoint Runtime Manager so that the B2B Gateway can be successfully deployed. The steps to setup your server group are in [Runtime Manager documentation](https://docs.mulesoft.com/runtime-manager/server-group-create).
 
 NOTE: The server group associated to your B2B Gateway needs to be named *B2BServerGroup*. This name is case sensitive.
 
 
 === Allocate Partner Manager Roles {_**NOT FOR BETA**_}
 
-_**Maria** - please use the details in the document linked for the B2B roles ==> https://docs.google.com/document/d/1KgCPD2U51VnlkiWvBqzRyIJ8X8r5b41o1RTidtaqfYE/edit?usp=sharing _}
+_**Maria** - please detail out the roles available by using the details in the document linked here ==> https://docs.google.com/document/d/1KgCPD2U51VnlkiWvBqzRyIJ8X8r5b41o1RTidtaqfYE/edit?usp=sharing _}
 
-
+*REVIEW FROM HERE*
 
 - [Create and Deploy a Message Flow](https://github.com/mulesoft/docs-partner-manager/blob/docs-4446-beta-docs-review/modules/ROOT/pages/setup.adoc#create-a-message-flow)
 - View Activities
