@@ -132,16 +132,16 @@ Once the API is setup, navigate back to your organization's profile and navigate
 _All other configurations on the your organization's profile are optional at this point. Many of these details will be populated as you setup the Message flows later on._
 
 
-=== Add and Configure Trading Partners
+=== Add and Configure Partners
 
-Typically trading partners will provide the specific settings required to connect to their endpoints. Just as with your organization's profile, most of the settings for your partners are optional. In most cases you will only configure the following fields for each partner:
+Typically partners will provide the specific settings required to connect to their endpoints. Just as with your organization's profile, most of the settings for your partners are optional. In most cases you will only configure the following fields for each partner:
 
 - Partner Profile
 - Identifiers
 - Partner endpoints
 - Partner Certificates
 
-==== Add a new Partner
+==== Add a New Partner
 
 . To add a new partner, select *Partners* from the left-hand navigation and click the *New Partner* button. +
 . Add the 'Partner Name' and at least one identifier and click *Create Partner*. This is all you need to create a new partner. +
@@ -183,11 +183,11 @@ _**Note to Maria** - Please add an image of the contacts section here_
 _**Note to Maria** - Please request Manik / Pablo to review the certificates section_
 
 
-=== Associating Runtimes
+=== Associate Runtimes for Deployment
 
-If your Mule runtimes are not on CloudHub, setup a server group via Anypoint Runtime Manager. The steps to setup your server group are in [Runtime Manager documentation](https://docs.mulesoft.com/runtime-manager/server-group-create).
+The B2B Gateway that is deployed by anypoint Runtime Manager, execute on your Mule runtimes. If your Mule runtimes are not on CloudHub, setup a server group via Anypoint Runtime Manager so that the B2B Gateway can be successfully deployed. The steps to setup your server group are in [Runtime Manager documentation](https://docs.mulesoft.com/runtime-manager/server-group-create).
 
-NOTE: The server group associated to your B2B Gateway need to be named "B2BServerGroup" (the name is case sensitive).
+NOTE: The server group associated to your B2B Gateway needs to be named *B2BServerGroup*. This name is case sensitive.
 
 
 === Allocate Partner Manager Roles {_**NOT FOR BETA**_}
