@@ -4,10 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :keywords: b2b, edi, portal
 
-When receiving a B2B message from your partner In some cases, your trading partner may send you more than one URL, a Receiving URL and a URL for receiving asynchronous MDNs. If this is the case, you only need to configure the Receiving URL; if a separate URL is needed to return MDNs to, it will be sent in the AS2 transmission and Partner Manager will read it from there.
-
-Note: Even after you have changed your personal profile settings, the receiving URL for the application will not change unless you change the server to use a different port.
-
+When receiving a B2B message from your partner, your trading partner may send you more than one URL, a receiving URL and a URL for receiving asynchronous MDNs. If this is the case, you only need to configure the Receiving URL; if a separate URL is needed to return MDNs to, it will be sent in the AS2 transmission and Partner Manager will read it from there.
 
 == To set up Receive from partner:
 
