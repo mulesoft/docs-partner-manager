@@ -214,5 +214,6 @@ Message inbound vs. outbound.
 
 == Related Articles
 * xref:create-receive-message-flow.adoc[Create Receive Message Flows]
+* xref: [Activity Tracking]
 
 |===
