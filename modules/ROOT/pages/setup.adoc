@@ -24,7 +24,7 @@ Below, find a high-level overview of the workflow to configure and use Anypoint 
 . On-Boarding Technical Details of your Partner  - Set up your own organization's configurations and then proceed to configure partners you interact with. A partner can be a purchaser, a supplier, or reseller. Subsequently, create a message flow between you and your partners to enable B2B transactions. +
 . Configure Message Flows - Configure the path a B2B message takes between your backend systems and a partner. Then activate the message flow by deploying it. +
 . Monitor Activity - Once you deploy message flows, monitor and track the transmission of messages sent between you and your partners. +
-<br/>
+
 === Minimum Requirements
 
 Verify that you have the following:
