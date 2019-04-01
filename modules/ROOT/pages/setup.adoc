@@ -212,4 +212,7 @@ Track high-level B2B operational metrics such as:
 # of messages and # of errors (i.e. messages received, versus processed, versus failed).
 Message inbound vs. outbound.
 
+== Related Articles
+* xref:create-receive-message-flow.adoc[Create Receive Message Flows]
+
 |===
