@@ -76,9 +76,9 @@ As the host, you need the following information about your organization:
 
 Anypoint Partner Manager makes it easy to send and receive B2B messages with your trading partners. There are three main steps required to get started using the application:
 
+- Associate Runtimes for Deployment
 - Configure your Profile
 - Configure Trading Partners
-- Associate Runtimes for Deployment
 - Allocate Partner Manager Roles
 
 _**Maria** - Please link the bullet points above to the section headers that follow below_
@@ -140,6 +140,16 @@ Typically partners will provide the specific settings required to connect to the
 - Identifiers
 - Partner Certificates
 
+=== Associate Runtimes for Deployment
+
+The B2B Gateway that is deployed by Anypoint Partner Manager executes on your Mule runtimes. Setup a server group via Anypoint Runtime Manager so that the B2B Gateway can be successfully deployed. The steps to setup your server group are in [Runtime Manager documentation](https://docs.mulesoft.com/runtime-manager/server-group-create).
+
+=== Allocate Partner Manager Roles {_**NOT FOR BETA**_}
+
+_**Maria** - please detail out the roles available by using the details in the document linked here ==> https://docs.google.com/document/d/1KgCPD2U51VnlkiWvBqzRyIJ8X8r5b41o1RTidtaqfYE/edit?usp=sharing _}
+
+NOTE: The server group associated to your B2B Gateway needs to be named *B2BServerGroup*. This name is case sensitive.
+
 ==== Add a New Partner
 
 . To add a new partner, select *Partners* from the left-hand navigation and click the *New Partner* button. +
@@ -181,17 +191,6 @@ _**Note to Maria** - Please add an image of the contacts section here_
 
 _**Note to Maria** - Please request Manik / Pablo to review the certificates section_
 
-
-=== Associate Runtimes for Deployment
-
-The B2B Gateway that is deployed by Anypoint Partner Manager executes on your Mule runtimes. Setup a server group via Anypoint Runtime Manager so that the B2B Gateway can be successfully deployed. The steps to setup your server group are in [Runtime Manager documentation](https://docs.mulesoft.com/runtime-manager/server-group-create).
-
-NOTE: The server group associated to your B2B Gateway needs to be named *B2BServerGroup*. This name is case sensitive.
-
-
-=== Allocate Partner Manager Roles {_**NOT FOR BETA**_}
-
-_**Maria** - please detail out the roles available by using the details in the document linked here ==> https://docs.google.com/document/d/1KgCPD2U51VnlkiWvBqzRyIJ8X8r5b41o1RTidtaqfYE/edit?usp=sharing _}
 
 
 Once the setup above has been completed, you can now proceed to send and receive files securely over the Internet with you partner. To do so, you will need to *Create and Deploy a Message Flows*. Message flows are the ability within Anypoint Partner Manager to setup the appropriate configurations to either send a message to the partner, or receive a message from your partner. The configurations typically include setting up the endpoint URL, configuring EDI message defaults for validations and acknowledgements, and finally setting up your transformations associated to yout B2B messages. Furthermore, once you have message flows configured and deployed, you can track activities associated to the flows. Leverage the related links at the end of this page to setup message flows.
