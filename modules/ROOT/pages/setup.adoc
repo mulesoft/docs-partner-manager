@@ -14,16 +14,6 @@ This page describes the general requirements to set up and use Anypoint Partner 
 
 You will need to have the ability to troubleshoot and diagnose errors produced in these areas and take or recommend corrective actions.
 
-=== Anypoint Partner Manager Workflow
-_**MARIA - THIS SECTION NEEDS TO BE MOVED ELSEWHERE. This page is not appropriate for it**_
-
-Below, find a high-level overview of the workflow to configure and use Anypoint Partner Manager.
-
-. Preparing to Setup Anypoint Partner Manager - Includes registering a server group and adding it in Anypoint Runtime Manager. Additionally includes details about allocating users with roles. +
-. Review the System and Network Requirements - Before using Anypoint Partner Manager, you must make decisions about the URL's that you will use to send and/or receive B2B messages as you interact with your partners. +
-. On-Boarding Technical Details of your Partner  - Set up your own organization's configurations and then proceed to configure partners you interact with. A partner can be a purchaser, a supplier, or reseller. Subsequently, create a message flow between you and your partners to enable B2B transactions. +
-. Configure Message Flows - Configure the path a B2B message takes between your backend systems and a partner. Then activate the message flow by deploying it. +
-. Monitor Activity - Once you deploy message flows, monitor and track the transmission of messages sent between you and your partners. +
 
 === Minimum Requirements
 
