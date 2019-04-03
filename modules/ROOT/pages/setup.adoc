@@ -77,14 +77,24 @@ As the host, you need the following information about your organization:
 Anypoint Partner Manager makes it easy to send and receive B2B messages with your trading partners. There are three main steps required to get started using the application:
 
 - Associate Runtimes for Deployment
-- Configure your Profile
-- Configure Trading Partners
 - Allocate Partner Manager Roles
+- Configure Your Profile
+- Add and Configure Your Partners
 
 _**Maria** - Please link the bullet points above to the section headers that follow below_
 
+=== Associate Runtimes for Deployment
 
-=== Configure your Profile
+The B2B Gateway that is deployed by Anypoint Partner Manager executes on your Mule runtimes. Setup a server group via Anypoint Runtime Manager so that the B2B Gateway can be successfully deployed. The steps to setup your server group are in [Runtime Manager documentation](https://docs.mulesoft.com/runtime-manager/server-group-create).
+
+NOTE: The server group associated to your B2B Gateway needs to be named *B2BServerGroup*. This name is case sensitive.
+
+=== Allocate Partner Manager Roles {_**NOT FOR BETA**_}
+
+_**Maria** - please detail out the roles available by using the details in the document linked here ==> https://docs.google.com/document/d/1KgCPD2U51VnlkiWvBqzRyIJ8X8r5b41o1RTidtaqfYE/edit?usp=sharing _}
+
+
+=== Configure Your Profile
 
 The first thing that you'll want to do is to configure your own profile. Your profile defines important information used to identify you with your partners. Select the tab with your organizations name from the left-hand side menu to get started configuring your profile.
 
@@ -132,23 +142,13 @@ Once the API is setup, navigate back to your organization's profile and navigate
 _All other configurations on the your organization's profile are optional at this point. Many of these details will be populated as you setup the Message flows later on._
 
 
-=== Add and Configure Partners
+=== Add and Configure Your Partners
 
 Typically partners will provide the specific settings required to connect to their endpoints. Just as with your organization's profile, most of the settings for your partners are optional. In most cases you will only configure the following fields for each partner:
 
 - Partner Profile
 - Identifiers
 - Partner Certificates
-
-=== Associate Runtimes for Deployment
-
-The B2B Gateway that is deployed by Anypoint Partner Manager executes on your Mule runtimes. Setup a server group via Anypoint Runtime Manager so that the B2B Gateway can be successfully deployed. The steps to setup your server group are in [Runtime Manager documentation](https://docs.mulesoft.com/runtime-manager/server-group-create).
-
-=== Allocate Partner Manager Roles {_**NOT FOR BETA**_}
-
-_**Maria** - please detail out the roles available by using the details in the document linked here ==> https://docs.google.com/document/d/1KgCPD2U51VnlkiWvBqzRyIJ8X8r5b41o1RTidtaqfYE/edit?usp=sharing _}
-
-NOTE: The server group associated to your B2B Gateway needs to be named *B2BServerGroup*. This name is case sensitive.
 
 ==== Add a New Partner
 
