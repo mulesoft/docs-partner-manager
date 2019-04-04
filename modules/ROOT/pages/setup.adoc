@@ -6,11 +6,11 @@ endif::[]
 
 This page describes the general requirements to set up and use Anypoint Partner Manager. You should have familiarity with the following concepts:
 
-* EDI message formats
-* EDI message schemas
-* Transformations using Dataweave
-* Handling X.509 Certificates _(needed only if using AS2 transport protocol)_
-* Your own network of endpoints for listening to and sending messages
+* EDI message formats.
+* EDI message schemas.
+* Transformations using Dataweave.
+* Handling X.509 Certificates _(needed only if using AS2 transport protocol)_.
+* Your own network of endpoints for listening to and sending messages.
 
 You will need to have the ability to troubleshoot and diagnose errors produced in these areas and take or recommend corrective actions.
 
