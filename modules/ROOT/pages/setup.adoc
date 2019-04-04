@@ -19,7 +19,7 @@ You will need to have the ability to troubleshoot and diagnose errors produced i
 
 Verify that you have the following:
 
-- Anypoint Platform user account with Anypoint Partner Manager access {_**NOT FOR BETA**_}
+- Anypoint Platform user account with Anypoint Partner Manager access
 - Appropriate roles allocated for users to access Anypoint Partner Manager. Roles are allocated via the 'Access Management' section in Anypoint Platform.
 
 _**Note to Maria** - Please add an image of the landing page of Anypoint Platform page that shows Partner Manager_
@@ -79,7 +79,7 @@ The B2B Gateway that is deployed by Anypoint Partner Manager executes on your Mu
 
 NOTE: The server group associated to your B2B Gateway needs to be named *B2BServerGroup*. This name is case sensitive.
 
-=== Allocate Partner Manager Roles {_**NOT FOR BETA**_}
+=== Allocate Partner Manager Roles
 
 _**Maria** - please detail out the roles available by using the details in the document linked here ==> https://docs.google.com/document/d/1KgCPD2U51VnlkiWvBqzRyIJ8X8r5b41o1RTidtaqfYE/edit?usp=sharing _}
 
