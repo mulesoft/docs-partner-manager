@@ -92,11 +92,9 @@ The Profile selection contains everything that is relevant to your identity in a
 
 To get started, when you log into Anypoint Platform and navigate to Anypoint Partner Manager you see this related UI.(Screenshot of the Partner Manager window to come): +
 
-NOTE: If your business was set up during the provisioning process, its name is at the top of the Name list on the Partner Page.  _**Maria - not sure what this line means**_
+First select your execution *environment* from the top left. You will use Partner Manager in the chosen Environment.
 
-first select your execution *environment* from the top left. You will use Partner Manager in the chosen Environment.
-
-NOTE: Please do not use the 'Design' environment.
+NOTE: If a "Design" environment is available in your Anypoint Organization, please do not use it for Partner Manager.
 
 Now configure the following:
 
