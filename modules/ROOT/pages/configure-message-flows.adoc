@@ -10,11 +10,7 @@ When receiving a B2B message from your trading partner, it may include more than
 
 . Select Message Flows from the left-hand navigation. +
 . Click the *New Message Flow* button and select Receive from partner from the drop-down menu. +
-. Associate an existing partner that you created, or click the *New Partner button* to create one. +
-
-If you are creating a new partner, fill in the receiving endpoint. 
-
-
+. Associate an existing partner that you created, or click the *New Partner button* to create one. If you are creating a new partner, fill in the receiving endpoint. +
 . Select the Source message. +
 . Import the Dataweave script for the Map file. +
 . Select the Target document type. +
