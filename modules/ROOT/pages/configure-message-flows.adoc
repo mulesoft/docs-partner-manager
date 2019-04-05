@@ -2,17 +2,16 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
-:keywords: b2b, edi, portal
 
 When receiving a B2B message from your trading partner, it may include more than one URL. For example, a receiving URL, and a URL for receiving asynchronous MDNs (Message Disposition Notifications). If this is the case, you only need to configure the Receiving URL. If a separate URL is required for returning MDNs, it is sent in the AS2 transmission and Partner Manager reads it from there.
 
 == To set up Receive from partner:
 
-. Select Message Flows from the left-hand navigation. +
+. From within your environment, select Message Flows from the left-hand navigation. +
 . Click the *New Message Flow* button and select Receive from partner from the drop-down menu. +
-. Associate an existing partner that you created, or click the *New Partner button* to create one. If you are creating a new partner, fill in the receiving endpoint. +
+. Associate an existing partner that you created, or click the *New Partner button* to create one. If you are creating a new partner, be sure to fill in the receiving endpoint. +
 . Select the Source message. +
 . Import the Dataweave script for the Map file. +
 . Select the Target document type. +
 . Click *Done* when the setup is complete. +
-. Click *Deploy* when you are ready to make the created flow live. +
+. Click *Deploy* when ready to make the created flow live. +
