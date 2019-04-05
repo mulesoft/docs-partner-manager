@@ -4,6 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 
 Configuring a document type for a partner means configuring settings specific to that document type.
+
 == Format (X12)
 
 
