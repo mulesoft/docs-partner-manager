@@ -1,1 +1,10 @@
+= Activity Tracking
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
 
+When tracking a message flow, you use the Activity Tracking page to see number of transmissions, the flow direction you created, the message type, and the direction.
+
+== To view a message flow:
+
+. Blah. +
