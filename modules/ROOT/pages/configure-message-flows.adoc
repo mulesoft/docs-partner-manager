@@ -15,3 +15,6 @@ When receiving a B2B message from your trading partner, it may include more than
 . Select the Target document type. +
 . Click *Done* when the setup is complete. +
 . Click *Deploy* when ready to make the created flow live. +
+
+= Create a Send Message Flow from Your Partner
+When sending a B2B message from your trading partner, it may include more than one URL. For example, a sending URL, and a URL for sending asynchronous MDNs (Message Disposition Notifications). If this is the case, you only need to configure the Sending URL. If a separate URL is required for returning MDNs, it is sent in the AS2 transmission and Partner Manager reads it from there.
