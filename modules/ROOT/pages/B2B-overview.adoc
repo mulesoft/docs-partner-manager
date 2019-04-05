@@ -1,0 +1,46 @@
+= B2B Solutions and Overview
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+== B2B Solutions and Overview
+
+B2B (Business-to-Business) is the use of API's or Electronic Data Interchange (EDI) by enterprises to carry out business transactions such as purchasing goods from one another. B2B messages are typically sent over transports such as HTTP(s), FTP, FTPS, SFTP, JMS, and exchanges such as AS2. MuleSoft's B2B solutions integrate seamlessly into the Mule runtime.
+
+This overview introduces MuleSoft's B2B solution and links to pages that provide B2B implementation examples in the context of Anypoint Studio, Mule’s graphical user interface. In addition, provides links to configuration details for implementing Anypoint B2B in Anypoint Studio’s XML Editor.
+
+== Anypoint Partner Manager
+
+Through its web interface, Anypoint Partner Manager enables effective setup and management of a large number of trading partners. Additionally, via the ability to track and report on transaction progress, Partner Manager drives greater operational efficiency while managing B2B transactions. With Anypoint Partner Manager you can:
+
+* Perform technical on-boarding of partners.
+* Set up message flows to receive and send messages between your backend systems and your partners.
+* View and monitor how partner messages are being processed in the system in case of failure in order to take corrective action.
+
+=== Anypoint Partner Manager Workflow
+
+This is a high-level overview of the workflow to configure and use Anypoint Partner Manager.
+
+. Preparing to Setup Anypoint Partner Manager - Includes registering a server group and adding it in Anypoint Runtime Manager. Additionally includes details about allocating users with roles. +
+. Review the System and Network Requirements - Before using Anypoint Partner Manager, you must make decisions about the URL's that you will use to send and/or receive B2B messages as you interact with your partners. +
+. On-Boarding Technical Details of your Partner  - Set up your own organization's configurations and then proceed to configure partners you interact with. A partner can be a purchaser, a supplier, or reseller. Subsequently, create a message flow between you and your partners to enable B2B transactions. +
+. Configure Message Flows - Configure the path a B2B message takes between your backend systems and a partner. Then activate the message flow by deploying it. +
+. Monitor Activity - Once you deploy message flows, monitor and track the transmission of messages sent between you and your partners. +
+
+== Platform Capabilities
+
+The Anypoint Platform enables our customers to map EDI messages to their enterprise systems.
+
+== Message Formats
+
+ANSI X12, X12 HIPAA
+
+== Transport Protocols
+
+SFTP
+
+== Exchanges
+
+AS2
+
+|===

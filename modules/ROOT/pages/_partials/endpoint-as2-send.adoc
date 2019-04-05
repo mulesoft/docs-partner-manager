@@ -1,0 +1,203 @@
+== AS2 Send Settings
+
+AS2 Send Settings pertain to trading partner-specific AS2 settings such as *certificate* and *URL*.
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+| URL
+
+|URL to which you will send AS2 transmissions for this partner, including port +
+
+
+Required?::
+Yes, if AS2 is the transport protocol
+
+Valid values::
+
+Alphanumeric
+
+Default::
+
+None
+
+Example::
+`www.midsizesupplier.com:8080`
+
+
+| Content Type
+
+|Content type for messages sent over AS2.
+
+NOTE: If you choose `Custom`, a *Custom content type* box appears that accepts an alphanumeric string. Be sure that the string is known to your trading partner.
+
+
+Valid values::
+
+* 'application/edi-x12'
+* 'application/edi-consent'
+* 'Custom'
+
+Default::
+
+* 'application/edi-x12'
+
+
+| Digest Algorithm
+
+
+| MIC algorithm for use in signing the returned receipt
+
+Required?::
+No
+
+Valid values::
+
+* 'SHA1'
+* 'MD5'
+
+Default::
+
+* 'SHA1'
+
+
+| Fallback Digest Algorithm
+
+| Digest algorithm the receiver uses to create the MIC and signature
+
+Required?::
+No
+
+Valid values::
+
+* 'None'
+* 'SHA1'
+* 'MD5'
+
+Default::
+
+'None'
+
+
+| Subject
+
+|Subject of the message being sent
+
+Required?::
+No
+
+Valid values::
+
+Alphanumeric
+
+Default::
+`AS2 Message`
+
+| Filename
+
+|Name of file to send
+
+Required::
+No
+
+Valid values::
+Alphanumeric
+
+Default::
+'File name'
+
+| Encoding
+
+| Type of encoding to use when sending a message with AS2
+
+Required::
+Yes
+
+Default::
+Binary
+
+Valid values::
+
+* *Binary* +
+A method of encoding in which a message is represented using a combination of 0s and 1s.
+
+* *7-bit*
++
+Data that is all represented as relatively short lines with 998 bytes or less between CRLF line separation sequences.
+No bytes with decimal values greater than 127 are allowed and neither are NULLs (bytes with decimal value 0).
+CR (decimal value 13) and LF (decimal value 10) bytes only occur as part of CRLF line separation sequences.
+
+* *8-bit*
++
+Data that is all represented as relatively
+short lines with 998 bytes or less between CRLF line separation
+sequences, but bytes with decimal values greater than 127
+may be used.  As with "7bit data" CR and LF bytes only occur as part
+of CRLF line separation sequences and no NULLs are allowed.
+
+
+* *Quoted-Printable*
++
+Intended to represent data that largely consists of bytes that correspond to printable characters in
+the US-ASCII character set.  It encodes the data in such a way that
+the resulting bytes are unlikely to be modified by mail transport.
+If the data being encoded are mostly US-ASCII text, the encoded form
+of the data remains largely recognizable by humans.  A body which is
+entirely US-ASCII may also be encoded in Quoted-Printable to ensure
+the integrity of the data should the message pass through a
+character-translating, and/or line-wrapping gateway.
+
+
+
+| Encryption Algorithm
+| 3DES is an encryption that uses 3 different _keys_, or encryptions, to encrypt the messages.
+No other choices are available at this time.
+
+
+
+
+
+|Checkbox options:
+|
+
+Compress::
+Compresses message-size
+
+Message Encrypted::
+Adds an encryption wrapper around the document, signature, and compression payloads
+
+Message Signed::
+Adds a signature wrapper around the document payload
+
+
+|MDN Signed
+
+| Ensures trading partner validation and security
+
+
+| MDN Async
+| Allows AS2 MDNs to be returned to the AS2 message sender's server at a later time.
+Typically used when large files are involved, or when a trading partner's AS2 server has poor Internet service. If this checkbox is selected the *MDN Async URL* box appears.
+
+|MDN Async URL
+
+|An Async Message Disposal Notification (MDN)  returns the MDN to this URL at a later time for files sent if an MDN is required.
+If you are using Async MDN, enter the URL and port to which it should be sent.
+
+Required::
+No
+
+Valid values::
+Alphanumeric
+
+Default::
+`None`
+
+
+|MDN Required::
+|An Async MDN will return the MDN to the URL at a later time for files sent if an MDN is required. If you are using Async MDN, enter the URL and port to which it should be sent.
+
+NOTE: If this checkbox is selected, the *Require Receipt for Unsupported Digest Algorithm* and *Require Receipt for Unsupported Signature Format* checkboxes appear.
+
+|===
