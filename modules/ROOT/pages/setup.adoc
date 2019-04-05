@@ -172,13 +172,10 @@ _**Note to Maria** - Please add an image of the contacts section here_
 ** X12 ISA - the value that you set here will be used in the Interchange header of X12 messages that you initiate
 ** X12 GS - the value that you set here will be used in the Group header of X12 messages that you initiate
 
-* *Partner Certificates* - To exchange B2B mesages over AS2 with your partner, you will need to configure one or more digital certificates for each partner. Each partner will provide the certificates required for communication with their servers. Anypoint Partner Manager accepts X.509 public key certificates (files with .cer, .der, or .pem extensions). Often, if your partner has acquired a certificate from a commercial certificate authority, your partner will provide you with all the certificates in the certificate chain, in addition to the public key certificate. In this case, it is only necessary to configure the leaf certificate (the last one issued in the chain). To configure your partner's certificate within the *Certificates* section of your partner's profile, follow the steps mentioned below:
+* *Partner Certificates* - To exchange B2B mesages over AS2 with your partner, you will need to configure one or more digital certificates for each partner. Each partner will provide the certificates required for communication with their servers. Anypoint Partner Manager accepts X.509 public key certificates (files with .pem extensions). Often, if your partner has acquired a certificate from a commercial certificate authority, your partner will provide you with all the certificates in the certificate chain, in addition to the public key certificate. In this case, it is only necessary to configure the leaf certificate (the last one issued in the chain). To configure your partner's certificate within the *Certificates* section of your partner's profile, follow the steps mentioned below:
 ** Click the *New* button
 ** In the modal window, click on the *choose file* button
 ** Upload the private certificate provided by your partner
-
-_**Note to Maria** - Please request Manik / Pablo to review the certificates section_
-
 
 
 Once the setup above has been completed, you can now proceed to send and receive files securely over the Internet with you partner. To do so, you will need to *Create and Deploy a Message Flows*. Message flows are the ability within Anypoint Partner Manager to setup the appropriate configurations to either send a message to the partner, or receive a message from your partner. The configurations typically include setting up the endpoint URL, configuring EDI message defaults for validations and acknowledgements, and finally setting up your transformations associated to yout B2B messages. Furthermore, once you have message flows configured and deployed, you can track activities associated to the flows. Leverage the related links at the end of this page to setup message flows.
