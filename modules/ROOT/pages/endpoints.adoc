@@ -18,11 +18,9 @@ An _endpoint_ is the entry point to a service, a process, or a queue or topic de
 Required:: Yes
 
 Default:: Auto-populates based on the following values:
-* *Company name* (see xref:partners.adoc[Partners] and xref:company-information.adoc[Company Information])
+
 * *Protocol*
 * *Type*
-
-If you choose to change the default, then subsequently want to revert to it, click *Auto Fill*.
 
 
 |Protocol
@@ -36,8 +34,6 @@ Valid values::
 
 * 'AS2'
 * 'SFTP'
-* 'HTTP'
-* 'HTTPS'
 
 Default::
 
@@ -74,53 +70,4 @@ Choose the section that corresponds to the Protocol-Type of the Endpoint for whi
 * <<AS2 Receive Settings>>
 * <<SFTP Send Settings>>
 * <<SFTP Receive Settings>>
-* <<HTTP Send Settings>>
-* <<HTTP Receive Settings>>
-* <<HTTPS Send Settings>>
-* <<HTTPS Receive Settings>>
 
-== Endpoint Property Settings
-
-Refer to the table that follows for adding property settings.
-+
-[%header,cols="3s,7a"]
-|===
-|Setting |Description
-
-|Property Type
-|Dropdown listbox that includes types of properties you can track
-
-Required?::
-Yes
-
-Default::
-`None`
-
-|Property Source Type
-|Dropdown listbox that includes valid sources of trackable properties
-
-Required?::
-Yes
-
-Valid values:: `Inbound Properties`
-+
-`Outbound Properties`
-+
-`Constant`
-+
-`MEL Expression`
-
-Default::
-`None`
-
-|Property Source
-|Identifies source for this property
-
-Required?::
-Yes
-
-Valid values::
-+
-* Valid XPath expression (for XML documents)
-+
-* Valid JSONPath expression (for JSON or EDI documents)
