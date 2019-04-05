@@ -5,7 +5,7 @@ endif::[]
 
 == B2B Solutions and Overview
 
-B2B (Business-to-Business) is the use of API's or Electronic Data Interchange (EDI) by enterprises to carry out business transactions such as purchasing goods from each other. B2B messages are typically sent over transports such as HTTP(s), FTP, FTPS, SFTP, JMS, and exchanges such as AS2. MuleSoft's B2B solutions integrate seamlessly into the Mule runtime.
+B2B (Business-to-Business) is the use of API's or Electronic Data Interchange (EDI) by enterprises to carry out business transactions such as purchasing goods from one another. B2B messages are typically sent over transports such as HTTP(s), FTP, FTPS, SFTP, JMS, and exchanges such as AS2. MuleSoft's B2B solutions integrate seamlessly into the Mule runtime.
 
 This overview introduces MuleSoft's B2B solution and links to pages that provide B2B implementation examples in the context of Anypoint Studio, Mule’s graphical user interface. In addition, provides links to configuration details for implementing Anypoint B2B in Anypoint Studio’s XML Editor.
 
@@ -13,7 +13,7 @@ This overview introduces MuleSoft's B2B solution and links to pages that provide
 
 Through its web interface, Anypoint Partner Manager enables effective setup and management of a large number of trading partners. Additionally, via the ability to track and report on transaction progress, Partner Manager drives greater operational efficiency while managing B2B transactions. With Anypoint Partner Manager you can:
 
-* Perform technical on-boarding of partners
+* Perform technical on-boarding of partners.
 * Set up message flows to receive and send messages between your backend systems and your partners.
 * View and monitor how partner messages are being processed in the system in case of failure in order to take corrective action.
 
@@ -33,14 +33,14 @@ The Anypoint Platform enables our customers to map EDI messages to their enterpr
 
 == Message Formats
 
-ANSI X12, X12 HIPAA, EDIFACT, HL7, Tradacoms, CSV, XML, JSON (each item will have a link to its individual intro page).
+ANSI X12, X12 HIPAA
 
 == Transport Protocols
 
-HTTP(S), FTP, FTPS, SFTP, JMS, SMTP, HL7 MLLP (only HL7 MLLP has its individual intro page)
+SFTP
 
 == Exchanges
 
-AS2, RNIF (each item has it’s individual intro page)
+AS2
 
 |===
