@@ -1,1 +1,63 @@
+== SFTP Send Settings
 
+
+=== Server information
+
+[%header,cols="3s,7a"]
+|===
+|Name |Description
+
+|Host
+| Enter the Fully Qualified Domain Name (FQDN) or IP address of the server on your host machine that connects to the external SFTP server. +
+Type: string +
+Required: Yes +
+Default: None
+
+|Port
+| The port that connects to the local (host) server. (Commonly *22*) +
+Type: integer +
+Required: Yes +
+Default: None
+
+|Path
+| Specify a path that facilitates connection to the local server +
+Type: string +
+Required: Yes +
+Default: None
+
+|Username | &nbsp; +
+Type: string +
+Required: Yes +
+Default: None
+
+|Password | &nbsp; +
+Type: string +
+Required: Yes +
+Default: None
+
+|===
+
+=== Timing
+
+[%header,cols="3s,7a"]
+|===
+|Name |Description
+|Polling frequency
+|Frequency in milliseconds to check the read directory. The read directory is specified by the endpoint of the listening component. +
+Type: integer +
+Required: No +
+Default: None
+
+|File Age
+|Minimum age in milliseconds for Mule to wait before consuming a file. This allows a file write to complete before processing. +
+Type: integer +
+Required: No +
+Default: None
+
+|Size Check Wait Time
+|Wait time in milliseconds between size checks to determine if a file is ready to be processed. This allows a file write to complete before processing. You can disable this feature by setting to a negative number or omitting a value. When enabled, Mule performs two size checks waiting the specified time between calls. If both checks return the same value, the file is ready to process. +
+Type: integer +
+Required: No +
+Default: None
+
+|===
