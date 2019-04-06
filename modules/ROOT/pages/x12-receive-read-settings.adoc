@@ -8,11 +8,11 @@ endif::[]
 |Setting |Description
 
 |Envelope Headers (ISA)
-|Auth. Info. Qualifier (ISA 01)
+|Auth. Info. Qualifier (ISA 01) +
 Most common value is *00*; rarely is another used.
 
 Required?::
-No
+Yes
 
 Valid values::
 
@@ -31,26 +31,24 @@ Default::
 
 
 |Authorization Information (ISA 02)
-|Enter a value if appropriate for your organization.
-
-NOTE: If the value in the previous box (ISA 01) is `00` (the default), then this box is disabled.
+|Provide Authorization information value. This can be provided only if the value selected for ISA1 is not 00. Provides the user with the ability to enter a minimum of one alphanumeric character and a maximum of 10. +
 
 Required?::
-No
+Yes, only if value of ISA01 != 00
 
 Valid values::
 Alphanumeric
 
 Default::
-Defaults to ten blank spaces
+None
 
 
 
 |Security Inf. Qualifier (ISA 03)
-|Select a value from the dropdown listbox (if appropriate for your organization).
+|Select a value from the dropdown listbox (if appropriate for your organization). +
 
 Required?::
-No
+Yes
 
 Valid values::
 
@@ -64,71 +62,76 @@ Default::
 NOTE:	If the value in (ISA 03) is 01, then a valid password value is required in ISA 04.
 
 
-
 |Security Information (ISA 04)
-|Enter a value if appropriate for your organization.
-
-NOTE: If the value in the previous box (ISA 03) is `00` (the default), then this box is disabled
+|Provide Security information value. Provide this only if the value selected ISA3 is not 00. Provides the user with the ability to enter a minimum of one alphanumeric character and a maximum of 10. +
 
 Required?::
-No
+Yes, only if value of ISA03 != 00
 
 Valid values::
 
 Alphanumeric
 
 Default::
-Defaults to ten blank spaces
+None
 
 
 
 |Interchange sender ID qualifier (ISA 05)
-|This value populates based on the value saved in Interchange ID qualifier - ISA.
+|Read-only field. +
+Only available for configuring X12 for the “Trading Partner”.
+This field should reflect the value of the “Qualifier field” within the identifier for the “Trading Partner” that was created when the “Trading Partner was configured.
 
 Required?::
-Yes (must be entered and saved in Interchange ID qualifier - ISA.
+Yes 
 
 
 
 |Interchange sender ID (ISA 06)
-|This value populates based on the value entered and saved in Interchange ID - ISA.
+|Read-only field. +
+Only available for configuring X12 for the “Trading Partner”.
+This field should reflect the value of the “Value field” within the identifier for the “Trading Partner” that was created when the “Trading Partner" was configured.
 
 Required?::
-Yes (must be entered and saved in Interchange ID - ISA.
-
-
-
-
-|Interchange receiver ID qualifier (ISA 07)
-|This value populates based on the value entered and saved in Interchange ID qualifier - ISA.
-
-Required?::
-Yes (must be entered and saved in Interchange ID qualifier - ISA.
-
-
-
-|Interchange receiver ID (ISA 08)
-|This value populates based on the value entered and saved in Interchange ID - ISA.
-
-Required?::
-Yes (must be entered and saved in Interchange ID - ISA.
-
-
-
-|Interchange Control Version (ISA 12)
-|Identifies the X12 version this partner uses.
-
-Required?::
-No
+Yes
 
 Valid values::
 
-* `00401 (4010)`
-* `00501 (5010)`
+Alphanumeric
 
 Default::
+None
 
-`00401 (4010)`
+
+|Interchange receiver ID qualifier (ISA 07)
+|Read-only field. +
+This field should reflect the value of “Qualifier field” within identifier added for “Host Partner”. +
+
+Required?::
+Yes
+
+Valid values::
+
+Alphanumeric
+
+Default::
+None
+
+
+|Interchange receiver ID (ISA 08)
+|Read-only field. +
+This field should reflect the value of the “Value field” within identifier added for “Host Partner”. +
+
+
+Required?::
+Yes 
+
+Valid values::
+
+Alphanumeric
+
+Default::
+None
 
 
 
