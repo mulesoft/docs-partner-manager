@@ -5,65 +5,74 @@
 |Setting |Description
 
 | URL
-| URL you  expose in MuleSoft to receive messages from a trading partner. Enter the URL, including the port.
-
-Required?::
-Yes, if AS2 is the transport protocol.
-
-Example::
-`www.midsizesupplier.com:8080`
-
-
-
-| MDN Subject
-| Subject of the MDN (Message Disposition Notification) sent
+| The HTTP/S address at which you are accepting incoming AS2 messages. +
 
 Required?::
 Yes
-
-Valid values::
-Alphanumeric
 
 Default::
-`Message Disposition Notification`
+Not applicable
+
+| MDN Subject
+|The field that specifies a default subject for the MDN messages you send back. +
+
+Required?::
+Yes
+
+Default::
+Not applicable
 
 
 
-| Preferred Digest Algorithm
-| MIC algorithm for use in signing the returned receipt.
+| Preferred Encryption Algorithm
+| The preferred algorithm receives encrypted messages. +
 
 Required?::
 Yes
 
 Valid values::
+`3DES` +
+`AES128` +
+`AES192` +
+`AES256` +
+`AES256_WRAP` +
+`IDEA` +
+`MD5` +
 `None` +
+`RC2_CBC` +
 `SHA1` +
-`MD5`
+`SHA224` +
+`SHA256` +
+`SHA384` +
+`SHA512` +
 
 Default::
 `None`
 
 
+|Request Digitally Signed Message
 
-| Checkbox options
+|The Partner generates and sends the MDN back to you in a newly initiated path. +
 
-| Compress::
-Compresses message-size
+Required?::
+Yes
 
-Message Encrypted::
-Adds an encryption wrapper around the document, signature, and compression payloads
+Default::
+Off
 
-Message Signed::
-Adds a signature wrapper around the document payload
+|Request Compressed Message
+
+|Indicates if the partner needs to see the incoming message and associated signature in compressed form. Zlib is used for compression. +
+
+Required?::
+Yes
+
+Default::
+Off
+
 
 |===
 
 ////
-MDN Required::
-An Async MDN will return the MDN to the URL at a later time for files sent if an MDN is required. If you are using Async MDN, enter the URL and port to which it should be sent.
 
-NOTE: If this checkbox is selected, the *Require Receipt for Unsupported Digest Algorithm* and *Require Receipt for Unsupported Signature Format* checkboxes appear.
-
-MDN Signed::
-Ensures trading partner validation and security
 ////
