@@ -15,8 +15,9 @@ This page introduces MuleSoft's B2B Solutions and links to pages that provide de
 == Beta Documentation
 
 * xref:setup.adoc[Anypoint Partner Manager Setup]
-* xref:create-receive-message-flow.adoc[Create Receive Message Flows]
+* xref:configure-message-flows.adoc[Create Receive Message Flows]
+* xref:activity-tracking.adoc[Activity Tracking]
 * xref:x12-identity-settings.adoc[X12 Identity Settings]
-* xref:x12-receive-read-settings.adoc[X12 Receive Read Settings]
 * xref:document-types.adoc[Message Types]
 * xref:endpoints.adoc[Endpoints]
+* xref:x12-receive-read-settings.adoc[X12 Receive Read Settings]
