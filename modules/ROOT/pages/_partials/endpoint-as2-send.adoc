@@ -8,7 +8,7 @@ AS2 Send Settings pertain to trading partner-specific AS2 settings such as *cert
 
 | URL
 
-|URL to which you will send AS2 transmissions for this partner, including port +
+|The HTTP/S address at which your partner is accepting incoming AS2 messages. +
 
 
 Required?::
@@ -25,91 +25,23 @@ None
 Example::
 `www.midsizesupplier.com:8080`
 
-
-| Content Type
-
-|Content type for messages sent over AS2.
-
-NOTE: If you choose `Custom`, a *Custom content type* box appears that accepts an alphanumeric string. Be sure that the string is known to your trading partner.
-
-
-Valid values::
-
-* 'application/edi-x12'
-* 'application/edi-consent'
-* 'Custom'
-
-Default::
-
-* 'application/edi-x12'
-
-
-| Digest Algorithm
-
-
-| MIC algorithm for use in signing the returned receipt
-
-Required?::
-No
-
-Valid values::
-
-* 'SHA1'
-* 'MD5'
-
-Default::
-
-* 'SHA1'
-
-
-| Fallback Digest Algorithm
-
-| Digest algorithm the receiver uses to create the MIC and signature
-
-Required?::
-No
-
-Valid values::
-
-* 'None'
-* 'SHA1'
-* 'MD5'
-
-Default::
-
-'None'
-
-
 | Subject
 
-|Subject of the message being sent
+|The field that specifies a default subject for messages you send out to this partner. +
 
 Required?::
-No
+Yes
 
 Valid values::
 
 Alphanumeric
 
 Default::
-`AS2 Message`
-
-| Filename
-
-|Name of file to send
-
-Required::
-No
-
-Valid values::
-Alphanumeric
-
-Default::
-'File name'
+`None`
 
 | Encoding
 
-| Type of encoding to use when sending a message with AS2
+| Type of encoding to use when sending a message with AS2. +
 
 Required::
 Yes
@@ -132,10 +64,13 @@ CR (decimal value 13) and LF (decimal value 10) bytes only occur as part of CRLF
 +
 Data that is all represented as relatively
 short lines with 998 bytes or less between CRLF line separation
-sequences, but bytes with decimal values greater than 127
-may be used.  As with "7bit data" CR and LF bytes only occur as part
-of CRLF line separation sequences and no NULLs are allowed.
+sequences. Bytes with decimal values greater than 127
+can be used.  As with "7bit data" CR and LF bytes only occur as part
+of CRLF line separation sequences. No NULLs are allowed.
 
+* *Base 64*
++
+Need info here.
 
 * *Quoted-Printable*
 +
@@ -143,47 +78,139 @@ Intended to represent data that largely consists of bytes that correspond to pri
 the US-ASCII character set.  It encodes the data in such a way that
 the resulting bytes are unlikely to be modified by mail transport.
 If the data being encoded are mostly US-ASCII text, the encoded form
-of the data remains largely recognizable by humans.  A body which is
-entirely US-ASCII may also be encoded in Quoted-Printable to ensure
+of the data remains largely readable.  A body that is
+entirely in the US-ASCII character set may also be encoded in Quoted-Printable to ensure
 the integrity of the data should the message pass through a
 character-translating, and/or line-wrapping gateway.
 
+| Message Encryption
+
+| The algorithm used to encrypt “send” messages. +
 
 
-| Encryption Algorithm
-| 3DES is an encryption that uses 3 different _keys_, or encryptions, to encrypt the messages.
-No other choices are available at this time.
+Required?::
+Yes
+
+Valid values::
+
+** _3DES
+
+** AES128
+
+** AES192
+
+** AES256
+
+** AES256_WRAP
+
+** IDEA
+
+** MD5
+
+** None
+
+** RC2_CBC
+
+** SHA1
+
+** SHA224
+
+** SHA256
+
+** SHA384
+
+** SHA512
+
+
+Default::
+
+None
+
+
+| Message Signature Encryption
+
+| If a partner would like a signature associated with an encrypted message they receive, they can also choose to have the signature encrypted. This field indicates the algorithm the user can select to encrypt the signature. +
+
+
+Required?::
+Yes
+
+Valid values::
+
+** _3DES
+
+** AES128
+
+** AES192
+
+** AES256
+
+** AES256_WRAP
+
+** IDEA
+
+** MD5
+
+** None
+
+** RC2_CBC
+
+** SHA1
+
+** SHA224
+
+** SHA256
+
+** SHA384
+
+** SHA512
+
+
+Default::
+
+None
 
 
 
+|Compress Message after signing and/or encryption
+
+| Indicates if the trading partner wants to see the incoming message and associated signature in compressed form. Zlib is used for compression. +
+
+|Request MDN
+
+|Indicates if the sending partner would like the receiving partner to send a "receipt" (disposition notification) back for every message sent. +
+
+Required::
+Yes
+
+Default::
+Off
+
+|Request Asynchronous MDN
+
+|Your Partner generates and sends the MDN back to you in a newly initiated path that you had setup at your end. +
+
+Required::
+Yes
+
+Default::
+Off
 
 
-|Checkbox options:
-|
+| Asynchronous MDN URL
 
-Compress::
-Compresses message-size
+| The URL where the partner sends the MDN. +
 
-Message Encrypted::
-Adds an encryption wrapper around the document, signature, and compression payloads
+Required::
+Yes, only if “Request Asynchronous MDN” is on.
 
-Message Signed::
-Adds a signature wrapper around the document payload
+Default::
+Not Applicable
 
 
-|MDN Signed
+|MDN Response Wait Time
 
-| Ensures trading partner validation and security
-
-
-| MDN Async
-| Allows AS2 MDNs to be returned to the AS2 message sender's server at a later time.
-Typically used when large files are involved, or when a trading partner's AS2 server has poor Internet service. If this checkbox is selected the *MDN Async URL* box appears.
-
-|MDN Async URL
-
-|An Async Message Disposal Notification (MDN)  returns the MDN to this URL at a later time for files sent if an MDN is required.
-If you are using Async MDN, enter the URL and port to which it should be sent.
+|The maximum time within which the sender expects to receive an MDN. The value of this field is in seconds. +
 
 Required::
 No
@@ -192,12 +219,9 @@ Valid values::
 Alphanumeric
 
 Default::
-`None`
+60
 
 
-|MDN Required::
-|An Async MDN will return the MDN to the URL at a later time for files sent if an MDN is required. If you are using Async MDN, enter the URL and port to which it should be sent.
 
-NOTE: If this checkbox is selected, the *Require Receipt for Unsupported Digest Algorithm* and *Require Receipt for Unsupported Signature Format* checkboxes appear.
 
 |===
