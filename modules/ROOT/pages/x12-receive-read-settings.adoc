@@ -1,4 +1,4 @@
-= X12 Receive (Read) Settings
+= X12 Settings: Receive from Partners 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
