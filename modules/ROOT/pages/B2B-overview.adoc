@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-== B2B Solutions and Overview
+== B2B Solutions and Overview (change to Partner manager
 
 B2B (Business-to-Business) is the use of API's or Electronic Data Interchange (EDI) by enterprises to carry out business transactions such as purchasing goods from one another. B2B messages are typically sent over transports such as HTTP(s), FTP, FTPS, SFTP, JMS, and exchanges such as AS2. MuleSoft's B2B solutions integrate seamlessly into the Mule runtime.
 
