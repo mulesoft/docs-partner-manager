@@ -1,0 +1,194 @@
+= X12 Settings: Receive from Partners 
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Envelope Headers (ISA)
+|Auth. Info. Qualifier (ISA 01) +
+Most common value is *00*; rarely is another used.
+
+Required?::
+Yes
+
+Valid values::
+
+* `00`
+* `01`
+* `02`
+* `03`
+* `04`
+* `05`
+* `06`
+
+Default::
+
+`00`
+
+
+
+|Authorization Information (ISA 02)
+|Provide Authorization information value. This can be provided only if the value selected for ISA1 is not 00. Provides the user with the ability to enter a minimum of one alphanumeric character and a maximum of 10. +
+
+Required?::
+Yes, only if value of ISA01 != 00
+
+Valid values::
+Alphanumeric
+
+Default::
+None
+
+
+
+|Security Inf. Qualifier (ISA 03)
+|Select a value from the dropdown listbox (if appropriate for your organization). +
+
+Required?::
+Yes
+
+Valid values::
+
+* `00`
+* `01`
+
+Default::
+
+`00`
+
+NOTE:	If the value in (ISA 03) is 01, then a valid password value is required in ISA 04.
+
+
+|Security Information (ISA 04)
+|Provide Security information value. Provide this only if the value selected ISA3 is not 00. Provides the user with the ability to enter a minimum of one alphanumeric character and a maximum of 10. +
+
+Required?::
+Yes, only if value of ISA03 != 00
+
+Valid values::
+
+Alphanumeric
+
+Default::
+None
+
+
+
+|Interchange sender ID qualifier (ISA 05)
+|Read-only field. +
+Only available for configuring X12 for the “Trading Partner”.
+This field should reflect the value of the “Qualifier field” within the identifier for the “Trading Partner” that was created when the “Trading Partner was configured.
+
+Required?::
+Yes 
+
+
+
+|Interchange sender ID (ISA 06)
+|Read-only field. +
+Only available for configuring X12 for the “Trading Partner”.
+This field should reflect the value of the “Value field” within the identifier for the “Trading Partner” that was created when the “Trading Partner" was configured.
+
+Required?::
+Yes
+
+Valid values::
+
+Alphanumeric
+
+Default::
+None
+
+
+|Interchange receiver ID qualifier (ISA 07)
+|Read-only field. +
+This field should reflect the value of “Qualifier field” within identifier added for “Host Partner”. +
+
+Required?::
+Yes
+
+Valid values::
+
+Alphanumeric
+
+Default::
+None
+
+
+|Interchange receiver ID (ISA 08)
+|Read-only field. +
+This field should reflect the value of the “Value field” within identifier added for “Host Partner”. +
+
+
+Required?::
+Yes 
+
+Valid values::
+
+Alphanumeric
+
+Default::
+None
+
+
+
+|Parser Settings (Failure conditions)
+
+|* `Fail document when value length outside allowed range`
+* `Fail document when invalid character in value`
+* `Fail document if value is repeated too many times`
+* `Fail document if unknown segments are used`
+* `Fail document when segments are out of order`
+* `Fail document when unused segments are included`
+* `Fail document when too many repeats of a segment`
+* `Fail document when unused segments are included`
+
+Each of these options identifies a condition for which APM can fail an inbound  document from a trading partner. If any of these options selected, and an X12 document meets the condition in a selected option, a 997 message stating a failure will be sent.
+
+|Parser Settings (Other options)
+
+|Require 997::
+If selected, a 997 message will be sent regardless of whether or not an error condition is met.
+
+Generate 999::
+If a 999 acknowledgement is needed check this box. The default X12 acknowledgement will be 997.
+
+|Character Set and Encoding
+
+|Drop-down listbox enabling choice of three character sets.
+
+Valid values::
+
+* *Basic* +
+This character set includes:
+** Uppercase letters `A` through `Z`
+** Digits `0` through `9`
+** Special characters +
+`! “ & ’ ( ) * + , - . / : ; ? =`
+** The character created by pressing the space bar.
+
+* *Extended* +
+This character set includes:
+** All characters in the Basic character set
+** Lowercase letters `a` through `z`
+** Select language characters
+** Other special characters: +
+`% @ [ ] _ { } \ <pipe> < > ~ # $`
+
+* *Unrestricted* character set - includes all characters.
+
+Default::
+`Basic`
+
+|Control Number Settings
+
+|These settings, when selected, require unique inbound *ISA 13*, *GS 06* and *ST 02* control numbers on all inbound documents for a trading partner.
+
+* `Require unique ISA control numbers (ISA 13)`
+* `Require unique GS control numbers (GS 06)`
+* `Require unique transaction set control numbers (ST 02)`
+
+|===

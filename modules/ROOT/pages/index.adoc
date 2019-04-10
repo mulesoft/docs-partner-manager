@@ -1,0 +1,23 @@
+= B2B Solutions
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords: b2b, edi, portal
+
+== B2B Solutions
+
+B2B (Business-to-Business) is the use of API's or Electronic Data Interchange (EDI) by enterprises to carry out business transactions such as purchasing goods from each other. B2B messages are typically sent over transports such as SFTP and exchanges such as AS2. MuleSoft's B2B solutions integrate seamlessly into the Mule runtime.
+
+== About this Page
+
+This page introduces MuleSoft's B2B Solutions and links to pages that provide details about Anypoint Partner Manager and MuleSoft's EDI message packs. In addition, we provide configuration details for implementing B2B Solutions in Anypoint Studio's Graphical Editor.
+
+== Beta Documentation
+
+* xref:setup.adoc[Anypoint Partner Manager Setup]
+* xref:configure-message-flows.adoc[Configure Message Flows]
+* xref:activity-tracking.adoc[Activity Tracking]
+* xref:x12-identity-settings.adoc[X12 Identity Settings]
+* xref:document-types.adoc[Message Types]
+* xref:endpoints.adoc[Endpoints]
+* xref:x12-receive-read-settings.adoc[X12 Receive Read Settings]
