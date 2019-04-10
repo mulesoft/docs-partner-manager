@@ -4,9 +4,9 @@ include::_attributes.adoc[]
 endif::[]
 :keywords: b2b, edi, portal
 
-== B2B Solutions
+== B2B (Business-to-Business)
 
-B2B (Business-to-Business) is the use of API's or Electronic Data Interchange (EDI) by enterprises to carry out business transactions such as purchasing goods from each other. B2B messages are typically sent over transports such as SFTP and exchanges such as AS2. MuleSoft's B2B solutions integrate seamlessly into the Mule runtime.
+B2B in Mulesoft is the use of API's or Electronic Data Interchange (EDI) by enterprises to carry out business transactions such as purchasing goods from each other. B2B messages are typically sent over transports such as SFTP and exchanges such as AS2. MuleSoft's B2B solutions integrate seamlessly into the Mule runtime.
 
 == About this Page
 
