@@ -11,7 +11,6 @@ AS2 Send Settings pertain to trading partner-specific AS2 settings such as *cert
 |The HTTP/S address at which your partner is accepting incoming AS2 messages. +
 
 Valid values::
-
 Alphanumeric
 
 | Yes, if AS2 is the transport protocol
@@ -24,12 +23,13 @@ Alphanumeric
 |The field that specifies a default subject for messages you send out to this partner. +
 
 Valid values::
-
 Alphanumeric
 
 | Yes
 
 | None
+
+
 
 | Encoding
 
@@ -114,6 +114,7 @@ Valid values::
 | None
 
 
+
 | Message Signature Encryption
 
 | If a partner would like a signature associated with an encrypted message they receive, they can also choose to have the signature encrypted. This field indicates the algorithm the user can select to encrypt the signature. +
@@ -158,9 +159,9 @@ Valid values::
 
 | Indicates if the trading partner wants to see the incoming message and associated signature in compressed form. Zlib is used for compression. +
 
-| No
+| Yes
 
-| No
+| Unchecked
 
 
 |Request MDN
@@ -169,7 +170,9 @@ Valid values::
 
 | Yes
 
-| Off
+| Unchecked
+
+
 
 | Request Asynchronous MDN
 
@@ -177,7 +180,8 @@ Valid values::
 
 | Yes
 
-| Off
+| Unchecked
+
 
 
 | Asynchronous MDN URL
@@ -187,6 +191,7 @@ Valid values::
 | Yes, only if “Request Asynchronous MDN” is on.
 
 | Not Applicable
+
 
 
 |MDN Response Wait Time
