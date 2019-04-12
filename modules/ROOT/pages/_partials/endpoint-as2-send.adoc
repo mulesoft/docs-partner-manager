@@ -2,52 +2,38 @@
 
 AS2 Send Settings pertain to trading partner-specific AS2 settings such as *certificate* and *URL*.
 
-[%header,cols="3s,7a"]
+[%header,cols="3s,10a,3a,3a"]
 |===
-|Setting |Description
+|Setting |Description |Required? |Default
 
 | URL
 
 |The HTTP/S address at which your partner is accepting incoming AS2 messages. +
 
-
-Required?::
-Yes, if AS2 is the transport protocol
-
 Valid values::
 
 Alphanumeric
 
-Default::
+| Yes, if AS2 is the transport protocol
 
-None
+| None
 
-Example::
-`www.midsizesupplier.com:8080`
 
 | Subject
 
 |The field that specifies a default subject for messages you send out to this partner. +
 
-Required?::
-Yes
-
 Valid values::
 
 Alphanumeric
 
-Default::
-`None`
+| Yes
+
+| None
 
 | Encoding
 
 | Type of encoding to use when sending a message with AS2. +
-
-Required::
-Yes
-
-Default::
-Binary
 
 Valid values::
 
@@ -83,13 +69,15 @@ entirely in the US-ASCII character set may also be encoded in Quoted-Printable t
 the integrity of the data should the message pass through a
 character-translating, and/or line-wrapping gateway.
 
+| Yes
+
+| Binary
+
+
+
 | Message Encryption
 
 | The algorithm used to encrypt “send” messages. +
-
-
-Required?::
-Yes
 
 Valid values::
 
@@ -121,20 +109,15 @@ Valid values::
 
 ** SHA512
 
+| Yes
 
-Default::
-
-None
+| None
 
 
 | Message Signature Encryption
 
 | If a partner would like a signature associated with an encrypted message they receive, they can also choose to have the signature encrypted. This field indicates the algorithm the user can select to encrypt the signature. +
 
-
-Required?::
-Yes
-
 Valid values::
 
 ** _3DES
@@ -165,10 +148,9 @@ Valid values::
 
 ** SHA512
 
+| Yes
 
-Default::
-
-None
+| None
 
 
 
@@ -176,50 +158,47 @@ None
 
 | Indicates if the trading partner wants to see the incoming message and associated signature in compressed form. Zlib is used for compression. +
 
+| No
+
+| No
+
+
 |Request MDN
 
 |Indicates if the sending partner would like the receiving partner to send a "receipt" (disposition notification) back for every message sent. +
 
-Required::
-Yes
+| Yes
 
-Default::
-Off
+| Off
 
-|Request Asynchronous MDN
+| Request Asynchronous MDN
 
-|Your Partner generates and sends the MDN back to you in a newly initiated path that you had setup at your end. +
+| Your Partner generates and sends the MDN back to you in a newly initiated path that you had setup at your end. +
 
-Required::
-Yes
+| Yes
 
-Default::
-Off
+| Off
 
 
 | Asynchronous MDN URL
 
 | The URL where the partner sends the MDN. +
 
-Required::
-Yes, only if “Request Asynchronous MDN” is on.
+| Yes, only if “Request Asynchronous MDN” is on.
 
-Default::
-Not Applicable
+| Not Applicable
 
 
 |MDN Response Wait Time
 
 |The maximum time within which the sender expects to receive an MDN. The value of this field is in seconds. +
 
-Required::
-No
-
 Valid values::
 Alphanumeric
 
-Default::
-60
+| No
+
+| 60
 
 
 
