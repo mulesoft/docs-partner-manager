@@ -9,7 +9,7 @@ endif::[]
 
 |Envelope Headers (ISA)
 |Auth. Info. Qualifier (ISA 01) +
-Most common value is *00*; rarely is another used.
+Most common value is *00*. If another value is specified, then ISA 02 is read-only.
 
 Required?::
 Yes
@@ -31,10 +31,10 @@ Default::
 
 
 |Authorization Information (ISA 02)
-|Provide Authorization information value. This can be provided only if the value selected for ISA1 is not 00. Provides the user with the ability to enter a minimum of one alphanumeric character and a maximum of 10. +
+|Provide Authorization information value. This is read-only if the value selected for ISA 01 is 00. Otherwise, a minimum of one alphanumeric character and a maximum of 10. +
 
 Required?::
-Yes, only if value of ISA01 != 00
+Yes, only if value of ISA01 = 00
 
 Valid values::
 Alphanumeric
@@ -45,7 +45,7 @@ None
 
 
 |Security Inf. Qualifier (ISA 03)
-|Select a value from the dropdown listbox (if appropriate for your organization). +
+|Select a value from the dropdown listbox (if appropriate for your organization). Most common value is *00*. If another value is specified, then ISA 04 is read-only.+
 
 Required?::
 Yes
@@ -63,10 +63,10 @@ NOTE:	If the value in (ISA 03) is 01, then a valid password value is required in
 
 
 |Security Information (ISA 04)
-|Provide Security information value. Provide this only if the value selected ISA3 is not 00. Provides the user with the ability to enter a minimum of one alphanumeric character and a maximum of 10. +
+|Provide Security information value. This is read-only if the value selected for ISA 03 is 00. Otherwise, a minimum of one alphanumeric character and a maximum of 10. +
 
 Required?::
-Yes, only if value of ISA03 != 00
+Yes, only if value of ISA03 = 00
 
 Valid values::
 
