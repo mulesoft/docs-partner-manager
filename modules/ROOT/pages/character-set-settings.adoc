@@ -1,0 +1,41 @@
+= Character Set Settings
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Character Set
+|Choose from three options for setting the character set encoding on the server.
+
+Required?::
+Yes
+
+Valid values::
+
+* `Basic`
+* `Extended`
+* `Unrestricted`
+
+Default::
+
+* `Extended`
+
+|Character Encoding
+|Choose from three encoding schemes for character sets on the server.
+
+Required?::
+Yes
+
+Valid values::
+
+* `ASCII`
+* `ISO8859_1`
+* `UTF-8`
+
+Default::
+
+* `ISO8859_1`
+|===
