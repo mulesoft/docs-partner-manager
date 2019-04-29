@@ -1,0 +1,58 @@
+= Acknowledgment Settings
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Interchange Acknowledgement (TA1) Requested
+|Returns a Technical Acknowledgment (TA1) to the Interchange sender. TA1 is typically used with HIPAA messages, and the TA1 ACK is sent inside an ISA/IEA envelope.
+
+Required?/Valid values::
+N/A
+
+Default::
+
+* `None`
+
+|Functional Acknowledgement Requested
+|Provides a functional ACK with the exchange. There are two types: a 997 and a 999.
+
+
+Required?/Valid values::
+N/A
+
+Default::
+
+* `Enabled`
+
+|997 Requested
+|used to acknowledge receipt of an interchange or a functional group, to accept or reject one or more functional groups or one or more transactions, and to verify and report compliance with the standard.
+
+
+Required?::
+Yes
+
+Valid values::
+Business rules associated with 997:
+* If an interchange contains multiple groups, a 997 acknowledgment is returned for each group.
+* If a group contains multiple transaction sets, the acknowledgment for that group contains multiple AK2 loops,
+one for each transaction set, depending upon if AK2 loops are generated for accepted transaction sets.
+
+Default::
+
+* `Enabled`
+
+|999 Requested
+|Replaces the 997 Functional Acknowledgement document for use in healthcare.
+
+Required?/Valid values::
+N/A
+
+Default::
+
+* `Disabled`
+
+|===
