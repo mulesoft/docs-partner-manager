@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Any of these options with a checked, 'yes', or 'on' setting means that all X12 documents that meet the condition criteria receive a 997 failure message.
+Any of these options with a checked, `Yes`, or `On` setting means that all X12 documents that meet the condition criteria receive a 997 failure message.
 
 [%header,cols="3s,7a"]
 |===
