@@ -7,7 +7,7 @@ Any of these options with a checked, 'yes', or 'on' setting means that all X12 d
 
 [%header,cols="3s,7a"]
 |===
-|Fails Document 
+|Fails Document |Default
 
 |When the value length is outside allowed range.
 
