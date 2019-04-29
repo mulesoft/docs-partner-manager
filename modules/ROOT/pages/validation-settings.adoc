@@ -12,50 +12,36 @@ Any of these options with a checked, 'yes', or 'on' setting means that all X12 d
 |When the value length is outside allowed range.
 |
 
-Default::
-
-* `On`
+`On`
 
 |When an invalid character is in the value.
 |
 
-Default::
-
-* `On`
+`On`
 
 |If the value is repeated too many times.
 |
 
-Default::
-
-* `On`
+`On`
 
 |If unknown segments are used.
 |
 
-Default::
-
-* `Off`
+`Off`
 
 |When the segments are out of order.
 |
 
-Default::
-
-* `On`
+`On`
 
 |When there are too many repeats of a segment.
 |
 
-Default::
-
-* `On`
+`On`
 
 |When unused segments are included.
 |
 
-Default::
-
-* `Off`
+`Off`
 
 |===
