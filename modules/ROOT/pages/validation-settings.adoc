@@ -1,0 +1,54 @@
+= Validation Settings
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Any of these options with a checked, 'yes', or 'on' setting means that all X12 documents that meet the condition criteria receive a 997 failure message.
+
+[%header,cols="3s,7a"]
+|===
+|Fails Document |Default
+
+|When the value length is outside allowed range.
+
+Default::
+
+* `On`
+
+|When an invalid character is in the value.
+
+Default::
+
+* `On`
+
+|If the value is repeated too many times.
+
+Default::
+
+* `On`
+
+|If unknown segments are used.
+
+Default::
+
+* `Off`
+
+|When the segments are out of order.
+
+Default::
+
+* `On`
+
+|When there are too many repeats of a segment.
+
+Default::
+
+* `On`
+
+|When unused segments are included.
+
+Default::
+
+* `Off`
+
+|===
