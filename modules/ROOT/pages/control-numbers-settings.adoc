@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-A `Yes`, or `On` setting means that certain control number settings can be blocked. For any of these transaction set numbers set to Yes`, or `On`, a transmission check can be set to a minimum of 1 day to a maximum of 60 days. The default is 30 days.
+A `Yes`, or `On` setting means that certain control number settings can be blocked. For any of these transaction set numbers set to `Yes`, or `On`, a transmission check can be set to a minimum of 1 day to a maximum of 60 days. The default is 30 days.
 
 [%header,cols="3s,7a"]
 |===
