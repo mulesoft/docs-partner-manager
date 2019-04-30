@@ -5,134 +5,107 @@ endif::[]
 
 [%header,cols="3s,7a"]
 |===
-|Setting |Description
+|Setting |Description, Values, Default
 
 |Envelope Headers (ISA)
 |Auth. Info. Qualifier (ISA 01) +
 Most common value is *00*. If another value is specified, then ISA 02 is read-only.
 
-Required?::
-Yes
-
 Valid values::
 
-* `00`
-* `01`
-* `02`
-* `03`
-* `04`
-* `05`
-* `06`
+`00`
+`01`
+`02`
+`03`
+`04`
+`05`
+`06`
 
 Default::
 
 `00`
-
 
 
 |Authorization Information (ISA 02)
-|Provide Authorization information value. This is read-only if the value selected for ISA 01 is 00. Otherwise, a minimum of one alphanumeric character and a maximum of 10. +
-
-Required?::
-Yes, only if value of ISA01 = 00
+|Provide Authorization information value. This is read-only if the value selected for ISA 01 is 00. Otherwise, a minimum of one alphanumeric character and a maximum of 10. Required only if the value of ISA01 = 00 +
 
 Valid values::
-Alphanumeric
+`Alphanumeric`
 
 Default::
-None
-
+`None`
 
 
 |Security Inf. Qualifier (ISA 03)
-|Select a value from the dropdown listbox (if appropriate for your organization). Most common value is *00*. If another value is specified, then ISA 04 is read-only.+
-
-Required?::
-Yes
+|Select the required value from the dropdown listbox (if appropriate for your organization). Most common value is `00`. If another value is specified, then ISA 04 is read-only.+
 
 Valid values::
 
-* `00`
-* `01`
+`00`
+`01`
 
 Default::
 
 `00`
 
-NOTE:	If the value in (ISA 03) is 01, then a valid password value is required in ISA 04.
+NOTE:	If the value in (ISA 03) is `01`, then a valid password value is required in ISA 04.
 
 
 |Security Information (ISA 04)
-|Provide Security information value. This is read-only if the value selected for ISA 03 is 00. Otherwise, a minimum of one alphanumeric character and a maximum of 10. +
-
-Required?::
-Yes, only if value of ISA03 = 00
+|Provide the Security information value. This is read-only if the value selected for ISA 03 is 00. Otherwise, a minimum of one alphanumeric character and a maximum of 10. Required only if value of ISA03 = `00` +
 
 Valid values::
 
-Alphanumeric
+`Alphanumeric`
 
 Default::
-None
-
+`None`
 
 
 |Interchange sender ID qualifier (ISA 05)
 |Read-only field. +
-Only available for configuring X12 for the “Trading Partner”.
-This field should reflect the value of the “Qualifier field” within the identifier for the “Trading Partner” that was created when the “Trading Partner was configured.
+Only available for configuring X12 for the Trading Partner.
+This required field should reflect the value of the Qualifier field within the identifier for the Trading Partner that was created when the Trading Partner was configured.
 
-Required?::
-Yes 
-
+Valid Value?::
+`None` 
 
 
 |Interchange sender ID (ISA 06)
 |Read-only field. +
-Only available for configuring X12 for the “Trading Partner”.
-This field should reflect the value of the “Value field” within the identifier for the “Trading Partner” that was created when the “Trading Partner" was configured.
-
-Required?::
-Yes
+Only available for configuring X12 for the Trading Partner.
+This required field should reflect the value of the Value field within the identifier for the Trading Partner that was created when the Trading Partner was configured.
 
 Valid values::
 
-Alphanumeric
+`Alphanumeric`
 
 Default::
-None
+`None` 
 
 
 |Interchange receiver ID qualifier (ISA 07)
 |Read-only field. +
-This field should reflect the value of “Qualifier field” within identifier added for “Host Partner”. +
-
-Required?::
-Yes
+This required field should reflect the value of Qualifier field within identifier added for Host Partner. +
 
 Valid values::
 
-Alphanumeric
+`Alphanumeric`
 
 Default::
-None
+`None` 
 
 
 |Interchange receiver ID (ISA 08)
 |Read-only field. +
-This field should reflect the value of the “Value field” within identifier added for “Host Partner”. +
-
-
-Required?::
-Yes 
+This required field should reflect the value of the “Value field” within identifier added for “Host Partner”. +
 
 Valid values::
 
-Alphanumeric
+`Alphanumeric`
 
 Default::
-None
-
+`None` 
 
 
 |Parser Settings (Failure conditions)
@@ -146,15 +119,15 @@ None
 * `Fail document when too many repeats of a segment`
 * `Fail document when unused segments are included`
 
-Each of these options identifies a condition for which APM can fail an inbound  document from a trading partner. If any of these options selected, and an X12 document meets the condition in a selected option, a 997 message stating a failure will be sent.
+Each of these options identifies a condition for which Partner Manager can fail an inbound document from a trading partner. If any of these options selected, and an X12 document meets the condition in a selected option, a 997 message stating a failure is sent.
 
 |Parser Settings (Other options)
 
 |Require 997::
-If selected, a 997 message will be sent regardless of whether or not an error condition is met.
+If selected, a 997 message is sent regardless of whether or not an error condition is met.
 
 Generate 999::
-If a 999 acknowledgement is needed check this box. The default X12 acknowledgement will be 997.
+If a 999 acknowledgement is needed, select this. The default X12 acknowledgement is 997.
 
 |Character Set and Encoding
 
