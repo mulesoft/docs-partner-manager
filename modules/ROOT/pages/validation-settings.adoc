@@ -3,45 +3,45 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Any of these options with a checked, `Yes`, or `On` setting means that all X12 documents that meet the condition criteria receive a 997 failure message.
+Any of these options with a checked (yes), setting means that all X12 documents that meet the condition criteria receive a 997 failure message.
 
 [%header,cols="3s,7a"]
 |===
-|Document Fails |Default
+|Message Processing Fails |Default
 
 |When the value length is outside allowed range.
 |
 
-`On`
+`Yes`
 
 |When an invalid character is in the value.
 |
 
-`On`
+`Yes`
 
 |If the value is repeated too many times.
 |
 
-`On`
+`Yes`
 
 |If unknown segments are used.
 |
 
-`Off`
+`No`
 
 |When the segments are out of order.
 |
 
-`On`
+`Yes`
 
 |When there are too many repeats of a segment.
 |
 
-`On`
+`Yes`
 
 |When unused segments are included.
 |
 
-`Off`
+`No`
 
 |===
