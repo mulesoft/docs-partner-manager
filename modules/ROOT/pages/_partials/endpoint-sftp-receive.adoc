@@ -1,7 +1,9 @@
 == SFTP Receive Settings
 
+Use these to set up SFTP server settings for your partners.
 
 === Server information
+Use these to set up your host.
 
 [%header,cols="3s,7a"]
 |===
