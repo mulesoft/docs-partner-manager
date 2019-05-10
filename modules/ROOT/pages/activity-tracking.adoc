@@ -20,6 +20,6 @@ You can:
 
 == To Track Activity:
 
-. Select Activity from the left hand navigation. You see the activity on the message flows you created. +
+. Select Activity from the navigation pane. You see the activity on the message flows you created. +
 . Scroll the list. If you don't see the desired message flow, type it's name in the search box. +
 . Select the message flow. You see... +
