@@ -1,6 +1,6 @@
 == HTTP Receive Settings
 
-These settings are a subset of those in xref:3.8@mule-runtime::http-listener-connector.adoc[HTTP Listener Connector].
+These settings are a subset of those in xref:4.0@mule-runtime::http-listener-connector.adoc[HTTP Listener Connector].
 
 
 === Global Config
@@ -9,11 +9,11 @@ These settings are a subset of those in xref:3.8@mule-runtime::http-listener-con
 |===
 |Name |Description
 |Protocol |*HTTP* or *HTTPS* +
-Type: Radio-button-selected value
+Type: value representing a Radio-button selection 
 Required: yes +
 Default: HTTP
 
-|Use Persistent Connections |&nbsp;+
+|Use Persistent Connections |&nbsp; +
 Type: Checkbox selection +
 Required: no +
 Default: Selected
