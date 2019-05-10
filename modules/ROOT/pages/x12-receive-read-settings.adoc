@@ -139,7 +139,7 @@ Valid values::
 This character set includes:
 ** Uppercase letters `A` through `Z`
 ** Digits `0` through `9`
-** Special characters +
+** Special characters: +
 `! “ & ’ ( ) * + , - . / : ; ? =`
 ** The character created by pressing the space bar.
 
