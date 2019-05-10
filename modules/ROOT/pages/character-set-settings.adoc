@@ -1,9 +1,11 @@
 = Character Set Settings
 
-Use these settings to define the character set and encoding on the server.
+
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+
+Use these settings to define the character set and encoding on the server.
 
 [%header,cols="3s,7a"]
 |===
