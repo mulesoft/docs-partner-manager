@@ -3,9 +3,11 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
+[Message flow diagram?]
+
 When receiving a B2B message from your trading partner, it may include more than one URL. For example, a receiving URL, and a URL for receiving asynchronous MDNs (Message Disposition Notifications). If this is the case, you only need to configure the Receiving URL. If a separate URL is required for returning MDNs, it is sent in the AS2 transmission and Partner Manager reads it from there.
 
-== To set up Receive from partner:
+== To Set up Receive from a Partner:
 
 . From within your environment, select Message Flows from the left-hand navigation. +
 . Click the *New Message Flow* button and select Receive from partner from the drop-down menu. +
