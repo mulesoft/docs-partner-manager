@@ -11,7 +11,7 @@ AS2 Send Settings pertain to trading partner-specific AS2 settings such as *cert
 |The HTTP/S address at which your partner is accepting incoming AS2 messages. +
 
 Valid values::
-Alphanumeric
+`Alphanumeric`
 
 | Yes, if AS2 is the transport protocol
 
@@ -23,12 +23,11 @@ Alphanumeric
 |The field that specifies a default subject for messages you send out to this partner. +
 
 Valid values::
-Alphanumeric
+`Alphanumeric`
 
 | Yes
 
 | None
-
 
 
 | Encoding
@@ -37,16 +36,16 @@ Alphanumeric
 
 Valid values::
 
-* *Binary* +
+* `*Binary*` +
 A method of encoding in which a message is represented using a combination of 0s and 1s.
 
-* *7-bit*
+* `*7-bit*`
 +
 Data that is represented as relatively short lines with 998 bytes or less between CRLF line separation sequences.
 No bytes with decimal values greater than 127 are allowed and neither are NULLs (bytes with decimal value 0).
 CR (decimal value 13) and LF (decimal value 10) bytes only occur as part of CRLF line separation sequences.
 
-* *8-bit*
+* `*8-bit*`
 +
 Data that is represented as relatively
 short lines with 998 bytes or less between CRLF line separation
@@ -54,11 +53,11 @@ sequences. Bytes with decimal values greater than 127
 can be used.  As with "7bit data" CR and LF bytes only occur as part
 of CRLF line separation sequences. No NULLs are allowed.
 
-* *Base 64*
+* `*Base 64*`
 +
 Need info here.
 
-* *Quoted-Printable*
+* `*Quoted-Printable*`
 +
 Intended to represent data that largely consists of bytes that correspond to printable characters in
 the US-ASCII character set.  It encodes the data in such a way that
@@ -81,33 +80,33 @@ character-translating, and/or line-wrapping gateway.
 
 Valid values::
 
-** _3DES
+** `3DES`
++
+** `AES128`
 
-** AES128
+** `AES192`
 
-** AES192
+** `AES256`
 
-** AES256
+** `AES256_WRAP`
 
-** AES256_WRAP
+** `IDEA`
 
-** IDEA
+** `MD5`
 
-** MD5
+** `None`
 
-** None
+** `RC2_CBC`
 
-** RC2_CBC
+** `SHA1`
 
-** SHA1
+** `SHA224`
 
-** SHA224
+** `SHA256`
 
-** SHA256
+** `SHA384`
 
-** SHA384
-
-** SHA512
+** `SHA512`
 
 | Yes
 
@@ -121,33 +120,33 @@ Valid values::
 
 Valid values::
 
-** _3DES
+** `3DES`
++
+** `AES128`
 
-** AES128
+** `AES192`
 
-** AES192
+** `AES256`
 
-** AES256
+** `AES256_WRAP`
 
-** AES256_WRAP
+** `IDEA`
 
-** IDEA
+** `MD5`
 
-** MD5
+** `None`
 
-** None
+** `RC2_CBC`
 
-** RC2_CBC
+** `SHA1`
 
-** SHA1
+** `SHA224`
 
-** SHA224
+** `SHA256`
 
-** SHA256
+** `SHA384`
 
-** SHA384
-
-** SHA512
+** `SHA512`
 
 | Yes
 
@@ -199,7 +198,8 @@ Valid values::
 |The maximum time within which the sender expects to receive an MDN. The value of this field is in seconds. +
 
 Valid values::
-Alphanumeric
+
+`Alphanumeric`
 
 | No
 
