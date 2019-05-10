@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-An _endpoint_ is the entry point to a service, a process, or a queue or topic destination in service-oriented architecture. In APM, an endpoint defines the protocol, address, and other details specific to an exchange of messages between partners.
+A source and target endpoint are the entry points to a service, a process, or a queue or topic destination in service-oriented architecture. In APM, an endpoint defines the protocol, address, and other details specific to an exchange of messages between partners.
 
 == Endpoint Name, Protocol and Type
 
@@ -32,8 +32,8 @@ No
 
 Valid values::
 
-* 'AS2'
-* 'SFTP'
+* `AS2`
+* `SFTP`
 
 Default::
 
@@ -49,14 +49,14 @@ No
 
 Valid values::
 
-* 'SEND'
-* 'RECEIVE'
+* `SEND`
+* `RECEIVE`
 
 Default::
 
 None
 
-|Default for _partner_ checkbox
+|Default for partner_ checkbox
 
 |Select this box if you want the choices you make for this endpoint to apply to all endpoints for this partner.
 
