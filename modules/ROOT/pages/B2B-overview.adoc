@@ -11,8 +11,8 @@ B2B (Business-to-Business) is the use of API's or Electronic Data Interchange (E
 
 Through its web interface, Anypoint Partner Manager enables effective setup and management of a large number of trading partners. Additionally, via the ability to track and report on transaction progress, Partner Manager drives greater operational efficiency while managing B2B transactions. With Anypoint Partner Manager you can:
 
-* Perform technical on-boarding of partners.
-* Set up message flows to receive and send messages between your backend systems and your partners.
+* Perform technical on-boarding of your partners.
+* Set up message flows to receive and send messages between your systems and your partners.
 * View and monitor how partner messages are being processed in the system in case of failure in order to take corrective action.
 
 == Available Message Formats
