@@ -41,33 +41,33 @@ If you are unable to access Anypoint Partner Manager, please contact your MuleSo
 
 == Setup Checklist
 
-Before you set up your message flows to send and receive messages with your partners, you'll need to collection some information from them. You’ll also need to understand how your backend systems work. Use this checklist to help organize the information you need. 
+Before you set up your message flows to send and receive messages with your partners, you'll need to collect some information from them. You’ll also need to understand how your backend systems work. Use this checklist to help organize the information you need to gather for entering into AnyPoint Partner Manager later.
 
-Information needed for each trading partner:
+* Information needed for each trading partner:
 
-* Partner name (usually the name of the company).
+** Partner name (usually the name of the company).
 
-* Identifiers (such as the AS2 Identifier, X12 ISA, and so on).
+** Identifiers (such as the AS2 Identifier, X12 ISA, and so on).
 
-* Message formats to send to one another (such as X12, and so on), and any associated validations with the need for acknowledgment (such as TA1, 997, 999, and so on).
+** Message formats to send to one another (such as X12, and so on), and any associated validations with the need for acknowledgment (such as TA1, 997, 999, and so on).
 
-* Message types to use. For example, a purchase order in X12 is an 850 mesage. You also need to know which X12 version to use in your transactions (such as 004010, 005010, and so on).
+** Message types to use. For example, a purchase order in X12 is an 850 mesage. You also need to know which X12 version to use in your transactions (such as 004010, 005010, and so on).
 
-* The digital certificate (such as X.509).
+** The digital certificate (such as X.509).
 
-* Endpoints, depending on the direction of interactions with your partner.
+** Endpoints, depending on the direction of interactions (send/receive) you want to have with with your partner.
 
-Information you'll need as the host organization:
+* Information you'll need as the host organization:
 
-* Endpoints, depending on the direction of interactions with your partner.
+** Endpoints, depending on the direction of interactions with your partner.
 
-* Identifiers (such as the AS2 Identifier, X12 ISA, and so on). 
+** Identifiers (such as the AS2 Identifier, X12 ISA, and so on). 
 
-* The digital certificate (such as X.509).
+** The digital certificate (such as X.509).
 
-* EDI message type preferences for your organization. [Example?]
+** EDI message type preferences for your organization. [Example?]
 
-* Storage for your B2B message payloads. 
+** Storage for your B2B message payloads. 
 
 == Set up Anypoint Partner Manager
 
@@ -89,11 +89,11 @@ The server group associated to your B2B Gateway must be named exactly **B2BServe
 
 === Allocate Partner Manager Roles
 
-There are two Administrator roles for Anypoint Partner Manager. Both roles have unrestricted access, but one role works in a Production environment and one works in a Sandbox environment. 
+There are two Administrator roles for Anypoint Partner Manager: Production and Sandbox. Both roles have unrestricted access, but one role works in a Production environment and one works in a Sandbox environment. 
 
-Partner Manager Admin (Production) - Can perform all operations across Partner Manager for all Production Environments.
+Partner Manager Admin (Production) - Can perform all operations across Partner Manager for all Production environments.
 
-Partner Manager Admin (Sandbox) - Can perform all operations across Partner Manager for all Sandbox Environments.
+Partner Manager Admin (Sandbox) - Can perform all operations across Partner Manager for all Sandbox environments.
 
 === Connect to Payload Storage
 Anypoint Partner Manager enables you to connect your own storage (such as a database, Amazon S3, Azure Blob Storage, and so on) to store the incoming B2B message payload. You'll need to establish an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage.
