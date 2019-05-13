@@ -1,0 +1,114 @@
+= Anypoint Partner Manager Setup
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+
+You should be familiar with these concepts before setting up Partner Manager:
+
+* EDI message formats and schemas.
+* Dataweave transformations.
+* Digital Certificates (such as X.509) for the AS2 transport protocol.
+* Your own network of endpoints for the listening to and sending of messages.
+* Troubleshooting in the Anypoint platform.
+
+== Minimum Requirements
+
+Verify that you have the following software and other requirements.
+
+* Mule runtime engine 4.1.1 or higher.
+
+**Note**
+
+Make sure you have the needed Mule runtime Core/Vcore capacity to handle the B2B transaction load. If you are unsure about the capacity you need to handle B2B transactions, please contact your MuleSoft account representative for assistance.
+
+* Storage for your B2B message payloads.
+
+* Anypoint Studio 7.1 or higher for creating DataWeave maps.
+
+* License for the following optional Connectors:
+
+** AS2 4.0.2 or higher.
+** X12 2.0.1 or higher.
+
+* Partner Manager Requirements:
+** Anypoint Platform user account with Anypoint Partner Manager access.
+** Appropriate roles allocated for users to access Anypoint Partner Manager. Roles are allocated via the Access Management section in Anypoint Platform.
+
+**Note**
+
+If you are unable to access Anypoint Partner Manager, please contact your MuleSoft account representative for assistance.
+
+== Setup Checklist
+
+Before you set up your message flows to send and receive messages with your partners, you'll need to collect some information from them. You’ll also need to understand how your backend systems work. Use this checklist to help organize the information you need to gather for entering into AnyPoint Partner Manager later.
+
+* Information needed for each trading partner:
+
+** Partner name (usually the name of the company).
+
+** Identifiers (such as the AS2 Identifier, X12 ISA, and so on).
+
+** Message formats to send to one another (such as X12, and so on), and any associated validations with the need for acknowledgment (such as TA1, 997, 999, and so on).
+
+** Message types to use. For example, a purchase order in X12 is an 850 mesage. You also need to know which X12 version to use in your transactions (such as 004010, 005010, and so on).
+
+** The digital certificate (such as X.509).
+
+** Endpoints, depending on the direction of interactions (send/receive) you want to have with with your partner.
+
+* Information you'll need as the host organization:
+
+** Endpoints, depending on the direction of interactions with your partner.
+
+** Identifiers (such as the AS2 Identifier, X12 ISA, and so on).
+
+** The digital certificate (such as X.509).
+
+** EDI message type preferences for your organization. [Example?]
+
+** Storage for your B2B message payloads.
+
+== Set up Anypoint Partner Manager
+
+Use the information gathered in the checklist to associate runtimes, allocate user roles, and connect to your payload storage.
+
+* Associate Mule Runtimes Manager for Deployment [link]
+
+* Allocate Partner Manager Roles [link]
+
+* Connect to Payload Storage [link]
+
+=== Associate Runtimes for Deployment
+
+Setup a server group via Anypoint Runtime Manager to deploy the B2B Gateway. The steps to setup your server group are in [Mule Runtime Manager documentation](https://docs.mulesoft.com/runtime-manager/server-group-create).
+
+**Note**
+
+The server group associated to your B2B Gateway must be named exactly **B2BServerGroup** in order for it to operate correctly. The name is case sensitive.
+
+=== Allocate Partner Manager Roles
+
+There are two Administrator roles for Anypoint Partner Manager: Production and Sandbox. Both roles have unrestricted access, but one role works in a Production environment and one works in a Sandbox environment.
+
+Partner Manager Admin (Production) - Can perform all operations across Partner Manager for all Production environments.
+
+Partner Manager Admin (Sandbox) - Can perform all operations across Partner Manager for all Sandbox environments.
+
+=== Connect to Payload Storage
+Anypoint Partner Manager enables you to connect your own storage (such as a database, Amazon S3, Azure Blob Storage, and so on) to store the incoming B2B message payload. You'll need to establish an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage.
+
+Download the pre-packaged API and integration implementation from Anypoint Exchange.[link from Anypoint Exchange for the pre-packaged API and integration app from Manik / Pablo]
+
+Make a note of the API address configurations (host, port, path, and so on) that you will use to associate the storage within Anypoint Partner Manager.
+
+Once the API is setup, log into Anypoint Platform and select Partner Manager. From here you can configure the path to your storage.
+
+You are now ready to begin setting up message flows between you and your partners.
+
+
+== See Also
+* xref:create-receive-message-flow.adoc[Create Receive Message Flows]
+* xref:activity-tracking.adoc[Activity Tracking]
+
+|===
