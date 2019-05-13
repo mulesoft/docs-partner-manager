@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 
 
-You should be familiar with the following concepts before setting up Partner Manager:
+You should be familiar with these concepts before setting up Partner Manager:
 
 * EDI message formats and schemas.
 * Dataweave transformations.
@@ -22,14 +22,14 @@ Verify that you have the following software and other requirements.
 
 Make sure you have the needed Mule runtime Core/Vcore capacity to handle the B2B transaction load. If you are unsure about the capacity you need to handle B2B transactions, please contact your MuleSoft account representative for assistance.
 
-* Storage for your B2B message payloads. 
+* Storage for your B2B message payloads.
 
 * Anypoint Studio 7.1 or higher for creating DataWeave maps.
 
 * License for the following optional Connectors:
 
-** AS2 4.0.2 or higher. 
-** X12 2.0.1 or higher. 
+** AS2 4.0.2 or higher.
+** X12 2.0.1 or higher.
 
 * Partner Manager Requirements:
 ** Anypoint Platform user account with Anypoint Partner Manager access.
@@ -61,17 +61,17 @@ Before you set up your message flows to send and receive messages with your part
 
 ** Endpoints, depending on the direction of interactions with your partner.
 
-** Identifiers (such as the AS2 Identifier, X12 ISA, and so on). 
+** Identifiers (such as the AS2 Identifier, X12 ISA, and so on).
 
 ** The digital certificate (such as X.509).
 
 ** EDI message type preferences for your organization. [Example?]
 
-** Storage for your B2B message payloads. 
+** Storage for your B2B message payloads.
 
 == Set up Anypoint Partner Manager
 
-Use the information gathered in the checklist to associate runtimes, allocate user roles, and connect to your payload storage. 
+Use the information gathered in the checklist to associate runtimes, allocate user roles, and connect to your payload storage.
 
 * Associate Mule Runtimes Manager for Deployment [link]
 
@@ -89,7 +89,7 @@ The server group associated to your B2B Gateway must be named exactly **B2BServe
 
 === Allocate Partner Manager Roles
 
-There are two Administrator roles for Anypoint Partner Manager: Production and Sandbox. Both roles have unrestricted access, but one role works in a Production environment and one works in a Sandbox environment. 
+There are two Administrator roles for Anypoint Partner Manager: Production and Sandbox. Both roles have unrestricted access, but one role works in a Production environment and one works in a Sandbox environment.
 
 Partner Manager Admin (Production) - Can perform all operations across Partner Manager for all Production environments.
 
