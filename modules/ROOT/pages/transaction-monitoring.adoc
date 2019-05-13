@@ -14,7 +14,7 @@ You can:
 * Review and monitor errors and acknowledgements.
 * Search for metadata
 
-This page identifies the APM components you use to monitor transactions; see also xref:tracking-scenarios.adoc[Tracking Scenarios].
+This page identifies the APM components you use to monitor transactions.
 
 == Get Started
 

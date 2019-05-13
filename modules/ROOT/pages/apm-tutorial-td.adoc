@@ -540,4 +540,3 @@ For more information, see:
 
 * xref:partner-configuration.adoc[Partner Configuration]
 * xref:transaction-monitoring.adoc[Transaction Monitoring]
-* xref:tracking-scenarios.adoc[Tracking Scenarios]

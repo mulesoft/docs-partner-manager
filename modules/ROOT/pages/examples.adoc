@@ -50,8 +50,3 @@ include::{partialsdir}/promotion-scenarios.adoc[leveloffset=+1]
 //=== Rough draft graphic for certs promo
 
 removed image PromoteIDsOffCertsOn\
-
-////
-
-// Tracking Scenarios
-include::{partialsdir}/tracking-scenarios.adoc[leveloffset=+1]
