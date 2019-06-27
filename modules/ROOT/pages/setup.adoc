@@ -8,21 +8,17 @@ You should be familiar with these concepts before setting up Partner Manager:
 
 * EDI message formats and schemas.
 * Dataweave transformations.
-* Digital Certificates (such as X.509) for the AS2 transport protocol.
-* Your own network of endpoints for the listening to and sending of messages.
-* Troubleshooting in the Anypoint platform.
+* Digital Certificates such as X.509 certificates in PKCS12 file format for the AS2 transport protocol.
+* Configuration of protcols such as AS2, SFTP, HTTPS.
+* Understanding of organizations and environments in the context of Access Management and Runtime Manager. 
 
 == Minimum Requirements
 
 Verify that you have the following software and other requirements.
 
-* Mule runtime engine 4.1.1 or higher.
+* Mule runtime engine 4.1.1 or higher. Make sure you have the needed Mule runtime Core/Vcore capacity to handle the B2B transaction load. If you are unsure about the capacity you need to handle B2B transactions, please contact your MuleSoft account representative for assistance.
 
-**Note**
-
-Make sure you have the needed Mule runtime Core/Vcore capacity to handle the B2B transaction load. If you are unsure about the capacity you need to handle B2B transactions, please contact your MuleSoft account representative for assistance.
-
-* Storage for your B2B message payloads.
+* Storage for your B2B message payloads. 
 
 * Anypoint Studio 7.1 or higher for creating DataWeave maps.
 
@@ -37,7 +33,9 @@ Make sure you have the needed Mule runtime Core/Vcore capacity to handle the B2B
 
 **Note**
 
-If you are unable to access Anypoint Partner Manager, please contact your MuleSoft account representative for assistance.
+For any access or licensing issues, please contact your MuleSoft account representative for assistance.
+
+==Environment Setup
 
 == Setup Checklist
 
