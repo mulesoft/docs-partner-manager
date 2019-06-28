@@ -35,9 +35,49 @@ Verify that you have the following software and other requirements.
 
 For any access or licensing issues, please contact your MuleSoft account representative for assistance.
 
-==Environment Setup
+== Environment configuration
+Your environment using Partner Manager.
 
-== Setup Checklist
+=== Before you Begin
+
+. Verify that you have access to Partner Manager. 
+This means that you must have the required entitlements and have assigned the `Partner Manager Administrator` role in Access Management for the environment.
+
+. Setup the required Storage API (this will be a link to Exchange with description and RAML). The storage API should be reachable from the Mule Runtime network.
+
+=== Setup the Environment
+
+. Create a dedicated user with the `Partner Manager - Runtime Engine` permission for the Runtime Engine. The UI Administrator does not have the required permissions to be used in the Runtime Engine.
+
+. For each Environment, set up your Mule Runtime by downloading Mulesoft runtime and unzipping it.
+
+. Add the following parameters in the wrapper.conf file. You'll need to adjust the numbers for your environment. Refer to the following article from support.mulesoft.com: java.lang.OutOfMemoryError: Metaspace when Deploying Applications to Mule 4 Runtime.
+
+Note: Make sure the ports that are exposed as inbound endpoints are configured in the instance according to the security guidelines for your infrastructure.
+
+[source,xml,linenums]
+----
+
+wrapper.java.additional.20=-Db2bAnypointUsername={{username from Step 1}}
+wrapper.java.additional.21=-Db2bAnypointPassword={{password from Step 1}}
+
+# Increase the MetaSpace 
+wrapper.java.additional.7=-XX:MetaspaceSize=1256m
+wrapper.java.additional.8=-XX:MaxMetaspaceSize=2256m
+
+# Increase JVM Memory
+# Initial Java Heap Size (in MB), configure it as needed
+wrapper.java.initmemory=2024
+# Maximum Java Heap Size (in MB), configure it as needed
+wrapper.java.maxmemory=3024
+
+----
+. Add the server in Runtime Manager (See https://docs.mulesoft.com/runtime-manager/servers-create)
+. Create a server group and call it: `B2BServerGroup` in Runtime Manager and include the created server (See https://docs.mulesoft.com/runtime-manager/server-group-about)
+. Start Mule runtime and verify it on Runtime Manager.
+
+
+== Partner Manager Setup Checklist
 
 Before you set up your message flows to send and receive messages with your partners, you'll need to collect some information from them. You’ll also need to understand how your backend systems work. Use this checklist to help organize the information you need to gather for entering into AnyPoint Partner Manager later.
 
@@ -94,6 +134,8 @@ Partner Manager Admin (Production) - Can perform all operations across Partner M
 Partner Manager Admin (Sandbox) - Can perform all operations across Partner Manager for all Sandbox environments.
 
 === Connect to Payload Storage
+ Within Partner Manager host profile, configure the Storage API with the host, port and path from your Storage API implementation
+ 
 Anypoint Partner Manager enables you to connect your own storage (such as a database, Amazon S3, Azure Blob Storage, and so on) to store the incoming B2B message payload. You'll need to establish an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage.
 
 Download the pre-packaged API and integration implementation from Anypoint Exchange.[link from Anypoint Exchange for the pre-packaged API and integration app from Manik / Pablo]
