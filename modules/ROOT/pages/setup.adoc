@@ -35,8 +35,8 @@ Verify that you have the following software and other requirements.
 
 For any access or licensing issues, please contact your MuleSoft account representative for assistance.
 
-== Environment configuration
-Your environment using Partner Manager.
+== Environment Configuration
+Set up and configure your before environment using Partner Manager.
 
 === Before you Begin
 
