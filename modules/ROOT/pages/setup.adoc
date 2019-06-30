@@ -38,14 +38,26 @@ For any access or licensing issues, please contact your MuleSoft account represe
 == Environment Configuration
 Set up and configure your before environment using Partner Manager.
 
-=== Before you Begin
+=== Allocate Partner Manager Roles
+
+There are two Administrator roles for Anypoint Partner Manager: Production and Sandbox. Both roles have unrestricted access, but one role works in a Production environment and one works in a Sandbox environment.
+
+Partner Manager Admin (Production) - Can perform all operations across Partner Manager for all Production environments.
+
+Partner Manager Admin (Sandbox) - Can perform all operations across Partner Manager for all Sandbox environments.
 
 . Verify that you have access to Partner Manager. 
 This means that you must have the required entitlements and have assigned the `Partner Manager Administrator` role in Access Management for the environment.
 
 . Setup the required Storage API (this will be a link to Exchange with description and RAML). The storage API should be reachable from the Mule Runtime network.
 
-=== Setup the Environment
+=== Associate Runtimes for Deployment (Setup the Environment)
+
+Setup a server group via Anypoint Runtime Manager to deploy the B2B Gateway. The steps to setup your server group are in [Mule Runtime Manager documentation](https://docs.mulesoft.com/runtime-manager/server-group-create).
+
+**Note**
+
+The server group associated to your B2B Gateway must be named exactly **B2BServerGroup** in order for it to operate correctly. The name is case sensitive.
 
 . Create a dedicated user with the `Partner Manager - Runtime Engine` permission for the Runtime Engine. The UI Administrator does not have the required permissions to be used in the Runtime Engine.
 
@@ -76,6 +88,18 @@ wrapper.java.maxmemory=3024
 . Create a server group and call it: `B2BServerGroup` in Runtime Manager and include the created server (See https://docs.mulesoft.com/runtime-manager/server-group-about)
 . Start Mule runtime and verify it on Runtime Manager.
 
+=== Connect to Payload Storage
+ Within Partner Manager host profile, configure the Storage API with the host, port and path from your Storage API implementation
+ 
+Anypoint Partner Manager enables you to connect your own storage (such as a database, Amazon S3, Azure Blob Storage, and so on) to store the transmission content such as incoming and outgoing B2B messages and acknowledgments. You'll need to establish an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage.
+
+Download the pre-packaged API and implementation template from Anypoint Exchange.[link from Anypoint Exchange for the pre-packaged API and integration app from Manik / Pablo]
+
+Make a note of the API address configurations (host, port, path and authentication details) to use to associate the storage within Anypoint Partner Manager.
+
+Once the API is setup, go to Partner Manager and configure the path to your storage from your Host Partner profile from the left hand section.
+
+Once that's complete, you can begin to set up message flows between you and your configured partners.
 
 == Partner Manager Setup Checklist
 
@@ -93,7 +117,7 @@ Before you set up your message flows to send and receive messages with your part
 
 ** The digital certificate (such as X.509).
 
-** Endpoints, depending on the direction of interactions (send/receive) you want to have with with your partner.
+** Endpoints, depending on the direction of interactions (send/receive) you want to have with your partner.
 
 * Information you'll need as the host organization:
 
@@ -107,44 +131,6 @@ Before you set up your message flows to send and receive messages with your part
 
 ** Storage for your B2B message payloads.
 
-== Set up Anypoint Partner Manager
-
-Use the information gathered in the checklist to associate runtimes, allocate user roles, and connect to your payload storage.
-
-* Associate Mule Runtimes Manager for Deployment [link]
-
-* Allocate Partner Manager Roles [link]
-
-* Connect to Payload Storage [link]
-
-=== Associate Runtimes for Deployment
-
-Setup a server group via Anypoint Runtime Manager to deploy the B2B Gateway. The steps to setup your server group are in [Mule Runtime Manager documentation](https://docs.mulesoft.com/runtime-manager/server-group-create).
-
-**Note**
-
-The server group associated to your B2B Gateway must be named exactly **B2BServerGroup** in order for it to operate correctly. The name is case sensitive.
-
-=== Allocate Partner Manager Roles
-
-There are two Administrator roles for Anypoint Partner Manager: Production and Sandbox. Both roles have unrestricted access, but one role works in a Production environment and one works in a Sandbox environment.
-
-Partner Manager Admin (Production) - Can perform all operations across Partner Manager for all Production environments.
-
-Partner Manager Admin (Sandbox) - Can perform all operations across Partner Manager for all Sandbox environments.
-
-=== Connect to Payload Storage
- Within Partner Manager host profile, configure the Storage API with the host, port and path from your Storage API implementation
- 
-Anypoint Partner Manager enables you to connect your own storage (such as a database, Amazon S3, Azure Blob Storage, and so on) to store the incoming B2B message payload. You'll need to establish an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage.
-
-Download the pre-packaged API and integration implementation from Anypoint Exchange.[link from Anypoint Exchange for the pre-packaged API and integration app from Manik / Pablo]
-
-Make a note of the API address configurations (host, port, path, and so on) that you will use to associate the storage within Anypoint Partner Manager.
-
-Once the API is setup, log into Anypoint Platform and select Partner Manager. From here you can configure the path to your storage.
-
-You are now ready to begin setting up message flows between you and your partners.
 
 
 == See Also
