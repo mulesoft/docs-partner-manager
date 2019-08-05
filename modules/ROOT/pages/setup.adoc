@@ -1,10 +1,11 @@
-= Anypoint Partner Manager Setup
+= Set up the Anypoint Platform Partner Manager 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
+Partner Manager can be used by different people in your organization. For example, those that design and test message flows (message flow developers), those who manage activity that is part of production (operations managers), and those who optimize back end services and performance (IT managers).
+To configure the system, you should be familiar with these concepts before setting up Partner Manager:
 
-You should be familiar with these concepts before setting up Partner Manager:
 
 * EDI message formats and schemas.
 * Dataweave transformations.
