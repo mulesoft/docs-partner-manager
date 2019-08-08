@@ -1,11 +1,18 @@
-= B2B Solutions and Overview
+= Partner Manager Overview
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
 == Overview
+Partner Manager allows you to enable your system to receive a wide range of messages from your partners by dynamically applying rules and configuration data. You can support new transaction types without having to develop, test, or deploy new Mule Runtime flows.
 
-B2B (Business-to-Business) is the use of API's or Electronic Data Interchange (EDI) by enterprises to carry out business transactions such as purchasing goods from one another. B2B messages are typically sent over transports such as HTTP(s), FTP, FTPS, SFTP, JMS, and exchanges such as AS2. MuleSoft's B2B solutions integrate seamlessly into the Mule runtime.
+First, you set yourself up as a host partner, then you create a message flow between your partner and yourself. The message flow is the path along which the message travels from a source through the map to its target. 
+The single communication between two trading partners containing one or more messages is called a transmission. 
+
+The setup steps are: Receiving partner info > receiving endpoint > source message type > document map > target host.
+
+For example, a distributor could group a set of purchase orders sending them in one transmission to a supplier trading partner.
+
 
 == Anypoint Partner Manager
 
@@ -17,5 +24,35 @@ Through its web interface, Anypoint Partner Manager enables effective setup and 
 
 // * Set up message flows to receive and send messages between your systems and your partners.
 // * View and monitor how partner messages are being processed in the system in case of failure in order to take corrective action.
+
+== Partner Manager Setup Checklist
+
+Before you set up your message flows to send and receive messages with your partners, you'll need to collect some information from them. You’ll also need to understand how your backend systems work. Use this checklist to help organize the information you need to gather for entering into AnyPoint Partner Manager later.
+
+* Information needed for each trading partner:
+
+** Partner name (usually the name of the company).
+
+** Identifiers (such as the AS2 Identifier, X12 ISA, and so on).
+
+** Message formats to send to one another (such as X12, and so on), and any associated validations with the need for acknowledgment (such as TA1, 997, 999, and so on).
+
+** Message types to use. For example, a purchase order in X12 is an 850 mesage. You also need to know which X12 version to use in your transactions (such as 004010, 005010, and so on).
+
+** The digital certificate (such as X.509).
+
+** Endpoints, depending on the direction of interactions (send/receive) you want to have with your partner.
+
+* Information you'll need as the host organization:
+
+** Endpoints, depending on the direction of interactions with your partner.
+
+** Identifiers (such as the AS2 Identifier, X12 ISA, and so on).
+
+** The digital certificate (such as X.509).
+
+** EDI message type preferences for your organization. [Example?]
+
+** Storage for your B2B message payloads.
 
 
