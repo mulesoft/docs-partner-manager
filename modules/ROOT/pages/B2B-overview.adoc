@@ -17,6 +17,18 @@ For example, a distributor could group a set of purchase orders sending them in 
 
 Before you set up your message flows to send and receive messages with your partners, you'll need to collect some information from them. You’ll also need to understand how your backend systems work. Use this checklist to help organize the information you need to gather for entering into AnyPoint Partner Manager later.
 
+* Information you'll need as the host organization:
+
+** Endpoints, depending on the direction of interactions with your partner.
+
+** Identifiers (such as the AS2 Identifier, X12 ISA, and so on).
+
+** The digital certificate (such as X.509).
+
+** EDI message type preferences for your organization. [Example?]
+
+** Storage for your B2B message payloads.
+
 * Information needed for each trading partner:
 
 ** Partner name (usually the name of the company).
@@ -31,16 +43,6 @@ Before you set up your message flows to send and receive messages with your part
 
 ** Endpoints, depending on the direction of interactions (send/receive) you want to have with your partner.
 
-* Information you'll need as the host organization:
 
-** Endpoints, depending on the direction of interactions with your partner.
-
-** Identifiers (such as the AS2 Identifier, X12 ISA, and so on).
-
-** The digital certificate (such as X.509).
-
-** EDI message type preferences for your organization. [Example?]
-
-** Storage for your B2B message payloads.
 
 
