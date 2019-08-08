@@ -13,18 +13,6 @@ The setup steps are: Receiving partner info > receiving endpoint > source messag
 
 For example, a distributor could group a set of purchase orders sending them in one transmission to a supplier trading partner.
 
-
-== Anypoint Partner Manager
-
-Through its web interface, Anypoint Partner Manager enables effective setup and management of a large number of trading partners. Additionally, via the ability to track and report on transaction progress, Partner Manager drives greater operational efficiency while managing B2B transactions. With Anypoint Partner Manager you can:
-
-* Perform technical on-boarding of your partners.
-* Set up message flows to receive messages between your systems and your partners.
-* View transmission information for all message flows.
-
-// * Set up message flows to receive and send messages between your systems and your partners.
-// * View and monitor how partner messages are being processed in the system in case of failure in order to take corrective action.
-
 == Partner Manager Setup Checklist
 
 Before you set up your message flows to send and receive messages with your partners, you'll need to collect some information from them. You’ll also need to understand how your backend systems work. Use this checklist to help organize the information you need to gather for entering into AnyPoint Partner Manager later.
