@@ -43,6 +43,9 @@ Before you set up your message flows to send and receive messages with your part
 
 ** Endpoints, depending on the direction of interactions (send/receive) you want to have with your partner.
 
+== See Also
 
+* xref:create-receive-message-flow.adoc[Create Receive Message Flows]
+* xref:activity-tracking.adoc[Activity Tracking]
 
 
