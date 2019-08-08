@@ -104,7 +104,9 @@ Once that's complete, you can begin to set up message flows between you and your
 
 
 == See Also
-* xref:create-receive-message-flow.adoc[Create Receive Message Flows]
-* xref:activity-tracking.adoc[Activity Tracking]
+* xref:B2B-overview.adoc[Partner Manager Configuration]
+
+// * xref:create-receive-message-flow.adoc[Create Receive Message Flows]
+// * xref:activity-tracking.adoc[Activity Tracking]
 
 |===
