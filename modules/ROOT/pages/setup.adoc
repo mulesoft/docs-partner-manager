@@ -101,7 +101,6 @@ Once the API is setup, go to Partner Manager and configure the path to your stor
 
 Once that's complete, you can begin to set up message flows between you and your configured partners.
 
-
 == See Also
 * xref:B2B-overview.adoc[Partner Manager Configuration]
 
