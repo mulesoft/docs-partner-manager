@@ -1,6 +1,6 @@
 .xref:index.adoc[Anypoint Partner Manager]
 * xref:index.adoc[Partner Manager]
- ** xref:setup.adoc[Anypoint Partner Manager Setup]
+* xref:setup.adoc[Anypoint Partner Manager Setup]
  ** xref:b2b-overview.adoc[Anypoint Partner Manager Configuration]
 * xref:configure-message-flows.adoc[Configure Message Flows]
  ** xref:endpoints.adoc[Endpoints]
