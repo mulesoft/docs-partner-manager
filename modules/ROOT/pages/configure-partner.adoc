@@ -1,0 +1,26 @@
+= Configure Partner
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+The only information you need to create a new trading partner is its name and one identifier.
+Once created each partner has its own page and shows up in the partners list.
+To find a partner, search the partners list by name, and clicking on the name of the partner.
+
+From a partner page you can:
+
+** Add B2B identifiers
+** Add certificates your organization owns
+** Configure global validation and acknowledgement settings, and ...
+
+== To configure the host:
+. From within your environment, click Partners from the left-hand navigation. +
+. Click the *New Partner* button and fill in the identifier. +
+
+From here you can check the Reference section for detailed information on various settings.
+
+== See Also
+
+Reference
+//* xref:Reference.adoc[Reference]
+//* xref:activity-tracking.adoc[Activity Tracking]
