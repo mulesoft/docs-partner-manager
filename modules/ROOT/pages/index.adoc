@@ -4,11 +4,9 @@ include::_attributes.adoc[]
 endif::[]
 :keywords: b2b, edi, portal
 
-== B2B Overview
+== Overview
 
-B2B (Business-to-Business) is the use of API's or Electronic Data Interchange (EDI) by enterprises to carry out business transactions such as purchasing goods from one another. B2B messages are typically sent over transports such as HTTP(s), FTP, FTPS, SFTP, JMS, and exchanges such as AS2. MuleSoft's B2B solutions integrate seamlessly into the Mule runtime.
-
-== About Anypoint Partner Manager
+Partner Manager allows B2B (Business-to-Business) is the use of API's or Electronic Data Interchange (EDI) by enterprises to carry out business transactions such as purchasing goods from one another. B2B messages are typically sent over transports such as HTTP(s), FTP, FTPS, SFTP, JMS, and exchanges such as AS2. MuleSoft's B2B solutions integrate seamlessly into the Mule runtime.
 
 Through its web interface, Anypoint Partner Manager enables effective setup and management of a large number of trading partners. Additionally, via the ability to track and report on transaction progress, Partner Manager drives greater operational efficiency while managing B2B transactions. With Anypoint Partner Manager you can:
 
@@ -18,6 +16,11 @@ Through its web interface, Anypoint Partner Manager enables effective setup and 
 
 // * Set up message flows to receive and send messages between your systems and your partners.
 // * View and monitor how partner messages are being processed in the system in case of failure in order to take corrective action.
+
+
+Partner Manager can be used by different people in your organization. For example, those that design and test message flows (message flow developers), those who manage activity that is part of production (operations managers), and those who optimize back end services and performance (IT managers). 
+
+
 
 == See Also
 
