@@ -13,7 +13,7 @@ From a partner page you can:
 ** Add certificates your organization owns
 ** Configure global validation and acknowledgement settings, and ...
 
-== To configure the host:
+== To configure the partner:
 . From within your environment, click Partners from the left-hand navigation. +
 . Click the *New Partner* button and fill in the identifier. +
 
