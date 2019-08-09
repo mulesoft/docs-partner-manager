@@ -1,14 +1,18 @@
-= Partner Manager
+= Anypoint Partner Manager
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :keywords: b2b, edi, portal
 
+Anypoint Partner Manager allows B2B (Business-to-Business) message exchange using API's and Electronic Data Interchange (EDI) formats. 
+
 == Overview
 
-Partner Manager allows B2B (Business-to-Business) is the use of API's or Electronic Data Interchange (EDI) by enterprises to carry out business transactions such as purchasing goods from one another. B2B messages are typically sent over transports such as HTTP(s), FTP, FTPS, SFTP, JMS, and exchanges such as AS2. MuleSoft's B2B solutions integrate seamlessly into the Mule runtime.
+Enterprises use Anypoint Partner Manager to carry out business transactions (such as purchasing goods from one another) typically sent over transports such as HTTP(s), SFTP, and exchanges such as AS2. You can use message formats such as X12 and JSON. It integrates into the Mule runtime.
 
-Through its web interface, Anypoint Partner Manager enables effective setup and management of a large number of trading partners. Additionally, via the ability to track and report on transaction progress, Partner Manager drives greater operational efficiency while managing B2B transactions. With Anypoint Partner Manager you can:
+Through its web interface, Anypoint Partner Manager enables effective setup and management of a large number of trading partners. Additionally, via the ability to track and report on the flow of messages and transmissions, Anypoint Partner Manager drives greater operational efficiency while managing B2B transactions. 
+
+With Anypoint Partner Manager you can:
 
 * Perform technical on-boarding of your partners.
 * Set up message flows to receive messages between your systems and your partners.
@@ -17,10 +21,11 @@ Through its web interface, Anypoint Partner Manager enables effective setup and 
 // * Set up message flows to receive and send messages between your systems and your partners.
 // * View and monitor how partner messages are being processed in the system in case of failure in order to take corrective action.
 
-
 Partner Manager can be used by different people in your organization. For example, those that design and test message flows (message flow developers), those who manage activity that is part of production (operations managers), and those who optimize back end services and performance (IT managers). 
 
+In order to use Partner Manager you'll need to be familiar with EDI message formats, and how to create Dataweave transformations. 
 
+To get started, have your Anypoint Platform administrator follow the Setup instructions.
 
 == See Also
 
