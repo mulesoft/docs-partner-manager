@@ -8,7 +8,7 @@ Anypoint Partner Manager allows B2B (Business-to-Business) message exchange usin
 
 == Overview
 
-Enterprises use Anypoint Partner Manager to carry out business transactions (such as purchasing goods from one another) typically sent over transports such as HTTP(s), SFTP, and exchanges such as AS2. It integrates into the Mule runtime.
+Enterprises use Anypoint Partner Manager to carry out business transactions (such as purchasing goods from one another) typically sent over transports such as HTTP(s), SFTP, and exchanges such as AS2. You can use message formats such as X12 and JSON. It integrates into the Mule runtime.
 
 Through its web interface, Anypoint Partner Manager enables effective setup and management of a large number of trading partners. Additionally, via the ability to track and report on the flow of messages and transmissions, Anypoint Partner Manager drives greater operational efficiency while managing B2B transactions. 
 
