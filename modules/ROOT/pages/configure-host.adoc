@@ -1,0 +1,25 @@
+= Configure Host
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Your organization is considered the host partner in Anypoint Partner Manager.
+
+Within host page you can:
+
+** Add B2B identifiers
+** Add certificates your organization owns
+** Configure global validation and acknowledgement settings, and
+** Configure the storage location for transmission payloads.
+
+== To configure the host:
+. From within your environment, select name of your organization from the left-hand navigation. +
+. Click the *New Partner* button and fill in the receiving endpoint. +
+
+From here you can check the Reference section for detailed information on various settings.
+
+== See Also
+
+Reference
+//* xref:Reference.adoc[Reference]
+//* xref:activity-tracking.adoc[Activity Tracking]

@@ -1,51 +1,55 @@
-= Partner Manager Configuration
+= Use Partner Manager
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-== Overview
-Partner Manager allows you to enable your system to receive a wide range of messages from your partners by dynamically applying rules and configuration data. You can support new transaction types without having to develop, test, or deploy new Mule Runtime flows.
+== Get Ready
 
-First, you set yourself up as a host partner, then you create a message flow between your partner and yourself. The message flow is the path along which the message travels from a source through the map to its target. 
-The single communication between two trading partners containing one or more messages is called a transmission. 
+You'll need to perform some tasks before you can begin transmitting information with your partners.
+First, you set yourself up as a host partner, then configure your partners, and finally create a message flow between you and your partners. 
 
-The setup steps are: Receiving partner info > receiving endpoint > source message type > document map > target host.
+A transmission is a single communmication event where a transfer of a payload which may contain multiple messages (in the X12 standard, messages are the same as transaction sets). A message flow is the path along which a message travels from a source (transformed by a map) and routed to its target.
 
-For example, a distributor could group a set of purchase orders sending them in one transmission to a supplier trading partner.
+For example, a distributor might group a set of purchase orders by sending them in one transmission to a supplier trading partner.
 
-== Partner Manager Setup Checklist
+== Checklist
 
-Before you set up your message flows to send and receive messages with your partners, you'll need to collect some information from them. You’ll also need to understand how your backend systems work. Use this checklist to help organize the information you need to gather for entering into AnyPoint Partner Manager later.
+Before you configure your message flows to send and receive messages with your partners, you'll need to collect some information from them.
+You’ll also need an understanding of how your backend systems work.
+Use this checklist to help organize the information you need to gather before you configure your host, partner, and message flows.
 
 * Information you'll need as the host organization:
 
-** Endpoints, depending on the direction of interactions with your partner.
+** B2B Identifiers (such as the AS2 Identifier, X12 ISA, and so on).
 
-** Identifiers (such as the AS2 Identifier, X12 ISA, and so on).
+** Endpoints - there are three types of endpoints you have a host: 1. Endpoints to recieve transmissions from your partners, 2. Endpoints where you route messages from your partners to a target at your backend systems.
+3. Endpoints that are sources of messages from your backend system that you send to your partners.
 
-** The digital certificate (such as X.509).
+** Digital certificates (such as X.509).
 
-** EDI message type preferences for your organization. [Example?]
+** EDI message type preferences for your organization.
 
 ** Storage for your B2B message payloads.
+
+** Any Dataweave transformation maps your organization uses for EDI.
 
 * Information needed for each trading partner:
 
 ** Partner name (usually the name of the company).
 
-** Identifiers (such as the AS2 Identifier, X12 ISA, and so on).
+** B2B Identifiers (such as the AS2 Identifier, X12 ISA, and so on).
 
-** Message formats to send to one another (such as X12, and so on), and any associated validations with the need for acknowledgment (such as TA1, 997, 999, and so on).
+** Partner Endpoints - where you send transmissions to your partners, including acknowledgements.
 
-** Message types to use. For example, a purchase order in X12 is an 850 mesage. You also need to know which X12 version to use in your transactions (such as 004010, 005010, and so on).
+** EDI message format preferences for your partner (such as X12),
+and any associated validations that require an acknowledgment (such as TA1, 997, 999, and so on).
 
-** The digital certificate (such as X.509).
+** Message types to use. For example, a purchase order in X12 is an 850 message.
+You also need to know the X12 version to use in your transactions (such as 004010, 005010, and so on).
 
-** Endpoints, depending on the direction of interactions (send/receive) you want to have with your partner.
+** Your partner's digital certificate.
 
 == See Also
 
 * xref:create-receive-message-flow.adoc[Create Receive Message Flows]
 * xref:activity-tracking.adoc[Activity Tracking]
-
-

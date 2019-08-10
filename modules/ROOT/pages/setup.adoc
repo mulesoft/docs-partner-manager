@@ -1,4 +1,4 @@
-= Set up the Anypoint Platform for Partner Manager 
+= Set up the Anypoint Platform for Partner Manager
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -6,12 +6,11 @@ endif::[]
 Partner Manager can be used by different people in your organization. For example, those that design and test message flows (message flow developers), those who manage activity that is part of production (operations managers), and those who optimize back end services and performance (IT managers).
 To configure the system, you should be familiar with these concepts before setting up Partner Manager:
 
-
 * EDI message formats and schemas.
 * Dataweave transformations.
 * Digital Certificates such as X.509 certificates in PKCS12 file format for the AS2 transport protocol.
 * Configuration of protcols such as AS2, SFTP, HTTPS.
-* Understanding of organizations and environments in the context of Access Management and Runtime Manager. 
+* Understanding of organizations and environments in the context of Access Management and Runtime Manager.
 
 == Minimum Requirements
 
@@ -19,7 +18,7 @@ Verify that you have the following software and other requirements.
 
 * Mule runtime engine 4.1.1 or higher. Make sure you have the needed Mule runtime Core/Vcore capacity to handle the B2B transaction load. If you are unsure about the capacity you need to handle B2B transactions, please contact your MuleSoft account representative for assistance.
 
-* Storage for your B2B message payloads. 
+* Storage for your B2B message payloads.
 
 * Anypoint Studio 7.1 or higher for creating DataWeave maps.
 
@@ -47,7 +46,7 @@ Partner Manager Admin (Production) - Can perform all operations across Partner M
 
 Partner Manager Admin (Sandbox) - Can perform all operations across Partner Manager for all Sandbox environments.
 
-. Verify that you have access to Partner Manager. 
+. Verify that you have access to Partner Manager.
 This means that you must have the required entitlements and have assigned the `Partner Manager Administrator` role in Access Management for the environment.
 
 . Setup the required Storage API (this will be a link to Exchange with description and RAML). The storage API should be reachable from the Mule Runtime network.
@@ -74,7 +73,7 @@ Note: Make sure the ports that are exposed as inbound endpoints are configured i
 wrapper.java.additional.20=-Db2bAnypointUsername={{username from Step 1}}
 wrapper.java.additional.21=-Db2bAnypointPassword={{password from Step 1}}
 
-# Increase the MetaSpace 
+# Increase the MetaSpace
 wrapper.java.additional.7=-XX:MetaspaceSize=1256m
 wrapper.java.additional.8=-XX:MaxMetaspaceSize=2256m
 
@@ -91,7 +90,7 @@ wrapper.java.maxmemory=3024
 
 === Connect to Payload Storage
  Within Partner Manager host profile, configure the Storage API with the host, port and path from your Storage API implementation
- 
+
 Anypoint Partner Manager enables you to connect your own storage (such as a database, Amazon S3, Azure Blob Storage, and so on) to store the transmission content such as incoming and outgoing B2B messages and acknowledgments. You'll need to establish an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage.
 
 Download the pre-packaged API and implementation template from Anypoint Exchange.[link from Anypoint Exchange for the pre-packaged API and integration app from Manik / Pablo]
@@ -102,11 +101,8 @@ Once the API is setup, go to Partner Manager and configure the path to your stor
 
 Once that's complete, you can begin to set up message flows between you and your configured partners.
 
-
 == See Also
 * xref:B2B-overview.adoc[Partner Manager Configuration]
 
 // * xref:create-receive-message-flow.adoc[Create Receive Message Flows]
 // * xref:activity-tracking.adoc[Activity Tracking]
-
-|===
