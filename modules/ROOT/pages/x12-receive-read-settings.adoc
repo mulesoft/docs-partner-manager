@@ -1,167 +1,166 @@
-= X12 Settings: Receive from Partners 
+= Receive from Partners
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+
+Refer to these as you set up your X12 settings to receive messages from your partners.
+There are two levels of settings, global and partner.
+Global level settings control all X12 messages received from all partners.
+Partner level settings are optionally configured for each partner and override global settings.
+
+== Validation Settings
+
+Any of these options indicated by a checked box (yes) setting means that all of the X12 documents meet this condition criteria and receive a 997 failure message.
+
+[%header,cols="3s,7a"]
+|===
+|Failed Document |Default
+
+|When the value length is outside allowed range.
+|
+
+`Yes`
+
+|When an invalid character is in the value.
+|
+
+`Yes`
+
+|If the value is repeated too many times.
+|
+
+`Yes`
+
+|If unknown segments are used.
+|
+
+`No`
+
+|When the segments are out of order.
+|
+
+`Yes`
+
+|When there are too many repeats of a segment.
+|
+
+`Yes`
+
+|When unused segments are included.
+|
+
+`Yes`
+
+== Acknowledgement Settings
+
+Use these to set the type of acknowledgment needed for the exchange.
+[%header,cols="3s,7a"]
+|===
+|Setting |Description, Values, Default
+
+|Interchange Acknowledgement (TA1) Requested
+|Provides a Technical Acknowledgment (TA1) to the Interchange sender. TA1 is typically used with HIPAA messages, and the TA1 Acknowledgement is sent inside an ISA/IEA envelope.
+
+Valid values::
+N/A
+
+Default::
+
+`None`
+
+|Functional Acknowledgement Requested
+|Provides a functional Acknowledgement with the exchange. There are two types: a 997 and a 999.
+
+Valid values::
+N/A
+
+Default::
+
+`Enabled`
+
+|997 Requested
+|Used to:
+
+* acknowledge receipt of an interchange or a functional group
+* accept or reject one or more functional groups or one or more transactions
+* verify and report compliance with the standard.
+
+Valid values::
+Business rules associated with 997:
+* If an interchange contains multiple groups, a 997 acknowledgment is returned for each group.
+* If a group contains multiple transaction sets, the acknowledgment for that group contains multiple AK2 loops,
+one for each transaction set, if AK2 loops are generated for accepted transaction sets.
+
+Default::
+
+`Enabled`
+
+|999 Requested
+|Replaces the 997 Functional Acknowledgement document for use in Healthcare.
+
+Valid values::
+N/A
+
+Default::
+
+`Disabled`
+
+== Control Numbers Settings
+
+A `Yes`, or `On` setting means that certain control number settings can be blocked. For any of these transaction set numbers set to `Yes`, or `On`, a transmission check can be set to a minimum of 1 day to a maximum of 60 days. The default is 30 days.
+
+[%header,cols="3s,7a"]
+|===
+|Setting Name |Description and Default
+
+|Unique Interchange Control Number (ISA13)
+|Checks that the received interchange does not match the Unique Interchange Control Number (ISA13). If a match is detected, the duplicate interchange is blocked.
+
+Default::
+
+`On`
+
+|Unique Group Control Number (GS06)
+|Checks that the received interchange does not match the Unique Group Control Number (GS06). If a match is detected, the duplicate group control number is blocked.
+
+Default::
+
+`Off`
+
+|Unique Transaction Set Control Number (ST02)
+|Checks that the received interchange does not match the Transaction Set Control Number (ST02). If a match is detected, the duplicate transaction set control number is blocked.
+
+Default::
+
+`Off`
+
+== Character Set Settings
+
+Use these settings to define the character set and encoding on the server.
 
 [%header,cols="3s,7a"]
 |===
 |Setting |Description, Values, Default
 
-|Envelope Headers (ISA)
-|Auth. Info. Qualifier (ISA 01) +
-Most common value is *00*. If another value is specified, then ISA 02 is read-only.
+|Character Set
+|Choose from three options for setting the character set encoding on the server.
 
 Valid values::
 
-`00`
-`01`
-`02`
-`03`
-`04`
-`05`
-`06`
+`Basic`, `Extended`, `Unrestricted`
 
 Default::
 
-`00`
+`Extended`
 
-
-|Authorization Information (ISA 02)
-|Provide Authorization information value. This is read-only if the value selected for ISA 01 is 00. Otherwise, a minimum of one alphanumeric character and a maximum of 10. Required only if the value of ISA01 = 00 +
-
-Valid values::
-`Alphanumeric`
-
-Default::
-`None`
-
-
-|Security Inf. Qualifier (ISA 03)
-|Select the required value from the dropdown listbox (if appropriate for your organization). Most common value is `00`. If another value is specified, then ISA 04 is read-only.+
+|Character Encoding
+|Choose from three encoding schemes for character sets on the server.
 
 Valid values::
 
-`00`
-`01`
+`ASCII`, `ISO8859_1`, `UTF-8`
 
 Default::
 
-`00`
-
-NOTE:	If the value in (ISA 03) is `01`, then a valid password value is required in ISA 04.
-
-
-|Security Information (ISA 04)
-|Provide the Security information value. This is read-only if the value selected for ISA 03 is 00. Otherwise, a minimum of one alphanumeric character and a maximum of 10. Required only if value of ISA03 = `00` +
-
-Valid values::
-
-`Alphanumeric`
-
-Default::
-`None`
-
-
-|Interchange sender ID qualifier (ISA 05)
-|Read-only field. +
-Only available for configuring X12 for the Trading Partner.
-This required field should reflect the value of the Qualifier field within the identifier for the Trading Partner that was created when the Trading Partner was configured.
-
-Valid Value?::
-`None` 
-
-
-|Interchange sender ID (ISA 06)
-|Read-only field. +
-Only available for configuring X12 for the Trading Partner.
-This required field should reflect the value of the Value field within the identifier for the Trading Partner that was created when the Trading Partner was configured.
-
-Valid values::
-
-`Alphanumeric`
-
-Default::
-`None` 
-
-
-|Interchange receiver ID qualifier (ISA 07)
-|Read-only field. +
-This required field should reflect the value of Qualifier field within identifier added for Host Partner. +
-
-Valid values::
-
-`Alphanumeric`
-
-Default::
-`None` 
-
-
-|Interchange receiver ID (ISA 08)
-|Read-only field. +
-This required field should reflect the value of the “Value field” within identifier added for “Host Partner”. +
-
-Valid values::
-
-`Alphanumeric`
-
-Default::
-`None` 
-
-
-|Parser Settings (Failure conditions)
-
-|* `Fail document when value length outside allowed range`
-* `Fail document when invalid character in value`
-* `Fail document if value is repeated too many times`
-* `Fail document if unknown segments are used`
-* `Fail document when segments are out of order`
-* `Fail document when unused segments are included`
-* `Fail document when too many repeats of a segment`
-* `Fail document when unused segments are included`
-
-Each of these options identifies a condition for which Partner Manager can fail an inbound document from a trading partner. If any of these options selected, and an X12 document meets the condition in a selected option, a 997 message stating a failure is sent.
-
-|Parser Settings (Other options)
-
-|Require 997::
-If selected, a 997 message is sent regardless of whether or not an error condition is met.
-
-Generate 999::
-If a 999 acknowledgement is needed, select this. The default X12 acknowledgement is 997.
-
-|Character Set and Encoding
-
-|Drop-down listbox enabling choice of three character sets.
-
-Valid values::
-
-* *Basic* +
-This character set includes:
-** Uppercase letters `A` through `Z`
-** Digits `0` through `9`
-** Special characters: +
-`! “ & ’ ( ) * + , - . / : ; ? =`
-** The character created by pressing the space bar.
-
-* *Extended* +
-This character set includes:
-** All characters in the Basic character set
-** Lowercase letters `a` through `z`
-** Select language characters
-** Other special characters: +
-`% @ [ ] _ { } \ <pipe> < > ~ # $`
-
-* *Unrestricted* character set - includes all characters.
-
-Default::
-`Basic`
-
-|Control Number Settings
-
-|These settings, when selected, require unique inbound *ISA 13*, *GS 06* and *ST 02* control numbers on all inbound documents for a trading partner.
-
-* `Require unique ISA control numbers (ISA 13)`
-* `Require unique GS control numbers (GS 06)`
-* `Require unique transaction set control numbers (ST 02)`
-
+`ISO8859_1`
 |===

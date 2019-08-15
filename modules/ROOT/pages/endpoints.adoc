@@ -3,7 +3,14 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-A source and target endpoint are the entry points to a service, a process, or a queue or topic destination in service-oriented architecture. In APM, an endpoint defines the protocol, address, and other details specific to an exchange of messages between partners.
+There are three types of endpoints within AnyPoint Partner Manager.
+From the Host side:
+* To receive transmissions from your partners
+* Where you route messages from your partners to a target at your backend systems.
+* Sources of messages from your backend system that you send to your partners.
+
+From the Partner side:
+* Where you send transmissions to your partners, including acknowledgments.
 
 == Endpoint Name, Protocol and Type
 
@@ -70,4 +77,3 @@ Choose the section that corresponds to the Protocol-Type of the Endpoint for whi
 * <<AS2 Receive Settings>>
 * <<SFTP Send Settings>>
 * <<SFTP Receive Settings>>
-
