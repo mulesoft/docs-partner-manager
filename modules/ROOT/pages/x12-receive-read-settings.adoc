@@ -16,7 +16,7 @@ Any of these options indicated by a checked box (yes) setting means that all of 
 |===
 |Failed Document |Default
 
-|When the value length is outside the allowed range.
+|When the value length is outside allowed range.
 |
 
 `Yes`
@@ -26,12 +26,12 @@ Any of these options indicated by a checked box (yes) setting means that all of 
 
 `Yes`
 
-|When the value is repeated too many times.
+|If the value is repeated too many times.
 |
 
 `Yes`
 
-|When unknown segments are used.
+|If unknown segments are used.
 |
 
 `No`
@@ -41,7 +41,7 @@ Any of these options indicated by a checked box (yes) setting means that all of 
 
 `Yes`
 
-|When a segment is repeated too many times.
+|When there are too many repeats of a segment.
 |
 
 `Yes`
@@ -88,7 +88,8 @@ Default::
 Valid values::
 Business rules associated with 997:
 * If an interchange contains multiple groups, a 997 acknowledgment is returned for each group.
-* If a group contains multiple transaction sets, and AK2 loops are generated for accepted transaction sets, then the acknowledgment for that group contains multiple AK2 loops, one for each transaction set.
+* If a group contains multiple transaction sets, the acknowledgment for that group contains multiple AK2 loops,
+one for each transaction set, if AK2 loops are generated for accepted transaction sets.
 
 Default::
 
