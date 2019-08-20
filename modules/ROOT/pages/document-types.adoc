@@ -1,11 +1,11 @@
-= Document Types
+= Message (Document) Types
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Configuring a document type for a partner means configuring settings specific to that document type standard.
+Configuring a message type for a partner means configuring settings specific to that document type standard.
 
-== Format (X12)
+== X12
 
 
 [%header,cols="3s,7a"]
@@ -45,7 +45,7 @@ None
 
 |Default Checkboxes
 
-|Select either of these checkboxes in order to use the values selected in the corresponding sections x12-Settings.
+|Select either of these checkboxes to use the values selected in the corresponding sections for X12 Settings.
 
 Deselect either of these boxes if you want to choose different values than those chosen as defaults.
 
