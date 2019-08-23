@@ -3,24 +3,25 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-The only information you need to create a new trading partner is its name and one identifier.
-Once created each partner has its own page and shows up in the partners list.
-To find a partner, search the partners list by name, and clicking on the name of the partner.
+The only information you need to create a new trading partner is the name and a single identifier.
+Once created, each partner has its own page and shows up in the Partners list.
+To find a partner, search the Partners list by name, and select the name of the partner.
 
 From a partner page you can:
 
-** Add B2B identifiers
-** Add certificates your organization owns
-** Configure global validation and acknowledgement settings, and ...
+* Add B2B identifiers
+* Add certificates your organization owns
+* Configure global validation and acknowledgement settings, and ...
 
 == To configure the partner:
-. From within your environment, click Partners from the left-hand navigation. +
-. Click the *New Partner* button and fill in the identifier. +
+. From within your Partner Manager environment, click Partners from the left-hand navigation.
+. Click the *New Partner* button and fill in the identifier.
 
 From here you can check the Reference section for detailed information on various settings.
+Once you are ready, you can configure a message flow from your partner.
 
 == See Also
 
+* xref:configure-message-flows.adoc[Create a Receive Message Flow from Your Partner]
 Reference
-//* xref:Reference.adoc[Reference]
-//* xref:activity-tracking.adoc[Activity Tracking]
+// * xref:Reference.adoc[Reference]
