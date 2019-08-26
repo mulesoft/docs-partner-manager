@@ -14,7 +14,7 @@ Within host page you can:
 
 == To configure the host:
 . From within your Partner Manager environment, select name of your organization from the left-hand navigation.
-. Click the *New Partner* button and fill in the receiving endpoint.
+. Click the *New Partner* button, and fill in your receiving endpoint.
 
 From here you can refer to the Reference section for detailed information on the various settings.
 When you are ready, you can move on to configuring your partner.
