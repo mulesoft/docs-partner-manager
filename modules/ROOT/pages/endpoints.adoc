@@ -1,4 +1,4 @@
-= Endpoints
+= Endpoint Types and Protocols
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -6,11 +6,15 @@ endif::[]
 There are three types of endpoints within AnyPoint Partner Manager.
 
 From the Host side:
-* To receive transmissions from your partners
+
+* To receive transmissions from your partners.
+
 * Where you route messages from your partners to a target at your backend systems.
+
 * Sources of messages from your backend system that you send to your partners.
 
 From the Partner side:
+
 * Where you send transmissions to your partners, including acknowledgments.
 
 == Endpoint Name, Protocol and Type
