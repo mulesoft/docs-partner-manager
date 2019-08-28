@@ -13,27 +13,29 @@ Some uses for this data include:
 * Error correction.
 * Auditing.
 
-Anypoint Partner Manager enables you to monitor B2B transmission activity.
-Activity is the full set of end-to-end events (including transmission meta data, messages, and errors) involved in processing a transmission.
+Anypoint Partner Manager allows you to monitor B2B transmission activity.
+Activity is the full set of end-to-end events involved in processing a transmission. This includes transmission metadata, messages, and errors.
 
 You can:
 
-* Search for document metadata (such as filename, control number, endpoint, or date received).
-* Filter to find the specific transmission flow data.
+* Search for document metadata (such as partner name, message type, filename, control number, endpoint, or date received).
 * View and download the payload information from the transmission.
 * Review errors and acknowledgement payloads.
+// * Filter to find the specific transmission flow data.
 
 == Track Activity for Message Flows:
 
 . Open Partner Manager.
 . From within your Partner Manager environment, select Activity from the left-hand navigation. You see the activity on the message flows you created.
-. Scroll the list. If you don't see the desired message flow, type a filename, control number, endpoint, or date received in the search box.
+. Scroll the list. If you don't see the desired transmission then type a partner name, message type, filename, control number, endpoint, or date received in the search box.
 . Select the transmission. You see a summary with the File name, Control Number, Endpoint, and date and time the transmission was received.
-The Transmission Flow section shows the stages of the flow. If you see an exclamation point next to one of the stages it means that this is the place where there is an issue with the activity.
+The Transmission Flow section shows the stages of the flow including any acknowledgement you set. If you see an exclamation point in the rectangle box next to one of the stages it means that this is the place where there is an issue with the transmission. Typically, any errors can be viewed in the transmission payload. To inspect the payload:
+
 . Click the *View Payload* button to see the payload transmission.
 . Click the *Download* button to download the payload for analysis.
 . Continue for any other transmission.
 
-Refer to the Troubleshooting section for common message flow errors.
+// Refer to the Troubleshooting section for common message flow errors.
 
 == See also
+
