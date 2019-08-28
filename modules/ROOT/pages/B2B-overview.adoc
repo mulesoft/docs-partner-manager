@@ -7,7 +7,7 @@ endif::[]
 
 You'll need to perform some tasks before you can begin transmitting information with your partners.
 A transmission is a single communication event where a transfer of a payload which may contain multiple messages (in the X12 standard, messages are the same as transaction sets).
-You set yourself up as a host partner, then configure your partners, and finally create a message flow between you and your partners.
+You set yourself up as a host partner, then configure your partners, and finally create message flows between you and your partners.
 A message flow is the path along which a message travels from a source (transformed by a map) and routed to its target.
 
 For example, a distributor might group a set of purchase orders by sending them in one transmission to a supplier trading partner.
