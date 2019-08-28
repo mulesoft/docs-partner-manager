@@ -28,7 +28,7 @@ With Anypoint Partner Manager you can:
 // * View and monitor how partner messages are being processed in the system in case of failure in order to take corrective action.
 
 Partner Manager can be used by different people in your organization.
-For example, those that design and test message flows (message flow developers), those who manage an activity that is part of production (operations managers), and those who optimize back end services and performance (IT managers).
+For example, those that design and test message flows, those who manage activity in your production environment, and those who optimize backend services and performance.
 +
 In order to use Partner Manager you’ll need to be familiar with EDI message formats, and how to create Dataweave transformations.
 +
