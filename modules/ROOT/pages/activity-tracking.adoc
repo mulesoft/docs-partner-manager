@@ -21,7 +21,7 @@ You can:
 * Search for document metadata (such as filename, control number, endpoint, or date received).
 * Filter to find the specific transmission flow data.
 * View and download the payload information from the transmission.
-* Review and monitor errors and acknowledgements.
+* Review errors and acknowledgement payloads.
 
 == Track Activity for Message Flows:
 
