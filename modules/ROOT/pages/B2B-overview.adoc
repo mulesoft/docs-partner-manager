@@ -22,7 +22,7 @@ Use this checklist to help organize the information you need to gather before yo
 
 ** B2B Identifiers (such as the AS2 Identifier, X12 ISA, and so on).
 
-** Sending, Receiving, and Partner Endpoints - There are three types of endpoints within AnyPoint Partner Manager:
+** Endpoints - There are three types of endpoints within AnyPoint Partner Manager:
 - From the Host side, you need ones to receive transmissions from your partners - where you route messages from your partners to a target at your backend systems
 +
 - Sources of messages from your backend system that you send to your partners.
