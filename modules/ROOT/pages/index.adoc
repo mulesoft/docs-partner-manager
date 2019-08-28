@@ -22,7 +22,7 @@ With Anypoint Partner Manager you can:
 
 * Set up message flows to receive messages between your systems and your partners.
 
-* View transmission information for all message flows.
+* View meta information, validation errors, and all messages included with each transmission payload.
 
 // * Set up message flows to receive and send messages between your systems and your partners.
 // * View and monitor how partner messages are being processed in the system in case of failure in order to take corrective action.
