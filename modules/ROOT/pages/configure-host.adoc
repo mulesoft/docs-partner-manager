@@ -6,7 +6,7 @@ endif::[]
 Your organization is considered the host partner in Anypoint Partner Manager.
 Within the Host page, which is named after your organization, you can do the following:
 
-* B2B identifiers to uniquely identify yourself as a trading partner.
+* Add B2B identifiers to uniquely identify yourself with your partners.
 * Add certificates owned by your organization.
 * Configure global validation, acknowledgement, control number, and character set settings.
 
