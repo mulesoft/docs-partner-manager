@@ -10,7 +10,7 @@ Once created, each partner has its own page and shows up in the Partners list in
 From the Partner page you can:
 
 * Add B2B identifiers to uniquely identify your trading partners.
-* Add certificates owned by your organization.
+* Add certificates owned by your partner.
 * Configure global validation, acknowledgement, control number, and character set settings.
 
 == Configure a Partner
