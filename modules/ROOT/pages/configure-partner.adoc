@@ -4,24 +4,37 @@ include::_attributes.adoc[]
 endif::[]
 
 The only information you need to create a new trading partner is the name and a single identifier.
-Once created, each partner has its own page and shows up in the Partners list.
-To find a partner, search the Partners list by name, and select the name of the partner.
+You can add other information later.
+Once created, each partner has its own page and shows up in the Partners list in the left-hand navigation.
 
-From a partner page you can:
+From the Partner page you can:
 
-* Add B2B identifiers
-* Add certificates your organization owns
-* Configure global validation and acknowledgement settings, and ...
+* Add B2B identifiers to uniquely identify your trading partners.
+* Add certificates owned by your organization.
+* Configure global validation, acknowledgement, control number, and character set settings.
 
-== To configure the partner:
-. From within your Partner Manager environment, click Partners from the left-hand navigation.
-. Click the *New Partner* button and fill in the identifier.
+== Configure a Partner
 
-From here you can check the Reference section for detailed information on various settings.
-Once you are ready, you can configure a message flow from your partner.
+. Open Partner Manager.
+. From within your Partner Manager environment, select the name of your organization from the left-hand navigation.
+. Click the *New Partner* button and select an Identifier from the *Type* drop-down menu. This uniquely identifies you as a trading partner. For example, depending on your setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number.
+. Click *Create Partner* to create your trading partner.
++
+* To find a partner, search the Partners list by name, and select the name of the partner.
+
+You can add the following information for each trading partner from the *Partners* selection in the left-hand navigation:
+
+* About (usually the name of the company).
+
+* Your partner's digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
+
+* Change any global validation settings if you need to override a default value for a particular partner.
+
+Refer to the X12 Settings to change any of the default settings for all X12 received messages.
+
+When you are ready, you can Configure Message Flows.
 
 == See Also
 
+* xref:x12-identity-settings.adoc[X12 Settings]
 * xref:configure-message-flows.adoc[Create a Receive Message Flow from Your Partner]
-Reference
-// * xref:Reference.adoc[Reference]

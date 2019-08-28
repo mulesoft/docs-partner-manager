@@ -54,6 +54,7 @@ You also need to know the X12 version to use in your transactions (such as 00401
 ** Your partner's digital certificate.
 
 Now you are ready to configure yourself as a Host.
+
 == See Also
 
 * xref:configure-host.adoc[Configure Host]

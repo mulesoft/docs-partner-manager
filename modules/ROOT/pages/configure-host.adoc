@@ -4,23 +4,44 @@ include::_attributes.adoc[]
 endif::[]
 
 Your organization is considered the host partner in Anypoint Partner Manager.
+Within the Partner page you can add the following as a host partner:
 
-Within host page you can:
+* B2B identifiers to uniquely identify yourself as a trading partner.
+* Add certificates owned by your organization.
+* Configure global validation, acknowledgement, control number, and character set settings.
 
-** Add B2B identifiers.
-** Add certificates your organization owns.
-** Configure global validation and acknowledgement settings.
-** Configure the storage location for transmission payloads.
+== Configure the host
 
-== To configure the host:
-. From within your Partner Manager environment, select name of your organization from the left-hand navigation.
-. Click the *New Partner* button, and fill in your receiving endpoint.
+. Open Partner Manager.
+. From within your Partner Manager environment, select the name of your organization from the left-hand navigation.
+. Click the *New Partner* button and select an Identifier from the *Type* drop-down menu. This uniquely identifies you as a trading partner. For example, depending on your setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number.
+. Click *Create Partner* to create yourself as a host trading partner.
++
+You can add the following information as the host organization, by opening this from the *Partners* selection in the left-hand navigation.
 
-From here you can refer to the Reference section for detailed information on the various settings.
-When you are ready, you can move on to configuring your partner.
+* B2B Identifiers such as the AS2 Identifier, X12 ISA, X12 GS, or DUNS.
+
+* Sending, Receiving, and Partner Endpoints - There are three types of endpoints within AnyPoint Partner Manager:
+
+** From the Host side, you need ones to receive transmissions from your partners (where you route messages from your partners to a target at your backend systems).
++
+** Sources of messages from your backend system that you send to your partners.
++
+** From the Partner side, you’ll want information from where you send transmissions to your partners - including acknowledgments.
+
+* Digital certificates (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
+
+* EDI message type preferences for your organization.
+
+* Any Dataweave transformation maps your organization uses for EDI.
+
+* Storage for your B2B message payloads.
+
+Refer to X12 Settings to change any of the default settings for all X12 received messages.
+
+When you are ready, you can Configure your partner(s).
 
 == See Also
 
+* xref:x12-identity-settings.adoc[X12 Settings]
 * xref:configure-partner.adoc[Configure Partner]
-Reference
-// * xref:Reference.adoc[Reference]
