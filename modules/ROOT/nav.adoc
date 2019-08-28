@@ -9,4 +9,4 @@
  ** xref:x12-receive-read-settings.adoc[Receive from Partner]
 * xref:document-types.adoc[Message Types]
 * xref:endpoints.adoc[Endpoints]
-* xref:activity-tracking.adoc[Activity Tracking]
+* xref:activity-tracking.adoc[Track activity]
