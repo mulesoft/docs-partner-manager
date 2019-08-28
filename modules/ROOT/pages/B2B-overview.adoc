@@ -29,7 +29,7 @@ Use this checklist to help organize the information you need to gather before yo
 +
 - From the Partner side, you’ll want them from where you send transmissions to your partners, including acknowledgments.
 
-** Digital certificates (such as X.509).
+** Host digital certificates (such as X.509).
 
 ** EDI message type preferences for your organization.
 
