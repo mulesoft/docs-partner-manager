@@ -51,7 +51,7 @@ and any associated validations that require an acknowledgment (such as TA1, 997,
 ** Message types to use. For example, a purchase order in X12 is an 850 message.
 You also need to know the X12 version to use in your transactions (such as 004010, 005010, and so on).
 
-** Your partner's digital certificate.
+** Your partners' digital certificates.
 
 Now you are ready to configure yourself as a Host.
 
