@@ -14,7 +14,6 @@ Within the Host page, which is named after your organization, you can do the fol
 
 . Open Partner Manager.
 . From within your Partner Manager environment, select the name of your organization from the left-hand navigation.
-. Click the *New Partner* button and select an Identifier from the *Type* drop-down menu. This uniquely identifies you as a trading partner. For example, depending on your setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number.
 . Click *Create Partner* to create yourself as a host trading partner.
 +
 You can add the following information as the host organization, by opening this from the *Partners* selection in the left-hand navigation.
