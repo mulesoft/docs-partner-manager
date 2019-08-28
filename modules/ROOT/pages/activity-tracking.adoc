@@ -20,7 +20,7 @@ You can:
 
 * Search for document metadata (such as filename, control number, endpoint, or date received).
 * Filter to find the specific transmission flow data.
-* View and download the payload information from the receive transmission.
+* View and download the payload information from the transmission.
 * Review and monitor errors and acknowledgements.
 
 == Track Activity for Message Flows:
