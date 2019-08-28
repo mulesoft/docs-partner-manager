@@ -28,7 +28,7 @@ You can:
 . Open Partner Manager.
 . From within your Partner Manager environment, select Activity from the left-hand navigation. You see the activity on the message flows you created.
 . Scroll the list. If you don't see the desired message flow, type a filename, control number, endpoint, or date received in the search box.
-. Select the message flow. You see a summary with the File name, Control Number, Endpoint, and date and time the transmission was received.
+. Select the transmission. You see a summary with the File name, Control Number, Endpoint, and date and time the transmission was received.
 The Transmission Flow section shows the stages of the flow. If you see an exclamation point next to one of the stages it means that this is the place where there is an issue with the activity.
 . Click the *View Payload* button to see the payload transmission.
 . Click the *Download* button to download the payload for analysis.
