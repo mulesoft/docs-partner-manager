@@ -32,7 +32,7 @@ You can:
 The Transmission Flow section shows the stages of the flow. If you see an exclamation point next to one of the stages it means that this is the place where there is an issue with the activity.
 . Click the *View Payload* button to see the payload transmission.
 . Click the *Download* button to download the payload for analysis.
-. Continue for any other message flow.
+. Continue for any other transmission.
 
 Refer to the Troubleshooting section for common message flow errors.
 
