@@ -8,33 +8,25 @@ Within the Host page, which is named after your organization, you can do the fol
 
 * Add B2B identifiers to uniquely identify yourself with your partners.
 * Add certificates owned by your organization.
-* Configure global validation, acknowledgement, control number, and character set settings.
+* Configure global X12 validation settings.
+* Add storage for your B2B message payloads.
 
 == Configure the host
 
 . Open Partner Manager.
+
 . From within your Partner Manager environment, select the name of your organization from the left-hand navigation.
-+
 
-* B2B Identifiers such as the AS2 Identifier, X12 ISA, X12 GS, or DUNS.
-
-* Sending, Receiving, and Partner Endpoints - There are three types of endpoints within AnyPoint Partner Manager:
-
-** From the Host side, you need ones to receive transmissions from your partners (where you route messages from your partners to a target at your backend systems).
-+
-** Sources of messages from your backend system that you send to your partners.
-+
-** From the Partner side, you’ll want information from where you send transmissions to your partners - including acknowledgments.
-
-* Digital certificates (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
-
-* EDI message type preferences for your organization.
-
-* Any Dataweave transformation maps your organization uses for EDI.
-
-* Storage for your B2B message payloads.
-
+. From here you configure the following based on your indentifier and certificate type as well as any global settings you need to change and the location of your payload storage configuration. 
 Refer to X12 Settings to change any of the default settings for all X12 received messages.
+
+* Add your B2B Identifiers such as the AS2 Identifier, X12 ISA, X12 GS, or DUNS.
+
+* Upload any Digital certificates (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
+
+* Change any of the default global X12 validation, acknowledgement, control number, and character set settings.
+
+* Storage for your B2B message payloads. Configure the HTTPS location where you store payloads containing the messages you send to and receive from partners.
 
 When you are ready, you can Configure your partner(s).
 
