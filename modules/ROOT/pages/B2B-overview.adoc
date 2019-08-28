@@ -27,7 +27,7 @@ Use this checklist to help organize the information you need to gather before yo
 +
 - Target. As Host, your organization will have internal endpoints where you will route messages from the Partner after they are transformed in the message flow.
 +
-- From the Partner side, you’ll want them from where you send transmissions to your partners, including acknowledgments.
+- - Send. Your partners will provide you endpoint configurations to use for sending them transmissions, including acknowledgement messages like 997s.
 
 ** Host digital certificates (such as X.509).
 
