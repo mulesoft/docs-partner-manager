@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 
 Your organization is considered the host partner in Anypoint Partner Manager.
-Within the Partner page you can add the following as a host partner:
+Within the Host page, which is named after your organization, you can do the following:
 
 * B2B identifiers to uniquely identify yourself as a trading partner.
 * Add certificates owned by your organization.
