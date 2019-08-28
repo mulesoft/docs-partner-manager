@@ -19,7 +19,7 @@ Verify that you have the following software and other requirements.
 * Mule runtime engine 4.1.1 or higher. Make sure you have the needed Mule runtime Core/Vcore capacity to handle the B2B transaction load.
 If you are unsure about the capacity you need to handle B2B transactions, please contact your MuleSoft account representative for assistance.
 
-* Storage for your B2B message payloads (such as a database, Amazon S3, Azure Blob Storage, and so on).
+* Storage for your B2B transmission payloads (such as a database, Amazon S3, Azure Blob Storage, and so on).
 
 * Anypoint Studio 7.1 or higher for creating DataWeave maps.
 
