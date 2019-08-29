@@ -26,7 +26,7 @@ Refer to X12 Settings to change any of the default settings for all X12 received
 
 * Change any of the default global X12 validation, acknowledgement, control number, and character set settings.
 
-* Storage for your B2B message payloads. Configure the HTTPS location where you store payloads containing the messages you send to and receive from partners.
+* Storage for your B2B message payloads. Configure the location where you store payloads containing the messages you send to and receive from partners.
 
 When you are ready, you can Configure your partner(s).
 
