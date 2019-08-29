@@ -29,7 +29,9 @@ If you are unsure about the capacity you need to handle B2B transactions, please
 ** X12 2.0.1 or higher.
 
 * Partner Manager Requirements:
+
 ** Anypoint Platform user account with Anypoint Partner Manager access.
+
 ** Appropriate roles allocated for users to access Anypoint Partner Manager. Roles are allocated via the Access Management section in Anypoint Platform.
 
 **Note**
@@ -37,6 +39,7 @@ If you are unsure about the capacity you need to handle B2B transactions, please
 For any access or licensing issues, please contact your MuleSoft account representative for assistance.
 
 == Environment Configuration
+
 You'll need to set up and configure your environment before you begin using Partner Manager.
 
 === Allocate Partner Manager Roles
@@ -95,7 +98,8 @@ wrapper.java.maxmemory=3024
 . Start Mule runtime and verify it on Runtime Manager.
 
 === Connect to Payload Storage
- Within the Partner Manager host profile, configure the Storage API with the host, port, and path from your Storage API implementation.
+
+Within the Partner Manager host profile, configure the Storage API with the host, port, and path from your Storage API implementation.
 
 Anypoint Partner Manager enables you to connect your own storage (such as a database, Amazon S3, Azure Blob Storage, and so on) to store the transmission content such as incoming and outgoing B2B messages and acknowledgments.
 You'll need to establish an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage.
@@ -106,9 +110,10 @@ Make a note of the API address configurations (host, port, path and authenticati
 
 Once the API is set up, go to Partner Manager and configure the path to your storage from your Host Partner profile from the left-hand section.
 
-Once that's complete, go to Use Partner Manager to begin to set up message flows between you and your configured partners.
+Once that's complete, see Use Anypoint Partner Manager to begin to set up message flows between you and your configured partners.
 
 == See Also
+
 * xref:B2B-overview.adoc[Use Anypoint Partner Manager]
 
 // * xref:create-receive-message-flow.adoc[Create Receive Message Flows]
