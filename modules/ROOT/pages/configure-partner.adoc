@@ -17,7 +17,7 @@ From the Partner page you can:
 == Configure a Partner
 
 . Open Partner Manager.
-. From within your Partner Manager environment, select the name of your organization from the left-hand navigation.
+. From within your Partner Manager environment, select the Partners from the left-hand navigation.
 . Click the *New Partner* button and select an Identifier from the *Type* drop-down menu. This uniquely identifies you as a trading partner. For example, depending on your setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number.
 . Click *Create Partner* to create your trading partner.
 +
