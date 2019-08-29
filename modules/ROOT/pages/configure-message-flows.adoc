@@ -27,7 +27,6 @@ You also need to know the X12 version to use in your transactions (such as 00401
 
 * The Target Endpoint
 
-There are three types of endpoints within AnyPoint Partner Manager.
 
 From the Host side:
 
