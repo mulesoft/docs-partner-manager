@@ -9,9 +9,9 @@ Once created, each partner has its own page and shows up in the Partners list in
 
 From the Partner page you can:
 
-* Add information about your trading partners along with contact info.
+* Add information about your trading partners along with contact details.
 
-* Add B2B identifiers to uniquely identify them from each other.
+* Add B2B identifiers to uniquely identify them from one another.
 
 * Add certificates owned by your partner.
 
