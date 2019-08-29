@@ -10,18 +10,22 @@ Once created, each partner has its own page and shows up in the Partners list in
 From the Partner page you can:
 
 * Add information about your trading partners along with contact info.
+
 * Add B2B identifiers to uniquely identify them from each other.
+
 * Add certificates owned by your partner.
+
 * Configure global validation, acknowledgement, control number, and character set settings.
 
 == Configure a Partner
 
 . Open Partner Manager.
+
 . From within your Partner Manager environment, select the Partners from the left-hand navigation.
+
 . Click the *New Partner* button and select an Identifier from the *Type* drop-down menu. This uniquely identifies you as a trading partner. For example, depending on your setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number.
+
 . Click *Create Partner* to create your trading partner.
-+
-* To find a partner, search the Partners list by name, and select the name of the partner.
 
 You can add the following information for each trading partner from the *Partners* selection in the left-hand navigation:
 
@@ -30,6 +34,8 @@ You can add the following information for each trading partner from the *Partner
 * Your partner's digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
 
 * Change any global validation settings if you need to override a default value for a particular partner.
+
+* To find a partner, search the Partners list by name, and select the name of the partner.
 
 Refer to the X12 Settings to change any of the default settings for all X12 received messages.
 
