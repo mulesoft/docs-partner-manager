@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 
 B2B transactions often communicate contractual obligations between companies.
-It is desirable (and often necessary) to track transmissions that are sent or received and store the transmission content as well as any metadata.
+Due to the sensitivity of this information, it is desirable (and often necessary) to track transmissions and store both transmission content and metadata.
 Metadata can be the date and time the transmission was sent or received, the identity of the partner, and the success or failure of processing.
 Some uses for this data include:
 
