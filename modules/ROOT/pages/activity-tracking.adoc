@@ -8,35 +8,41 @@ Due to the sensitivity of this information, it is desirable (and often necessary
 Metadata includes things like the date and time the transmission was sent or received, the identity of the partner, and the success or failure of processing.
 Uses for this data include:
 
-* Non-repudiation.
-* Correlation of acknowledgments.
-* Error correction.
-* Auditing.
+* Nonrepudiation
+* Correlation of acknowledgments
+* Error correction
+* Auditing
 
 Anypoint Partner Manager allows you to monitor B2B transmission activity.
 Activity is the full set of end-to-end events involved in processing a transmission. This includes transmission metadata, messages, and errors.
 
 You can:
 
-* Search for document metadata (such as partner name, message type, filename, control number, endpoint, or date received).
-* View and download the payload information from the transmission.
-* Review errors and acknowledgement payloads.
-// * Filter to find the specific transmission flow data.
+* Search for document metadata (such as partner name, message type, filename, control number, endpoint, or date received)
+* View and download the payload information from the transmission
+* Review errors and acknowledgement payloads
+// * Filter to find the specific transmission flow data
 
-== Track Activity for Message Flows:
+Track Activity for Message Flows:
 
 . Open Partner Manager.
-. From within your Partner Manager environment, select Activity from the left-hand navigation. You see the activity on the message flows you created.
+
+. From within your Partner Manager environment, select Activity from the left-hand navigation.
+
 . Scroll the list for the transmission you are interested in. 
 If you do not see that transmission, use the search box to find a partner name, message type, filename, control number, endpoint, or date received.
+
 . Select the transmission and review the summary information.
+
 . Scan the Transmission Flow section for an exclamation point (!) in any of the rectangle boxes next to the displayed flow stages, indicating an issue with the transmission.
 
 . Click the *View Payload* button to see the payload transmission.
-. Click the *Download* button to download the payload for analysis.
-. Continue for any other transmission.
+
+. Click the *Download* button to download the payload and troubleshoot the source of the error.
+
+.  Repeat steps to monitor another transmission.
 
 // Refer to the Troubleshooting section for common message flow errors.
 
-== See also
+// == See also
 
