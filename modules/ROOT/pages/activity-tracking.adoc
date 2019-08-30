@@ -29,7 +29,7 @@ You can:
 . From within your Partner Manager environment, select Activity from the left-hand navigation. You see the activity on the message flows you created.
 . Scroll the list for the transmission you are interested in. 
 If you do not see that transmission, use the search box to find a partner name, message type, filename, control number, endpoint, or date received.
-. Select the transmission. You see a summary with the File name, Control Number, Endpoint, and date and time the transmission was received.
+. Select the transmission and review the summary information.
 The Transmission Flow section shows the stages of the flow including any acknowledgement you set. If you see an exclamation point in the rectangle box next to one of the stages it means that this is the place where there is an issue with the transmission. Typically, any errors can be viewed in the transmission payload. To inspect the payload:
 
 . Click the *View Payload* button to see the payload transmission.
