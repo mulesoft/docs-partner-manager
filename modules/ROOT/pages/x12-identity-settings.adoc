@@ -19,9 +19,22 @@ Yes
 Valid values::
 
 * `01 (DUNS Number)`
+* `02 (SCAC - Standard Carrier Alpha Code)`
+* `03 (FMC - Federal Maritime Commission)`
+* `04 (IATA - International Air Transport Association)`
 * `08 (UCC EDI Number)`
+* `09 (X.121)`
+* `10 (DoD - Department of Defense Activity Address Code)`
+* `11 (DEA - Drug Enforcement Administration)`
 * `12 (Phone Number)`
-* `14 (DUNS Number plus Suffix Number)`
+* `13 (UCS Code)`
+* `14 (DUNS Number and Suffix Number)`
+* `16 (DUNS Number with a Four Character Suffix)`
+* `19 (EDI Council of Australia Communications ID)`
+* `20 (HIN - Health Industry Number)`
+* `30 (U.S. Federal Tax Identification Number)`
+* `NR (NRMA - National Retail Merchants Association)`
+* `SN (Standard Address Number)`
 * `ZZ (Mutually Defined)`
 * `Custom`
 

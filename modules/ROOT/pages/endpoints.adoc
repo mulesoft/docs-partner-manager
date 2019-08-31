@@ -1,17 +1,15 @@
-= Endpoints
+= Endpoint Types and Protocols
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-There are three types of endpoints within AnyPoint Partner Manager.
+There are three types of endpoints within AnyPoint Partner Manager:
 
-From the Host side:
-* To receive transmissions from your partners
-* Where you route messages from your partners to a target at your backend systems.
-* Sources of messages from your backend system that you send to your partners.
+* Receive - On the Host side, you need endpoints your organization uses to receive transmissions from your partners.
 
-From the Partner side:
-* Where you send transmissions to your partners, including acknowledgments.
+* Target - As the Host, your organization has internal endpoints where you route messages from the Partner after they are transformed within the message flow.
+
+* Send - Your partners provide you with endpoint configurations to use for sending them transmissions, including acknowledgement messages like 997s.
 
 == Endpoint Name, Protocol and Type
 
@@ -75,6 +73,7 @@ None
 Choose the section that corresponds to the Protocol-Type of the Endpoint for which you are entering settings. Links not working for Beta.
 
 * <<AS2 Send Settings>>
-* <<AS2 Receive Settings>>
+// * <<AS2 Receive Settings>>
 * <<SFTP Send Settings>>
-* <<SFTP Receive Settings>>
+// * <<SFTP Receive Settings>>
+* <<HTTP(s) Send Settings>>

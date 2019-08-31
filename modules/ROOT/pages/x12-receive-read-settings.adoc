@@ -51,6 +51,7 @@ Any of these options indicated by a checked box (yes) setting means that all of 
 
 `Yes`
 
+
 == Acknowledgement Settings
 
 Use these to set the type of acknowledgment needed for the exchange.
