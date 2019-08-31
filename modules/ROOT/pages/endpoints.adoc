@@ -28,7 +28,6 @@ Default:: Auto-populates based on the following values:
 * *Protocol*
 * *Type*
 
-
 |Protocol
 
 |Protocol for this endpoint
@@ -70,7 +69,8 @@ None
 
 == Protocol/Type-Specific Endpoint Settings
 
-Choose the section that corresponds to the Protocol-Type of the Endpoint for which you are entering settings. Links not working for Beta.
+Choose the section that corresponds to the Protocol-Type of the Endpoint for which you are entering settings.
+Note- Links not working for Beta.
 
 * <<AS2 Send Settings>>
 // * <<AS2 Receive Settings>>

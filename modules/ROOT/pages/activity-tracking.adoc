@@ -14,7 +14,7 @@ Uses for this data include:
 * Auditing
 
 Anypoint Partner Manager allows you to monitor B2B transmission activity.
-Activity is the full set of end-to-end events involved in processing a transmission. This includes transmission metadata, messages, and errors.
+Activity is the full set of end-to-end events involved in processing a transmission such as transmission metadata, messages, and errors.
 
 You can:
 
@@ -29,12 +29,12 @@ Track Activity for Message Flows:
 
 . From within your Partner Manager environment, select Activity from the left-hand navigation.
 
-. Scroll the list for the transmission you are interested in. 
+. Scroll the list for the transmission you are interested in.
 If you do not see that transmission, use the search box to find a partner name, message type, filename, control number, endpoint, or date received.
 
 . Select the transmission and review the summary information.
 
-. Scan the Transmission Flow section for an exclamation point (!) in any of the rectangle boxes next to the displayed flow stages, indicating an issue with the transmission.
+. Scan the Transmission Flow sections for an exclamation point (!) in any of the rectangle boxes next to the displayed flow stages, indicating an issue with the transmission.
 
 . Click the *View Payload* button to see the payload transmission.
 
@@ -45,4 +45,3 @@ If you do not see that transmission, use the search box to find a partner name, 
 // Refer to the Troubleshooting section for common message flow errors.
 
 // == See also
-

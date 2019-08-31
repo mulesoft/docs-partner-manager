@@ -4,12 +4,12 @@ include::_attributes.adoc[]
 endif::[]
 
 Your organization is considered the host partner in Anypoint Partner Manager.
-Within the Host page, which is named after your organization, you can do the following:
+Within the Host page you can do the following:
 
-* Add B2B identifiers to uniquely identify yourself with your partners.
-* Add certificates owned by your organization.
-* Configure global X12 validation settings.
-* Add storage for your B2B message payloads.
+* Add B2B identifiers to uniquely identify yourself with your partners
+* Add certificates owned by your organization
+* Configure global X12 validation settings
+* Add storage for your B2B message payloads
 
 == Configure the host
 
@@ -17,7 +17,7 @@ Within the Host page, which is named after your organization, you can do the fol
 
 . From within your Partner Manager environment, select the name of your organization from the left-hand navigation.
 
-. From here you configure the following based on your indentifier and certificate type as well as any global settings you need to change and the location of your payload storage configuration. 
+. From here you configure the following based on your indentifier and certificate type as well as any global settings you need to change and the location of your payload storage configuration.
 Refer to X12 Settings to change any of the default settings for all X12 received messages.
 
 * Add your B2B Identifiers such as the AS2 Identifier, X12 ISA, X12 GS, or DUNS.
@@ -33,4 +33,4 @@ When you are ready, you can Configure your partner(s).
 == See Also
 
 * xref:x12-identity-settings.adoc[X12 Settings]
-* xref:configure-partner.adoc[Configure Partner]
+// * xref:configure-partner.adoc[Configure Partner]

@@ -14,7 +14,7 @@ To configure the system, you should be familiar with these concepts before setti
 
 == Minimum Requirements
 
-Verify that you have the following software and other requirements.
+Verify that you have the following software and other requirements:
 
 * Mule runtime engine 4.1.1 or higher. Make sure you have the needed Mule runtime Core/Vcore capacity to handle the B2B transaction load.
 If you are unsure about the capacity you need to handle B2B transactions, please contact your MuleSoft account representative for assistance.
@@ -32,7 +32,8 @@ If you are unsure about the capacity you need to handle B2B transactions, please
 
 ** Anypoint Platform user account with Anypoint Partner Manager access.
 
-** Appropriate roles allocated for users to access Anypoint Partner Manager. Roles are allocated via the Access Management section in Anypoint Platform.
+** Appropriate roles allocated for users to access Anypoint Partner Manager.
+Roles are allocated via the Access Management section in Anypoint Platform.
 
 **Note**
 

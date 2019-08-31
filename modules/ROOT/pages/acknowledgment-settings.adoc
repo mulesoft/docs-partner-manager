@@ -28,11 +28,11 @@ Default::
 `Enabled`
 
 |997 Requested
-|Used to: 
+|Used to:
 
 * acknowledge receipt of an interchange or a functional group
 * accept or reject one or more functional groups or one or more transactions
-* verify and report compliance with the standard.
+* verify and report compliance with the standard
 
 Valid values::
 Business rules associated with 997:
