@@ -15,7 +15,7 @@ Within the Host page, which is named after your organization, you can do the fol
 
 . Open Partner Manager.
 
-. From within your Partner Manager environment, select the name of your organization from the left-hand navigation.
+. Select the name of your organization from the navigation pane.
 
 . From here you configure the following based on your indentifier and certificate type as well as any global settings you need to change and the location of your payload storage configuration. 
 Refer to X12 Settings to change any of the default settings for all X12 received messages.
