@@ -19,7 +19,7 @@ Default::
 `Disabled`
 
 |Functional Acknowledgement Requested
-|Provides a functional Acknowledgement with the exchange. There are two types: a 997 and a 999.
+|Provides a functional Acknowledgement with the exchange. There are two types of functional acknowledgements: a 997 and a 999. Anypoint Partner Manager allows you to raise either 997 or 999 acknowledgments, but not both at the same time.
 
 Default::
 
@@ -42,8 +42,6 @@ Default::
 
 |999 Requested
 |Replaces the 997 Functional Acknowledgement document for use in Healthcare. X12 999 implementation acknowledgment reports standard syntax errors, as well as implementation guide errors. The X12 implementation acknowledgment reports the status of the processing of a functional group for HIPAA transactions. It follows almost the same rules as that of 997, however, the structure and codes of the acknowledgment contents are different and follow the 999 rules.
-
-Anypoint Partner Manager allows you to raise either 997 or 999 acknowledgments, but not both at the same time.
 
 Default::
 
