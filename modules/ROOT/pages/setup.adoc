@@ -10,37 +10,37 @@ To configure the system, you should be familiar with these concepts before setti
 * Dataweave transformations.
 * Digital Certificates such as X.509 certificates in PKCS12 file format for the AS2 transport protocol.
 * Configuration of protcols such as AS2, SFTP, HTTPS.
-* Understanding of organizations and environments in the context of Access Management and Runtime Manager.
+* Understanding ofthe concept of organizations and environments in the Anypoint platform in context to Access Management and Anypoint Runtime Manager.
 
 == Minimum Requirements
 
 Verify that you have the following software and other requirements.
 
-* Mule runtime engine 4.1.1 or higher. Make sure you have the needed Mule runtime Core/Vcore capacity to handle the B2B transaction load.
-If you are unsure about the capacity you need to handle B2B transactions, please contact your MuleSoft account representative for assistance.
+* Mule runtime engine 4.1.1 or higher. Make sure you have the needed Mule runtime Core/vCore capacity to handle your B2B transaction workload needs.
+If you are unsure about the capacity you need to handle your B2B transactions, please contact your MuleSoft account representative for assistance.
 
-* Storage for your B2B transmission payloads (such as a database, Amazon S3, Azure Blob Storage, and so on).
+* A storage solution to store the B2B transmission payloads your send or receive. Storage options can include a Database, Amazon S3, Azure Blob Storage, and so on.
 
-* Anypoint Studio 7.1 or higher for creating DataWeave maps.
+* Anypoint Studio 7.1 or higher to create DataWeave maps.
 
-* License for the following optional Connectors:
+* License for the following optional connectors:
 
 ** AS2 4.0.2 or higher.
 ** X12 2.0.1 or higher.
 
 * Partner Manager Requirements:
 
-** Anypoint Platform user account with Anypoint Partner Manager access.
+** Anypoint Platform user account with Anypoint Partner Manager entitlement.
 
 ** Appropriate roles allocated for users to access Anypoint Partner Manager. Roles are allocated via the Access Management section in Anypoint Platform.
 
 **Note**
 
-For any access or licensing issues, please contact your MuleSoft account representative for assistance.
+For any entitlement to Anypoint Partner Manager, please contact your MuleSoft account representative for assistance.
 
 == Environment Configuration
 
-You'll need to set up and configure your environment before you begin using Partner Manager.
+You'll need to set up and configure your environment before you begin using Partner Manager. Please refer to Anypoint platform documentation to learn more about https://docs.mulesoft.com/access-management/environments[configuring your Anypoint platform environments].
 
 === Allocate Partner Manager Roles
 
@@ -57,19 +57,17 @@ This means that you must have the required entitlements and have assigned the `P
 . Setup the required Storage API (to be added: a link to Exchange with description and RAML).
 The storage API should be accessible from the Mule Runtime network.
 
-=== Associate Runtimes for Deployment (Setup the Environment)
+=== Associate Mule Runtimes for Deployment
 
-Setup a server group via Anypoint Runtime Manager to deploy the B2B Gateway.
-The steps to setup your server group are in [Mule Runtime Manager documentation](https://docs.mulesoft.com/runtime-manager/server-group-create).
+Setup a server group via Anypoint Runtime Manager where the B2B processing Mule apps will be deployed.
+The steps to setup your server group are in https://docs.mulesoft.com/runtime-manager/server-group-create[Mule Runtime Manager documentation].
 
-**Note**
-
-The server group associated to your B2B Gateway must have the exact name, **B2BServerGroup** in order for correct operation. The name is case sensitive.
+**Note** - The server group you setup must have the exact name, **B2BServerGroup**. The name is case sensitive.
 
 . Create a dedicated user with the `Partner Manager - Runtime Engine` permission for the Runtime Engine.
 You need to do this because the UI Administrator does not have the required permissions to be used in the Runtime Engine.
 
-. For each Environment, set up your Mule Runtime by downloading Mulesoft runtime and unzipping it.
+. For each environment, set up your Mule Runtime by https://docs.mulesoft.com/mule-runtime/4.2/runtime-installation-task[downloading MuleSoft runtime] and unzipping it.
 
 . Add the following parameters in the wrapper.conf file. You'll need to adjust the numbers for your environment.
 Refer to the following article from support.mulesoft.com: java.lang.OutOfMemoryError: Metaspace when Deploying Applications to Mule 4 Runtime.
