@@ -34,9 +34,10 @@ If you are unsure about the capacity you need to handle your B2B transactions, p
 
 ** Appropriate roles allocated for users to access Anypoint Partner Manager. Roles are allocated via the Access Management section in Anypoint Platform.
 
-**Note**
-
-For any entitlement to Anypoint Partner Manager, please contact your MuleSoft account representative for assistance.
+[source,console]
+----
+Note - To obtain an entitlement to Anypoint Partner Manager, please contact your MuleSoft account representative for assistance.
+----
 
 == Environment Configuration
 
