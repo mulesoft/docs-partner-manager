@@ -61,17 +61,17 @@ The storage API should be accessible from the Mule Runtime network.
 You need to do this because the UI Administrator does not have the required permissions to be used in the Runtime Engine. 
 **TODO - Add link to create the user.**
 
-. Create a server group and call it: `B2BServerGroup` in Runtime Manager. All B2B processing Mule apps will be deployed to this server group. The steps to setup your server group are in https://docs.mulesoft.com/runtime-manager/server-group-create[Mule Runtime Manager documentation].
+. Create a server group in Anypoint Runtime Manager and call it: `B2BServerGroup`. All B2B processing Mule apps will be deployed to this server group. The steps to setup your server group are in https://docs.mulesoft.com/runtime-manager/server-group-create[Mule Runtime Manager documentation].
 
 NOTE: The server group you setup must have the exact name **B2BServerGroup**. The name is case sensitive.
 
+[start=3]
 . For each environment, set up your Runtime by https://docs.mulesoft.com/mule-runtime/4.2/runtime-installation-task[downloading the MuleSoft runtime] and unzipping it.
 
-. Add the parameters mentioned below in the wrapper.conf file. The wrapper.conf file is located at "MULE_HOME/conf/wrapper.conf". MULE_HOME is your environment variable which you set on server, it is the home directory of Mule runtime on the machine, usually on Linux machine something like /opt/{Mule installation}. When you reach that location you can find the wrapper.conf user conf directory.
+. Add the parameters mentioned below in the wrapper.conf file. You'll need to adjust the memory and heap size configuration numbers indicated in the parameters below for your environment.
 
-You'll need to adjust the memory and heap size configuration numbers indicated in the parameters below for your environment.
-
-NOTE: Make sure the ports that are exposed as inbound endpoints are configured in the instance according to the security guidelines for your infrastructure.
+[TIP]
+The wrapper.conf file is located at "MULE_HOME/conf/wrapper.conf". MULE_HOME is your environment variable which you set on server, it is the home directory of Mule runtime on the machine, usually on Linux machine something like /opt/{Mule installation}. When you reach that location you can find the wrapper.conf user conf directory.
 
 [source,xml,linenums]
 ----
@@ -90,8 +90,9 @@ wrapper.java.initmemory=2024
 wrapper.java.maxmemory=3024
 
 ----
+[start=5]
 . Add the server in Runtime Manager based on the https://docs.mulesoft.com/runtime-manager/servers-create[reference information]
-. https://docs.mulesoft.com/runtime-manager/server-group-about[Include the created servers] into the server group B2BServerGroup
+. https://docs.mulesoft.com/runtime-manager/server-group-add[Include the created servers] into the server group B2BServerGroup
 
 . Start Mule runtime and verify it on Anypoint Runtime Manager.
 
