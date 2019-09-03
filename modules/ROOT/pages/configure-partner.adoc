@@ -56,65 +56,97 @@ Click on the *Save* button when you have provided all the necessary information.
 |If selected, a transaction with values too long or too short is rejected. If not selected, the values are used anyway and the transaction is not rejected. In either case the error is logged and reported in 997/999 acknowledgments
 
 Required?::
-No
+`No`
 
 Default::
-Selected
+`Selected`
 
 |Fail document when invalid character in value
 |If selected, a transaction with invalid characters is rejected. If not selected, the characters are either passed through or substituted and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments
 
 Required?::
-No
+`No`
 
 Default::
-Not Selected
+`Not Selected`
 
 |Fail document if value is repeated too many times
 |If selected, a transaction with values repeated too many or too few times is rejected. If not selected, the value are accepted and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments.
 
 Required?::
-No
+`No`
 
 Default::
-Selected
+`Selected`
 
 |Fail document if unknown segments are used
 |If selected, a transaction containing any unknown segments is rejected. If not selected, unknown segments are ignored and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments
 
 Required?::
-No
+`No`
 
 Default::
-Selected
+`Selected`
 
 |Fail document when segments are out of order
 |If selected, a transaction with segments out of order is rejected. If not selected, the segment can be reordered the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments
 
 Required?::
-No
+`No`
 
 Default::
-Selected
+`Selected`
 
 |Fail document when unused segments are included
 |If selected, a transaction containing segments marked as unused in the schema is rejected. If not selected, the transaction is not rejected and the unused segments are ignored. In either case the error is reported in 997/999 acknowledgments
 
 Required?::
-No
+`No`
 
 Default::
-Selected
+`Selected`
 
 |Fail document when too many repeats of a segment
 |A transaction with a segment repeated too many times is rejected. The error is reported in 997/999 acknowledgments
 
 Required?::
-No
+`No`
 
 Default::
-Selected
+`Selected`
 |===
+
+- Control Numbers: Please apply validations related to your partners / your use of control numbers within the X12 message.
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Requires unique interchange control number (ISA13)
+|If selected, Anypoint Partner Manager records the interchange numbers previously processed and reject any duplicate interchange numbers from the same partner (as determined by the interchange sender and receiver identification). If not selected, allows processing of the received interchange to continue
+
+Required?::
+`No`
+
+Default::
+`Not Selected`
+
+|Requires unique group control number (GS06)
+|If selected, Anypoint Partner Manager enforces globally unique Group Control Numbers (GS06) for received functional groups. This configuration requires group numbers to be unique across all interchanges received from the same partner and application (as determined by the interchange sender and receiver identification, combined with the functional group sender and receiver application codes)
+
+Required?::
+`No`
+
+Default::
+`Not Selected`
+
+|Requires unique transaction set control number (ST02)
+|If selected, Anypoint Partner Manager enforces globally unique Transaction Set Control Numbers (ST02) for received transaction sets. This configuration requires transaction set numbers to be unique across all functional groups received from the same partner and application (as determined by the interchange sender and receiver identification, combined with the functional group sender and receiver application codes)
+
+Required?::
+`No`
+
+Default::
+`Not Selected`
 
 * To find a partner, search the Partners list by name, and select the name of the partner.
 
