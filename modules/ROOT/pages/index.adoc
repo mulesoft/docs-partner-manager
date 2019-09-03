@@ -13,7 +13,7 @@ They are typically transmitted over transports (such as HTTP(s), SFTP, and excha
 All of this is integrated into the Mule runtime.
 
 Use Anypoint Partner Manager to set up, manage, and monitor the flow of messages between you and your business partners.
-Create message flows (the paths along which a message travels from its source) through a transformation map, to its target.
+Create message flows. A message flow is the path along which a message travels from its source, through a transformation map, to its target.
 Monitor each transmission, the transfer of a payload and the validation of the messages it contains.
 The ability to track and report on this drives greater operational efficiency while managing B2B transactions.
 
