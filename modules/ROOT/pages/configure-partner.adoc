@@ -17,7 +17,7 @@ From the Partners page you can:
 
 * Configure global validation, acknowledgement, control number, and character set settings.
 
-== Configure a Trading Partner
+== Create a Trading Partner
 
 . Open Anypoint Partner Manager.
 
@@ -27,15 +27,94 @@ From the Partners page you can:
 - Add your trating partners name, and
 - Select an Identifier from the *Type* drop-down menu. This uniquely identifies you as a trading partner. For example, depending on your setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number.
 
-. Click *Create Partner* to create your trading partner.
+. Click *Create Partner* to create your trading partner. at this point, your trading partner has been created within the Anypoint platform and you may proceed to setup message flows related to this partner. 
 
-You can add the following information for each trading partner from the *Partners* selection in the left-hand navigation:
+== Update Trading Partner Profile
 
-* About (usually the name of the company).
+You may now also proceed to the partners profile page to add more details related to this trading partner. You can add the following information for each trading partner from the *Partners* selection in the left-hand navigation:
 
-* Your partner's digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
+* About - the following information can be provided in this section by clicking on the *Edit* button under the 'About' section
+- Description - Provide a brief description about your partners business, what kind of trading relation your organization has with the trading partner, etc.
+- Website - associate your trading partners website.
+- Logo - upload a logo associated to your trading partner. jpeg and png files are acceptable formats for the logo. Please ensure the logo file is smaller than 25kb.
+- Corporate address - provide an address comprsing of the street, City, State, Postal code, and Country.
+- Add contacts - Options are available to add 'business contacts', 'technical contacts' or 'other contacts'. You may add up to 3 contacts associated to a trading partners profile.
 
-* Change any global validation settings if you need to override a default value for a particular partner.
+Click on the *Save* button when you have provided all the necessary information. When the trading partner's profile is successfully updated you will receive a confirmation message indicating 'Partner "<your trading partners name>" updated'
+
+* Add more identifiers for your Trading partner. To add more identifiers, click on the *New* button within the 'Identifiers' section. Select an appropriate identifier type and provide a the identifier value as provided by your trading partner. after you have provided all the information needed, click on the *Create identifier* button. When an identifier is successfully created you will receive a confirmation message indicating 'Identifier created'.
+
+* Your partner's digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol). To add a certificate, click on the *New* button within the 'Certificates' section. Upload the digital certificate (typically a .pem file) provided by your trading partner, and proceed to click on *Upload certificate* button. When a certificate is successfully uploaded you will receive a confirmation message indicating 'Partner certificate created'.
+
+* Configure any global validation settings if you need to override a default value for a particular partner. Global X12 setting include:
+- Validations: Please apply validations as needed from the options mentioned below.
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Fail document when value length outside allowed range
+|If selected, a transaction with values too long or too short is rejected. If not selected, the values are used anyway and the transaction is not rejected. In either case the error is logged and reported in 997/999 acknowledgments
+
+Required?::
+No
+
+Default::
+Selected
+
+|Fail document when invalid character in value
+|If selected, a transaction with invalid characters is rejected. If not selected, the characters are either passed through or substituted and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments
+
+Required?::
+No
+
+Default::
+Not Selected
+
+|Fail document if value is repeated too many times
+|If selected, a transaction with values repeated too many or too few times is rejected. If not selected, the value are accepted and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments.
+
+Required?::
+No
+
+Default::
+Selected
+
+|Fail document if unknown segments are used
+|If selected, a transaction containing any unknown segments is rejected. If not selected, unknown segments are ignored and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments
+
+Required?::
+No
+
+Default::
+Selected
+
+|Fail document when segments are out of order
+|If selected, a transaction with segments out of order is rejected. If not selected, the segment can be reordered the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments
+
+Required?::
+No
+
+Default::
+Selected
+
+|Fail document when unused segments are included
+|If selected, a transaction containing segments marked as unused in the schema is rejected. If not selected, the transaction is not rejected and the unused segments are ignored. In either case the error is reported in 997/999 acknowledgments
+
+Required?::
+No
+
+Default::
+Selected
+
+|Fail document when too many repeats of a segment
+|A transaction with a segment repeated too many times is rejected. The error is reported in 997/999 acknowledgments
+
+Required?::
+No
+
+Default::
+Selected
+|===
 
 * To find a partner, search the Partners list by name, and select the name of the partner.
 
