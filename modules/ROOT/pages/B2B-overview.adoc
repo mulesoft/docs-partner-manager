@@ -42,7 +42,7 @@ Information needed for each trading partner:
 
 * Partner name (usually the name of the company)
 
-* Your trading partners identifiers (such as the AS2 Identifier, X12 ISA, X12 GS, and so on)
+* Your trading partner's identifiers (such as the AS2 Identifier, X12 ISA, X12 GS, and so on)
 
 * Trading Partner Endpoints - where you send transmissions to your partners, including acknowledgement endpoints
 
