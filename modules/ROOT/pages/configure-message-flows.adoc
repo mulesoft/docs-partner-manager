@@ -14,7 +14,7 @@ You'll need the following for the Source:
 * The partner and associated identifiers
 * The endpoint where you receive the transmission
 * The message type to process for this message flow
-The Dataweave map that transforms the message contents into a form your systems can use
+* The Dataweave map that transforms the message contents into a form your systems can use
 
 You'll need the following for the Target:
 
