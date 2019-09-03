@@ -3,8 +3,9 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Anypoint Partner Manager allows you to manage a large number of trading partner message flows. A message flow is the path along which a message travels, from its source, through a transformation (map), and to its target. You'll need to perform some tasks before you can begin transmitting messages with your partners. A transmission is a single communication event where a transfer of a payload which may contain multiple messages. In the X12 standard, messages are the same as transaction sets.
-You set yourself up as a host partner, then configure your partners, and then create message flows between you and your partners.
+
+Anypoint Partner Manager allows you to manage a large number of trading partners and their message flows. A message flow is the path along which a message travels, from its source, through a transformation (via a map), and to its target. You'll need to perform some tasks before you can begin transmitting messages with your trading partners. A transmission is a single communication event where a transfer of a payload which may contain one or more messages. In the X12 standard, messages are the same as transaction sets.
+You set yourself up as a host partner, then configure your partners, and then create message flows between you and your partners. 
 
 == Prepare to Configure Anypoint Partner Manager
 
@@ -14,31 +15,37 @@ Use this checklist to help organize the information you need to gather before yo
 
 Information you'll need to have on hand as the host organization:
 
-* B2B Identifiers (such as the AS2 Identifier, X12 ISA, and so on)
+
+** Your organizations identifiers (such as the AS2 Identifier, X12 ISA, X12 GS, and so on)
+
 
 * Endpoints: There are three types of endpoints within AnyPoint Partner Manager -
 
-** Receive - On the Host side, you need endpoints your organization uses to receive transmissions from your partners.
 
-** Target - As the Host, your organization has internal endpoints where you route messages from the Partner after they are transformed within the message flow.
+- Receive endpoints - On the Host side, for an inbound transmission you need endpoints your organization uses to receive transmissions from your partners. These endpoints are resources your organization exposes to your trading partners.
 
-** Send - Your partners provide you with endpoint configurations to use for sending them transmissions, including acknowledgement messages like 997s.
+- Target endpoints - As the Host, your organization has internal endpoints where you route messages from the Partner, after they are transformed within the message flow.
+
+- Acknowledgement endpoints - Your partners provide you with endpoint configurations that can be used to send acknowledgement messages like 997s or 999s back to them. Acknowledgements are typically sent back to trading partners corresponding to one of more B2B messages you may receive from them.
+
 
 * Your digital certificates (such as X.509)
 
 * EDI message type preferences for your organization
 
-* Storage for your B2B message payloads
 
-* Any Dataweave transformation maps your organization uses for EDI
+** A storage solution for your B2B message payloads
+
+** Any Dataweave transformation maps your organization uses for B2B
+
 
 Information needed for each trading partner:
 
 * Partner name (usually the name of the company)
 
-* B2B Identifiers (such as the AS2 Identifier, X12 ISA, and so on)
+** Your trading partners identifiers (such as the AS2 Identifier, X12 ISA, X12 GS, and so on)
 
-* Partner Endpoints - where you send transmissions to your partners, including acknowledgements
+** Trading Partner Endpoints - where you send transmissions to your partners, including acknowledgement endpoints
 
 * Electronic Data Interchange (EDI) message format preferences for your partner (such as X12),
 and any associated validations that require an acknowledgment (such as TA1, 997, 999, and so on)
@@ -46,7 +53,9 @@ and any associated validations that require an acknowledgment (such as TA1, 997,
 * Message types to use. For example, a purchase order in X12 is an 850 message.
 You also need to know the X12 version to use in your transactions (such as 004010, 005010, and so on).
 
-* Your partners' digital certificates
+
+** Your partners' digital certificates (such as X.509)
+
 
 After gathering this information, you are ready to configure yourself as host, configure your partners, and create a message flow.
 

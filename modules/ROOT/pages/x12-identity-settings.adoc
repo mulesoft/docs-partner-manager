@@ -11,7 +11,6 @@ These settings apply to all X12 settings received from all partners. You can ove
 
 |Interchange ID qualifier - ISA
 |Value of the EDI ID Qualifier for your trading partner. Some of the most common values are listed here.
-If you choose *Custom*, you can define your trading partner's EDI X12 qualifier.
 
 Required?::
 Yes
@@ -36,7 +35,6 @@ Valid values::
 * `NR (NRMA - National Retail Merchants Association)`
 * `SN (Standard Address Number)`
 * `ZZ (Mutually Defined)`
-* `Custom`
 
 Default::
 
