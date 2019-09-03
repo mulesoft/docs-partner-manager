@@ -16,7 +16,7 @@ Use this checklist to help organize the information you need to gather before yo
 Information you'll need to have on hand as the host organization:
 
 
-* Your organizations identifiers (such as the AS2 Identifier, X12 ISA, X12 GS, and so on)
+* Your organization's identifiers (such as the AS2 Identifier, X12 ISA, X12 GS, and so on)
 
 
 * Endpoints: There are three types of endpoints within AnyPoint Partner Manager -
