@@ -164,4 +164,3 @@ Valid values::
 Default::
 
 `ISO8859_1`
-|===

@@ -3,21 +3,23 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-To receive messages from a partner, create a message flow and configure its sections for both the source and target. For the Endpoint, source at host - this is the origin of the message flow when defined by a host endpoint and message type, often an API. For the endpoint, target at host - this is the final destination of a message flow when defined by a host endpoint and message type, often a Host API.  
+To receive messages from a partner, create a message flow and configure the sections for both the source and target.
+For the Endpoint, source at host - this is the origin of the message flow when defined by a host endpoint and message type, often an API.
+For the endpoint, target at host - this is the final destination of a message flow when defined by a host endpoint and message type, often a Host API.
 
-For example, a distributor might group a set of purchase orders by sending them in one transmission to a supplier trading partner.
+// For example, a distributor might group a set of purchase orders by sending them in one transmission to a supplier trading partner.
 
 You'll need the following for the Source:
 
-* The partner and associated identifiers.
-* The endpoint where you receive the transmission.
-* The message type to process for this message flow.
-The Dataweave map that transforms the message contents into a form your systems can use.
+* The partner and associated identifiers
+* The endpoint where you receive the transmission
+* The message type to process for this message flow
+* The Dataweave map that transforms the message contents into a form your systems can use
 
 You'll need the following for the Target:
 
-* The message type your system understands.
-* The endpoint in your organization where you route the transformed message.
+* The message type your system understands
+* The endpoint in your organization where you route the transformed message
 
 When receiving a B2B message from your trading partner, in cases where there may be more than one URL, you only need to configure the receiving URL.
 If a separate URL is required for returning MDNs, it is sent in the AS2 transmission and Partner Manager reads it from there.
@@ -30,29 +32,29 @@ If a separate URL is required for returning MDNs, it is sent in the AS2 transmis
 
 . Click the *New Message Flow* button and select a partner from the list and click the *Select* button. You can create a new partner by clicking the *New* button.
 
-You see the new Message Flow. You can open each section of the message flow by clicking it. This is where you enter the information you collected from your checklist about your partner and your own backend system. 
+You can open each section of the message flow by clicking it. This is where you enter the information you collected from your checklist about your partner and your own backend system.
 A green checkmark next to the partner you choose indicates that the section is complete. When you complete all of the sections, you can Deploy your message flow and start receiving messages from your partner.
 
 Enter the following information:
 
-* Configure the source endpoint, where you receive the transmission.
+* Configure the source endpoint, where you receive the transmission
 
-* Select the source message type.
+* Select the source message type
 
-* Configure acknowledgments (if the partner requires them), the type of acknowledgment, and the endpoint to which you send it.
+* Configure acknowledgments (if the partner requires them), the type of acknowledgment, and the endpoint to which you send it
 
-* Upload a DataWeave map.
+* Upload a DataWeave map
 
 * Select the target message type for the type of document. For example, a purchase order in X12 is an 850 message.
 You also need to know the X12 version to use in your transactions (such as 004010, 005010, and so on).
 
-* Click the *Deploy* button when you are ready to make the created flow live.
+* Click the *Deploy* button when you are ready to make the created flow live
 
 You can begin to monitor the activity from the Activity page.
 
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:activity-tracking.adoc[Activity Tracking]
+// * xref:activity-tracking.adoc[Activity Tracking]
 
 // == Create a Send Message Flow from Your Partner

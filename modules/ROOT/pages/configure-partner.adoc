@@ -9,13 +9,15 @@ Once created, each partner has its own page and shows up in the 'Partners' tab i
 
 From the Partners page you can:
 
-* Add information about your trading partners along with contact details.
+* Add information about your trading partners along with contact details
+
 
 * Add identifiers to uniquely identify them from one another.
 
-* Add certificates owned by your partner.
 
-* Configure global validation, acknowledgement, control number, and character set settings.
+* Add certificates owned by your partner
+
+* Configure global validation, acknowledgement, control number, and character set settings
 
 == Create a Trading Partner
 
@@ -30,6 +32,7 @@ From the Partners page you can:
 . Click *Create Partner* to create your trading partner. at this point, your trading partner has been created within the Anypoint platform and you may proceed to setup message flows related to this partner. 
 
 == Update Trading Partner Profile
+
 
 You may now also proceed to the partners profile page to add more details related to this trading partner. You can add the following information for each trading partner from the *Partners* selection in the left-hand navigation:
 
@@ -183,7 +186,8 @@ Default::
 `Not Selected`
 |===
 
-* To find a partner, search the Partners list by name, and select the name of the partner.
+
+* To find a partner, search the Partners list by name, and select the name of the partner
 
 Refer to the X12 Settings to change any of the default settings for all X12 received messages.
 
@@ -192,4 +196,4 @@ When you are ready, you can Configure Message Flows.
 == See Also
 
 * xref:x12-identity-settings.adoc[X12 Settings]
-* xref:configure-message-flows.adoc[Create a Receive Message Flow from Your Partner]
+// * xref:configure-message-flows.adoc[Create a Receive Message Flow from Your Partner]

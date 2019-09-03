@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-These settings apply to all X12 settings received from all partners. Override these for your individual partner.
+These settings apply to all X12 settings received from all partners. You can override these for your individual partner.
 
 [%header,cols="3s,7a"]
 |===
@@ -39,7 +39,6 @@ Valid values::
 Default::
 
 * No default provided
-
 
 
 |Interchange ID - ISA

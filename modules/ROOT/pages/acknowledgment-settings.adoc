@@ -26,9 +26,11 @@ Default::
 `Disabled`
 
 |997 Requested
+
 |The X12 997 functional acknowledgment reports the status of a received interchange. It reports each error encountered while processing the received document. Like all X12 transaction sets, the 997 ACK is sent inside a GS/GE envelope. The ST and SE are no different than any other transaction set.
 
 It is used to: 
+
 
 * acknowledge receipt of an interchange or a functional group
 * accept or reject one or more functional groups or one or more transactions
