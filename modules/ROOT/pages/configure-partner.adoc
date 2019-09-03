@@ -71,7 +71,7 @@ Default::
 `Not Selected`
 
 |Fail document if value is repeated too many times
-|If selected, a transaction with values repeated too many or too few times is rejected. If not selected, the value are accepted and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments.
+|If selected, a transaction with values repeated too many or too few times is rejected. If not selected, the value are accepted and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments
 
 Required?::
 `No`
