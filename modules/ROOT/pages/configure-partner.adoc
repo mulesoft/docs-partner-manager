@@ -149,6 +149,40 @@ Default::
 `Not Selected`
 |===
 
+- Character Sets: Selected charater set and character encoding options pertaining to your partners / your X12 message.
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Character set
+|Characters allowed in string data. Invalid characters are replaced by the substitution character, if used, or rejected as errors if no substitution character is set or enabled for receive messages in parser options. Either way the invalid characters are logged, and for receive messages are reported in 997 functional acknowledgments.
+
+Possible values include:
+- Basic
+- Extended
+- Unrestricted
+
+Required?::
+`Yes`
+
+Default::
+`Extended`
+
+|Character encoding
+|Indicates the character encoding for messages. This character encoding is always used for both send and receive messages.
+
+Possible values include:
+- ASCII
+- ISO8859_1
+- UTF-8
+
+Required?::
+`No`
+
+Default::
+`Not Selected`
+|===
+
 * To find a partner, search the Partners list by name, and select the name of the partner.
 
 Refer to the X12 Settings to change any of the default settings for all X12 received messages.
