@@ -16,7 +16,7 @@ Use this checklist to help organize the information you need to gather before yo
 Information you'll need to have on hand as the host organization:
 
 
-** Your organizations identifiers (such as the AS2 Identifier, X12 ISA, X12 GS, and so on)
+* Your organizations identifiers (such as the AS2 Identifier, X12 ISA, X12 GS, and so on)
 
 
 * Endpoints: There are three types of endpoints within AnyPoint Partner Manager -
@@ -33,19 +33,18 @@ Information you'll need to have on hand as the host organization:
 
 * EDI message type preferences for your organization
 
+* A storage solution for your B2B message payloads
 
-** A storage solution for your B2B message payloads
-
-** Any Dataweave transformation maps your organization uses for B2B
+* Any Dataweave transformation maps your organization uses for B2B
 
 
 Information needed for each trading partner:
 
 * Partner name (usually the name of the company)
 
-** Your trading partners identifiers (such as the AS2 Identifier, X12 ISA, X12 GS, and so on)
+* Your trading partners identifiers (such as the AS2 Identifier, X12 ISA, X12 GS, and so on)
 
-** Trading Partner Endpoints - where you send transmissions to your partners, including acknowledgement endpoints
+* Trading Partner Endpoints - where you send transmissions to your partners, including acknowledgement endpoints
 
 * Electronic Data Interchange (EDI) message format preferences for your partner (such as X12),
 and any associated validations that require an acknowledgment (such as TA1, 997, 999, and so on)
@@ -53,8 +52,7 @@ and any associated validations that require an acknowledgment (such as TA1, 997,
 * Message types to use. For example, a purchase order in X12 is an 850 message.
 You also need to know the X12 version to use in your transactions (such as 004010, 005010, and so on).
 
-
-** Your partners' digital certificates (such as X.509)
+* Your partners' digital certificates (such as X.509)
 
 
 After gathering this information, you are ready to configure yourself as host, configure your partners, and create a message flow.
