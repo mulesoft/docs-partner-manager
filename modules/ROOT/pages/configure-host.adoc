@@ -6,29 +6,29 @@ endif::[]
 Your organization is considered the host partner in Anypoint Partner Manager.
 Within the Host page, which is named after your organization, you can do the following:
 
-* Add B2B identifiers to uniquely identify yourself with your partners.
+* Add identifiers to uniquely identify yourself with your partners.
 * Add certificates owned by your organization.
 * Configure global X12 validation settings.
 * Add storage for your B2B message payloads.
 
 == Configure the host
 
-. Open Partner Manager.
+. Open Anypoint Partner Manager.
 
-. Select the name of your organization from the navigation pane.
+. Select the name of your organization from the navigation pane on the left-hand side.
 
 . From here you configure the following based on your indentifier and certificate type as well as any global settings you need to change and the location of your payload storage configuration. 
 Refer to X12 Settings to change any of the default settings for all X12 received messages.
 
-* Add your B2B Identifiers such as the AS2 Identifier, X12 ISA, X12 GS, or DUNS.
+* Add your identifiers such as the AS2 Identifier, X12 ISA, X12 GS, and/or DUNS.
 
-* Upload any Digital certificates (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
+* Upload any digital certificates (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
 
 * Change any of the default global X12 validation, acknowledgement, control number, and character set settings.
 
 * Storage for your B2B message payloads. Configure the location where you store payloads containing the messages you send to and receive from partners.
 
-When you are ready, you can Configure your partner(s).
+When you are ready, you can Configure your trading partner(s).
 
 == See Also
 
