@@ -52,7 +52,7 @@ and any associated validations that require an acknowledgment (such as TA1, 997,
 * Message types to use. For example, a purchase order in X12 is an 850 message.
 You also need to know the X12 version to use in your transactions (such as 004010, 005010, and so on).
 
-* Your partners' digital certificates (such as X.509)
+* Your partner's digital certificates (such as X.509)
 
 
 After gathering this information, you are ready to configure yourself as host, configure your partners, and create a message flow.
