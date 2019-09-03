@@ -96,20 +96,22 @@ wrapper.java.maxmemory=3024
 
 . Start Mule runtime and verify it on Anypoint Runtime Manager.
 
-=== Connect to Payload Storage
+=== Setup the Payload Storage API
 
-Within the Partner Manager host profile, configure the Storage API with the host, port, and path from your Storage API implementation.
+Anypoint Partner Manager enables you to connect your own storage solution (such as a database, Amazon S3, Azure Blob Storage, and so on) to store the transmission content such as incoming and outgoing B2B messages. You'll need to establish an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage. To setup the Storage API, follow the steps indicated below
 
-Anypoint Partner Manager enables you to connect your own storage (such as a database, Amazon S3, Azure Blob Storage, and so on) to store the transmission content such as incoming and outgoing B2B messages and acknowledgments.
-You'll need to establish an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage.
+. Download the pre-packaged API and implementation template from Anypoint Exchange. Install this API on a mule runtime that can access the storage solution.**[TODO - link from Anypoint Exchange for the pre-packaged API and integration app from Manik / Pablo]**
 
-Download the pre-packaged API and implementation template from Anypoint Exchange.[link from Anypoint Exchange for the pre-packaged API and integration app from Manik / Pablo]
+. Make a note of the API address configurations (host, port, path and authentication details) associate to your storage API's implementation.
 
-Make a note of the API address configurations (host, port, path and authentication details) to associate the storage within Anypoint Partner Manager.
+. Once the storage API is set up on the runtime, go to Anypoint Partner Manager, navigate to the host / your organizations profile page from the left-hand section, and configure the path to your storage within the section titled "Payload storage".
 
-Once the API is set up, go to Partner Manager and configure the path to your storage from your Host Partner profile from the left-hand section.
+Once that's complete, proceed to begin setting up message flows between you and your trading partners.
 
-Once that's complete, see Use Anypoint Partner Manager to begin to set up message flows between you and your configured partners.
+== Troubleshooting References
+
+* https://help.mulesoft.com/s/article/Troubleshooting-wrapper-conf-changes-that-do-not-get-applied[Troubleshooting wrapper.conf changes]
+
 
 == See Also
 
