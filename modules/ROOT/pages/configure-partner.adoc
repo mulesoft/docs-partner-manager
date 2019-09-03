@@ -147,6 +147,7 @@ Required?::
 
 Default::
 `Not Selected`
+|===
 
 * To find a partner, search the Partners list by name, and select the name of the partner.
 
