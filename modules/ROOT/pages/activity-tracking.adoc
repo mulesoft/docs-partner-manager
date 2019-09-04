@@ -13,7 +13,7 @@ Uses for this data include:
 * Error correction
 * Auditing
 
-Anypoint Partner Manager allows you to monitor B2B transmission activity.
+Anypoint Partner Manager allows you to monitor trading partner transmission activity.
 Activity is the full set of end-to-end events involved in processing a transmission such as transmission metadata, messages, and errors.
 
 You can:

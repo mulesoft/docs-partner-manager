@@ -39,6 +39,7 @@ Valid values::
 
 * `AS2`
 * `SFTP`
+* `HTTPS`
 
 Default::
 
@@ -61,9 +62,9 @@ Default::
 
 None
 
-|Default for partner_ checkbox
+// |Default for partner_ checkbox
 
-|Select this box if you want the choices you make for this endpoint to apply to all endpoints for this partner.
+// |Select this box if you want the choices you make for this endpoint to apply to all endpoints for this partner.
 
 |===
 

@@ -5,20 +5,24 @@ endif::[]
 
 To receive messages from a partner, create a message flow and configure the sections for both the source and target.
 For the Endpoint, source at host - this is the origin of the message flow when defined by a host endpoint and message type, often an API.
-For the endpoint, target at host - this is the final destination of a message flow when defined by a host endpoint and message type, often a Host API.
+For the Endpoint, target at host - this is the final destination of a message flow when defined by a host endpoint and message type, often a Host API.
 
 // For example, a distributor might group a set of purchase orders by sending them in one transmission to a supplier trading partner.
 
 You'll need the following for the Source:
 
 * The partner and associated identifiers
+
 * The endpoint where you receive the transmission
+
 * The message type to process for this message flow
-* The Dataweave map that transforms the message contents into a form your systems can use
+
+* The DataWeave map that transforms the message contents into a form your systems can use
 
 You'll need the following for the Target:
 
 * The message type your system understands
+
 * The endpoint in your organization where you route the transformed message
 
 When receiving a B2B message from your trading partner, in cases where there may be more than one URL, you only need to configure the receiving URL.

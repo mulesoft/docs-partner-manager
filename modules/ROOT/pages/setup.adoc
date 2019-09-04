@@ -6,22 +6,27 @@ endif::[]
 Set up Partner Manager to be used by different people in your organization: message flow developers, operations managers, and IT managers.
 To configure the system, you should be familiar with these concepts before setting up Partner Manager:
 
-* EDI message formats and schemas.
-* Dataweave transformations.
-* Digital Certificates such as X.509 certificates in PKCS12 file format for the AS2 transport protocol.
-* Configuration of protcols such as AS2, SFTP, HTTPS.
-* Understanding ofthe concept of organizations and environments in the Anypoint platform in context to Access Management and Anypoint Runtime Manager.
+* EDI message formats and schemas
+
+* Dataweave transformations
+
+* Digital Certificates such as X.509 certificates in PKCS12 file format for the AS2 transport protocol
+
+* Configuration of protcols such as AS2, SFTP, HTTPS
+
+* Understanding of the concept of organizations and environments in the Anypoint platform in context to Access Management and Mule Runtime Manager
 
 == Minimum Requirements
 
 Verify that you have the following software and other requirements:
 
-* Mule runtime engine 4.1.1 or higher. Make sure you have the needed Mule runtime Core/vCore capacity to handle your B2B transaction workload needs.
+* Mule runtime engine 4.1.1 or higher. Make sure you have the needed Mule runtime Core/vCore capacity to handle your B2B transaction workload needs
+
 If you are unsure about the capacity you need to handle your B2B transactions, please contact your MuleSoft account representative for assistance.
 
 * A storage solution to store the B2B transmission payloads your send or receive. Storage options can include a Database, Amazon S3, Azure Blob Storage, and so on.
 
-* Anypoint Studio 7.1 or higher to create DataWeave maps.
+* Anypoint Studio 7.1 or higher to create DataWeave maps
 
 * License for the following optional connectors:
 
@@ -39,7 +44,8 @@ NOTE: To obtain an Anypoint Partner Manager entitlement, please contact your Mul
 
 == Environment Configuration
 
-You'll need to set up and configure your environment before you begin using Partner Manager. Please refer to Anypoint platform documentation to learn more about https://docs.mulesoft.com/access-management/environments[configuring your Anypoint platform environments].
+You'll need to set up and configure your environment before you begin using Partner Manager.
+Please refer to Anypoint platform documentation to learn more about https://docs.mulesoft.com/access-management/environments[configuring your Anypoint platform environments].
 
 === Allocate Partner Manager Roles
 
@@ -59,7 +65,7 @@ The storage API should be accessible from the Mule Runtime network.
 === Associate Mule Runtimes for Deployment
 
 . Create a dedicated user with the `Partner Manager - Runtime Engine` permission for the Runtime Engine.
-You need to do this because the UI Administrator does not have the required permissions to be used in the Runtime Engine. 
+You need to do this because the UI Administrator does not have the required permissions to be used in the Runtime Engine.
 **TODO - Add link to create the user.**
 
 . Create a server group in Anypoint Runtime Manager and call it: `B2BServerGroup`. All B2B processing Mule apps will be deployed to this server group. The steps to setup your server group are in https://docs.mulesoft.com/runtime-manager/server-group-create[Mule Runtime Manager documentation].
@@ -112,7 +118,6 @@ Once that's complete, proceed to begin setting up message flows between you and 
 == Troubleshooting References
 
 * https://help.mulesoft.com/s/article/Troubleshooting-wrapper-conf-changes-that-do-not-get-applied[Troubleshooting wrapper.conf changes]
-
 
 == See Also
 

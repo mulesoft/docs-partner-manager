@@ -11,9 +11,7 @@ From the Partners page you can:
 
 * Add information about your trading partners along with contact details
 
-
-* Add identifiers to uniquely identify them from one another.
-
+* Add identifiers to uniquely identify them from one another
 
 * Add certificates owned by your partner
 
@@ -25,32 +23,55 @@ From the Partners page you can:
 
 . From within your Anypoint Partner Manager environment, select the Partners from the left-hand navigation.
 
-. Click the *New Partner* button and proceed to:
-- Add your trating partners name, and
-- Select an Identifier from the *Type* drop-down menu. This uniquely identifies you as a trading partner. For example, depending on your setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number.
+. Click the *New Partner* button.
 
-. Click *Create Partner* to create your trading partner. at this point, your trading partner has been created within the Anypoint platform and you may proceed to setup message flows related to this partner. 
+. Add your trading partner's name.
+
+. Select an Identifier from the *Type* drop-down menu. This uniquely identifies you as a trading partner. For example, depending on your setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number.
+
+. Click *Create Partner* to create your trading partner. At this point, your trading partner has been created within the Anypoint platform, so you can go to setup message flows related to this partner.
 
 == Update Trading Partner Profile
 
+You can also add more details related to this trading partner. You can add the following information for each trading partner from the *Partners* selection in the left-hand navigation:
 
-You may now also proceed to the partners profile page to add more details related to this trading partner. You can add the following information for each trading partner from the *Partners* selection in the left-hand navigation:
+. Click the *About* button.
 
-* About - the following information can be provided in this section by clicking on the *Edit* button under the 'About' section
-- Description - Provide a brief description about your partners business, what kind of trading relation your organization has with the trading partner, etc.
-- Website - associate your trading partners website.
-- Logo - upload a logo associated to your trading partner. jpeg and png files are acceptable formats for the logo. Please ensure the logo file is smaller than 25kb.
-- Corporate address - provide an address comprsing of the street, City, State, Postal code, and Country.
-- Add contacts - Options are available to add 'business contacts', 'technical contacts' or 'other contacts'. You may add up to 3 contacts associated to a trading partners profile.
+. Add the following by clicking the *Edit* button under the *About* section:
 
-Click on the *Save* button when you have provided all the necessary information. When the trading partner's profile is successfully updated you will receive a confirmation message indicating 'Partner "<your trading partners name>" updated'
+** Description - Provide a brief description about your partners business, what kind of trading relationship your organization has with the trading partner, and so on.
 
-* Add more identifiers for your Trading partner. To add more identifiers, click on the *New* button within the 'Identifiers' section. Select an appropriate identifier type and provide a the identifier value as provided by your trading partner. after you have provided all the information needed, click on the *Create identifier* button. When an identifier is successfully created you will receive a confirmation message indicating 'Identifier created'.
+** Website - associate your trading partner's website.
 
-* Your partner's digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol). To add a certificate, click on the *New* button within the 'Certificates' section. Upload the digital certificate (typically a .pem file) provided by your trading partner, and proceed to click on *Upload certificate* button. When a certificate is successfully uploaded you will receive a confirmation message indicating 'Partner certificate created'.
+** Logo - upload a logo associated to your trading partner. Supported Logo file formats are: JPEG and PNG files. Files need to be smaller than 25KB.
 
-* Configure any global validation settings if you need to override a default value for a particular partner. Global X12 setting include:
-- Validations: Please apply validations as needed from the options mentioned below.
+** Corporate address - provide an address that includes the Street, City, State, Postal code, and Country.
+
+** Add contacts - Options are available to add 'business contacts', 'technical contacts' or 'other contacts'. You may add up to 3 contacts associated to a trading partner's profile.
+
+. Click on the *Save* button after providing all the necessary information. When the trading partner's profile is successfully updated, you receive a confirmation message.
+
+. Add more identifiers for your Trading partner by clicking the *New* button within the *Identifiers* section. Select an appropriate identifier type and add an identifier value as provided by your trading partner.
+
+. Click the *Create identifier* button to save your changes. When an identifier is successfully created you receive a confirmation message.
+
+. To add a certificate, click the *New* button within the 'Certificates' section. This is your partner's digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
+
+. Upload the digital certificate (typically a .PEM file) provided by your trading partner by clicking the *Upload certificate* button. When a certificate is successfully uploaded you receive a confirmation message.
+
+. Configure any global validation settings if you need to override a default value for a particular partner.
+
+Global X12 setting include:
+
+* validations
+* Control numbers
+* Character sets
+
+Refer to the following options for each here.
+
+=== Validations
+Apply these to your partners.
+
 [%header,cols="3s,7a"]
 |===
 |Setting |Description
@@ -119,7 +140,9 @@ Default::
 `Selected`
 |===
 
-- Control Numbers: Please apply validations related to your partners / your use of control numbers within the X12 message.
+=== Control Numbers
+Apply  validations related to your partners / your use of control numbers within the X12 message.
+
 [%header,cols="3s,7a"]
 |===
 |Setting |Description
@@ -152,7 +175,10 @@ Default::
 `Not Selected`
 |===
 
-- Character Sets: Selected charater set and character encoding options pertaining to your partners / your X12 message.
+=== Character Sets
+
+Selected character set and encoding options pertaining to your partners and/or your X12 message.
+
 [%header,cols="3s,7a"]
 |===
 |Setting |Description
@@ -189,7 +215,7 @@ Default::
 
 * To find a partner, search the Partners list by name, and select the name of the partner
 
-Refer to the X12 Settings to change any of the default settings for all X12 received messages.
+// Refer to the X12 Settings to change any of the default settings for all X12 received messages.
 
 When you are ready, you can Configure Message Flows.
 

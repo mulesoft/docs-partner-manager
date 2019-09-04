@@ -5,7 +5,7 @@ endif::[]
 
 
 Anypoint Partner Manager allows you to manage a large number of trading partners and their message flows. A message flow is the path along which a message travels, from its source, through a transformation (via a map), and to its target. You'll need to perform some tasks before you can begin transmitting messages with your trading partners. A transmission is a single communication event where a transfer of a payload which may contain one or more messages. In the X12 standard, messages are the same as transaction sets.
-You set yourself up as a host partner, then configure your partners, and then create message flows between you and your partners. 
+You set yourself up as a host partner, then configure your partners, and then create message flows between you and your partners.
 
 == Prepare to Configure Anypoint Partner Manager
 
@@ -15,19 +15,15 @@ Use this checklist to help organize the information you need to gather before yo
 
 Information you'll need to have on hand as the host organization:
 
-
 * Your organization's identifiers (such as the AS2 Identifier, X12 ISA, X12 GS, and so on)
-
 
 * Endpoints: There are three types of endpoints within AnyPoint Partner Manager -
 
+** Receive endpoints - On the Host side, for an inbound transmission you need endpoints your organization uses to receive transmissions from your partners. These endpoints are resources your organization exposes to your trading partners.
 
-- Receive endpoints - On the Host side, for an inbound transmission you need endpoints your organization uses to receive transmissions from your partners. These endpoints are resources your organization exposes to your trading partners.
+** Target endpoints - As the Host, your organization has internal endpoints where you route messages from the Partner, after they are transformed within the message flow.
 
-- Target endpoints - As the Host, your organization has internal endpoints where you route messages from the Partner, after they are transformed within the message flow.
-
-- Acknowledgement endpoints - Your partners provide you with endpoint configurations that can be used to send acknowledgement messages like 997s or 999s back to them. Acknowledgements are typically sent back to trading partners corresponding to one of more B2B messages you may receive from them.
-
+** Acknowledgement endpoints - Your partners provide you with endpoint configurations that can be used to send acknowledgement messages like 997s or 999s back to them. Acknowledgements are typically sent back to trading partners corresponding to one of more B2B messages you may receive from them.
 
 * Your digital certificates (such as X.509)
 
@@ -36,7 +32,6 @@ Information you'll need to have on hand as the host organization:
 * A storage solution for your B2B message payloads
 
 * Any Dataweave transformation maps your organization uses for B2B
-
 
 Information needed for each trading partner:
 
@@ -53,7 +48,6 @@ and any associated validations that require an acknowledgment (such as TA1, 997,
 You also need to know the X12 version to use in your transactions (such as 004010, 005010, and so on).
 
 * Your partner's digital certificates (such as X.509)
-
 
 After gathering this information, you are ready to configure yourself as host, configure your partners, and create a message flow.
 
