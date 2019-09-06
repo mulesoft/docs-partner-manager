@@ -28,17 +28,27 @@ You'll need the following for the Target:
 If a separate URL is required for returning MDNs, it is sent in the AS2 transmission and Partner Manager reads it from there.
 
 == Set up Receive from a Partner
-
+[start=1]
 . From within your Anypoint Partner Manager environment (either Sandbox or Production), select *Message Flows* from the left-hand navigation.
 
-. Click the `New Message Flow` button and select a partner from the list and click the `Select` button. You can also choose to create a new partner by clicking the `New` button.
+. Click the `New Message Flow` button and select a trading partner from the list and click the `Select` button. You can also choose to create a new trading partner by clicking the `New` button.
 
-You can open each section of the message flow by clicking it. This is where you enter the information you collected from your checklist about your partner and your own backend system.
-A green checkmark next to any of the sections indicates that the particular section is complete. When you complete all of the sections i.e. have a green check mark againt all sections in the flow, you can `Deploy` your message flow and start receiving messages from your partner.
+TIP: You can expand each section of the message flow by clicking it. A green checkmark next to any a section indicates that it is complete. When you complete all of the sections i.e. have a green check mark againt all sections in the flow, you can `Deploy` your message flow and start receiving messages from your partner.
 
-Enter the following information:
+* Selecting an existing trading partner
+** In the `Select a partner` modal window, search for the trading partner by their name. Once you find a match, click on the corresponding row, and proceed to click on the `Select` button
+** Now proceed to configure your message flow to receive messages from the selected trading partner
 
-* Configure the source endpoint, where you receive the transmission
+* Creating a new trading partner
+** In the `Select a partner` modal window, click on the `New` button
+** in the ensuing modal window, provide the trading partners name and create at least one identifier (such as X12 ISA, X12 GS, and so on)
+** Once you have provided the information needed, click on the `Create Partner and Message Flow` button
+** Now proceed to configure your message flow to receive messages from the selected trading partner
+
+[start=3]
+. Configure the source endpoint where you receive the transmission. Click on the `Receiving endpoint` section to expand it. Within this section click on the `select` button. In the ensuing modal window, proceed to either search and select and existing endpoint, or create a new endpoint. To create a new endpoint, depending on the protocol, follow instructions below
+** Setting up SFTP receiving endpoint
+** Setting up AS2 receiving endpoint
 
 * Select the source message type
 
