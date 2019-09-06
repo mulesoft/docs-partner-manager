@@ -49,15 +49,11 @@ You can also add more details related to a trading partner's profile. You can ad
 
 ** Add contacts - Options are available to add 'business contacts', 'technical contacts' or 'other contacts'. You may add up to 3 contacts associated to a trading partner's profile.
 
-. Click on the `Save` button after providing all the necessary information. When the trading partner's profile is successfully updated, you receive a confirmation message.
+Click on the `Save` button after providing all the necessary information. When the trading partner's profile is successfully updated, you receive a confirmation message.
+[start=3]
+. Add more identifiers for your trading partner by clicking the `New` button within the `Identifiers` section. Select an appropriate identifier type and add an identifier value as provided by your trading partner. Click the `Create identifier` button to save your changes. When an identifier is successfully created you receive a confirmation message.
 
-. Add more identifiers for your trading partner by clicking the `New` button within the `Identifiers` section. Select an appropriate identifier type and add an identifier value as provided by your trading partner.
-
-. Click the `Create identifier` button to save your changes. When an identifier is successfully created you receive a confirmation message.
-
-. To add a certificate, click the `New` button within the `Certificates` section. This is your partner's digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
-
-. Upload the digital certificate (typically a .PEM file) provided by your trading partner by clicking the *Upload certificate* button. When a certificate is successfully uploaded you receive a confirmation message.
+. To add a certificate, click the `New` button within the `Certificates` section. This is your partner's digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol). Upload the digital certificate (typically a .PEM file) provided by your trading partner by clicking the *Upload certificate* button. When a certificate is successfully uploaded you receive a confirmation message.
 
 . Configure any global validation settings if you need to override a default value for a particular partner.
 
