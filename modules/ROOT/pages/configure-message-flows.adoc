@@ -47,8 +47,8 @@ TIP: You can expand each section of the message flow by clicking it. A green che
 
 [start=3]
 . Configure the source endpoint where you receive the transmission. Click on the `Receiving endpoint` section to expand it. Within this section click on the `select` button. In the ensuing modal window, proceed to either search and select and existing endpoint, or create a new endpoint. To create a new endpoint, depending on the protocol, follow instructions below
-** Setting up SFTP receiving endpoint
-** Setting up AS2 receiving endpoint
+** Setting up SFTP endpoint
+** Setting up AS2 endpoint
 
 . Select the source message type. Click on the `Source message` section to expand it. Within this section, click on the `select` button. In the ensuing modal window, proceed to either search and select and existing message type, or create a new message type. To create a new message type, depending on the message standard, follow instructions below
 ** Setting up X12 message type
@@ -64,8 +64,8 @@ TIP: You can expand each section of the message flow by clicking it. A green che
 *** Setting up JSON message type
 
 ** Setup a target endpoint. Click on the `select` button. In the ensuing modal window, proceed to either search and select and existing endpoint, or create a new endpoint. To create a new endpoint, depending on the protocol, follow instructions below
-*** Setting up SFTP receiving endpoint
-*** Setting up HTTP / HTTPS receiving endpoint
+*** Setting up SFTP endpoint
+*** Setting up HTTP / HTTPS endpoint
 
 . Click the `Deploy` button when you are ready to deploy the configurations to your mule runtime.
 
