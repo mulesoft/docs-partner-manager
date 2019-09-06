@@ -36,7 +36,7 @@ Global X12 setting include:
 Refer to the following options for each here.
 
 === Validations
-Apply these to your partners.
+Apply these at the host level, to make them applicable across all message flows across trading partners.
 
 [%header,cols="3s,7a"]
 |===
