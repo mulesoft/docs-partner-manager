@@ -21,17 +21,17 @@ Information you'll need to have on hand as the host organization:
 
 ** Receive endpoints - On the Host side, for an inbound transmission you need endpoints your organization uses to receive transmissions from your partners. These endpoints are resources your organization exposes to your trading partners.
 
-** Target endpoints - As the Host, your organization has internal endpoints where you route messages from the Partner, after they are transformed within the message flow.
+** Target endpoints - As the Host, your organization has internal endpoints where you route messages from the trading partner, after they are transformed within the message flow.
 
 ** Acknowledgement endpoints - Your partners provide you with endpoint configurations that can be used to send acknowledgement messages like 997s or 999s back to them. Acknowledgements are typically sent back to trading partners corresponding to one of more B2B messages you may receive from them.
 
 * Your digital certificates (such as X.509)
 
-* EDI message type preferences for your organization
+* Electronic Data Interchange (EDI) message type preferences for your organization
 
-* A storage solution for your B2B message payloads
+* A storage solution to store your B2B message payloads
 
-* Any Dataweave transformation maps your organization uses for B2B
+* Dataweave transformation maps your organization uses for B2B
 
 Information needed for each trading partner:
 
@@ -39,13 +39,11 @@ Information needed for each trading partner:
 
 * Your trading partner's identifiers (such as the AS2 Identifier, X12 ISA, X12 GS, and so on)
 
-* Trading Partner Endpoints - where you send transmissions to your partners, including acknowledgement endpoints
+* Trading partner endpoints - where you send transmissions to your partners, including acknowledgement endpoints
 
-* Electronic Data Interchange (EDI) message format preferences for your partner (such as X12),
-and any associated validations that require an acknowledgment (such as TA1, 997, 999, and so on)
+* EDI message format preferences for your partner (such as X12), and any associated validations that require an acknowledgment (such as TA1, 997, 999, and so on)
 
-* Message types to use. For example, a purchase order in X12 is an 850 message.
-You also need to know the X12 version to use in your transactions (such as 004010, 005010, and so on).
+* Message types to use. For example, a purchase order in X12 is an 850 message. You also need to know the X12 version to use in your transactions (such as 004010, 005010, and so on).
 
 * Your partner's digital certificates (such as X.509)
 
