@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Your organization or Anypoint busines group is considered the host partner in Anypoint Partner Manager.
+Your organization or https://docs.mulesoft.com/access-management/business-groups[Anypoint busines group] is considered the host partner in Anypoint Partner Manager.
 Within the host page you can do the following:
 
 * Add identifiers to uniquely identify yourself.
@@ -17,9 +17,7 @@ Within the host page you can do the following:
 
 == Update the host's profile
 
-. Open Anypoint Partner Manager.
-
-. Select the name of your organization from the navigation pane on the left-hand side. From here you configure the following based on your indentifier and certificate type. This includes any global settings you need to modify, and the location of your payload storage configuration.
+Open Anypoint Partner Manager and select the name of your organization from the navigation pane on the left-hand side. From here you configure the following based on your indentifier and certificate type. This includes any global settings you need to modify, and the location of your payload storage configuration.
 
 . Add an identifier related to your organization. To add an identifier, click the `New` button within the `Identifiers` section. Select an identifier type from the `Type` drop-down menu. This uniquely identifies your identity. For example, depending on your setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number. Proceed to provide a value for your identifier and click on the `Create Identifier` button when done.
 
@@ -36,7 +34,7 @@ Global X12 setting include:
 Refer to the following options for each here.
 
 === Validations
-Apply these at the host level, to make them applicable across all message flows across trading partners.
+Apply these at the host level, to make them applicable across all message flows, across trading partners.
 
 [%header,cols="3s,7a"]
 |===
@@ -107,14 +105,14 @@ Default
 |===
 
 === Control Numbers
-Apply  validations related to your partners / your use of control numbers within the X12 message.
+Apply  validations related to your trading partners use of control numbers within the X12 message.
 
 [%header,cols="3s,7a"]
 |===
 |Setting |Description
 
 |Requires unique interchange control number (ISA13)
-|If selected, Anypoint Partner Manager records the interchange numbers previously processed and reject any duplicate interchange numbers from the same partner (as determined by the interchange sender and receiver identification). If not selected, allows processing of the received interchange to continue
+|If selected, Anypoint Partner Manager records the interchange numbers previously processed and rejects any duplicate interchange numbers from the same partner (as determined by the interchange sender and receiver identification). If not selected, allows processing of the received interchange to continue
 
 Required?
 `No`
@@ -171,8 +169,9 @@ Required?
 Default
 `Not Selected`
 |===
+
 [start=6]
-. Storage for your B2B message payloads. Configure the location where you store payloads containing the messages you send to and receive from your partners.
+. Configure the storage API that needs to be invoked to store your B2B message payloads. This storage API was setup by you during as part of the Partner Manager xref:setup.adoc[setup]. The storage API is the location where you store payloads pertaining to the messages you send to, and receive from your partners.
 
 When you are ready, you can Configure your trading partner(s).
 
