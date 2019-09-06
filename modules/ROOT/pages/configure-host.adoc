@@ -170,7 +170,7 @@ Default
 `Not Selected`
 |===
 
-[start=6]
+[start=4]
 . Configure the storage API that needs to be invoked to store your B2B message payloads. This storage API was setup by you during as part of the Partner Manager xref:setup.adoc[setup]. The storage API is the location where you store payloads pertaining to the messages you send to, and receive from your partners.
 
 When you are ready, you can Configure your trading partner(s).
