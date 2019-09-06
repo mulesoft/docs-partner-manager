@@ -64,8 +64,8 @@ TIP: You can expand each section of the message flow by clicking it. A green che
 *** Setting up JSON message type
 
 ** Setup a target endpoint. Click on the `select` button. In the ensuing modal window, proceed to either search and select and existing endpoint, or create a new endpoint. To create a new endpoint, depending on the protocol, follow instructions below
-** Setting up SFTP receiving endpoint
-** Setting up HTTP / HTTPS receiving endpoint
+*** Setting up SFTP receiving endpoint
+*** Setting up HTTP / HTTPS receiving endpoint
 
 . Click the `Deploy` button when you are ready to deploy the configurations to your mule runtime.
 
