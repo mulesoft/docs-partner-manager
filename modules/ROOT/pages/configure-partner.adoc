@@ -186,10 +186,7 @@ Selected character set and encoding options pertaining to your partners and/or y
 |Character set
 |Characters allowed in string data. Invalid characters are replaced by the substitution character, if used, or rejected as errors if no substitution character is set or enabled for receive messages in parser options. Either way the invalid characters are logged, and for receive messages are reported in 997 functional acknowledgments.
 
-Possible values include:
-** Basic
-** Extended
-** Unrestricted
+Possible values include: `Basic`, `Extended`, `Unrestricted`
 
 Required?
 `Yes`
@@ -200,10 +197,7 @@ Default
 |Character encoding
 |Indicates the character encoding for messages. This character encoding is always used for both send and receive messages.
 
-Possible values include:
-** ASCII
-** ISO8859_1
-** UTF-8
+Possible values include: `ASCII`, `ISO8859_1`, `UTF-8`
 
 Required?
 `No`
