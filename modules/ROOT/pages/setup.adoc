@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Set up Partner Manager to be used by different people in your organization: message flow developers, operations managers, and IT managers.
+Set up Anypoint Partner Manager to be used by different people in your organization: message flow developers, operations managers, and IT managers.
 To configure the system, you should be familiar with these concepts before setting up Partner Manager:
 
 * EDI message formats and schemas
@@ -12,9 +12,9 @@ To configure the system, you should be familiar with these concepts before setti
 
 * Digital Certificates such as X.509 certificates in PKCS12 file format for the AS2 transport protocol
 
-* Configuration of protcols such as AS2, SFTP, HTTPS
+* Configuration of protcols such as AS2, SFTP, and HTTPS
 
-* Understanding of the concept of organizations and environments in the Anypoint platform in context to Access Management and Mule Runtime Manager
+* The concept of organizations and environments in the Anypoint platform in context to Access Management and Mule Runtime Manager
 
 == Minimum Requirements
 
@@ -57,16 +57,11 @@ Both roles have unrestricted access, but one role works in a Production environm
 * Partner Manager Admin (Sandbox) - Can perform all operations across Partner Manager for all Sandbox environments.
 
 . Verify that you have access to Partner Manager.
-This means that you must have the required entitlements and have assigned the `Partner Manager Administrator` role in Access Management for the environment.
+This means that you must have the required entitlements and have assigned the `Partner Manager Admin` role in Access Management for the environment.
 
-. Setup the required Storage API (to be added: a link to Exchange with description and RAML).
-The storage API should be accessible from the Mule Runtime network.
+. Setup the required Storage API. The storage API should be accessible from the Mule Runtime network.
 
 === Associate Mule Runtimes for Deployment
-
-. Create a dedicated user with the `Partner Manager - Runtime Engine` permission for the Runtime Engine.
-You need to do this because the UI Administrator does not have the required permissions to be used in the Runtime Engine.
-**TODO - Add link to create the user.**
 
 . Create a server group in Anypoint Runtime Manager and call it: `B2BServerGroup`. All B2B processing Mule apps will be deployed to this server group. The steps to setup your server group are in https://docs.mulesoft.com/runtime-manager/server-group-create[Mule Runtime Manager documentation].
 
@@ -105,7 +100,7 @@ wrapper.java.maxmemory=3024
 
 === Setup the Payload Storage API
 
-Anypoint Partner Manager enables you to connect your own storage solution (such as a database, Amazon S3, Azure Blob Storage, and so on) to store the transmission content such as incoming and outgoing B2B messages. You'll need to establish an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage. To setup the Storage API, follow the steps indicated below
+Anypoint Partner Manager enables you to connect your own storage solution (such as a database, Amazon S3, Azure Blob Storage, and so on) to store the transmission content such as incoming and outgoing B2B message payloads. You will need to establish an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage. To setup the Storage API, follow the steps indicated below.
 
 . Download the pre-packaged API and implementation template from Anypoint Exchange. Install this API on a mule runtime that can access the storage solution.**[TODO - link from Anypoint Exchange for the pre-packaged API and integration app from Manik / Pablo]**
 
