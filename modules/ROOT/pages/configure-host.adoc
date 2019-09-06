@@ -3,35 +3,176 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Your organization is considered the host partner in Anypoint Partner Manager.
-Within the Host page you can do the following:
+Your organization or Anypoint busines group is considered the host partner in Anypoint Partner Manager.
+Within the host page you can do the following:
 
-* Add identifiers to uniquely identify yourself with your partners
+* Add identifiers to uniquely identify yourself.
 
-* Add certificates owned by your organization
+* Add certificates owned by your organization.
 
-* Configure global X12 validation settings
+* Configure validation, acknowledgement, control number, and character set settings applicable to all message flows, across all trading partners. This is a truly global configuration which you can reuse in all message flows across your trading partners.
 
-* Add storage for your B2B message payloads
+* Add a storage mechanism to store your B2B message payloads.
 
 
-== Configure the host
+== Update the host's profile
 
 . Open Anypoint Partner Manager.
 
-. Select the name of your organization from the navigation pane on the left-hand side.
+. Select the name of your organization from the navigation pane on the left-hand side. From here you configure the following based on your indentifier and certificate type. This includes any global settings you need to modify, and the location of your payload storage configuration.
 
-From here you configure the following based on your indentifier and certificate type. This includes any global settings you need to modify, and the location of your payload storage configuration.
+. Add an identifier related to your organization. To add an identifier, click the `New` button within the `Identifiers` section. Select an identifier type from the `Type` drop-down menu. This uniquely identifies your identity. For example, depending on your setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number. Proceed to provide a value for your identifier and click on the `Create Identifier` button when done.
 
-// Refer to X12 Settings to change any of the default settings for all X12 received messages.
+. Upload any digital certificates (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol). To upload a certificate, click the `New` button within the `Certificates` section. This is your digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol). Upload the digital certificate (typically a .PEM file) provided by clicking the `Upload certificate` button. When a certificate is successfully uploaded you receive a confirmation message.
 
-* Add your identifiers such as the AS2 Identifier, X12 ISA, X12 GS, and/or DUNS.
+. Change any of the default global X12 validation, acknowledgement, control number, and character set settings.
 
-* Upload any digital certificates (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
+Global X12 setting include:
 
-* Change any of the default global X12 validation, acknowledgement, control number, and character set settings.
+* Validations
+* Control numbers
+* Character sets
 
-* Storage for your B2B message payloads. Configure the location where you store payloads containing the messages you send to and receive from your partners.
+Refer to the following options for each here.
+
+=== Validations
+Apply these to your partners.
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Fail document when value length outside allowed range
+|If selected, a transaction with values too long or too short is rejected. If not selected, the values are used anyway and the transaction is not rejected. In either case the error is logged and reported in 997/999 acknowledgments
+
+Required?
+`No`
+
+Default
+`Selected`
+
+|Fail document when invalid character in value
+|If selected, a transaction with invalid characters is rejected. If not selected, the characters are either passed through or substituted and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments
+
+Required?
+`No`
+
+Default
+`Not Selected`
+
+|Fail document if value is repeated too many times
+|If selected, a transaction with values repeated too many or too few times is rejected. If not selected, the value are accepted and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments
+
+Required?
+`No`
+
+Default
+`Selected`
+
+|Fail document if unknown segments are used
+|If selected, a transaction containing any unknown segments is rejected. If not selected, unknown segments are ignored and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments
+
+Required?
+`No`
+
+Default
+`Selected`
+
+|Fail document when segments are out of order
+|If selected, a transaction with segments out of order is rejected. If not selected, the segment can be reordered the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments
+
+Required?
+`No`
+
+Default
+`Selected`
+
+|Fail document when unused segments are included
+|If selected, a transaction containing segments marked as unused in the schema is rejected. If not selected, the transaction is not rejected and the unused segments are ignored. In either case the error is reported in 997/999 acknowledgments
+
+Required?
+`No`
+
+Default
+`Selected`
+
+|Fail document when too many repeats of a segment
+|A transaction with a segment repeated too many times is rejected. The error is reported in 997/999 acknowledgments
+
+Required?
+`No`
+
+Default
+`Selected`
+|===
+
+=== Control Numbers
+Apply  validations related to your partners / your use of control numbers within the X12 message.
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Requires unique interchange control number (ISA13)
+|If selected, Anypoint Partner Manager records the interchange numbers previously processed and reject any duplicate interchange numbers from the same partner (as determined by the interchange sender and receiver identification). If not selected, allows processing of the received interchange to continue
+
+Required?
+`No`
+
+Default
+`Not Selected`
+
+|Requires unique group control number (GS06)
+|If selected, Anypoint Partner Manager enforces globally unique Group Control Numbers (GS06) for received functional groups. This configuration requires group numbers to be unique across all interchanges received from the same partner and application (as determined by the interchange sender and receiver identification, combined with the functional group sender and receiver application codes)
+
+Required?
+`No`
+
+Default
+`Not Selected`
+
+|Requires unique transaction set control number (ST02)
+|If selected, Anypoint Partner Manager enforces globally unique Transaction Set Control Numbers (ST02) for received transaction sets. This configuration requires transaction set numbers to be unique across all functional groups received from the same partner and application (as determined by the interchange sender and receiver identification, combined with the functional group sender and receiver application codes)
+
+Required?
+`No`
+
+Default
+`Not Selected`
+|===
+
+=== Character Sets
+
+Selected character set and encoding options pertaining to your partners and/or your X12 message.
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Character set
+|Characters allowed in string data. Invalid characters are replaced by the substitution character, if used, or rejected as errors if no substitution character is set or enabled for receive messages in parser options. Either way the invalid characters are logged, and for receive messages are reported in 997 functional acknowledgments.
+
+Possible values include: `Basic`, `Extended`, `Unrestricted`
+
+Required?
+`Yes`
+
+Default
+`Extended`
+
+|Character encoding
+|Indicates the character encoding for messages. This character encoding is always used for both send and receive messages.
+
+Possible values include: `ASCII`, `ISO8859_1`, `UTF-8`
+
+Required?
+`No`
+
+Default
+`Not Selected`
+|===
+[start=6]
+. Storage for your B2B message payloads. Configure the location where you store payloads containing the messages you send to and receive from your partners.
 
 When you are ready, you can Configure your trading partner(s).
 
