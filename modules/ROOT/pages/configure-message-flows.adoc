@@ -33,7 +33,7 @@ If a separate URL is required for returning MDNs, it is sent in the AS2 transmis
 
 . Click the `New Message Flow` button and select a trading partner from the list and click the `Select` button. You can also choose to create a new trading partner by clicking the `New` button.
 
-TIP: You can expand each section of the message flow by clicking it. A green checkmark next to any a section indicates that it is complete. When you complete all of the sections i.e. have a green check mark againt all sections in the flow, you can `Deploy` your message flow and start receiving messages from your partner.
+TIP: You can expand each section of the message flow by clicking it. A green checkmark next to any a section indicates that it is complete.
 
 * Selecting an existing trading partner
 ** In the `Select a partner` modal window, search for the trading partner by their name. Once you find a match, click on the corresponding row, and proceed to click on the `Select` button
@@ -50,16 +50,26 @@ TIP: You can expand each section of the message flow by clicking it. A green che
 ** Setting up SFTP receiving endpoint
 ** Setting up AS2 receiving endpoint
 
-* Select the source message type
+. Select the source message type. Click on the `Source message` section to expand it. Within this section, click on the `select` button. In the ensuing modal window, proceed to either search and select and existing message type, or create a new message type. To create a new message type, depending on the message standard, follow instructions below
+** Setting up X12 message type
+** Setting up JSON message type
 
-* Configure acknowledgments (if the partner requires them), the type of acknowledgment, and the endpoint to which you send it
+. Configure acknowledgments (optional, only if the partner requires them for X12 messages), the type of acknowledgment, and the endpoint to which you send it
 
-* Upload a DataWeave map
+. Upload a DataWeave map. Click on the `Map` section to expand it. Within this section, click on the `import` button and upload a dataweave map. Click the `Upload mapping` button to successfully upload your dataweave map.
 
-* Select the target message type for the type of document. For example, a purchase order in X12 is an 850 message.
-You also need to know the X12 version to use in your transactions (such as 004010, 005010, and so on).
+. Setup the target within your organization where you want to forward the transformed message. Click on the `Map` section to expand it. Within this section, proceed to setup the target message type and the endpoint where you want to route the transformed message.
 
-* Click the *Deploy* button when you are ready to make the created flow live
+** Setup a target message type. Click on the `select` button. In the ensuing modal window, proceed to either search and select and existing message type, or create a new message type. To create a new message type, depending on the message standard, follow instructions below
+*** Setting up JSON message type
+
+** Setup a target endpoint. Click on the `select` button. In the ensuing modal window, proceed to either search and select and existing endpoint, or create a new endpoint. To create a new endpoint, depending on the protocol, follow instructions below
+** Setting up SFTP receiving endpoint
+** Setting up HTTP / HTTPS receiving endpoint
+
+. Click the `Deploy` button when you are ready to deploy the configurations to your mule runtime.
+
+TIP: When you complete all of the sections i.e. have a green check mark againt all sections in the flow, you can `Deploy` your message flow and start receiving messages from your partner.
 
 You can begin to monitor the activity from the Activity page.
 
