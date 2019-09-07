@@ -52,11 +52,11 @@ Once you have created a message flow, you can begin to track its activity.
 The `Transmission Flow` section shows the steps the file was processed in. This includes:
 * indicating if the file was successfully received and routed
 * if an acknowledgement was sent back to the trading partner
-* if the message was appropriately transformed and routed to the target endpoint. 
+* if the message was appropriately transformed and routed to the target endpoint.
 
 [start=6]
 . Click `View Payload` to view and download the original payload received.
 
-// Refer to the Troubleshooting section for common message flow errors.
+// Refer to the Troubleshooting section for common message flow errors. Need to get a list of these.
 
 // == See also

@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Anypoint Partner Manager enables you to manage a large number of trading partners and their message flows. A message flow is the path along which a message travels, from its source, through a transformation (via a DataWeave map), and to its target. 
+Anypoint Partner Manager enables you to manage a large number of trading partners and their message flows. A message flow is the path along which a message travels, from its source, through a transformation (via a DataWeave map), and to its target.
 
 You'll need to perform some tasks before you can begin transmitting messages with your trading partners. A transmission is a single communication event during which payload transfer sometimes requires more than one message. Even though a transmission is a single communication event, it sometimes requires more than one message (or X12 transaction set) to transfer payload.
 
@@ -48,7 +48,6 @@ Information you need about each trading partner:
 * Partner digital certificates (such as X.509)
 
 After gathering this information, you are ready to configure yourself as host, configure your partners, and create a message flow.
-
 
 // == See Also
 

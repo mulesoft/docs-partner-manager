@@ -3,7 +3,8 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-These settings apply to all X12 settings received from all partners. You can override these for your individual partner.
+These settings apply to all X12 settings received from all partners.
+You can override these for your individual partner.
 
 [%header,cols="3s,7a"]
 |===
@@ -39,7 +40,6 @@ Valid values::
 Default::
 
 * No default provided
-
 
 |Interchange ID - ISA
 |EDI X12 ISA ID for your trading partner; can be up to 15 characters. Your trading partner should supply you with the proper EDI X12 Interchange ID.

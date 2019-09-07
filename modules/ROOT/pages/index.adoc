@@ -39,9 +39,7 @@ To get started, have your Anypoint Platform administrator follow the Setup instr
 * xref:setup.adoc[Anypoint Partner Manager Setup]
 
 // == About this Page
-
 //  This page introduces MuleSoft's B2B Solutions and links to pages that provide details about Anypoint Partner Manager and // // MuleSoft's EDI message packs. In addition, we provide configuration details for implementing B2B Solutions in Anypoint //  Studio's Graphical Editor.
-
 // == Beta Documentation
 
 // * xref:setup.adoc[Anypoint Partner Manager Setup]

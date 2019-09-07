@@ -5,7 +5,7 @@ endif::[]
 
 To receive messages from a trading partner, create a message flow and configure the sections for both the source and target. Your organization is typically referred to as the host, while the partner you interact with is refered to as a trading partner.
 
-For the receiving endpoint - this is the origin of the message flow when defined by a host endpoint and message type, often an API. 
+For the receiving endpoint - this is the origin of the message flow when defined by a host endpoint and message type, often an API.
 
 For the target endpoint - this is the final destination of a message flow when defined by a host endpoint and message type, often a Host API.
 
@@ -47,18 +47,14 @@ Clicking each section of the message flow expands it. A green checkmark next to 
 
 . Once you have provided the information needed, click the *Create Partner and Message Flow* button.
 
-Once you've edited a partner you can configure your message flow to receive messages from the selected trading partner.
-
-
-
 Once your trading partner is created, you can configure your message flow to receive messages from the selected trading partner or add more information.
 
 [start=3]
-. Configure the source endpoint where you receive the transmission. 
+. Configure the source endpoint where you receive the transmission.
 
-. Click on the `Receiving endpoint` section to expand it and click the *select* button. 
+. Click on the `Receiving endpoint` section to expand it and click the *select* button.
 
-. Search and select and existing endpoint, or create a new endpoint. 
+. Search and select and existing endpoint, or create a new endpoint.
 
 . To create a new endpoint, depending on the protocol, follow instructions in these sections:
 
@@ -66,9 +62,9 @@ Once your trading partner is created, you can configure your message flow to rec
 
 [xref] Setting up AS2 endpoint
 [start=7]
-. Select the source message type by clickin on the `Source message` section to expand it. 
+. Select the source message type by clickin on the `Source message` section to expand it.
 
-. Click the *Select* button and either search and select and existing message type, or create a new message type. 
+. Click the *Select* button and either search and select and existing message type, or create a new message type.
 To create a new message type, depending on the message standard, follow instructions in these sections:
 
 [xref] Setting up X12 message type
@@ -81,21 +77,21 @@ To create a new message type, depending on the message standard, follow instruct
 
 . Click the *Upload map* button to successfully upload your dataweave map.
 
-. To set up the target within your organization where you want to forward the transformed message, click on the `Map` section to expand it. 
+. To set up the target within your organization where you want to forward the transformed message, click on the `Map` section to expand it.
 
 . Go to the setup the target message type and the Endpoint where you want to route the transformed message.???
 
-. Click the *Select* button to set up a target message type.  
+. Click the *Select* button to set up a target message type.
 
-. Either search and select an existing message type, or create a new message type. 
+. Either search and select an existing message type, or create a new message type.
 
 . To create a new message type, depending on the message standard, follow instructions in one of these sections.
 
 [xref] Setting up JSON message type
 [start=17]
-. Set up a target endpoint by clicking the *Select* button. 
+. Set up a target endpoint by clicking the *Select* button.
 
-Either search and select and existing endpoint, or create a new endpoint. 
+Either search and select and existing endpoint, or create a new endpoint.
 [start=18]
 . To create a new endpoint, depending on the protocol, follow instructions in these sections:
 

@@ -3,6 +3,8 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
+Check for placement of this content.
+
 There are three types of endpoints within AnyPoint Partner Manager:
 
 * Receive - On the Host side, you need endpoints your organization uses to receive transmissions from your partners.

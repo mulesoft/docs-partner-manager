@@ -18,6 +18,7 @@ Configuring a message type for a partner means configuring settings specific to 
 Required:: Yes
 
 Default:: Auto-populates based on the following values:
+
 * *Company name*
 * *Standard*
 * *Version*
