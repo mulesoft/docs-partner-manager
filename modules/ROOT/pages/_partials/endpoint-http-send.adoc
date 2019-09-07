@@ -10,23 +10,19 @@ These settings are a subset of those in xref:4.0@mule-runtime::http-request-conn
 |Name |Description
 |Protocol
 |Select *HTTP* or *HTTPS* +
-Type: selected value +
 Required: Yes +
 Default: HTTP
 
 |Use Persistent Connections
 |&nbsp; +
-Type: Checkbox selection +
 Required: no +
 Default: Selected
 
 |Connection Idle Timeout (milliseconds) | &nbsp; +
-Type: string +
 Required: yes +
 Default: 30000
 
 |Response Timeout (milliseconds) | &nbsp; +
-Type: string +
 Required: no +
 Default: none
 |===
@@ -37,22 +33,18 @@ Default: none
 |===
 |Name |Description
 |Host |&nbsp; +
-Type: &nbsp; +
 Required: no +
 Default: None
 
 |Port |&nbsp; +
-Type: &nbsp; +
 Required: no +
 Default: None
 
 |Path |&nbsp; +
-Type: &nbsp; +
 Required: no +
 Default: None
 
 |Method |&nbsp; +
-Type: selection +
 Required: no +
 Default: None
 |===
@@ -62,8 +54,7 @@ Default: None
 [%header,cols="3s,7a"]
 |===
 |Name |Description
-|Type
-|Type: Listbox selection +
+|Type  |&nbsp;
 Required: No +
 Default: None
 
