@@ -6,7 +6,7 @@ endif::[]
 To receive messages from a trading partner, create a message flow and configure the sections for both the source and target. Your organization is typically referred to as the host, while the partner you interact with is refered to as a trading partner.
 
 For the receiving endpoint - this is the origin of the message flow when defined by a host endpoint and message type, often an API. 
-+
+
 For the target endpoint - this is the final destination of a message flow when defined by a host endpoint and message type, often a Host API.
 
 You'll need the following for the Source:
@@ -33,25 +33,23 @@ If a separate URL is required for returning MDNs, it is sent in the AS2 transmis
 [start=1]
 . From within your Anypoint Partner Manager environment (either Sandbox or Production), select `Message Flows` from the left-hand navigation.
 
-. Click the *New Message Flow* button and select a trading partner from the list and click the *Select* button. You can also choose to create a new trading partner by clicking the *New* button.
+* To Select an Existing Partner
+
+** In the `Select a partner` window, search for the trading partner by name, and once you find a match, click on the corresponding row, and click the *Select* button.
 
 Clicking each section of the message flow expands it. A green checkmark next to any a section indicates that it is complete.
 
-== Select an Existing Trading Partner
+* To Create a New Trading Partner
 
-. In the `Select a partner` window, search for the trading partner by name. 
+. In the `Select a partner` window, click  the `New` button.
 
-. Once you find a match, click on the corresponding row, and click the *Select* button.
+. Provide the trading partner's name and create at least one identifier (such as X12 ISA, X12 GS, and so on).
+
+. Once you have provided the information needed, click the *Create Partner and Message Flow* button.
 
 Once you've edited a partner you can configure your message flow to receive messages from the selected trading partner.
 
-== Create a New Trading Partner
 
-* In the `Select a partner` window, click  the `New` button.
-
-* Provide the trading partner's name and create at least one identifier (such as X12 ISA, X12 GS, and so on).
-
-* Once you have provided the information needed, click the *Create Partner and Message Flow* button.
 
 Once your trading partner is created, you can configure your message flow to receive messages from the selected trading partner or add more information.
 
@@ -65,16 +63,18 @@ Once your trading partner is created, you can configure your message flow to rec
 . To create a new endpoint, depending on the protocol, follow instructions in these sections:
 
 [xref] Setting up SFTP endpoint
-[xref] Setting up AS2 endpoint
 
+[xref] Setting up AS2 endpoint
+[start=7]
 . Select the source message type by clickin on the `Source message` section to expand it. 
 
-Click the *Select* button and either search and select and existing message type, or create a new message type. 
+. Click the *Select* button and either search and select and existing message type, or create a new message type. 
 To create a new message type, depending on the message standard, follow instructions in these sections:
 
 [xref] Setting up X12 message type
-[xref] Setting up JSON message type
 
+[xref] Setting up JSON message type
+[start=9]
 . Configure acknowledgments (optional, only if the partner requires them for X12 messages), the type of acknowledgment, and the endpoint to which you send it.
 
 . Upload a DataWeave map. Click the `Map` section to expand it and click the *Import* button to upload a DataWeave map.
@@ -92,18 +92,19 @@ To create a new message type, depending on the message standard, follow instruct
 . To create a new message type, depending on the message standard, follow instructions in one of these sections.
 
 [xref] Setting up JSON message type
-
+[start=17]
 . Set up a target endpoint by clicking the *Select* button. 
 
-. Either search and select and existing endpoint, or create a new endpoint. 
-
-To create a new endpoint, depending on the protocol, follow instructions in these sections:
+Either search and select and existing endpoint, or create a new endpoint. 
+[start=18]
+. To create a new endpoint, depending on the protocol, follow instructions in these sections:
 
 [xref] Setting up SFTP endpoint
+
 [xref] Setting up HTTP / HTTPS endpoint
 
 When you complete all of the sections - they will have a green check mark next to all of them in the flow, you can deploy your message flow and start receiving messages from your partner.
-
+[start=19]
 . Click the *Deploy* button when you are ready to deploy the configurations to your Mule Runtime.
 
 You can begin to monitor the activity from the Activity page.
