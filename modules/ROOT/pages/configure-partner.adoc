@@ -68,7 +68,7 @@ Global X12 setting include:
 * Control numbers
 * Character sets
 
-Refer to the following options for each here.
+Refer to the following options for each at xref:x12-identity-settings.adoc[X12 Global Settings]
 
 === Validations
 
