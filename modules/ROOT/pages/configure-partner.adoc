@@ -3,9 +3,9 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-The only information you need to create a new trading partner is the name and a single identifier related to tha partner.
+The only information you need to create a new trading partner is the name and a single identifier related to that partner.
 You can add other information later.
-Once created, each partner has its own page and shows up in the 'Partners' tab in the left-hand navigation menu.
+Once created, each partner has its own page and shows up in the 'Partners' tab in the left navigation menu.
 
 From the Partners page you can:
 
@@ -21,23 +21,23 @@ From the Partners page you can:
 
 . Open Anypoint Partner Manager.
 
-. From within your Anypoint Partner Manager environment, select `Partners` from the left-hand navigation.
+. From within your Anypoint Partner Manager environment, select `Partners` from the left navigation.
 
-. Click the `New Partner` button.
+. Click the *New Partner* button.
 
 . Add your trading partner's name.
 
 . Select an Identifier from the `Type` drop-down menu. This uniquely identifies you as a trading partner. For example, depending on your setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number.
 
-. Click `Create Partner` to create your trading partner. At this point, your trading partner has been created within the Anypoint platform, so you can go to setup message flows related to this partner.
+. Click the *Create Partner* button to create your trading partner. At this point, your trading partner has been created within the Anypoint platform, so you can go to setup message flows related to this partner.
 
 == Update a Trading Partner's Profile
 
-You can also add more details related to a trading partner's profile. You can add the following information for each trading partner from the `Partners` selection in the left-hand navigation:
+You can also add more details related to a trading partner's profile. You can add the following information for each trading partner from the `Partners` selection in the left navigation:
 
-. Click the `About` button.
+. Click the *About* button.
 
-. Add the following by clicking the `Edit` button under the `About` section:
+. Add the following by clicking the *Edit* button under the `About` section:
 
 ** Description - Provide a brief description about your partners business, what kind of trading relationship your organization has with the trading partner, and so on.
 
@@ -49,11 +49,16 @@ You can also add more details related to a trading partner's profile. You can ad
 
 ** Add contacts - Options are available to add 'business contacts', 'technical contacts' or 'other contacts'. You may add up to 3 contacts associated to a trading partner's profile.
 
-Click on the `Save` button after providing all the necessary information. When the trading partner's profile is successfully updated, you receive a confirmation message.
-[start=3]
-. Add more identifiers for your trading partner by clicking the `New` button within the `Identifiers` section. Select an appropriate identifier type and add an identifier value as provided by your trading partner. Click the `Create identifier` button to save your changes. When an identifier is successfully created you receive a confirmation message.
+Click the *Save* button after providing all the necessary information. When the trading partner's profile is successfully updated, you receive a confirmation message.
 
-. To add a certificate, click the `New` button within the `Certificates` section. This is your partner's digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol). Upload the digital certificate (typically a .PEM file) provided by your trading partner by clicking the *Upload certificate* button. When a certificate is successfully uploaded you receive a confirmation message.
+[start=3]
+. Add more identifiers for your trading partner by clicking the *New* button within the `Identifiers` section. Select an appropriate identifier type and add an identifier value as provided by your trading partner. 
+
+. Click the *Create identifier* button to save your changes. When an identifier is successfully created you receive a confirmation message.
+
+. To add a certificate, click the *New* button within the `Certificates` section. This is your partner's digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol). 
+
+. Upload the digital certificate (typically a .PEM file) provided by your trading partner by clicking the *Upload certificate* button. When a certificate is successfully uploaded you receive a confirmation message.
 
 . Configure any global validation settings if you need to override a default value for a particular partner.
 
@@ -66,6 +71,7 @@ Global X12 setting include:
 Refer to the following options for each here.
 
 === Validations
+
 Apply these to your partners.
 
 [%header,cols="3s,7a"]
@@ -73,7 +79,7 @@ Apply these to your partners.
 |Setting |Description
 
 |Fail document when value length outside allowed range
-|If selected, a transaction with values too long or too short is rejected. If not selected, the values are used anyway and the transaction is not rejected. In either case the error is logged and reported in 997/999 acknowledgments
+|If selected, a transaction with values too long or too short is rejected. If not selected, the values are used anyway and the transaction is not rejected. In either case the error is logged and reported in 997/999 acknowledgments.
 
 Required?
 `No`
@@ -82,7 +88,7 @@ Default
 `Selected`
 
 |Fail document when invalid character in value
-|If selected, a transaction with invalid characters is rejected. If not selected, the characters are either passed through or substituted and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments
+|If selected, a transaction with invalid characters is rejected. If not selected, the characters are either passed through or substituted and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments.
 
 Required?
 `No`
@@ -100,7 +106,7 @@ Default
 `Selected`
 
 |Fail document if unknown segments are used
-|If selected, a transaction containing any unknown segments is rejected. If not selected, unknown segments are ignored and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments
+|If selected, a transaction containing any unknown segments is rejected. If not selected, unknown segments are ignored and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments.
 
 Required?
 `No`
@@ -109,7 +115,7 @@ Default
 `Selected`
 
 |Fail document when segments are out of order
-|If selected, a transaction with segments out of order is rejected. If not selected, the segment can be reordered the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments
+|If selected, a transaction with segments out of order is rejected. If not selected, the segment can be reordered the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments.
 
 Required?
 `No`
@@ -118,7 +124,7 @@ Default
 `Selected`
 
 |Fail document when unused segments are included
-|If selected, a transaction containing segments marked as unused in the schema is rejected. If not selected, the transaction is not rejected and the unused segments are ignored. In either case the error is reported in 997/999 acknowledgments
+|If selected, a transaction containing segments marked as unused in the schema is rejected. If not selected, the transaction is not rejected and the unused segments are ignored. In either case the error is reported in 997/999 acknowledgments.
 
 Required?
 `No`
@@ -137,6 +143,7 @@ Default
 |===
 
 === Control Numbers
+
 Apply  validations related to your partners / your use of control numbers within the X12 message.
 
 [%header,cols="3s,7a"]
@@ -144,7 +151,7 @@ Apply  validations related to your partners / your use of control numbers within
 |Setting |Description
 
 |Requires unique interchange control number (ISA13)
-|If selected, Anypoint Partner Manager records the interchange numbers previously processed and reject any duplicate interchange numbers from the same partner (as determined by the interchange sender and receiver identification). If not selected, allows processing of the received interchange to continue
+|If selected, Anypoint Partner Manager records the interchange numbers previously processed and reject any duplicate interchange numbers from the same partner (as determined by the interchange sender and receiver identification). If not selected, allows processing of the received interchange to continue.
 
 Required?
 `No`
@@ -153,7 +160,7 @@ Default
 `Not Selected`
 
 |Requires unique group control number (GS06)
-|If selected, Anypoint Partner Manager enforces globally unique Group Control Numbers (GS06) for received functional groups. This configuration requires group numbers to be unique across all interchanges received from the same partner and application (as determined by the interchange sender and receiver identification, combined with the functional group sender and receiver application codes)
+|If selected, Anypoint Partner Manager enforces globally unique Group Control Numbers (GS06) for received functional groups. This configuration requires group numbers to be unique across all interchanges received from the same partner and application (as determined by the interchange sender and receiver identification, combined with the functional group sender and receiver application codes).
 
 Required?
 `No`
@@ -162,7 +169,7 @@ Default
 `Not Selected`
 
 |Requires unique transaction set control number (ST02)
-|If selected, Anypoint Partner Manager enforces globally unique Transaction Set Control Numbers (ST02) for received transaction sets. This configuration requires transaction set numbers to be unique across all functional groups received from the same partner and application (as determined by the interchange sender and receiver identification, combined with the functional group sender and receiver application codes)
+|If selected, Anypoint Partner Manager enforces globally unique Transaction Set Control Numbers (ST02) for received transaction sets. This configuration requires transaction set numbers to be unique across all functional groups received from the same partner and application (as determined by the interchange sender and receiver identification, combined with the functional group sender and receiver application codes).
 
 Required?
 `No`
@@ -203,11 +210,11 @@ Default
 |===
 
 
-* To find a partner, search the Partners list by name, and select the name of the partner
+* To find a partner, search the Partners list by name, and select the name of the partner.
 
 // Refer to the X12 Settings to change any of the default settings for all X12 received messages.
 
-When you are ready, you can Configure Message Flows.
+Once your partners are added, you can Configure Message Flows.
 
 == See Also
 
