@@ -110,9 +110,9 @@ Anypoint Partner Manager enables you to connect your own storage solution (such 
 
 Once that's complete, proceed to begin setting up message flows between you and your trading partners.
 
-== Troubleshooting References
+// == Troubleshooting References
 
-* https://help.mulesoft.com/s/article/Troubleshooting-wrapper-conf-changes-that-do-not-get-applied[Troubleshooting wrapper.conf changes]
+// * https://help.mulesoft.com/s/article/Troubleshooting-wrapper-conf-changes-that-do-not-get-applied[Troubleshooting wrapper.conf changes]
 
 == See Also
 
