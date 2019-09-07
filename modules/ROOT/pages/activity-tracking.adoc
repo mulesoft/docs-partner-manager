@@ -9,38 +9,53 @@ Metadata includes things like the date and time the transmission was sent or rec
 Uses for this data include:
 
 * Nonrepudiation
+* Auditing
 * Correlation of acknowledgments
 * Error correction
-* Auditing
 
-Anypoint Partner Manager allows you to monitor B2B transmission activity.
-Activity is the full set of end-to-end events involved in processing a transmission such as transmission metadata, messages, and errors.
+Anypoint Partner Manager allows you to monitor trading partner transmission activity.
+Activity is the full set of end-to-end events related to transmission metadata, messages, and errors as they are involved in processing a transmission.
 
 You can:
 
 * Search for document metadata (such as partner name, message type, filename, control number, endpoint, or date received)
-* View and download the payload information from the transmission
+
+* View and download the original payload related to the transmission
+
 * Review errors and acknowledgement payloads
-// * Filter to find the specific transmission flow data
 
-Track Activity for Message Flows:
+== Activity Tracking
 
-. Open Partner Manager.
+Once you have created a message flow, you can begin to track its activity.
 
-. From within your Partner Manager environment, select Activity from the left-hand navigation.
+. Open Anypoint Partner Manager.
 
-. Scroll the list for the transmission you are interested in.
-If you do not see that transmission, use the search box to find a partner name, message type, filename, control number, endpoint, or date received.
+. Select `Activity` from the left navigation.
 
-. Select the transmission and review the summary information.
+. Locate a transmission you transmission you are interested in. Use the search box to find the transmission based on the trading partner name, message type, filename, control number, endpoint, or date received.
+
+[start=4]
+. Select the transmission and review the summary information. The summary information contains:
+
+** The status of the transmission indicating either a success, warning, or failure
+
+** The name of the file that was received
+
+** The control number associated with the file (if available)
+
+** The receiving endpoint at which the file was received
+
+** The date and time when the file was received
 
 . Scan the Transmission Flow sections for an exclamation point (!) in any of the rectangle boxes next to the displayed flow stages, indicating an issue with the transmission.
 
-. Click the *View Payload* button to see the payload transmission.
+The `Transmission Flow` section shows the steps the file was processed in. This includes:
+* indicating if the file was successfully received and routed
+* if an acknowledgement was sent back to the trading partner
+* if the message was appropriately transformed and routed to the target endpoint. 
 
-. Click the *Download* button to download the payload and troubleshoot the source of the error.
-
-.  Repeat steps to monitor another transmission.
+[start=6]
+. Click `View Payload` to view and download the original payload received.
 
 // Refer to the Troubleshooting section for common message flow errors.
 

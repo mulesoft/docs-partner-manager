@@ -1,4 +1,4 @@
-= Receive from Partners
+= X12 Global Settings - Receive from Partners
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -14,153 +14,135 @@ Any of these options indicated by a checked box (yes) setting means that all of 
 
 [%header,cols="3s,7a"]
 |===
-|Failed Document |Default
+|Setting |Description
 
-|When the value length is outside allowed range.
-|
+|Fail document when value length outside allowed range
+|If selected, a transaction with values too long or too short is rejected. If not selected, the values are used anyway and the transaction is not rejected. In either case the error is logged and reported in 997/999 acknowledgments.
 
-`Yes`
-
-|When an invalid character is in the value.
-|
-
-`Yes`
-
-|If the value is repeated too many times.
-|
-
-`Yes`
-
-|If unknown segments are used.
-|
-
+Required?
 `No`
 
-|When the segments are out of order.
-|
+Default
+`Selected`
 
-`Yes`
+|Fail document when invalid character in value
+|If selected, a transaction with invalid characters is rejected. If not selected, the characters are either passed through or substituted and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments.
 
-|When there are too many repeats of a segment.
-|
+Required?
+`No`
 
-`Yes`
+Default
+`Not Selected`
 
-|When unused segments are included.
-|
+|Fail document if value is repeated too many times
+|If selected, a transaction with values repeated too many or too few times is rejected. If not selected, the value are accepted and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments
 
-`Yes`
+Required?
+`No`
 
+Default
+`Selected`
 
-== Acknowledgement Settings
+|Fail document if unknown segments are used
+|If selected, a transaction containing any unknown segments is rejected. If not selected, unknown segments are ignored and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments.
 
-Use these to set the type of acknowledgment needed for the exchange.
-[%header,cols="3s,7a"]
+Required?
+`No`
+
+Default
+`Selected`
+
+|Fail document when segments are out of order
+|If selected, a transaction with segments out of order is rejected. If not selected, the segment can be reordered the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments.
+
+Required?
+`No`
+
+Default
+`Selected`
+
+|Fail document when unused segments are included
+|If selected, a transaction containing segments marked as unused in the schema is rejected. If not selected, the transaction is not rejected and the unused segments are ignored. In either case the error is reported in 997/999 acknowledgments.
+
+Required?
+`No`
+
+Default
+`Selected`
+
+|Fail document when too many repeats of a segment
+|A transaction with a segment repeated too many times is rejected. The error is reported in 997/999 acknowledgments
+
+Required?
+`No`
+
+Default
+`Selected`
 |===
-|Setting |Description, Values, Default
 
-|Interchange Acknowledgement (TA1) Requested
-|Provides a Technical Acknowledgment (TA1) to the Interchange sender. TA1 is typically used with HIPAA messages, and the TA1 Acknowledgement is sent inside an ISA/IEA envelope.
+=== Control Numbers
 
-Valid values::
-N/A
-
-Default::
-
-`None`
-
-|Functional Acknowledgement Requested
-|Provides a functional Acknowledgement with the exchange. There are two types: a 997 and a 999.
-
-Valid values::
-N/A
-
-Default::
-
-`Enabled`
-
-|997 Requested
-|Used to:
-
-* acknowledge receipt of an interchange or a functional group
-* accept or reject one or more functional groups or one or more transactions
-* verify and report compliance with the standard.
-
-Valid values::
-Business rules associated with 997:
-* If an interchange contains multiple groups, a 997 acknowledgment is returned for each group.
-* If a group contains multiple transaction sets, the acknowledgment for that group contains multiple AK2 loops,
-one for each transaction set, if AK2 loops are generated for accepted transaction sets.
-
-Default::
-
-`Enabled`
-
-|999 Requested
-|Replaces the 997 Functional Acknowledgement document for use in Healthcare.
-
-Valid values::
-N/A
-
-Default::
-
-`Disabled`
-
-== Control Numbers Settings
-
-A `Yes`, or `On` setting means that certain control number settings can be blocked. For any of these transaction set numbers set to `Yes`, or `On`, a transmission check can be set to a minimum of 1 day to a maximum of 60 days. The default is 30 days.
+Apply  validations related to your partners / your use of control numbers within the X12 message.
 
 [%header,cols="3s,7a"]
 |===
-|Setting Name |Description and Default
+|Setting |Description
 
-|Unique Interchange Control Number (ISA13)
-|Checks that the received interchange does not match the Unique Interchange Control Number (ISA13). If a match is detected, the duplicate interchange is blocked.
+|Requires unique interchange control number (ISA13)
+|If selected, Anypoint Partner Manager records the interchange numbers previously processed and reject any duplicate interchange numbers from the same partner (as determined by the interchange sender and receiver identification). If not selected, allows processing of the received interchange to continue.
 
-Default::
+Required?
+`No`
 
-`On`
+Default
+`Not Selected`
 
-|Unique Group Control Number (GS06)
-|Checks that the received interchange does not match the Unique Group Control Number (GS06). If a match is detected, the duplicate group control number is blocked.
+|Requires unique group control number (GS06)
+|If selected, Anypoint Partner Manager enforces globally unique Group Control Numbers (GS06) for received functional groups. This configuration requires group numbers to be unique across all interchanges received from the same partner and application (as determined by the interchange sender and receiver identification, combined with the functional group sender and receiver application codes).
 
-Default::
+Required?
+`No`
 
-`Off`
+Default
+`Not Selected`
 
-|Unique Transaction Set Control Number (ST02)
-|Checks that the received interchange does not match the Transaction Set Control Number (ST02). If a match is detected, the duplicate transaction set control number is blocked.
+|Requires unique transaction set control number (ST02)
+|If selected, Anypoint Partner Manager enforces globally unique Transaction Set Control Numbers (ST02) for received transaction sets. This configuration requires transaction set numbers to be unique across all functional groups received from the same partner and application (as determined by the interchange sender and receiver identification, combined with the functional group sender and receiver application codes).
 
-Default::
+Required?
+`No`
 
-`Off`
+Default
+`Not Selected`
+|===
 
-== Character Set Settings
+=== Character Sets
 
-Use these settings to define the character set and encoding on the server.
+Selected character set and encoding options pertaining to your partners and/or your X12 message.
 
 [%header,cols="3s,7a"]
 |===
-|Setting |Description, Values, Default
+|Setting |Description
 
-|Character Set
-|Choose from three options for setting the character set encoding on the server.
+|Character set
+|Characters allowed in string data. Invalid characters are replaced by the substitution character, if used, or rejected as errors if no substitution character is set or enabled for receive messages in parser options. Either way the invalid characters are logged, and for receive messages are reported in 997 functional acknowledgments.
 
-Valid values::
+Possible values include: `Basic`, `Extended`, `Unrestricted`
 
-`Basic`, `Extended`, `Unrestricted`
+Required?
+`Yes`
 
-Default::
-
+Default
 `Extended`
 
-|Character Encoding
-|Choose from three encoding schemes for character sets on the server.
+|Character encoding
+|Indicates the character encoding for messages. This character encoding is always used for both send and receive messages.
 
-Valid values::
+Possible values include: `ASCII`, `ISO8859_1`, `UTF-8`
 
-`ASCII`, `ISO8859_1`, `UTF-8`
+Required?
+`No`
 
-Default::
-
-`ISO8859_1`
+Default
+`Not Selected`
+|===

@@ -3,36 +3,39 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Your organization is considered the host partner in Anypoint Partner Manager.
-Within the Host page you can do the following:
+Your organization or Anypoint busines group is considered the host partner in Anypoint Partner Manager. Anypoint Business groups are self-contained resource groups that contain Anypoint Platform resources such as APIs and applications.
 
+Within the host page you can do the following:
 
-* Add identifiers to uniquely identify yourself with your partners.
+* Add identifiers to uniquely identify yourself.
+
 * Add certificates owned by your organization.
-* Configure global X12 validation settings.
-* Add storage for your B2B message payloads.
 
+* Configure validation, acknowledgement, control number, and character set settings applicable to all message flows across all trading partners. You can reuse this global configuration in all message flows with all your trading partners.
 
-== Configure the host
+* Add a storage mechanism to store your B2B message payloads.
 
-. Open Anypoint Partner Manager.
+== Update the Host's Profile
 
-. Select the name of your organization from the navigation pane on the left-hand side.
+. Open Anypoint Partner Manager and select the name of your organization from the left navigation pane. Configure the following based on your indentifier and certificate type. This includes any global settings you need to modify, and the location of your payload storage configuration.
 
-. From here you configure the following based on your indentifier and certificate type as well as any global settings you need to change and the location of your payload storage configuration.
-Refer to X12 Settings to change any of the default settings for all X12 received messages.
+. Add an identifier related to your organization by clicking the *New* button within the `Identifiers` section. 
 
-* Add your identifiers such as the AS2 Identifier, X12 ISA, X12 GS, and/or DUNS.
+. Select an identifier type from the `Type` drop-down menu. This uniquely identifies you. For example, depending on your setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number. 
 
-* Upload any digital certificates (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
+. Provide a value for your identifier and click the *Create Identifier* button.
 
-* Change any of the default global X12 validation, acknowledgement, control number, and character set settings.
+. Upload any digital certificates by clicking the *New* button within the `Certificates` section. This is your digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol). 
 
-* Storage for your B2B message payloads. Configure the location where you store payloads containing the messages you send to and receive from partners.
+. Upload the digital certificate (typically a .PEM file) provided by clicking the *Upload certificate* button. When a certificate is successfully uploaded you receive a confirmation message.
 
-When you are ready, you can Configure your trading partner(s).
+. Change any of the default global X12 validation, acknowledgement, control number, and character set settings as needed.
 
-== See Also
+The Global X12 setting include:
 
-* xref:x12-identity-settings.adoc[X12 Settings]
-// * xref:configure-partner.adoc[Configure Partner]
+* Validations
+* Control numbers
+* Character sets
+
+Refer to the options for each at xref:x12-identity-settings.adoc[X12 Global Settings]
+

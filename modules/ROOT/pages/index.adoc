@@ -12,10 +12,9 @@ Enterprises use Anypoint Partner Manager to carry out business transactions such
 They are typically transmitted over transports (such as HTTP(s), SFTP, and exchanges such as AS2) and use message formats such as X12 and JSON.
 All of this is integrated into the Mule runtime.
 
-Use Anypoint Partner Manager to set up, manage, and monitor the flow of messages between you and your business partners.
-Create message flows. A message flow is the path along which a message travels from its source, through a transformation map, to its target.
-Monitor each transmission, the transfer of a payload and the validation of the messages it contains.
-The ability to track and report on this drives greater operational efficiency while managing B2B transactions.
+Use Anypoint Partner Manager to set up, manage, and monitor the flow of messages between you and your business trading partners.
+Create message flows. A message flow is the path along which a message travels from its source, through a DataWeave transformation map, to its target.
+Monitor each transmission, the transfer of a payload and the validation of the messages it contains. The ability to track and report on this drives greater operational efficiency while managing B2B transactions.
 
 With Anypoint Partner Manager you can:
 
@@ -30,9 +29,9 @@ With Anypoint Partner Manager you can:
 
 Partner Manager can be used by different people in your organization.
 For example, those that design and test message flows, those who manage activity in your production environment, and those who optimize backend services and performance.
-+
+
 In order to use Partner Manager you’ll need to be familiar with EDI message formats, and how to create Dataweave transformations.
-+
+
 To get started, have your Anypoint Platform administrator follow the Setup instructions.
 
 == See Also
