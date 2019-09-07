@@ -1,6 +1,6 @@
 == AS2 Send Settings
 
-AS2 Send Settings pertain to trading partner-specific AS2 settings such as *certificate* and *URL*.
+AS2 Send Settings pertain to trading partner-specific AS2 settings such as `Certificate` and `URL`.
 
 [%header,cols="3s,10a,3a,3a"]
 |===

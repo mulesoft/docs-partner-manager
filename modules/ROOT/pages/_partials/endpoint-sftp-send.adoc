@@ -1,5 +1,6 @@
 == SFTP Send Settings
 
+Use these when setting up SFTP.
 
 === Server information
 

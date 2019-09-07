@@ -1,7 +1,5 @@
 == HTTP Send Settings
 
-These settings are a subset of those in xref:4.0@mule-runtime::http-request-connector.adoc[HTTP Request Connector].
-
 
 === Global Config
 
