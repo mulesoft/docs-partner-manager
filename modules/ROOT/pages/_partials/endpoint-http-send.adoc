@@ -15,15 +15,15 @@ Default: HTTP
 
 |Use Persistent Connections
 |&nbsp; +
-Required: no +
+Required: No +
 Default: Selected
 
 |Connection Idle Timeout (milliseconds) | &nbsp; +
-Required: yes +
+Required: Yes +
 Default: 30000
 
 |Response Timeout (milliseconds) | &nbsp; +
-Required: no +
+Required: No +
 Default: none
 |===
 
@@ -33,19 +33,19 @@ Default: none
 |===
 |Name |Description
 |Host |&nbsp; +
-Required: no +
+Required: No +
 Default: None
 
 |Port |&nbsp; +
-Required: no +
+Required: No +
 Default: None
 
 |Path |&nbsp; +
-Required: no +
+Required: No +
 Default: None
 
 |Method |&nbsp; +
-Required: no +
+Required: No +
 Default: None
 |===
 
