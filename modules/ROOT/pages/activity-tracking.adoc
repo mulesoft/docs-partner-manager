@@ -14,33 +14,47 @@ Uses for this data include:
 * Error correction
 
 Anypoint Partner Manager allows you to monitor trading partner transmission activity.
-Activity is the full set of end-to-end events involved in processing a transmission such as transmission metadata, messages, and errors.
+Activity is the full set of end-to-end events related to transmission metadata, messages, and errors as they are involved in processing a transmission.
 
 You can:
 
 * Search for document metadata (such as partner name, message type, filename, control number, endpoint, or date received)
+
 * View and download the original payload related to the transmission
+
 * Review errors and acknowledgement payloads
 
-Track Activity for Message Flows:
+== Activity Tracking
+
+Once you have created a message flow, you can begin to track its activity.
 
 . Open Anypoint Partner Manager.
 
-. Select `Activity` from the left-hand navigation.
+. Select `Activity` from the left navigation.
 
-. Scroll the list for the transmission you are interested in.
+. Locate a transmission you transmission you are interested in. Use the search box to find the transmission based on the trading partner name, message type, filename, control number, endpoint, or date received.
 
-TIP: To locate a transmission you are interested in, use the search box to find the transmission based on the trading partner name, or message type, or filename, or control number, or endpoint, or date received.
-[start=4]
+// [start=4]
 . Select the transmission and review the summary information. The summary information contains:
-** The status of the transmission indicating either a success, warning, or a failure
+
+** The status of the transmission indicating either a success, warning, or failure
+
 ** The name of the file that was received
-** The control number associated to the file (if available)
+
+** The control number associated with the file (if available)
+
 ** The receiving endpoint at which the file was received
+
 ** The date and time when the file was received
-** Additionally, the `Transmission Flow` section shows the steps the file was processed in. This includes indicating if the file was successfully received and routed, if an acknowledgement was sent back to the trading partner, and if the message was appropriately transformed and routed to the target endpoint. A `View Payload` button allows the end user to view and download the original payload received.
 
 . Scan the Transmission Flow sections for an exclamation point (!) in any of the rectangle boxes next to the displayed flow stages, indicating an issue with the transmission.
+
+The `Transmission Flow` section shows the steps the file was processed in. This includes:
+* indicating if the file was successfully received and routed
+* if an acknowledgement was sent back to the trading partner
+* if the message was appropriately transformed and routed to the target endpoint. 
+
+. Click `View Payload` to view and download the original payload received.
 
 // Refer to the Troubleshooting section for common message flow errors.
 
