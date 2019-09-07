@@ -34,7 +34,7 @@ Once you have created a message flow, you can begin to track its activity.
 
 . Locate a transmission you transmission you are interested in. Use the search box to find the transmission based on the trading partner name, message type, filename, control number, endpoint, or date received.
 
-// [start=4]
+[start=4]
 . Select the transmission and review the summary information. The summary information contains:
 
 ** The status of the transmission indicating either a success, warning, or failure
@@ -54,6 +54,7 @@ The `Transmission Flow` section shows the steps the file was processed in. This 
 * if an acknowledgement was sent back to the trading partner
 * if the message was appropriately transformed and routed to the target endpoint. 
 
+[start=6]
 . Click `View Payload` to view and download the original payload received.
 
 // Refer to the Troubleshooting section for common message flow errors.
