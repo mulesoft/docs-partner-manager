@@ -9,13 +9,13 @@ Once created, each partner has its own page and shows up in the 'Partners' tab i
 
 From the Partners page you can:
 
-* Add information about your trading partners along with contact details
+* Add information about your trading partners along with contact details.
 
-* Add identifiers to uniquely identify them from one another
+* Add identifiers to uniquely identify them from one another.
 
-* Add certificates owned by your trading partner
+* Add certificates owned by your trading partner.
 
-* Configure validation, acknowledgement, control number, and character set settings applicable to all message flows for this trading partner
+* Configure validation, acknowledgement, control number, and character set settings applicable to all message flows for this trading partner.
 
 == Create a Trading Partner
 
