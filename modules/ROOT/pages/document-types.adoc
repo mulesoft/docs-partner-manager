@@ -5,7 +5,7 @@ endif::[]
 
 Configuring a message type for a partner means configuring settings specific to that document type standard.
 
-== X12
+== X12 and JSON
 
 [%header,cols="3s,7a"]
 |===
@@ -23,8 +23,9 @@ Default:: Auto-populates based on the following values:
 * *Standard*
 * *Version*
 
-Standard
-|Select a value from the drop-down menu, or enter a different value.
+|Standard
+
+|Select a value from the drop-down menu.
 
 Required?::
 Yes
@@ -38,61 +39,27 @@ Default::
 
 None
 
-|Version
+|Version - X12 only
+
 |Select a value from the drop-down menu, or enter a different value.
 
 Required?::
 Yes
 
-Valid values::
-
-See listbox
-
-Default::
-
-None
-
-|Message Types
+|Message Types - X12 only
 
 |Select a value from the dropdown listbox, or enter a different value.
 
 Required?::
 Yes
 
-Valid values::
-
-See listbox
-
-Default::
-
-None
-
-// |Default Checkboxes
-
-// |Select either of these checkboxes to use the values selected in the corresponding sections for X12 Settings.
-
-// Deselect either of these boxes if you want to choose different values than those chosen as defaults.
-
-// Default::
-
-// Selected
-
 
 |Schema
 
-|Click *Use Standard*, to use the Standard you selected or click *Custom* and choose a file to download.
+|Clicking the *Use Standard* button accepts the standard you selected, or clicking the *Custom* button allows you to choose a file to download. You must use a custom schema for JSON.
 
 Required?::
-No
+For JSON
 
-Default::
-
-None
-
-// |Document Properties
-
-// |This section enables you to select a standard-specific label and specify a path for a given document.
-
-// For more information, see ???
 
 |===
