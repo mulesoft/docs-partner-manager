@@ -13,16 +13,17 @@ They are typically transmitted over transports (such as HTTP(s), SFTP, and excha
 All of this is integrated into the Mule runtime.
 
 Use Anypoint Partner Manager to set up, manage, and monitor the flow of messages between you and your business trading partners.
-Create message flows. A message flow is the path along which a message travels from its source, through a DataWeave transformation map, to its target.
-Monitor each transmission, the transfer of a payload and the validation of the messages it contains. The ability to track and report on this drives greater operational efficiency while managing B2B transactions.
+The ability to track and report on this drives greater operational efficiency while managing B2B transactions.
 
 With Anypoint Partner Manager you can:
 
 * Perform technical on-boarding of your partners.
 
 * Set up message flows to receive messages between your systems and your partners.
+A message flow is the path along which a message travels from its source, through a DataWeave transformation map, to its target.
 
 * View meta information, validation errors, and all messages included with each transmission payload.
+A transmission is the transfer of a payload and the validation of the messages it contains. 
 
 // * Set up message flows to receive and send messages between your systems and your partners.
 // * View and monitor how partner messages are being processed in the system in case of failure in order to take corrective action.
@@ -40,6 +41,7 @@ To get started, have your Anypoint Platform administrator follow the Setup instr
 
 // == About this Page
 //  This page introduces MuleSoft's B2B Solutions and links to pages that provide details about Anypoint Partner Manager and // // MuleSoft's EDI message packs. In addition, we provide configuration details for implementing B2B Solutions in Anypoint //  Studio's Graphical Editor.
+
 // == Beta Documentation
 
 // * xref:setup.adoc[Anypoint Partner Manager Setup]
