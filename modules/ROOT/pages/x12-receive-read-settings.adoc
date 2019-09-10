@@ -1,4 +1,4 @@
-= X12 Global Settings - Receive from Partners
+= X12 Settings - Receive from Partner
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
