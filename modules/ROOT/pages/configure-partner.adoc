@@ -60,13 +60,11 @@ Click the *Save* button after providing all the necessary information. When the 
 
 . Upload the digital certificate (typically a .PEM file) provided by your trading partner by clicking the *Upload certificate* button. When a certificate is successfully uploaded you receive a confirmation message.
 
-. Configure any global validation settings if you need to override a default value for a particular partner.
-
-Global X12 setting include:
+. Configure X12 validation settings for this partner. These include:
 
 * Validations
 * Control numbers
 * Character sets
 
 
-Refer to the options for each at xref:x12-identity-settings.adoc[X12 Global Settings]
+Refer to the options for each at xref:x12-receive-read.adoc[X12 Settings - Receive from Partner]
