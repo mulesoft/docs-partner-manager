@@ -31,10 +31,3 @@ Within the host page you can do the following:
 
 . Change any of the default global X12 validation, acknowledgement, control number, and character set settings as needed.
 
-The Global X12 setting include:
-
-* Validations
-* Control numbers
-* Character sets
-
-Refer to the options for each at xref:x12-identity-settings.adoc[X12 Global Settings]
