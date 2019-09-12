@@ -35,9 +35,7 @@ From the Partners page you can:
 
 You can also add more details related to a trading partner's profile. You can add the following information for each trading partner from the `Partners` selection in the left navigation:
 
-. Click the `About` button.
-
-. Add the following by clicking the `Edit` button under the `About` section:
+. Click the `About` button. Add the information mentioned below by clicking the `Edit` button under the `About` section:
 
 ** Description - Provide a brief description about your partners business, what kind of trading relationship your organization has with the trading partner, and so on.
 
