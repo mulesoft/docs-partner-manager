@@ -1,4 +1,4 @@
-== HTTP Send Settings
+== HTTP(S) Protocol Send Settings
 
 
 === Global Config
@@ -9,12 +9,23 @@
 |Protocol
 |Select *HTTP* or *HTTPS* +
 Required: Yes +
-Default: HTTP
+Default: HTTPS
 
-|Use Persistent Connections
-|&nbsp; +
+|Endpoint Name
+|Name this to distinguish were you are sending this to.
+Required: Yes +
+Default: N/A
+
+|Description
+|Describe a purpose for this endpoint.
 Required: No +
 Default: Selected
+
+|URL
+|Enter a well-formed URL (including the path) where the request is to be sent such as:
+https://www.mulesoft.com/sendRequest?name=something
+Required: Yes
+Default: N/A
 
 |Connection Idle Timeout (milliseconds) | &nbsp; +
 Required: Yes +

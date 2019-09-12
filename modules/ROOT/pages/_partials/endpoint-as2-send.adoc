@@ -1,4 +1,4 @@
-== AS2 Send Settings
+== AS2 Protocol Send Settings
 
 AS2 Send Settings pertain to trading partner-specific AS2 settings such as `Certificate` and `URL`.
 
@@ -6,71 +6,35 @@ AS2 Send Settings pertain to trading partner-specific AS2 settings such as `Cert
 |===
 |Setting |Description |Required? |Default
 
-| URL
+| Message Subject
 
-|The HTTP/S address at which your partner is accepting incoming AS2 messages. +
+|Specifies a default subject for messages you send to this partner +
 
-Valid values::
-`Alphanumeric`
+| AS2 URL
+
+|The HTTP(S) address at which your partner is accepting incoming AS2 messages. +
+
 
 | Yes, if AS2 is the transport protocol
 
 | None
 
 
-| Subject
+| Sender's AS2 ID
 
-|The field that specifies a default subject for messages you send out to this partner. +
-
-Valid values::
-`Alphanumeric`
+|The Sending partner’s ID +
 
 | Yes
 
 | None
 
+| Receiver's AS2 ID
 
-| Encoding
-
-| Type of encoding to use when sending a message with AS2. +
-
-Valid values::
-
-* `*Binary*` +
-A method of encoding in which a message is represented using a combination of 0s and 1s.
-
-* `*7-bit*`
-+
-Data that is represented as relatively short lines with 998 bytes or less between CRLF line separation sequences.
-No bytes with decimal values greater than 127 are allowed and neither are NULLs (bytes with decimal value 0).
-CR (decimal value 13) and LF (decimal value 10) bytes only occur as part of CRLF line separation sequences.
-
-* `*8-bit*`
-+
-Data that is represented as relatively
-short lines with 998 bytes or less between CRLF line separation
-sequences. Bytes with decimal values greater than 127
-can be used.  As with "7bit data" CR and LF bytes only occur as part
-of CRLF line separation sequences. No NULLs are allowed.
-
-* `*Base 64*`
-+
-Need info here.
-
-* `*Quoted-Printable*`
-+
-Intended to represent data that largely consists of bytes that correspond to printable characters in
-the US-ASCII character set.  It encodes the data in such a way that
-the resulting bytes are unlikely to be modified by mail transport.
-If the data being encoded are mostly US-ASCII text, the encoded form
-of the data remains largely readable.  A body that is
-entirely in the US-ASCII character set may also be encoded in Quoted-Printable to ensure
-the integrity of the data should the message pass through a
-character-translating, and/or line-wrapping gateway.
+|The Receiving partner’s ID +
 
 | Yes
 
-| Binary
+| None
 
 
 
@@ -78,9 +42,9 @@ character-translating, and/or line-wrapping gateway.
 
 | The algorithm used to encrypt “send” messages. +
 
-Valid values::
+Options are::
 
-** `3DES`
+** `_3DES`
 +
 ** `AES128`
 
@@ -116,11 +80,12 @@ Valid values::
 
 | Message Signature Encryption
 
-| If a partner would like a signature associated with an encrypted message they receive, they can also choose to have the signature encrypted. This field indicates the algorithm the user can select to encrypt the signature. +
+| If a partner would like a signature associated with an encrypted message they receive, they can also choose to have the signature encrypted.
+This field indicates the algorithm the user can select to encrypt the signature. +
 
-Valid values::
+Options are::
 
-** `3DES`
+** `_3DES`
 +
 ** `AES128`
 
@@ -153,10 +118,55 @@ Valid values::
 | None
 
 
+| Message Encoding
+
+| Type of encoding to use when sending a message with AS2. +
+
+Options are::
+
+* `*Binary*` +
+A method of encoding in which a message is represented using a combination of 0s and 1s.
+
+* `*_7-bit*`
++
+Data that is represented as relatively short lines with 998 bytes or less between CRLF line separation sequences.
+No bytes with decimal values greater than 127 are allowed and neither are NULLs (bytes with decimal value 0).
+CR (decimal value 13) and LF (decimal value 10) bytes only occur as part of CRLF line separation sequences.
+
+* `*_8-bit*`
++
+Data that is represented as relatively
+short lines with 998 bytes or less between CRLF line separation
+sequences. Bytes with decimal values greater than 127
+can be used.  As with "7bit data" CR and LF bytes only occur as part
+of CRLF line separation sequences. No NULLs are allowed.
+
+* `*Base 64*`
++
+Data that is stored in binary formats across channels that only reliably support text content.
+Used to embed image files or other binary assets inside textual assets such as HTML and CSS files.
+
+* `*Quoted-Printable*`
++
+Intended to represent data that largely consists of bytes that correspond to printable characters in
+the US-ASCII character set.  It encodes the data in such a way that
+the resulting bytes are unlikely to be modified by mail transport.
+If the data being encoded are mostly US-ASCII text, the encoded form
+of the data remains largely readable.  A body that is
+entirely in the US-ASCII character set may also be encoded in Quoted-Printable to ensure
+the integrity of the data should the message pass through a
+character-translating, and/or line-wrapping gateway.
+
+| Yes
+
+| Binary
+
+
 
 |Compress Message after signing and/or encryption
 
-| Indicates if the trading partner wants to see the incoming message and associated signature in compressed form. Zlib is used for compression. +
+| Indicates if the trading partner wants to see the incoming message and associated signature in compressed form.
+Zlib is used for compression. +
 
 | Yes
 
@@ -175,7 +185,7 @@ Valid values::
 
 | Request Asynchronous MDN
 
-| Your Partner generates and sends the MDN back to you in a newly initiated path that you had setup at your end. +
+| Your Partner generates and sends the MDN back to you in a newly initiated path that you had set up at your end. +
 
 | Yes
 
@@ -193,18 +203,22 @@ Valid values::
 
 
 
+//| Request Digitally Signed MDN
+
+//| The Trading Partner generates and sends the MDN back to you in a newly initiated path. +
+
+//| Yes.
+
+//| Not Applicable
+
+
 |MDN Response Wait Time
 
 |The maximum time within which the sender expects to receive an MDN. The value of this field is in seconds. +
 
-Valid values::
-
-`Alphanumeric`
-
 | No
 
 | 60
-
 
 
 

@@ -3,15 +3,15 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Check for placement of this content.
+TThere are three types of endpoints within AnyPoint Partner Manager -
 
-There are three types of endpoints within AnyPoint Partner Manager:
+** Receive endpoints - On the Host side, for an inbound transmission you need endpoints your organization uses to receive transmissions from your partners. These endpoints are resources your organization exposes to your trading partners.
 
-* Receive - On the Host side, you need endpoints your organization uses to receive transmissions from your partners.
+** Target endpoints - As the Host, your organization has internal endpoints where you route messages from the trading partner, after they are transformed within the message flow.
 
-* Target - As the Host, your organization has internal endpoints where you route messages from the Partner after they are transformed within the message flow.
+** Acknowledgement endpoints - Your partners provide you with endpoint configurations that can be used to send acknowledgement messages like 997s or 999s back to them. Acknowledgements are typically sent back to trading partners corresponding to one or more B2B messages you receive from them.
 
-* Send - Your partners provide you with endpoint configurations to use for sending them transmissions, including acknowledgement messages like 997s.
+Refer to the following section for the type of endpoint you are configuring.
 
 == Endpoint Name, Protocol and Type
 

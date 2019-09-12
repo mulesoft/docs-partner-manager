@@ -1,4 +1,4 @@
-== SFTP Send Settings
+== SFTP Protocol Send Settings
 
 Use these when setting up SFTP.
 
@@ -9,30 +9,25 @@ Use these when setting up SFTP.
 |Name |Description
 
 |Host
-|Ability to provide the “Host”. Enable text input. Must be a valid IP Address or hostname. +
-Type: string +
+|Enter a valid IP Address or hostname. +
 Required: Yes +
 Default: None
 
 |Port
-| Ability to provide the “Server Port”. Enable input permissible for numbers only. +
-Type: integer +
+| The port that connects to the local (host) server. (Commonly 22) +
 Required: Yes +
 Default: None
 
 |Path
-| Ability to provide the “Path”. Enable free text input. +
-Type: string +
+| Specify a path that enables a connection to the local server. +
 Required: No +
 Default: None
 
-|Username | Ability to provide the “Username”. Enable free text input. +
-Type: string +
+|Username | Input the text for the username. +
 Required: Yes +
 Default: None
 
-|Password | Ability to provide the “Password”. Enable free text input. +
-Type: string +
+|Password | Input the text for the password +
 Required: Yes +
 Default: None
 
@@ -44,20 +39,17 @@ Default: None
 |===
 |Name |Description
 |Polling frequency
-|Frequency in milliseconds to check the read directory. The read directory is specified by the endpoint of the listening component. Ability to provide the “Polling Frequency”. Enable input permissible for numbers only. +
-Type: integer +
+|Frequency in milliseconds to check the read directory. The read directory is specified by the endpoint of the listening component. +
 Required: No +
 Default: None
 
 |File Age
-|Minimum age in milliseconds for Mule to wait before consuming a file. This allows a file write to complete before processing. Ability to provide the “File Age”. Enable input permissible for numbers only. +
-Type: integer +
+|Minimum age in milliseconds for Mule runtime to wait before consuming a file. This allows a file write to complete before processing. +
 Required: No +
 Default: None
 
 |Size Check Wait Time
-|Wait time in milliseconds between size checks to determine if a file is ready to be processed. This allows a file write to complete before processing. You can disable this feature by setting to a negative number or omitting a value. When enabled, Mule performs two size checks waiting the specified time between calls. If both checks return the same value, the file is ready to process. Ability to provide the “Size Check Wait Time”. Enable input permissible for numbers only. +
-Type: integer +
+|Wait time in milliseconds between size checks to determine if a file is ready to be processed. This allows a file write to complete before processing. You can disable this feature by setting to a negative number or omitting a value. When enabled, Mule runtime performs two size checks waiting the specified time between calls. If both checks return the same value, the file is ready to process. +
 Required: No +
 Default: None
 
