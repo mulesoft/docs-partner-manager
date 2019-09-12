@@ -3,44 +3,49 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Set up Anypoint Partner Manager to be used by different people in your organization: message flow developers, operations managers, and IT managers.
+Set up Anypoint Partner Manager to be used by different people in your organization, namely - message flow developers, operations managers, and IT managers.
 To configure the system, you should be familiar with these concepts before setting up Partner Manager:
 
-* EDI message formats and schemas
+* EDI message formats and schemas.
 
-* Dataweave transformations
+* Digital Certificates such as X.509 certificates in PKCS12 file format for the AS2 transport protocol.
 
-* Digital Certificates such as X.509 certificates in PKCS12 file format for the AS2 transport protocol
+* Configuration of protcols such as AS2, SFTP, and HTTPS.
 
-* Configuration of protcols such as AS2, SFTP, and HTTPS
+* The concept of organizations and environments in the Anypoint platform in context to Access Management and Mule Runtime Manager.
 
-* The concept of organizations and environments in the Anypoint platform in context to Access Management and Mule Runtime Manager
+* The Mule runtime.
+
+* Dataweave transformations.
 
 == Minimum Requirements
 
 Verify that you have the following software and other requirements:
 
-* Mule runtime engine 4.1.1 or higher. Make sure you have the needed Mule runtime Core/vCore capacity to handle your B2B transaction workload needs
-
-If you are unsure about the capacity you need to handle your B2B transactions, please contact your MuleSoft account representative for assistance.
-
-* A storage solution to store the B2B transmission payloads your send or receive. Storage options can include a Database, Amazon S3, Azure Blob Storage, and so on.
-
-* Anypoint Studio 7.1 or higher to create DataWeave maps
-
-* License for the following optional connectors:
-
-** AS2 4.0.2 or higher.
-** X12 2.0.1 or higher.
-
-* Partner Manager Requirements:
+* Partner Manager related entitlement requirements:
 
 ** Anypoint Platform user account with Anypoint Partner Manager entitlement.
 
 ** Appropriate roles allocated for users to access Anypoint Partner Manager.
 Roles are allocated via the Access Management section in Anypoint Platform.
 
-NOTE: To obtain an Anypoint Partner Manager entitlement, please contact your MuleSoft account representative.
+** License for the following optional connectors:
+
+*** AS2 connector.
+*** X12 connector.
+
+NOTE: To obtain the required entitlements, please contact your MuleSoft account representative.
+
+* Partner Manager related technical requirements:
+
+** Mule runtime 4.1.1 or higher. Make sure you have the needed Mule runtime capacity to handle your B2B transaction workload needs.
+
+NOTE: If you are unsure about the Mule runtime capacity you need to handle your B2B transactions, please contact your MuleSoft account representative for assistance.
+
+** A storage solution to store the B2B transmission payloads your send or receive. Storage options can include a Database, Amazon S3, Azure Blob Storage, and so on.
+
+** Anypoint Studio 7.3 or higher.
+
 
 == Environment Configuration
 
@@ -61,24 +66,22 @@ This means that you must have the required entitlements and have assigned the `P
 
 . Setup the required Storage API. The storage API should be accessible from the Mule Runtime network.
 
+
 === Associate Mule Runtimes for Deployment
 
-. Create a server group in Anypoint Runtime Manager and call it: `B2BServerGroup`. All B2B processing Mule apps will be deployed to this server group. The steps to setup your server group are in https://docs.mulesoft.com/runtime-manager/server-group-create[Mule Runtime Manager documentation].
+. Create a server group in Anypoint Runtime Manager and name it: `*B2BServerGroup*`. All B2B processing Mule apps will be deployed to this server group. The steps to setup your server group are in https://docs.mulesoft.com/runtime-manager/server-group-create[Mule Runtime Manager documentation].
 
-NOTE: The server group you setup must have the exact name **B2BServerGroup**. The name is case sensitive.
+NOTE: The server group you setup must have the exact name *B2BServerGroup*. The name is case sensitive.
 
-[start=3]
+[start=2]
 . For each environment, set up your Runtime by https://docs.mulesoft.com/mule-runtime/4.2/runtime-installation-task[downloading the MuleSoft runtime] and unzipping it.
 
 . Add the parameters mentioned below in the wrapper.conf file. You'll need to adjust the memory and heap size configuration numbers indicated in the parameters below for your environment.
 
-The wrapper.conf file is located at "MULE_HOME/conf/wrapper.conf". MULE_HOME is your environment variable which you set on server, it is the home directory of Mule runtime on the machine, usually on Linux machine something like /opt/{Mule installation}. When you reach that location you can find the wrapper.conf user conf directory.
+TIP: The wrapper.conf file is located at "MULE_HOME/conf/wrapper.conf". MULE_HOME is your environment variable which you set on server, it is the home directory of Mule runtime on the machine, usually on Linux machine something like /opt/{Mule installation}. When you reach that location you can find the wrapper.conf user conf directory.
 
 [source,xml,linenums]
 ----
-
-wrapper.java.additional.20=-Db2bAnypointUsername={{username from Step 1}}
-wrapper.java.additional.21=-Db2bAnypointPassword={{password from Step 1}}
 
 # Increase the MetaSpace
 wrapper.java.additional.7=-XX:MetaspaceSize=1256m
@@ -91,21 +94,24 @@ wrapper.java.initmemory=2024
 wrapper.java.maxmemory=3024
 
 ----
-[start=5]
+[start=4]
 . Add the server in Runtime Manager based on the https://docs.mulesoft.com/runtime-manager/servers-create[reference information]
+
 . https://docs.mulesoft.com/runtime-manager/server-group-add[Include the created servers] into the server group B2BServerGroup
 
-. Start Mule runtime and verify it on Anypoint Runtime Manager.
+. Start the Mule runtime and verify it is active within Anypoint Runtime Manager
 
 === Setup the Payload Storage API
 
-Anypoint Partner Manager enables you to connect your own storage solution (such as a database, Amazon S3, Azure Blob Storage, and so on) to store the transmission content such as incoming and outgoing B2B message payloads. You will need to establish an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage. To setup the Storage API, follow the steps indicated below.
+Anypoint Partner Manager enables you to connect your own storage solution (such as a database, Amazon S3, Azure Blob Storage, and so on) to store the transmission content such as incoming and outgoing B2B message payloads. You'll need to establish an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage. To setup the Payload Storage API, follow the steps indicated below.
 
-. Download the pre-packaged API and implementation template from Anypoint Exchange. Install this API on a mule runtime that can access the storage solution.**[TODO - link from Anypoint Exchange for the pre-packaged API and integration app from Manik / Pablo]**
+. Download the pre-packaged API specification (in RAML) and sample implementation template from Anypoint Exchange. Install this API on a Mule runtime that can access the storage solution.**[TODO - link from Anypoint Exchange for the pre-packaged API and integration app from Manik / Pablo]**
 
-. Make a note of the API address configurations (host, port, path and authentication details) associate to your storage API's implementation.
+. Make a note of the API address configurations - host, port, path and authentication details. You will need these details while associating Anypoint Partner Manager to your Payload Storage API.
 
-. Once the storage API is set up on the runtime, go to Anypoint Partner Manager, navigate to the host / your organizations profile page from the left-hand section, and configure the path to your storage within the section titled "Payload storage".
+NOTE: Please ensure your payload storage API is accesible over the internet via HTTPS. Ensure appropriate authentication mechanisms have been implemented to access your Payload Storage API.
+
+. Once the Payload Storage API is set up on the runtime, go to Anypoint Partner Manager, navigate to the host / your organizations profile page from the left-hand section, and configure the path to your storage within the section titled `Payload storage`.
 
 Once that's complete, proceed to begin setting up message flows between you and your trading partners.
 
