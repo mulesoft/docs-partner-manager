@@ -17,7 +17,7 @@ You'll need the following for the Source:
 
 * The message type to process for this message flow (such as X12, 4010, 850, and so on)
 
-* The endpoint where your trading partner may want to receive an acknowlegement related to the transactions they send 
+* The endpoint where your trading partner may want to receive an acknowlegement related to the transactions they send
 
 * The DataWeave map that transforms the received message contents into a format you prefer
 
@@ -101,7 +101,7 @@ Either search and select and existing endpoint, or create a new endpoint.
 
 When you complete all of the sections - they will have a green check mark next to all of them in the flow, you can deploy your message flow and start receiving messages from your partner.
 [start=19]
-. Click the *Deploy* button when you are ready to deploy the configurations to your Mule Runtime.
+. Click the *Deploy* button when you are ready to deploy the configurations to your Mule Runtime. How you set up Mule Runtime can impact your deployment. If your message flow does not deploy right away. Try again later.
 
 You can begin to monitor the activity from the Activity page.
 
