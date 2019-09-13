@@ -41,7 +41,7 @@ You can also add more details related to a trading partner's profile. You can ad
 
 ** Website - associate your trading partner's website.
 
-** Logo - upload a logo associated to your trading partner. Supported Logo file formats are: JPEG and PNG files. Files need to be smaller than 25KB.
+** Logo - upload a logo associated to your trading partner. Supported logo file formats are: `.jpg`, `.jpeg`, `.png`, `.gif`, or `.svg`files. Files need to be smaller than 30KB.
 
 ** Corporate address - provide an address that includes the Street, City, State, Postal code, and Country.
 
