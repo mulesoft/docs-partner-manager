@@ -41,13 +41,13 @@ Default: none
 
 [%header,cols="3s,7a"]
 |===
-|Name |Authentication Type
+|Authentication Type |Description
 |None
 |No authentication. +
 Required: No +
 
 |API Key
-HTTP Header Name- The Header parameter associated to the API Key.
+|HTTP Header Name- The Header parameter associated to the API Key.
 API Key- The value for the access key you set. +
 Required: No +
 
@@ -65,7 +65,7 @@ Client Secret Header- Add the secret key-value pairs, if they don't exist. +
 |0Auth Token
 |Token URL - Enter a valid authorization URL +
 Client ID -The Client Id the OAS gave you when registering your application. +
-Client Secret - The Client Secret the OAS gave you when registering your application. 
+Client Secret - The Client Secret the OAS gave you when registering your application.
 |===
 
 ==Certificate settings
