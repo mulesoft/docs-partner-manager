@@ -10,9 +10,12 @@ AS2 Send Settings pertain to trading partner-specific AS2 settings such as `Cert
 
 |Specifies a default subject for messages you send to this partner +
 
-| AS2 URL
+| AS2 URL (Automatically generated at time of deployment)
 
-|The HTTP(S) address at which your partner is accepting incoming AS2 messages. +
+|The HTTP(S) address at which your partner is accepting incoming AS2 messages.
+The hostname here is dependent upon how you set up your host in Mule Runtime.
+The port is automatically generated when you deploy a message flow that uses this endpoint.  
+This derived URL is what you give to your partners to send to with AS2. +
 
 
 | Yes, if AS2 is the transport protocol
@@ -143,8 +146,8 @@ of CRLF line separation sequences. No NULLs are allowed.
 
 * `*Base 64*`
 +
-Data that is stored in binary formats across channels that only reliably support text content.
-Used to embed image files or other binary assets inside textual assets such as HTML and CSS files.
+Encoding scheme that represents binary data in an ASCII string format to carry data across channels that only reliably support text content.
+It is used to embed image files or other binary assets inside textual assets such as HTML and CSS files.
 
 * `*Quoted-Printable*`
 +

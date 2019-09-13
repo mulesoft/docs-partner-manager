@@ -1,7 +1,6 @@
 == HTTP(S) Protocol Send Settings
 
 
-=== Global Config
 
 [%header,cols="3s,7a"]
 |===
@@ -12,32 +11,83 @@ Required: Yes +
 Default: HTTPS
 
 |Endpoint Name
-|Name this to distinguish were you are sending this to.
+|Name used to easily identity the function of this endpoint. +
 Required: Yes +
 Default: N/A
 
 |Description
-|Describe a purpose for this endpoint.
+|Describe a purpose and any other important details for this endpoint. +
 Required: No +
 Default: Selected
 
 |URL
 |Enter a well-formed URL (including the path) where the request is to be sent such as:
-https://www.mulesoft.com/sendRequest?name=something
-Required: Yes
+https://www.mulesoft.com/sendRequest?name=something +
+Required: Yes +
 Default: N/A
 
-|Connection Idle Timeout (milliseconds) | &nbsp; +
+|Connection Idle Timeout (milliseconds) | &nbsp;
+|Must be an integer greater than or equal to 1000. +
 Required: Yes +
 Default: 30000
 
-|Response Timeout (milliseconds) | &nbsp; +
+|Response Timeout (milliseconds) | &nbsp;
+|Must be an integer greater than or equal to 1000. +
 Required: No +
 Default: none
 |===
 
-=== Operation Settings
+=== Authentication Settings
 
+[%header,cols="3s,7a"]
+|===
+|Name |Authentication Type
+|None
+|No authentication. +
+Required: No +
+
+|API Key
+|HTTP Header Name- The Header parameter associated to the API Key. +
+|API Key- The value for the access key you set. +
+Required: No +
+
+
+
+
+Basic:
+Simple authentication policy protects the API by requiring username and password when calling apps make a request.
+Username- Enter the username you set up with this authentication policy.
+Password- Enter the username you set up with this authentication policy.
+
+Client Credentials:
+Client ID -The Client Id the OAS gave you when registering your application.
+Client Secret - The Client Secret the OAS gave you when registering your application.
+Client Header- Add the key-value pairs, if they don't exist.
+Client Secret Header- Add the secret key-value pairs, if they don't exist.
+
+0Auth Token:
+Token URL - Enter a valid authorization URL
+Client ID -The Client Id the OAS gave you when registering your application.
+Client Secret - The Client Secret the OAS gave you when registering your application.
+
+==Certificate settings
+
+Allow insecure connection:
+Can be used for local testing which doesn’t perform certificate validation.
+
+Do not require an additional certificate because this endpoint already uses a CA-signed certificate:
+This endpoint already uses a CA-signed certificate and does not require an additional certificate.
+
+Certificates:
+Shows all certificates available to use for this endpoint setup.
+Information provided for each certificate:
+Authority - certificate provider
+Serial Number - from the certificate
+Status - Active is shown with a green icon or Inactive is shown with a red icon
+Endpoints - the number of endpoints used
+Start Date - from when the certificate can be used
+Expires - the date from which the certificate can no longer be used
+Days to expiration - countdown to expiration date
 [%header,cols="3s,7a"]
 |===
 |Name |Description
