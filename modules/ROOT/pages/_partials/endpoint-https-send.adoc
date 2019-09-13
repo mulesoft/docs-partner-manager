@@ -28,7 +28,7 @@ Default: N/A
 |Connection Idle Timeout (milliseconds)
 |Must be an integer greater than or equal to 1000. +
 Required: Yes +
-Default: 30000
+Default: 3000
 
 |Response Timeout (milliseconds)
 |Must be an integer greater than or equal to 1000. +
