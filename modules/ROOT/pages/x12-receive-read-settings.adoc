@@ -1,12 +1,12 @@
-= X12 Global Settings - Receive from Partners
+= X12 Settings - Receive from Partner
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
 Refer to these as you set up your X12 settings to receive messages from your partners.
-There are two levels of settings, global and partner.
-Global level settings control all X12 messages received from all partners.
-Partner level settings are optionally configured for each partner and override global settings.
+There are two levels of settings, global and partner:
+* Global level settings control all X12 messages received from all partners.
+* Partner level settings are optionally configured for each partner and override global settings.
 
 == Validation Settings
 

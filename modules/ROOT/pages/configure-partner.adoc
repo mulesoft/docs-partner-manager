@@ -23,50 +23,42 @@ From the Partners page you can:
 
 . From within your Anypoint Partner Manager environment, select `Partners` from the left navigation.
 
-. Click the *New Partner* button.
+. Click the `New Partner` button.
 
 . Add your trading partner's name.
 
-. Select an Identifier from the `Type` drop-down menu. This uniquely identifies you as a trading partner. For example, depending on your setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number.
+. Select an identifier from the `Type` drop-down menu. This uniquely identifies your trading partner. For example, depending on your setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number.
 
-. Click the *Create Partner* button to create your trading partner. At this point, your trading partner has been created within the Anypoint platform, so you can go to setup message flows related to this partner.
+. Click the `Create Partner` button to create your trading partner. At this point, your trading partner has been created within the Anypoint Partner Manager. You can now setup message flows related to this trading partner.
 
 == Update a Trading Partner's Profile
 
 You can also add more details related to a trading partner's profile. You can add the following information for each trading partner from the `Partners` selection in the left navigation:
 
-. Click the *About* button.
-
-. Add the following by clicking the *Edit* button under the `About` section:
+. Click the `About` button. Add the information mentioned below by clicking the `Edit` button under the `About` section:
 
 ** Description - Provide a brief description about your partners business, what kind of trading relationship your organization has with the trading partner, and so on.
 
 ** Website - associate your trading partner's website.
 
-** Logo - upload a logo associated to your trading partner. Supported Logo file formats are: JPEG and PNG files. Files need to be smaller than 25KB.
+** Logo - upload a logo associated to your trading partner. Supported logo file formats are: `.jpg`, `.jpeg`, `.png`, `.gif`, or `.svg`files. Files need to be smaller than 30KB.
 
 ** Corporate address - provide an address that includes the Street, City, State, Postal code, and Country.
 
 ** Add contacts - Options are available to add 'business contacts', 'technical contacts' or 'other contacts'. You may add up to 3 contacts associated to a trading partner's profile.
 
-Click the *Save* button after providing all the necessary information. When the trading partner's profile is successfully updated, you receive a confirmation message.
+Click the `Save` button after providing all the necessary information. When the trading partner's profile is successfully updated, you receive a confirmation message.
 
 [start=3]
-. Add more identifiers for your trading partner by clicking the *New* button within the `Identifiers` section. Select an appropriate identifier type and add an identifier value as provided by your trading partner. 
+. Add more identifiers for your trading partner by clicking the `New` button within the `Identifiers` section. Select an appropriate identifier type and add an identifier value as provided by your trading partner. For example, depending on your trading partners setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number. Click the `Create identifier` button to save your changes. When an identifier is successfully created you receive a confirmation message.
 
-. Click the *Create identifier* button to save your changes. When an identifier is successfully created you receive a confirmation message.
+. To add a digital certificate, click the `New` button within the `Certificates` section. This is your partner's digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol). Upload the digital certificate (typically a .PEM file) provided by your trading partner by clicking the `Upload certificate` button. When a certificate is successfully uploaded you receive a confirmation message.
 
-. To add a certificate, click the *New* button within the `Certificates` section. This is your partner's digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol). 
-
-. Upload the digital certificate (typically a .PEM file) provided by your trading partner by clicking the *Upload certificate* button. When a certificate is successfully uploaded you receive a confirmation message.
-
-. Configure any global validation settings if you need to override a default value for a particular partner.
-
-Global X12 setting include:
+. Configure X12 validation settings for this partner. These include:
 
 * Validations
 * Control numbers
 * Character sets
 
-Refer to the options for each at xref:x12-identity-settings.adoc[X12 Global Settings]
 
+Refer to the options for each at xref:x12-receive-read.adoc[X12 Settings - Receive from Partner]

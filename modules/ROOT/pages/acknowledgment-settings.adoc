@@ -10,7 +10,8 @@ endif::[]
 |Interchange Acknowledgement (TA1) Requested
 |Provides a Technical Acknowledgment (TA1) to the Interchange sender which reports the status of the processing of an interchange header and trailer by the address receiver.
 
-When the ISA and IEA of the received X12 message are valid, a positive TA1 ACK is sent, irrespective of the status of the other content is. If not, TA1 ACK with an error code is sent.
+When the ISA and IEA of the received X12 message are valid, a positive TA1 ACK is sent, regardless of what the status of the other content is.
+If not, TA1 ACK with an error code is sent.
 
 The TA1 ACK is sent inside an ISA/IEA envelope. The ISA and IEA are no different than any other interchange.
 
@@ -29,7 +30,7 @@ Default::
 
 |The X12 997 functional acknowledgment reports the status of a received interchange. It reports each error encountered while processing the received document. Like all X12 transaction sets, the 997 ACK is sent inside a GS/GE envelope. The ST and SE are no different than any other transaction set.
 
-It is used to: 
+It is used to:
 
 
 * acknowledge receipt of an interchange or a functional group

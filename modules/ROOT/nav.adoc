@@ -8,5 +8,5 @@
 * xref:x12-identity-settings.adoc[X12 Settings]
  ** xref:x12-receive-read-settings.adoc[Receive from Partner]
 * xref:document-types.adoc[Message Types]
-* xref:endpoints.adoc[Endpoints]
+* xref:endpoints.adoc[Endpoint Types and Protocols]
 * xref:activity-tracking.adoc[Track Activity]

@@ -3,39 +3,28 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Your organization or Anypoint busines group is considered the host partner in Anypoint Partner Manager. Anypoint Business groups are self-contained resource groups that contain Anypoint Platform resources such as APIs and applications.
+Your organization or your business group is considered the host partner in Anypoint Partner Manager. In the Anypoint platform, your host name is the same as the name of your Anypoint business group. an Anypoint business group is a self-contained resource that contain Anypoint Platform resources such as APIs and applications.
 
 Within the host page you can do the following:
 
 * Add identifiers to uniquely identify yourself.
 
-* Add certificates owned by your organization.
+* Add digital certificates associated to your organization.
 
 * Configure validation, acknowledgement, control number, and character set settings applicable to all message flows across all trading partners. You can reuse this global configuration in all message flows with all your trading partners.
 
-* Add a storage mechanism to store your B2B message payloads.
+* Configure details associated to the Payload Storage API (same one you configured as part of the the Setup instructions). The storage API is a *mandatory configuration* to store your B2B message payloads.
 
 == Update the Host's Profile
 
 . Open Anypoint Partner Manager and select the name of your organization from the left navigation pane. Configure the following based on your indentifier and certificate type. This includes any global settings you need to modify, and the location of your payload storage configuration.
 
-. Add an identifier related to your organization by clicking the *New* button within the `Identifiers` section. 
+. Add an identifier related to your organization by clicking the `New` button within the `Identifiers` section. Select an identifier type from the `Type` drop-down menu. This uniquely identifies you. For example, depending on your setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number. Provide a value for your identifier and click the `Create identifier` button to save your changes. When an identifier is successfully created you receive a confirmation message.
 
-. Select an identifier type from the `Type` drop-down menu. This uniquely identifies you. For example, depending on your setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number. 
+. Upload any digital certificates by clicking the *New* button within the `Certificates` section. This is your digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol). Upload the digital certificate (typically a .PEM file) provided by clicking the `Upload certificate` button. When a certificate is successfully uploaded you receive a confirmation message.
 
-. Provide a value for your identifier and click the *Create Identifier* button.
-
-. Upload any digital certificates by clicking the *New* button within the `Certificates` section. This is your digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol). 
-
-. Upload the digital certificate (typically a .PEM file) provided by clicking the *Upload certificate* button. When a certificate is successfully uploaded you receive a confirmation message.
-
-. Change any of the default global X12 validation, acknowledgement, control number, and character set settings as needed.
-
-The Global X12 setting include:
+. Configure X12 validation settings that can be used for all message flows that you will configure with your trading partners. These include:
 
 * Validations
 * Control numbers
 * Character sets
-
-Refer to the options for each at xref:x12-identity-settings.adoc[X12 Global Settings]
-
