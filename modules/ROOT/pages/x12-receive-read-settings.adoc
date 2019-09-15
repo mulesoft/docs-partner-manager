@@ -8,6 +8,8 @@ There are two levels of settings, global and partner:
 * Global level settings control all X12 messages received from all partners.
 * Partner level settings are optionally configured for each partner and override global settings.
 
+Configure as needed for specific partners. 
+
 == Validation Settings
 
 Any of these options indicated by a checked box (yes) setting means that all of the X12 documents meet this condition criteria and receive a 997 failure message.

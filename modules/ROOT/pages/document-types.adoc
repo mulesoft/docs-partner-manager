@@ -7,6 +7,8 @@ Configuring a message type for a partner means configuring settings specific to 
 
 == X12 and JSON
 
+Refer to these when configuring either X12 or JSON
+
 [%header,cols="3s,7a"]
 |===
 |Setting |Description

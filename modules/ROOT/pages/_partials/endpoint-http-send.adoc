@@ -1,5 +1,6 @@
 == HTTP Protocol Send Settings
-Use these settings when sending with HTTP.
+
+Use these settings when sending with the HTTP protocol.
 
 [%header,cols="3s,7a"]
 |===

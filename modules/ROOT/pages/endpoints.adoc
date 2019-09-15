@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-TThere are three types of endpoints within AnyPoint Partner Manager -
+There are three types of endpoints within AnyPoint Partner Manager -
 
 ** Receive endpoints - On the Host side, for an inbound transmission you need endpoints your organization uses to receive transmissions from your partners. These endpoints are resources your organization exposes to your trading partners.
 

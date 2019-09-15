@@ -1,6 +1,6 @@
 == AS2 Protocol Send Settings
 
-AS2 Send Settings pertain to trading partner-specific AS2 settings such as `Certificate` and `URL`.
+AS2 Send Settings pertain to trading partner-specific AS2 settings such as Certificate and URL.
 
 [%header,cols="3s,10a,3a,3a"]
 |===
@@ -14,7 +14,7 @@ AS2 Send Settings pertain to trading partner-specific AS2 settings such as `Cert
 
 |The HTTP(S) address at which your partner is accepting incoming AS2 messages.
 The hostname here is dependent upon how you set up your host in Mule Runtime.
-The port is automatically generated when you deploy a message flow that uses this endpoint.  
+The port is automatically generated when you deploy a message flow that uses this endpoint.
 This derived URL is what you give to your partners to send to with AS2. +
 
 
