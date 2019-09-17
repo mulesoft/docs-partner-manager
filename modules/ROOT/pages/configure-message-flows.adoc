@@ -8,7 +8,7 @@ Your organization is typically referred to as the host. The enterprise you inter
 
 For the receiving endpoint - this is the origin of the message flow when defined by a host endpoint and message type, often an API.
 
-For the target endpoint - this is the final destination of a message flow when defined by a host endpoint and message type, often a Host API.
+The target is the final destination of a message flow and is defined by a host message type and endpoint, often a Host API.
 
 You'll need the following for the Source:
 
