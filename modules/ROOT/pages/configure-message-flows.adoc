@@ -18,7 +18,7 @@ You'll need the following for the Source:
 
 * The message type to process for this message flow (such as X12, 4010, 850, and so on).
 
-* The endpoint where your trading partner may want to receive an acknowledgment related to the transactions they send.
+* The endpoint where your trading partner may want to receive an acknowledgment related to the messages they send.
 
 * The DataWeave map that transforms the received message contents into a format you can use.
 
