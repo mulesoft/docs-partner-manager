@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Anypoint Partner Manager enables you to manage a large number of trading partners and their message flows.
+Anypoint Partner Manager enables you to manage the transmission of business messages with a large number of trading partners through the creation and deployment of message flows.
 A message flow is the path along which a message travels from its source, through a DataWeave transformation map, to its target.
 
 You'll need to perform some tasks before you can begin transmitting messages with your trading partners.
