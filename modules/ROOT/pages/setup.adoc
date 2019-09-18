@@ -35,21 +35,18 @@ Roles are allocated via the Access Management section in Anypoint Platform.
 ** AS2 connector.
 ** X12 connector.
 
-
-
 * Partner Manager related technical requirements:
 
 ** Mule runtime 4.1.1 or higher. Make sure you have the needed Mule runtime capacity to handle your B2B transaction workload needs. If you are unsure about the Mule runtime capacity you need to handle your B2B transactions, please contact your MuleSoft account representative for assistance.
 
-** A storage solution to store the B2B transmission payloads your send or receive. Storage options can include a Database, Amazon S3, Azure Blob Storage, and so on.
+** A storage solution to store the B2B transmission payloads you send or receive. Storage options can include a Database, Amazon S3, Azure Blob Storage, and so on.
 
 ** Anypoint Studio 7.3 or higher.
-
 
 == Environment Configuration
 
 You'll need to set up and configure your environment before you begin using Partner Manager.
-Please refer to Anypoint platform documentation to learn more about https://docs.mulesoft.com/access-management/environments[configuring your Anypoint platform environments].
+Please refer to Anypoint platform documentation to learn more about https://docs.mulesoft.com/access-management/environments[Configuring your Anypoint platform environments].
 
 === Allocate Partner Manager Roles
 
@@ -66,23 +63,25 @@ Once you have your determined role, you need to:
 
 * Setup the required Storage API. The storage API needs to be accessible from the Mule Runtime network.
 
-
 === Associate Mule Runtimes for Deployment
 
 You need to do the following from Anypoint Runtime Manager.
 
-. Create a server group in Anypoint Runtime Manager and name it: `*B2BServerGroup*`.
+. Create a server group in Anypoint Runtime Manager and name it: *B2BServerGroup*.
 All B2B processing Mule apps are deployed to this server group. The steps to setup your server group are in https://docs.mulesoft.com/runtime-manager/server-group-create[Mule Runtime Manager documentation].
 
-IMPORTANT: The server group you setup must use the exact name *B2BServerGroup*. This name is case sensitive.
+IMPORTANT: The server group you setup must use the exact name: *B2BServerGroup*. This name is case sensitive.
 
 [start=2]
-. For each environment, set up your Runtime by https://docs.mulesoft.com/mule-runtime/4.2/runtime-installation-task[downloading the MuleSoft runtime] and unzipping it.
+. For each environment, set up your Runtime by https://docs.mulesoft.com/mule-runtime/4.2/runtime-installation-task[Downloading the MuleSoft runtime] and unzipping it.
 
 . Add the parameters mentioned in the following `wrapper.conf` file. You'll need to adjust the memory and heap size configuration numbers indicated in the following parameters for your environment.
 
-TIP: The wrapper.conf file is located at "MULE_HOME/conf/wrapper.conf". MULE_HOME is your environment variable which you set on server, it is the home directory of Mule runtime on the machine, usually on a Linux machine something like ``/opt/{Mule installation}``.
-When you reach that location you can find the `wrapper.conf` user conf directory.
+The wrapper.conf file is located at `MULE_HOME/conf/wrapper.conf`. `MULE_HOME` is the environment variable which you set on server. It is the home directory of Mule runtime on the machine, usually on a Linux machine something like:
+
+`/opt/{Mule installation}`.
+
+From that location you can locate the `wrapper.conf` user conf directory.
 
 [source,xml,linenums]
 ----
@@ -101,7 +100,7 @@ wrapper.java.maxmemory=3024
 [start=4]
 . Add the server in Runtime Manager based on the https://docs.mulesoft.com/runtime-manager/servers-create[Mule runtime server information]
 
-. Include the created servers] into the server group `B2BServerGroup`. https://docs.mulesoft.com/runtime-manager/server-group-add[Server group]
+. Include the created servers into the creaetd server group: *B2BServerGroup*. https://docs.mulesoft.com/runtime-manager/server-group-add[Server group]
 
 . Start the Mule runtime and verify it is active within Anypoint Runtime Manager.
 
