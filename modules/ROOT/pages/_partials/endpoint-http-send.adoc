@@ -22,7 +22,7 @@ Default: Selected
 
 |URL
 |Enter a well-formed URL (including the path) where the request is to be sent such as:
-https://www.mulesoft.com/sendRequest?name=something +
+`https://www.mulesoft.com/sendRequest?name=something` +
 Required: Yes +
 Default: N/A
 
@@ -34,7 +34,7 @@ Default: 3000
 |Response Timeout (milliseconds)
 |Must be an integer greater than or equal to 1000. +
 Required: No +
-Default: none
+Default: None
 |===
 
 === Authentication Settings
@@ -43,27 +43,30 @@ Default: none
 |===
 |Authentication Type |Description
 |None
-|No authentication. +
+|No authentication required. +
 Required: No +
 
 |API Key
-|HTTP Header Name- The Header parameter associated to the API Key. +
-API Key- The value for the access key you set. +
+|Validation access key.
+`HTTP Header Name` - The Header parameter associated to the API Key. +
+`API Key` - The value for the access key you set. +
 Required: No +
 
 |Basic
-|Simple authentication policy protects the API by requiring username and password when calling apps make a request. +
-Username- Enter the username you set up with this authentication policy. +
-Password- Enter the username you set up with this authentication policy. +
+|Simple authentication policy API protection. Requires a username and password when calling apps to make a request. +
+`Username` - Enter the username you set up with this authentication policy. +
+`Password` - Enter the username you set up with this authentication policy. +
 
 |Client Credentials
-|Client ID -The Client Id the OAS gave you when registering your application. +
-Client Secret - The Client Secret the OAS gave you when registering your application.
-Client Header- Add the key-value pairs, if they don't exist. +
-Client Secret Header- Add the secret key-value pairs, if they don't exist. +
+|For validating the client and service provider. +
+`Client ID` - The Client Id the OAS gave you when registering your application. +
+`Client Secret` - The Client Secret the OAS gave you when registering your application. +
+`Client Header` - Add the key-value pairs, if they don't exist. +
+`Client Secret Header`- Add the secret key-value pairs, if they don't exist. +
 
 |0Auth Token
-|Token URL - Enter a valid authorization URL +
-Client ID -The Client Id the OAS gave you when registering your application. +
-Client Secret - The Client Secret the OAS gave you when registering your application.
+|Specific authorization for validation access. +
+`Token URL` - Enter a valid authorization URL to the Token +
+`Client ID` - The Client Id the OAS gave you when registering your application. +
+`Client Secret` - The Client Secret the OAS gave you when registering your application.
 |===
