@@ -6,7 +6,7 @@ endif::[]
 To receive messages from a trading partner, create a message flow and configure the sections for the source, target, and mapping.
 Your organization is typically referred to as the host. The enterprise you interact with is referred to as your trading partner.
 
-For the receiving endpoint - this is the origin of the message flow when defined by a host endpoint and message type, often an API.
+The source of the message flow is defined by the partner, a host endpoint, often an API, and the message type you are receiving from them.
 
 The target is the final destination of a message flow and is defined by a host message type and endpoint, often a Host API.
 
