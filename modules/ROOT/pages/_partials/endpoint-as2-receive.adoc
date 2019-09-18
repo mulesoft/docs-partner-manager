@@ -16,17 +16,17 @@ Required: No +
 | The HTTP(S) address at which your partner is accepting incoming AS2 messages.
 The hostname here is dependent upon how you set up your host in Mule Runtime.
 The port is automatically generated when you deploy a message flow that uses this endpoint.
-This derived URL is what you tell your partner is where you receive AS2 transmissions from them." +
+This derived URL is what you tell your partner where you receive AS2 transmissions from them. +
 Required: No +
 Default: Yes, if AS2 is the transport protocol +
-Required?::
+Required?:
 Yes
 
 | Message Signature Encryption
 | If a partner would like a signature associated with an encrypted message they receive, they can also choose to have the signature encrypted.
 This field indicates the algorithm the user can select to encrypt the signature. +
 
-Options are:: +
+Options are: +
 
 `MD5` +
 
@@ -38,7 +38,8 @@ Options are:: +
 
 `SHA384` +
 
-`SHA512`
+`SHA512` +
+
 Required: Yes +
 
 | Encryption Algorithm
@@ -109,14 +110,16 @@ Required: Yes +
 Default: 60 +
 
 | Partner from email
-|The Sending partner’s email+
+|The Sending partner’s email +
 Required: Yes +
 
 | Partner to email
 |The Receiving partner’s email +
 Required: Yes +
 
-*Certificates*
+|===
+
+=== Certificates
 
 Shows all certificates available for use with this endpoint setup (typically a `.PEM` file). A new certificate can be uploaded.
 
@@ -144,4 +147,4 @@ Information provided for each available certificate:
 //|The Partner generates and sends the MDN back to you in a newly initiated path. +
 //Required?:: Yes +
 
-|===
+
