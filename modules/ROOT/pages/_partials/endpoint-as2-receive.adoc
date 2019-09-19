@@ -19,7 +19,7 @@ The port is automatically generated when you deploy a message flow that uses thi
 This derived URL is what you tell your partner where you receive AS2 transmissions from them. +
 Required: No +
 Default: Yes, if AS2 is the transport protocol +
-Required?:
+Required:
 Yes
 
 | Message Signature Encryption
@@ -55,16 +55,17 @@ Valid values::
 `IDEA` +
 `RC2_CBC` +
 
-Required?:: Yes +
+Required: Yes +
 
 | Message Subject
 | Specifies a default subject for messages you send to this partner +
+
 Required: Yes +
 
 | Encoding
 | Type of encoding to use with AS2. +
 
-Options are::
+Options are:
 
 * `*Binary*` +
 A method of encoding in which a message is represented using a combination of 0s and 1s.
@@ -123,21 +124,29 @@ Required: Yes +
 
 Shows all certificates available for use with this endpoint setup (typically a `.PEM` file). A new certificate can be uploaded.
 
-Information provided for each available certificate:
+[%header,cols="3s,7a"]
+|===
+|Name |Description
+|Certificates
+|Shows all certificates available for use with this endpoint setup. (typically a `.PEM` file). A new certificate can be uploaded. +
 
-* Authority - certificate provider
+Information provided for each certificate: +
 
-* Serial Number - from the certificate
+`Authority` - certificate provider +
 
-* Status - Active is shown with a green icon or Inactive is shown with a red icon
+`Serial Number` - from the certificate +
 
-* Endpoints - the number of endpoints used
+`Status` - Active is shown with a green icon or Inactive is shown with a red icon +
 
-* Start Date - from when the certificate can be used
+`Endpoints` - the number of endpoints used +
 
-* Expires - the date from which the certificate can no longer be used
+`Start Date` - from when the certificate can be used +
 
-* Days to expiration - countdown to expiration date
+`Expires` - the date from which the certificate can no longer be used +
+
+`Days to expiration` - countdown to expiration date +
+
+|===
 
 //| MDN Subject
 //|The field that specifies a default subject for the MDN messages you send back. +
