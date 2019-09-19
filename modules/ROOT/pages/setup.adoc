@@ -124,6 +124,7 @@ NOTE: Your payload storage API must be accessible over the internet via HTTPS. E
 
 You are ready to begin to set up message flows between you and your trading partners.
 
+
 // == Troubleshooting References
 
 // * https://help.mulesoft.com/s/article/Troubleshooting-wrapper-conf-changes-that-do-not-get-applied[Troubleshooting wrapper.conf changes]
