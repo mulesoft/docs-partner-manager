@@ -74,10 +74,11 @@ For example, depending on your setup, select one of the following: AS2, X12 ISA,
 * Control numbers
 * Character sets
 
+Refer to the options for each at xref:x12-receive-read.adoc[X12 Settings - Receive from Partner]
+
 == See Also
 
 * xref:x12-identity-settings.adoc[X12 Settings]
-* xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner]
 
 
-Refer to the options for each at xref:x12-receive-read.adoc[X12 Settings - Receive from Partner]
+
