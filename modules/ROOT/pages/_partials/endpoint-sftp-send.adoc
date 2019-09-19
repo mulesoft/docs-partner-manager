@@ -1,6 +1,6 @@
 == SFTP Protocol Send Settings
 
-Use these when setting up SFTP.
+Use these when setting up the SFTP protocol. This includes endpoints for sending transmissions to your partner and endpoints that are targets at your organization.
 
 === Server information
 

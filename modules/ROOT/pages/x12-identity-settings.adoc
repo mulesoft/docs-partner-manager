@@ -56,3 +56,56 @@ Default::
 No default provided
 
 |===
+== Acknowledgements
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description, Values, Default
+
+|Interchange Acknowledgement (TA1) Requested
+|Provides a Technical Acknowledgment (TA1) to the Interchange sender which reports the status of the processing of an interchange header and trailer by the address receiver.
+
+When the ISA and IEA of the received X12 message are valid, a positive TA1 ACK is sent, regardless of what the status of the other content is.
+If not, TA1 ACK with an error code is sent.
+
+The TA1 ACK is sent inside an ISA/IEA envelope. The ISA and IEA are no different than any other interchange.
+
+Default::
+
+`Disabled`
+
+|Functional Acknowledgement Requested
+|Provides a functional Acknowledgement with the exchange. There are two types of functional acknowledgements: a 997 and a 999. Anypoint Partner Manager allows you to raise either 997 or 999 acknowledgments, but not both at the same time.
+
+Default::
+
+`Disabled`
+
+|997 Requested
+
+|The X12 997 functional acknowledgment reports the status of a received interchange. It reports each error encountered while processing the received document. Like all X12 transaction sets, the 997 ACK is sent inside a GS/GE envelope. The ST and SE are no different than any other transaction set.
+
+It is used to:
+
+* acknowledge receipt of an interchange or a functional group
+* accept or reject one or more functional groups or one or more transactions
+* verify and report compliance with the standard
+
+If an interchange contains multiple groups, a 997 acknowledgment is returned for each group. Additionally, if a group contains multiple transaction sets, the acknowledgment for that group contains multiple AK2 loops, one for each transaction set, if AK2 loops are generated for accepted transaction sets.
+
+Default::
+
+`Disabled`
+
+|999 Requested
+|Replaces the 997 Functional Acknowledgement document for use in Healthcare. X12 999 implementation acknowledgment reports standard syntax errors, as well as implementation guide errors. The X12 implementation acknowledgment reports the status of the processing of a functional group for HIPAA transactions. It follows almost the same rules as that of 997, however, the structure and codes of the acknowledgment contents are different and follow the 999 rules.
+
+Default::
+
+`Disabled`
+
+|===
+
+== See Also
+
+* xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner]

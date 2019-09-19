@@ -1,49 +1,30 @@
 == AS2 Protocol Send Settings
 
-AS2 Send Settings pertain to trading partner-specific AS2 settings such as `Certificate` and `URL`.
+AS2 Send Settings pertain to trading partner-specific AS2 settings such as Certificate and URL.
 
-[%header,cols="3s,10a,3a,3a"]
+[%header,cols="3s,7a"]
 |===
-|Setting |Description |Required? |Default
+|Name |Description
 
 | Message Subject
-
-|Specifies a default subject for messages you send to this partner +
+| Specifies a default subject for messages you send to this partner +
+Required: No +
 
 | AS2 URL (Automatically generated at time of deployment)
-
-|The HTTP(S) address at which your partner is accepting incoming AS2 messages.
-The hostname here is dependent upon how you set up your host in Mule Runtime.
-The port is automatically generated when you deploy a message flow that uses this endpoint.  
-This derived URL is what you give to your partners to send to with AS2. +
-
-
-| Yes, if AS2 is the transport protocol
-
-| None
-
+| The HTTP(S) address at which your partner is accepting incoming AS2 messages. The hostname here is dependent upon how you set up your host in Mule Runtime. The port is automatically generated when you deploy a message flow that uses this endpoint. This derived URL is what you give to your partners to send to with AS2. +
+Required: No +
+Default: Yes, if AS2 is the transport protocol +
 
 | Sender's AS2 ID
-
 |The Sending partner’s ID +
-
-| Yes
-
-| None
+Required: Yes +
 
 | Receiver's AS2 ID
-
 |The Receiving partner’s ID +
-
-| Yes
-
-| None
-
-
+Required: Yes +
 
 | Message Encryption
-
-| The algorithm used to encrypt “send” messages. +
+| The algorithm used to encrypt 'send' messages. +
 
 Options are::
 
@@ -74,15 +55,9 @@ Options are::
 ** `SHA384`
 
 ** `SHA512`
-
-| Yes
-
-| None
-
-
+Required: Yes +
 
 | Message Signature Encryption
-
 | If a partner would like a signature associated with an encrypted message they receive, they can also choose to have the signature encrypted.
 This field indicates the algorithm the user can select to encrypt the signature. +
 
@@ -115,14 +90,9 @@ Options are::
 ** `SHA384`
 
 ** `SHA512`
-
-| Yes
-
-| None
-
+Required: Yes +
 
 | Message Encoding
-
 | Type of encoding to use when sending a message with AS2. +
 
 Options are::
@@ -159,70 +129,39 @@ of the data remains largely readable.  A body that is
 entirely in the US-ASCII character set may also be encoded in Quoted-Printable to ensure
 the integrity of the data should the message pass through a
 character-translating, and/or line-wrapping gateway.
-
-| Yes
-
-| Binary
+Required: Yes +
 
 
-
-|Compress Message after signing and/or encryption
-
+| Compress Message after signing and/or encryption
 | Indicates if the trading partner wants to see the incoming message and associated signature in compressed form.
 Zlib is used for compression. +
-
-| Yes
-
-| Unchecked
-
+Required: Yes +
 
 |Request MDN
-
 |Indicates if the sending partner would like the receiving partner to send a "receipt" (disposition notification) back for every message sent. +
-
-| Yes
-
-| Unchecked
-
-
+Required: Yes +
 
 | Request Asynchronous MDN
-
 | Your Partner generates and sends the MDN back to you in a newly initiated path that you had set up at your end. +
-
-| Yes
-
-| Unchecked
-
-
+Required: Yes +
 
 | Asynchronous MDN URL
-
 | The URL where the partner sends the MDN. +
 
-| Yes, only if “Request Asynchronous MDN” is on.
-
-| Not Applicable
-
+Required: Yes, only if `Request Asynchronous MDN` is on.
 
 
 //| Request Digitally Signed MDN
-
 //| The Trading Partner generates and sends the MDN back to you in a newly initiated path. +
 
-//| Yes.
-
-//| Not Applicable
-
+//Required: Yes +
 
 |MDN Response Wait Time
-
 |The maximum time within which the sender expects to receive an MDN. The value of this field is in seconds. +
 
-| No
+Required: No +
 
-| 60
-
+Default: 60 +
 
 
 |===

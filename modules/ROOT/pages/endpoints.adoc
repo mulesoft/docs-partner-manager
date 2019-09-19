@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-TThere are three types of endpoints within AnyPoint Partner Manager -
+There are three types of endpoints within AnyPoint Partner Manager -
 
 ** Receive endpoints - On the Host side, for an inbound transmission you need endpoints your organization uses to receive transmissions from your partners. These endpoints are resources your organization exposes to your trading partners.
 
@@ -34,16 +34,16 @@ Default:: Auto-populates based on the following values:
 
 |Protocol for this endpoint
 
-Required?::
+Required:
 No
 
-Valid values::
+Valid values:
 
 * `AS2`
 * `SFTP`
 * `HTTPS`
 
-Default::
+Default:
 
 None
 
@@ -51,16 +51,16 @@ None
 
 |Type of endpoint
 
-Required?::
+Required:
 
 No
 
-Valid values::
+Valid values:
 
 * `SEND`
 * `RECEIVE`
 
-Default::
+Default:
 
 None
 
@@ -74,8 +74,9 @@ None
 
 Choose the section that corresponds to the Protocol-Type of the Endpoint for which you are entering settings.
 
-* <<AS2 Send Settings>>
-// * <<AS2 Receive Settings>>
-* <<SFTP Send Settings>>
-// * <<SFTP Receive Settings>>
+//* <<AS2 Send Settings>>
+* <<AS2 Receive Settings>>
+//* <<SFTP Send Settings>>
+* <<SFTP Receive Settings>>
 * <<HTTP(s) Send Settings>>
+* <<HTTP Send Settings>>
