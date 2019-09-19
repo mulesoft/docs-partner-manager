@@ -68,7 +68,7 @@ Once your trading partner is created, you can configure your message flow to rec
 
 . To create a new message type, depending on the message standard, refer to the following:
 
-* xref:document-type.adoc[Message (Document) Types]
+* xref:document-types.adoc[Message (Document) Types]
 
 [start=11]
 . Configure acknowledgments (optional, only if the partner requires them for X12 messages), the type of acknowledgment, and the endpoint to which you send it.
