@@ -8,9 +8,9 @@ To configure the system, you should be familiar with these concepts before setti
 
 * EDI message formats and schemas.
 
-* Digital Certificates such as X.509 certificates in PKCS12 file format for the AS2 transport protocol.
+* Digital Certificates such as X.509 certificates in PKCS12 file format for the AS2 and HTTPS transport protocols.
 
-* Configuration of protcols such as AS2, SFTP, and HTTPS.
+* Configuration of protocols such as AS2, SFTP, and HTTPS.
 
 * The concept of organizations and environments in the Anypoint platform in context to Access Management and Mule Runtime Manager.
 
@@ -23,25 +23,26 @@ To configure the system, you should be familiar with these concepts before setti
 Verify that you have the following software and other requirements.
 If you need any of the required entitlements, please contact your MuleSoft account representative.
 
-* Partner Manager related entitlement requirements:
+=== Partner Manager related entitlement requirements:
 
-** Anypoint Platform user account with Anypoint Partner Manager entitlement.
+* Anypoint Platform user account with Anypoint Partner Manager entitlement.
 
-** Appropriate roles allocated for users to access Anypoint Partner Manager.
+* Appropriate roles allocated for users to access Anypoint Partner Manager.
 Roles are allocated via the Access Management section in Anypoint Platform.
 
-* License for the following optional connectors:
+=== License for the following connectors:
 
-** AS2 connector.
-** X12 connector.
+* X12 connector
 
-* Partner Manager related technical requirements:
+* AS2 connector (optional)
 
-** Mule runtime 4.1.1 or higher. Make sure you have the needed Mule runtime capacity to handle your B2B transaction workload needs. If you are unsure about the Mule runtime capacity you need to handle your B2B transactions, please contact your MuleSoft account representative for assistance.
+=== Partner Manager related technical requirements:
 
-** A storage solution to store the B2B transmission payloads you send or receive. Storage options can include a Database, Amazon S3, Azure Blob Storage, and so on.
+* Mule runtime 4.1.1 or higher. Make sure you have the needed Mule runtime capacity to handle your B2B transaction workload needs. If you are unsure about the Mule runtime capacity you need to handle your B2B transactions, please contact your MuleSoft account representative for assistance.
 
-** Anypoint Studio 7.3 or higher.
+* A storage solution to store the B2B transmission payloads you send or receive. Storage options can include a Database, Amazon S3, Azure Blob Storage, and so on.
+
+* Anypoint Studio 7.3 or higher.
 
 == Environment Configuration
 
@@ -50,16 +51,15 @@ Please refer to Anypoint platform documentation to learn more about https://docs
 
 === Allocate Partner Manager Roles
 
-There are two Administrator roles for Anypoint Partner Manager: Production and Sandbox.
+There is one Administrator role name Partner Manager Administrator. Depending on which environment you select, the user will assigned that role within the context of that environment.
 Both roles have unrestricted access, but one role works in a Production environment and the other works in a Sandbox environment.
 
-* Partner Manager Admin (Production) - Can perform all operations across Partner Manager for all Production environments.
+* Verify that you have access to Partner Manager.
+This means that you must have the required entitlements and have been assigned the `Partner Manager Administrator` role in Access Manager for the environment.
 
-* Partner Manager Admin (Sandbox) - Can perform all operations across Partner Manager for all Sandbox environments.
+For example, *Partner Manager > Partner Manager Administrator*: Enables role of Administrator for the environment.
 
-Once you have your determined role, you need to:
-
-* Verify that you have access to Partner Manager. This means that you must have the required entitlements and have been assigned the `Partner Manager Admin` role in Access Manager for the environment.
+Once you have assigned your role, you need to:
 
 * Setup the required Storage API. The storage API needs to be accessible from the Mule Runtime network.
 
@@ -68,7 +68,7 @@ Once you have your determined role, you need to:
 You need to do the following from Anypoint Runtime Manager.
 
 . Create a server group in Anypoint Runtime Manager and name it: *B2BServerGroup*.
-All B2B processing Mule apps are deployed to this server group. The steps to setup your server group are in https://docs.mulesoft.com/runtime-manager/server-group-create[Mule Runtime Manager documentation].
+All B2B processing Mule apps are deployed to this server group. The steps to setup your server group are in https://docs.mulesoft.com/runtime-manager/server-group-create[Create a Server Group (Hybrid)].
 
 IMPORTANT: The server group you setup must use the exact name: *B2BServerGroup*. This name is case sensitive.
 
@@ -77,30 +77,30 @@ IMPORTANT: The server group you setup must use the exact name: *B2BServerGroup*.
 
 . Add the parameters mentioned in the following `wrapper.conf` file. You'll need to adjust the memory and heap size configuration numbers indicated in the following parameters for your environment.
 
-The wrapper.conf file is located at `MULE_HOME/conf/wrapper.conf`. `MULE_HOME` is the environment variable which you set on server. It is the home directory of Mule runtime on the machine, usually on a Linux machine something like:
-
-`/opt/{Mule installation}`.
-
+The wrapper.conf file is located at `$MULE_HOME/conf/wrapper.conf`.
 From that location you can locate the `wrapper.conf` user conf directory.
+
+IMPORTANT: These are example values. If you are unsure about the Mule runtime capacity you need to handle your B2B transactions,
+please contact your MuleSoft account representative for assistance
 
 [source,xml,linenums]
 ----
 
-# Increase the MetaSpace
+# Increase the MetaSpace.
 wrapper.java.additional.7=-XX:MetaspaceSize=1256m
 wrapper.java.additional.8=-XX:MaxMetaspaceSize=2256m
 
 # Increase JVM Memory
-# Initial Java Heap Size (in MB), configure it as needed
+# Initial Java Heap Size (in MB)
 wrapper.java.initmemory=2024
-# Maximum Java Heap Size (in MB), configure it as needed
+# Maximum Java Heap Size (in MB)
 wrapper.java.maxmemory=3024
 
 ----
 [start=4]
-. Add the server in Runtime Manager based on the https://docs.mulesoft.com/runtime-manager/servers-create[Mule runtime server information]
+. Add the server in Runtime Manager based on the https://docs.mulesoft.com/runtime-manager/servers-create#create-a-server[Create a Server]
 
-. Include the created servers into the creaetd server group: *B2BServerGroup*. https://docs.mulesoft.com/runtime-manager/server-group-add[Server group]
+. Include the created servers into the creaetd server group: *B2BServerGroup*. https://docs.mulesoft.com/runtime-manager/server-group-add[Add Servers to a Group]
 
 . Start the Mule runtime and verify it is active within Anypoint Runtime Manager.
 
