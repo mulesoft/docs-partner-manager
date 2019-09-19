@@ -42,7 +42,7 @@ Clicking each section of the message flow expands it. A green checkmark next to 
 
 * Alternatively, to create a new Trading Partner
 
-. In the *Select a partner* dialog,, click *New* button.
+. In the *Select a partner* dialog, click *New*.
 
 . Provide the trading partner's name and create at least one identifier (such as X12 ISA, X12 GS, and so on).
 
@@ -51,7 +51,7 @@ Clicking each section of the message flow expands it. A green checkmark next to 
 Once your trading partner is created, you can configure your message flow to receive messages from the selected trading partner or add more information.
 
 [start=4]
-. Configure the source endpoint where you receive the transmission by clicking *Receiving endpoint* section to expand it and click *select*.
+. Configure the source endpoint where you receive the transmission by clicking the *Receiving endpoint* section to expand it and click *Select*.
 
 . Search and select an existing endpoint and click *Select*, or create a new endpoint.
 
@@ -101,7 +101,7 @@ This is the target message type and the Endpoint where you want to route the tra
 
 * <<HTTP Protocol Send Settings>>
 
-When you complete all of the sections - they will have a green check mark next to all of them in the flow, you can deploy your message flow and start receiving messages from your partner.
+When you complete all of the sections (they show a green check mark next to all of them in the flow) you can deploy your message flow and start receiving messages from your partner.
 [start=20]
 . Click *Deploy* when you are ready to deploy the configurations to your Mule Runtime.
 If your message flow does not deploy right away, wait a bit and try again.
