@@ -87,7 +87,7 @@ This is the target message type and the Endpoint where you want to route the tra
 
 . To create a new message type, depending on the message standard, follow instructions in one of these sections.
 
-* xref:document-type.adoc[Message (Document) Types]
+* xref:document-types.adoc[Message (Document) Types]
 [start=17]
 . Set up a target endpoint by clicking *Select*.
 
