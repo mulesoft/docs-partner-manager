@@ -21,7 +21,8 @@ With Anypoint Partner Manager you can:
 A message flow is the path along which a message travels from its source, through a DataWeave transformation map, to its target.
 
 * View meta information, validation errors, and all messages included with each transmission payload.
-A transmission is a single communication event during which a payload is transferred between two business entities. These payloads can contain one or more business messages.
+A transmission is a single communication event during which a payload is transferred between two business entities.
+These payloads can contain one or more business messages.
 
 // * Set up message flows to receive and send messages between your systems and your partners.
 // * View and monitor how partner messages are being processed in the system in case of failure in order to take corrective action.
