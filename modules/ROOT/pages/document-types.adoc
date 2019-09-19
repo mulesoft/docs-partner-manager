@@ -29,7 +29,7 @@ Default:: Auto-populates based on the following values:
 
 |Select a value from the drop-down menu.
 
-Required?::
+Required:
 Yes
 
 Valid values::
@@ -45,14 +45,14 @@ None
 
 |Select a value from the drop-down menu, or enter a different value.
 
-Required?::
+Required:
 Yes
 
 |Message Types - X12 only
 
 |Select a value from the dropdown listbox, or enter a different value.
 
-Required?::
+Required:
 Yes
 
 
@@ -60,7 +60,7 @@ Yes
 
 |Clicking the *Use Standard* button accepts the standard you selected, or clicking the *Custom* button allows you to choose a file to download. You must use a custom schema for JSON.
 
-Required?::
+Required:
 For JSON
 
 
