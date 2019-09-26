@@ -3,6 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
+// Content moved to x12-receive-read-settings.adoc. Remove from here.
 [%header,cols="3s,7a"]
 |===
 |Setting |Description, Values, Default

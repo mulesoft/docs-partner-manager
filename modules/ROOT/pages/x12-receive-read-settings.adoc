@@ -8,11 +8,73 @@ There are two levels of settings, global and partner:
 * Global level settings control all X12 messages received from all partners.
 * Partner level settings are optionally configured for each partner and override global settings.
 
-Configure as needed for specific partners. 
+Configure as needed for specific partners.
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description, Values, Default
+
+|Send TA1 for each transmission from <recipient>.
+|Provides a Technical Acknowledgment (TA1) to the Interchange sender which reports the status of the processing of an interchange header and trailer by the address receiver.
+When the ISA and IEA of the received X12 message are valid, a positive TA1 ACK is sent, regardless of what the status of the other content is.
+If not, TA1 ACK with an error code is sent.
+
+The TA1 ACK is sent inside an ISA/IEA envelope. The ISA and IEA are no different than any other interchange.
+
+Default::
+
+`Disabled`
+
+|Send functional acknowledgement when messages fail to route to a message flow
+|Provides a functional Acknowledgement (the receipt and syntactical acceptability of a message) with the exchange.
+Functional acknowledgment settings are configured for each message flow.
+They only apply when there is a failure to route the message to one of the message flows.
+There are two types of functional acknowledgements: a 997 and a 999.
+Partner Manager allows you to chose either a 997 or a 999 acknowledgment, but not both concurrently.
+
+Default::
+
+`Disabled`
+
+|997 Requested
+
+|The X12 997 functional acknowledgment reports the status of a received interchange.
+It reports all errors encountered while processing the received document.
+As with all X12 transaction sets, the 997 ACK is sent inside a GS/GE envelope.
+The ST and SE are no different than any other transaction set.
+
+It is used to:
+
+* acknowledge the receipt of an interchange or functional group
+* accept or reject one or more functional groups or transactions
+* verify and report compliance with the standard
+
+If an interchange contains multiple groups, then a 997 acknowledgment is returned for each group.
+If a group contains multiple transaction sets, then the acknowledgment for that group contains multiple AK2 loops -
+one for each transaction set. But only if the AK2 loops are generated for accepted transaction sets.
+
+Default::
+
+`Disabled`
+
+|999 Requested
+|Replaces the 997 Functional Acknowledgement document for use in Healthcare.
+The X12 999 implementation acknowledgment reports:
+
+* standard syntax errors as well as implementation guide errors
+* the status of processing a functional group for HIPAA transactions
+
+It follows almost all of the same rules as 997, except that the structure and codes of the acknowledgment contents follow the 999 rules.
+
+Default::
+
+`Disabled`
+
+|===
 
 == Validation Settings
 
-Any of these options indicated by a checked box (yes) setting means that all of the X12 documents meet this condition criteria and receive a 997 failure message.
+Selecting the checkbox (Yes) for any of these options means that all the X12 documents meet this condition criteria and receive a 997 failure message.
 
 [%header,cols="3s,7a"]
 |===
@@ -63,6 +125,15 @@ Required?
 Default
 `Selected`
 
+|Fail document when too many repeats of a segment
+|A transaction with a segment repeated too many times is rejected. The error is reported in 997/999 acknowledgments
+
+Required?
+`No`
+
+Default
+`Selected`
+
 |Fail document when unused segments are included
 |If selected, a transaction containing segments marked as unused in the schema is rejected. If not selected, the transaction is not rejected and the unused segments are ignored. In either case the error is reported in 997/999 acknowledgments.
 
@@ -72,14 +143,6 @@ Required?
 Default
 `Selected`
 
-|Fail document when too many repeats of a segment
-|A transaction with a segment repeated too many times is rejected. The error is reported in 997/999 acknowledgments
-
-Required?
-`No`
-
-Default
-`Selected`
 |===
 
 === Control Numbers
@@ -127,7 +190,9 @@ Selected character set and encoding options pertaining to your partners and/or y
 |Setting |Description
 
 |Character set
-|Characters allowed in string data. Invalid characters are replaced by the substitution character, if used, or rejected as errors if no substitution character is set or enabled for receive messages in parser options. Either way the invalid characters are logged, and for receive messages are reported in 997 functional acknowledgments.
+|Characters allowed in string data. If set, invalid characters are replaced by the substitution character.
+If no substitution character is set or enabled for receive messages in the parser options, they are rejected as errors.
+Either way the invalid characters are logged, and are reported in 997 functional acknowledgments for the receive messages.
 
 Possible values include: `Basic`, `Extended`, `Unrestricted`
 
@@ -138,7 +203,7 @@ Default
 `Extended`
 
 |Character encoding
-|Indicates the character encoding for messages. This character encoding is always used for both send and receive messages.
+|Indicates the character encoding for messages. This character encoding is used for both send and receive messages.
 
 Possible values include: `ASCII`, `ISO8859_1`, `UTF-8`
 
