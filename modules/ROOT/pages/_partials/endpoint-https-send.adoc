@@ -1,4 +1,4 @@
-== HTTP(S) Protocol Send Settings
+== HTTPS Send Configuration
 
 Use these settings when sending with the secure HTTP protocol. This includes endpoints for sending transmissions to your partner and endpoints that are targets at your organization.
 
@@ -84,7 +84,7 @@ You can adjust your certificate settings as needed for the level of security.
 |This endpoint already uses a CA-signed certificate and does not require an additional certificate. +
 
 |Certificates
-|Shows all certificates available for use with this endpoint setup. +
+|Upload a new certificate (.PEM format), or view all certificates available for use with this endpoint setup. +
 Information provided for each certificate: +
 
 `Authority` - certificate provider +
