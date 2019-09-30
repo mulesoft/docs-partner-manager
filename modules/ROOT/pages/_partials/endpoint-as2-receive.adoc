@@ -14,8 +14,10 @@ Required: No +
 
 | AS2 URL (Automatically generated at time of deployment)
 | The HTTP(S) address at which your partner is accepting incoming AS2 messages.
-The hostname here is dependent upon how you set up your host in Mule Runtime.
+The hostname here is dependent upon how it was set up in Mule Runtime.
 The port is automatically generated when you deploy a message flow that uses this endpoint.
+You'll be able to see it by selecting an AS receive endpoint from your deployed message flow.
+Get the hostname from your administrator who created it upon setup.
 This derived URL is what you tell your partner where you receive AS2 transmissions from them. +
 Required: No +
 Default: Yes, if AS2 is the transport protocol +
@@ -155,5 +157,3 @@ Information provided for each certificate: +
 //|Request Digitally Signed Message
 //|The Partner generates and sends the MDN back to you in a newly initiated path. +
 //Required?:: Yes +
-
-
