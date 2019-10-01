@@ -130,7 +130,6 @@ You'll need these details while associating Anypoint Partner Manager to your Pay
 
 NOTE: Your payload storage API must be accessible over the internet via HTTPS.
 Ensure that the appropriate authentication mechanisms have been implemented to make this happen.
-For example, if you are using AS2, you'll need to understand from your administrator what the hostname is so you can tell your partner where to send the AS2 transmission.
 
 . Once the Payload Storage API is set up on the Mule runtime, open Anypoint Partner Manager, navigate to your organizations profile (Host) page from the left navigation.
 
