@@ -50,5 +50,5 @@ When an identifier is successfully created you receive a confirmation message.
 
 == See Also
 
-* xref:x12-identity-settings.adoc[X12 Settings]
+* xref:x12-identity-settings.adoc[X12 Identifiers and Values]
 * xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner]

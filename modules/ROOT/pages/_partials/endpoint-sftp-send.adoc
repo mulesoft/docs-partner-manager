@@ -1,12 +1,20 @@
-== SFTP Protocol Send Settings
+== SFTP Send Configuration
 
-Use these when setting up the SFTP protocol. This includes endpoints for sending transmissions to your partner and endpoints that are targets at your organization.
+Use these when setting up an SFTP send. This includes endpoints for sending transmissions to your partner, including acknowledgements.
 
 === Server information
 
 [%header,cols="3s,7a"]
 |===
 |Name |Description
+
+|Endpoint Name
+| Name used to easily identity the function of this endpoint. +
+Required: Yes +
+
+|Description
+| Describe a purpose and any other important details for this endpoint. +
+Required: No +
 
 |Host
 |Enter a valid IP Address or hostname. +
@@ -18,17 +26,17 @@ Default: None
 Required: Yes +
 Default: None
 
-|Path
-| Specify a path that enables a connection to the local server. +
-Required: No +
-Default: None
-
 |Username | Input the text for the username. +
 Required: Yes +
 Default: None
 
 |Password | Input the text for the password +
 Required: Yes +
+Default: None
+
+|Target Path
+| Specify a path that enables a connection to the local server. +
+Required: No +
 Default: None
 
 |===
@@ -43,14 +51,14 @@ Default: None
 Required: No +
 Default: None
 
-|File Age
-|Minimum age in milliseconds for Mule runtime to wait before consuming a file. This allows a file write to complete before processing. +
-Required: No +
-Default: None
-
 |Size Check Wait Time
 |Wait time in milliseconds between size checks to determine if a file is ready to be processed. This allows a file write to complete before processing. You can disable this feature by setting to a negative number or omitting a value. When enabled, Mule runtime performs two size checks waiting the specified time between calls. If both checks return the same value, the file is ready to process. +
 Required: No +
 Default: None
+
+// |File Age
+// |Minimum age in milliseconds for Mule runtime to wait before consuming a file. This allows a file write to complete before processing. +
+// Required: No +
+// Default: None
 
 |===

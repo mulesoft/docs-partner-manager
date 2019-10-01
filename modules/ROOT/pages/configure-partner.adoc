@@ -60,7 +60,6 @@ For example, depending on your setup, select one of the following: AS2, X12 ISA,
 
 . Provide a value for your identifier (and qualifier for X12 ISA) and click *Create identifier* to save your changes.
 
-
 . Click *New* within the *Certificates* section to upload any needed digital certificates. This is your partner's digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
 
 . Click *Choose file* to select and upload the certificate.
@@ -76,6 +75,6 @@ For example, depending on your setup, select one of the following: AS2, X12 ISA,
 
 Refer to the options for each at xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner]
 
-== See Also
+// == See Also
 
-* xref:x12-identity-settings.adoc[X12 Settings]
+* xref:x12-identity-settings.adoc[X12 Identifiers and Values]

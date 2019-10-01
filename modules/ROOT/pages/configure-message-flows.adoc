@@ -111,6 +111,6 @@ You can begin to monitor the activity from the Activity page.
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-// * xref:activity-tracking.adoc[Activity Tracking]
+* xref:activity-tracking.adoc[Activity Tracking]
 
 // == Create a Send Message Flow from Your Partner

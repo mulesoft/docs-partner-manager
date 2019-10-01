@@ -5,17 +5,19 @@
 |Setting |Description
 
 |Endpoint Name
-|Name used to easily identity the function of this endpoint. +
+|Name used to easily identify the purpose of this endpoint. +
 Required: Yes +
 
 |Description
-|Describe a purpose and any other important details for this endpoint. +
+|Describe any important details for this endpoint. +
 Required: No +
 
 | AS2 URL (Automatically generated at time of deployment)
 | The HTTP(S) address at which your partner is accepting incoming AS2 messages.
-The hostname here is dependent upon how you set up your host in Mule Runtime.
+The hostname here is dependent upon how it was set up in Mule Runtime.
 The port is automatically generated when you deploy a message flow that uses this endpoint.
+You'll be able to see it by selecting an AS receive endpoint from your deployed message flow.
+Get the hostname from your administrator who created it upon setup.
 This derived URL is what you tell your partner where you receive AS2 transmissions from them. +
 Required: No +
 Default: Yes, if AS2 is the transport protocol +
@@ -51,7 +53,7 @@ Valid values::
 `AES192` +
 `AES256` +
 `AES256_WRAP` +
-`CAST5`
+`CAST5` +
 `IDEA` +
 `RC2_CBC` +
 
@@ -70,13 +72,13 @@ Options are:
 * `*Binary*` +
 A method of encoding in which a message is represented using a combination of 0s and 1s.
 
-* `*_7-bit*`
+* `*7-bit*`
 +
 Data that is represented as relatively short lines with 998 bytes or less between CRLF line separation sequences.
 No bytes with decimal values greater than 127 are allowed and neither are NULLs (bytes with decimal value 0).
 CR (decimal value 13) and LF (decimal value 10) bytes only occur as part of CRLF line separation sequences.
 
-* `*_8-bit*`
+* `*8-bit*`
 +
 Data that is represented as relatively
 short lines with 998 bytes or less between CRLF line separation
@@ -89,33 +91,29 @@ of CRLF line separation sequences. No NULLs are allowed.
 Encoding scheme that represents binary data in an ASCII string format to carry data across channels that only reliably support text content.
 It is used to embed image files or other binary assets inside textual assets such as HTML and CSS files.
 
-* `*Quoted-Printable*`
+* `*Quoted Printable*`
 +
 Intended to represent data that largely consists of bytes that correspond to printable characters in
-the US-ASCII character set.  It encodes the data in such a way that
-the resulting bytes are unlikely to be modified by mail transport.
-If the data being encoded are mostly US-ASCII text, the encoded form
-of the data remains largely readable.  A body that is
-entirely in the US-ASCII character set may also be encoded in Quoted-Printable to ensure
-the integrity of the data should the message pass through a
-character-translating, and/or line-wrapping gateway.
+the US-ASCII character set.
+
 Required: Yes +
 
 | Compress
 | Indicates if the trading partner wants to see the incoming message and associated signature in compressed form.
 Zlib is used for compression. +
-Required: Yes +
+Required: No +
+Default: False +
 
 |MDN Response Wait Time
 |The maximum time within which the sender expects to receive an MDN. The value of this field is in seconds. +
 Default: 60 +
 
 | Partner from email
-|The Sending partner’s email +
+|The Sending partner’s email used in AS2 transmissions. +
 Required: Yes +
 
 | Partner to email
-|The Receiving partner’s email +
+|The Receiving partner’s email used in AS2 transmissions. +
 Required: Yes +
 
 |===
@@ -128,9 +126,7 @@ Shows all certificates available for use with this endpoint setup (typically a `
 |===
 |Name |Description
 |Certificates
-|Shows all certificates available for use with this endpoint setup. (typically a `.PEM` file). A new certificate can be uploaded. +
-
-Information provided for each certificate: +
+|Select an existing certificate or upload a new certificate (a `.PEM` file).  When selecting an existing certificate, the folloiwng information is available: +
 
 `Authority` - certificate provider +
 
@@ -155,5 +151,3 @@ Information provided for each certificate: +
 //|Request Digitally Signed Message
 //|The Partner generates and sends the MDN back to you in a newly initiated path. +
 //Required?:: Yes +
-
-

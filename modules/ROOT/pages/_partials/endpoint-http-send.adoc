@@ -1,4 +1,4 @@
-== HTTP Protocol Send Settings
+== HTTP Send Configuration
 
 Use these settings when sending with the HTTP protocol.
 

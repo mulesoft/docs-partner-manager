@@ -1,4 +1,4 @@
-== SFTP Receive Settings
+== SFTP Receive Configuration
 
 Use these to set up SFTP server settings for your partners.
 
