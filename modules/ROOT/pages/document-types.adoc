@@ -56,7 +56,7 @@ Default:: Auto-populates based on the following values:
 
 |Schema
 
-|Clicking the *Use Standard* button accepts the standard you named and selected, or clicking the *Custom* button allows you to choose a file to download.
+|Clicking *Use Standard* accepts the standard you named and selected, or clicking *Custom* allows you to choose a file to download.
 You must use a custom schema for JSON. Supported Schema types are from the following formats: .schema, .JSON, .ESL (for X12)
 
 Required:
