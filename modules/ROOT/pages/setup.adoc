@@ -38,8 +38,8 @@ Roles are allocated via the Access Management section in Anypoint Platform.
 
 === Partner Manager related technical requirements:
 
-* Mule runtime 4.1.1 or higher. Make sure you have the needed Mule runtime capacity to handle your B2B transaction workload needs.
-If you are unsure about the Mule runtime capacity you need to handle your B2B transactions, please contact your MuleSoft account representative for assistance.
+* Mule runtime 4.1.1 or higher. Make sure you have the required Mule runtime capacity to handle your B2B transaction workload needs.
+If you are unsure about the Mule runtime capacity required to handle your B2B transactions, contact your MuleSoft account representative for assistance.
 
 * A storage solution to store the B2B transmission payloads you send or receive. Storage options can include a Database, Amazon S3, Azure Blob Storage, and so on.
 
@@ -52,7 +52,7 @@ Please refer to Anypoint platform documentation to learn more about https://docs
 
 === Allocate Partner Manager Roles
 
-There is one Administrator role name Partner Manager Administrator. Depending on which environment you select, the user will assigned that role within the context of that environment.
+There is one Administrator role name Partner Manager Administrator. Depending on which environment you select, the user is assigned that role within the context of that environment.
 Both roles have unrestricted access, but one role works in a Production environment and the other works in a Sandbox environment.
 
 * Verify that you have access to Partner Manager.
