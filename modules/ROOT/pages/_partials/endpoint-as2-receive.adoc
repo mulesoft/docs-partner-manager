@@ -5,11 +5,11 @@
 |Setting |Description
 
 |Endpoint Name
-|Name used to easily identity the function of this endpoint. +
+|Name used to easily identify the purpose of this endpoint. +
 Required: Yes +
 
 |Description
-|Describe a purpose and any other important details for this endpoint. +
+|Describe any important details for this endpoint. +
 Required: No +
 
 | AS2 URL (Automatically generated at time of deployment)
@@ -53,7 +53,7 @@ Valid values::
 `AES192` +
 `AES256` +
 `AES256_WRAP` +
-`CAST5`
+`CAST5` +
 `IDEA` +
 `RC2_CBC` +
 
@@ -94,30 +94,26 @@ It is used to embed image files or other binary assets inside textual assets suc
 * `*Quoted Printable*`
 +
 Intended to represent data that largely consists of bytes that correspond to printable characters in
-the US-ASCII character set.  It encodes the data in such a way that
-the resulting bytes are unlikely to be modified by mail transport.
-If the data being encoded are mostly US-ASCII text, the encoded form
-of the data remains largely readable.  A body that is
-entirely in the US-ASCII character set may also be encoded in Quoted-Printable to ensure
-the integrity of the data should the message pass through a
-character-translating, and/or line-wrapping gateway.
+the US-ASCII character set.
+
 Required: Yes +
 
 | Compress
 | Indicates if the trading partner wants to see the incoming message and associated signature in compressed form.
 Zlib is used for compression. +
-Required: Yes +
+Required: No +
+Default: False +
 
 |MDN Response Wait Time
 |The maximum time within which the sender expects to receive an MDN. The value of this field is in seconds. +
 Default: 60 +
 
 | Partner from email
-|The Sending partner’s email +
+|The Sending partner’s email used in AS2 transmissions. +
 Required: Yes +
 
 | Partner to email
-|The Receiving partner’s email +
+|The Receiving partner’s email used in AS2 transmissions. +
 Required: Yes +
 
 |===
@@ -130,9 +126,7 @@ Shows all certificates available for use with this endpoint setup (typically a `
 |===
 |Name |Description
 |Certificates
-|Shows all certificates available for use with this endpoint setup. (typically a `.PEM` file). A new certificate can be uploaded. +
-
-Information provided for each certificate: +
+|Select an existing certificate or upload a new certificate (a `.PEM` file).  When selecting an existing certificate, the folloiwng information is available: +
 
 `Authority` - certificate provider +
 
