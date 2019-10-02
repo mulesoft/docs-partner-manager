@@ -18,16 +18,14 @@ Refer to these when configuring either X12 or JSON
 |Select a value from the drop-down menu.
 
 Required:
-Yes
+`Yes`
 
 Valid values:
-
 `X12`
 `JSON`
 
-Default::
-
-None
+Default:
+`None`
 
 |Version - X12 only
 
@@ -40,19 +38,21 @@ Yes
 |Select a value from the dropdown list, or enter a different value.
 
 Required:
-Yes
+`Yes`
 
 |Name
 
 |Name for this document type
 
-Required:: Yes
+Required:
+`Yes`
 
-Default:: Auto-populates based on the following values:
+Default:
+Auto-populates based on the following values:
 
-* *Company name*
-* *Standard*
-* *Version*
+`* *Company name*`
+`* *Standard*`
+`* *Version*`
 
 |Schema
 
@@ -60,7 +60,7 @@ Default:: Auto-populates based on the following values:
 You must use a custom schema for JSON. Supported Schema types are from the following formats: .schema, .JSON, .ESL (for X12)
 
 Required:
-For JSON
+`For JSON Only`
 
 
 |===
