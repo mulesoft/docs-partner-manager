@@ -55,16 +55,16 @@ Click *Save* when you are done adding all the necessary information. When the tr
 [start=2]
 . Add more identifiers for your trading partner by clicking *New* within the *Identifiers* section.
 
-. Select an identifier type from the *Type* drop-down menu. This uniquely identifies your partner.
+* Select an identifier type from the *Type* drop-down menu. This uniquely identifies your partner.
 For example, depending on your setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number.
 
-. Provide a value for your identifier (and qualifier for X12 ISA) and click *Create identifier* to save your changes.
+* Provide a value for your identifier (and qualifier for X12 ISA) and click *Create identifier* to save your changes.
 
 . Click *New* within the *Certificates* section to upload any needed digital certificates. This is your partner's digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
 
-. Click *Choose file* to select and upload the certificate.
+* Click *Choose file* to select and upload the certificate.
 
-. Click *Upload certificate* (typically a .PEM file provided by your trading partner) to upload the chosen digital certificate file.
+* Click *Upload certificate* (typically a .PEM file provided by your trading partner) to upload the chosen digital certificate file.
 
 . Configure X12 validation settings that can be used for all message flows that you are configuring with your trading partners. These include:
 
