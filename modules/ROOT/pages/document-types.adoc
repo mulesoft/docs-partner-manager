@@ -21,17 +21,17 @@ Required:
 Yes
 
 Valid values:
-
 `X12`
 `JSON`
 
-Default::
-
+Default:
 None
+
 
 |Version - X12 only
 
 |Select a version from the drop-down menu: `3010`, `3020`, `3030`, `3040`, `3050`, `3060`, `3070`, `4010`, `4020`, `4030`, `4040`, `4050`, `4060`, `5010`, `5020`, `5030`, `5040`, `5050`, `6020`
+
 Required:
 Yes
 
@@ -46,21 +46,24 @@ Yes
 
 |Name for this document type
 
-Required:: Yes
+Required:
+Yes
 
-Default:: Auto-populates based on the following values:
+Default:
+Auto-populates based on the following values:
 
-* *Company name*
-* *Standard*
-* *Version*
+* Company name
+* Standard
+* Version
 
 |Schema
 
 |Clicking *Use Standard* accepts the standard you named and selected, or clicking *Custom* allows you to choose a file to download.
-You must use a custom schema for JSON. Supported Schema types are from the following formats: .schema, .JSON, .ESL (for X12)
+You must use a custom schema for JSON. Supported Schema types are from the following formats: 
+.schema, .JSON, .ESL (for X12)
 
 Required:
-For JSON
+*For JSON Only*
 
 
 |===
