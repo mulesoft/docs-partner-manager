@@ -27,19 +27,19 @@ This includes any global settings you need to modify, and the location of your p
 
 . Add an identifier related to your organization by clicking *New* within the *Identifiers* section.
 
-. Select an identifier type from the *Type* drop-down menu. This uniquely identifies you.
+* Select an identifier type from the *Type* drop-down menu. This uniquely identifies you.
 For example, depending on your setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number.
 
-. Provide a value for your identifier (and qualifier for X12 ISA) and click *Create identifier* to save your changes.
+* Provide a value for your identifier (and qualifier for X12 ISA) and click *Create identifier* to save your changes.
 When an identifier is successfully created you receive a confirmation message.
 
 . Click *New* within the *Certificates* section to upload any needed digital certificates (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
 
-. Click *Choose file* to select and upload the certificate (typically a `.PEM` file).
+* Click *Choose file* to select and upload the certificate (typically a `.PEM` file).
 
-. Click *Upload certificate* to upload the chosen digital certificate file. When a certificate is successfully uploaded you receive a confirmation message.
+* Click *Upload certificate* to upload the chosen digital certificate file. When a certificate is successfully uploaded you receive a confirmation message.
 
-. Optionally, you click *Edit* to change any of the information that was completed when the payload storage was set up. For example, URL location, timeout settings, acknowledgments.
+. Within the `Payload storage` section, optionally click *Edit* to change any of the information that was completed when the payload storage was set up. For example, URL location, timeout settings, acknowledgments.
 
 . Configure X12 validation settings that can be used for all message flows that you are configuring with your trading partners. These include:
 
