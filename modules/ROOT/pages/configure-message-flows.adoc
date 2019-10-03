@@ -34,16 +34,17 @@ If a separate URL is required for returning MDNs, it is sent in the AS2 transmis
 
 . From within your Anypoint Partner Manager environment (either Sandbox or Production), click *New message flows* in the upper right.
 
-. Select an Existing Partner. You can do this from the *Select a partner* dialog, or search for the trading partner by name. 
+. Select an Existing Partner. You can do this from the *Select a partner* dialog, or search for the trading partner by name.
 
 . Once you find a match, choose the partner name and click *Select*.
 
-* Alternatively from the *Select a partner* dialog, you can create a new Trading Partner by clicking *New*. This is the same as xref:configure-partner.adoc#create-a-trading-partner[Create a Trading Partner] except that when you are finished, you'll click *Create Partner and Message Flow*. You can add more information to the parter now or later.
+* Alternatively from the *Select a partner* dialog, you can create a new Trading Partner by clicking *New*.
+This is the same as xref:configure-partner.adoc#create-a-trading-partner[Create a Trading Partner] except that when you are finished, you'll click *Create Partner and Message Flow*. You can add more information to the parter now or later.
 
 +
 NOTE: Clicking each section of the message flow expands it. A green checkmark next to any a section indicates that it is complete.
 +
-. Click *Select* from the *Receiving endpoint* section to configure the source endpoint where you receive the transmission. 
+. Click *Select* from the *Receiving endpoint* section to configure the source endpoint where you receive the transmission.
 
 . Click *Select* to search and select an existing endpoint or click *New* to create a new endpoint.
 
@@ -54,7 +55,7 @@ NOTE: Clicking each section of the message flow expands it. A green checkmark ne
 * <<SFTP Send Settings>>
 
 +
-. Click *Select* from the *Source message* section to expand the Message Type section. 
+. Click *Select* from the *Source message* section to expand the Message Type section.
 
 . Either search and click *Select* to choose an existing message type, or click *New* to create a new message type.
 
@@ -71,9 +72,9 @@ NOTE: Clicking each section of the message flow expands it. A green checkmark ne
 
 * <<SFTP Protocol Send Settings>>
 +
-. Click the *Map* section and then click *Import* to choose a DataWeave map. 
+. Click the *Map* section and then click *Import* to choose a DataWeave map.
 
-. Select a map and click *Upload mapping*. 
+. Select a map and click *Upload mapping*.
 
 . Click the *Target at <Partner name>* section and click *Select* to set up a target message type.
 This is the target message type and the Endpoint where you want to route the transformed message.

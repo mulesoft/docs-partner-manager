@@ -69,13 +69,14 @@ You need to do the following from Anypoint Runtime Manager.
 . Create a server group in Anypoint Runtime Manager and name it: *B2BServerGroup*.
 All B2B processing Mule apps are deployed to this server group. The steps to setup your server group are in https://docs.mulesoft.com/runtime-manager/server-group-create[Create a Server Group (Hybrid)].
 
++
 IMPORTANT: The server group you setup must use the exact name: *B2BServerGroup*. This name is case sensitive.
++
 
-[start=2]
 . For each environment, set up your Runtime by https://docs.mulesoft.com/mule-runtime/4.2/runtime-installation-task[Downloading the MuleSoft runtime] and unzipping it.
 
 . Add the parameters mentioned in the following `wrapper.conf` file. You'll need to adjust the memory and heap size configuration numbers indicated in the following parameters for your environment.
-
++
 The wrapper.conf file is located at `$MULE_HOME/conf/wrapper.conf`.
 From that location you can locate the `wrapper.conf` user conf directory.
 
@@ -96,7 +97,7 @@ wrapper.java.initmemory=4606
 wrapper.java.maxmemory=4606
 
 ----
-[start=4]
++
 . Add the server in Runtime Manager based on the https://docs.mulesoft.com/runtime-manager/servers-create#create-a-server[Create a Server]
 
 . Include the created servers into the server group you created: *B2BServerGroup*. https://docs.mulesoft.com/runtime-manager/server-group-add[Add Servers to a Group]

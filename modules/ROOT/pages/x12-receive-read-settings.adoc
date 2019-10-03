@@ -86,12 +86,9 @@ Selecting the checkbox (Yes) for any of these options means that all the X12 doc
 |Fail document when value length outside allowed range
 |If selected, a transaction with values too long or too short is rejected. If not selected, the values are used anyway and the transaction is not rejected. In either case the error is logged and reported in 997/999 acknowledgments.
 
-Required?+
-No
-
-Default:
-
-Selected
+Required?
+No +
+Default: Selected
 
 |Fail document when invalid character in value
 |If selected, a transaction with invalid characters is rejected. If not selected, the characters are either passed through or substituted and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments.
@@ -106,22 +103,16 @@ Not Selected
 |Fail document if value is repeated too many times
 |If selected, a transaction with values repeated too many or too few times is rejected. If not selected, the value are accepted and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments
 
-Required?+
-No
-
-Default:
-
-Selected
+Required?
+No +
+Default: Selected
 
 |Fail document if unknown segments are used
 |If selected, a transaction containing any unknown segments is rejected. If not selected, unknown segments are ignored and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments.
 
-Required?+
-No
-
-Default:
-
-Selected
+Required?
+No +
+Default: Selected
 
 |Fail document when segments are out of order
 |If selected, a transaction with segments out of order is rejected. If not selected, the segment can be reordered the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments.

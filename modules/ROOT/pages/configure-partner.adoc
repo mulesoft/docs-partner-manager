@@ -62,7 +62,7 @@ For example, depending on your setup, select one of the following: AS2, X12 ISA,
 
 * Click *Upload certificate* (typically a .PEM file provided by your trading partner) to upload the chosen digital certificate file.
 +
-You can view information about an uploaded certificate by clicking on it's link.
+You can view information about an uploaded certificate by clicking on it's link. See xref:Certificates.adoc[Certificates]for more info on configuring certificates in Partner Manager.
 +
 . Configure X12 validation settings that can be used for all message flows that you are configuring with your trading partners. These include:
 

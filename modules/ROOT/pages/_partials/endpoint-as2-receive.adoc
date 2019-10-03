@@ -13,22 +13,18 @@ Required: Yes +
 Required: No +
 
 | AS2 URL (Automatically generated at time of deployment)
-| The HTTP(S) address at which your partner is accepting incoming AS2 messages.
-This derived URL is what you tell your partner where you receive AS2 transmissions from them.
+| The HTTP(S) address at which you will be receiving AS2 messages.
 The port is automatically generated when you deploy a message flow that uses this endpoint.
-You'll be able to see it by selecting an AS receive endpoint from your deployed message flow.
-You get this hostname from your administrator who created it upon setup.
- +
-Required: No +
-Default: Yes, if AS2 is the transport protocol +
-Required:
-Yes
+You'll be able to see it by selecting the receiving endpoint from your deployed message flow.
+You get the hostname from your administrator who created it upon setup.
++
 
 | Message Signature Encryption
-| If a partner would like a signature associated with an encrypted message they receive, they can also choose to have the signature encrypted.
-This field indicates the algorithm the user can select to encrypt the signature. +
+| If your partner is sending an encrypted signature in the message, then choose the appropriate algorithm for validating that signature. +
 
 Options are: +
+
+`None` +
 
 `MD5` +
 
@@ -47,7 +43,8 @@ Required: Yes +
 | Encryption Algorithm
 | The preferred algorithm receives encrypted messages. +
 
-Valid values::
+Valid values:
+`None` +
 `3DES` +
 `AES128` +
 `AES192` +
@@ -118,7 +115,7 @@ Required: Yes +
 
 |===
 
-See [xref to certificates] for more info on certificates.
+See xref:Certificates.adoc[Certificates]for more info on configuring certificates in Partner Manager.
 
 //| MDN Subject
 //|The field that specifies a default subject for the MDN messages you send back. +

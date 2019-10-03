@@ -38,6 +38,8 @@ Required: No +
 Default: none
 |===
 
+See xref:Certificates.adoc[Certificates]for more info on configuring certificates in Partner Manager.
+
 === Authentication Settings
 
 Depending on how you set up your authentication policy, refer to the appropriate authentication type and descriptions here.
@@ -65,7 +67,7 @@ Required: No +
 `Client Header` - Add the key-value pairs, if they don't exist. +
 `Client Secret Header` - Add the secret key-value pairs, if they don't exist. +
 
-|0Auth Token
+|OAuth Token
 |`Token URL` - Enter a valid authorization URL +
 `Client ID` -The Client Id the OAS gave you when registering your application. +
 `Client Secret` - The Client Secret the OAS gave you when registering your application.
