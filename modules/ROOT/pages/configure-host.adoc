@@ -34,9 +34,7 @@ For example, depending on your setup, select one of the following: AS2, X12 ISA,
 
 . Click *New* within the *Certificates* section to begin to upload any needed digital certificates (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
 
-. Click *Choose file* to select the certificate (typically a `.PEM` file), and click *Upload certificate* to upload the chosen digital certificate file.
-
-See xref:Certificates.adoc[Certificates]for more info on configuring certificates in Partner Manager.
+. Click *Choose file* to select the certificate (typically a `.PEM` file), and click *Upload certificate* to upload the chosen digital certificate file. See xref:Certificates.adoc[Certificates]for more info on configuring certificates in Partner Manager.
 
 . (Optional) Click *Edit* within the *Payload storage* section to change any of the information that was completed when the payload storage was set up. For example, URL location, timeout settings, and acknowledgments.
 
