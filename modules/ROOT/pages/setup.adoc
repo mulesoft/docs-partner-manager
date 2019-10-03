@@ -18,6 +18,8 @@ To configure the system, you should be familiar with these concepts before setti
 
 * DataWeave transformations.
 
+* Storage API solutions that are accessible from Mule runtime.
+
 == Minimum Requirements
 
 Verify that you have the following software and other requirements.
