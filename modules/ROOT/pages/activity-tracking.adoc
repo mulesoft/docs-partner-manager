@@ -37,7 +37,7 @@ Use the search box to find the transmission based on the trading partner name, m
 
 . Select the transmission and review the summary information. The summary information contains:
 
-** The status of the transmission indicating either a success, warning, or failure
+** The status of the transmission indicating either a success (Green check mark), in process (...), or failure (Triangle with an exclamation point).
 
 ** The name of the file that was received
 
