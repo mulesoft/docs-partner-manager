@@ -1,9 +1,7 @@
-= Certificates
+= Certificate Settings
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
-
-== Certificate Settings
 
 You can configure your SSL certificate settings for the different scenarios:
 

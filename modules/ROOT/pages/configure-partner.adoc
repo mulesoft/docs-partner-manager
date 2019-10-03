@@ -29,7 +29,7 @@ From the Partners page you can:
 For example, depending on your setup, select one of the following: AS2 Identity, X12 ISA, X12 GS, or the DUNS number.
 
 . Provide a value for your identifier (and qualifier for X12 ISA) and click *Create partner* to create your trading partner.
-You can now setup message flows [xref to set up message flow] related to this trading partner or continue to update this partner.
+You can now setup message flows xref:configure-message-flows.adoc[Create a Receive Message Flow from Your Partner] related to this trading partner or continue to update this partner.
 
 == Update a Trading Partner's Profile
 
@@ -62,7 +62,7 @@ For example, depending on your setup, select one of the following: AS2, X12 ISA,
 
 * Click *Upload certificate* (typically a .PEM file provided by your trading partner) to upload the chosen digital certificate file.
 +
-You can view information about an uploaded certificate by clicking on it's link. See xref:Certificates.adoc[Certificates]for more info on configuring certificates in Partner Manager.
+View information about an uploaded certificate by clicking it's link. See xref:Certificates.adoc[Certificates] for more info on configuring certificates in Partner Manager.
 +
 . Configure X12 validation settings that can be used for all message flows that you are configuring with your trading partners. These include:
 

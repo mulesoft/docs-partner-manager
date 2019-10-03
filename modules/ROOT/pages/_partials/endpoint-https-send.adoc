@@ -38,7 +38,7 @@ Required: No +
 Default: none
 |===
 
-See xref:Certificates.adoc[Certificates]for more info on configuring certificates in Partner Manager.
+See xref:Certificates.adoc[Certificates] for more info on configuring certificates in Partner Manager.
 
 === Authentication Settings
 

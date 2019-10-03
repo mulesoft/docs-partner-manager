@@ -115,7 +115,7 @@ Required: Yes +
 
 |===
 
-See xref:Certificates.adoc[Certificates]for more info on configuring certificates in Partner Manager.
+See xref:Certificates.adoc[Certificates] for more info on configuring certificates in Partner Manager.
 
 //| MDN Subject
 //|The field that specifies a default subject for the MDN messages you send back. +
