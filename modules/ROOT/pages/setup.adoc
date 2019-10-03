@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Set up Anypoint Partner Manager to be used by different people in your organization, namely - message flow developers, operations managers, and IT managers.
+Set up Anypoint Partner Manager to be used by different people in your organization, namely - B2B integration developers, operations managers, and IT managers.
 To configure the system, you should be familiar with these concepts before setting up Partner Manager:
 
 * EDI message formats and schemas.
@@ -17,6 +17,8 @@ To configure the system, you should be familiar with these concepts before setti
 * The Mule runtime.
 
 * DataWeave transformations.
+
+* Storage API solutions that are accessible from Mule runtime.
 
 == Minimum Requirements
 
@@ -38,7 +40,7 @@ Roles are allocated via the Access Management section in Anypoint Platform.
 
 === Partner Manager related technical requirements:
 
-* Mule runtime 4.1.1 or higher. Make sure you have the required Mule runtime capacity to handle your B2B transaction workload needs.
+* Mule runtime 4.1.5 or higher. Make sure you have the required Mule runtime capacity to handle your B2B transaction workload needs.
 If you are unsure about the Mule runtime capacity required to handle your B2B transactions, contact your MuleSoft account representative for assistance.
 
 * A storage solution to store the B2B transmission payloads you send or receive. Storage options can include a Database, Amazon S3, Azure Blob Storage, and so on.
@@ -59,10 +61,6 @@ Both roles have unrestricted access, but one role works in a Production environm
 This means that you must have the required entitlements and have been assigned the `Partner Manager Administrator` role in Access Manager for the environment.
 
 For example, *Partner Manager > Partner Manager Administrator*: Enables role of Administrator for the environment.
-
-Once you have assigned your role, you need to:
-
-* Setup the required Storage API. The storage API needs to be accessible from the Mule Runtime network.
 
 === Associate Mule Runtimes for Deployment
 
