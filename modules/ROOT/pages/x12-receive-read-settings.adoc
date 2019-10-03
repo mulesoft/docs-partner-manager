@@ -9,6 +9,8 @@ There are two levels of settings, global and partner:
 * Global level settings control all X12 messages received from all partners.
 * Partner level settings are optionally configured for each partner and override global settings.
 
+== Acknowledgment Settings
+
 Configure as needed for specific partners.
 
 [%header,cols="3s,7a"]
@@ -22,9 +24,9 @@ If not, TA1 ACK with an error code is sent.
 
 The TA1 ACK is sent inside an ISA/IEA envelope. The ISA and IEA are no different than any other interchange.
 
-Default::
+Default:
 
-`Disabled`
+Disabled
 
 |Send functional acknowledgement when messages fail to route to a message flow
 |Provides a functional Acknowledgement (the receipt and syntactical acceptability of a message) with the exchange.
@@ -33,9 +35,9 @@ They only apply when there is a failure to route the message to one of the messa
 There are two types of functional acknowledgements: a 997 and a 999.
 Partner Manager allows you to chose either a 997 or a 999 acknowledgment, but not both concurrently.
 
-Default::
+Default:
 
-`Disabled`
+Disabled
 
 |997 Requested
 
@@ -54,9 +56,9 @@ If an interchange contains multiple groups, then a 997 acknowledgment is returne
 If a group contains multiple transaction sets, then the acknowledgment for that group contains multiple AK2 loops -
 one for each transaction set. But only if the AK2 loops are generated for accepted transaction sets.
 
-Default::
+Default:
 
-`Disabled`
+Disabled
 
 |999 Requested
 |Replaces the 997 Functional Acknowledgement document for use in Healthcare.
@@ -67,9 +69,9 @@ The X12 999 implementation acknowledgment reports:
 
 It follows almost all of the same rules as 997, except that the structure and codes of the acknowledgment contents follow the 999 rules.
 
-Default::
+Default:
 
-`Disabled`
+Disabled
 
 |===
 
@@ -84,65 +86,72 @@ Selecting the checkbox (Yes) for any of these options means that all the X12 doc
 |Fail document when value length outside allowed range
 |If selected, a transaction with values too long or too short is rejected. If not selected, the values are used anyway and the transaction is not rejected. In either case the error is logged and reported in 997/999 acknowledgments.
 
-Required?
-`No`
+Required?+
+No
 
-Default
-`Selected`
+Default:
+
+Selected
 
 |Fail document when invalid character in value
 |If selected, a transaction with invalid characters is rejected. If not selected, the characters are either passed through or substituted and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments.
 
-Required?
-`No`
+Required?+
+No
 
-Default
-`Not Selected`
+Default:
+
+Not Selected
 
 |Fail document if value is repeated too many times
 |If selected, a transaction with values repeated too many or too few times is rejected. If not selected, the value are accepted and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments
 
-Required?
-`No`
+Required?+
+No
 
-Default
-`Selected`
+Default:
+
+Selected
 
 |Fail document if unknown segments are used
 |If selected, a transaction containing any unknown segments is rejected. If not selected, unknown segments are ignored and the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments.
 
-Required?
-`No`
+Required?+
+No
 
-Default
-`Selected`
+Default:
+
+Selected
 
 |Fail document when segments are out of order
 |If selected, a transaction with segments out of order is rejected. If not selected, the segment can be reordered the transaction is not rejected. In either case the error is reported in 997/999 acknowledgments.
 
-Required?
-`No`
+Required?+
+No
 
-Default
-`Selected`
+Default:
+
+Selected
 
 |Fail document when too many repeats of a segment
 |A transaction with a segment repeated too many times is rejected. The error is reported in 997/999 acknowledgments
 
-Required?
-`No`
+Required?+
+No
 
-Default
-`Selected`
+Default:
+
+Selected
 
 |Fail document when unused segments are included
 |If selected, a transaction containing segments marked as unused in the schema is rejected. If not selected, the transaction is not rejected and the unused segments are ignored. In either case the error is reported in 997/999 acknowledgments.
 
-Required?
-`No`
+Required?+
+No
 
-Default
-`Selected`
+Default:
+
+Selected
 
 |===
 
@@ -158,28 +167,22 @@ Apply  validations related to your partners / your use of control numbers within
 |If selected, Anypoint Partner Manager records the interchange numbers previously processed and reject any duplicate interchange numbers from the same partner (as determined by the interchange sender and receiver identification). If not selected, allows processing of the received interchange to continue.
 
 Required?
-`No`
-
-Default
-`Not Selected`
+No +
+Default: Not Selected
 
 |Requires unique group control number (GS06)
 |If selected, Anypoint Partner Manager enforces globally unique Group Control Numbers (GS06) for received functional groups. This configuration requires group numbers to be unique across all interchanges received from the same partner and application (as determined by the interchange sender and receiver identification, combined with the functional group sender and receiver application codes).
 
 Required?
-`No`
-
-Default
-`Not Selected`
+No +
+Default: Not Selected
 
 |Requires unique transaction set control number (ST02)
 |If selected, Anypoint Partner Manager enforces globally unique Transaction Set Control Numbers (ST02) for received transaction sets. This configuration requires transaction set numbers to be unique across all functional groups received from the same partner and application (as determined by the interchange sender and receiver identification, combined with the functional group sender and receiver application codes).
 
 Required?
-`No`
-
-Default
-`Not Selected`
+No +
+Default: Not Selected
 |===
 
 === Character Sets
@@ -198,10 +201,8 @@ Either way the invalid characters are logged, and are reported in 997 functional
 Possible values include: `Basic`, `Extended`, `Unrestricted`
 
 Required?
-`Yes`
-
-Default
-`Extended`
+Yes +
+Default: `Extended`
 
 |Character encoding
 |Indicates the character encoding for messages. This character encoding is used for both send and receive messages.
@@ -209,8 +210,6 @@ Default
 Possible values include: `ASCII`, `ISO8859_1`, `UTF-8`
 
 Required?
-`No`
-
-Default
-`Not Selected`
+No +
+Default: Not Selected
 |===
