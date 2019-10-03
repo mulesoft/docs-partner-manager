@@ -25,21 +25,18 @@ The storage API is a mandatory configuration where your B2B message payloads are
 Configure the following based on your indentifier and certificate type.
 This includes any global settings you need to modify, and the location of your payload storage configuration.
 
-. Add an identifier related to your organization by clicking *New* within the *Identifiers* section.
+. Click *New* within the *Identifiers* section to begin adding an identifier related to your organization. 
 
-* Select an identifier type from the *Type* drop-down menu. This uniquely identifies you.
+. Select an identifier type from the *Type* drop-down menu. This uniquely identifies you.
 For example, depending on your setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number.
 
-* Provide a value for your identifier (and qualifier for X12 ISA) and click *Create identifier* to save your changes.
-When an identifier is successfully created you receive a confirmation message.
+. Provide a value for your identifier (and qualifier for X12 ISA) and click *Create identifier* to save your changes.
 
-. Click *New* within the *Certificates* section to upload any needed digital certificates (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
+. Click *New* within the *Certificates* section to begin to upload any needed digital certificates (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
 
-* Click *Choose file* to select and upload the certificate (typically a `.PEM` file).
+. Click *Choose file* to select the certificate (typically a `.PEM` file), and click *Upload certificate* to upload the chosen digital certificate file. 
 
-* Click *Upload certificate* to upload the chosen digital certificate file. When a certificate is successfully uploaded you receive a confirmation message.
-
-. Within the `Payload storage` section, optionally click *Edit* to change any of the information that was completed when the payload storage was set up. For example, URL location, timeout settings, acknowledgments.
+. (Optional) Click *Edit* within the *Payload storage* section to change any of the information that was completed when the payload storage was set up. For example, URL location, timeout settings, and acknowledgments.
 
 . Configure X12 validation settings that can be used for all message flows that you are configuring with your trading partners. These include:
 
