@@ -19,19 +19,17 @@ From the Partners page you can:
 
 == Create a Trading Partner
 
-. Open Anypoint Partner Manager.
-
 . From within your Anypoint Partner Manager environment, select *Partners* from the left navigation.
 
-. Click *New Partner* button.
+. Click *New partner*.
 
 . Add a name that easily identifies your trading partner.
 
 . Select an identifier from the *Type* drop-down menu. This uniquely identifies your trading partner.
-For example, depending on your setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number.
+For example, depending on your setup, select one of the following: AS2 Identity, X12 ISA, X12 GS, or the DUNS number.
 
-. Provide a value for your identifier (and qualifier for X12 ISA) and click *Create Partner* button to create your trading partner.
-At this point, your trading partner has been created within the Anypoint Partner Manager. You can now setup message flows related to this trading partner or continue to update this partner.
+. Provide a value for your identifier (and qualifier for X12 ISA) and click *Create partner* to create your trading partner.
+You can now setup message flows [xref to set up message flow] related to this trading partner or continue to update this partner.
 
 == Update a Trading Partner's Profile
 
@@ -43,17 +41,15 @@ You can add the following information for each trading partner from the *Partner
 
 * Website - enter a valid URL to your trading partner's website.
 
-* Logo - upload a logo associated to your trading partner. Supported logo file formats are: `.jpg`, `.jpeg`, `.png`, `.gif`, or `.svg` files.
-File size limitation is 30KB.
+* Logo - upload a logo associated to your trading partner. Supported logo file formats are: `.jpg`, `.jpeg`, `.png`, `.gif`, or `.svg` files. Maximum file size is 30KB.
 
 * Corporate address - provide a complete address that includes the Street, City, State, Postal code, and Country.
 
-* Add contacts - contact types available are: Business, Technical or Other. You can add up to three contacts associated with a trading partner's profile.
+* Add contacts - contact types available are: Business, Technical or Other. You can add up to three contacts associated with a trading partner's profile. You can also delete contacts from here.
++
+. Click *Save* when you are done adding all the necessary information. You see a confirmation message when the trading partner's profile is successfully updated.
 
-Click *Save* when you are done adding all the necessary information. When the trading partner's profile is successfully updated, you receive a confirmation message.
-
-[start=2]
-. Add more identifiers for your trading partner by clicking *New* within the *Identifiers* section.
+. (Optional) You can add more identifiers for your trading partner by clicking *New* within the *Identifiers* section.
 
 * Select an identifier type from the *Type* drop-down menu. This uniquely identifies your partner.
 For example, depending on your setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number.
@@ -65,7 +61,9 @@ For example, depending on your setup, select one of the following: AS2, X12 ISA,
 * Click *Choose file* to select and upload the certificate.
 
 * Click *Upload certificate* (typically a .PEM file provided by your trading partner) to upload the chosen digital certificate file.
-
++
+You can view information about an uploaded certificate by clicking on it's link.
++
 . Configure X12 validation settings that can be used for all message flows that you are configuring with your trading partners. These include:
 
 * Validations
