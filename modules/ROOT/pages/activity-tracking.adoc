@@ -32,7 +32,7 @@ Once you have created a message flow, you can begin to track its activity.
 
 . Select *Activity* from the left navigation.
 
-. Locate a transmission you transmission you are interested in.
+. Locate a transmission you are interested in viewing.
 
 Use the search box to find the transmission based on the trading partner name, message type, filename, control number, endpoint, or date received.
 
