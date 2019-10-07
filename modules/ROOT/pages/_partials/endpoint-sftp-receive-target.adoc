@@ -34,9 +34,14 @@ Required: Yes +
 | Password for the FTP Server. Required if the server is authenticated. +
 Required: Yes +
 
-|Source Path
+|Source Path - receive only
 | A path that facilitates connection to the local server. +
 Required: No +
+
+|Target Path - target only
+| Specify a path that enables a connection to the local server. +
+Required: No +
+Default: None
 
 |Polling Frequency
 | Frequency in milliseconds to check the read directory. The read directory is specified by the endpoint of the listening component. +
@@ -52,8 +57,8 @@ If both checks return the same value, the file is ready to process. +
 Required: No +
 Default: 1000
 
-|Archival Path
-|(Applies to inbound SFTP endpoint only.) The path to the directory on the Mule server where the file is archived. +
+|Archival Path (Optional) - inbound SFTP endpoint only 
+|The path to the source directory on the Mule server where the file is archived. +
 
 
 |===

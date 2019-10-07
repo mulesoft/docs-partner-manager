@@ -1,6 +1,7 @@
-== HTTPS Send Configuration
+== HTTP(S) Send Configuration
 
-Use these settings when sending with the secure HTTP protocol. This includes endpoints for sending transmissions to your partner and endpoints that are targets at your organization.
+Use these settings when sending with the secure HTTP(S) protocols.
+This includes endpoints for sending transmissions to your partner and endpoints that are targets at your organization.
 
 [%header,cols="3s,7a"]
 |===
@@ -37,6 +38,8 @@ Required: No +
 Default: none
 |===
 
+See xref:Certificates.adoc[Certificates] for more info on configuring certificates in Partner Manager.
+
 === Authentication Settings
 
 Depending on how you set up your authentication policy, refer to the appropriate authentication type and descriptions here.
@@ -64,41 +67,8 @@ Required: No +
 `Client Header` - Add the key-value pairs, if they don't exist. +
 `Client Secret Header` - Add the secret key-value pairs, if they don't exist. +
 
-|0Auth Token
+|OAuth Token
 |`Token URL` - Enter a valid authorization URL +
 `Client ID` -The Client Id the OAS gave you when registering your application. +
 `Client Secret` - The Client Secret the OAS gave you when registering your application.
-|===
-
-== Certificate settings
-
-You can adjust your certificate settings as needed for the level of security.
-
-[%header,cols="3s,7a"]
-|===
-|Name |Description
-|Allow insecure connection
-|Can be used for local testing which doesn’t perform certificate validation. +
-
-|Do not require an additional certificate because this endpoint already uses a CA-signed certificate:
-|This endpoint already uses a CA-signed certificate and does not require an additional certificate. +
-
-|Certificates
-|Upload a new certificate (.PEM format), or view all certificates available for use with this endpoint setup. +
-Information provided for each certificate: +
-
-`Authority` - certificate provider +
-
-`Serial Number` - from the certificate +
-
-`Status` - Active is shown with a green icon or Inactive is shown with a red icon +
-
-`Endpoints` - the number of endpoints used +
-
-`Start Date` - from when the certificate can be used +
-
-`Expires` - the date from which the certificate can no longer be used +
-
-`Days to expiration` - countdown to expiration date +
-
 |===

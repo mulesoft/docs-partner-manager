@@ -7,7 +7,7 @@ Configuring a message type for a partner means configuring settings specific to 
 
 == X12 and JSON
 
-Refer to these when configuring either X12 or JSON
+Refer to these when configuring either JSON or X12. Refer to  https://docs.mulesoft.com/connectors/x12-edi/x12-edi-supported-doc-types[X12 EDI supported Doc Types] for more information.
 
 [%header,cols="3s,7a"]
 |===
@@ -59,7 +59,7 @@ Auto-populates based on the following values:
 |Schema
 
 |Clicking *Use Standard* accepts the standard you named and selected, or clicking *Custom* allows you to choose a file to download.
-You must use a custom schema for JSON. Supported Schema types are from the following formats: 
+You must use a custom schema for JSON. Supported Schema types are from the following formats:
 .schema, .JSON, .ESL (for X12)
 
 Required:

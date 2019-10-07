@@ -18,7 +18,7 @@ You’ll also need to have an understanding of how your backend systems work.
 
 Information you'll need about your organization:
 
-* Your organization's identifiers (such as the AS2 ID, X12 ISA, X12 GS, and so on).
+* Your organization's identifiers (such as the AS2 ID, X12-ISA, X12 GS, and so on).
 
 * Endpoints: There are three types of endpoints within AnyPoint Partner Manager -
 
@@ -39,7 +39,7 @@ Information you need about each trading partner:
 
 * The trading Partners name (usually the name of the company).
 
-* Partner identifiers (such as the AS2 ID, X12 ISA, X12 GS, and so on).
+* Partner identifiers (such as the AS2 ID, X12-ISA, X12 GS, and so on).
 
 * Partner endpoints (where you send transmissions to your partners, including acknowledgement endpoints).
 

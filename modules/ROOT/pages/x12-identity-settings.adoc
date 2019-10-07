@@ -1,10 +1,14 @@
-= X12 Identifiers and Values
+= X12 Identifiers
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-These settings apply to all X12 settings received from all partners.
+These apply to all X12 settings received from all partners.
 You can override these for your individual partner.
+
+== X12 - ISA Identifier Values
+
+Refer to this information specifically for ISA with X12.
 
 [%header,cols="3s,7a"]
 |===
