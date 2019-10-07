@@ -1,4 +1,4 @@
-= X12 Identifiers and Values
+= X12 - ISA Identifier Values
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

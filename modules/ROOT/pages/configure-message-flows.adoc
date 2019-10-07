@@ -12,7 +12,7 @@ The target is the final destination of a message flow and is defined by a host m
 
 You'll need the following for the Source:
 
-* The trading partner's name and associated identifiers (such as X12 ISA, X12 GS, and so on).
+* The trading partner's name and associated identifiers (such as X12-ISA, X12 GS, and so on).
 
 * The endpoint where you receive the transmission.
 

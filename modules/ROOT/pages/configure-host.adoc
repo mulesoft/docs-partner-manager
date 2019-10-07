@@ -28,9 +28,9 @@ This includes any global settings you need to modify, and the location of your p
 . Click *New* within the *Identifiers* section to begin adding an identifier related to your organization.
 
 . Select an identifier type from the *Type* drop-down menu. This uniquely identifies you.
-For example, depending on your setup, select one of the following: AS2, X12 ISA, X12 GS, or the DUNS number.
+For example, depending on your setup, select one of the following: AS2, X12-ISA, X12 GS, or the DUNS number.
 
-. Provide a value for your identifier (and qualifier for X12 ISA) and click *Create identifier* to save your changes.
+. Provide a value for your identifier (and qualifier for X12-ISA) and click *Create identifier* to save your changes. See xref:x12-identity-settings.adoc[X12 - ISA Identifier Values] for more info on X12-ISA settings.
 
 . Click *New* within the *Certificates* section to begin to upload any needed digital certificates (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
 
@@ -47,5 +47,5 @@ For example, depending on your setup, select one of the following: AS2, X12 ISA,
 
 == See Also
 
-* xref:x12-identity-settings.adoc[X12 Identifiers and Values]
+* xref:x12-identity-settings.adoc[X12 - ISA Identifier Values]
 * xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner]
