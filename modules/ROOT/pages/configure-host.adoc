@@ -4,8 +4,8 @@ include::_attributes.adoc[]
 endif::[]
 
 Your organization or your business group is considered the host partner in Anypoint Partner Manager.
-In the Anypoint platform, your hostname is the same name as your Anypoint business group.
-An Anypoint business group is a self-contained resource that was set up to contain Anypoint Platform resources such as APIs and applications.
+In the Anypoint platform, your hostname is the same name as your Anypoint Platform business group.
+An Anypoint Platform business group is a self-contained resource that was set up to contain Anypoint Platform resources such as APIs and applications.
 
 Within the host page you can do the following:
 

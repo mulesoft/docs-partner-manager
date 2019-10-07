@@ -14,7 +14,7 @@ Uses for this data include:
 * Error correction
 
 Anypoint Partner Manager allows you to monitor trading partner transmission activity.
-Activity is the full set of end-to-end events related to transmission metadata, messages, and errors that are involved in processing a transmission.
+Activity is the complete set of end-to-end events related to transmission metadata, messages, and errors that are involved in processing a transmission.
 
 You can:
 

@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 
 To receive messages from a trading partner, create a message flow and configure the sections for the source, target, and mapping.
-Your organization is typically referred to as the host. The enterprise you interact with is referred to as your trading partner.
+Your organization is typically referred to as the host. The enterprise or customer you interact with is referred to as your trading partner.
 
 The source of the message flow is defined by the partner, a host endpoint, often an API, and the message type you are receiving from them.
 
@@ -92,13 +92,12 @@ This is the target message type and the Endpoint where you want to route the tra
 
 * <<HTTP(S) Protocol Send Settings>>
 
-* <<HTTP Protocol Send Settings>>
 +
 When you complete all of the sections (they show a green check mark next to all of them in the flow) you can deploy your message flow and start receiving messages from your partner.
 +
 . Click *Deploy* when you are ready to deploy the configurations to your Mule Runtime.
 
-You can begin to monitor the activity from the Activity page.
+You can begin to monitor the deployed flow from the Activity page.
 
 == See Also
 
