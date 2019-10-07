@@ -37,7 +37,7 @@ Once you have created a message flow, you can begin to track its activity.
 Use the search box to find the transmission based on the trading partner name, message type, filename, control number, endpoint, or date received.
 
 . Select the transmission and review the summary information. The summary information contains:
-
++
 ** The status of the transmission indicating either a success (Green check mark), in process (...), or failure (Triangle with an exclamation point).
 
 ** The name of the file that was received
@@ -49,9 +49,8 @@ Use the search box to find the transmission based on the trading partner name, m
 ** The date and time when the file was received
 
 ** The type of message received (Depending on your setup)
-
++
 . Scan the Transmission Flow sections for an exclamation point (!) in any of the rectangle boxes next to the displayed flow stages. This indicates there is an issue with the transmission.
-
 +
 
 The *Transmission Flow* section shows the steps the file was processed in. It shows if:
