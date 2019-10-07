@@ -1,7 +1,9 @@
-= X12 - ISA Identifier Values
+= X12 Identifiers
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+
+== X12 - ISA Identifier Values
 
 These settings apply to all X12 settings received from all partners.
 You can override these for your individual partner.
