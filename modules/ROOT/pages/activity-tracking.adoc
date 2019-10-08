@@ -18,7 +18,7 @@ Activity is the complete set of end-to-end events related to transmission metada
 
 You can:
 
-* Search for message metadata (such as partner name, message type, filename, control number, endpoint, or date received).
+* Search for message metadata (such as partner name, message type, filename, control number, endpoint, or date received). 
 
 * View and download the original payload related to the transmission.
 
