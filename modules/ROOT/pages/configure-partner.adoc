@@ -3,36 +3,36 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-The only information you need to create a new trading partner is the name and a single identifier related to that partner.
-You can add other information later.
-Once created, each partner has its own page and shows up in the *Partners* section in the left navigation menu.
+The only information you need to create a new partner is its name and a single identifier related to that partner.
+You can add other information after creating the partner.
+Once created, each partner has its own page you can find in the *Partners* section in the left navigation menu.
 
-From the Partners page you can:
+From the Partner detail page you can:
 
-* Add information about your trading partners along with contact details.
+* Add information about your partner along with contact details.
 
-* Add identifiers to uniquely identify them from one another.
+* Add identifiers to uniquely identify it from other partners.
 
-* Add certificates owned by your trading partner.
+* Add certificates owned by the partner.
 
 * Configure validation, acknowledgement, control number, and character set settings applicable to all message flows for this trading partner.
 
-== Create a Trading Partner
+== Create a Partner
 
 . From within your Anypoint Partner Manager environment, select *Partners* from the left navigation.
 
 . Click *New partner*.
 
-. Add a name that easily identifies your trading partner.
+. Add a name that easily identifies your partner.
 
-. Select an identifier from the *Type* drop-down menu. This uniquely identifies your trading partner.
+. Select an identifier from the *Type* drop-down menu. This uniquely identifies your partner.
 For example, depending on your setup, select one of the following: AS2 Identity, X12-ISA, X12 GS, or the DUNS number.
 
 . Provide a value for your identifier (and qualifier for X12-ISA) and click *Create partner* to create your trading partner.
 See xref:x12-identity-settings.adoc[X12 Identifiers] for more info on X12 Identity settings.
 You can now setup message flows xref:configure-message-flows.adoc[Create a Receive Message Flow from Your Partner] related to this trading partner or continue to update this partner.
 
-== Update a Trading Partner's Profile
+== Update a Partner's Profile
 
 You can add the following information for each trading partner from the *Partners* selection in the left navigation:
 
