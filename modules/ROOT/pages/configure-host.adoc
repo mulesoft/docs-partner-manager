@@ -38,12 +38,6 @@ For example, depending on your setup, select one of the following: AS2, X12-ISA,
 
 . (Optional) Click *Edit* within the *Payload storage* section to change any of the information that was completed when the payload storage was set up. For example, URL location, timeout settings, and acknowledgments.
 
-. Configure X12 validation settings that can be used for all message flows that you are configuring with your trading partners. These include:
-
-* Validations
-* Acknowledgment
-* Control numbers
-* Character sets
 
 == See Also
 

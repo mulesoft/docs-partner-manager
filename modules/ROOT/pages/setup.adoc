@@ -4,21 +4,6 @@ include::_attributes.adoc[]
 endif::[]
 
 Set up Anypoint Partner Manager to be used by different people in your organization, namely - B2B integration developers, operations managers, and IT managers.
-To configure the system, you should be familiar with these concepts before setting up Partner Manager:
-
-* EDI message formats and schemas.
-
-* Digital Certificates such as X.509 certificates in PKCS12 file format for the AS2 and HTTPS transport protocols.
-
-* Configuration of protocols such as AS2, SFTP, and HTTPS.
-
-* The concept of organizations and environments in the Anypoint platform in context to Access Management and Mule Runtime Manager.
-
-* The Mule runtime.
-
-* DataWeave transformations.
-
-* Storage API solutions that are accessible from Mule runtime.
 
 == Minimum Requirements
 

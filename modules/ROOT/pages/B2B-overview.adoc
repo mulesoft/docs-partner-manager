@@ -51,6 +51,7 @@ Information you need about each trading partner:
 
 After gathering this information, you are ready to configure yourself as host, configure your trading partners, and create a message flow.
 
+
 // == See Also
 
 // * xref:configure-host.adoc[Configure Host]
