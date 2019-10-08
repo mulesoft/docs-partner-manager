@@ -1,4 +1,4 @@
-= Create a Receive Message Flow from Your Partner
+= Create a Message Flow from Your Partner
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
