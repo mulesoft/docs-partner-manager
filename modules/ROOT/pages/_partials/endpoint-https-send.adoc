@@ -1,6 +1,6 @@
 == HTTP(S) Send Configuration
 
-Use these settings when sending with the secure HTTP(S) protocols.
+Use these settings when sending with HTTP and the secure HTTPS protocol.
 This includes endpoints for sending transmissions to your partner and endpoints that are targets at your organization.
 
 [%header,cols="3s,7a"]
@@ -14,18 +14,15 @@ Default: HTTPS
 |Endpoint Name
 |Name used to easily identity the function of this endpoint. +
 Required: Yes +
-Default: N/A
 
 |Description
 |Describe a purpose and any other important details for this endpoint. +
 Required: No +
-Default: Selected
 
 |URL
 |Enter a well-formed URL (including the path) where the request is to be sent such as:
 https://www.mulesoft.com/sendRequest?name=something +
 Required: Yes +
-Default: N/A
 
 |Connection Idle Timeout (milliseconds)
 |Must be an integer greater than or equal to 1000. +
@@ -35,7 +32,7 @@ Default: 3000
 |Response Timeout (milliseconds)
 |Must be an integer greater than or equal to 1000. +
 Required: No +
-Default: none
+Default: 1000
 |===
 
 See xref:Certificates.adoc[Certificates] for more info on configuring certificates in Partner Manager.
@@ -57,18 +54,18 @@ Required: No +
 Required: No +
 
 |Basic
-|Simple authentication policy protects the API by requiring username and password when calling apps make a request. +
+|Simple authentication policy, it protects the API by requiring a username and password when calling apps make a request. +
 `Username` - Enter the username you set up with this authentication policy. +
-`Password` - Enter the username you set up with this authentication policy. +
+`Password` - Enter the password you set up with this authentication policy. +
 
 |Client Credentials
-|`Client ID` - The Client Id the OAS gave you when registering your application. +
-`Client Secret` - The Client Secret the OAS gave you when registering your application.
+|`Client ID` - The Client ID the OAS provided when registering your application. +
+`Client Secret` - The Client Secret the OAS provided when registering your application.
 `Client Header` - Add the key-value pairs, if they don't exist. +
 `Client Secret Header` - Add the secret key-value pairs, if they don't exist. +
 
 |OAuth Token
 |`Token URL` - Enter a valid authorization URL +
-`Client ID` -The Client Id the OAS gave you when registering your application. +
-`Client Secret` - The Client Secret the OAS gave you when registering your application.
+`Client ID` - The Client ID the OAS provided when registering your application. +
+`Client Secret` - The Client Secret the OAS provided when registering your application.
 |===

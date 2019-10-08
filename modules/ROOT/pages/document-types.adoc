@@ -27,7 +27,6 @@ Valid values:
 Default:
 None
 
-
 |Version - X12 only
 
 |Select a version from the drop-down menu: `3010`, `3020`, `3030`, `3040`, `3050`, `3060`, `3070`, `4010`, `4020`, `4030`, `4040`, `4050`, `4060`, `5010`, `5020`, `5030`, `5040`, `5050`, `6020`
@@ -64,6 +63,5 @@ You must use a custom schema for JSON. Supported Schema types are from the follo
 
 Required:
 *For JSON Only*
-
 
 |===

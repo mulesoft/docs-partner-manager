@@ -13,7 +13,7 @@ Required: Yes +
 Required: No +
 
 | AS2 URL (Automatically generated at time of deployment)
-| The HTTP(S) address at which you will be receiving AS2 messages.
+| The HTTP(S) address at where you receive AS2 messages.
 The port is automatically generated when you deploy a message flow that uses this endpoint.
 You'll be able to see it by selecting the receiving endpoint from your deployed message flow.
 You get the hostname from your administrator who created it upon setup.

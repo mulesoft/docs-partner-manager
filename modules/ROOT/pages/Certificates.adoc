@@ -5,9 +5,9 @@ endif::[]
 
 You can configure your SSL certificate settings for the different scenarios:
 
-* uploading your own, self-signed certificate
-* using a CA certificate (no upload is necessary)
-* enable insecure connection for a test scenario
+* Uploading your own, self-signed certificate
+* Using a CA certificate (no upload is necessary)
+* Enable insecure connection for a test scenario
 
 For example, you may need your partner’s digital certificate such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol.
 
