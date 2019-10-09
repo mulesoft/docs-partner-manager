@@ -520,7 +520,7 @@ The <<img-transaction-monitoring-successful-transaction>> should confirm that:
 
 * An XML purchase order as read from the company's filesystem and transformed to an X12 850 document.
 * The 850 was sent to a supplier over AS2.
-* The xref:as2-connector.adoc[AS2 Connector]
+* The xref:connectors::as2/as2-connector.adoc[AS2 Connector]
  listened for (on an AS2 endpoint) and received an X12 997 document that identifies whether the 850 was accepted or rejected.
 
 === Inspect a Payload
