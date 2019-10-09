@@ -41,7 +41,7 @@
  ** xref:anypoint-partner-manager-api.adoc[Anypoint Partner Manager API]
  ** xref:glossary.adoc[Glossary]
 * xref:partner-manager-connector.adoc[Partner Manager Connector]
-* xref:as2-connector.adoc[AS2 Connector]
+//* xref:as2-connector.adoc[AS2 Connector]
 * xref:ftps-connector.adoc[FTPS Connector]
 * xref:edi-x12-order-processing-example.adoc[EDI X12 Order Processing Example]
 * xref:supported-edi-document-types.adoc[Supported EDI Document Types]
