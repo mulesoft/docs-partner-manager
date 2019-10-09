@@ -29,7 +29,7 @@ Anypoint B2B includes the following:
 ** xref:partner-configuration.adoc[Partner Configuration]
 ** xref:transaction-monitoring.adoc[Transaction Monitoring]
 
-* xref:as2-connector.adoc[AS2 Connector]
+* xref:connectors::as2/as2-connector.adoc[AS2 Connector]
 * xref:ftps-connector.adoc[FTPS Connector]
 
 * xref:partner-manager-connector.adoc[Partner Manager Connector]
