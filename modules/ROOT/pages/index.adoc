@@ -61,7 +61,7 @@ xref:6@studio::basic-studio-tutorial.adoc[Anypoint Studio Tutorials].
 * xref:x12-module.adoc[X12 Module] (http://mulesoft.github.io/edi-module/x12/[Reference])
 * xref:edifact-module.adoc[EDIFACT Module] (http://mulesoft.github.io/edi-module/edifact/[Reference])
 * xref:ftps-connector.adoc[FTPS Connector] (http://modusintegration.github.io/mule-connector-ftps/[Reference])
-* xref:as2-connector.adoc[AS2 Connector - 2.0.0] (http://modusintegration.github.io/mule-connector-as2/[Reference])
+* xref:connectors::as2/as2-connector.adoc[AS2 Connector] (http://modusintegration.github.io/mule-connector-as2/[Reference])
 * xref:edi-x12-order-processing-example.adoc[X12 Order Processing Example]
 * xref:supported-edi-document-types.adoc[Supported EDI Document Types]
 
