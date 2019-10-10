@@ -15,7 +15,7 @@ There are three types of endpoints within AnyPoint Partner Manager
 
 ** Acknowledgement endpoints - Your partners provide you with endpoint configurations that can be used to send acknowledgement messages like 997s or 999s back to them. Acknowledgements are typically sent back to partners corresponding to one or more B2B messages you receive from them.
 
-Use the following table to configure different endpoint protocols.
+Use the following information to configure different endpoint protocols.
 
 == Endpoint Name, Protocol and Type
 
