@@ -20,7 +20,7 @@ The hostname displayed is created by your administrator at setup.
 +
 
 | Message Signature Encryption
-| If your partner is sending an encrypted signature in the message, then choose the appropriate algorithm for validating that signature. +
+| If your partner sends an encrypted signature in the message, choose the appropriate algorithm for validating that signature: +
 
 Options are: +
 
