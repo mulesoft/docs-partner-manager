@@ -5,7 +5,7 @@ endif::[]
 
 The only information you need to create a new partner is its name and a single identifier related to that partner.
 You can add other information after creating the partner.
-Once created, each partner has its own page you can find in the *Partners* section in the left navigation menu.
+Once created, each partner has its own page located in the *Partners* section in the left navigation menu.
 
 From the Partner detail page you can:
 
