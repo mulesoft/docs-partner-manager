@@ -1,4 +1,4 @@
-== HTTP(S) Send Configuration
+== HTTP and HTTPS Send Configuration
 
 Use these settings when sending with HTTP and the secure HTTPS protocol.
 This includes endpoints for sending transmissions to your partner and endpoints that are targets at your organization.
