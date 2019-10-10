@@ -4,8 +4,8 @@ include::_attributes.adoc[]
 endif::[]
 
 Your organization or your business group is considered the host partner in Anypoint Partner Manager.
-In the Anypoint platform, your hostname is the same name as your Anypoint business group.
-An Anypoint business group is a self-contained resource that was set up to contain Anypoint Platform resources such as APIs and applications.
+In the Anypoint platform, your hostname is the same name as your Anypoint Platform business group.
+An Anypoint Platform business group is a self-contained resource that was set up to contain Anypoint Platform resources such as APIs and applications.
 
 Within the host page you can do the following:
 
@@ -13,22 +13,18 @@ Within the host page you can do the following:
 
 * Add digital certificates associated to your organization.
 
-* Configure validation, acknowledgement, control number, and character set settings applicable to all message flows across all trading partners.
-You can reuse this global configuration in all message flows with all your trading partners.
-
 * Configure details associated to the Payload Storage API (same one you configured as part of the the Setup instructions).
 The storage API is a mandatory configuration where your B2B message payloads are stored.
 
 == Update the Host's Profile
 
 . Open Anypoint Partner Manager and select the name of your organization from the left navigation pane.
-Configure the following based on your indentifier and certificate type.
-This includes any global settings you need to modify, and the location of your payload storage configuration.
+Configure the your indentifiers, certificates, and the location and configuration of your payload storage.
 
 . Click *New* within the *Identifiers* section to begin adding an identifier related to your organization.
 
 . Select an identifier type from the *Type* drop-down menu. This uniquely identifies you.
-For example, depending on your setup, select one of the following: AS2, X12-ISA, X12 GS, or the DUNS number.
+For example, depending on your setup, select one of the following: AS2, DUNS number, X12 GS, or X12-ISA.
 
 . Provide a value for your identifier (and qualifier for X12-ISA) and click *Create identifier* to save your changes. See xref:x12-identity-settings.adoc[X12 - ISA Identifier Values] for more info on X12-ISA settings.
 
@@ -38,12 +34,6 @@ For example, depending on your setup, select one of the following: AS2, X12-ISA,
 
 . (Optional) Click *Edit* within the *Payload storage* section to change any of the information that was completed when the payload storage was set up. For example, URL location, timeout settings, and acknowledgments.
 
-. Configure X12 validation settings that can be used for all message flows that you are configuring with your trading partners. These include:
-
-* Validations
-* Acknowledgment
-* Control numbers
-* Character sets
 
 == See Also
 

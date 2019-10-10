@@ -14,11 +14,11 @@ Uses for this data include:
 * Error correction
 
 Anypoint Partner Manager allows you to monitor trading partner transmission activity.
-Activity is the full set of end-to-end events related to transmission metadata, messages, and errors that are involved in processing a transmission.
+Activity is the complete set of end-to-end events related to transmission metadata, messages, and errors that are involved in processing a transmission.
 
 You can:
 
-* Search for message metadata (such as partner name, message type, filename, control number, endpoint, or date received).
+* Search for message metadata (such as partner name, message type, filename, control number, endpoint, or date received). 
 
 * View and download the original payload related to the transmission.
 
@@ -48,7 +48,7 @@ Use the search box to find the transmission based on the trading partner name, m
 
 ** The date and time when the file was received
 
-** The type of message received (Depending on your setup)
+** The types of messages received (Depending on the message flows you configured)
 +
 . Scan the Transmission Flow sections for an exclamation point (!) in any of the rectangle boxes next to the displayed flow stages. This indicates there is an issue with the transmission.
 +
