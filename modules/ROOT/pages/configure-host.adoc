@@ -24,7 +24,7 @@ Configure the your indentifiers, certificates, and the location and configuratio
 . Click *New* within the *Identifiers* section to begin adding an identifier related to your organization.
 
 . Select an identifier type from the *Type* drop-down menu. This uniquely identifies you.
-For example, depending on your setup, select one of the following: AS2, DUNS number, X12-GS, or X12-ISA.
+For example, depending on your setup, select one of the following: AS2, DUNS number, X12 GS, or X12-ISA.
 
 . Provide a value for your identifier (and qualifier for X12-ISA) and click *Create identifier* to save your changes. See xref:x12-identity-settings.adoc[X12 - ISA Identifier Values] for more info on X12-ISA settings.
 
