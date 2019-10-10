@@ -97,7 +97,7 @@ When you complete all of the sections (they show a green check mark next to all 
 +
 . Click *Deploy* when you are ready to deploy the configurations to your Mule Runtime.
 
-Once a message flow is successfully deployed, you can track messages processed by it from the Activity page.
+Once a message flow is successfully deployed, you can track its processed messages from the Activity page.
 
 == See Also
 
