@@ -48,7 +48,7 @@ Use the search box to find the transmission based on the trading partner name, m
 
 ** The date and time when the file was received
 
-** The type of messages received (Depending on the message flows you configured)
+** The types of messages received (Depending on the message flows you configured)
 +
 . Scan the Transmission Flow sections for an exclamation point (!) in any of the rectangle boxes next to the displayed flow stages. This indicates there is an issue with the transmission.
 +
