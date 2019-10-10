@@ -52,12 +52,12 @@ Default: 1000
 |Size check wait time
 | Wait time in milliseconds between size checks to determine if a file is ready to be processed. This allows a file write to complete before processing.
 You can disable this feature by setting to a negative number or omitting a value.
-When enabled, Mule performs two size checks waiting the specified time between calls.
+When enabled, Mule performs two size checks waiting the amount of time specified in between calls.
 If both checks return the same value, the file is ready to process. +
 Required: No +
 Default: 1000
 
-|Archival Path (Optional) - inbound SFTP endpoint only 
+|Archival Path (Optional) - inbound SFTP endpoint only
 |The path to the source directory on the Mule server where the file is archived. +
 
 
