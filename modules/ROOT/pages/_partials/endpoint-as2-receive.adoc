@@ -16,7 +16,7 @@ Required: No +
 | The HTTP or HTTPS address where you receive AS2 messages.
 The port is automatically generated when you deploy a message flow that uses this endpoint.
 You can see it by selecting the receiving endpoint from your deployed message flow.
-You get the hostname from your administrator who created it upon setup.
+The hostname displayed is created by your administrator at setup.
 +
 
 | Message Signature Encryption
