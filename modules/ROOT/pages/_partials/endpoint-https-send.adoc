@@ -34,7 +34,7 @@ Required: No +
 Default: 1000
 |===
 
-See xref:Certificates.adoc[Certificates] for more info on configuring certificates in Partner Manager.
+See xref:Certificates.adoc[Certificates] for more information about configuring certificates in Anypoint Partner Manager.
 
 === Authentication Settings
 
