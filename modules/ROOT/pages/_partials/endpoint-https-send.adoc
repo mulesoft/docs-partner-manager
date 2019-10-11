@@ -59,7 +59,7 @@ Required: No +
 
 |Client Credentials
 |`Client ID` - The client ID that the OAS provided when registering your application. +
-`Client Secret` - The Client Secret the OAS provided when registering your application.
+`Client Secret` - The client secret that the OAS provided when registering your application.
 `Client Header` - Add the key-value pairs, if they don't exist. +
 `Client Secret Header` - Add the secret key-value pairs, if they don't exist. +
 
