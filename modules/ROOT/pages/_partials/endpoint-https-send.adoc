@@ -53,7 +53,7 @@ Required: No +
 Required: No +
 
 |Basic
-|Simple authentication policy, it protects the API by requiring a username and password when calling apps make a request. +
+|Specifes a simple authentication policy that protects the API by requiring a username and password when calling apps make a request. +
 `Username` - Enter the username you set up with this authentication policy. +
 `Password` - Enter the password you set up with this authentication policy. +
 
