@@ -55,7 +55,7 @@ Required: No +
 |Basic
 |Specifes a simple authentication policy that protects the API by requiring a username and password when calling apps make a request. +
 `Username` is the username you set up with this authentication policy. +
-`Password` - Enter the password you set up with this authentication policy. +
+`Password` is the password you set up with this authentication policy. +
 
 |Client Credentials
 |`Client ID` - The Client ID the OAS provided when registering your application. +
