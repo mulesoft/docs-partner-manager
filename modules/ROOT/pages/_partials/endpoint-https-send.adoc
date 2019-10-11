@@ -11,7 +11,7 @@ Required: Yes +
 Default: HTTPS
 
 |Endpoint Name
-|Name used to easily identity the function of this endpoint. +
+|Name used to easily identify the function of this endpoint. +
 Required: Yes +
 
 |Description
