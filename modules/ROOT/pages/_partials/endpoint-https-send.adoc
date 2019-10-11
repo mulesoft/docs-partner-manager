@@ -64,7 +64,7 @@ Required: No +
 `Client Secret Header` - Add the secret key-value pairs, if they don't exist. +
 
 |OAuth Token
-|`Token URL` - Enter a valid authorization URL +
+|`Token URL` - Enter a valid authorization URL. +
 `Client ID` - The Client ID the OAS provided when registering your application. +
 `Client Secret` - The Client Secret the OAS provided when registering your application.
 |===
