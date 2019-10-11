@@ -65,6 +65,6 @@ Required: No +
 
 |OAuth Token
 |`Token URL` - Enter a valid authorization URL. +
-`Client ID` - The Client ID the OAS provided when registering your application. +
+`Client ID` - The client ID that the OAS provided when registering your application. +
 `Client Secret` - The Client Secret the OAS provided when registering your application.
 |===
