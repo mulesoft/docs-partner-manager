@@ -58,7 +58,7 @@ Required: No +
 `Password` is the password you set up with this authentication policy. +
 
 |Client Credentials
-|`Client ID` - The Client ID the OAS provided when registering your application. +
+|`Client ID` - The client ID that the OAS provided when registering your application. +
 `Client Secret` - The Client Secret the OAS provided when registering your application.
 `Client Header` - Add the key-value pairs, if they don't exist. +
 `Client Secret Header` - Add the secret key-value pairs, if they don't exist. +
