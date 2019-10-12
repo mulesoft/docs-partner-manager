@@ -3,12 +3,11 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-These apply to all X12 settings received from all partners.
-You can override these for your individual partner.
+These apply to all X12 settings received from all partners. You can override these for your individual partner.
 
 == X12 - ISA Identifier Values
 
-Refer to this information specifically for ISA with X12.
+Refer to this information specifically for using ISA with X12.
 
 [%header,cols="3s,7a"]
 |===
@@ -17,8 +16,7 @@ Refer to this information specifically for ISA with X12.
 |Interchange ID qualifier - X12 ISA
 |Value of the EDI ID Qualifier for your trading partner. Some of the most common values are listed here.
 
-Required?::
-Yes
+Required?: Yes +
 
 Valid values::
 
@@ -41,19 +39,11 @@ Valid values::
 * `SN (Standard Address Number)`
 * `ZZ (Mutually Defined)`
 
-Default::
-
-* No default provided
 
 |Identifier value
-|EDI X12 ISA ID for your trading partner; can be up to 15 characters. Your trading partner should supply you with the proper EDI X12 Interchange ID.
+|EDI X12-ISA ID for your trading partner; can be up to 15 characters. Your trading partner should supply you with the proper EDI X12 Interchange ID.
 
-Required?:
-Yes
-
-Default:
-
-No default provided
+Required?: Yes +
 
 |===
 
