@@ -3,39 +3,32 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can configure your SSL certificate settings for the different scenarios:
+You can configure your SSL certificate settings based on your certificate needs. You can:
 
-* uploading your own, self-signed certificate
-* using a CA certificate (no upload is necessary)
-* enable insecure connection for a test scenario
+* Enable an insecure connection for a local testing that doesn’t perform certificate validation. +
+Use Allow insecure connection. +
 
-For example, you may need your partner’s digital certificate such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol.
+* Use a CA-signed certificate where no upload is necessary. +
+Use the option: Do not require an additional certificate because this endpoint already uses a CA-signed certificate. +
 
-[%header,cols="3s,7a"]
-|===
-|Name |Description
-|Allow insecure connection
-|Can be used for local testing which doesn’t perform certificate validation. +
+* Upload your own, self-signed certificate. +
+Upload a new certificate (`.PEM` format), or view all the certificates available for use with this endpoint setup. +
 
-|Do not require an additional certificate because this endpoint already uses a CA-signed certificate:
-|This endpoint already uses a CA-signed certificate and does not require you to upload a certificate. +
-
-|Certificates
-|Upload a new certificate (.PEM format), or view all certificates available for use with this endpoint setup. +
 Information provided for each certificate: +
 
-`Authority` - certificate provider +
+`Authority` is the certificate provider. +
 
-`Serial Number` - from the certificate +
+`Serial Number` is from the certificate. +
 
-`Status` - Active is shown with a green icon or Inactive is shown with a red icon +
+`Status` Active is shown with a green icon or Inactive is shown with a red icon. +
 
-`Endpoints` - the number of endpoints where it is used +
+`Endpoints` are the number of endpoints where it is used. +
 
-`Start Date` - from when the certificate can be used +
+`Start Date` is the date from when the certificate can be used. +
 
-`Expires` - the date from which the certificate can no longer be used +
+`Expires` is the date from when the certificate can no longer be used. +
 
-`Days to expiration` - countdown to expiration date +
+`Days to expiration` is the countdown to expiration date. +
 
-|===
+// One example might be that you may need your partner’s digital certificate - such as an X.509 certificate in the PKCS12 file // format for the AS2 transport protocol.
+

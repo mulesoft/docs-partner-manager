@@ -1,7 +1,6 @@
-== HTTP(S) Send Configuration
+== HTTP and HTTPS Send Configuration
 
-Use these settings when sending with the secure HTTP(S) protocols.
-This includes endpoints for sending transmissions to your partner and endpoints that are targets at your organization.
+The HTTP and the secure HTTPS protocol send settings are used with endpoints for sending transmissions to your partner and endpoints that are targets at your organization.
 
 [%header,cols="3s,7a"]
 |===
@@ -12,20 +11,17 @@ Required: Yes +
 Default: HTTPS
 
 |Endpoint Name
-|Name used to easily identity the function of this endpoint. +
+|Name used to easily identify the function of this endpoint. +
 Required: Yes +
-Default: N/A
 
 |Description
 |Describe a purpose and any other important details for this endpoint. +
 Required: No +
-Default: Selected
 
 |URL
-|Enter a well-formed URL (including the path) where the request is to be sent such as:
+|Enter a well-formed URL (including the path) that specifies where the request is to be sent, such as:
 https://www.mulesoft.com/sendRequest?name=something +
 Required: Yes +
-Default: N/A
 
 |Connection Idle Timeout (milliseconds)
 |Must be an integer greater than or equal to 1000. +
@@ -35,10 +31,10 @@ Default: 3000
 |Response Timeout (milliseconds)
 |Must be an integer greater than or equal to 1000. +
 Required: No +
-Default: none
+Default: 1000
 |===
 
-See xref:Certificates.adoc[Certificates] for more info on configuring certificates in Partner Manager.
+See xref:Certificates.adoc[Certificates] for more information about configuring certificates in Anypoint Partner Manager.
 
 === Authentication Settings
 
@@ -57,18 +53,18 @@ Required: No +
 Required: No +
 
 |Basic
-|Simple authentication policy protects the API by requiring username and password when calling apps make a request. +
-`Username` - Enter the username you set up with this authentication policy. +
-`Password` - Enter the username you set up with this authentication policy. +
+|Specifes a simple authentication policy that protects the API by requiring a username and password when calling apps make a request. +
+`Username` is the username you set up with this authentication policy. +
+`Password` is the password you set up with this authentication policy. +
 
 |Client Credentials
-|`Client ID` - The Client Id the OAS gave you when registering your application. +
-`Client Secret` - The Client Secret the OAS gave you when registering your application.
+|`Client ID` - The client ID that the OAS provided when registering your application. +
+`Client Secret` - The client secret that the OAS provided when registering your application.
 `Client Header` - Add the key-value pairs, if they don't exist. +
 `Client Secret Header` - Add the secret key-value pairs, if they don't exist. +
 
 |OAuth Token
-|`Token URL` - Enter a valid authorization URL +
-`Client ID` -The Client Id the OAS gave you when registering your application. +
-`Client Secret` - The Client Secret the OAS gave you when registering your application.
+|`Token URL` - Enter a valid authorization URL. +
+`Client ID` - The client ID that the OAS provided when registering your application. +
+`Client Secret` - The client secret that the OAS provided when registering your application.
 |===
