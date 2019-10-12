@@ -1,45 +1,45 @@
-= Create a Receive Message Flow from Your Partner
+= Create a Message Flow
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-To receive messages from a trading partner, create a message flow and configure the sections for the source, target, and mapping.
-Your organization is typically referred to as the host. The enterprise you interact with is referred to as your trading partner.
+To receive messages from a trading partner, create a message flow and configure the sections for the source, map, and target.
+Your organization is typically referred to as the host. The enterprise or customer you interact with is referred to as your  partner.
 
-The source of the message flow is defined by the partner, a host endpoint, often an API, and the message type you are receiving from them.
+The source of the message flow is defined by the partner, a receiving endpoint at the host, often an API, and the message type you are receiving from the partner.
 
 The target is the final destination of a message flow and is defined by a host message type and endpoint, often a Host API.
 
 You'll need the following for the Source:
 
-* The trading partner's name and associated identifiers (such as X12-ISA, X12 GS, and so on).
+* The partner's name and associated identifiers (such as X12-ISA, X12 GS, and so on).
 
-* The endpoint where you receive the transmission.
+* The endpoint where you receive transmissions.
 
 * The message type to process for this message flow (such as X12, 4010, 850, and so on).
 
-* The endpoint where your trading partner may want to receive an acknowledgment related to the messages they send.
+* The endpoint where your partner may want to receive an acknowledgment related to the messages they send.
 
 * The DataWeave map that transforms the received message contents into a format you can use.
 
 You'll need the following for the Target:
 
-* The message type your system understands. This is also the format that DataWeave map transforms received messages into.
+* The message type your system understands. This is also the format into which DataWeave map transforms received messages.
 
 * The endpoint in your organization where you route the transformed message.
 
 If a separate URL is required for returning MDNs, it is sent in the AS2 transmission and Anypoint Partner Manager reads it from there.
 
-== Set up Receive from a Partner
+== Configure a message flow
 
 . From within your Anypoint Partner Manager environment (either Sandbox or Production), click *New message flows* in the upper right.
 
-. Select an Existing Partner. You can do this from the *Select a partner* dialog, or search for the trading partner by name.
+. Select an Existing Partner. You can do this from the *Select a partner* dialog, by searching for a partner by name.
 
 . Once you find a match, choose the partner name and click *Select*.
 
-* Alternatively from the *Select a partner* dialog, you can create a new Trading Partner by clicking *New*.
-This is the same as xref:configure-partner.adoc#create-a-trading-partner[Create a Trading Partner] except that when you are finished, you'll click *Create Partner and Message Flow*. You can add more information to the parter now or later.
+* Alternatively from the *Select a partner* dialog, you can create a new partner by clicking *New*.
+This is the same as xref:configure-partner.adoc#create-a-trading-partner[Create a Trading Partner] except that when you are finished, you'll click *Create Partner and Message Flow*. You can add more information to the partner later.
 
 +
 NOTE: Clicking each section of the message flow expands it. A green checkmark next to any a section indicates that it is complete.
@@ -57,7 +57,7 @@ NOTE: Clicking each section of the message flow expands it. A green checkmark ne
 +
 . Click *Select* from the *Source message* section to expand the Message Type section.
 
-. Either search and click *Select* to choose an existing message type, or click *New* to create a new message type.
+. Either search and click *Select* to choose a previously used message type, or click *New* to create a new message type.
 
 . For a new message type, depending on the message standard, refer to the following:
 +
@@ -92,13 +92,12 @@ This is the target message type and the Endpoint where you want to route the tra
 
 * <<HTTP(S) Protocol Send Settings>>
 
-* <<HTTP Protocol Send Settings>>
 +
 When you complete all of the sections (they show a green check mark next to all of them in the flow) you can deploy your message flow and start receiving messages from your partner.
 +
 . Click *Deploy* when you are ready to deploy the configurations to your Mule Runtime.
 
-You can begin to monitor the activity from the Activity page.
+Once a message flow is successfully deployed, you can track its processed messages from the Activity page.
 
 == See Also
 

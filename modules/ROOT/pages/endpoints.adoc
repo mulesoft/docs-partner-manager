@@ -15,7 +15,7 @@ As host, your organization has internal endpoints to which it routes messages fr
 * Acknowledgement endpoints +
 Your partners provide you with their own external endpoint configurations, to which your organization can send + acknowledgments, such as like 997 or 999 acknowledgements. Acknowledgements are typically sent back to trading partners and correspond to one or more B2B messages you receive from them.
 
-Refer to the following to configure your endpoint. Your configuration varies based on the protocol you use.
+Refer to the following to configure your endpoint. Your configuration varies based on the protocol and type you use.
 
 == Endpoint Name, Protocol and Type
 
