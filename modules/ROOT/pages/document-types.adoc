@@ -1,12 +1,9 @@
-= Message (Document) Types
+= X12 and JSON Message Types
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Configuring a message type for a partner means configuring settings specific to that document type standard.
-
-== X12 and JSON
-
+You configure a message type for a partner by configuring settings specific to that EDI document type standard.
 Refer to these when configuring either JSON or X12. Refer to  https://docs.mulesoft.com/connectors/x12-edi/x12-edi-supported-doc-types[X12 EDI supported Doc Types] for more information.
 
 [%header,cols="3s,7a"]
@@ -27,10 +24,9 @@ Valid values:
 Default:
 None
 
-
 |Version - X12 only
 
-|Select a version from the drop-down menu: `3010`, `3020`, `3030`, `3040`, `3050`, `3060`, `3070`, `4010`, `4020`, `4030`, `4040`, `4050`, `4060`, `5010`, `5020`, `5030`, `5040`, `5050`, `6020`
+|Select a version from the drop-down menu: `3010`, `3020`, `3030`, `3040`, `3050`, `3060`, `3070`, `4010`, `4020`, `4030`, `4040`, `4050`, `4060`, `5010`, `5020`, `5030`, `5040`, `5050`, or `6020`.
 
 Required:
 Yes
@@ -64,6 +60,5 @@ You must use a custom schema for JSON. Supported Schema types are from the follo
 
 Required:
 *For JSON Only*
-
 
 |===
