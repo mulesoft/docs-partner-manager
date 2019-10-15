@@ -1,9 +1,9 @@
-= X12 Identifiers
+= Identifiers
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-These apply to all X12 settings received from all partners. You can override these for your individual partner.
+Identifiers are used to `identify` appropriate sender and receiver partners involved in a B2B transaction. For X12 messages, the identifiers contained in the ISA and GS headers provide valuable information to enable identification of the appropriate flow to that will be used to process the transaction.
 
 == X12 - ISA Identifier Values
 
@@ -13,8 +13,8 @@ Refer to this information specifically for using ISA with X12.
 |===
 |Setting |Description
 
-|Interchange ID qualifier - X12 ISA
-|Value of the EDI ID Qualifier for your trading partner. Some of the most common values are listed here.
+|Qualifier
+|The Qualifier types available with anypoint Partner Manager are listed here.
 
 Required?: Yes +
 
@@ -41,11 +41,58 @@ Valid values::
 
 
 |Identifier value
-|EDI X12-ISA ID for your trading partner; can be up to 15 characters. Your trading partner should supply you with the proper EDI X12 Interchange ID.
+|EDI X12-ISA ID for your trading partner; can be up to 15 characters. Your trading partner should supply you with the proper EDI X12 Interchange Sender / Receiver ID.
+
 
 Required?: Yes +
 
 |===
+
+== X12 - GS Values
+
+Refer to this information specifically for using GS with X12.
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Identifier Value
+|EDI X12-GS ID for your trading partner; can be up to 15 characters. Your trading partner should supply you with the proper EDI X12 Group Sender / Receiver ID.
+
+Required?: Yes +
+
+|===
+
+== DUNS
+
+Refer to this information specifically for using the DUNS number as an identifier.
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Identifier Value
+|the DUNS number for your trading partner. The DUNS number is a 9 digit number that your trading partner should supply you with corresponding to the Sender / Receiver ID.
+
+Required?: Yes +
+
+|===
+
+== AS2 Identity
+
+Refer to this information specifically for using the AS2 identity to identify a trading partner.
+
+[%header,cols="3s,7a"]
+|===
+|Setting |Description
+
+|Identifier Value
+|the AS2 identity for your trading partner. Your trading partner should supply you with corresponding to the Sender / Receiver AS2 identity.
+
+Required?: Yes +
+
+|===
+
 
 
 == See Also
