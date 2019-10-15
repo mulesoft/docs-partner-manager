@@ -3,9 +3,11 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can configure your SSL certificate settings based on your certificate needs. You can:
+You can configure your SSL certificate settings based on your certificate needs. All certificates in Anypoint Partner Manager are securely stored in Anypoint platform's secrets manager that uses a secure vault technology to store and control access to private keys, passwords, certificates, and other secrets.
 
-* Enable an insecure connection for a local testing that doesn’t perform certificate validation. +
+You can:
+
+* Enable an insecure connection for local testing that doesn’t perform certificate validation. +
 Use Allow insecure connection. +
 
 * Use a CA-signed certificate where no upload is necessary. +
