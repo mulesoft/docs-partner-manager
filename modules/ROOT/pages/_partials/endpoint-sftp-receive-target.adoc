@@ -1,17 +1,13 @@
-== SFTP Receive Configuration
+== SFTP Receive Endpoint Settings
 
-Use these to set up SFTP server settings for your partners.
-
-=== Server information
-
-Use these to set up a receive from endpoint.
+Use these to set up SFTP endpoint settings to receive inbound files from your trading partners.
 
 [%header,cols="3s,7a"]
 |===
 |Name |Description
 
 |Endpoint Name
-| Name used to easily identity the function of this endpoint. +
+| Name used to refer to the endpoint. the name is typically autopopulated, but can be overwritten by the end user. +
 Required: Yes +
 
 |Description
@@ -19,11 +15,11 @@ Required: Yes +
 Required: No +
 
 |Host
-| Enter the Fully Qualified Domain Name (FQDN) or IP address of the server on your host machine that connects to the external SFTP server. +
+| The FTP server host, such as www.mulesoft.com, localhost, or 192.168.0.1, and so on that connects to the SFTP server. +
 Required: Yes +
 
 |Port
-| The port that connects to the local (host) server.  +
+| The port number of the SFTP server to connect on.  +
 Required: Yes +
 
 |Username
@@ -34,19 +30,19 @@ Required: Yes +
 | Password for the FTP Server. Required if the server is authenticated. +
 Required: Yes +
 
-|Source Path - receive only
-| A path that facilitates connection to the local server. +
-Required: No +
+|Source Path
+| A path that on the SFTP server where your trading partner is expected to drop the inbound files at. +
+Required: Yes +
 
-|Target Path - target only
-| Specify a path that enables a connection to the local server. +
+|Archival Path
+| Specify an optional path on the SFTP server where a copy of the file that was picked up from the `source path` can be stored. +
 Required: No +
 Default: None
 
 |Polling Frequency
-| Frequency in milliseconds to check the read directory. The read directory is specified by the endpoint of the listening component. +
-Type: string +
-Required: No +
+| Frequency in milliseconds to check the source path for new files. +
+Type: number in milliseconds +
+Required: Yes +
 Default: 1000
 
 |Size check wait time
@@ -54,11 +50,8 @@ Default: 1000
 You can disable this feature by setting to a negative number or omitting a value.
 When enabled, Mule performs two size checks waiting the specified time between calls.
 If both checks return the same value, the file is ready to process. +
-Required: No +
+Type: number in milliseconds +
+Required: Yes +
 Default: 1000
-
-|Archival Path (Optional) - inbound SFTP endpoint only 
-|The path to the source directory on the Mule server where the file is archived. +
-
 
 |===
