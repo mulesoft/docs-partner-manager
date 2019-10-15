@@ -15,7 +15,7 @@ Required: Yes +
 Required: No +
 
 |Host
-| The FTP server host, such as www.mulesoft.com, localhost, or 192.168.0.1, and so on that connects to the SFTP server. +
+| The FTP server host, such as `www.mulesoft.com`, `localhost`, or `192.168.0.1`, and so on that connects to the SFTP server. +
 Required: Yes +
 
 |Port
