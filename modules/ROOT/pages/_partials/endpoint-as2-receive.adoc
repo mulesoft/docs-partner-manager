@@ -1,4 +1,4 @@
-== AS2 Receive Settings
+== AS2 Endpoint Settings
 Use these when setting up AS2 with HTTPS.
 
 [%header,cols="3s,7a"]
@@ -6,7 +6,7 @@ Use these when setting up AS2 with HTTPS.
 |Setting |Description
 
 |Endpoint Name
-|Name used to easily identify the purpose of this endpoint. +
+|Name used to easily identify the purpose of this endpoint. the name is auto-populated, but can be overwritten. +
 Required: Yes +
 
 |Description
@@ -42,7 +42,7 @@ Options are: +
 Required: Yes +
 
 | Encryption Algorithm
-| The preferred algorithm receives encrypted messages. +
+| The preferred algorithm for the encryption of received messages. +
 
 Valid values:
 `None` +
