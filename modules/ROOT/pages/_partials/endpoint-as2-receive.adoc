@@ -6,7 +6,7 @@ Use these when setting up AS2 with HTTPS.
 |Setting |Description
 
 |Endpoint Name
-|Name used to easily identify the purpose of this endpoint. the name is auto-populated, but can be overwritten. +
+|Name used to easily identify the purpose of this endpoint. The name is auto-populated, but can be overwritten. +
 Required: Yes +
 
 |Description
@@ -118,10 +118,4 @@ Required: Yes +
 
 See xref:Certificates.adoc[Certificates] for more info on configuring certificates in Partner Manager.
 
-//| MDN Subject
-//|The field that specifies a default subject for the MDN messages you send back. +
-//Required?:: Yes +
 
-//|Request Digitally Signed Message
-//|The Partner generates and sends the MDN back to you in a newly initiated path. +
-//Required?:: Yes +
