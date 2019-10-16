@@ -9,5 +9,8 @@
 * xref:x12-identity-settings.adoc[X12 Identifiers]
 * xref:Certificates.adoc[Certificates]
 * xref:endpoints.adoc[Endpoint Types and Protocols]
+** xref:endpoint-as2-receive.adoc[AS2 Endpoint Settings]
+** xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
+** xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
 * xref:document-types.adoc[Message (Document) Types]
 * xref:activity-tracking.adoc[Track Activity]
