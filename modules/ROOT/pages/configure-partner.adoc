@@ -30,7 +30,7 @@ For example, depending on your setup, select one of the following: AS2 Identity,
 
 . Provide a value for your identifier (and qualifier for X12-ISA) and click *Create partner* to create your trading partner.
 See xref:x12-identity-settings.adoc[X12 Identifiers] for more info on X12 Identity settings.
-You can now setup message flows xref:configure-message-flows.adoc[Create a Receive Message Flow from Your Partner] related to this trading partner or continue to update this partner.
+You can now setup message flows xref:configure-message-flows.adoc[Create a Message Flow] related to this trading partner or continue to update this partner.
 
 == Update a Partner's Profile
 
@@ -74,7 +74,3 @@ View information about an uploaded certificate by clicking it's link. See xref:C
 * Character sets
 
 Refer to the options for each at xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner]
-
-// == See Also
-
-// * xref:x12-identity-settings.adoc[X12 Identifiers]
