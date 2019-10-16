@@ -7,11 +7,13 @@ Use these to set up SFTP endpoint settings to receive inbound files from your tr
 |Name |Description
 
 |Endpoint Name
+
 | Name used to refer to the endpoint. The name is typically autopopulated, but can be overwritten by the end user. +
+
 Required: Yes +
 
 |Description
-| Describe a purpose and any other important details for this endpoint. +
+| Describes a purpose and any other important details for this endpoint. +
 Required: No +
 
 |Host
@@ -20,15 +22,17 @@ Required: Yes +
 
 |Port
 | The port number of the SFTP server to connect upon.  +
+=======
+| Is the Fully Qualified Domain Name (FQDN) or IP address of the server on your host machine that connects to the external SFTP server. +
 Required: Yes +
 
 |Username
-| Username for the FTP Server. Required if the server is authenticated. +
-Required: Yes +
+| Is the username for the FTP Server.   +
+Required: Yes, if the server is authenticated. +
 
 |Password
-| Password for the FTP Server. Required if the server is authenticated. +
-Required: Yes +
+| Is the password for the FTP Server.  +
+Required: Yes, if the server is authenticated. +
 
 |Source Path
 | A path on the SFTP server where your trading partner is expected to drop the inbound files. +
@@ -36,19 +40,23 @@ Required: Yes +
 
 |Archival Path
 | Specify an optional path on the SFTP server where a copy of the file that was picked up from the `source path` can be stored. +
+
+|Target Path - target only
+| Is the path that enables a connection to the local server. +
+
 Required: No +
-Default: None
 
 |Polling Frequency
 | Frequency in milliseconds to check the source path for new files. +
 Type: number in milliseconds +
 Required: Yes +
+
 Default: 1000
 
 |Size check wait time
-| Wait time in milliseconds between size checks to determine if a file is ready to be processed. This allows a file write to complete before processing.
-You can disable this feature by setting to a negative number or omitting a value.
-When enabled, Mule performs two size checks waiting the specified time between calls.
+| The wait time in milliseconds between size checks to determine if a file is ready to be processed. This allows a file write to complete before processing.
+Disable this feature by setting it to a negative number or omitting a value.
+When enabled, Mule performs two size checks by waiting the amount of time specified in between calls.
 If both checks return the same value, the file is ready to process. +
 Type: number in milliseconds +
 Required: Yes +
