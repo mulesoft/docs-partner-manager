@@ -18,7 +18,7 @@ Required: No +
 The port is automatically generated when you deploy a message flow that uses this endpoint.
 You can see it by selecting the receiving endpoint from your deployed message flow.
 The hostname displayed is created by your administrator at setup.
-+
+
 
 | Message Signature Encryption
 | If your partner sends an encrypted signature in the message, choose the appropriate algorithm for validating that signature: +
