@@ -5,15 +5,15 @@ endif::[]
 
 There are three types of endpoints within AnyPoint Partner Manager:
 
-* Receive endpoints, inbound transmission. +
-As host, you need the endpoints that your organization uses to receive transmissions from your partners. +
+* Receive endpoints. +
+Your organization needs to provide endpoints to receive transmissions from your trading partners. +
 These endpoints are resources your organization exposes to your trading partners.
 
 * Target endpoints. +
-As host, your organization has internal endpoints to which it routes messages from the trading partner, after those messages are transformed within the message flow.
+Your organization also has internal endpoints to which it routes messages from the trading partners. The messages routed to the target endpoint are typically validated and transformed before they are routed to the configured target endpoint.
 
 * Acknowledgement endpoints +
-Your partners provide you with their own external endpoint configurations, to which your organization can send + acknowledgments, such as like 997 or 999 acknowledgements. Acknowledgements are typically sent back to trading partners and correspond to one or more B2B messages you receive from them.
+Your partners provide you with their own endpoint configurations to which your organization can send acknowledgments, such as an X12 997 or X12 999. Acknowledgements are typically sent back to trading partners and correspond to one or more B2B messages you receive from your trading partners.
 
 Refer to the following to configure your endpoint. Your configuration varies based on the protocol and type you use.
 
@@ -40,7 +40,9 @@ Required: No +
 Valid values: +
 
 `AS2` +
+
 `SFTP` + 
+
 `HTTPS` +
 
 Default: None +
@@ -69,8 +71,8 @@ Default: None +
 
 Select the section that corresponds to the Protocol-Type of the Endpoint for which you are entering settings.
 
-//* <<AS2 Send Settings>>
-* <<AS2 Receive Settings>>
-//* <<SFTP Send Settings>>
-* <<SFTP Receive and Target Settings>>
-* <<HTTP(S) Send Settings>>
+* [AS2 Receive Settings]
+* [SFTP Receive and Target Settings]
+* [HTTP(S) Send Settings]
+=======
+

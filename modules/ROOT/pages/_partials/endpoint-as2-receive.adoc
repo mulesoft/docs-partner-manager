@@ -1,11 +1,12 @@
-== AS2 Receive Settings
+== AS2 Endpoint Settings
+Use these when setting up AS2 with HTTPS.
 
 [%header,cols="3s,7a"]
 |===
 |Setting |Description
 
 |Endpoint Name
-|Name used to easily identify the purpose of this endpoint. +
+|Name used to easily identify the purpose of this endpoint. The name is auto-populated, but can be overwritten. +
 Required: Yes +
 
 |Description
@@ -41,7 +42,7 @@ Options are: +
 Required: Yes +
 
 | Encryption Algorithm
-| The preferred algorithm receives encrypted messages. +
+| The preferred algorithm for the encryption of received messages. +
 
 Valid values:
 `None` +
@@ -117,10 +118,4 @@ Required: Yes +
 
 See xref:Certificates.adoc[Certificates] for more info on configuring certificates in Partner Manager.
 
-//| MDN Subject
-//|The field that specifies a default subject for the MDN messages you send back. +
-//Required?:: Yes +
 
-//|Request Digitally Signed Message
-//|The Partner generates and sends the MDN back to you in a newly initiated path. +
-//Required?:: Yes +

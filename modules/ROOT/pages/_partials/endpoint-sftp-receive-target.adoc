@@ -1,17 +1,15 @@
-== SFTP Receive Configuration
+== SFTP Receive Endpoint Settings
 
-Use these to set up SFTP server settings for your partners.
-
-=== Server information
-
-Use these to set up a receive from endpoint.
+Use these to set up SFTP endpoint settings to receive inbound files from your trading partners.
 
 [%header,cols="3s,7a"]
 |===
 |Name |Description
 
 |Endpoint Name
-| Is the name used to easily identity the function of this endpoint. +
+
+| Name used to refer to the endpoint. The name is typically autopopulated, but can be overwritten by the end user. +
+
 Required: Yes +
 
 |Description
@@ -19,11 +17,13 @@ Required: Yes +
 Required: No +
 
 |Host
-| Is the Fully Qualified Domain Name (FQDN) or IP address of the server on your host machine that connects to the external SFTP server. +
+| The FTP server host, such as `www.mulesoft.com`, `localhost`, or `192.168.0.1`, and so on that connects to the SFTP server. +
 Required: Yes +
 
 |Port
-| Is the port that connects to the local (host) server.  +
+| The port number of the SFTP server to connect upon.  +
+=======
+| Is the Fully Qualified Domain Name (FQDN) or IP address of the server on your host machine that connects to the external SFTP server. +
 Required: Yes +
 
 |Username
@@ -34,17 +34,23 @@ Required: Yes, if the server is authenticated. +
 | Is the password for the FTP Server.  +
 Required: Yes, if the server is authenticated. +
 
-|Source Path - receive only
-| Is the path that facilitates connection to the local server. +
-Required: No +
+|Source Path
+| A path on the SFTP server where your trading partner is expected to drop the inbound files. +
+Required: Yes +
+
+|Archival Path
+| Specify an optional path on the SFTP server where a copy of the file that was picked up from the `source path` can be stored. +
 
 |Target Path - target only
 | Is the path that enables a connection to the local server. +
+
 Required: No +
 
 |Polling Frequency
-| Is the frequency in milliseconds to check the read directory. The read directory is specified by the endpoint of the listening component. +
-Required: No +
+| Frequency in milliseconds to check the source path for new files. +
+Type: number in milliseconds +
+Required: Yes +
+
 Default: 1000
 
 |Size check wait time
@@ -52,11 +58,40 @@ Default: 1000
 Disable this feature by setting it to a negative number or omitting a value.
 When enabled, Mule performs two size checks by waiting the amount of time specified in between calls.
 If both checks return the same value, the file is ready to process. +
-Required: No +
+Type: number in milliseconds +
+Required: Yes +
 Default: 1000
 
-|Archival Path (Optional, inbound SFTP endpoint only)
-|The path to the source directory on the Mule server where the file is archived. +
+|===
 
+== SFTP Acknowledgment Endpoint Settings
+
+Use these to set up SFTP endpoint settings to send acknowledgement files (TA1 and/or 997/999) to your trading partners.
+
+Most configuration options are the same as the SFTP Receive endpoint listed previously. The `Source Path` and the `Archival Path` are replaced by the `Acknowledgement Path` detailed as follows.
+
+[%header,cols="3s,7a"]
+|===
+|Name |Description
+
+|Acknowledgement Path
+| A path on the SFTP server where your trading partner is expecting to receive an acknowledgement (such as TA1 and/or 997/999) related to an EDI transaction they may have sent. +
+Required: Yes +
+
+|===
+
+== SFTP Target Endpoint Settings
+
+Use these to set up SFTP endpoint settings to route transformed files to an internal SFTP server address within your organization.
+
+Most configurations options are the same as the SFTP Receive endpoint listed previously. The `Source Path` and the `Archival Path` are replaced by the `Target Path` detailed as follows.
+
+[%header,cols="3s,7a"]
+|===
+|Name |Description
+
+|Target Path
+| A path on your SFTP server where you can route transformed output for a message flow processed via Anypoint Partner Manager. +
+Required: Yes +
 
 |===
