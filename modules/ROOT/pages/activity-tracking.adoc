@@ -34,12 +34,12 @@ Once you have created a message flow, you can begin to track its activity.
 
 . Locate a transmission you are interested in viewing. Use the search box to find the transmission based on:
 +
-** the trading partner name, or
-** the message type, or
-** the filename, or
-** the control number, or
-** the endpoint, or
-** the date the file was received.
+** the trading partner name
+** the message type
+** the filename
+** the control number
+** the endpoint
+** the date the file was received
 
 . Select the transmission and review the summary information. The summary information contains:
 +
@@ -60,7 +60,7 @@ Once you have created a message flow, you can begin to track its activity.
 . Scan the Transmission Flow sections for an exclamation point (!) in any of the rectangle boxes next to the displayed flow stages. This indicates there is an issue with the transmission.
 +
 
-The *Transmission Flow* section shows the steps the file was processed in. It shows if:
+The Transmission Flow section shows the steps the file was processed in. For example, if:
 
 * the file was successfully received and routed
 
@@ -71,6 +71,3 @@ The *Transmission Flow* section shows the steps the file was processed in. It sh
 . Click *View Payload* to view and download the original payload that was received.
 Examining this can help determine where there might be a problem in the message flow.
 
-// Refer to the Troubleshooting section for common message flow errors. Need to get a list of these.
-
-// == See also
