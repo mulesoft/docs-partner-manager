@@ -2,6 +2,8 @@
 
 The HTTP and the secure HTTPS protocol send settings are used with endpoints for sending transmissions to your partner and endpoints that are targets at your organization.
 
+NOTE: HTTPS and HTTPS endpoints are currently only avaialble for use to define `Acknowledgement endpoints` and `Target endpoints`
+
 [%header,cols="3s,7a"]
 |===
 |Name |Description
@@ -11,7 +13,7 @@ Required: Yes +
 Default: HTTPS
 
 |Endpoint Name
-|Name used to easily identify the function of this endpoint. +
+|Name used to easily identify the function of this endpoint. Names are automatically assigned, but can be overwritten by the end user.  +
 Required: Yes +
 
 |Description
@@ -45,12 +47,10 @@ Depending on how you set up your authentication policy, refer to the appropriate
 |Authentication Type |Description
 |None
 |No authentication. +
-Required: No +
 
 |API Key
 |`HTTP Header Name` - The Header parameter associated to the API Key. +
 `API Key` - The value for the access key you set. +
-Required: No +
 
 |Basic
 |Specifes a simple authentication policy that protects the API by requiring a username and password when calling apps make a request. +
@@ -58,13 +58,13 @@ Required: No +
 `Password` is the password you set up with this authentication policy. +
 
 |Client Credentials
-|`Client ID` - The client ID that the OAS provided when registering your application. +
-`Client Secret` - The client secret that the OAS provided when registering your application.
-`Client Header` - Add the key-value pairs, if they don't exist. +
-`Client Secret Header` - Add the secret key-value pairs, if they don't exist. +
+|`Client ID` - The client ID provided when registering your application. +
+`Client Secret` - The client secret provided when registering your application.
+`Client Header` - Add the client Header. +
+`Client Secret Header` - Add the Client Secret. +
 
 |OAuth Token
 |`Token URL` - Enter a valid authorization URL. +
-`Client ID` - The client ID that the OAS provided when registering your application. +
-`Client Secret` - The client secret that the OAS provided when registering your application.
+`Client ID` - The client ID provided when registering your application. +
+`Client Secret` - The client secret provided when registering your application.
 |===
