@@ -2,7 +2,7 @@
 
 The HTTP and the secure HTTPS protocol send settings are used with endpoints for sending transmissions to your partner and endpoints that are targets at your organization.
 
-NOTE: HTTPS and HTTPS endpoints are currently only avaialble for use to define `Acknowledgement endpoints` and `Target endpoints`
+NOTE: HTTPS and HTTPS endpoints are currently only avaialble for use to define `Acknowledgement endpoints` and `Target endpoints`.
 
 [%header,cols="3s,7a"]
 |===
@@ -61,7 +61,7 @@ Depending on how you set up your authentication policy, refer to the appropriate
 |`Client ID` - The client ID provided when registering your application. +
 `Client Secret` - The client secret provided when registering your application.
 `Client Header` - Add the client Header. +
-`Client Secret Header` - Add the Client Secret. +
+`Client Secret Header` - Add the client secret header. +
 
 |OAuth Token
 |`Token URL` - Enter a valid authorization URL. +
