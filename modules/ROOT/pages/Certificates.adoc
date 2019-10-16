@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 
 
-You can configure your SSL certificate settings based on your certificate needs. All certificates in Anypoint Partner Manager are securely stored in Anypoint platform's secrets manager that uses a secure vault technology to store and control access to private keys, passwords, certificates, and other secrets.
+You can configure your SSL certificate settings based on your certificate needs. All certificates in Anypoint Partner Manager are securely stored in Anypoint platform's secrets manager. It uses a secure vault technology to store and control access to private keys, passwords, certificates, and other secrets.
 
 You can:
 
@@ -33,7 +33,6 @@ Information provided for each certificate: +
 
 `Days to expiration` is the countdown to expiration date. +
 
-// One example might be that you may need your partner’s digital certificate - such as an X.509 certificate in the PKCS12 file // format for the AS2 transport protocol.
 =======
 You can configure your SSL certificate settings based on your certificate needs. You can:
 
@@ -61,6 +60,4 @@ Information provided for each certificate: +
 `Expires` is the date from when the certificate can no longer be used. +
 
 `Days to expiration` is the countdown to expiration date. +
-
-// One example might be that you may need your partner’s digital certificate - such as an X.509 certificate in the PKCS12 file // format for the AS2 transport protocol.
 
