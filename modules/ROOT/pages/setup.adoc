@@ -113,7 +113,7 @@ You'll need this information while associating Anypoint Partner Manager to your 
 NOTE: Your payload storage API must be accessible over the internet via HTTPS.
 Ensure that the appropriate authentication mechanisms have been implemented to make this happen.
 
-. Once the Payload Storage API is set up on the Mule runtime, open Anypoint Partner Manager, locate to your organizations profile (Host) page from the left navigation.
+. Open Anypoint Partner Manager and locate your organization's profile (host) page from the left navigation.
 
  . Select the `Payload storage` section and configure the path to your storage.
 
