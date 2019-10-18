@@ -6,7 +6,7 @@ endif::[]
 To receive messages from a trading partner, create a message flow and configure the sections for the source, map, and target.
 Your organization is typically referred to as the host. The enterprise or customer you interact with is referred to as your partner.
 
-The source of the message flow is defined by the partner, a receiving endpoint at the host (often an API) and the message type you are receiving from the partner.
+The source of the message flow is defined by the partner, a receiving endpoint at the host, often an API, and the message type you are receiving from the partner.
 
 The target is the final destination of a message flow and is defined by a host message type and endpoint, often a Host API.
 
@@ -36,14 +36,11 @@ If a separate URL is required for returning MDNs, it is sent in the AS2 transmis
 
 . Select an Existing Partner. You can do this from the *Select a partner* dialog, by searching for a partner by name.
 
-. Once you find a match, choose the partner name and click *Select*.
+. Once you find a match, choose the partner name and click *Select*. Clicking each section of the message flow expands it. A green checkmark next to any a section indicates that it is complete.
 
 * Alternatively from the *Select a partner* dialog, you can create a new partner by clicking *New*.
 This is the same as xref:configure-partner.adoc#create-a-trading-partner[Create a Trading Partner] except that when you are finished, you'll click *Create Partner and Message Flow*.
 You can add more information to the partner later.
-
-+
-NOTE: Clicking each section of the message flow expands it. A green checkmark next to any a section indicates that it is complete.
 +
 . Click *Select* from the *Receiving endpoint* section to configure the source endpoint where you receive the transmission.
 
