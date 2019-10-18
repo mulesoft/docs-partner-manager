@@ -38,7 +38,7 @@ You can add the following information for each trading partner from the *Partner
 
 . Under the *About* section, click *Edit*. Add or update the following information:
 
-* Description - provide a brief description about your partners business, what kind of trading relationship your organization has with the trading partner, and so on.
+* Description - Provide a brief description about your partner's business, what kind of trading relationship your organization has with them, and so on.
 
 * Website - enter a valid URL to your trading partner's website.
 
@@ -48,7 +48,7 @@ You can add the following information for each trading partner from the *Partner
 
 * Add contacts - contact types available are: Business, Technical or Other. You can add up to three contacts associated with a trading partner's profile. You can also delete contacts from here.
 +
-. Click *Save* when you are done adding all the necessary information. You see a confirmation message when the trading partner's profile is successfully updated.
+. Click *Save*. A message confirms that the partner's profile is successfully updated.
 
 . (Optional) You can add more identifiers for your trading partner by clicking *New* within the *Identifiers* section.
 
