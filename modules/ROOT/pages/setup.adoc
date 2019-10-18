@@ -100,7 +100,7 @@ Follow these steps to set up the Payload Storage API:
 
 . Make a note of the API address configurations:
 
-* host, port, path connection
+* Host, port, and path connection
 
 * response timeouts
 
