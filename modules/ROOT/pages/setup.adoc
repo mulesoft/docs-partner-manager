@@ -102,7 +102,7 @@ Follow these steps to set up the Payload Storage API:
 
 * Host, port, and path connection
 
-* response timeouts
+* Response timeouts
 
 * authentication types: None, API Key, Basic, Client Credentials, OAuth Token
 
