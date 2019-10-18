@@ -24,9 +24,9 @@ You can:
 
 * Review errors and acknowledgement payloads.
 
-== Activity Tracking
+==  Track Message Flow Activity
 
-Once you have created a message flow, you can begin to track its activity.
+After you have established a message flow, you can track its activity.
 
 . Open Anypoint Partner Manager.
 
