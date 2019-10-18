@@ -84,7 +84,8 @@ This is the target message type and the Endpoint where you want to route the tra
 +
 * xref:document-types.adoc[Message Types]
 +
-.  Click *Select* to set up a target endpoint. Either search and select and existing endpoint, or create a new endpoint.
+.  Click *Select* to set up a target endpoint. 
+. Either search for and select an existing endpoint, or create a new endpoint by clicking *New*.
 +
 * To create a new endpoint, depending on the protocol, refer to the following:
 
