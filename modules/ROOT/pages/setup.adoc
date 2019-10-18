@@ -93,7 +93,7 @@ wrapper.java.maxmemory=4606
 
 Anypoint Partner Manager enables you to connect your own storage solution (such as a database, Amazon S3, Azure Blob Storage, and so on) to store the transmission content such as incoming and outgoing B2B message payloads.
 To store this content, you must establish an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage.
-The follow the steps explain how to setup the Payload Storage API:
+Follow these steps to set up the Payload Storage API:
 
 . Download the *Partner Manager Content Storage API* and sample implementation template from Anypoint Exchange.
 Install this API on a Mule runtime that can access the storage solution.
