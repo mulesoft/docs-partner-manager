@@ -66,7 +66,9 @@ NOTE: Clicking each section of the message flow expands it. A green checkmark ne
 +
 . (Optional) Click the *View* link to edit the validation settings and then click the hostname.
 For more information, see xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner].
-
++
+NOTE: It may take five minutes or so for your configuration changes to sync with Mule runtime.
++
 . (Optional for X12 partner requirements) Configure the type of functional acknowledgment, and the endpoint to which you send it. Refer to the following for endpoint information:
 +
 * xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
