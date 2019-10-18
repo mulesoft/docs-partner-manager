@@ -98,7 +98,7 @@ Follow these steps to set up the Payload Storage API:
 . Download the *Partner Manager Content Storage API* and sample implementation template from Anypoint Exchange.
 Install this API on a Mule runtime that can access the storage solution.
 
-. Make a note of the API address configurations, for example:
+. Make a note of the API address configurations:
 
 * host, port, path connection
 
