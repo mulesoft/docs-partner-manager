@@ -61,7 +61,7 @@ You can add more information to the partner later.
 +
 * xref:document-types.adoc[Message Types]
 +
-. (Optional) Click the *View* link to edit the validation settings and then click the hostname.
+. To optionally edit the validation settings, click *View* and the hostname.
 For more information, see xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner].
 +
 NOTE: It may take five minutes or so for your configuration changes to sync with Mule runtime.
