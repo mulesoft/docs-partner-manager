@@ -53,7 +53,7 @@ You can add more information to the partner later.
 * xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
 
 +
-. Click *Select* from the *Source message* section to expand the Message Type section.
+. In the *Source message* section, click *Select* to expand the Message Type section.
 
 . Either search and click *Select* to choose a previously used message type, or click *New* to create a new message type.
 
