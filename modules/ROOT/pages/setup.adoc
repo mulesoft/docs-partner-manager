@@ -34,7 +34,7 @@ If you are unsure about the Mule runtime capacity required to handle your B2B tr
 
 == Environment Configuration
 
-You'll need to set up and configure your environment before you begin using Partner Manager.
+Before you begin using Anypoint Partner Manager in Anypoint Platform, you'll need to set up and configure your environment with Partner Manager roles, associated Mule deployment instances, and a payload storage API.
 Refer to the Anypoint platform documentation to learn more about https://docs.mulesoft.com/access-management/environments[Configuring your Anypoint platform environments].
 
 === Allocate Partner Manager Roles
