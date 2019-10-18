@@ -5,7 +5,7 @@ endif::[]
 
 Your organization or your business group is considered the host partner in Anypoint Partner Manager.
 In the Anypoint platform, your hostname is the same name as your Anypoint Platform business group.
-An Anypoint Platform business group is a self-contained resource that was set up to contain Anypoint Platform resources such as APIs and applications.
+An Anypoint Platform business group is a self-contained resource that was set up to hold Anypoint Platform resources such as APIs and applications.
 
 Within the host page you can do the following:
 
@@ -13,20 +13,20 @@ Within the host page you can do the following:
 
 * Add digital certificates associated to your organization.
 
-* Configure details associated to the Payload Storage API (same one you configured as part of the the Setup instructions).
+* Configure details associated to the Payload Storage API (the same one you configured as part of the the Setup instructions).
 The storage API is a mandatory configuration where your B2B message payloads are stored.
 
 == Update the Host's Profile
 
 . Open Anypoint Partner Manager and select the name of your organization from the left navigation pane.
-Configure the your indentifiers, certificates, and the location and configuration of your payload storage.
+You can configure the your indentifiers, certificates, and the location and configuration of your payload storage.
 
 . Click *New* within the *Identifiers* section to begin adding an identifier related to your organization.
 
 . Select an identifier type from the *Type* drop-down menu. This uniquely identifies you.
 For example, depending on your setup, select one of the following: AS2, DUNS number, X12 GS, or X12-ISA.
 
-. Provide a value for your identifier (and qualifier for X12-ISA) and click *Create identifier* to save your changes. See xref:x12-identity-settings.adoc[X12 - ISA Identifier Values] for more info on X12-ISA settings.
+. Provide a value for your identifier (and qualifier for X12-ISA) and click *Create identifier* to save your changes. See xref:x12-identity-settings.adoc[X12 - ISA Identifier Values] for more information on X12-ISA settings.
 
 . Click *New* within the *Certificates* section to begin to upload any needed digital certificates (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
 

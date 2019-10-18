@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 
 To receive messages from a trading partner, create a message flow and configure the sections for the source, map, and target.
-Your organization is typically referred to as the host. The enterprise or customer you interact with is referred to as your  partner.
+Your organization is typically referred to as the host. The enterprise or customer you interact with is referred to as your partner.
 
 The source of the message flow is defined by the partner, a receiving endpoint at the host, often an API, and the message type you are receiving from the partner.
 
@@ -36,13 +36,11 @@ If a separate URL is required for returning MDNs, it is sent in the AS2 transmis
 
 . Select an Existing Partner. You can do this from the *Select a partner* dialog, by searching for a partner by name.
 
-. Once you find a match, choose the partner name and click *Select*.
+. Once you find a match, choose the partner name and click *Select*. Clicking each section of the message flow expands it. A green checkmark next to any a section indicates that it is complete.
 
 * Alternatively from the *Select a partner* dialog, you can create a new partner by clicking *New*.
-This is the same as xref:configure-partner.adoc#create-a-trading-partner[Create a Trading Partner] except that when you are finished, you'll click *Create Partner and Message Flow*. You can add more information to the partner later.
-
-+
-NOTE: Clicking each section of the message flow expands it. A green checkmark next to any a section indicates that it is complete.
+This is the same as xref:configure-partner.adoc#create-a-trading-partner[Create a Trading Partner] except that when you are finished, you'll click *Create Partner and Message Flow*.
+You can add more information to the partner later.
 +
 . Click *Select* from the *Receiving endpoint* section to configure the source endpoint where you receive the transmission.
 
@@ -50,27 +48,29 @@ NOTE: Clicking each section of the message flow expands it. A green checkmark ne
 
 . To create a new endpoint, depending on the protocol, refer to the following:
 +
-* <<AS2 Send Settings>>
+* xref:endpoint-as2-receive.adoc[AS2 Endpoint Settings]
 
-* <<SFTP Send Settings>>
+* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
 
 +
-. Click *Select* from the *Source message* section to expand the Message Type section.
+. In the *Source message* section, click *Select* to expand the Message Type section.
 
 . Either search and click *Select* to choose a previously used message type, or click *New* to create a new message type.
 
 . For a new message type, depending on the message standard, refer to the following:
 +
-* xref:document-types.adoc[Message (Document) Types]
+* xref:document-types.adoc[Message Types]
 +
-. (Optional) Click the *View* link to edit the validation settings and then click the hostname. For more information, see xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner].
-
-. (Optional for X12 partner requirements) Configure the type of functional acknowledgment, and the endpoint to which you send it. Refer to the following information for endpoint information:
-
+. To optionally edit the validation settings, click *View* and the hostname.
+For more information, see xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner].
 +
-* <<HTTP(S) Protocol Send Settings>>
+NOTE: It may take five minutes or so for your configuration changes to sync with Mule runtime.
++
+. For X12 partner requirements, optionally configure the type of functional acknowledgment and the endpoint to which you send it. 
++
+* xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
 
-* <<SFTP Protocol Send Settings>>
+* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
 +
 . Click the *Map* section and then click *Import* to choose a DataWeave map.
 
@@ -82,18 +82,21 @@ This is the target message type and the Endpoint where you want to route the tra
 . Either search and select an existing message type, or create a new message type. To create a new message type, depending on the message standard, follow instructions in one of these sections.
 
 +
-* xref:document-types.adoc[Message (Document) Types]
+* xref:document-types.adoc[Message Types]
 +
-.  Click *Select* to set up a target endpoint. Either search and select and existing endpoint, or create a new endpoint.
+.  Click *Select* to set up a target endpoint. 
+. Either search for and select an existing endpoint, or create a new endpoint by clicking *New*.
 +
 * To create a new endpoint, depending on the protocol, refer to the following:
 
-* <<SFTP Send Settings>>
+* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
 
-* <<HTTP(S) Protocol Send Settings>>
+* xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
 
 +
-When you complete all of the sections (they show a green check mark next to all of them in the flow) you can deploy your message flow and start receiving messages from your partner.
+After you create the source, map, and target sections in the interface, confirm that each shows a green check mark next to it in the flow), and click *Deploy*.
+
+Your message flow configuration is deployed to your Mule runtime engine and you can start receiving messages from your partner. Use the Activity page to track processed messages.
 +
 . Click *Deploy* when you are ready to deploy the configurations to your Mule Runtime.
 
@@ -103,5 +106,3 @@ Once a message flow is successfully deployed, you can track its processed messag
 
 * xref:endpoints.adoc[Endpoints]
 * xref:activity-tracking.adoc[Activity Tracking]
-
-// == Create a Send Message Flow from Your Partner

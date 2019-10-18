@@ -34,18 +34,18 @@ If you are unsure about the Mule runtime capacity required to handle your B2B tr
 
 == Environment Configuration
 
-You'll need to set up and configure your environment before you begin using Partner Manager.
-Please refer to Anypoint platform documentation to learn more about https://docs.mulesoft.com/access-management/environments[Configuring your Anypoint platform environments].
+Before you begin using Anypoint Partner Manager in Anypoint Platform, you'll need to set up and configure your environment with Partner Manager roles, associated Mule deployment instances, and a payload storage API.
+Refer to the Anypoint platform documentation to learn more about https://docs.mulesoft.com/access-management/environments[Configuring your Anypoint platform environments].
 
 === Allocate Partner Manager Roles
 
-There is one Administrator role name Partner Manager Administrator. Depending on which environment you select, the user is assigned that role within the context of that environment.
+There is one Administrator role called the Partner Manager Administrator. Depending on which environment you select, the user is assigned that role within the context of that environment.
 Both roles have unrestricted access, but one role works in a Production environment and the other works in a Sandbox environment.
 
 * Verify that you have access to Partner Manager.
 This means that you must have the required entitlements and have been assigned the `Partner Manager Administrator` role in Access Manager for the environment.
 
-For example, *Partner Manager > Partner Manager Administrator*: Enables role of Administrator for the environment.
+For example, *Partner Manager > Partner Manager Administrator*: Enables this role of Administrator for the environment.
 
 === Associate Mule Runtimes for Deployment
 
@@ -66,7 +66,7 @@ The wrapper.conf file is located at `$MULE_HOME/conf/wrapper.conf`.
 From that location you can locate the `wrapper.conf` user conf directory.
 
 IMPORTANT: These are example values. If you are unsure about the Mule runtime capacity you need to handle your B2B transactions,
-please contact your MuleSoft account representative for assistance
+please contact your MuleSoft account representative for assistance.
 
 [source,xml,linenums]
 ----
@@ -85,51 +85,42 @@ wrapper.java.maxmemory=4606
 +
 . Add the server in Runtime Manager based on the https://docs.mulesoft.com/runtime-manager/servers-create#create-a-server[Create a Server]
 
-. Include the created servers into the server group you created: *B2BServerGroup*. https://docs.mulesoft.com/runtime-manager/server-group-add[Add Servers to a Group]
+. Include the created servers into the server group you created earlier: *B2BServerGroup*. https://docs.mulesoft.com/runtime-manager/server-group-add[Add Servers to a Group]
 
 . Start the Mule runtime and verify it is active within Anypoint Runtime Manager.
 
 === Setup the Payload Storage API
 
 Anypoint Partner Manager enables you to connect your own storage solution (such as a database, Amazon S3, Azure Blob Storage, and so on) to store the transmission content such as incoming and outgoing B2B message payloads.
-You'll need to establish an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage.
-The follow the steps explain how to setup the Payload Storage API:
+To store this content, you must establish an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage.
+Follow these steps to set up the Payload Storage API:
 
-. Download the Partner Manager Content Storage API and sample implementation template from Anypoint Exchange.
-Install this API on a Mule runtime that can access the storage solution.**[MISSING INFO - Confirm final name by GA. Add link if it's live before GA.]**
+. Download the *Partner Manager Content Storage API* and sample implementation template from Anypoint Exchange.
+. Install this API on a Mule runtime engine that can access the storage solution.
 
-. Make a note of the API address configurations (make a note of the following):
+. Make a note of the API address configurations:
 
-** host, port, path connection
+* Host, port, and path connection
 
-** response timeouts
+* Response timeouts
 
-** authentication details: None, API Key, Basic, Client Credentials, OAuth Token
+* Authentication types: None, API Key, Basic, Client Credentials, and OAuth Token
 
-** Certificate (.PEM format) and connection type
+* Certificate (`.PEM` format) and connection type
 
-[xref] to HTTPS Send Configuration for complete details?
-
-You'll need these details while associating Anypoint Partner Manager to your Payload Storage API. +
+You'll need this information while associating Anypoint Partner Manager to your Payload Storage API. +
 
 NOTE: Your payload storage API must be accessible over the internet via HTTPS.
 Ensure that the appropriate authentication mechanisms have been implemented to make this happen.
 
-. Once the Payload Storage API is set up on the Mule runtime, open Anypoint Partner Manager, navigate to your organizations profile (Host) page from the left navigation.
+. Open Anypoint Partner Manager and locate your organization's profile (host) page from the left navigation.
 
  . Select the `Payload storage` section and configure the path to your storage.
 
 You are ready to begin to set up message flows between you and your trading partners.
 
 
-// == Troubleshooting References
-
-// * https://help.mulesoft.com/s/article/Troubleshooting-wrapper-conf-changes-that-do-not-get-applied[Troubleshooting wrapper.conf changes]
-
 == See Also
 
 * xref:B2B-overview.adoc[Use Anypoint Partner Manager]
 * xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner]
-
-// * xref:create-receive-message-flow.adoc[Create Receive Message Flows]
-// * xref:activity-tracking.adoc[Activity Tracking]
