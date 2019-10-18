@@ -104,7 +104,7 @@ Follow these steps to set up the Payload Storage API:
 
 * Response timeouts
 
-* authentication types: None, API Key, Basic, Client Credentials, OAuth Token
+* Authentication types: None, API Key, Basic, Client Credentials, and OAuth Token
 
 * Certificate (`.PEM` format) and connection type
 
