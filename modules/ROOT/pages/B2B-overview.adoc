@@ -36,7 +36,7 @@ Your partners provide you with their own endpoint configurations to which your o
 
 * Electronic Data Interchange (EDI) message type preferences for your organization.
 
-* DataWeave transformation maps your organization uses for B2B transformations.
+* DataWeave transformation maps your organization uses for B2B transformations. Create these maps using Anypoint Studio before using Partner Manager.
 
 Information you need about each partner:
 
