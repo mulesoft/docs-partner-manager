@@ -99,7 +99,7 @@ Follow these steps to set up the Payload Storage API:
 +
 https://anypoint.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-api[Partner Manager Content Storage API]
 +
- https://anypoint.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-service-s3[Partner Manager Content Storage API - S3 Template] (sample implementation template)
+https://anypoint.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-service-s3[Partner Manager Content Storage API - S3 Template] (sample implementation template)
 +
 . Install the API on a Mule runtime engine that can access the storage solution.
 
