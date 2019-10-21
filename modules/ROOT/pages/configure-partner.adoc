@@ -26,7 +26,7 @@ From the Partner detail page you can:
 . Add a name that easily identifies your partner.
 
 . Select an identifier from the *Type* drop-down menu. This uniquely identifies your partner.
-For example, depending on your setup, select one of the following: AS2 Identity, X12-ISA, X12 GS, or the DUNS number.
+For example, depending on your setup, select one of the following: AS2 ID, X12-ISA, X12 GS, or the DUNS number.
 
 . Provide a value for your identifier (and qualifier for X12-ISA) and click *Create partner* to create your trading partner.
 See xref:x12-identity-settings.adoc[X12 Identifiers] for more info on X12 Identity settings.
@@ -53,10 +53,10 @@ You can add the following information for each trading partner from the *Partner
 . (Optional) You can add more identifiers for your trading partner by clicking *New* within the *Identifiers* section.
 
 * Select an identifier type from the *Type* drop-down menu. This uniquely identifies your partner.
-For example, depending on your setup, select one of the following: AS2, X12-ISA, X12 GS, or the DUNS number.
+For example, depending on your setup, select one of the following: AS2 ID, X12-ISA, X12 GS, or the DUNS number.
 
 * Provide a value for your identifier (and qualifier for X12-ISA) and click *Create identifier* to save your changes.
-See xref:x12-identity-settings.adoc[X12 Identifiers] for more info on X12 settings.
+See xref:x12-identity-settings.adoc[Identifiers] for more info on X12 settings.
 
 . Click *New* within the *Certificates* section to upload any needed digital certificates. This is your partner's digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
 

@@ -82,7 +82,7 @@ wrapper.java.initmemory=4606
 wrapper.java.maxmemory=4606
 
 ----
-+
+
 . Add the server in Runtime Manager based on the https://docs.mulesoft.com/runtime-manager/servers-create#create-a-server[Create a Server]
 
 . Include the created servers into the server group you created earlier: *B2BServerGroup*. https://docs.mulesoft.com/runtime-manager/server-group-add[Add Servers to a Group]
@@ -95,7 +95,9 @@ Anypoint Partner Manager enables you to connect your own storage solution (such 
 To store this content, you must establish an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage.
 Follow these steps to set up the Payload Storage API:
 
-. Download the *Partner Manager Content Storage API* and sample implementation template from Anypoint Exchange.
+. Download these from Anypoint Exchange: https://anypoint.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-api[Partner Manager Content Storage API]
+and sample implementation template https://anypoint.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-service-s3[Partner Manager Content Storage API - S3 Template]
+
 . Install this API on a Mule runtime engine that can access the storage solution.
 
 . Make a note of the API address configurations:

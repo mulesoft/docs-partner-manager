@@ -115,7 +115,3 @@ Required: Yes +
 Required: Yes +
 
 |===
-
-See xref:Certificates.adoc[Certificates] for more info on configuring certificates in Partner Manager.
-
-

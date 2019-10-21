@@ -37,5 +37,5 @@ For example, depending on your setup, select one of the following: AS2, DUNS num
 
 == See Also
 
-* xref:x12-identity-settings.adoc[X12 - ISA Identifier Values]
+* xref:x12-identity-settings.adoc[Identifiers]
 * xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner]
