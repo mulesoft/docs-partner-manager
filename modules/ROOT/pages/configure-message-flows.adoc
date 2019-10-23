@@ -92,14 +92,11 @@ This is the target message type and the Endpoint where you want to route the tra
 * xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
 
 * xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
-
 +
-After you create the source, map, and target sections in the interface, confirm that each shows a green check mark next to it in the flow), and click *Deploy*.
-
+. After you create the source, map, and target sections in the interface, confirm that each shows a green check mark next to it in the flow), and click *Deploy* to deploy the configurations to your Mule Runtime.
++
 Your message flow configuration is deployed to your Mule runtime engine and you can start receiving messages from your partner. Use the Activity page to track processed messages.
 +
-. Click *Deploy* when you are ready to deploy the configurations to your Mule Runtime.
-
 Once a message flow is successfully deployed, you can track its processed messages from the Activity page.
 
 == See Also
