@@ -3,7 +3,8 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Identifiers are used to identify the appropriate sender and receiver partners involved in a B2B transaction. For X12 messages, the identifiers in the ISA and GS headers provide valuable information that enables identification of the appropriate flow to be used to process the transaction.
+Identifiers are used to identify the appropriate sender and receiver partners involved in a B2B transaction.
+For X12 messages, the identifiers in the ISA and GS headers provide valuable information that enables identification of the appropriate flow to be used to process the transaction.
 
 == X12 - ISA Identifier Values
 
@@ -14,7 +15,7 @@ Refer to this information specifically for using ISA with X12.
 |Setting |Description
 
 |Qualifier
-|The Qualifier types available with anypoint Partner Manager are listed here.
+|The Qualifier types available with Anypoint Partner Manager are listed here.
 
 Required?: Yes +
 

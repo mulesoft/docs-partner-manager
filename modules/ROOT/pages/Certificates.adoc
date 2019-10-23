@@ -17,21 +17,6 @@ Use the option: Do not require an additional certificate because this endpoint a
 * Upload your own, self-signed certificate. +
 Upload a new certificate (`.PEM` format), or view all the certificates available for use with this endpoint setup. +
 
-Information provided for each certificate: +
-
-`Authority` is the certificate provider. +
-
-`Serial Number` is from the certificate. +
-
-`Status` Active is shown with a green icon or Inactive is shown with a red icon. +
-
-`Endpoints` are the number of endpoints where it is used. +
-
-`Start Date` is the date from when the certificate can be used. +
-
-`Expires` is the date from when the certificate can no longer be used. +
-
-`Days to expiration` is the countdown to expiration date. +
 
 =======
 You can configure your SSL certificate settings based on your certificate needs. You can:
@@ -60,4 +45,3 @@ Information provided for each certificate: +
 `Expires` is the date from when the certificate can no longer be used. +
 
 `Days to expiration` is the countdown to expiration date. +
-

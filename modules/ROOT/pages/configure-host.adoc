@@ -26,7 +26,7 @@ You can configure the your indentifiers, certificates, and the location and conf
 . Select an identifier type from the *Type* drop-down menu. This uniquely identifies you.
 For example, depending on your setup, select one of the following: AS2, DUNS number, X12 GS, or X12-ISA.
 
-. Provide a value for your identifier (and qualifier for X12-ISA) and click *Create identifier* to save your changes. See xref:x12-identity-settings.adoc[X12 - ISA Identifier Values] for more information on X12-ISA settings.
+. Provide a value for your identifier (and qualifier for X12-ISA) and click *Create identifier* to save your changes. See xref:x12-identity-settings.adoc[Identifiers] for more information on X12-ISA settings.
 
 . Click *New* within the *Certificates* section to begin to upload any needed digital certificates (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
 
@@ -37,5 +37,5 @@ For example, depending on your setup, select one of the following: AS2, DUNS num
 
 == See Also
 
-* xref:x12-identity-settings.adoc[X12 - ISA Identifier Values]
+* xref:x12-identity-settings.adoc[Identifiers]
 * xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner]
