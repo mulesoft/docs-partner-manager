@@ -108,11 +108,12 @@ https://anypoint.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-
 * Authentication types: None, API Key, Basic, Client Credentials, and OAuth Token
 
 * Certificate (`.PEM` format) and connection type
-
-You'll need this information while associating Anypoint Partner Manager to your Payload Storage API. +
-
++
+You'll need this information while associating Anypoint Partner Manager to your Payload Storage API. 
++
 NOTE: Your payload storage API must be accessible over the internet via HTTPS.
 Ensure that the appropriate authentication mechanisms have been implemented to make this happen.
++
 
 . Open Anypoint Partner Manager and locate your organization's profile (host) page from the left navigation.
 
