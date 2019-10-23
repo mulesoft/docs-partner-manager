@@ -22,9 +22,6 @@ Required: Yes +
 
 |Port
 | The port number of the SFTP server to connect upon.  +
-=======
-| Is the Fully Qualified Domain Name (FQDN) or IP address of the server on your host machine that connects to the external SFTP server. +
-Required: Yes +
 
 |Username
 | Is the username for the FTP Server.   +
@@ -38,19 +35,10 @@ Required: Yes, if the server is authenticated. +
 | A path on the SFTP server where your trading partner is expected to drop the inbound files. +
 Required: Yes +
 
-|Archival Path
-| Specify an optional path on the SFTP server where a copy of the file that was picked up from the `source path` can be stored. +
-
-|Target Path - target only
-| Is the path that enables a connection to the local server. +
-
-Required: No +
-
 |Polling Frequency
 | Frequency in milliseconds to check the source path for new files. +
 Type: number in milliseconds +
 Required: Yes +
-
 Default: 1000
 
 |Size check wait time
@@ -62,13 +50,18 @@ Type: number in milliseconds +
 Required: Yes +
 Default: 1000
 
+|Archival Path
+| Specify an optional path on the SFTP server where a copy of the file that was picked up from the `source path` can be stored. +
+
 |===
 
 == SFTP Acknowledgment Endpoint Settings
 
 Use these to set up SFTP endpoint settings to send acknowledgement files (TA1 and/or 997/999) to your trading partners.
 
-Most configuration options are the same as the SFTP Receive endpoint listed previously. The `Source Path` and the `Archival Path` are replaced by the `Acknowledgement Path` detailed as follows.
+Most configuration options are the same as the SFTP Receive endpoint listed previously.
+
+The `Source Path` and the `Archival Path` are replaced by the `Acknowledgement Path` detailed as follows.
 
 [%header,cols="3s,7a"]
 |===
@@ -84,7 +77,8 @@ Required: Yes +
 
 Use these to set up SFTP endpoint settings to route transformed files to an internal SFTP server address within your organization.
 
-Most configurations options are the same as the SFTP Receive endpoint listed previously. The `Source Path` and the `Archival Path` are replaced by the `Target Path` detailed as follows.
+Most configurations options are the same as the SFTP Receive endpoint listed previously.
+The `Source Path` and the `Archival Path` are replaced by the `Target Path` detailed as follows.
 
 [%header,cols="3s,7a"]
 |===
