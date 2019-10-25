@@ -93,9 +93,9 @@ Follow these steps to set up the Payload Storage API:
 
 . Download these APIs from Anypoint Exchange:
 +
-https://anypoint.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-api[Partner Manager Content Storage API]
+https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-api[Partner Manager Content Storage API]
 +
-https://anypoint.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-service-s3[Partner Manager Content Storage API - S3 Template] (sample implementation template)
+https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-service-s3[Partner Manager Content Storage API - S3 Template] (sample implementation template)
 +
 . Install the API on a Mule runtime engine that can access the storage solution.
 
@@ -109,7 +109,7 @@ https://anypoint.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-
 
 * Certificate (`.PEM` format) and connection type
 +
-You'll need this information while associating Anypoint Partner Manager to your Payload Storage API. 
+You'll need this information while associating Anypoint Partner Manager to your Payload Storage API.
 +
 NOTE: Your payload storage API must be accessible over the internet via HTTPS.
 Ensure that the appropriate authentication mechanisms have been implemented to make this happen.
