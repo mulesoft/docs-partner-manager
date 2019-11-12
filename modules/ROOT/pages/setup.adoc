@@ -119,6 +119,8 @@ Ensure that the appropriate authentication mechanisms have been implemented to m
 
 . Select the `Payload storage` section and configure the path to your storage.
 
+NOTE: If you wish to view the raw payloads of the files you receive or send, please select the option `Allow users to download payloads` while configuring your payload storage API.
+
 You are ready to begin to set up message flows between you and your trading partners.
 
 
