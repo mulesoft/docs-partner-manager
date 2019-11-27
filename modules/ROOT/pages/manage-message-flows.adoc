@@ -1,36 +1,42 @@
-= Create Message Flows
+= Manage Message Flows
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-To receive messages from a trading partner, create a message flow and configure the sections for the source, map, and target.
-Your organization is typically referred to as the host. The enterprise or customer you interact with is referred to as your partner.
+After your message flow is running and you are using it with your partners, you should not have to change it much.  There are certain cases where you might need to make changes. For example:
+You are no longer trading with a particular partner and need to delete the message flow you created for them.
+You completed the testing for a deployed message flow in a pre-production environment, and now want to reclaim those previously allocated Mule runtime resources.
 
-The source of the message flow is defined by the partner, a receiving endpoint at the host, often an API, and the message type you are receiving from the partner.
+After a message flow is deployed, you can test it, undeploy it, and delete it.
 
-The target is the final destination of a message flow and is defined by a host message type and endpoint, often a Host API.
+== Test Message Flows
 
-You'll need the following for the Source:
+You can test your message flow after you deploy it to ensure that you are receiving messages and any acknowledgments from your partners.
+You should ask your partner to confirm receipt of the transmission once you deploy it to your production environment.
+You can also test the flow by deploying it in a sandbox environment, then undeploying it, and then deploying it to a production environment.
 
-* The partner's name and associated identifiers (such as X12-ISA, X12 GS, and so on).
+Test your flow in your production environment:
 
-* The endpoint where you receive transmissions.
+1. Drop an EDI file on the receiving endpoint
+2. Go to Activity Tracking to see if it shows up
+3. Check the transmission details for the flow. Specifically:
+-Check for any errors, and review any that you see for...
+-Review the received payload by selecting and opening it.
+-Review any TA1 and functional acknowledgments.
 
-* The message type to process for this message flow (such as X12, 4010, 850, and so on).
+4. Ensure that the messages are routed to the correct message flow from the target system. For example:
+- It was delivered to the target endpoint
+- Ensure the message was transformed correctly.
 
-* The endpoint where your partner may want to receive an acknowledgment related to the messages they send.
+== Edit Message Flows
 
-* The DataWeave map that transforms the received message contents into a format you can use.
-
-You'll need the following for the Target:
-
-* The message type your system understands. This is also the format into which DataWeave map transforms received messages.
-
-* The endpoint in your organization where you route the transformed message.
-
-If a separate URL is required for returning MDNs, it is sent in the AS2 transmission and Anypoint Partner Manager reads it from there.
-
-== Configure a message flow
+You can make changes to a message flow such as adding receiving endpoints and certificates; modifying your DataWeave maps; plus changing the associated message types and target endpoints.
+Overview of steps include:
+Change receiving endpoints & certificates.
+Modify DataWeave maps.
+Change associated message types.
+Change associated target endpoints.
+You handle this by opening an existing message flow and make your changes directly in the sections you intend to modify. When you are done with your changes, deploy the message flow to ensure that the changes are propagated to the Mule applications on your Mule runtime.
 
 . From within your Anypoint Partner Manager environment (either Sandbox or Production), click *New message flows* in the upper right.
 
@@ -98,6 +104,65 @@ This is the target message type and the Endpoint where you want to route the tra
 Your message flow configuration is deployed to your Mule runtime engine and you can start receiving messages from your partner. Use the Activity page to track processed messages.
 +
 Once a message flow is successfully deployed, you can track its processed messages from the Activity page.
+
+== Undeploy Message Flows
+You might want to undeploy a message flow so that you can delete it. Other reasons for undeploying a message flow are:
+To stop processing messages related to the deployed message flow configuration.
+To recover resources being consumed by a message flow that you no longer need.
+
+When you undeploy a message flow, it stops any future messages from being processed by that flow. During the undeployment of a message flow (how long do we want to say this period of time could be - five minutes?), Anypoint Partner Manager checks to see if any of the applications on your Mule runtime are orphaned as a result of the undeployment. These applications are cleaned up to release any resources they may be consuming.
+
+Overview of steps include:
+Make sure the server group in Anypoint Runtime Manager called: B2BServerGroup is running. If you are unsure, you should contact your B2B System Administrator or check the status of the server in Runtime manager: https://docs.mulesoft.com/runtime-manager/servers-settings.
+
+Selecting the Message flow
+Selecting Undeploy - Explain which buttons are grey-out with an undeploy. For example, you cannot delete until you undeploy.
+(How long do users need to wait after clicking the undeploy button for the undeploy to take effect - five minutes?)
+
+== Delete Message Flows
+
+You might want to delete a message flow when it no longer serves its purpose. If you delete a message flow before it has been deployed, it does not affect the Mule runtime apps. If you have a message flow that was deployed and you are attempting to delete it, you must undeploy it first.
+
+Any previous transmissions that were created as a result of a message being processed via the now-deleted message flow have the following behavior:
+
+They continue to stay in the transmission records within the Activity page, but the records indicate that the corresponding message flow used to process this transmission is now deleted. Furthermore, these activities are converted into read-only mode. This means that no links to the message flow work. Only the links that were set up to the stored payloads (such as the original B2B message, any TA1 acknowledgments, the transformed payload, on so on) continue to work.
+Make sure the server group in Anypoint Runtime Manager called: B2BServerGroup is running. You cannot delete a message flow if the server If you are unsure, you should contact your B2B System Administrator or check the status of the server in Runtime manager: https://docs.mulesoft.com/runtime-manager/servers-settings.
+Overview of steps:
+Select the message flow to be deleted.
+Click the undeploy button. (How long do users need to wait for this to propagate thru the system?)
+Click the delete button. Remind users that they cannot delete until they click undeploy.
+
+== Delete Identifiers
+
+(Need to state upfront that AS2 identifiers currently cannot be deleted.)
+You might want to delete an identifier when it is no longer needed. Consider that deleting an existing host or partner identifier impacts the identification and routing of B2B messages to the associated partner. Ask yourself the following when deleting an identifier: Why do you want to delete it? Do you need to replace it with another identifier? Remember that there must always be at least one identifier per message flow before you can delete it.
+
+After successfully deleting an identifier, you can create a new identifier with the same value as the one you deleted. (Why would you want to do this?)
+
+Overview of steps:
+Once you’ve identified why you need to delete an identifier, then note what to replace it with.
+If you need to replace the identifier, record the values and qualifier type needed.
+Select the identifier to be deleted and click the trash can icon.
+If you need a replacement, add it now by clicking the Add button.
+
+== Delete Partners
+If you are no longer trading with a partner, you can remove the partner by deleting it. Consider that deleting a partner deletes all assets associated with that partner as well as configuration records for it. For example:
+Undeployment of all deployed messages
+Deletion of all message flows, identifiers, endpoints, and certificates associated with that partner
+Removes all listed assets
+Removes the partner from the partner list
+
+Consider that when a partner is deleted, all activities related to the partner are converted into a read-only mode, that is, no links to the message flows work. Only the links to the stored payloads (such as the original B2B message, any TA1 acknowledgments, transformed payloads, and so on) continue to work. The partner’s name stays in the transmission records but is marked as deleted.
+
+After successfully deleting a partner, you can create a new partner with the same name as the deleted partner. (Again, why would the user want to do this?)
+
+Make sure the server group in Anypoint Runtime Manager called: B2BServerGroup is running. You cannot delete a message flow if the server If you are unsure, you should contact your B2B System Administrator or check the status of the server in Runtime manager: https://docs.mulesoft.com/runtime-manager/servers-settings.
+
+Overview of steps:
+Select the partner to be deleted.
+Click the trash can icon next to it.
+If you need to create a new partner, add it now. Refer to: Configure Partner
+
 
 == See Also
 
