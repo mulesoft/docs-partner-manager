@@ -74,3 +74,5 @@ View information about an uploaded certificate by clicking it's link. See xref:C
 * Character sets
 
 Refer to the options for each at xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner]
+
+If you want to delete an identifier or a partner, refer to xref:manage-message-flows.adoc[Manage Message Flows].

@@ -101,5 +101,5 @@ Once a message flow is successfully deployed, you can track its processed messag
 
 == See Also
 
-* xref:endpoints.adoc[Endpoints]
+* xref:manage-message-flows.adoc[Manage Message Flows]
 * xref:activity-tracking.adoc[Activity Tracking]
