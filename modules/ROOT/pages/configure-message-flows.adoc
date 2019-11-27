@@ -95,7 +95,7 @@ This is the target message type and the Endpoint where you want to route the tra
 
 . After you create the source, map, and target sections in the interface, confirm that each shows a green check mark next to it in the flow), and click *Deploy* to deploy the configurations to your Mule Runtime.
 
-NOTE: The deployment process might take several minutes. Please do not log out of the Anypoint platform while the deployment is in-progress as it will cause the deployment to terminate leading to a `failed` deployment. You may continue to work within the Anypoint platform during this time.
+NOTE: The deployment process can take several minutes. Do not log out of the Anypoint platform while the deployment is in progress as it causes the deployment to terminate and fail. You can, however, continue to work within the Anypoint platform during this time.
 
 +
 Your message flow configuration is deployed to your Mule runtime engine and you can start receiving messages from your partner. Use the Activity page to track processed messages.
