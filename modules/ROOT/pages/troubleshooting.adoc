@@ -296,7 +296,7 @@ Your runtime B2B Mule apps receive the latest configuration from the Anypoint Pa
 Depending on when you made the configuration changes to your message flows in Partner Manager and deployed them, it can take a maximum interval of 5 minutes for your most recent changes to be effective on the runtime B2B Mule apps.
 
 
-== See Also
+// == See Also
 // Add links to any related errors, if required. You might need to add links about the concept of the component where the error occurs, or perhaps the absence of the requirement which caused the error.
 // * xref:file-name.adoc[link-text]
 //add any pertinent links
