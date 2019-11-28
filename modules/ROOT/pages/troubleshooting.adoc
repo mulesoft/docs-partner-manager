@@ -52,7 +52,7 @@ If you do not see a server within the server group, it means that you do not hav
 
 === Verify Payload Storage Setup
 
- Verify that your `Payload Storage` is active.
+Verify that your `Payload Storage` is active.
 
 . From within your Anypoint Partner Manager environment (either Sandbox or Production) select your <Hostname> profile.
 . Scroll down to the `Payload storage` section and click *Edit*.
@@ -135,38 +135,168 @@ Verify that your B2B integration apps are active.
 Consider the following when performing a delete:
 
 ** If you delete the `DocumentProcessingService` or the `APIReplicationService`, deploying any flow results in the redeployment of those apps.
+
 ** If you delete any of the inbound and/or outbound and/or ack apps, you have to redeploy the specific flow corresponding to the deleted apps.
 
 If all these scenarios have been verified successfully, and you still cannot deploy message flows, please raise a case on MuleSoft’s customer portal.
 
 
+= In the Anypoint Partner Manager Activity section, I receive a transaction indicating `Unrecognized partner`
 
+Occasionally, in the Activity section of Anypoint Partner Manager, you may see tracking information such as this:
+
+(Screenshot not in this draft)
+
+== Causes
+
+This situation occurs with one of the following:
+
+* Partner Manager cannot identify the sender of the transmission. This is because the sender of the transmission is not configured in Partner Manager, or because the identifier associated with the sender is not configured.
+
+* Partner Manager cannot identify the receiver of the transmission. This is because the identifier associated with the receiver is not configured.
+
+* Partner Manager cannot identify both the sender and the receiver of the transmission.
+
+== Solutions
+
+=== Verify Partner Identifiers
+
+Verify that your partner has the appropriate identifiers configured as needed to support the transmission.
+
+. From within your Anypoint Partner Manager environment (either Sandbox or Production) select *Partners* <name of your specific partner related to this transmission>.
+
+. From the Partners profile, scroll to the Identifiers section and verify that the identifier you are looking for is present in the identifiers listed in the table.
+
+. If the desired partner identifier is not present, click *New* and select an identifier type from the Type drop-down to uniquely identify your partner.
+
+. Provide a value for your identifier (and qualifier for X12-ISA) and click *Create identifier* to save your changes. See xref:x12-identity-settings.adoc[Identifiers] for more info on X12-ISA settings.
+
+=== Verify Organization (Host) Identifiers
+
+Verify that your organization (the host) has the appropriate identifiers configured as needed to support the transmission.
+
+. From within your Anypoint Partner Manager environment (either Sandbox or Production) select *Partners* <name of your organizations / sub-organizations related to this transmission>.
+
+. Within the Host’s profile page, scroll to the Identifiers section and verify that the identifier you are looking for is present in the identifiers listed in the table.
+
+. If the desired host identifier is not present, click *New* and select an identifier type from the Type drop-down to uniquely identify your partner.
+
+. Provide a value for your identifier (and qualifier for X12-ISA) and click *Create identifier* to save your changes. See xref:x12-identity-settings.adoc[Identifiers] for more info on X12-ISA settings.
+
+= In the Anypoint Partner Manager Activity section, I receive a transaction indicating `Unrecognized standard`
+
+Occasionally, in the Activity section of Anypoint Partner Manager, you may see tracking information such as this:
+
+(Screenshot not in this draft)
 
 == Cause
 
+This situation occurs when Partner Manager receives a transmission in unsupported data format. For example, receiving a CSV, XML and so forth on receiving endpoints.
+
 == Solution
+
+If you encounter such a scenario, then verify with your partner that they are sending valid X12 format files.
+
+
+= In the Anypoint Partner Manager Activity section, I receive a transaction indicating `Deployed Message flow configuration not found for Message: <name>`
+
+Occasionally, in the Activity section of Anypoint Partner Manager, you may see tracking information such as this:
+
+(Screenshot not in this draft)
+
+== Causes
+
+This situation occurs in one of these scenarios:
+
+** A transmission is received that contains a message type that is not configured for any partner or flow.
+
+** A transmission is received that contains a message type that is not supported by Anypoint Partner Manager.
+
+== Solution
+
+If you encounter such a scenario, then verify that the message type received via the transmission.
+
+. For the activity that you are viewing, inspect the error message to glean the message type received. It should contain a message identifier string like this: “v004010-810-1548-000000001”. Parts of this message are:
+
+** v004010 - X12 format version received in transmission
+
+** 810 - Message type received
+
+** 1548 - Group Segment Identifier (GS06)
+
+** 000000001 - Message Segment Identifier (ST02)
+
++
+
+. From within your Anypoint Partner Manager environment (either Sandbox or Production) select *Message Flows*.
+
+. If you know the specific flow you are searching for, click the card related to that flow to expand the associated configurations.
+
+. If you do not know which flow you are looking for, search by partner name or message type (such as 850) to identify possible related message flows.
+
+. Once you find the related message flow, click the message flow card to open up the flow.
+
+. In the Message flow configurator, verify that the appropriate message type (such as X12, version - 4010, message type - 850) is configured and that this matches the type of file that was listed in the Activity which indicated that an unrecognized standard was being used.
+
+. If there is a discrepancy between the type of message configured in the message flow compared to the message received in the activity, then either contact your partner and inform them to send the appropriate file, or correct your message flow to ensure the message type configured matches the expected file you will receive from your partner.
+
+Partner Manager only supports receiving X12 files. If your partner sends you any other type of file such as (JSON, XML, CSV, and so on), contact your partner and ask them to send the appropriate file type to you.
+
+= In the Anypoint Partner Manager Activity section, I see activities with an error message indicating `Failure to store message payload`
+
+Occasionally, in the Activity section of Anypoint Partner Manager, you may see tracking information such as this:
+
+(Screenshot not in this draft)
 
 == Cause
 
+This situation occurs when one of the following occurs:
+
+** The payload storage API on the host’s profile is not appropriately configured.
+
+** The payload storage API is not functioning.
+
+** The storage solution associated to the payload storage API is not functioning.
+
 == Solution
+
+If you encounter such a scenario, then verify the Payload Storage API.
+
+. Verify the appropriate configuration for the payload storage API by a simple test request (use a browser extension such as Postman on Google Chrome).
+
+. To view if the payload storage API is active/functioning, visit Anypoint Runtime Manager to verify if the related payload storage app is active and try restarting the app.
+
+. If the payload storage app is functioning, verify the storage source such as the S3 bucket, or Azure Blob store, or database, and so on that you may be using as the storage solution and ensure that this solution is up and functioning.
+
+If all these scenarios have been verified successfully, and you still cannot deploy message flows, please raise a case on MuleSoft’s customer portal.
+
+= I do not receive TA1 acknowledgments for my transmissions.
+
+Anypoint Partner Manager sends TA1 ack’s back for any received transmission, if configured to do so.
 
 == Cause
 
-== Solution
+In case you are not receiving TA1 configurations, please review the following configuration.
 
-== Cause
+. From within your Anypoint Partner Manager environment (either Sandbox or Production) select *Partners* and Receive from <Partner_Name>.
 
-== Solution
+. Scroll to Validation and Acknowledgment settings and click *X12*.
 
-== Cause
+. Within the Acknowledgements section ensure that the option for ‘Send TA1 for each transmission from <partner name>’ is selected.
 
-== Solution
+. Configure the Acknowledgement endpoint as in xref:endpoints.adoc[Endpoints]
 
-== Cause
+. Click *Save* when done.
 
-== Solution
+This enables TA1 acknowledgments for all transmissions received by the specific partner.
+
+= I recently updated and deployed my message flow, however, the configurations haven’t taken effect on the runtime B2B apps. Did I do this incorrectly?
+
+Your runtime B2B Mule apps receive the latest configuration from the Anypoint Partner Manager control plane at a 5 minute interval.
+Depending on when you made the configuration changes to your message flows in Partner Manager and deployed them, it can take a maximum interval of 5 minutes for your most recent changes to be effective on the runtime B2B Mule apps.
+
 
 == See Also
 // Add links to any related errors, if required. You might need to add links about the concept of the component where the error occurs, or perhaps the absence of the requirement which caused the error.
-* xref:file-name.adoc[link-text]
+// * xref:file-name.adoc[link-text]
 //add any pertinent links
