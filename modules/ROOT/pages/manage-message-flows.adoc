@@ -99,10 +99,12 @@ When you are done with your changes, deploy the message flow to ensure that the 
 
 . After you update the source, map, and target sections in the interface, confirm that each shows a green check mark next to it in the flow), and click *Deploy* to deploy the configurations to your Mule Runtime.
 
++
 NOTE: It may take five minutes or so for your configuration changes to sync with Mule runtime.
 +
-Use the Activity page to track processed messages. To test your message flow, refer to Test Message Flows.
-+
+
+. Use the Activity page to track processed messages. To test your message flow, refer to Test Message Flows.
+
 Once a message flow is successfully deployed, you can track its processed messages from the Activity page.
 
 == Undeploy Message Flows
@@ -121,8 +123,8 @@ These applications are cleaned up to release any resources they may be consuming
 
 . Make sure the server group in Anypoint Runtime Manager called: B2BServerGroup is running.
 
++
 NOTE: If you are unsure, you should contact your B2B System Administrator or check the status of the server in Runtime manager: https://docs.mulesoft.com/runtime-manager/servers-settings[Server Settings].
-
 +
 
 . From within your Anypoint Partner Manager environment (either Sandbox or Production), click *Message Flows* in the upper left and select a message flow.
@@ -138,10 +140,10 @@ If you delete a message flow before it has been deployed, it does not affect the
 If you have a message flow that was deployed and you are attempting to delete it, you must undeploy it first.
 
 Any previous transmissions that were created as a result of a message being processed via the now-deleted message flow has the following behavior:
-
++
 * They continue to stay in the transmission records within the Activity page, but the records indicate that the corresponding message flow used to process this transmission is now deleted.
 Furthermore, these activities are converted into read-only mode. This means that no links to the message flow work. Only the links that were set up to the stored payloads (such as the original B2B message, any TA1 acknowledgments, the transformed payload, on so on) continue to work.
-
++
 . Make sure the server group in Anypoint Runtime Manager called: B2BServerGroup is running.
 
 NOTE: If you are unsure, you should contact your B2B System Administrator or check the status of the server in Runtime manager: https://docs.mulesoft.com/runtime-manager/servers-settings[Server Settings].
@@ -154,10 +156,13 @@ NOTE: If you are unsure, you should contact your B2B System Administrator or che
 
 == Delete Identifiers
 
-(Need to state upfront that AS2 identifiers currently cannot be deleted.)
-You might want to delete an identifier when it is no longer needed. Consider that deleting an existing host or partner identifier impacts the identification and routing of B2B messages to the associated partner. Ask yourself the following when deleting an identifier: Why do you want to delete it? Do you need to replace it with another identifier? Remember that there must always be at least one identifier per message flow before you can delete it.
+
+You might want to delete an identifier when it is no longer needed. Consider that deleting an existing host or partner identifier impacts the identification and routing of B2B messages to the associated partner.
+Ask yourself the following when deleting an identifier: Why do you want to delete it? Do you need to replace it with another identifier? Remember that there must always be at least one identifier per message flow before you can delete it.
 
 After successfully deleting an identifier, you can create a new identifier with the same value as the one you deleted. (Why would you want to do this?)
+
+Currently you cannot delete AS2 indentifiers.
 
 . If you need to replace the identifier, record the values and qualifier type needed.
 
