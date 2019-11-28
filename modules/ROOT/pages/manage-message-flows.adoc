@@ -140,14 +140,17 @@ If you delete a message flow before it has been deployed, it does not affect the
 If you have a message flow that was deployed and you are attempting to delete it, you must undeploy it first.
 
 Any previous transmissions that were created as a result of a message being processed via the now-deleted message flow has the following behavior:
-+
+
 * They continue to stay in the transmission records within the Activity page, but the records indicate that the corresponding message flow used to process this transmission is now deleted.
-Furthermore, these activities are converted into read-only mode. This means that no links to the message flow work. Only the links that were set up to the stored payloads (such as the original B2B message, any TA1 acknowledgments, the transformed payload, on so on) continue to work.
+Furthermore, these activities are converted into read-only mode.
+This means that no links to the message flow work. Only the links that were set up to the stored payloads (such as the original B2B message, a
+ny TA1 acknowledgments, the transformed payload, on so on) continue to work.
+
 +
 . Make sure the server group in Anypoint Runtime Manager called: B2BServerGroup is running.
-
++
 NOTE: If you are unsure, you should contact your B2B System Administrator or check the status of the server in Runtime manager: https://docs.mulesoft.com/runtime-manager/servers-settings[Server Settings].
-
++
 . From within your Anypoint Partner Manager environment (either Sandbox or Production), click *Message Flows* in the upper left and select a message flow.
 
 . Click *Undeploy* in the upper right.
