@@ -67,7 +67,7 @@ When you are done with your changes, deploy the message flow to ensure that the 
 
 . Choose the partner name and click *Receive from <Partner name>* to expand it.
 
-. If you want to add an identifier to the message flow, click *New*.
+. If you want to add an identifier to the message flow, click *See All* and then *New*.
 
 . If you want to change a receiving endpoint, click *Select* from the *Receiving endpoint* section and click *Select*.???
 
