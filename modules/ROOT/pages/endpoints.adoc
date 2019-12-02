@@ -15,7 +15,7 @@ Your organization also has internal endpoints to which it routes messages from t
 * Acknowledgement endpoints +
 Your partners provide you with their own endpoint configurations to which your organization can send acknowledgments, such as an X12 997 or X12 999. Acknowledgements are typically sent back to trading partners and correspond to one or more B2B messages you receive from your trading partners.
 
-Refer to the following to configure your endpoint. Your configuration varies based on the protocol and whether you are using send or receive.
+Refer to the following to configure your endpoint. Your configuration varies based on the protocol you are using.
 
 == Endpoint Name, Protocol and Type
 
