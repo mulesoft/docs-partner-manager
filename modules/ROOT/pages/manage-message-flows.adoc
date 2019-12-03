@@ -116,7 +116,7 @@ You might want to undeploy a message flow so that you can delete it. Other reaso
 * To recover resources being consumed by a message flow that you no longer need.
 
 When you undeploy a message flow, it stops any future messages from being processed by that flow.
-During the undeployment of a message flow usually about (five minutes?),
+During the undeployment of a message flow (which can be around five minutes)
 Anypoint Partner Manager checks to see if any of the applications on your Mule runtime are orphaned as a result of the undeployment.
 These applications are cleaned up to release any resources they may be consuming. You must undeploy a message flow before you delete it.
 
