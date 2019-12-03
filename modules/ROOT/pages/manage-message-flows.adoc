@@ -20,7 +20,7 @@ You can also test the flow by deploying it in a sandbox environment, then undepl
 
 Test your flow in your production environment:
 
-. Drop an EDI file on the receiving endpoint.
+. Initiate a transmission on the receiving endpoint.
 
 . From within your Anypoint Partner Manager environment (either Sandbox or Production) select *Activity* and check for the transmission.
 
@@ -59,7 +59,7 @@ Overview of steps include:
 
 You handle this by opening an existing message flow and make your changes directly in the sections you intend to modify.
 
-Consider that any changes to a deployed message flow may impact future message flows. (Reviewers, I'm trying to alert the users to any issues that can come up from changing a deployed message flow.)
+Consider that modifying identifiers impact deployed message flows. 
 
 When you are done with your changes, redeploy the message flow to ensure that the changes are propagated to the Mule applications on your Mule runtime.
 
