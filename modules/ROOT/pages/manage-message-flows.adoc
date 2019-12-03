@@ -116,13 +116,17 @@ You might want to undeploy a message flow so that you can delete it. Other reaso
 * To recover resources being consumed by a message flow that you no longer need.
 
 When you undeploy a message flow, it stops any future messages from being processed by that flow.
-During the undeployment of a message flow (which can be around five minutes)
+During the undeployment of a message flow usually about (five minutes?),
 Anypoint Partner Manager checks to see if any of the applications on your Mule runtime are orphaned as a result of the undeployment.
 These applications are cleaned up to release any resources they may be consuming. You must undeploy a message flow before you delete it.
-
++
+NOTE: It may take five minutes or so for your undeployment action to complete. During this time, please do not log out of Anypoint Partner Manager or close your browser window. When an undeployment is in-progress, other actions on the message flow such as `deploy` and `delete` will be unavailable.
++
 
 . Make sure the server group in Anypoint Runtime Manager called: B2BServerGroup is running.
-
++
+TIP: Your on-premise Mule runtimes, the servers hosting the runtimes, and the `B2BserverGroup` need to be active and running when an undeployment is attempted.
++
 +
 NOTE: If you are unsure, you should contact your B2B System Administrator or check the status of the server in Runtime manager: https://docs.mulesoft.com/runtime-manager/servers-settings[Server Settings].
 +
@@ -143,8 +147,7 @@ Any previous transmissions that were created as a result of a message being proc
 
 * They continue to stay in the transmission records within the Activity page, but the records indicate that the corresponding message flow used to process this transmission is now deleted.
 Furthermore, these activities are converted into read-only mode.
-This means that no links to the message flow work. Only the links that were set up to the stored payloads (such as the original B2B message, a
-ny TA1 acknowledgments, the transformed payload, on so on) continue to work.
+This means that no links to the message flow work. Only the links that were set up to the stored payloads (such as the original B2B message, any TA1 acknowledgments, the transformed payload, on so on) continue to work.
 
 +
 . Make sure the server group in Anypoint Runtime Manager called: B2BServerGroup is running.
@@ -153,7 +156,7 @@ NOTE: If you are unsure, you should contact your B2B System Administrator or che
 +
 . From within your Anypoint Partner Manager environment (either Sandbox or Production), click *Message Flows* in the upper left and select a message flow.
 
-. Click *Undeploy* in the upper right.
+. Click *Undeploy* in the upper right. After the undeployment is successful, proceed to delete the message flow.
 
 . Click  *Delete* in the upper right.
 
@@ -163,7 +166,7 @@ NOTE: If you are unsure, you should contact your B2B System Administrator or che
 You might want to delete an identifier when it is no longer needed. Consider that deleting an existing host or partner identifier impacts the identification and routing of B2B messages to the associated partner.
 Ask yourself the following when deleting an identifier: Why do you want to delete it? Do you need to replace it with another identifier? Remember that there must always be at least one identifier per message flow before you can delete it.
 
-After successfully deleting an identifier, you can create a new identifier with the same value as the one you deleted. (Why would you want to do this?)
+After successfully deleting an identifier, you can create a new identifier with the same value as the one you deleted.
 
 Currently you cannot delete AS2 indentifiers.
 
@@ -173,9 +176,9 @@ Currently you cannot delete AS2 indentifiers.
 
 . Select an identifier to the message flow, click *See All*.
 
-. Hover over the identifier you want to delete and click the trash can icon.
+. Hover over the identifier you want to delete and click the trash can icon that appears towards the right hand side of the identifiers row. 
 
-. If you need a replacement, add it now by clicking the Add button.
+. If you need a replacement, add it now by clicking the New button.
 
 == Delete Partners
 
