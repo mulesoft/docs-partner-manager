@@ -53,12 +53,6 @@ Default: None +
 
 Required: No +
 
-Valid values: +
-
-`SEND` +
-
-`RECEIVE` +
-
 Default: None +
 
 // |Default for partner_ checkbox
