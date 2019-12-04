@@ -9,7 +9,7 @@ There are certain cases where you might need to make changes, for example:
 * You are no longer trading with a particular partner and need to delete the message flow you created for them.
 
 * You completed the testing for a deployed message flow in a pre-production environment, and now want to reclaim those previously allocated Mule runtime resources.
-
+* You want to update the map.
 After a message flow is deployed, you can test it, undeploy it, and delete it.
 
 == Test Message Flows
