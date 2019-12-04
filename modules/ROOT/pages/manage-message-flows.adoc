@@ -15,7 +15,7 @@ After a message flow is deployed, you can test it, undeploy it, and delete it.
 == Test Message Flows
 You can send test messages through the message flow to make sure the map is working and your backend systems receive the transformed message.
 You can test your message flow after you deploy it to ensure that you are receiving messages and any acknowledgments from your partners.
-You should ask your partner to confirm receipt of the transmission once you deploy it to your production environment.
+You can ask your partner to confirm receipt of the acknowledgement.
 You can also test the flow by deploying it in a sandbox environment, then undeploying it, and then deploying it to a production environment.
 
 Test your flow in your production environment:
