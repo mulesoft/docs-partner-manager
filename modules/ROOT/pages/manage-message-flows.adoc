@@ -30,7 +30,7 @@ Test your flow in your production environment:
 
 ** Review the received payload by clicking View payload button next to _Received transmission_.
 
-** Review and confirm that any TA1 and functional acknowledgments are there.
+** Review and confirm that any TA1 and functional acknowledgments (999 or 997) are there.
 
 +
 
