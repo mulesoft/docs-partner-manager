@@ -28,7 +28,7 @@ Test your flow in your production environment:
 
 ** Check for any errors.
 
-** Review the received payload by clicking the transmission and opening the payload info.
+** Review the received payload by clicking View payload button next to _Received transmission_.
 
 ** Review and confirm that any TA1 and functional acknowledgments are there.
 
