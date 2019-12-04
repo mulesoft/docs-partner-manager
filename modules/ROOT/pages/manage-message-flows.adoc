@@ -44,7 +44,7 @@ Test your flow in your production environment:
 
 (Reviewers, I don't have this section fully fleshed out yet.)
 
-You can make changes to a message flow such as adding receiving endpoints and certificates;
+You can make changes to a message flow such adding identifiers, selecting different endpoints, or importing a different DataWeave map.
 modifying your DataWeave maps; plus changing the associated message types and target endpoints.
 
 Overview of steps include:
