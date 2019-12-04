@@ -26,7 +26,7 @@ Test your flow in your production environment:
 
 . Check the transmission details for the flow, specifically:
 
-** Check for any errors, and review any that you see for the partner.
+** Check for any errors.
 
 ** Review the received payload by clicking the transmission and opening the payload info.
 
