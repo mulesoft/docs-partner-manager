@@ -31,7 +31,7 @@ Test your flow in your production environment:
 ** Review the received payload by clicking View payload button next to _Received transmission_.
 
 ** Review and confirm that any TA1 and functional acknowledgments (999 or 997) are there.
-
+** Check that the transmission routed messages to the correct message flows.
 +
 
 . Ensure that the messages are routed to the correct message flow from the target system. For example:
