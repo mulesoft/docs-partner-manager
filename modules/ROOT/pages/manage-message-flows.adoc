@@ -12,43 +12,14 @@ There are certain cases where you might need to make changes, for example:
 * You want to update the map.
 After a message flow is deployed, you can test it, undeploy it, and delete it.
 
-== Test Message Flows
-You can send test messages through the message flow to make sure the map is working and your backend systems receive the transformed message.
-You can test your message flow after you deploy it to ensure that you are receiving messages and any acknowledgments from your partners.
-You can ask your partner to confirm receipt of the acknowledgement.
-You can also test the flow by deploying it in a sandbox environment, then undeploying it, and then deploying it to a production environment.
-
-Test your flow in your production environment:
-
-. Initiate a transmission on the receiving endpoint.
-
-. From within Anypoint Partner Manager select *Activity* and check for the transmission.
-
-. Check the transmission details for the flow, specifically:
-
-** Check for any errors.
-
-** Review the received payload by clicking View payload button next to _Received transmission_.
-
-** Review and confirm that any TA1 and functional acknowledgments (999 or 997) are there.
-** Check that the transmission routed messages to the correct message flows.
-+
-
-. Ensure that the messages are routed to the target system. 
-
-** It was successfully delivered to the target endpoint.
-
-** The message was transformed correctly.
 
 == Edit Message Flows
-
-(Reviewers, I don't have this section fully fleshed out yet.)
 
 You can make changes to a message flow such adding identifiers, selecting different endpoints, or importing a different DataWeave map.
 
 Overview of steps include:
 
-* Change receiving endpoints, (non AS2 Identifiers???), and certificates.
+* Change receiving endpoints, certificates and delete non AS2 Identifiers.
 
 * Change associated message types (X12 or JSON) and acknowledgments.
 
@@ -58,7 +29,7 @@ Overview of steps include:
 
 You handle this by opening an existing message flow and make your changes directly in the sections you intend to modify.
 
-Consider that modifying identifiers impact deployed message flows. 
+Consider that modifying identifiers impact deployed message flows.
 
 When you are done with your changes, redeploy the message flow to ensure that the changes are propagated to the Mule applications on your Mule runtime.
 
@@ -147,57 +118,6 @@ NOTE: If you are unsure, you should contact your B2B System Administrator or che
 . Click *Undeploy* in the upper right. After the undeployment is successful, proceed to delete the message flow.
 
 . Click  *Delete* in the upper right.
-
-== Delete Identifiers
-
-
-You might want to delete an identifier when it is no longer needed. Consider that deleting an existing host or partner identifier impacts the identification and routing of B2B messages to the associated partner.
-Ask yourself the following when deleting an identifier: Why do you want to delete it? Do you need to replace it with another identifier? Remember that there must always be at least one identifier per message flow before you can delete it.
-
-After successfully deleting an identifier, you can create a new identifier with the same value as the one you deleted.
-
-Currently you cannot delete AS2 indentifiers.
-
-. If you need to replace the identifier, record the values and qualifier type needed.
-
-. Choose the partner name and click *Receive from <Partner name>* to expand it.
-
-. Select an identifier to the message flow, click *See All*.
-
-. Hover over the identifier you want to delete and click the trash can icon that appears towards the right hand side of the identifiers row. 
-
-. If you need a replacement, add it now by clicking the New button.
-
-== Delete Partners
-
-If you are no longer trading with a partner, you can remove the partner by deleting it. Consider that deleting a partner deletes all assets associated with that partner as well as configuration records for it. For example:
-
-** Undeployment of all deployed messages
-
-** Deletion of all message flows, identifiers, endpoints, and certificates associated with that partner
-
-** Removes all listed assets
-
-** Removes the partner from the partner list
-
-When a partner is deleted, all activities related to the partner are converted into a read-only mode so no links to the message flows work.
-Only the links to the stored payloads (such as the original B2B message, any TA1 acknowledgments, transformed payloads, and so on) continue to work.
-The partner’s name stays in the transmission records but is marked as deleted.
-
-After successfully deleting a partner, you can create a new partner with the same name as the deleted partner. (Again, why would the user want to do this?)
-
-. Make sure the server group in Anypoint Runtime Manager called: B2BServerGroup is running.
-You cannot delete a partner if the server is not running.
-+
-NOTE: If you are unsure, you should contact your B2B System Administrator or check the status of the server in Runtime manager: https://docs.mulesoft.com/runtime-manager/servers-settings[Server Settings].
-+
-
-. From within your Anypoint Partner Manager environment (either Sandbox or Production), select Partner from the upper left.
-
-. Select a partner and click *Delete* in the upper right and confirm your deletion in the dialog that follows.
-
-. If you need to create a new partner, add it now. Refer to: Configure Partner
-
 
 // == See Also
 

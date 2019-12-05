@@ -1,14 +1,12 @@
-= Partner Manager 2.0 Troubleshooting
+= Resolve Current Issues with Partner Manager 2.0
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-//Titles of troubleshooting topics must indicate a description about the issue, for example, "Monthly payroll not generating". All or a part of the actual displayed message must be included in the title.
-
-//Include an introduction to explain what the error is about, for example, when you <do this>, you receive <this output> and <this> happens.
-// Try to include as much information as possible about how the error is generated, and where it is generated. Provide tha actual error string, if possible. If the error is generated in a particular component of the product, clearly mention that as well.
-
+Here are several resources you can use when troubleshooting problems Anypoint Partner Manager 2.0.
+Some are known issues with workarounds, but you can also glean information from your payloads and by examining log files. For more information on log files, See
+https://docs.mulesoft.com/mule-runtime/4.2/logging-and-debugging[Logging and Debugging].
 
 = Unsuccessful Message Flow Deployment Error
 You’ve set up your message flow and clicked Deploy. You may receive an error notification indicating that your deployment is unsuccessful.
@@ -151,11 +149,11 @@ Occasionally, in the Activity section of Anypoint Partner Manager, you may see t
 
 This situation occurs with one of the following:
 
-* Partner Manager cannot identify the sender of the transmission. This is because the sender of the transmission is not configured in Partner Manager, or because the identifier associated with the sender is not configured.
+* Partner Manager cannot identify the sender of the transmission. This is because the partner is not configured in Partner Manager, or because the identifier associated with the partner is not configured.
 
-* Partner Manager cannot identify the receiver of the transmission. This is because the identifier associated with the receiver is not configured.
+* Partner Manager cannot identify the host for the transmission. This is because the identifier associated with the host is not configured.
 
-* Partner Manager cannot identify both the sender and the receiver of the transmission.
+* Partner Manager cannot identify both the partner and the host of this transmission.
 
 == Solutions
 
