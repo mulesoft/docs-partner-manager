@@ -1,4 +1,4 @@
-= = Cannot process B2B transactions successfully
+= Cannot process B2B transactions successfully
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]

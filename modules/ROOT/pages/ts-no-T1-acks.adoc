@@ -5,8 +5,6 @@ include::_attributes.adoc[]
 endif::[]
 
 
-= I do not receive TA1 acknowledgments for my transmissions.
-
 Anypoint Partner Manager sends TA1 ack’s back for any received transmission, if configured to do so.
 
 == Cause
