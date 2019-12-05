@@ -4,9 +4,6 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-
-= In the Anypoint Partner Manager Activity section, I receive a transaction indicating `Unrecognized standard from unrecognized partner`
-
 Occasionally, in the Activity section of Anypoint Partner Manager, you may see tracking information such as this:
 
 [source,xml,linenums]
