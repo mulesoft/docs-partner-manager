@@ -17,7 +17,7 @@
 * xref:document-types.adoc[Message Types]
 * xref:activity-tracking.adoc[Track Activity]
 * xref:troubleshooting.adoc[Resolving Current Issues]
- ** xref:ts-unsuccessful-deploy.adoc[Deployment is Unsuccessful]
+ ** xref:ts-unsuccessful-deploy.adoc[Deployment Is Unsuccessful]
  ** xref:ts-cannot-process-B2B.adoc[Transactions Not Getting Processed]
  ** xref:ts-unrecognized-partner.adoc[Unrecognized Partner]
  ** xref:ts-unrecognized-standard.adoc[Unrecognized Standard]
