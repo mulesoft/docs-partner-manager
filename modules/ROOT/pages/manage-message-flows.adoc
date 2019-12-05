@@ -9,15 +9,16 @@ There are certain cases where you might need to make changes, for example:
 * You are no longer trading with a particular partner and need to delete the message flow you created for them.
 
 * You completed the testing for a deployed message flow in a pre-production environment, and now want to reclaim those previously allocated Mule runtime resources.
-* You want to update the map.
-After a message flow is deployed, you can test it, undeploy it, and delete it.
 
+* You want to update the DataWeave map.
+
+After a message flow is deployed, you can edit it, or undeploy and delete it.
 
 == Edit Message Flows
 
 You can make changes to a message flow such adding identifiers, selecting different endpoints, or importing a different DataWeave map.
 
-Overview of steps include:
+Overview of the steps include:
 
 * Change receiving endpoints, certificates and delete non AS2 Identifiers.
 
@@ -27,9 +28,7 @@ Overview of steps include:
 
 * Change associated target message types (X12 or JSON) and endpoints.
 
-You handle this by opening an existing message flow and make your changes directly in the sections you intend to modify.
-
-Consider that modifying identifiers impact deployed message flows.
+You change any of these by opening an existing message flow and edit in the sections you intend to modify. Consider that modifying identifiers impacts deployed message flows.
 
 When you are done with your changes, redeploy the message flow to ensure that the changes are propagated to the Mule applications on your Mule runtime.
 
@@ -69,7 +68,7 @@ When you are done with your changes, redeploy the message flow to ensure that th
 NOTE: It may take five minutes or so for your configuration changes to sync with Mule runtime.
 +
 
-. To test your edited message flow, refer to Test Message Flows.
+. To test your edited message flow, refer to xref:configure-message-flows.adoc[Configure Message Flows].
 
 Once you confirm successful deployment of your message flow, you can track its processed messages from the Activity page.
 
@@ -82,15 +81,17 @@ You might want to undeploy a message flow so that you can delete it. Other reaso
 * To recover resources being consumed by a message flow that you no longer need.
 
 When you undeploy a message flow, it stops any future messages from being processed by that flow.
-During the undeployment of a message flow usually about (five minutes?),
-Anypoint Partner Manager checks to see if any of the applications on your Mule runtime are orphaned as a result of the undeployment.
+Undeploying a message flow usually about five minutes. Anypoint Partner Manager checks to see if any of the applications on your Mule runtime are orphaned as a result of the undeployment.
 These applications are cleaned up to release any resources they may be consuming. You must undeploy a message flow before you delete it.
 
-NOTE: It may take five minutes or so for your undeployment action to complete. During this time, do not log out of Anypoint Partner Manager or close your browser window. When an undeployment is in-progress, other actions on the message flow such as `deploy` and `delete` are unavailable.
+Your on-premise Mule runtimes, the servers hosting the runtimes, and the `B2BserverGroup` need to be active and running when attempting an undeployment.
+If you are unsure, you should contact your B2B System Administrator or check the status of the server in Runtime manager: https://docs.mulesoft.com/runtime-manager/servers-settings[Server Settings].
+
+IMPORTANT: It may take five minutes or so for your undeployment action to complete.
+During this time, do not log out of Anypoint Partner Manager or close your browser window.
+When an undeployment is in-progress, other actions on the message flow such as `Deploy` and `Delete` are unavailable.
 
 . Make sure the server group in Anypoint Runtime Manager called: B2BServerGroup is running.
-
-TIP: Your on-premise Mule runtimes, the servers hosting the runtimes, and the `B2BserverGroup` need to be active and running when an undeployment is attempted. If you are unsure, you should contact your B2B System Administrator or check the status of the server in Runtime manager: https://docs.mulesoft.com/runtime-manager/servers-settings[Server Settings].
 
 . From within your Anypoint Partner Manager environment (either Sandbox or Production), click *Message Flows* in the upper left and select a message flow.
 
@@ -106,18 +107,26 @@ If you have a message flow that was deployed and you are attempting to delete it
 Any previous transmissions that were created as a result of a message being processed via the now-deleted message flow has the following behavior:
 
 * They continue to stay in the transmission records within the Activity page, but the records indicate that the corresponding message flow used to process this transmission is now deleted.
-Furthermore, these activities are converted into read-only mode.
-This means that no links to the message flow work. Only the links that were set up to the stored payloads (such as the original B2B message, any TA1 acknowledgments, the transformed payload, on so on) continue to work.
+
+* These activities are converted into read-only mode, so no links to the message flow work.
+
+* Only links that were set up to the stored payloads (such as the original B2B message, any TA1 acknowledgments, the transformed payload, on so on) continue to work.
+
+IMPORTANT: It may take five minutes or so for an undeployment action to complete.
+During this time, do not log out of Anypoint Partner Manager or close your browser window.
+When an undeployment is in-progress, `Delete` is unavailable.
 
 . Make sure the server group in Anypoint Runtime Manager called: B2BServerGroup is running.
 
++
 NOTE: If you are unsure, you should contact your B2B System Administrator or check the status of the server in Runtime manager: https://docs.mulesoft.com/runtime-manager/servers-settings[Server Settings].
++
 
 . From within your Anypoint Partner Manager environment (either Sandbox or Production), click *Message Flows* in the upper left and select a message flow.
 
-. Click *Undeploy* in the upper right. After the undeployment is successful, proceed to delete the message flow.
+. Click *Undeploy* in the upper right.
 
-. Click  *Delete* in the upper right.
+After the undeployment is successful, delete the message flow by clicking  *Delete* in the upper right.
 
 // == See Also
 

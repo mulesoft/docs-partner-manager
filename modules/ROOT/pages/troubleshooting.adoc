@@ -4,8 +4,12 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Here are several resources you can use when troubleshooting problems Anypoint Partner Manager 2.0.
-Some are known issues with workarounds, but you can also glean information from your payloads and by examining log files. For more information on log files, See
+Here are some resources you can use when troubleshooting problems Anypoint Partner Manager 2.0.
+* Scan these known issues with workarounds
+
+* Examine information from your payloads
+
+* Examine the log files. For more information on log files, See
 https://docs.mulesoft.com/mule-runtime/4.2/logging-and-debugging[Logging and Debugging].
 
 = Unsuccessful Message Flow Deployment Error
@@ -13,7 +17,6 @@ You’ve set up your message flow and clicked Deploy. You may receive an error n
 
 == Cause
 
-//<In this section, include information about what causes this issue, if possible. Remember to make the title plural if there are more than one causes listed.>
 Any of the following can produce this type of error:
 
 * You do not have the appropriate server group configured or have the wrong name for the server group. Check Verify Server Group Setup.
@@ -143,7 +146,12 @@ If all these scenarios have been verified successfully, and you still cannot dep
 
 Occasionally, in the Activity section of Anypoint Partner Manager, you may see tracking information such as this:
 
-(Screenshot not in this draft)
+[source,xml,linenums]
+----
+<identifier> from Unrecognized partner
+<date> control #
+Partner not found for <identifier> with <value>
+----
 
 == Causes
 
@@ -181,11 +189,16 @@ Verify that your organization (the host) has the appropriate identifiers configu
 
 . Provide a value for your identifier (and qualifier for X12-ISA) and click *Create identifier* to save your changes. See xref:x12-identity-settings.adoc[Identifiers] for more info on X12-ISA settings.
 
-= In the Anypoint Partner Manager Activity section, I receive a transaction indicating `Unrecognized standard`
+= In the Anypoint Partner Manager Activity section, I receive a transaction indicating `Unrecognized standard from unrecognized partner`
 
 Occasionally, in the Activity section of Anypoint Partner Manager, you may see tracking information such as this:
 
-(Screenshot not in this draft)
+[source,xml,linenums]
+----
+Unrecognized standard from unrecognized partner
+Received <date>
+File <name>
+----
 
 == Cause
 
@@ -200,7 +213,14 @@ If you encounter such a scenario, then verify with your partner that they are se
 
 Occasionally, in the Activity section of Anypoint Partner Manager, you may see tracking information such as this:
 
-(Screenshot not in this draft)
+[source,xml,linenums]
+----
+<identifier> from <partner>
+Received <date>
+File <name>
+control #
+TA1 sent
+----
 
 == Causes
 
@@ -244,7 +264,12 @@ Partner Manager only supports receiving X12 files. If your partner sends you any
 
 Occasionally, in the Activity section of Anypoint Partner Manager, you may see tracking information such as this:
 
-(Screenshot not in this draft)
+[source,xml,linenums]
+----
+Unrecognized standard from unrecognized partner
+Received <date>
+File <name>
+----
 
 == Cause
 
