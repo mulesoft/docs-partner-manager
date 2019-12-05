@@ -1,0 +1,60 @@
+= In the Anypoint Partner Manager Activity section, I receive a transaction indicating `Deployed Message flow configuration not found for Message: <name>`
+
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Occasionally, in the Activity section of Anypoint Partner Manager, you may see tracking information such as this:
+
+[source,xml,linenums]
+----
+<identifier> from <partner>
+Received <date>
+File <name>
+control #
+TA1 sent
+----
+
+== Causes
+
+This situation occurs in one of these scenarios:
+
+** A transmission is received that contains a message type that is not configured for any partner or flow.
+
+** A transmission is received that contains a message type that is not supported by Anypoint Partner Manager.
+
+== Solution
+
+If you encounter such a scenario, then verify that the message type received via the transmission.
+
+. For the activity that you are viewing, inspect the error message to glean the message type received. It should contain a message identifier string like this: “v004010-810-1548-000000001”. Parts of this message are:
+
+** v004010 - X12 format version received in transmission
+
+** 810 - Message type received
+
+** 1548 - Group Segment Identifier (GS06)
+
+** 000000001 - Message Segment Identifier (ST02)
+
++
+
+. From within your Anypoint Partner Manager environment (either Sandbox or Production) select *Message Flows*.
+
+. If you know the specific flow you are searching for, click the card related to that flow to expand the associated configurations.
+
+. If you do not know which flow you are looking for, search by partner name or message type (such as 850) to identify possible related message flows.
+
+. Once you find the related message flow, click the message flow card to open up the flow.
+
+. In the Message flow configurator, verify that the appropriate message type (such as X12, version - 4010, message type - 850) is configured and that this matches the type of file that was listed in the Activity which indicated that an unrecognized standard was being used.
+
+. If there is a discrepancy between the type of message configured in the message flow compared to the message received in the activity, then either contact your partner and inform them to send the appropriate file, or correct your message flow to ensure the message type configured matches the expected file you will receive from your partner.
+
+Partner Manager only supports receiving X12 files. If your partner sends you any other type of file such as (JSON, XML, CSV, and so on), contact your partner and ask them to send the appropriate file type to you.
+
+
+// == See Also
+// Add links to any related errors, if required. You might need to add links about the concept of the component where the error occurs, or perhaps the absence of the requirement which caused the error.
+// * xref:file-name.adoc[link-text]
+//add any pertinent links

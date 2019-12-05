@@ -1,0 +1,14 @@
+= I recently updated and deployed my message flow, however, the configurations haven’t taken effect on the runtime B2B apps. Did I do this incorrectly?
+
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Your runtime B2B Mule apps receive the latest configuration from the Anypoint Partner Manager control plane at a 5 minute interval.
+Depending on when you made the configuration changes to your message flows in Partner Manager and deployed them, it can take a maximum interval of 5 minutes for your most recent changes to be effective on the runtime B2B Mule apps.
+
+
+// == See Also
+// Add links to any related errors, if required. You might need to add links about the concept of the component where the error occurs, or perhaps the absence of the requirement which caused the error.
+// * xref:file-name.adoc[link-text]
+//add any pertinent links

@@ -1,4 +1,4 @@
-= Resolve Current Issues with Partner Manager 2.0
+= I do not receive TA1 acknowledgments for my transmissions
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
