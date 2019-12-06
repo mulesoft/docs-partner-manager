@@ -76,7 +76,7 @@ Your message flow configuration is deployed to your Mule runtime engine and you 
 
 You should send test messages through the message flow after you deploy to verify the following:
 
-* Ensure that you are receiving messages and any acknowledgments from your partners.
+* You are receiving messages and acknowledgments from your partners.
 
 * Make sure that the DataWeave map is working and your backend systems receive the transformed message.
 
