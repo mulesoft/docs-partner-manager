@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 
 After your message flow is running and you are using it with your partners, you should not have to change it much.
-There are certain cases where you might need to make changes, for example:
+However, you might need to change or even delete the flow in the following circumstances:
 
 * You are no longer trading with a particular partner and need to delete the message flow you created for them.
 
@@ -20,7 +20,7 @@ You can make changes to a message flow such adding identifiers, selecting differ
 
 Overview of the steps include:
 
-* Change receiving endpoints, certificates and delete non AS2 Identifiers.
+* Change receiving endpoints and certificates, and delete non-AS2 identifiers.
 
 * Change associated message types (X12 or JSON) and acknowledgments.
 
@@ -28,15 +28,15 @@ Overview of the steps include:
 
 * Change associated target message types (X12 or JSON) and endpoints.
 
-You change any of these by opening an existing message flow and edit in the sections you intend to modify. Consider that modifying identifiers impacts deployed message flows.
+You change any of these by opening an existing message flow and editing the sections you intend to modify. Consider that modifying identifiers impacts deployed message flows.
 
 When you are done with your changes, redeploy the message flow to ensure that the changes are propagated to the Mule applications on your Mule runtime.
 
-. From within your Anypoint Partner Manager environment (either Sandbox or Production), click *Message Flows* in the upper left and select a message flow.
+. From within your Anypoint Partner Manager sandbox or production environment, click *Message Flows* in the upper left and select a message flow.
 
 . Choose the message flow click *<Message flow name>* to expand it.
 
-. If you want to add an identifier to the message flow, click *See All* and then *New*.
+. If you want to add an identifier to the message flow, click *See All* > *New*.
 
 . If you want to change a receiving endpoint, click *Select* from the *Receiving endpoint* section, click *New* and select your protocol type: AS2 or SFTP.
 
