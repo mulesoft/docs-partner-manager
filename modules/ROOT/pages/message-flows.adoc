@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 
 To receive messages from a trading partner, create a message flow and configure the sections for the source, map, and target.
-Your organization is typically referred to as the host. The enterprise or customer you interact with is referred to as your partner.
+Your organization is typically referred to as the _host_. The enterprise or customer you interact with is referred to as your _partner._
 
 The source of the message flow is defined by the partner, a receiving endpoint at the host, often an API, and the message type you are receiving from the partner.
 
