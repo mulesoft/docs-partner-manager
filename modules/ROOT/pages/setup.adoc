@@ -25,12 +25,12 @@ Roles are allocated via the Access Management section in Anypoint Platform.
 
 === Partner Manager related technical requirements:
 
-* Mule runtime 4.1.5 or higher. Make sure you have the required Mule runtime capacity to handle your B2B transaction workload needs.
+* Mule runtime 4.2.2 or higher. Make sure you have the required Mule runtime capacity to handle your B2B transaction workload needs.
 If you are unsure about the Mule runtime capacity required to handle your B2B transactions, contact your MuleSoft account representative for assistance.
 
 * A storage solution to store the B2B transmission payloads you send or receive. Storage options can include a Database, Amazon S3, Azure Blob Storage, and so on.
 
-* Anypoint Studio 7.3 or higher.
+* Anypoint Studio 7.4 or higher.
 
 == Environment Configuration
 
@@ -121,6 +121,7 @@ Ensure that the appropriate authentication mechanisms have been implemented to m
 
 . Select the `Payload storage` section and configure the path to your storage.
 
+. If you want to view (or have your users view) the raw payloads of the files you receive or send, select `Allow users to download payloads` while configuring your payload storage API.
 
 You are ready to begin to set up message flows between you and your trading partners.
 

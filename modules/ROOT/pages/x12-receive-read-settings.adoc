@@ -12,6 +12,8 @@ Refer to these as you set up your X12 settings to receive messages from your par
 
 Configure as needed for your specific partners.
 
+NOTE: It may take five minutes or so for your configuration changes to sync with Mule runtime.
+
 [%header,cols="3s,7a"]
 |===
 |Setting |Description, Values, Default
