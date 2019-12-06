@@ -86,7 +86,7 @@ Test your message flow in your environment:
 
 . Initiate a transmission on the receiving endpoint.
 
-. From within Anypoint Partner Manager select *Activity* and select the transmission from the list.
+. From within Anypoint Partner Manager, select *Activity* and select the transmission from the list.
 
 . Scan the Transmission Flow sections for an exclamation point (!) in any of the rectangle boxes next to the displayed flow stages as this indicates there is an issue with the transmission.
 
