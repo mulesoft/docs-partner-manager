@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 
 After your message flow is running and you are using it with your partners, you should not have to change it much.
-There are certain cases where you might need to make changes, for example:
+However, you might need to change or even delete the flow in the following circumstances:
 
 * You are no longer trading with a particular partner and need to delete the message flow you created for them.
 
