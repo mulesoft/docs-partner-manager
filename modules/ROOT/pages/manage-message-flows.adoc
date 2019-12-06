@@ -128,7 +128,6 @@ NOTE: If you are unsure, you should contact your B2B System Administrator or che
 
 After the undeployment is successful, delete the message flow by clicking  *Delete* in the upper right.
 
-// == See Also
+== See Also
 
-// * xref:endpoints.adoc[Endpoints]
-// * xref:activity-tracking.adoc[Activity Tracking]
+* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]

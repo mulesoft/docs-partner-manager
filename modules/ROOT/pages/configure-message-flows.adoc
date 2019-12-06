@@ -109,3 +109,4 @@ Test your message flow in your environment:
 
 * xref:manage-message-flows.adoc[Manage Message Flows]
 * xref:activity-tracking.adoc[Activity Tracking]
+* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]

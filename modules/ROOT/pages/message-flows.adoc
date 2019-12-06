@@ -34,3 +34,4 @@ If a separate URL is required for returning MDNs, it is sent in the AS2 transmis
 
 * xref:configure-message-flows.adoc[Configure Message Flows]
 * xref:manage-message-flows.adoc[Manage Message Flows]
+* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]

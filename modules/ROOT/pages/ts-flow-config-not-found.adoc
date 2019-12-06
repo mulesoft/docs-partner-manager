@@ -53,7 +53,6 @@ If you encounter such a scenario, then verify that the message type received via
 
 Partner Manager only supports receiving X12 files. If your partner sends you any other type of file such as (JSON, XML, CSV, and so on), contact your partner and ask them to send the appropriate file type to you.
 
-
 // == See Also
 // Add links to any related errors, if required. You might need to add links about the concept of the component where the error occurs, or perhaps the absence of the requirement which caused the error.
 // * xref:file-name.adoc[link-text]

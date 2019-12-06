@@ -1,17 +1,14 @@
-= Resolving Current Issues
+= Troubleshooting Anypoint Partner Manager
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Here are some resources you can use when troubleshooting problems Anypoint Partner Manager 2.0.
+Anypoint Partner Manager makes use of or depends on several different MuleSoft technologies, including but not limited to your Mule runtimes, Anypoint Runtime Manager, Anypoint Secrets Manager, and your infrastructure for B2B storage payloads.
+ 
+Because Anypoint Partner Manager is used with other technologies, troubleshooting an issue with Anypoint Partner Manager often involves troubleshooting these other technologies.
 
-* Scan these known issues with workarounds
-
-* Examine information from your payloads
-
-* Examine the log files. For more information on log files, See
-https://docs.mulesoft.com/mule-runtime/4.2/logging-and-debugging[Logging and Debugging].
+Use the topic links in the left navigation pane of the documentation to locate troubleshooting information specific to either Anypoint Partner Manager or its related technologies.
 
 
 // == See Also

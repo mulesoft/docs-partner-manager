@@ -129,4 +129,4 @@ You are ready to begin to set up message flows between you and your trading part
 == See Also
 
 * xref:B2B-overview.adoc[Use Anypoint Partner Manager]
-* xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner]
+* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]

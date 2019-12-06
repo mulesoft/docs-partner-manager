@@ -121,3 +121,7 @@ Currently you cannot delete an AS2 identifier.
 . Hover over the identifier you want to delete and click the trash can icon that appears towards the right hand side of the identifiers row.
 
 . If you need a replacement, add it now by clicking *New*.
+
+== See Also
+
+* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
