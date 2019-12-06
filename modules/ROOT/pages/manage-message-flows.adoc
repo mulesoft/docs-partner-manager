@@ -36,7 +36,7 @@ When you are done with your changes, redeploy the message flow to ensure that th
 
 . Choose the message flow click *<Message flow name>* to expand it.
 
-. If you want to add an identifier to the message flow, click *See All* and then *New*.
+. If you want to add an identifier to the message flow, click *See All* > *New*.
 
 . If you want to change a receiving endpoint, click *Select* from the *Receiving endpoint* section, click *New* and select your protocol type: AS2 or SFTP.
 
