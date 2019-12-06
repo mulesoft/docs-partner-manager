@@ -98,7 +98,7 @@ Test your message flow in your environment:
 
 . Verify that the messages are routed to the target system:
 
-** That it was successfully delivered to the target endpoint.
+** Successfully delivered to the target endpoint
 
 ** That the message was transformed correctly.
 
