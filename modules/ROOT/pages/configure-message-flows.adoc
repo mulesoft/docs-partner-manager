@@ -100,7 +100,7 @@ Test your message flow in your environment:
 
 ** Successfully delivered to the target endpoint
 
-** That the message was transformed correctly.
+** Transformed correctly
 
 == See Also
 
