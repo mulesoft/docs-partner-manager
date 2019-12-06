@@ -92,7 +92,7 @@ Test your message flow in your environment:
 
 . If view payloads are enabled, review the received payload by clicking *View payload* next to the Received transmission section.
 
-. If you had any TA1 and functional acknowledgments (999 or 997) set, review and confirm that they are there.
+. If you have TA1 and functional acknowledgments (999 or 997) set, review and confirm that they are there.
 
 . Check that the transmission routed messages to the correct message flows.
 
