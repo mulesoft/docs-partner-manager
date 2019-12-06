@@ -96,7 +96,7 @@ Test your message flow in your environment:
 
 . Verify that the transmission routed messages to the correct message flows.
 
-. Ensure that the messages are routed to the target system. Specifically check:
+. Verify that the messages are routed to the target system:
 
 ** That it was successfully delivered to the target endpoint.
 
