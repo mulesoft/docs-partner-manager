@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can create and configure a message flow at the time you create a trading partner or afterwards. Once you deploy the message flow you configured, it's best to test it.
+You can create and configure a message flow either when you create a trading partner or afterward. After you deploy the message flow, it's best to test it.
 
 . From within your Anypoint Partner Manager environment (either Sandbox or Production), click *New message flows* in the upper right.
 
