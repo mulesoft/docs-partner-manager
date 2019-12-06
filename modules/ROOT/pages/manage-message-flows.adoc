@@ -32,7 +32,7 @@ You change any of these by opening an existing message flow and editing the sect
 
 When you are done with your changes, redeploy the message flow to ensure that the changes are propagated to the Mule applications on your Mule runtime.
 
-. From within your Anypoint Partner Manager environment (either Sandbox or Production), click *Message Flows* in the upper left and select a message flow.
+. From within your Anypoint Partner Manager sandbox or production environment, click *Message Flows* in the upper left and select a message flow.
 
 . Choose the message flow click *<Message flow name>* to expand it.
 
