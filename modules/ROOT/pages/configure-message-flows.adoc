@@ -78,7 +78,7 @@ You should send test messages through the message flow after you deploy to verif
 
 * Make sure that the DataWeave map is working and your backend systems receive the transformed message.
 
-You test the flow by deploying it in a sandbox environment. When you verify that the flow is successful, you then undeploy it from the sandbox and deploy it to your production environment.
+You can test the flow by deploying it in a sandbox environment. When you verify that the flow is successful, you can undeploy it from the sandbox and deploy it to your production environment.
 
 Test your message flow in your (sandbox or production) environment:
 
