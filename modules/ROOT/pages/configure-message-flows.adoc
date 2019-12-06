@@ -94,7 +94,7 @@ Test your message flow in your environment:
 
 . If you have TA1 and functional acknowledgments (999 or 997) set, review and confirm that they are there.
 
-. Check that the transmission routed messages to the correct message flows.
+. Verify that the transmission routed messages to the correct message flows.
 
 . Ensure that the messages are routed to the target system. Specifically check:
 
