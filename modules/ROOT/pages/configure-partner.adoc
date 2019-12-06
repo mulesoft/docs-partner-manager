@@ -1,0 +1,127 @@
+= Configure Trading Partners
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+The only information you need to create a new partner is its name and a single identifier related to that partner.
+You can add other information after creating the partner.
+Once created, each partner has its own page located in the *Partners* section in the left navigation menu.
+
+From the Partner detail page you can:
+
+* Add information about your partner along with contact details.
+
+* Add identifiers to uniquely identify it from other partners.
+
+* Add certificates owned by the partner.
+
+* Configure validation, acknowledgement, control number, and character set settings applicable to all message flows for this trading partner.
+
+== Create a Partner
+
+. From within your Anypoint Partner Manager environment, select *Partners* from the left navigation.
+
+. Click *New partner*.
+
+. Add a name that easily identifies your partner.
+
+. Select an identifier from the *Type* drop-down menu. This uniquely identifies your partner.
+For example, depending on your setup, select one of the following: AS2 ID, X12-ISA, X12 GS, or the DUNS number.
+
+. Provide a value for your identifier (and qualifier for X12-ISA) and click *Create partner* to create your trading partner.
+See xref:x12-identity-settings.adoc[Identifiers] for more info on X12 Identity settings.
+You can now setup message flows related to this trading partner by using xref:configure-message-flows.adoc[Create a Message Flow] or continue to update this partner.
+
+== Update a Partner's Profile
+
+You can add the following information for each trading partner from the *Partners* selection in the left navigation:
+
+. Under the *About* section, click *Edit*. Add or update the following information:
+
+* Description - Provide a brief description about your partner's business, what kind of trading relationship your organization has with them, and so on.
+
+* Website - enter a valid URL to your trading partner's website.
+
+* Logo - upload a logo associated to your trading partner. Supported logo file formats are: `.jpg`, `.jpeg`, `.png`, `.gif`, or `.svg` files. Maximum file size is 30KB.
+
+* Corporate address - provide a complete address that includes the Street, City, State, Postal code, and Country.
+
+* Add contacts - contact types available are: Business, Technical or Other. You can add up to three contacts associated with a trading partner's profile. You can also delete contacts from here.
++
+. Click *Save*. A message confirms that the partner's profile is successfully updated.
+
+. If you want to add more identifiers for your trading partner click *New* within the *Identifiers* section.
+
+* Select an identifier type from the *Type* drop-down menu. This uniquely identifies your partner.
+For example, depending on your setup, select one of the following: AS2 ID, X12-ISA, X12 GS, or the DUNS number.
+
+* Provide a value for your identifier (and qualifier for X12-ISA) and click *Create identifier* to save your changes.
+See xref:x12-identity-settings.adoc[Identifiers] for more info on X12 settings.
+
+. Click *New* within the *Certificates* section to upload any needed digital certificates. This is your partner's digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
+
+* Click *Choose file* to select and upload the certificate.
+
+* Click *Upload certificate* (typically a .PEM file provided by your trading partner) to upload the chosen digital certificate file.
++
+View information about an uploaded certificate by clicking it's link. See xref:Certificates.adoc[Certificates] for more info on configuring certificates in Partner Manager.
++
+. Configure X12 validation settings that can be used for all message flows that you are configuring with your trading partners. These include:
+
+* Validations
+* Acknowledgment
+* Control numbers
+* Character sets
+
+== Delete a Partner
+
+If you are no longer trading with a partner, you can remove the partner by deleting it. Consider that deleting a partner deletes all assets associated with that partner as well as configuration records for it. For example:
+
+** Undeployment of all deployed messages
+
+** Deletion of all message flows, identifiers, endpoints, and certificates associated with that partner
+
+** Removes all listed assets
+
+** Removes the partner from the partner list
+
+When a partner is deleted, all activities related to the partner are converted into a read-only mode so no links to the message flows work.
+Only the links to the stored payloads (such as the original B2B message, any TA1 acknowledgments, transformed payloads, and so on) continue to work.
+The partner’s name stays in the transmission records but is marked as deleted.
+
+After successfully deleting a partner, you can create a new partner with the same name as the deleted partner. (Again, why would the user want to do this?)
+
+. Make sure the server group in Anypoint Runtime Manager called: B2BServerGroup is running.
+You cannot delete a partner if the server is not running.
++
+NOTE: If you are unsure, you should contact your B2B System Administrator or check the status of the server in Runtime manager: https://docs.mulesoft.com/runtime-manager/servers-settings[Server Settings].
++
+
+. From within your Anypoint Partner Manager environment (either Sandbox or Production), select Partner from the upper left.
+
+. Select a partner and click *Delete* in the upper right and confirm your deletion in the dialog that follows.
+
+. If you need to create a new partner, add it now. Refer to: Configure Partner
+
+Refer to the options for each at xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner]
+
+== Delete Identifiers
+
+You might want to delete an identifier when it is no longer needed. Consider that deleting an existing host or partner identifier impacts the identification and routing of B2B messages to the associated partner.
+Ask yourself the following when deleting an identifier: Why do you want to delete it? Do you need to replace it with another identifier? Remember that there must always be at least one identifier per message flow before you can delete it.
+
+After successfully deleting an identifier, you can create a new identifier with the same value as the one you deleted.
+
+Currently you cannot delete an AS2 identifier.
+
+. If you need to replace the identifier, record the values and qualifier type needed.
+
+. Choose the partner name and click *<Partner name>* to expand it.
+
+. Hover over the identifier you want to delete and click the trash can icon that appears towards the right hand side of the identifiers row.
+
+. If you need a replacement, add it now by clicking *New*.
+
+== See Also
+
+* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
