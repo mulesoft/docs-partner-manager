@@ -20,7 +20,7 @@ You can make changes to a message flow such adding identifiers, selecting differ
 
 Overview of the steps include:
 
-* Change receiving endpoints, certificates and delete non AS2 Identifiers.
+* Change receiving endpoints and certificates, and delete non-AS2 identifiers.
 
 * Change associated message types (X12 or JSON) and acknowledgments.
 
