@@ -28,7 +28,7 @@ Overview of the steps include:
 
 * Change associated target message types (X12 or JSON) and endpoints.
 
-You change any of these by opening an existing message flow and edit in the sections you intend to modify. Consider that modifying identifiers impacts deployed message flows.
+You change any of these by opening an existing message flow and editing the sections you intend to modify. Consider that modifying identifiers impacts deployed message flows.
 
 When you are done with your changes, redeploy the message flow to ensure that the changes are propagated to the Mule applications on your Mule runtime.
 
