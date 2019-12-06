@@ -74,7 +74,7 @@ Your message flow configuration is deployed to your Mule runtime engine and you 
 
 == Test Message Flows
 
-There are a couple of reasons why you should send test messages through the message flow after you deploy:
+You should send test messages through the message flow after you deploy to verify the following:
 
 * Ensure that you are receiving messages and any acknowledgments from your partners.
 
