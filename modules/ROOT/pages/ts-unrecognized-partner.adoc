@@ -1,10 +1,10 @@
-= In the Anypoint Partner Manager Activity section, I receive a transaction indicating `Unrecognized partner`
+= `Unrecognized partner` transaction reported
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Occasionally, in the Activity section of Anypoint Partner Manager, you may see tracking information such as this:
+You might occasionally see tracking information such as this in the Activity section of Anypoint Partner Manager:
 
 [source,xml,linenums]
 ----
@@ -15,42 +15,38 @@ Partner not found for <identifier> with <value>
 
 == Causes
 
-This situation occurs with one of the following:
+This information appears in the Activity section when one of the following occurs:
 
-* Partner Manager cannot identify the sender of the transmission. This is because the partner is not configured in Partner Manager, or because the identifier associated with the partner is not configured.
+* Partner Manager cannot identify the sender of the transmission either because the partner is not configured in Partner Manager, or because the identifier associated with the partner is not configured.
 
-* Partner Manager cannot identify the host for the transmission. This is because the identifier associated with the host is not configured.
+* Partner Manager cannot identify the host for the transmission because the identifier associated with the host is not configured.
 
 * Partner Manager cannot identify both the partner and the host of this transmission.
 
 == Solutions
 
+Verifty partner and host identifiers.
+
 === Verify Partner Identifiers
 
 Verify that your partner has the appropriate identifiers configured as needed to support the transmission.
 
-. From within your Anypoint Partner Manager environment (either Sandbox or Production) select *Partners* <name of your specific partner related to this transmission>.
+. From within your Anypoint Partner Manager, Sandbox or Production environment select *Partners* <name of your specific partner related to this transmission>.
 
-. From the Partners profile, scroll to the Identifiers section and verify that the identifier you are looking for is present in the identifiers listed in the table.
+. From the Partners profile, scroll to the Identifiers section and verify that the identifier you are looking for is present in the table.
 
-. If the desired partner identifier is not present, click *New* and select an identifier type from the Type drop-down to uniquely identify your partner.
+. If the desired partner identifier is not present, click *New* and select an identifier type from the Type list to uniquely identify your partner.
 
-. Provide a value for your identifier (and qualifier for X12-ISA) and click *Create identifier* to save your changes. See xref:x12-identity-settings.adoc[Identifiers] for more info on X12-ISA settings.
+. Provide a value for your identifier (and a qualifier for X12-ISA) and click *Create identifier* to save your changes. See xref:x12-identity-settings.adoc[Identifiers] for more information on X12-ISA settings.
 
 === Verify Organization (Host) Identifiers
 
 Verify that your organization (the host) has the appropriate identifiers configured as needed to support the transmission.
 
-. From within your Anypoint Partner Manager environment (either Sandbox or Production) select *Partners* <name of your organizations / sub-organizations related to this transmission>.
+. From within your Anypoint Partner Manager Sandbox or Production environment select *Partners* <name of your organizations / sub-organizations related to this transmission>.
 
-. Within the Host’s profile page, scroll to the Identifiers section and verify that the identifier you are looking for is present in the identifiers listed in the table.
+. Within the Host’s profile page, scroll to the Identifiers section and verify that the identifier you are looking for is present in the table.
 
-. If the desired host identifier is not present, click *New* and select an identifier type from the Type drop-down to uniquely identify your partner.
+. If the desired host identifier is not present, click *New* and select an identifier type from the Type list to uniquely identify your partner.
 
-. Provide a value for your identifier (and qualifier for X12-ISA) and click *Create identifier* to save your changes. See xref:x12-identity-settings.adoc[Identifiers] for more info on X12-ISA settings.
-
-
-// == See Also
-// Add links to any related errors, if required. You might need to add links about the concept of the component where the error occurs, or perhaps the absence of the requirement which caused the error.
-// * xref:file-name.adoc[link-text]
-//add any pertinent links
+. Provide a value for your identifier (and a qualifier for X12-ISA) and click *Create identifier* to save your changes. See xref:x12-identity-settings.adoc[Identifiers] for more information on X12-ISA settings.

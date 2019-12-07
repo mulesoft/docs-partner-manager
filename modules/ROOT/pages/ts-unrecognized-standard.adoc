@@ -1,10 +1,10 @@
-= In the Anypoint Partner Manager Activity section, I receive a transaction indicating `Unrecognized standard from unrecognized partner`
+= `Unrecognized standard from unrecognized partner`
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Occasionally, in the Activity section of Anypoint Partner Manager, you may see tracking information such as this:
+You might occasionally see tracking information such as this in the Activity section of Anypoint Partner Manager:
 
 [source,xml,linenums]
 ----
@@ -20,10 +20,3 @@ This situation occurs when Partner Manager receives a transmission in unsupporte
 == Solution
 
 If you encounter such a scenario, then verify with your partner that they are sending valid X12 format files.
-
-
-
-// == See Also
-// Add links to any related errors, if required. You might need to add links about the concept of the component where the error occurs, or perhaps the absence of the requirement which caused the error.
-// * xref:file-name.adoc[link-text]
-//add any pertinent links

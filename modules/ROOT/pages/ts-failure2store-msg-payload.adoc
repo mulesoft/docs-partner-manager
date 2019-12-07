@@ -1,10 +1,10 @@
-= In the Anypoint Partner Manager Activity section, I see activities with an error message indicating `Failure to store message payload`
+= `Failure to store message payload`
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Occasionally, in the Activity section of Anypoint Partner Manager, you may see tracking information such as this:
+You might occasionally see tracking information such as this in the Activity section of Anypoint Partner Manager:
 
 [source,xml,linenums]
 ----
@@ -15,7 +15,7 @@ File <name>
 
 == Causes
 
-This situation occurs when one of the following occurs:
+This information appears in the Activity section when one of the following occurs:
 
 ** The payload storage API on the host’s profile is not appropriately configured.
 
@@ -25,18 +25,15 @@ This situation occurs when one of the following occurs:
 
 == Solution
 
-If you encounter such a scenario, then verify the Payload Storage API.
+Take the following actions to verify the Payload Storage API configuration:
 
-. Verify the appropriate configuration for the payload storage API by a simple test request (use a browser extension such as Postman on Google Chrome).
+. Verify the appropriate configuration for the payload storage API by performing a simple test request using a browser extension such as Postman on Google Chrome.
 
-. To view if the payload storage API is active/functioning, visit Anypoint Runtime Manager to verify if the related payload storage app is active and try restarting the app.
+. Visit Anypoint Runtime Manager to verify that the related payload storage API is active and functioning by restarting the app.
 
-. If the payload storage app is functioning, verify the storage source such as the S3 bucket, or Azure Blob store, or database, and so on that you may be using as the storage solution and ensure that this solution is up and functioning.
+. If the payload storage app is functioning, verify that the storage solution you are using (such as the S3 bucket, or Azure Blob store, database, and so on) is up and functioning.
 
-If all these scenarios have been verified successfully, and you still cannot deploy message flows, please raise a case on MuleSoft’s customer portal.
+If all these scenarios have been verified successfully, and you still cannot deploy message flows, please raise a case on the MuleSoft Support Portal.
 
-
-// == See Also
-// Add links to any related errors, if required. You might need to add links about the concept of the component where the error occurs, or perhaps the absence of the requirement which caused the error.
-// * xref:file-name.adoc[link-text]
-//add any pertinent links
+If you have an existing commercial relationship with MuleSoft and are experiencing problems accessing your Anypoint Platform account, you can open a case from the https://help.mulesoft.com/s/support[MuleSoft Support Portal].
+If you can't access the Support Portal, contact your Customer Success Manager or MuleSoft Account Management team for assistance.
