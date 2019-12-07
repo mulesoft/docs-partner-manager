@@ -112,7 +112,7 @@ Ask yourself the following when deleting an identifier: Why do you want to delet
 
 After successfully deleting an identifier, you can create a new identifier with the same value as the one you deleted.
 
-Currently you cannot delete an AS2 identifier.
+You can delete non AS2 identifiers.
 
 . If you need to replace the identifier, record the values and qualifier type needed.
 

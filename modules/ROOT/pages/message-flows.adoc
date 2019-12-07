@@ -1,30 +1,34 @@
-= Message Flows
+= Message Flow Definition and Requirements
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-To receive messages from a trading partner, create a message flow and configure the sections for the source, map, and target.
-Your organization is typically referred to as the host. The enterprise or customer you interact with is referred to as your partner.
+A message flow is the path along which a message travels from its source, through a DataWeave transformation map, to its target.
+You set up message flows to receive messages between your systems and your trading partners. Your organization is typically referred to as the _host_.
+The enterprise or customer you interact with is referred to as your _trading partner_.
 
-The source of the message flow is defined by the partner, a receiving endpoint at the host, often an API, and the message type you are receiving from the partner.
+To receive messages from a trading partner, create a message flow and configure the sections for the source, DataWeave map, and target.
+The source of the message flow is defined by the partner; a receiving endpoint at the host, often an API; and the message type you receive from the partner.
+The DataWeave transformation maps are the ones your organization uses for B2B transformations, and were created using Anypoint Studio before using Partner Manager.
+The target is the final destination of a message flow and is defined by a host message type and endpoint, often a host API.
 
-The target is the final destination of a message flow and is defined by a host message type and endpoint, often a Host API.
+To configure the source section of the message flow, you need the following information:
 
-You'll need the following for the Source:
+* The partner's name and associated identifiers (such as X12-ISA, X12 GS, and so on)
 
-* The partner's name and associated identifiers (such as X12-ISA, X12 GS, and so on).
+* The endpoint where you, as the host, receive transmissions.
 
-* The endpoint where you receive transmissions.
+* The message type to process for this message flow (such as X12, 4010, 850, and so on)
 
-* The message type to process for this message flow (such as X12, 4010, 850, and so on).
+* The endpoint where your partner might want to receive an acknowledgment related to the messages they send.
 
-* The endpoint where your partner may want to receive an acknowledgment related to the messages they send.
+* A DataWeave map to transform the received message contents into a format you can use
 
-* The DataWeave map that transforms the received message contents into a format you can use.
+To configure the target section of the message flow, you need the following information:
 
-You'll need the following for the Target:
+* The message type your system understands.
 
-* The message type your system understands. This is also the format into which DataWeave map transforms received messages.
+This is also the format into which DataWeave map transforms received messages.
 
 * The endpoint in your organization where you route the transformed message.
 
