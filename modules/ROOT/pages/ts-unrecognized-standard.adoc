@@ -1,0 +1,22 @@
+= `Unrecognized standard from unrecognized partner`
+
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+You might occasionally see tracking information such as this in the Activity section of Anypoint Partner Manager:
+
+[source,xml,linenums]
+----
+Unrecognized standard from unrecognized partner
+Received <date>
+File <name>
+----
+
+== Cause
+
+This information appears when Partner Manager receives a transmission in an unsupported data format. For example, receiving a CSV, XML and so forth on receiving endpoints.
+
+== Solution
+
+If you encounter such a scenario, then verify with your partner that they are sending valid X12 format files.

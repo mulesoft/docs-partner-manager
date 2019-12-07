@@ -52,7 +52,7 @@ For example, *Partner Manager > Partner Manager Administrator*: Enables this rol
 You need to do the following from Anypoint Runtime Manager.
 
 . Create a server group in Anypoint Runtime Manager and name it: *B2BServerGroup*.
-All B2B processing Mule apps are deployed to this server group. The steps to setup your server group are in Runtme manager  https://docs.mulesoft.com/runtime-manager/server-group-create[Create a Server Group (Hybrid)].
+All B2B processing Mule apps are deployed to this server group. The steps to set up your server group are in Runtime manager  https://docs.mulesoft.com/runtime-manager/server-group-create[Create a Server Group (Hybrid)].
 
 +
 IMPORTANT: The server group you setup must use the exact name: *B2BServerGroup*. This name is case sensitive.
@@ -103,11 +103,13 @@ https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-stora
 
 * Host, port, and path connection
 
-* Response timeouts
+* Connection Idle and Response timeouts
 
 * Authentication types: None, API Key, Basic, Client Credentials, and OAuth Token
 
-* Certificate (`.PEM` format) and connection type
+* Certificate (`.PEM` format) and connection types
+
+* Decide whether users can download the payload from the transmissions. You can manage your payload storage later.
 +
 You'll need this information while associating Anypoint Partner Manager to your Payload Storage API.
 +
@@ -119,12 +121,11 @@ Ensure that the appropriate authentication mechanisms have been implemented to m
 
 . Select the `Payload storage` section and configure the path to your storage.
 
-. If you want to view the raw payloads of the files you receive or send, select `Allow users to download payloads` while configuring your payload storage API.
+. If you want to view (or have your users view) the raw payloads of the files you receive or send, select `Allow users to download payloads` while configuring your payload storage API.
 
 You are ready to begin to set up message flows between you and your trading partners.
-
 
 == See Also
 
 * xref:B2B-overview.adoc[Use Anypoint Partner Manager]
-* xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner]
+* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]

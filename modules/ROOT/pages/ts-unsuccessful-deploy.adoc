@@ -1,0 +1,60 @@
+= Unsuccessful Message Flow Deployment Error
+
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Afer you’ve set up your message flow and deployed, you might receive an error notification indicating that your deployment is unsuccessful.
+
+== Cause
+
+Any of the following can produce this type of error:
+
+* You do not have the appropriate server group configured or have the wrong name for the server group. 
+* Your runtime servers are either not set up, or are not active.
+* Your payload storage is not set up.
+
+== Solutions
+
+If you encounter these situations such as runtime servers not set up or active, or the payload storage is not set up then please review the following to resolve your issue.
+
+=== Verify Server Group Setup
+
+Verify that your `B2BServerGroup` is active:
+
+. From Anypoint Platform, select Anypoint Runtime Manager and select your environment.
+. Click _Servers_ from the left navigation.
+. Verify that you have a server group named `B2BServerGroup` and that is shows the status: Running.
+
+If you do not have this server group set up, refer to https://docs.mulesoft.com/partner-manager/2.0/setup#associate-mule-runtimes-for-deployment[Associate Mule Runtimes for Deployment].
+
+If you see any status other than Running, refer to https://docs.mulesoft.com/runtime-manager/servers-actions[Shut Down, Delete, or Restart Servers (Hybrid)].
+
+=== Verify Runtime Server Setup
+
+If your B2BServerGroup is in a Running state, then verify your runtime server.
+
+. From Anypoint Platform, select Anypoint Runtime Manager and select your environment.
+. Click Servers from the left navigation.
+. Click `B2BServerGroup`.
+. Within the server group, check for an instance of Mule runtime engine with the status Running.
+
+If you see any status other than Running, refer to https://docs.mulesoft.com/runtime-manager/servers-actions[Shut Down, Delete, or Restart Servers (Hybrid)].
+If you do not see a server within the server group, it means that you do not have a Mule runtime server setup to process your B2B integrations and you should set one up by referring to https://docs.mulesoft.com/partner-manager/2.0/setup#associate-mule-runtimes-for-deployment[Associate Mule Runtimes for Deployment].
+
+=== Verify Payload Storage Setup
+
+Verify that your `Payload Storage` is active:
+
+. From within your Anypoint Partner Manager, Sandbox or Production environment select your <Hostname> profile.
+. Scroll down to the `Payload storage` section and click *Edit*.
+. Review your payload storage configuration.
++
+If it is not configured, refer to https://docs.mulesoft.com/partner-manager/2.0/setup#setup-the-payload-storage-api[Set up the Payload Storage API].
++
+. If your payload storage is already configured, leverage the configuration via a simple test request, using a browser extension such as Postman on Google Chrome to the configured payload storage endpoint.
+
+If all these scenarios have been verified successfully, and you still cannot deploy message flows, please raise a case on the MuleSoft Support Portal.
+
+If you have an existing commercial relationship with MuleSoft and are experiencing problems accessing your Anypoint Platform account, you can open a case from the https://help.mulesoft.com/s/support[MuleSoft Support Portal].
+If you can't access the Support Portal, contact your Customer Success Manager or MuleSoft Account Management team for assistance.

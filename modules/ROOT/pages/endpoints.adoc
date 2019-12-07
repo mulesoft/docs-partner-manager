@@ -13,9 +13,9 @@ These endpoints are resources your organization exposes to your trading partners
 Your organization also has internal endpoints to which it routes messages from the trading partners. The messages routed to the target endpoint are typically validated and transformed before they are routed to the configured target endpoint.
 
 * Acknowledgement endpoints +
-Your partners provide you with their own endpoint configurations to which your organization can send acknowledgments, such as an X12 997 or X12 999. Acknowledgements are typically sent back to trading partners and correspond to one or more B2B messages you receive from your trading partners.
+Your partners provide you with their own endpoint configurations to which your organization can send acknowledgments, such as an X12 997 or X12 999. Acknowledgments are typically sent back to trading partners and correspond to one or more B2B messages you receive from your trading partners.
 
-Refer to the following to configure your endpoint. Your configuration varies based on the protocol and type you use.
+Refer to the following to configure your endpoint. Your configuration varies based on the protocol you are using.
 
 == Endpoint Name, Protocol and Type
 
@@ -52,12 +52,6 @@ Default: None +
 |Type of endpoint
 
 Required: No +
-
-Valid values: +
-
-`SEND` +
-
-`RECEIVE` +
 
 Default: None +
 

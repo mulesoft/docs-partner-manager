@@ -27,12 +27,12 @@ The TA1 ACK is sent inside an ISA/IEA envelope. The ISA and IEA are no different
 
 Default: Disabled
 
-|Send functional acknowledgement when messages fail to route to a message flow
-|Provides a functional Acknowledgement (the receipt and syntactical acceptability of a message) with the exchange.
+|Send functional acknowledgment when messages fail to route to a message flow
+|Provides a functional Acknowledgment (the receipt and syntactical acceptability of a message) with the exchange.
 Functional acknowledgment settings are configured for each message flow.
 They only apply when there is a failure to route the message to one of the message flows.
-There are two types of functional acknowledgements: a 997 and a 999.
-Partner Manager allows you to chose either a 997 or a 999 acknowledgment, but not both concurrently.
+There are two types of functional acknowledgments: a 997 and a 999.
+Partner Manager allows you to choose either a 997 or a 999 acknowledgment, but not both concurrently.
 
 Default: Disabled +
 
@@ -56,7 +56,7 @@ one for each transaction set. This is only if the AK2 loops are generated for ac
 Default: Disabled +
 
 |999 Requested
-|Replaces the 997 Functional Acknowledgement document for use in Healthcare.
+|Replaces the 997 Functional Acknowledgment document for use in Healthcare.
 The X12 999 implementation acknowledgment reports:
 
 * standard syntax errors as well as implementation guide errors.
@@ -77,32 +77,32 @@ Selecting the checkbox (Yes) for any of these options means that all the X12 doc
 |Setting |Description
 
 |Fail document when value length outside allowed range
-|If selected, a transaction with values that are too long or too short is rejected. If unselected, the values are used and the transaction is not rejected. In either case the error is logged and reported in the 997 or 999 acknowledgments.
+|If selected, a transaction with values that are too long or too short is rejected. If unselected, the values are used and the transaction is not rejected. In either case, the error is logged and reported in the 997 or 999 acknowledgments.
 
 Required: No +
 Default: Selected
 
 |Fail document when invalid character in value
-|If selected, a transaction with invalid characters is rejected. If unselected, the characters are either passed through or substituted and the transaction is not rejected. In either case the error is reported in the 997 or 999 acknowledgments.
+|If selected, a transaction with invalid characters is rejected. If unselected, the characters are either passed through or substituted and the transaction is not rejected. In either case, the error is reported in the 997 or 999 acknowledgments.
 
 Required: No +
 
 Default: Not Selected +
 
 |Fail document if value is repeated too many times
-|If selected, a transaction with values that are repeated too many or too few times are rejected. If unselected, the values are accepted and the transaction is not rejected. In either case the error is reported in the 997 or 999 acknowledgments.
+|If selected, a transaction with values that are repeated too many or too few times are rejected. If unselected, the values are accepted and the transaction is not rejected. In either case, the error is reported in the 997 or 999 acknowledgments.
 
 Required: No +
 Default: Selected
 
 |Fail document if unknown segments are used
-|If selected, a transaction containing any unknown segments is rejected. If unselected, unknown segments are ignored and the transaction is not rejected. In either case the error is reported in the 997 or 999 acknowledgments.
+|If selected, a transaction containing any unknown segments is rejected. If unselected, unknown segments are ignored and the transaction is not rejected. In either case, the error is reported in the 997 or 999 acknowledgments.
 
 Required: No +
 Default: Selected
 
 |Fail document when segments are out of order
-|If selected, a transaction with segments that are out of order is rejected. If unselected, the segment can be reordered the transaction is not rejected. In either case the error is reported in the 997 or 999 acknowledgments.
+|If selected, a transaction with segments that are out of order is rejected. If unselected, the segment can be reordered the transaction is not rejected. In either case, the error is reported in the 997 or 999 acknowledgments.
 
 Required: No +
 
@@ -116,7 +116,7 @@ Required: No +
 Default: Selected
 
 |Fail document when unused segments are included
-|If selected, a transaction containing segments marked as unused in the schema is rejected. If unselected, the transaction is not rejected and the unused segments are ignored. In either case the error is reported in the 997 or 999 acknowledgments.
+|If selected, a transaction containing segments marked as unused in the schema is rejected. If unselected, the transaction is not rejected and the unused segments are ignored. In either case, the error is reported in the 997 or 999 acknowledgments.
 
 Required: No +
 
@@ -162,7 +162,7 @@ Selected character set and encoding options pertaining to your partners and/or y
 |Character set
 |Characters allowed in string data. If set, invalid characters are replaced by the substitution character.
 If no substitution character is set or enabled for receive messages in the parser options, they are rejected as errors.
-Either way the invalid characters are logged, and are reported in the 997 functional acknowledgments for the receive messages.
+Either way the invalid characters are logged and are reported in the 997 functional acknowledgments for the receive messages.
 
 Possible values include: `Basic`, `Extended`, `Unrestricted`
 
