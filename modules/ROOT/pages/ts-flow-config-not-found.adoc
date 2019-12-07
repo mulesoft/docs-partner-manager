@@ -38,7 +38,7 @@ It should contain a message identifier string like this: “v004010-810-1548-000
 
 ** 000000001: Message Segment Identifier (ST02)
 
-. From within your Anypoint Partner Manager Sandbox or Production environment select *Message Flows*.
+. From within your Anypoint Partner Manager, Sandbox or Production environment select *Message Flows*.
 
 . If you know the specific flow you are searching for, click on the card related to that flow to expand the associated configurations.
 

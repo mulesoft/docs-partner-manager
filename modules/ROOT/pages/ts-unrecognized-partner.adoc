@@ -43,7 +43,7 @@ Verify that your partner has the appropriate identifiers configured as needed to
 
 Verify that your organization (the host) has the appropriate identifiers configured as needed to support the transmission.
 
-. From within your Anypoint Partner Manager Sandbox or Production environment select *Partners* <name of your organizations / sub-organizations related to this transmission>.
+. From within your Anypoint Partner Manager, Sandbox or Production environment select *Partners* <name of your organizations / sub-organizations related to this transmission>.
 
 . Within the Host’s profile page, scroll to the Identifiers section and verify that the identifier you are looking for is present in the table.
 
