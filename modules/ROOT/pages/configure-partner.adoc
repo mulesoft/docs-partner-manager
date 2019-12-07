@@ -93,9 +93,7 @@ After successfully deleting a partner, you can create a new partner with the sam
 
 Ensure that your on-premise Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager called: `B2BserverGroup` are active and running by contacting your B2B System Administrator or checking the status of the server in Anypoint Runtime Manager (see https://docs.mulesoft.com/runtime-manager/servers-settings[Server Settings]).
 
-+
 NOTE: You cannot delete a partner if the server is not running.
-+
 
 . From within your Anypoint Partner Manager Sandbox or Production environment, select Partner from the upper left.
 
