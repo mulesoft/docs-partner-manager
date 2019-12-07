@@ -10,7 +10,7 @@ Afer you’ve set up your message flow and deployed, you might receive an error 
 
 Any of the following can produce this type of error:
 
-* You do not have the appropriate server group configured or have the wrong name for the server group. Check Verify Server Group Setup.
+* You do not have the appropriate server group configured or have the wrong name for the server group. 
 * Your runtime servers are either not set up, or are not active.
 * Your payload storage is not set up.
 

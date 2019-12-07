@@ -22,7 +22,7 @@ Required: No +
 
 |URL
 |Enter a well-formed URL (including the path) that specifies where the request is to be sent, such as:
-+https://www.mulesoft.com/sendRequest?name=something +
++ https://www.mulesoft.com/sendRequest?name=something +
 Required: Yes +
 
 |Connection Idle Timeout (milliseconds)
