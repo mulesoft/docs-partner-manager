@@ -14,9 +14,9 @@ You can:
 You do not require an additional certificate because this endpoint already uses a CA-signed certificate. +
 
 * Upload your own, self-signed certificate. +
-You can upload a new certificate (`.PEM` format), or view all the certificates available for use with this endpoint setup. +
+You can upload a new certificate (in `.PEM` format), or view all the certificates available for use with this endpoint setup. +
 
-* Enable an insecure connection for a local testing that doesn’t perform certificate validation. +
+* Enable an insecure connection for local testing that doesn’t perform certificate validation. +
 You can use Allow insecure connection. +
 
 Information provided for each certificate: +
@@ -33,4 +33,4 @@ Information provided for each certificate: +
 
 `Expires` is the date from when the certificate can no longer be used. +
 
-`Days to expiration` is the countdown to expiration date. +
+`Days to expiration` is the countdown to the expiration date. +

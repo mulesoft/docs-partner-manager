@@ -11,7 +11,7 @@ To receive messages from a trading partner, create a message flow and configure 
 
 The source of the message flow is defined by the partner; a receiving endpoint at the host, often an API; and the message type you receive from the partner.
 
-The DataWeave transformation maps are the ones your organization uses for B2B transformations, and were created using Anypoint Studio before using Partner Manager.
+The DataWeave transformation maps are the ones your organization uses for B2B transformations and were created using Anypoint Studio before using Partner Manager.
 
 The target is the final destination of a message flow and is defined by a host message type and endpoint, often a host API.
 

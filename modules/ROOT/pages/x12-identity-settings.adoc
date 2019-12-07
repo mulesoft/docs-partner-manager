@@ -8,8 +8,10 @@ For X12 messages, the identifiers in the ISA and GS headers provide valuable inf
 
 == Delete Identifiers
 
-You might want to delete an identifier when it is no longer needed. Consider that deleting an existing host or partner identifier impacts the identification and routing of B2B messages to the associated partner.
-Ask yourself the following when deleting an identifier: Why do you want to delete it? Do you need to replace it with another identifier? Remember that there must always be at least one identifier per message flow before you can delete it.
+You might want to delete an identifier when it is no longer needed.
+Consider that deleting an existing host or partner identifier impacts the identification and routing of B2B messages to the associated partner.
+Ask yourself the following when deleting an identifier: Why do you want to delete it? Do you need to replace it with another identifier?
+Remember that there must always be at least one identifier per message flow.
 
 After successfully deleting an identifier, you can create a new identifier with the same value as the one you deleted.
 
@@ -19,11 +21,11 @@ You can delete non AS2 indentifiers.
 
 . Choose the partner name and click *Receive from <Partner name>* to expand it.
 
-. Select an identifier to the message flow, click *See All*.
+. Select an identifier to the message flow, and click *See All*.
 
-. Hover over the identifier you want to delete and click the trash can icon that appears towards the right hand side of the identifiers row.
+. Hover over the identifier you want to delete and click the trash can icon that appears towards the right-hand side of the identifiers row.
 
-. If you need a replacement, add it now by clicking the New button.
+. If you need a replacement, add it now by clicking *New*.
 
 == X12 - ISA Identifier Values
 

@@ -5,13 +5,7 @@ include::_attributes.adoc[]
 endif::[]
 
 Anypoint Partner Manager makes use of or depends on several different MuleSoft technologies, including but not limited to your Mule runtimes, Anypoint Runtime Manager, Anypoint Secrets Manager, and your infrastructure for B2B storage payloads.
- 
+
 Because Anypoint Partner Manager is used with other technologies, troubleshooting an issue with Anypoint Partner Manager often involves troubleshooting these other technologies.
 
 Use the topic links in the left navigation pane of the documentation to locate troubleshooting information specific to either Anypoint Partner Manager or its related technologies.
-
-
-// == See Also
-// Add links to any related errors, if required. You might need to add links about the concept of the component where the error occurs, or perhaps the absence of the requirement which caused the error.
-// * xref:file-name.adoc[link-text]
-//add any pertinent links

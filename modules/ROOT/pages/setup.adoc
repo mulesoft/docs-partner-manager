@@ -52,7 +52,7 @@ For example, *Partner Manager > Partner Manager Administrator*: Enables this rol
 You need to do the following from Anypoint Runtime Manager.
 
 . Create a server group in Anypoint Runtime Manager and name it: *B2BServerGroup*.
-All B2B processing Mule apps are deployed to this server group. The steps to setup your server group are in Runtme manager  https://docs.mulesoft.com/runtime-manager/server-group-create[Create a Server Group (Hybrid)].
+All B2B processing Mule apps are deployed to this server group. The steps to set up your server group are in Runtime manager  https://docs.mulesoft.com/runtime-manager/server-group-create[Create a Server Group (Hybrid)].
 
 +
 IMPORTANT: The server group you setup must use the exact name: *B2BServerGroup*. This name is case sensitive.
@@ -124,7 +124,6 @@ Ensure that the appropriate authentication mechanisms have been implemented to m
 . If you want to view (or have your users view) the raw payloads of the files you receive or send, select `Allow users to download payloads` while configuring your payload storage API.
 
 You are ready to begin to set up message flows between you and your trading partners.
-
 
 == See Also
 

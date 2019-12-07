@@ -15,7 +15,7 @@ File <name>
 
 == Cause
 
-This situation occurs when Partner Manager receives a transmission in unsupported data format. For example, receiving a CSV, XML and so forth on receiving endpoints.
+This information appears when Partner Manager receives a transmission in an unsupported data format. For example, receiving a CSV, XML and so forth on receiving endpoints.
 
 == Solution
 

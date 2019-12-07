@@ -16,11 +16,11 @@ After a message flow is deployed, you can edit it, or undeploy and delete it.
 == Edit Message Flows
 
 After you establish a successful message flow with your partner, you can edit the flow to add identifiers, endpoints and message types, or add different DataWeave maps.
-Before you make changes, carefully consider the impact to your existing message flow.
+Before you make changes, carefully consider the impact on your existing message flow.
 
 You can also undeploy or delete message flows entirely if your partner relationships change or you want to reclaim Mule resources used for testing.
 
-. From within your Anypoint Partner Manager environment (either Sandbox or Production), click *Message Flows* in the upper left and select a *<Message flow name>* and click it to expand it.
+. From within your Anypoint Partner Manager Sandbox or Production environment click *Message Flows* in the upper left, select a *<Message flow name>* and click it to expand it.
 
 . If you want to add an identifier to the message flow, click *See All* and then *New*.
 
@@ -38,21 +38,21 @@ You can also undeploy or delete message flows entirely if your partner relations
 +
 * xref:document-types.adoc[X12 and JSON Message Types]
 
-.   If you want to set up a target endpoint click *Select* from the Target at <partner name>, and depending on the protocol, refer to one of the following:
+.   If you want to set up a target endpoint click *Select* from the _Target at <partner name>_, and depending on the protocol, refer to one of the following:
 
 * xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
 
 * xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
 
-. Verify that any sections of the flow that you updated show a green checkmark in the interface, and click *Deploy* to deploy the configurations to Mule.
+. Verify that any sections of the flow that you updated show a green checkmark next to them, and click *Deploy* to deploy the configurations to Mule.
 
 +
 NOTE: It may take five minutes or so for your configuration changes to sync with Mule runtime.
 +
 
-. To test your edited message flow. See xref:configure-message-flows.adoc[Configure Message Flows].
+. To test your edited message flow. See xref:configure-message-flows.adoc[Create and Configure a Message Flow].
 
-After you confirm successful deployment of your message flow, you can track its processed messages from the Activity page.
+After you confirm the successful deployment of your message flow, you can track its processed messages from the Activity page.
 
 == Undeploy Message Flows
 
@@ -65,38 +65,45 @@ You can undeploy your message flow from either a sandbox or a production environ
 Before you undeploy a message flow, you must:
 
 Ensure that your on-premise Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager called: `B2BserverGroup` are active and running by contacting your B2B System Administrator or checking the status of the server in Anypoint Runtime Manager (see https://docs.mulesoft.com/runtime-manager/servers-settings[Server Settings]).
+
 Understand that the process takes about five minutes, during which actions such as `Deploy` and `Delete` are unavailable.
-Anypoint Partner Manager checks to see if any of the applications on your Mule runtime are orphaned as a result of the undeployment.
-These applications are cleaned up to release any resources they may be consuming.
 
 IMPORTANT: During this time, do not log out of Anypoint Partner Manager or close your browser window.
 
-. From within your Anypoint Partner Manager environment (either Sandbox or Production), click _Message Flows_ in the upper left and select a message flow.
+. From within your Anypoint Partner Manager Sandbox or Production environment, click _Message Flows_ in the upper left and select a message flow.
 
 . Click *Undeploy* in the upper right.
+
+Anypoint Partner Manager checks to see if any of the applications in your Mule runtime are orphaned as a result of the undeployment.
+These applications are cleaned up to release any resources they may be consuming.
 
 == Delete Message Flows
 
 You might want to delete a message flow when it no longer serves its purpose: for example, if your relationship with your partner changes.
+
 If you delete a message flow before it has been deployed, it does not affect the Mule runtime apps.
+
 Undeploying a message flow is a prerequisite to deleting it. You can delete your message flow from either a sandbox or a production environment.
 
 Before you delete a message flow, you must:
 
 Ensure that your on-premise Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager called: `B2BserverGroup` are active and running by contacting your B2B System Administrator or checking the status of the server in Anypoint Runtime Manager (see https://docs.mulesoft.com/runtime-manager/servers-settings[Server Settings]).
+
 Understand that the process takes about five minutes, during which actions such as `Deploy` and `Delete`  unavailable.
-Anypoint Partner Manager checks to see if any of the applications on your Mule runtime are orphaned as a result of the undeployment.
-These applications are cleaned up to release any resources they may be consuming.
+
 
 IMPORTANT: During this time, do not log out of Anypoint Partner Manager or close your browser window.
 
-. From within your Anypoint Partner Manager environment (either Sandbox or Production), click _Message Flows_ in the upper left and select a message flow.
+. From within your Anypoint Partner Manager Sandbox or Production environment, click _Message Flows_ in the upper left and select a message flow.
 
 . Click *Undeploy* in the upper right.
-
++
+Anypoint Partner Manager checks to see if any of the applications on your Mule runtime are orphaned as a result of the undeployment.
+These applications are cleaned up to release any resources they may be consuming.
++
 . After the undeployment is successful, delete the message flow by clicking  *Delete* in the upper right.
 
-Any previous transmissions that were created as a result of a message being processed via the now-deleted message flow has the following behavior:
+Any previous transmissions that were created as a result of a message being processed via the now-deleted message flow have the following behavior:
 
 * They continue to stay in the transmission records within the Activity page, but the records indicate that the corresponding message flow used to process this transmission is now deleted.
 

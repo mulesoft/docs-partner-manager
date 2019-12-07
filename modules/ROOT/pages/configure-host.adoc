@@ -11,15 +11,16 @@ Within the host page you can do the following:
 
 * Add identifiers to uniquely identify yourself.
 
-* Add digital certificates associated to your organization.
+* Add digital certificates associated with your organization.
 
-* Configure details associated to the Payload Storage API (the same one that was configured as part of the the Setup instructions).
+* Configure details associated with the Payload Storage API (the same one that was configured as part of the Setup instructions).
+
 The storage API is a mandatory configuration where your B2B message payloads are stored.
 
 == Update the Host's Profile
 
 . Open Anypoint Partner Manager and select the name of your organization from the left navigation pane.
-You can configure the your indentifiers, certificates, and the location and configuration of your payload storage.
+You can configure your indentifiers, certificates, and the location and configuration of your payload storage.
 
 . Click *New* within the *Identifiers* section to begin adding an identifier related to your organization.
 

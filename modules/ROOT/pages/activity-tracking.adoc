@@ -43,7 +43,7 @@ After you have established a message flow, you can track its activity.
 
 . Select the transmission and review the summary information. The summary information contains:
 +
-* The status of the transmission indicating either a success (Green check mark), or failure (red circle with an exclamation point).
+* The status of the transmission indicating either a success (Green checkmark) or failure (red circle with an exclamation point).
 
 * The name of the file that was received.
 

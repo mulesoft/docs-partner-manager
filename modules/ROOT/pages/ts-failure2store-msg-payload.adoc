@@ -21,7 +21,7 @@ This information appears in the Activity section when one of the following occur
 
 ** The payload storage API is not functioning.
 
-** The storage solution associated to the payload storage API is not functioning.
+** The storage solution associated with the payload storage API is not functioning.
 
 == Solution
 
@@ -31,7 +31,7 @@ Take the following actions to verify the Payload Storage API configuration:
 
 . Visit Anypoint Runtime Manager to verify that the related payload storage API is active and functioning by restarting the app.
 
-. If the payload storage app is functioning, verify that the storage solution you are using (such as the S3 bucket, or Azure Blob store, database, and so on) is up and functioning.
+. If the payload storage app is functioning, verify that the storage solution you are using (such as the S3 bucket, Azure Blob store, database, and so on) is up and functioning.
 
 If all these scenarios have been verified successfully, and you still cannot deploy message flows, please raise a case on the MuleSoft Support Portal.
 
