@@ -15,8 +15,11 @@ File <name>
 
 == Cause
 
-This information appears when Partner Manager receives a transmission in an unsupported data format. For example, receiving a CSV, XML and so forth on receiving endpoints.
+This information appears when:
+* Partner Manager receives a transmission in an unsupported data format. For example, receiving a PDF, image, and so forth on receiving endpoints.
+* Your trading partner sends you a valid X12 file for which you have not configured a message flow that can handle it.
+* You do not recognize the trading partner i.e. they are not setup by you in Anypoint Partner Manager.
 
 == Solution
 
-If you encounter such a scenario, then verify with your partner that they are sending valid X12 format files.
+If you encounter such a scenario, then verify with your partner that they are sending valid X12 format files, that aligns with the message flows you have created associated to the trading partner.
