@@ -8,7 +8,7 @@ You might occasionally see tracking information such as this in the Activity sec
 
 [source,xml,linenums]
 ----
-<identifier> from Unrecognized partner
+X12 from Unrecognized partner
 <date> control #
 Partner not found for <identifier> with <value>
 ----
@@ -19,17 +19,17 @@ This information appears in the Activity section when one of the following occur
 
 * Partner Manager cannot identify the sender of the transmission either because the partner is not configured in Partner Manager, or because the identifier associated with the partner is not configured.
 
-* Partner Manager cannot identify the host for the transmission because the identifier associated with the host is not configured.
+* Partner Manager cannot identify the receiver for the transmission because the identifier associated with the receiver is not configured.
 
-* Partner Manager cannot identify both the partner and the host of this transmission.
+* Partner Manager cannot identify both the sender and the receiver of this transmission.
 
 == Solutions
 
 Verify partner and host identifiers.
 
-=== Verify Partner Identifiers
+=== Verify Trading Partner's Identifiers
 
-Verify that your partner has the appropriate identifiers configured as needed to support the transmission.
+Verify that your trading partner has the appropriate identifiers configured as needed to support the transmission.
 
 . From within your Anypoint Partner Manager, Sandbox or Production environment select *Partners* <name of your specific partner related to this transmission>.
 
