@@ -1,0 +1,30 @@
+= Missing TA1 acknowledgments for my transmissions
+
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+
+Anypoint Partner Manager sends TA1 ack’s back for any received transmission, if configured to do so.
+
+== Cause
+
+In case you are not receiving TA1 configurations, please review the following configuration.
+
+. From within your Anypoint Partner Manager environment (either Sandbox or Production) select *Partners* and Receive from <Partner_Name>.
+
+. Scroll to Validation and Acknowledgment settings and click *X12*.
+
+. Within the Acknowledgements section ensure that the option for ‘Send TA1 for each transmission from <partner name>’ is selected.
+
+. Configure the Acknowledgement endpoint as in xref:endpoints.adoc[Endpoints]
+
+. Click *Save* when done.
+
+This enables TA1 acknowledgments for all transmissions received by the specific partner.
+
+
+// == See Also
+// Add links to any related errors, if required. You might need to add links about the concept of the component where the error occurs, or perhaps the absence of the requirement which caused the error.
+// * xref:file-name.adoc[link-text]
+//add any pertinent links

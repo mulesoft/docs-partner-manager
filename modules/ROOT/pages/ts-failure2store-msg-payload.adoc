@@ -9,7 +9,7 @@ You might occasionally see tracking information such as this in the Activity sec
 [source,xml,linenums]
 ----
 Unrecognized standard from unrecognized partner
-Received <date>
+Received <datetime>  `Failure to store message payload`
 File <name>
 ----
 
