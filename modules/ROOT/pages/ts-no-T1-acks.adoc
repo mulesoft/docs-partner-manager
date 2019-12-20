@@ -5,9 +5,14 @@ include::_attributes.adoc[]
 endif::[]
 
 
-Anypoint Partner Manager sends TA1 ack’s back for any received transmission, if configured to do so.
+Anypoint Partner Manager sends TA1 acknowledgments back for any received transmission, if configured to do so. Your trading partner may contact you to tell you that they are not receiving TA1 acknowledgements.
 
 == Cause
+Any of the following can lead to this type of error:
+
+. Your trading partners X12 settings are incorrectly configured do not send TA1’s back to the partner.
+
+. The endpoint to which you are sending that TA1’s back may be incorrectly configured.
 
 In case you are not receiving TA1 configurations, please review the following configuration.
 
@@ -22,9 +27,3 @@ In case you are not receiving TA1 configurations, please review the following co
 . Click *Save* when done.
 
 This enables TA1 acknowledgments for all transmissions received by the specific partner.
-
-
-// == See Also
-// Add links to any related errors, if required. You might need to add links about the concept of the component where the error occurs, or perhaps the absence of the requirement which caused the error.
-// * xref:file-name.adoc[link-text]
-//add any pertinent links

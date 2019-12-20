@@ -18,14 +18,21 @@ Any of the following can lead to this type of error:
 
 === Deploy the Changed Message Flow
 
-Once you make changes to your message flow’s configuration, you need to deploy the message flow for the new configurations to become effective on your B2B integration applications. To deploy your message flow:
-Navigate to the Anypoint Partner Manager >> Message Flows
-If you know the specific flow you are looking at, click the card related to that flow to expand the associated configurations.
-In the top right hand side of the flow, you will observe the `Deploy` button. Click on this button to deploy the flow, provide the necessary reason to trigger a new deployment, and please wait for the process to complete.
-When the deployment is successfully completed, Anypoint partner manager will respond with a successful notification in the UI.
+Once you make changes to the message flow configuration, you need to deploy it in order for the new configurations to become effective on your B2B integration applications.
+
+To deploy your message flow after making changes:
+
+. From within your Anypoint Partner Manager environment (either Sandbox or Production) select your <Hostname> profile.
+. Select *Message Flows*.
+. Search for your message flow by name.
+. Once you locate the message flow, click on the message flow card to open it up.
+. Confirm that each sections in the interface shows a green checkmark next to it in the flow, and click Deploy to deploy the configurations to Mule.
+. Provide the necessary reason to trigger a new deployment, and wait for the process to complete.
+
+When the deployment is successfully completed, Anypoint partner manager responds with a successful notification.
 
 === Wait for the Synchronization Window to Complete
-Your runtime B2B integration applications executing on your Mule runtimes,
-receive the latest configuration from the Anypoint Partner Manager control plane at a 5 minute interval.
+
+Your runtime B2B integration applications executing on your Mule runtimes and receives the latest configuration from the Anypoint Partner Manager control plane at a five minute interval.
 Depending on when you made the configuration changes to your message flows in Partner Manager and deployed them,
-it can take a maximum interval of 5 minutes for your most recent changes to be effective on the runtime B2B integration applications.
+It can take a maximum interval of five minutes for your most recent changes to take effect on the runtime B2B integration applications.
