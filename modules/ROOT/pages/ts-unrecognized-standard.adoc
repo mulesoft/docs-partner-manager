@@ -13,7 +13,7 @@ Received <date>
 File <name>
 ----
 
-== Cause
+== Causes
 
 This information appears in the Activity section when one of the following occurs:
 

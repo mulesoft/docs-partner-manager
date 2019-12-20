@@ -39,9 +39,13 @@ that you may be using as the storage solution. Ensure that this solution is up a
 Verify your message flow configuration to ensure it matches the configuration per your partner.
 
 . From within your Anypoint Partner Manager environment (either Sandbox or Production) select your <Hostname> profile.
+
 . Select *Message Flows*.
+
 . Search for your message flow by the partner name or the message type such as 850.
+
 . Once you locate the message flow, click on the message flow card to open it up.
+
 . From the Message flow configurator, verify the following information per your agreement with your trading partner:
 
 ** The correct identifiers are associated with the trading partner.
