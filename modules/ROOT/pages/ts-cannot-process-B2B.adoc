@@ -34,7 +34,6 @@ that you may be using as the storage solution. Ensure that this solution is up a
 ** Try restarting the app.
 ** Test out your payload storage API’s configuration using a browser extension such as Postman on Google Chrome.
 
-
 === Verify Flow configurations
 
 Verify your message flow configuration to ensure it matches the configuration per your partner.
