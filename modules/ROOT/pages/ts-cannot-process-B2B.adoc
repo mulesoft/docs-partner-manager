@@ -8,8 +8,32 @@ You are performing tests on the flow or when your partner sends you B2B messages
 
 == Causes
 
+Any of the following can lead to this type of error:
+* Your payload storage is not setup correctly or it may not be functioning properly.
+
+If the payload storage is not functional, B2B messages are not processed.
+
+* The message flow configuration may not be aligned to the message being received from the partner.
+
+Examples of incorrect message flow configuration include - incorrect or missing identifiers, incorrect message types, and so forth.
+
+* Your Mule runtimes servers that process your B2B integration workloads may not be functioning properly.
+
+This can happen because your servers may be inactive, the apps may not be functioning correctly, and so forth.
 
 == Solutions
+
+=== Verify Payload Storage
+
+Verify the appropriate configuration for the payload storage API.
+
+* If the payload storage app is functioning, verify the storage source (the S3 bucket, or Azure Blob store, or database, and so on)
+that you may be using as the storage solution. Ensure that this solution is up and functioning.
+
+* To view if the payload storage API is active/functioning, open Anypoint Runtime Manager to verify if the related payload storage app is active.
+** Try restarting the app.
+** Test out your payload storage API’s configuration using a browser extension such as Postman on Google Chrome.
+
 
 === Verify Flow configurations
 
@@ -75,10 +99,4 @@ Consider the following when performing a delete:
 
 ** If you delete any of the inbound and/or outbound and/or ack apps, you have to redeploy the specific flow corresponding to the deleted apps.
 
-If all these scenarios have been verified successfully, and you still cannot deploy message flows, please raise a case on MuleSoft’s customer portal.
-
-
-// == See Also
-// Add links to any related errors, if required. You might need to add links about the concept of the component where the error occurs, or perhaps the absence of the requirement which caused the error.
-// * xref:file-name.adoc[link-text]
-//add any pertinent links
+If you can't access the Support Portal, contact your Customer Success Manager or MuleSoft Account Management team for assistance.
