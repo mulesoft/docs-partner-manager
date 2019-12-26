@@ -17,7 +17,7 @@ File <name>
 
 This information appears in the Activity section when one of the following occurs:
 
-* Partner Manager receives a transmission that is in an unsupported data format. For example, receiving a PDF, image, and so forth on receiving endpoints.
+* Partner Manager receives a transmission that is in an unsupported data format: for example, receiving a PDF, image, and so forth on receiving endpoints.
 
 * Your trading partner sends you a valid X12 file but you have not configured a message flow that can accept it.
 
@@ -25,4 +25,4 @@ This information appears in the Activity section when one of the following occur
 
 == Solution
 
-If you encounter any of these situations, then verify with your partner that they are sending valid X12 format files that align with the message flows you have created and associated to the trading partner.
+If you encounter any of these situations, then verify with your partner that they are sending valid X12 format files that align with the message flows you have created and associated with that trading partner.
