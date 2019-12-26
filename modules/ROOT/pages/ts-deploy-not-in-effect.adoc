@@ -1,38 +1,40 @@
-= I recently updated and deployed my message flow, however, the configurations haven’t taken effect on the runtime B2B apps. Did I do this incorrectly?
+= I recently updated and deployed my message flow. However, the configurations haven’t taken effect on the runtime B2B apps. Did I do this incorrectly?
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-As you continue to use Anypoint Partner Manager, you may find the need to update the configuration associated with a previously deployed message flow.
+As you continue to use Anypoint Partner Manager, you might need to update the configuration associated with a previously deployed message flow.
 After updating the configuration, you still find your message flow executing with the previous or older set of configurations.
 
 == Causes
 
 Any of the following can lead to this type of error:
-* You may have not deployed the message flow after making changes to the message flow’s configuration.
-* You may be within the five minute synchronization window for changes from Anypoint Partner Manager to reflect on your B2B integration applications.
+* You might have not deployed the message flow after making changes to the message flow’s configuration.
+* You might be within the five-minute synchronization window for changes from Anypoint Partner Manager to reflect on your B2B integration applications.
 
 
 == Solutions
 
+You can deploy the changed message flow or wait for the synchronization window to complete.
+
 === Deploy the Changed Message Flow
 
-Once you make changes to the message flow configuration, you need to deploy it in order for the new configurations to become effective on your B2B integration applications.
+After you make changes to the message flow configuration, you must deploy it in order for the new configurations to become effective on your B2B integration applications.
 
 To deploy your message flow after making changes:
 
-. From within your Anypoint Partner Manager environment (either Sandbox or Production) select your <Hostname> profile.
+. From within your Anypoint Partner Manager environment (either Sandbox or Production), select your <Hostname> profile.
 . Select *Message Flows*.
 . Search for your message flow by name.
-. Once you locate the message flow, click on the message flow card to open it up.
-. Confirm that each sections in the interface shows a green checkmark next to it in the flow, and click Deploy to deploy the configurations to Mule.
+. After you locate the message flow, click on the message flow card to open it.
+. Confirm that each section in the flow shown in the interface displays a green checkmark next to it, and click Deploy to deploy the configurations to Mule.
 . Provide the necessary reason to trigger a new deployment, and wait for the process to complete.
 
 When the deployment is successfully completed, Anypoint partner manager responds with a successful notification.
 
-=== Wait for the Synchronization Window to Complete
+=== Wait for the Synchronization Window to Complete for all changes
 
-Your runtime B2B integration applications executing on your Mule runtimes and receives the latest configuration from the Anypoint Partner Manager control plane at a five minute interval.
+Your runtime B2B integration applications executing on your Mule runtimes receives the latest configuration from the Anypoint Partner Manager control plane at five-minute intervals.
 Depending on when you made the configuration changes to your message flows in Partner Manager and deployed them,
-It can take a maximum interval of five minutes for your most recent changes to take effect on the runtime B2B integration applications.
+it can take up to five minutes for those changes to take effect on the runtime B2B integration applications.
