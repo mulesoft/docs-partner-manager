@@ -93,7 +93,6 @@ The names of these apps are prefaced with outbound-
 
 The names of these apps are prefaced with ack-
 
-+
 
 . If any of the B2B integration apps do not have a started status, from Anypoint Platform, select Anypoint Runtime Manager and *Applications*.
 

@@ -10,7 +10,9 @@ After updating the configuration, you still find your message flow executing wit
 == Causes
 
 Any of the following can lead to this type of error:
+
 * You might have not deployed the message flow after making changes to the message flow’s configuration.
+
 * You might be within the five-minute synchronization window for changes from Anypoint Partner Manager to reflect on your B2B integration applications.
 
 
