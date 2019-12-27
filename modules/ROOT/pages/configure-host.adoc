@@ -35,9 +35,25 @@ For example, depending on your setup, select one of the following: AS2, DUNS num
 +
 NOTE: If a single certificate is uploaded, Partner Manager prevents you from deleting your only certificate.
 +
-. (Optional) Click *Edit* within the *Payload storage* section to change any of the information that was completed when the payload storage was set up. For example, URL location, timeout settings, and acknowledgments.
+. Click *New* from within Endpoints: Receive from partners or Endpoints: Targets at <partner name> for the Host, and select your protocol type.
+
+. Set up your endpoint based on the protocol type you selected.
+
+For more information on your protocol type refer to:
+
+* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
+
+* xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
+
+. Save when you are done.
+
+. If you need to change any of the information that was completed when the payload storage was set up, click *Edit* within the *Payload storage* section.
+
+For example, URL location, timeout settings, and acknowledgments.
 
 Refer to xref:x12-identity-settings.adoc[Identifiers] for information on deleting an identifier.
+
+Refer to xref:endpoints.adoc[Endpoint Types and Protocols] for information on deleting an endpoint.
 
 == See Also
 

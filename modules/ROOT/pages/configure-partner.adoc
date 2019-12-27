@@ -32,6 +32,20 @@ For example, depending on your setup, select one of the following: AS2 ID, X12-I
 
 See xref:x12-identity-settings.adoc[Identifiers] for more info on X12 Identity settings.
 
+. Click *Create partner*.
+
+. If you want to add an endpoint now, click *New* under _Endpoints: Send to <partner name>_.
+
+. Select the Protocol-Type of the Endpoint for which you are entering settings.
+
+. Set up your endpoint based on the protocol type you selected.
+
+For more information on your protocol type refer to:
+
+* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
+
+* xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
+
 You can now setup message flows related to this trading partner by using xref:configure-message-flows.adoc[Create a Message Flow] or continue to update this partner.
 
 == Update a Partner's Profile
@@ -125,6 +139,19 @@ You can delete non AS2 identifiers such as all X12 ISA, X12 GS, and DUNS identif
 . Hover over the identifier you want to delete and click the trash can icon that appears towards the right-hand side of the identifiers row.
 
 . If you need a replacement, add it now by clicking *New*.
+
+== Delete Endpoints
+
+You can delete any endpoints that are not used in any message flow configurations.
+
+. From within your Anypoint Partner Manager Sandbox or Production environment, select <host partner name> from the upper left.
+
+. _From Endpoints: Send to <partner name>_ search for the endpoint you want to delete by Name, Protocol, URL, or Description.
+
+If you can’t remember what to search for, scan the list for any endpoints that don’t have a message flow associated with them.
+
+. Hover over the endpoint name with your mouse until you see the garbage can icon, click it and click *Delete*.
+
 
 == See Also
 
