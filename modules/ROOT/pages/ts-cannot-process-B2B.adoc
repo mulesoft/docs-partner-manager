@@ -94,7 +94,9 @@ The names of these apps are prefaced with outbound-
 The names of these apps are prefaced with ack-
 
 
-. If any of the B2B integration apps do not have a started status, from Anypoint Platform, select Anypoint Runtime Manager and *Applications*.
+For any of the B2B integration apps that do not have a started status:
+
+. From Anypoint Platform, select Anypoint Runtime Manager and *Applications*.
 
 . For each app that does not have started status, select its row in the table and select *Restart* from the drop-down menu in the upper right of the status area in the information panel.
 
