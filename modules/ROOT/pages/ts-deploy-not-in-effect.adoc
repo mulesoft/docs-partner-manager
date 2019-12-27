@@ -5,7 +5,7 @@ include::_attributes.adoc[]
 endif::[]
 
 As you continue to use Anypoint Partner Manager, you might need to update the configuration associated with a previously deployed message flow.
-After updating the configuration, you still find your message flow executing with the previous or older set of configurations.
+For example, after updating the configuration, you still find your message flow executing with the previous or older set of configurations.
 
 == Causes
 
@@ -35,7 +35,7 @@ To deploy your message flow after making changes:
 
 When the deployment is successfully completed, Anypoint partner manager responds with a successful notification.
 
-=== Wait for the Synchronization Window to Complete for all changes
+=== Wait for the Synchronization Window to Complete for All Changes
 
 Your runtime B2B integration applications executing on your Mule runtimes receives the latest configuration from the Anypoint Partner Manager control plane at five-minute intervals.
 Depending on when you made the configuration changes to your message flows in Partner Manager and deployed them,
