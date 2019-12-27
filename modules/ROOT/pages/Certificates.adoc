@@ -19,6 +19,9 @@ You can upload a new certificate (in `.PEM` format), or view all the certificate
 * Enable an insecure connection for local testing that doesn’t perform certificate validation. +
 You can use Allow insecure connection. +
 
+If a single certificate is uploaded, Partner Manager prevents you from deleting your only certificate.
+Otherwise, you can delete any certificates that are not deployed or associated with endpoints. 
+
 Information provided for each certificate: +
 
 `Authority` is the certificate provider. +

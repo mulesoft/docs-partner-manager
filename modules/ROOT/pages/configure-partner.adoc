@@ -62,6 +62,10 @@ See xref:x12-identity-settings.adoc[Identifiers] for more info on X12 settings.
 
 . Click *New* within the *Certificates* section to upload any needed digital certificates. This is your partner's digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
 
++
+NOTE: If a single certificate is uploaded, Partner Manager prevents you from deleting your only certificate.
++
+
 * Click *Choose file* to select and upload the certificate.
 
 * Click *Upload certificate* (typically a .PEM file provided by your trading partner) to upload the chosen digital certificate file.
