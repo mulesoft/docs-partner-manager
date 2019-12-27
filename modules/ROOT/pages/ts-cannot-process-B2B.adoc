@@ -1,0 +1,113 @@
+= Cannot process B2B transactions successfully
+
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+You discover that transactions are not being processed when you test the message flow or when your partner sends you B2B messages.
+
+== Causes
+
+Any of the following can lead to this type of error:
+
+* Your payload storage is not set up correctly or is not functioning properly.
+
+If the payload storage is not functional, B2B messages are not processed.
+
+* The message flow configuration is not aligned with the message being received from the partner.
+
+Examples of incorrect message flow configuration include incorrect or missing identifiers, incorrect message types, and so forth.
+
+* The Mule servers that process your B2B integration workloads are not functioning properly.
+
+For example, your servers can be inactive, the apps might not be functioning correctly, and so forth.
+
+== Solutions
+
+You'll need to perform some verifications with your payload storage or flow configurations.
+
+=== Verify Payload Storage
+
+Verify the appropriate configuration for the payload storage API.
+
+If the payload storage app is functioning, verify that the storage source (the S3 bucket, or Azure Blob store, or database, and so on)
+that you are using as the storage solution is up and functioning.
+
+* Open Anypoint Runtime Manager to verify if the related payload storage app is active.
+* Try restarting the app.
+* Test your payload storage API configuration using a browser extension such as Postman on Google Chrome.
+
+=== Verify Flow Configurations
+
+Verify that your message flow configuration is compatible with that of your partner.
+
+. From within your Anypoint Partner Manager environment (either Sandbox or Production), select your <Hostname> profile.
+
+. Select *Message Flows*.
+
+. Search for your message flow by the partner name or the message type such as 850.
+
+. After you locate the message flow, click on the message flow card to open it up.
+
+. From the message flow configurator, verify that the following information is in accordance with your agreement with your trading partner:
+
+** The correct identifiers are associated with the trading partner.
+
+** The appropriate receive endpoint is configured in the flow.
+
+** The appropriate document type (such as X12, version - 4010, or message type - 850) is configured.
+
+** Verify that you have the appropriate acknowledgment configuration.
+
+** Verify that you have an appropriate DataWeave map in the transformation section.
+
+** Verify that you have configured an appropriate target, such as both the message type of the target and the associated endpoint configuration.
+
+. If all of these look good, then ensure that the last deployment for this flow was successful by viewing the latest deployment history on the right side of the flow.
+
+. If you observe a Failed status, try to deploy the message flow to ensure all your configurations have persisted on the Mule apps.
+
+NOTE: It can take up to five minutes for your most recent changes to be effective on the runtime B2B Mule apps.
+
+=== Verify B2B Integration Apps
+
+Verify that your B2B integration apps are active.
+
+. From Anypoint platform, select Anypoint Runtime Manager and *Applications*.
+
+. Verify that the B2B apps on Mule are active by looking for a status of `started`. The list of apps includes:
+
+* APIReplicationService
+
+* DocumentProcessingService
+
+* One or more inbound apps.
+
+The names of these apps are prefaced with inbound-
+
+* One or more outbound apps.
+
+The names of these apps are prefaced with outbound-
+
+* Possibly one or more acknowledgment apps.
+
+The names of these apps are prefaced with ack-
+
+
+For any of the B2B integration apps that do not have a started status:
+
+. From Anypoint Platform, select Anypoint Runtime Manager and *Applications*.
+
+. For each app that does not have started status, select its row in the table and select *Restart* from the drop-down menu in the upper right of the status area in the information panel.
+
+. If restarting the app does not help you recover the application, select its row in the table and select *Delete* from the drop-down menu in the upper right of the status area in the information panel and confirm the deletion.
+
+. Navigate back to the message flow related to the app you just deleted and deploy the message flow.
+
+Consider the following when performing a delete:
+
+** If you delete the `DocumentProcessingService` or the `APIReplicationService`, deploying any flow results in the redeployment of those apps.
+
+** If you delete any of the inbound and/or outbound and/or ack apps, you have to redeploy the specific flow corresponding to the deleted apps.
+
+If you can't access the Support Portal, contact your Customer Success Manager or MuleSoft Account Management team for assistance.

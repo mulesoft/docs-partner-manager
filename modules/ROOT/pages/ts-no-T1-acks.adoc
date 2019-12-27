@@ -1,0 +1,33 @@
+= Missing TA1 acknowledgments for my transmissions
+
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+
+Anypoint Partner Manager sends TA1 acknowledgments for a received transmission if configured to do so.
+Your trading partner might contact you to tell you that they are not receiving TA1 acknowledgments.
+
+== Causes
+
+Any of the following can lead to this type of error:
+
+* The X12 settings for your trading partners are not configured to send TA1’s back to the partner.
+
+* The endpoint to which you are sending that TA1’s back may be incorrectly configured.
+
+== Solution
+
+If you are not receiving TA1 configurations, review the following configuration:
+
+. From within your Anypoint Partner Manager environment (either Sandbox or Production), select *Partners* and *Receive from <Partner_Name>*.
+
+. Scroll to Validation and Acknowledgment settings and click *X12*.
+
+. Within the Acknowledgements section, ensure that the option for _Send TA1 for each transmission from <partner name>_ is selected.
+
+. Configure the Acknowledgement endpoint as in xref:endpoints.adoc[Endpoints].
+
+. Click *Save* when done.
+
+This enables TA1 acknowledgments for all transmissions received by the specific partner.
