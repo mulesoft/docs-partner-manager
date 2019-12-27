@@ -74,5 +74,5 @@ Examining this can help determine where there might be a problem in the message 
 
 == See Also
 
-* xref:B2B-overview.adoc[Use Anypoint Partner Manager]
+* xref:B2B-overview.adoc[Configure Anypoint Partner Manager]
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
