@@ -1,4 +1,4 @@
-= I recently updated and deployed my message flow. However, the configurations haven’t taken effect on the runtime B2B apps. Did I do this incorrectly?
+= Updated message flow configuration does not take effect on the runtime B2B integration applications
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
