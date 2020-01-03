@@ -35,7 +35,7 @@ For example, depending on your setup, select one of the following: AS2, DUNS num
 +
 NOTE: If a single certificate is uploaded, Partner Manager prevents you from deleting your only certificate.
 +
-. Click *New* from within Endpoints: Receive from partners or Endpoints: Targets at <partner name> for the Host, and select your protocol type.
+. Click *New* from within _Endpoints: Receive from partners_ or _Endpoints: Targets at <partner name>_ for the Host, and select your protocol type.
 
 . Set up your endpoint based on the protocol type you selected.
 
