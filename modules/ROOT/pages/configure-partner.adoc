@@ -142,14 +142,14 @@ You can delete non AS2 identifiers such as all X12 ISA, X12 GS, and DUNS identif
 
 == Delete Endpoints
 
-You can delete any endpoints that are not used in any message flow configurations.
+You can delete any endpoints that are not used in a message flow configuration.
 
 . From within your Anypoint Partner Manager Sandbox or Production environment, select <host partner name> from the upper left.
 
-. _From Endpoints: Send to <partner name>_ search for the endpoint you want to delete by Name, Protocol, URL, or Description.
-
+. From _Endpoints: Send to <partner name>_ search for the endpoint you want to delete by Name, Protocol, URL, or Description.
++
 If you can’t remember what to search for, scan the list for any endpoints that don’t have a message flow associated with them.
-
++
 . Hover over the endpoint name with your mouse until you see the garbage can icon, click it and click *Delete*.
 
 
