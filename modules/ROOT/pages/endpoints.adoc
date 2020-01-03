@@ -83,6 +83,6 @@ From either the Partner or Host page, you can delete any endpoints that are not 
 +
 You can perform a search from within _Endpoints: Receive from partners_, _Endpoints: Targets at <partner name>_ for the Host, or _Endpoints: Send to <partner name>_ for your partners.
 
-. If you can’t remember what to search for, scan the list for any endpoints that don’t have a message flow associated with them indicated by a 0 in the message flow column.
+. If you can’t remember what to search for, scan the list for any endpoints that don’t have a message flow associated with them. These are indicated by a 0 in the message flow column.
 
 . Hover over the endpoint name with your mouse until you see the garbage can icon, click it and click *Delete*.
