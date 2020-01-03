@@ -38,13 +38,13 @@ NOTE: If a single certificate is uploaded, Partner Manager prevents you from del
 . Click *New* from within _Endpoints: Receive from partners_ or _Endpoints: Targets at <partner name>_ for the Host, and select your protocol type.
 
 . Set up your endpoint based on the protocol type you selected.
-
++
 For more information on your protocol type refer to:
 
 * xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
 
 * xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
-
++
 . Save when you are done.
 
 . If you need to change any of the information that was completed when the payload storage was set up, click *Edit* within the *Payload storage* section.
