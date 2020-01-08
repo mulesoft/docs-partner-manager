@@ -43,7 +43,7 @@ For more information about your protocol type refer to:
 
 * xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
 +
-. Save when you are done.
+. Click *Save* when you are done.
 
 . If you need to make changes later, click *Edit* within the *Payload storage* section.
 
