@@ -34,15 +34,15 @@ You can also undeploy or delete message flows entirely if your partner relations
 +
 . If you want to replace your existing DataWeave map, click *Import* from the Map section to choose a different DataWeave map and click *Upload mapping*.
 +
-** If you want to examine the map, you can download the `.dwl` file by clicking its name link.
+. If you want to examine the map, you can download it by clicking its <name>.dwl link.
 +
-For more information on DataWeave map files, https://docs.mulesoft.com/mule-runtime/4.1/dataweave[DataWeave Language]
+For more information about DataWeave map files, https://docs.mulesoft.com/mule-runtime/4.1/dataweave[DataWeave Language]
 +
 . If you want to add a message type, click *Select* under the Source message, select *New*, and select a standard type such as X12 or JSON.
 +
 * xref:document-types.adoc[X12 and JSON Message Types]
 +
-.   If you want to set up a target endpoint click *Select* from the _Target at <partner name>_, and depending on the protocol, refer to one of the following:
+. If you want to set up a target endpoint, click *Select* from the _Target at <partner name>_, and depending on the protocol, refer to one of the following:
 +
 * xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
 
