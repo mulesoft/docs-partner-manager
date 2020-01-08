@@ -38,7 +38,7 @@ You can also undeploy or delete message flows entirely if your partner relations
 +
 For more information about DataWeave map files, https://docs.mulesoft.com/mule-runtime/4.1/dataweave[DataWeave Language]
 +
-. If you want to add a message type, click *Select* under the Source message, select *New*, and select a standard type such as X12 or JSON.
+. If you want to add a message type, click *Select* under the Source message, select *New*, and select a standard type such as X12 or JSON:
 +
 * xref:document-types.adoc[X12 and JSON Message Types]
 +
