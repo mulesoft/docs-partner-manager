@@ -1,4 +1,4 @@
-== SFTP Receive Endpoint Settings
+= SFTP Receive Endpoint Settings
 
 Use these to set up SFTP endpoint settings to receive inbound files from your trading partners.
 
