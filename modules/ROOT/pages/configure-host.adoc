@@ -31,7 +31,8 @@ For example, depending on your setup, select one of the following: AS2, DUNS num
 
 . Click *New* within the *Certificates* section to begin to upload any needed digital certificates (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
 
-. Click *Choose file* to select the certificate (typically a `.PEM` file), and click *Upload certificate* to upload your chosen certificate file. See xref:Certificates.adoc[Certificates] for more information about configuring certificates in Partner Manager.
+. Click *Choose file* to select the certificate (typically a `<certificate name>.PEM` file), and click *Upload certificate* to upload your chosen certificate file.
+See xref:Certificates.adoc[Certificates] for more information about configuring certificates in Partner Manager.
 
 . Click *New* from within _Endpoints: Receive from partners_ or _Endpoints: Targets at <partner name>_ for the Host, and select your protocol type.
 
