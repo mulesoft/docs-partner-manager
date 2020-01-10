@@ -29,11 +29,9 @@ From the Partner detail page you can:
 For example, depending on your setup, select one of the following: AS2 ID, X12-ISA, X12 GS, or the DUNS number.
 
 . Provide a value for your identifier (and qualifier for X12-ISA) and click *Create partner* to create your trading partner.
-
++
 See xref:x12-identity-settings.adoc[Identifiers] for more information about X12 Identity settings.
-
-. Click *Create partner*.
-
++
 . If you want to add an endpoint now, click *New* under _Endpoints: Send to <partner name>_.
 
 . Select the Protocol-Type of the Endpoint for which you are entering settings.
