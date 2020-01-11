@@ -71,4 +71,20 @@ Select the section that corresponds to the Protocol-Type of the Endpoint for whi
 
 * xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
 
-=======
+// ====
+
+== Delete Endpoints
+
+From either the Partner or Host page, you can delete any endpoints that are not used in message flow configurations:
+
+. From within your Anypoint Partner Manager Sandbox or Production environment, select Partner or <host partner name> from the upper left.
+
+. Search for the endpoint you want to delete by name, protocol, URL, or description.
++
+You can search from within _Endpoints: Receive from partners_, _Endpoints: Targets at <partner name>_ for the Host, or _Endpoints: Send to <partner name>_ for your partners.
+
+. If you can’t remember what to search for, scan the list for any endpoints that don’t have a message flow associated with them.
++
+These are indicated by a 0 in the message flow column.
++
+. Hover over the endpoint name until you see the garbage can icon, click it and then click *Delete*.
