@@ -29,8 +29,20 @@ From the Partner detail page you can:
 For example, depending on your setup, select one of the following: AS2 ID, X12-ISA, X12 GS, or the DUNS number.
 
 . Provide a value for your identifier (and qualifier for X12-ISA) and click *Create partner* to create your trading partner.
++
+See xref:x12-identity-settings.adoc[Identifiers] for more information about X12 Identity settings.
++
+. If you want to add an endpoint now, click *New* under _Endpoints: Send to <partner name>_.
 
-See xref:x12-identity-settings.adoc[Identifiers] for more info on X12 Identity settings.
+. Select the Protocol-Type of the Endpoint for which you are entering settings.
+
+. Set up your endpoint based on the protocol type you selected.
+
+For more information about your protocol type refer to:
+
+* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
+
+* xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
 
 You can now setup message flows related to this trading partner by using xref:configure-message-flows.adoc[Create a Message Flow] or continue to update this partner.
 
@@ -58,15 +70,19 @@ You can add the following information for each trading partner from the *Partner
 For example, depending on your setup, select one of the following: AS2 ID, X12-ISA, X12 GS, or the DUNS number.
 
 * Provide a value for your identifier (and qualifier for X12-ISA) and click *Create identifier* to save your changes.
-See xref:x12-identity-settings.adoc[Identifiers] for more info on X12 settings.
+See xref:x12-identity-settings.adoc[Identifiers] for more information about X12 settings.
 
 . Click *New* within the *Certificates* section to upload any needed digital certificates. This is your partner's digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
 
++
+NOTE: If a single certificate is uploaded, Partner Manager prevents you from deleting your only certificate.
++
+
 * Click *Choose file* to select and upload the certificate.
 
-* Click *Upload certificate* (typically a .PEM file provided by your trading partner) to upload the chosen digital certificate file.
+* Click *Upload certificate* (typically a `<certificate name>.pem` file provided by your trading partner) to upload the chosen digital certificate file.
 +
-View information about an uploaded certificate by clicking its link. See xref:Certificates.adoc[Certificates] for more info on configuring certificates in Partner Manager.
+View information about an uploaded certificate by clicking its link. See xref:Certificates.adoc[Certificates] for more information about configuring certificates in Partner Manager.
 +
 . Configure X12 validation settings that can be used for all message flows that you are configuring with your trading partners. These include:
 
@@ -121,6 +137,19 @@ You can delete non AS2 identifiers such as all X12 ISA, X12 GS, and DUNS identif
 . Hover over the identifier you want to delete and click the trash can icon that appears towards the right-hand side of the identifiers row.
 
 . If you need a replacement, add it now by clicking *New*.
+
+== Delete Endpoints
+
+You can delete any endpoints that are not used in a message flow configuration:
+
+. From within your Anypoint Partner Manager Sandbox or Production environment, select <host partner name> from the upper left.
+
+. From _Endpoints: Send to <partner name>_, search for the endpoint you want to delete by name, protocol, URL, or description.
++
+If you can’t remember what to search for, scan the list for any endpoints that don’t have a message flow associated with them. These are indicated by a 0 in the message flow column.
++
+. Hover over the endpoint name until you see the garbage can icon, click the icon, and then click *Delete*.
+
 
 == See Also
 

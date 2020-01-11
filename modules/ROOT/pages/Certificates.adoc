@@ -14,10 +14,13 @@ You can:
 You do not require an additional certificate because this endpoint already uses a CA-signed certificate. +
 
 * Upload your own, self-signed certificate. +
-You can upload a new certificate (in `.PEM` format), or view all the certificates available for use with this endpoint setup. +
+You can upload a new certificate (in `<certifcate name>.PEM` format), or view all the certificates available for use with this endpoint setup. +
 
 * Enable an insecure connection for local testing that doesn’t perform certificate validation. +
 You can use Allow insecure connection. +
+
+If a single certificate is uploaded, Partner Manager prevents you from deleting your only certificate.
+Otherwise, you can delete any certificates that are not deployed or associated with endpoints.
 
 Information provided for each certificate: +
 

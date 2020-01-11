@@ -27,15 +27,32 @@ You can configure your indentifiers, certificates, and the location and configur
 . Select an identifier type from the *Type* drop-down menu. This uniquely identifies you.
 For example, depending on your setup, select one of the following: AS2, DUNS number, X12 GS, or X12-ISA.
 
-. Provide a value for your identifier (and qualifier for X12-ISA) and click *Create identifier* to save your changes. See xref:x12-identity-settings.adoc[Identifiers] for more information on X12-ISA settings.
+. Provide a value for your identifier (and qualifier for X12-ISA) and click *Create identifier* to save your changes. See xref:x12-identity-settings.adoc[Identifiers] for more information about X12-ISA settings.
 
 . Click *New* within the *Certificates* section to begin to upload any needed digital certificates (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
 
-. Click *Choose file* to select the certificate (typically a `.PEM` file), and click *Upload certificate* to upload the chosen digital certificate file. See xref:Certificates.adoc[Certificates] for more info on configuring certificates in Partner Manager.
+. Click *Choose file* to select the certificate (typically a `<certificate name>.PEM` file), and click *Upload certificate* to upload your chosen certificate file.
+See xref:Certificates.adoc[Certificates] for more information about configuring certificates in Partner Manager.
 
-. (Optional) Click *Edit* within the *Payload storage* section to change any of the information that was completed when the payload storage was set up. For example, URL location, timeout settings, and acknowledgments.
+. Click *New* from within _Endpoints: Receive from partners_ or _Endpoints: Targets at <partner name>_ for the Host, and select your protocol type.
 
-Refer to xref:x12-identity-settings.adoc[Identifiers] for information on deleting an identifier.
+. Set up your endpoint based on the protocol type you selected.
++
+For more information about your protocol type refer to:
+
+* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
+
+* xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
++
+. Click *Save* when you are done.
+
+. If you need to make changes later, click *Edit* within the *Payload storage* section.
+
+For example, you changing the URL location, timeout settings, or acknowledgments.
+
+Refer to xref:x12-identity-settings.adoc[Identifiers] for information about deleting an identifier.
+
+Refer to xref:endpoints.adoc[Endpoint Types and Protocols] for information about deleting an endpoint.
 
 == See Also
 
