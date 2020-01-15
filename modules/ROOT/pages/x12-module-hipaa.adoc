@@ -426,4 +426,4 @@ without needing to work with multiple files.
 * https://en.wikipedia.org/wiki/X12_Document_List[X12 Document List].
 * http://mulesoft.github.com/edi-module[EDI module reference].
 * https://forums.mulesoft.com[MuleSoft Forum]
-* https://support.mulesoft.com[Contact MuleSoft Support]
+* https://help.mulesoft.com[Contact MuleSoft Support]
