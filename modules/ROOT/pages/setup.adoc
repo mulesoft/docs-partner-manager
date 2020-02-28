@@ -31,7 +31,10 @@ Make sure you have the required Mule runtime capacity to handle your B2B transac
 +
 If you are unsure about the Mule runtime capacity required to handle your B2B transactions, contact your MuleSoft account representative for assistance.
 +
-* A storage solution to store the B2B transmission payloads you send or receive. Storage options can include a Database, Amazon S3, Azure Blob Storage, and so on.
+* A storage solution to store the B2B transmission payloads you send or receive.
++
+Storage options can include a Database, Amazon S3, Azure Blob Storage, and so on.
++
 
 * Anypoint Studio 7.4 or higher.
 
