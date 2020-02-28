@@ -83,7 +83,7 @@ wrapper.java.maxmemory=4606
 
 ----
 
-. Install your license. See https://docs.mulesoft.com/mule-runtime/4.2/installing-an-enterprise-license for more information.
+. Install your license. See https://docs.mulesoft.com/mule-runtime/4.2/installing-an-enterprise-license[Install an Enterprise License] for more information.
 
 . Add the server in Runtime Manager based on the Runtime manager https://docs.mulesoft.com/runtime-manager/servers-create#create-a-server[Create a Server].
 
