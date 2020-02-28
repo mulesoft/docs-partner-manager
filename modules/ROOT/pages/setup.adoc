@@ -27,9 +27,7 @@ Roles are allocated via the Access Management section in Anypoint Platform.
 
 * Mule runtime 4.2.2 or higher.
 +
-Make sure you have the required Mule runtime capacity to handle your B2B transaction workload needs.
-+
-If you are unsure about the Mule runtime capacity required to handle your B2B transactions, contact your MuleSoft account representative for assistance.
+Make sure you have the required Mule runtime capacity to handle your B2B transaction workload needs. If you are unsure about the Mule runtime capacity required to handle your B2B transactions, contact your MuleSoft account representative for assistance.
 +
 * A storage solution to store the B2B transmission payloads you send or receive.
 +
@@ -85,7 +83,11 @@ wrapper.java.maxmemory=4606
 
 ----
 
+. Install your license. See https://docs.mulesoft.com/mule-runtime/4.2/installing-an-enterprise-license for more information.
+
 . Add the server in Runtime Manager based on the Runtime manager https://docs.mulesoft.com/runtime-manager/servers-create#create-a-server[Create a Server].
+
+. Start the Mule runtime and verify it is active within Anypoint Runtime Manager.
 
 . Include the created servers into the server group you created earlier: *B2BServerGroup*: https://docs.mulesoft.com/runtime-manager/server-group-add[Add Servers to a Group]
 
