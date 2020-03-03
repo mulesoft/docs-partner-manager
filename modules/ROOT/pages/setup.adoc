@@ -91,7 +91,7 @@ wrapper.java.maxmemory=4606
 
 . Include the created servers into the server group you created earlier: *B2BServerGroup*: https://docs.mulesoft.com/runtime-manager/server-group-add[Add Servers to a Group]
 
-. Start the Mule runtime and verify it is active within Anypoint Runtime Manager.
+. Start the Mule runtime and verify it shows as 'Running' in Anypoint Runtime Manager.
 
 === Setup the Payload Storage API
 
