@@ -25,16 +25,16 @@ Roles are allocated via the Access Management section in Anypoint Platform.
 
 === Partner Manager related technical requirements:
 
-* Mule runtime 4.2.2 or higher.
+* Mule runtime engine (Mule) 4.2.2 or later
 +
-Make sure you have the required Mule runtime capacity to handle your B2B transaction workload needs. If you are unsure about the Mule runtime capacity required to handle your B2B transactions, contact your MuleSoft account representative for assistance.
+Ensure that you have the required Mule capacity to handle your B2B transaction workload needs. If you are unsure what that capacity is, contact your MuleSoft account representative for assistance.
 +
-* A storage solution to store the B2B transmission payloads you send or receive.
+* A storage solution for the B2B transmission payloads you send or receive
 +
-Storage options can include a Database, Amazon S3, Azure Blob Storage, and so on.
+Storage options can include a database, Amazon S3, Azure Blob Storage, and so on.
 +
 
-* Anypoint Studio 7.4 or higher.
+* Anypoint Studio 7.4 or later
 
 == Environment Configuration
 
@@ -55,18 +55,18 @@ For example, *Partner Manager > Partner Manager Administrator*: Enables this rol
 
 You need to do the following from Anypoint Runtime Manager.
 
-. Create a server group in Anypoint Runtime Manager and name it: *B2BServerGroup*.
+. Create a server group in the Runtime agent and name it: *B2BServerGroup*.
 All B2B processing Mule apps are deployed to this server group. The steps to set up your server group are in Runtime manager  https://docs.mulesoft.com/runtime-manager/server-group-create[Create a Server Group (Hybrid)].
 
 +
 IMPORTANT: The server group you setup must use the exact name: *B2BServerGroup*. This name is case sensitive.
 +
 
-. For each environment, set up your Runtime by https://docs.mulesoft.com/mule-runtime/4.2/runtime-installation-task[Download and Install Mule] and unzipping it.
+. For each environment, set up your Mule instance by https://docs.mulesoft.com/mule-runtime/4.2/runtime-installation-task[Download and Install Mule] and unzipping it.
 
 . Add the parameters mentioned in the following `wrapper.conf` file. You'll need to adjust the memory and heap size configuration numbers indicated in the following parameters for your environment. The wrapper.conf file is located at `$MULE_HOME/conf/wrapper.conf`. From there you can locate the `wrapper.conf` user conf directory.
 +
-IMPORTANT: These are example values. If you are unsure about the Mule runtime capacity you need to handle your B2B transactions, please contact your MuleSoft account representative for assistance.
+IMPORTANT: These are example values. If you are unsure about the Mule capacity you need to handle your B2B transactions, please contact your MuleSoft account representative for assistance.
 +
 [source,xml,linenums]
 ----
@@ -85,13 +85,12 @@ wrapper.java.maxmemory=4606
 
 . Install your license. See https://docs.mulesoft.com/mule-runtime/4.2/installing-an-enterprise-license[Install an Enterprise License] for more information.
 
-. Add the server in Runtime Manager based on the Runtime manager https://docs.mulesoft.com/runtime-manager/servers-create#create-a-server[Create a Server].
+. Add the server in Runtime Manager based on the Runtime manager in https://docs.mulesoft.com/runtime-manager/servers-create#create-a-server[Create a Server].
 
-. Start the Mule runtime and verify it is active within Anypoint Runtime Manager.
+. Start Mule and verify it is active within Anypoint Runtime Manager.
 
 . Include the created servers into the server group you created earlier: *B2BServerGroup*: https://docs.mulesoft.com/runtime-manager/server-group-add[Add Servers to a Group]
 
-. Start the Mule runtime and verify it shows as 'Running' in Anypoint Runtime Manager.
 
 === Setup the Payload Storage API
 
@@ -105,7 +104,7 @@ https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-stora
 +
 https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-service-s3[Partner Manager Content Storage API - S3 Template] (sample implementation template)
 +
-. Install the API on a Mule runtime engine that can access the storage solution.
+. Install the API on a runtime that can access the storage solution.
 
 . Make a note of the API address configurations:
 
