@@ -83,9 +83,11 @@ wrapper.java.maxmemory=4606
 
 ----
 
-. Install your license. See https://docs.mulesoft.com/mule-runtime/4.2/installing-an-enterprise-license[Install an Enterprise License] for more information.
+. Install your license.
++
+See https://docs.mulesoft.com/mule-runtime/4.2/installing-an-enterprise-license[Install an Enterprise License] for more information.
 
-. Add the server in Runtime Manager based on the Runtime manager in https://docs.mulesoft.com/runtime-manager/servers-create#create-a-server[Create a Server].
+. Add the server in Runtime Manager based on the instructions in https://docs.mulesoft.com/runtime-manager/servers-create#create-a-server[Create a Server].
 
 . Start Mule and verify it is active within Anypoint Runtime Manager.
 
