@@ -19,99 +19,22 @@ The port is automatically generated when you deploy a message flow that uses thi
 You can see it by selecting the receiving endpoint from your deployed message flow.
 The hostname displayed is created by your administrator at setup.
 
-
-| Message Signature Encryption
-| If your partner sends an encrypted signature in the message, choose the appropriate algorithm for validating that signature: +
-
-Options are: +
-
-`None` +
-
-`MD5` +
-
-`SHA1` +
-
-`SHA224` +
-
-`SHA256` +
-
-`SHA384` +
-
-`SHA512` +
+| <Partner> public certificate
+| This is your partner’s digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
+NOTE: If a single certificate is uploaded, Partner Manager prevents you from deleting your only certificate. +
 
 Required: Yes +
 
-| Encryption Algorithm
-| The preferred algorithm for the encryption of received messages. +
-
-Valid values:
-`None` +
-`3DES` +
-`AES128` +
-`AES192` +
-`AES256` +
-`AES256_WRAP` +
-`CAST5` +
-`IDEA` +
-`RC2_CBC` +
+| <Partner> private key file
+| This is your partner's private key+
 
 Required: Yes +
 
-| Message Subject
-| Specify a default subject for messages you send to this partner +
+| Key passphrase
+|  This is the passphrase for your partner's private key+
 
 Required: Yes +
 
-| Encoding
-| Type of encoding to use with AS2. +
 
-Options are:
-
-* `*Binary*` +
-A method of encoding in which a message is represented using a combination of 0s and 1s.
-
-* `*7-bit*`
-+
-Data that is represented as relatively short lines with 998 bytes or less between CRLF line separation sequences.
-No bytes with decimal values greater than 127 are allowed and neither are NULLs (bytes with decimal value 0).
-CR (decimal value 13) and LF (decimal value 10) bytes only occur as part of CRLF line separation sequences.
-
-* `*8-bit*`
-+
-Data that is represented as relatively
-short lines with 998 bytes or less between CRLF line separation
-sequences. Bytes with decimal values greater than 127
-can be used.  As with "7bit data" CR and LF bytes only occur as part
-of CRLF line separation sequences. No NULLs are allowed.
-
-* `*Base 64*`
-+
-Encoding scheme that represents binary data in an ASCII string format to carry data across channels that only reliably support text content.
-It is used to embed image files or other binary assets inside textual assets such as HTML and CSS files.
-
-* `*Quoted Printable*`
-+
-Intended to represent data that largely consists of bytes that correspond to printable characters in
-the US-ASCII character set.
-
-Required: Yes +
-
-| Compress
-| Indicates if the trading partner wants to see the incoming message and associated signature in compressed form.
-Zlib is used for compression. +
-Required: No +
-Default: False +
-
-|MDN Response Wait Time
-|The maximum time within which the sender expects to receive an MDN. The value of this field is in seconds. +
-Default: 60 +
-
-| Partner from email
-|The Sending partner’s email used in AS2 transmissions. +
-Required: Yes +
-
-| Partner to email
-|The Receiving partner’s email used in AS2 transmissions. +
-Required: Yes +
 
 |===
