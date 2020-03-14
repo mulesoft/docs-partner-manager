@@ -19,19 +19,20 @@ The port is automatically generated when you deploy a message flow that uses thi
 You can see it by selecting the receiving endpoint from your deployed message flow.
 The hostname displayed is created by your administrator at setup.
 
-| <Partner> public certificate
+| <Host> public certificate
 | This is your partner’s digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
 NOTE: If a single certificate is uploaded, Partner Manager prevents you from deleting your only certificate. +
 
 Required: Yes +
 
-| <Partner> private key file
-| This is your partner's private key+
+| <Host> private key file
+| This is your private key.
 
 Required: Yes +
 
 | Key passphrase
-|  This is the passphrase for your partner's private key+
+|  This is the passphrase for your private key
++
 
 Required: Yes +
 

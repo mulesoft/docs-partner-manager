@@ -40,6 +40,8 @@ See xref:Certificates.adoc[Certificates] for more information about configuring 
 +
 For more information about your protocol type refer to:
 
+* xref:endpoint-as2-receive.adoc[AS2 Endpoint Settings]
+
 * xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
 
 * xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
