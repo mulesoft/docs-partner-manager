@@ -13,11 +13,12 @@ Required: Yes +
 |Describe any important details for this endpoint. +
 Required: No +
 
-| AS2 URL (Automatically generated at time of deployment)
+| AS2 URL
 | The HTTP or HTTPS address where you receive AS2 messages.
-The port is automatically generated when you deploy a message flow that uses this endpoint.
+With CloudHub, the port is automatically generated when you deploy a message flow that uses this endpoint.
 You can see it by selecting the receiving endpoint from your deployed message flow.
 The hostname displayed is created by your administrator at setup.
+Since the AS2 receive endpoint service is deployed to an on-premise Mule runtime, please work with your hosting and / or Network Security team to obtain the DNS /host name of the server on which the on premise Mule runtime is executing, and replace {runtime_host} in the URL above. For example, if the DNS host name is b2b.mycompany.com & the port# is 8082 - the AS2 Receiver URL is: https://b2b.mycompany.com:8081/receive-as2/
 
 | <Host> public certificate
 | This is your partner’s digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
@@ -32,10 +33,10 @@ Required: Yes +
 
 | Key passphrase
 |  This is the passphrase for your private key
-+
+
 
 Required: Yes +
 
+= Supported Signing and Encryption Algorithms
 
-
-|===
+AS2 receive endpoints deployed from Partner Manager support the below signing & encryption algorithms.
