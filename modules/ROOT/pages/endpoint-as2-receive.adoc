@@ -1,4 +1,4 @@
-= AS2 Endpoint Settings
+= AS2 Receive Endpoint Settings
 Use these when setting up AS2 with HTTPS.
 
 [%header,cols="3s,7a"]
