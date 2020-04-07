@@ -19,7 +19,7 @@ Required: No +
 With CloudHub, the port is automatically generated when you deploy a message flow that uses this endpoint.
 You can see it by selecting the receiving endpoint from your deployed message flow.
 
-If deployed to CloudHub with a dedicated load balancer, or on-premise Mule runtime, please work with your hosting and / or Network Security team to obtain the DNS /host name of the server on which the on premise Mule runtime is executing, and replace {runtime_host} in the URL above. For example, if the DNS host name is b2b.mycompany.com & the port# is 8081 - the AS2 Receiver URL is: https://b2b.mycompany.com:8081/receive-as2/
+If deployed to CloudHub with a dedicated load balancer, or on-premise Mule runtime, please work with your hosting and / or Network Security team to obtain the DNS /host name of the server on which the Mule runtime is executing, and replace {runtime_host} in the URL above. For example, if the DNS host name is b2b.mycompany.com & the port# is 8081 - the AS2 Receiver URL is: https://b2b.mycompany.com:8081/receive-as2/
 
 | <Host> public certificate
 | This is your partner’s digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
