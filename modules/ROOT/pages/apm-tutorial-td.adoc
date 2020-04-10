@@ -91,11 +91,11 @@ In the following sections, we add identifiers for the supplier. We will add buye
 
 ==== Add Supplier X12-ISA Identifier
 
-include::{partialsdir}/tutorial/supplier/identifier-x12-isa-supplier.adoc[]
+include::partial$tutorial/supplier/identifier-x12-isa-supplier.adoc[]
 
 ==== Add Supplier AS2 Identifier
 
-include::{partialsdir}/tutorial/supplier/identifier-as2-supplier.adoc[]
+include::partial$tutorial/supplier/identifier-as2-supplier.adoc[]
 
 === Upload Certificates
 
@@ -103,7 +103,7 @@ APM provides for the uploading of certificates to verify the identity of a partn
 
 ==== Upload the Supplier Certificate
 
-include::{partialsdir}/tutorial/supplier/certificate-supplier.adoc[]
+include::partial$tutorial/supplier/certificate-supplier.adoc[]
 
 
 == Design a Target Channel
@@ -119,11 +119,11 @@ In this section, you create a template for any transaction in which you receive 
 
 === Start Transaction Designer
 
-include::{partialsdir}/tutorial/supplier/start-td-aaz.adoc[]
+include::partial$tutorial/supplier/start-td-aaz.adoc[]
 
 === Create the Target Channel
 
-include::{partialsdir}/tutorial/supplier/td-target-channel-aaz.adoc[]
+include::partial$tutorial/supplier/td-target-channel-aaz.adoc[]
 
 
 === Create the Source Document Type for the Target Channel
@@ -134,7 +134,7 @@ APM enables you to categorize and configure specific _Document Types_. In this s
 
 ==== To Create the Source Document Type for the Target Channel
 
-include::{partialsdir}/tutorial/supplier/td-target-channel-source-doc-aaz.adoc[]
+include::partial$tutorial/supplier/td-target-channel-source-doc-aaz.adoc[]
 
 
 === Configure Endpoints
@@ -144,7 +144,7 @@ In APM, an endpoint defines the protocol, address, and other details specific to
 
 ==== Configure the Target Endpoint
 
-include::{partialsdir}/tutorial/supplier/td-target-channel-endpoint-aaz.adoc[]
+include::partial$tutorial/supplier/td-target-channel-endpoint-aaz.adoc[]
 
 
 === Save the Transaction
@@ -171,7 +171,7 @@ The <<img-td-target-channel-in-progress-aaz>> appears.
 
 === Create the Buyer Partner
 
-include::{partialsdir}/tutorial/buyer/create-buyer-partner.adoc[]
+include::partial$tutorial/buyer/create-buyer-partner.adoc[]
 
 
 === Add Buyer Identifiers
@@ -249,22 +249,22 @@ The <<img-endpoints>> appears.
 
 === Start Transaction Designer
 
-include::{partialsdir}/tutorial/buyer/start-td-acme.adoc[]
+include::partial$tutorial/buyer/start-td-acme.adoc[]
 
 === Create the Source Channel
 
 
-include::{partialsdir}/tutorial/buyer/td-source-channel-acme.adoc[]
+include::partial$tutorial/buyer/td-source-channel-acme.adoc[]
 
 
 === Create the Source Document
 
-include::{partialsdir}/tutorial/buyer/td-source-channel-source-doc-acme.adoc[]
+include::partial$tutorial/buyer/td-source-channel-source-doc-acme.adoc[]
 
 
 === Create the Buyer Receive Endpoint
 
-include::{partialsdir}/tutorial/buyer/td-source-channel-endpoint-acme.adoc[]
+include::partial$tutorial/buyer/td-source-channel-endpoint-acme.adoc[]
 
 Note that, on the <<img-td-possible-endpoints-no-property-acme>>, the warning *1 property cannot be found in the document type* appears.
 
