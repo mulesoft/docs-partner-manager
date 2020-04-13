@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Configuring a _agreement type_ for a partner means specifying a *Name* and
+Configuring an _agreement type_ for a partner means specifying a *Name* and
 
 include::partial$edit-settings.adoc[]
 [start=3]
