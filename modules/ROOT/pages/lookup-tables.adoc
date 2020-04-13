@@ -5,7 +5,7 @@ endif::[]
 
 Anypoint Partner Manager (APM) enables you to create, populate and edit a _lookup table_.  A lookup table is a table that facilitates transaction processing by associating values. For example, this page shows how to create a lookup table that associates internal partner product codes with customer product codes.
 
-include::{partialsdir}/edit-home-partner-settings.adoc[]
+include::partial$edit-home-partner-settings.adoc[]
 
 . If you want to create a lookup table or edit the name, fields or keys for an existing table, go to <<Administer a Lookup Table>>.
 The fields you add will become the columns of the table.

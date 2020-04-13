@@ -3,9 +3,9 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Configuring a _PIP type_ for a partner means specifying a *Name* and *Process Code*.
+Configuring a PIP type for a partner means specifying a *Name* and *Process Code*.
 
-include::{partialsdir}/edit-settings.adoc[]
+include::partial$edit-settings.adoc[]
 [start=3]
 
 . In the *CONFIGURATION* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *RosettaNet PIPs*.

@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-_Transaction Designer_ is an APM feature that enables you to design the _elements_ of a transaction. Transaction elements include:
+Transaction Designer is an APM feature that enables you to design the elements of a transaction. Transaction elements include:
 
 * Document Types
 * Endpoints
@@ -14,7 +14,7 @@ _Transaction Designer_ is an APM feature that enables you to design the _element
 Transaction Designer enables you to configure these elements from a central page that displays the elements along with their completion status, and what steps may remain in order to complete them. To see how to use this feature to create a transaction that receives a Purchase Order, see  xref:apm-tutorial-td.adoc[Anypoint Partner Manager Tutorial: Designing a Transaction].
 
 
-include::{partialsdir}/edit-settings.adoc[]
+include::partial$edit-settings.adoc[]
 [start=3]
 
 . In the *CONFIGURATION* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *Transaction Designer*.

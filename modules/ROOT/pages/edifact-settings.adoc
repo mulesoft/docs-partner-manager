@@ -5,7 +5,7 @@ endif::[]
 
 EDIFACT (Electronic Data Interchange For Administration, Commerce and Transport) provides a set of standard messages which allow multi-country and multi-industry business document exchanges. EDIFACT is widely used across Europe.
 
-include::{partialsdir}/edit-settings.adoc[]
+include::partial$edit-settings.adoc[]
 
 [start=3]
 
