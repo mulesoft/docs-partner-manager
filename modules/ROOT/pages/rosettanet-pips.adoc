@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Configuring a PIP type for a partner means specifying a *Name* and *Process Code*.
+Configuring a _PIP type_ for a partner means specifying a *Name* and *Process Code*.
 
 include::partial$edit-settings.adoc[]
 [start=3]

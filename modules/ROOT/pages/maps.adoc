@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Configuring a map for a partner enables you to specify:
+Configuring a _map_ for a partner enables you to specify:
 
 include::partial$edit-settings.adoc[]
 [start=3]
