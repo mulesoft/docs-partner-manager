@@ -16,11 +16,13 @@ Required: No +
 | AS2 URL
 | The HTTP or HTTPS address where you receive AS2 messages.
 
-With CloudHub, the port is automatically generated when you deploy a message flow that uses this endpoint.
-You can see it by selecting the receiving endpoint from your deployed message flow.
+When deploying to CloudHub with a public Shared Load Balancer, the URL is automatically generated when you deploy a message flow that uses this endpoint.
 
-If deployed to CloudHub with a dedicated load balancer, or on-premise Mule runtime, please work with your hosting and / or Network Security team to obtain the DNS /host name of the server on which the Mule runtime is executing, and replace {runtime_host} in the URL above. For example, if the DNS host name is b2b.mycompany.com & the port# is 8081 - the AS2 Receiver URL is: https://b2b.mycompany.com:8081/receive-as2/
+To get the external facing URL of the AS2 receive endpoint deployed from Partner Manager (when deploying to CloudHub with Dedicated load balancer) refer to https://docs.mulesoft.com/runtime-manager/cloudhub-dedicated-load-balancer
 
+You view it by selecting the receiving endpoint from your deployed message flow.
+
+If deploying to On-premises Mule with a Firewall and Load Balancer, work with your hosting or Network Security team to obtain the externally accessible DNS /host name where the Mule runtime server is executing, and replace {runtime_host} in the URL. For example, if the DNS host name is b2b.mycompany.com - the AS2 Receiver URL is: https://b2b.mycompany.com/receive-as2/
 | <Host> public certificate
 | This is your partner’s digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
 NOTE: If a single certificate is uploaded, Partner Manager prevents you from deleting your only certificate. +
