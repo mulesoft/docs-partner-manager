@@ -9,7 +9,7 @@ Use these pages to configure administrative settings for your company.
 
 Your company may have been set up during the provisioning process. If so, its name appears at the top of the Name list on the Partner Configuration Page, identified as *Your company*.
 
-include::{partialsdir}/edit-home-partner-settings.adoc[]
+include::partial$edit-home-partner-settings.adoc[]
 
 [start=3]
 

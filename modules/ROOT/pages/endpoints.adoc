@@ -6,7 +6,7 @@ endif::[]
 An _endpoint_ is the entry point to a service, a process, or a queue or topic destination in service-oriented architecture. In APM, an endpoint defines the protocol, address, and other details specific to an exchange of messages between partners.
 
 
-include::{partialsdir}/edit-settings.adoc[]
+include::partial$edit-settings.adoc[]
 
 [start=3]
 . In the *CONFIGURATION* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *Endpoints*.
@@ -213,18 +213,18 @@ Valid values::
 |===
 
 
-include::{partialsdir}/endpoint-as2-send.adoc[]
-include::{partialsdir}/endpoint-as2-receive.adoc[]
-include::{partialsdir}/endpoint-ftp-send.adoc[]
-include::{partialsdir}/endpoint-ftps-send.adoc[]
-include::{partialsdir}/endpoint-ftps-receive.adoc[]
-include::{partialsdir}/endpoint-sftp-send.adoc[]
-include::{partialsdir}/endpoint-sftp-receive.adoc[]
-include::{partialsdir}/endpoint-http-send.adoc[]
-include::{partialsdir}/endpoint-http-receive.adoc[]
-include::{partialsdir}/endpoint-jms-send.adoc[]
-include::{partialsdir}/endpoint-jms-receive.adoc[]
-include::{partialsdir}/endpoint-smtp-send.adoc[]
-include::{partialsdir}/endpoint-pop3-receive.adoc[]
-include::{partialsdir}/endpoint-imap-receive.adoc[]
-include::{partialsdir}/endpoint-rnif.adoc[]
+include::partial$endpoint-as2-send.adoc[]
+include::partial$endpoint-as2-receive.adoc[]
+include::partial$endpoint-ftp-send.adoc[]
+include::partial$endpoint-ftps-send.adoc[]
+include::partial$endpoint-ftps-receive.adoc[]
+include::partial$endpoint-sftp-send.adoc[]
+include::partial$endpoint-sftp-receive.adoc[]
+include::partial$endpoint-http-send.adoc[]
+include::partial$endpoint-http-receive.adoc[]
+include::partial$endpoint-jms-send.adoc[]
+include::partial$endpoint-jms-receive.adoc[]
+include::partial$endpoint-smtp-send.adoc[]
+include::partial$endpoint-pop3-receive.adoc[]
+include::partial$endpoint-imap-receive.adoc[]
+include::partial$endpoint-rnif.adoc[]

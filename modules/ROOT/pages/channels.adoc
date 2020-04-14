@@ -10,7 +10,7 @@ Document:: As created in xref:document-types.adoc[Document Types]
 Document Map:: As created in xref:maps.adoc[Maps]
 Endpoint:: As created in xref:endpoints.adoc[Endpoints]
 
-include::{partialsdir}/edit-settings.adoc[]
+include::partial$edit-settings.adoc[]
 [start=3]
 
 . In the *CONFIGURATION* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *Channels*.

@@ -5,7 +5,7 @@ endif::[]
 
 You can configure windows (periods of time) during which partners or transactions are on-hold or inactive.
 
-include::{partialsdir}/edit-settings.adoc[]
+include::partial$edit-settings.adoc[]
 [start=3]
 
 . In the *CONFIGURATION* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *On-Hold/Inactive*.
