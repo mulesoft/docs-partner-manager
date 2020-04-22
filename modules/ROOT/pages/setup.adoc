@@ -31,14 +31,7 @@ Partner Manager-related technical requirements:
 
 * The Partner Manager Administrator role for all users who need access to B2B message flows in their environment (Production or  Sandbox).
 
-* Keep the default deployment of message flows to CloudHub (for information on CloudHub settings, refer to CloudHub Deployment Options), or deploy to your own hosted on-premise Mule runtime, by clicking *Stop deploying to CloudHub* and going to Deploy to your own on-premise Mule runtime.
-
-
-
-
-
-
-
+* Keep the default deployment of message flows to CloudHub (for information on CloudHub settings, refer to xref:cloudhub-deploy-options.adoc[CloudHub Deployment Options], or deploy to your own hosted on-premise Mule runtime, by clicking *Stop deploying to CloudHub* and going to  xref:deploy-onpremise.adoc[Deploy On-Premises for Partner Manager]).
 
 == See Also
 
