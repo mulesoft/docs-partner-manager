@@ -10,8 +10,11 @@ To store this content, you must implement an API that provides Anypoint Partner 
 Follow these steps to set up the Payload Storage API.
 
 . Download these APIs from Anypoint Exchange:
-* Partner Manager Content Storage API
-* Partner Manager Content Storage API - S3 Template (sample implementation template)
++
+https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-api[Partner Manager Content Storage API]
++
+https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-service-s3[Partner Manager Content Storage API - S3 Template] (sample implementation template)
++
 
 . Implement the API to connect with your choice of storage location (S3, Database, File System, and so on).
 
