@@ -1,0 +1,20 @@
+= CloudHub Deployment Options
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Message flows from Partner Manager are deployed by default to the CloudHub region specified in the business group’s default settings within Access Manager at the time of first deployment from Partner Manager.
+Subsequent deployments get deployed to the same region as the first deployment.
+
+To access the default deployment settings for your organization, navigate to *Access Management > Partner Manager*.
+
+You can configure the following Partner Manager Settings for CloudHub deployment.
+
+* Mule runtime version
+The default and recommended option is ‘Use latest version’, which deploys Partner Manager new message flows on the latest Mule runtime version. If you want the applications deployed to a specific older version, choose the appropriate version from the menu.
+
+* Automatically restart app when not responding
+If your system allows, you can set this to restart Partner Manager if it doesn’t respond. For more information, refer to Automatic Restart.
+
+* vCore Settings
+These settings are configurable at the environment type level (such as Sandbox or Production). The `Document Processing` and `API Replication Services` are core components of the Partner Manager workflow, requiring a minimum of 1 vCore each. Each unique trading partner and internal endpoints get deployed to isolated workers - requiring a minimum of 0.1 vCore each. If you require assistance with sizing, please contact your Account representative.
