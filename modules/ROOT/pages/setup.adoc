@@ -23,7 +23,8 @@ License for the following connectors that are used in your B2B message flows:
 
 Partner Manager-related technical requirements:
 
-* Storage for the B2B transmission payloads you send or receive, such as a database, Amazon S3, Azure Blob Storage, and so on. For more information, refer to Setup the Payload Storage API.
+* Storage for the B2B transmission payloads you send or receive, such as a database, Amazon S3, Azure Blob Storage, and so on.
+For more information, refer to xref:setup-payload-storage-API.adoc[Set up the Payload Storage API for Partner Manager].
 
 * Anypoint Studio 7.4 or later in order to create DataWeave maps for EDI data transformation.
 
