@@ -13,7 +13,9 @@ The server group you set up must use the exact name: B2BServerGroup. This name i
 . Set up your Mule instance by using Download and Install Mule and unzipping it. Partner Manager supports Mule runtime 4.2 or later.
 . Add the parameters mentioned in the following `wrapper.conf` file. You’ll need to adjust the memory and heap size configuration numbers indicated in the following parameters for your environment. The `wrapper.conf` file is located at $MULE_HOME/conf/wrapper.conf. From there you can locate the `wrapper.conf` user conf directory.
 These are example values. If you are unsure about the Mule capacity you need to handle your B2B transactions, please contact your MuleSoft account representative for assistance.
-
++
+[source,xml,linenums]
+----
 
 # Increase the MetaSpace.
 wrapper.java.additional.7=-XX:MetaspaceSize=1256m
@@ -25,6 +27,8 @@ wrapper.java.initmemory=4606
 # Maximum Java Heap Size (in MB)
 wrapper.java.maxmemory=4606
 
+----
++
 . Install your license.
 See Install an Enterprise License for more information.
 . Add the server in Runtime Manager based on the instructions in Create a Server.
