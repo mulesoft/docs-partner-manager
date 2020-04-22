@@ -6,6 +6,7 @@ endif::[]
 Prior to deploying any message flows from Partner Manager, you need to install and set up Mule runtime engine on-premises and register it on Anypoint Runtime Manager in the appropriate environment.
 
 Install Mule Runtime and Set up a Server Group for Partner Manager
+
 You need to do the following deploy On-Premises from Anypoint Runtime Manager.
 
 . In the appropriate environment within your Anypoint Platform account, create a server group in the Runtime agent and name it: *B2BServerGroup*.
@@ -16,6 +17,7 @@ The server group you set up must use the exact name: *B2BServerGroup*. This name
 . Set up your Mule instance by using https://docs.mulesoft.com/mule-runtime/4.2/runtime-installation-task[Download and Install Mule] and unzipping it. Partner Manager supports Mule runtime 4.2 or later.
 
 . Add the parameters mentioned in the following `wrapper.conf` file. You’ll need to adjust the memory and heap size configuration numbers indicated in the following parameters for your environment. The `wrapper.conf` file is located at $MULE_HOME/conf/wrapper.conf. From there you can locate the `wrapper.conf` user conf directory.
+
 These are example values. If you are unsure about the Mule capacity you need to handle your B2B transactions, please contact your MuleSoft account representative for assistance.
 +
 [source,xml,linenums]
@@ -34,7 +36,10 @@ wrapper.java.maxmemory=4606
 ----
 +
 . Install your license.
-See Install an Enterprise License for more information.
-. Add the server in Runtime Manager based on the instructions in Create a Server.
+See https://docs.mulesoft.com/mule-runtime/4.2/installing-an-enterprise-license[Install an Enterprise License] for more information.
+
+. Add the server in Runtime Manager based on the instructions in https://docs.mulesoft.com/runtime-manager/servers-create#create-a-server[Create a Server].
+
 . Start Mule and verify it is active within Anypoint Runtime Manager.
-. Include the created servers into the server group you created earlier: B2BServerGroup: Add Servers to a Group
+
+. Include the created servers into the server group you created earlier: *B2BServerGroup*: https://docs.mulesoft.com/runtime-manager/server-group-add[Add Servers to a Group]
