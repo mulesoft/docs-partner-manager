@@ -3,136 +3,42 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Set up Anypoint Partner Manager to be used by different people in your organization, namely - B2B integration developers, operations managers, and IT managers.
+You use Anypoint Partner Manager to set up, manage, and monitor the flow of business messages between you and your business trading partners.
+Prior to deploying any message flows from Partner Manager, you need to set up and configure Anypoint Partner Manager for use by team members in your organization.
+Typically those who configure, deploy, and monitor B2B Trading Partner profiles and message flows.
 
-== Minimum Requirements
-
-Verify that you have the following software and other requirements.
-If you need any of the required entitlements, please contact your MuleSoft account representative.
-
-=== Partner Manager related entitlement requirements:
+== Requirements for Anypoint Partner Manager
 
 * Anypoint Platform user account with Anypoint Partner Manager entitlement.
 
-* Appropriate roles allocated for users to access Anypoint Partner Manager.
-Roles are allocated via the Access Management section in Anypoint Platform.
+* Required Mule vCore capacity to handle your B2B transaction workload needs.
 
-=== License for the following connectors:
+If you require assistance, contact your account representative.
 
-* X12 connector
+License for the following connectors that are used in your B2B message flows:
 
-* AS2 connector (optional)
+* AS2 connector
 
-=== Partner Manager related technical requirements:
+* Optional X12 connector
 
-* Mule runtime engine (Mule) 4.2.2 or later
-+
-Ensure that you have the required Mule capacity to handle your B2B transaction workload needs. If you are unsure what that capacity is, contact your MuleSoft account representative for assistance.
-+
-* A storage solution for the B2B transmission payloads you send or receive
-+
-Storage options can include a database, Amazon S3, Azure Blob Storage, and so on.
-+
+Partner Manager-related technical requirements:
 
-* Anypoint Studio 7.4 or later
+* Storage for the B2B transmission payloads you send or receive, such as a database, Amazon S3, Azure Blob Storage, and so on. For more information, refer to Setup the Payload Storage API.
 
-== Environment Configuration
+* Anypoint Studio 7.4 or later in order to create DataWeave maps for EDI data transformation.
 
-Before you begin using Anypoint Partner Manager in Anypoint Platform, you'll need to set up and configure your environment with Partner Manager roles, associated Mule deployment instances, and a payload storage API.
-Refer to the Anypoint platform documentation to learn more about https://docs.mulesoft.com/access-management/environments[Configuring your Anypoint platform environments].
+* Mule runtime engine (Mule) 4.2.2 or later (for On-Premises only).
 
-=== Allocate Partner Manager Roles
+* The Partner Manager Administrator role for all users who need access to B2B message flows in their environment (Production or  Sandbox).
 
-There is one Administrator role called the Partner Manager Administrator. Depending on which environment you select, the user is assigned that role within the context of that environment.
-Both roles have unrestricted access, but one role works in a Production environment and the other works in a Sandbox environment.
-
-* Verify that you have access to Partner Manager.
-This means that you must have the required entitlements and have been assigned the `Partner Manager Administrator` role in Access Manager for the environment.
-
-For example, *Partner Manager > Partner Manager Administrator*: Enables this role of Administrator for the environment.
-
-=== Associate Mule Runtimes for Deployment
-
-You need to do the following from Anypoint Runtime Manager.
-
-. Create a server group in the Runtime agent and name it: *B2BServerGroup*.
-All B2B processing Mule apps are deployed to this server group. The steps to set up your server group are in Runtime manager  https://docs.mulesoft.com/runtime-manager/server-group-create[Create a Server Group (Hybrid)].
-
-+
-IMPORTANT: The server group you setup must use the exact name: *B2BServerGroup*. This name is case sensitive.
-+
-
-. For each environment, set up your Mule instance by https://docs.mulesoft.com/mule-runtime/4.2/runtime-installation-task[Download and Install Mule] and unzipping it.
-
-. Add the parameters mentioned in the following `wrapper.conf` file. You'll need to adjust the memory and heap size configuration numbers indicated in the following parameters for your environment. The wrapper.conf file is located at `$MULE_HOME/conf/wrapper.conf`. From there you can locate the `wrapper.conf` user conf directory.
-+
-IMPORTANT: These are example values. If you are unsure about the Mule capacity you need to handle your B2B transactions, please contact your MuleSoft account representative for assistance.
-+
-[source,xml,linenums]
-----
-
-# Increase the MetaSpace.
-wrapper.java.additional.7=-XX:MetaspaceSize=1256m
-wrapper.java.additional.8=-XX:MaxMetaspaceSize=2256m
-
-# Increase JVM Memory
-# Initial Java Heap Size (in MB)
-wrapper.java.initmemory=4606
-# Maximum Java Heap Size (in MB)
-wrapper.java.maxmemory=4606
-
-----
-
-. Install your license.
-+
-See https://docs.mulesoft.com/mule-runtime/4.2/installing-an-enterprise-license[Install an Enterprise License] for more information.
-
-. Add the server in Runtime Manager based on the instructions in https://docs.mulesoft.com/runtime-manager/servers-create#create-a-server[Create a Server].
-
-. Start Mule and verify it is active within Anypoint Runtime Manager.
-
-. Include the created servers into the server group you created earlier: *B2BServerGroup*: https://docs.mulesoft.com/runtime-manager/server-group-add[Add Servers to a Group]
+* Keep the default deployment of message flows to CloudHub (for information on CloudHub settings, refer to CloudHub Deployment Options), or deploy to your own hosted on-premise Mule runtime, by clicking *Stop deploying to CloudHub* and going to Deploy to your own on-premise Mule runtime.
 
 
-=== Setup the Payload Storage API
 
-Anypoint Partner Manager enables you to connect your own storage solution (such as a database, Amazon S3, Azure Blob Storage, and so on) to store the transmission content such as incoming and outgoing B2B message payloads.
-To store this content, you must implement an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage.
-Follow these steps to set up the Payload Storage API:
 
-. Download these APIs from Anypoint Exchange:
-+
-https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-api[Partner Manager Content Storage API]
-+
-https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-service-s3[Partner Manager Content Storage API - S3 Template] (sample implementation template)
-+
-. Install the API on a runtime that can access the storage solution.
 
-. Make a note of the API address configurations:
 
-* Host, port, and path connection
 
-* Connection Idle and Response timeouts
-
-* Authentication types: None, API Key, Basic, Client Credentials, and OAuth Token
-
-* Certificate (`.PEM` format) and connection types
-
-* Decide whether users can download the payload from the transmissions. You can manage your payload storage later.
-+
-You'll need this information while associating Anypoint Partner Manager to your Payload Storage API.
-+
-NOTE: Your payload storage API must be accessible over the internet via HTTPS.
-Ensure that the appropriate authentication mechanisms have been implemented to make this happen.
-+
-
-. Open Anypoint Partner Manager and locate your organization's profile (host) page from the left navigation.
-
-. Select the `Payload storage` section and configure the path to your storage.
-
-. If you want to view (or have your users view) the raw payloads of the files you receive or send, select `Allow users to download payloads` while configuring your payload storage API.
-
-You are ready to begin to set up message flows between you and your trading partners.
 
 == See Also
 
