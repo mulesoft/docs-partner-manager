@@ -130,7 +130,7 @@ Remember that there must always be at least one identifier per message flow befo
 
 After successfully deleting an identifier, you can create a new identifier with the same value as the one you deleted.
 
-You can delete identifiers such as all X12 ISA, X12 GS, AS2, and DUNS identifiers. You cannot delete the last identifier.
+You can delete identifiers such as X12 ISA, X12 GS, AS2, and DUNS. You cannot delete the last identifier, as there must be at least one in the list.
 
 . If you need to replace the identifier, record the values and qualifier type needed.
 

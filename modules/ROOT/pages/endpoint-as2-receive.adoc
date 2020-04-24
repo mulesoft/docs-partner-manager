@@ -16,15 +16,19 @@ Required: No +
 | AS2 URL
 | The HTTP or HTTPS address where you receive AS2 messages.
 
-When deploying to CloudHub with a public Shared Load Balancer, the URL is automatically generated when you deploy a message flow that uses this endpoint.
+When deploying to CloudHub the URL is automatically generated when you deploy a message flow that uses this endpoint.
+You can see the URL  by selecting the receiving endpoint from your deployed message flow.
 
-To get the external facing URL of the AS2 receive endpoint deployed from Partner Manager (when deploying to CloudHub with Dedicated load balancer) refer to https://docs.mulesoft.com/runtime-manager/cloudhub-dedicated-load-balancer
+To get the external-facing URL of the AS2 receive endpoint deployed from Partner Manager (when deploying to CloudHub with Dedicated load balancer) refer to https://docs.mulesoft.com/runtime-manager/cloudhub-dedicated-load-balancer.
 
-You view it by selecting the receiving endpoint from your deployed message flow.
+You view the URL by selecting the receiving endpoint from your deployed message flow.
 
-If deploying to On-premises Mule with a Firewall and Load Balancer, work with your hosting or Network Security team to obtain the externally accessible DNS /host name where the Mule runtime server is executing, and replace {runtime_host} in the URL. For example, if the DNS host name is b2b.mycompany.com - the AS2 Receiver URL is: https://b2b.mycompany.com/receive-as2/
+If deploying to on-premises Mule with a firewall and load balancer,
+work with your hosting or network security team to obtain the externally accessible DNS or name of the host where the Mule runtime server is executing,
+and replace {runtime_host} in the URL. For example, if the DNS host name is `b2b.mycompany.com` - the AS2 receiver URL is: `https://b2b.mycompany.com/receive-as2/`
+
 | <Host> public certificate
-| This is your partner’s digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
+| This is your organization’s digital certificate (based on the RSA algorithm) for the AS2 transport protocol).
 NOTE: If a single certificate is uploaded, Partner Manager prevents you from deleting your only certificate. +
 
 Required: Yes +
@@ -35,9 +39,7 @@ Required: Yes +
 Required: Yes +
 
 | Key passphrase
-|  This is the passphrase for your private key
+| This is the passphrase for your private key.
 
 
 Required: Yes +
-
-
