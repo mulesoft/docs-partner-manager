@@ -40,6 +40,4 @@ Required: Yes +
 
 Required: Yes +
 
-= Supported Signing and Encryption Algorithms
 
-AS2 receive endpoints deployed from Partner Manager support the below signing & encryption algorithms.
