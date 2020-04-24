@@ -15,11 +15,11 @@ Typically those who configure, deploy, and monitor B2B Trading Partner profiles 
 
 If you require assistance, contact your account representative.
 
-License for the following connectors that are used in your B2B message flows:
+License for the following connectors that are used in your B2B message flows based on the protocols and message formats you are using:
 
 * AS2 connector
 
-* Optional X12 connector
+* X12 connector
 
 Partner Manager-related technical requirements:
 
