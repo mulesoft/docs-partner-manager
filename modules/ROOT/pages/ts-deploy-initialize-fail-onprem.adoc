@@ -1,0 +1,15 @@
+= Deployment Initialization failed (with On Premise Deployment target)
+
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Causes:
+You do not have the appropriate server group configured or have the wrong name for the server group in the environment in which you are deploying the message flow.
+Your runtime servers are either not set up, or are not active.
+
+Solution:
+Login to Anypoint Platform → Runtime Manager in the same environment
+Click Servers and verify that you have the server group B2BServerGroup configured and is in Running Status.
+If the server group is in a stopped status - contact your MuleSoft platform operations/admin team to review and restart the server
+If you do not have this server group setup, refer to Setup Anypoint Partner Manager.

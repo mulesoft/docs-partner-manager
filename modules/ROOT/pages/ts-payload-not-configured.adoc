@@ -1,0 +1,15 @@
+= You cannot deploy this message flow because the payload storage is not properly configured
+
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+
+Cause: Payload Storage is not configured.
+
+Solution:
+Verify that your Payload Storage is active:
+From within your Anypoint Partner Manager, select your <Hostname> profile.
+Scroll down to the Payload storage section and click Edit.
+Review your payload storage configuration.
+If it is not configured, refer to Set up the Payload Storage API.
