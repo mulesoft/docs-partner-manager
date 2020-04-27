@@ -39,5 +39,41 @@ Required: Yes +
 | Key passphrase
 | This is the passphrase for your private key.
 
+Required: Yes +
+
+| Message Signature Encryption
+| If your partner sends an encrypted signature in the message, choose the appropriate algorithm for validating that signature: +
+
+Options are: +
+
+`None` +
+
+`MD5` +
+
+`SHA1` +
+
+`SHA224` +
+
+`SHA256` +
+
+`SHA384` +
+
+`SHA512` +
+
+Required: Yes +
+
+| Encryption Algorithm
+| The preferred algorithm for the encryption of received messages. +
+
+Valid values:
+`None` +
+`3DES` +
+`AES128` +
+`AES192` +
+`AES256` +
+`AES256_WRAP` +
+`CAST5` +
+`IDEA` +
+`RC2_CBC` +
 
 Required: Yes +
