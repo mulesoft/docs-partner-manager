@@ -41,45 +41,46 @@ Required: Yes +
 
 Required: Yes +
 
-| Message Signature Encryption
-| If your partner sends an encrypted signature in the message, choose the appropriate algorithm for validating that signature: +
 
-Options are: +
+== Signature and Encryption Algorithms
 
-`UNSIGNED (Default)` +
+AS2 receive endpoints deployed from Partner Manager support the following signature and encryption algorithms.
 
-`MD5` +
 
-`SHA1` +
+=== Signature Algorithm
 
-`SHA224` +
+The preferred algorithm for the signature of received messages. This is Required.
 
-`SHA256` +
+* `UNSIGNED (Default)` +
 
-`SHA384` +
+* `MD5` +
 
-`SHA512` +
+* `SHA1` +
 
-Required: Yes +
+* `SHA224` +
 
-| Encryption Algorithm
-| The preferred algorithm for the encryption of received messages. +
+* `SHA256` +
 
-Valid values:
-`UNENCRYPTED (Default)` +
-`AES128_CBC` +
-`AES128_CCM` +
-`AES128_GCM` +
-`AES192_CBC` +
-`AES192_CCM` +
-`AES192_GCM` +
-`AES256_CBC` +
-`AES256_CCM` +
-`AES256_GCM` +
-`AES256_WRAP` +
-`CAST5` +
-`3DES` +
-`DES_EDE3` +
-`RC2` +
+* `SHA384` +
 
-Required: Yes +
+* `SHA512` +
+
+=== Encryption Algorithm
+
+The preferred algorithm for the encryption of received messages. This is Required.
+
+* `UNENCRYPTED (Default)` +
+* `AES128_CBC` +
+* `AES128_CCM` +
+* `AES128_GCM` +
+* `AES192_CBC` +
+* `AES192_CCM` +
+* `AES192_GCM` +
+* `AES256_CBC` +
+* `AES256_CCM` +
+* `AES256_GCM` +
+* `AES256_WRAP` +
+* `CAST5` +
+* `3DES` +
+* `DES_EDE3` +
+* `RC2` +
