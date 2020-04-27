@@ -46,7 +46,7 @@ Required: Yes +
 
 Options are: +
 
-`None` +
+`UNSIGNED (Default)` +
 
 `MD5` +
 
@@ -66,14 +66,20 @@ Required: Yes +
 | The preferred algorithm for the encryption of received messages. +
 
 Valid values:
-`None` +
-`3DES` +
-`AES128` +
-`AES192` +
-`AES256` +
+`UNENCRYPTED (Default)` +
+`AES128_CBC` +
+`AES128_CCM` +
+`AES128_GCM` +
+`AES192_CBC` +
+`AES192_CCM` +
+`AES192_GCM` +
+`AES256_CBC` +
+`AES256_CCM` +
+`AES256_GCM` +
 `AES256_WRAP` +
 `CAST5` +
-`IDEA` +
-`RC2_CBC` +
+`3DES` +
+`DES_EDE3` +
+`RC2` +
 
 Required: Yes +
