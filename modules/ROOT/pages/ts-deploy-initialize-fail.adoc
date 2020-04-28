@@ -4,10 +4,15 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Causes:
-Temporary System / connectivity issues between the Partner Manager control plane and the deployment server, or Anypoint MQ (in case of CloudHub deployment)
+== Cause
 
-Solution
-Verify the health of your deployment server group (B2BServerGroup) to make sure it is in Running state try redeploying the message flow ( On Premise Only)
-Try redeploying the message flow after 10 minutes.
-If the error persists, please create a support ticket with MuleSoft along with the Reference number in the deployment error.
+Temporary System or connectivity issues between the Partner Manager control plane and the deployment server or Anypoint MQ (in case of CloudHub deployment)
+
+== Solution
+
+* Verify that your deployment server group (B2BServerGroup) is in the `Running` state.
+For On-Premises, try redeploying the message flow.
+
+* Try redeploying the message flow after 10 minutes.
+
+If the error persists, create a support ticket with MuleSoft along with the Reference number in the deployment error.

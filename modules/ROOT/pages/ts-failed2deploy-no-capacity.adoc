@@ -5,8 +5,12 @@ include::_attributes.adoc[]
 endif::[]
 
 
-Cause: You do not have sufficient vCore capacity to deploy the applications to support the message flow.
+== Cause
 
-Solution:
-Please contact your MuleSoft Platform Administrator to review the vCore allocation for your business group.
-Please allow 15 minutes after the vCores are added to your business group before redeploying.
+You do not have sufficient vCore capacity to deploy the applications to support the message flow.
+
+== Solutions
+
+* Contact your MuleSoft Platform Administrator to review the vCore allocation for your business group.
+
+* Allow 15 minutes after the vCores are added to your business group before redeploying.

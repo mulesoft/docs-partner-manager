@@ -5,11 +5,15 @@ include::_attributes.adoc[]
 endif::[]
 
 
-Cause: Payload Storage is not configured.
+== Cause
 
-Solution:
-Verify that your Payload Storage is active:
-From within your Anypoint Partner Manager, select your <Hostname> profile.
-Scroll down to the Payload storage section and click Edit.
-Review your payload storage configuration.
-If it is not configured, refer to Set up the Payload Storage API.
+Payload Storage is not configured.
+
+== Solutions
+
+Verify that your Payload Storage is active.
+
+* From within your Anypoint Partner Manager, select your <Hostname> profile.
+* Scroll down to the `Payload storage section` and click *Edit*.
+* Review your payload storage configuration.
+* If not configured, refer to https://docs.mulesoft.com/partner-manager/2.0/setup#setup-the-payload-storage-api[Set up the Payload Storage API].
