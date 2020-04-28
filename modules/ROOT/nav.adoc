@@ -31,7 +31,7 @@
   *** xref:ts-failure2store-msg-payload.adoc[Failure to Store Message Payload]
  ** xref:ts-data-processing.adoc[Data Processing Errors]
   *** xref:ts-flow-config-not-found.adoc[Message Flow Configuration Not Found]
-  *** xref:ts-no-T1-acks.adoc[TA1 Acknowledgements Not Received]
+  *** xref:ts-no-T1-acks.adoc[Partner Did Not Receive TA1]
   *** xref:ts-cannot-process-B2B.adoc[Transactions Not Getting Processed]
   *** xref:ts-unrecognized-partner.adoc[Unrecognized Partner]
   *** xref:ts-unrecognized-standard.adoc[Unrecognized Standard]
