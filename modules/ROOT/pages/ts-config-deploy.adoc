@@ -1,0 +1,8 @@
+= Troubleshooting Configuration and Deployment Related Errors
+
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+If you encounter errors as you set up your trading partners and message flows,
+refer to the messages in this section for information that can help you resolve your issue.
