@@ -6,14 +6,12 @@ endif::[]
 
 == Cause
 
-Temporary System or connectivity issues between the Partner Manager control plane and the deployment server or (in case of CloudHub deployment) Anypoint MQ. 
+Your environment is experiencing temporary system or connectivity issues between the Partner Manager control plane and the deployment server, or in the case of CloudHub deployment, Anypoint MQ. 
 
-== Solution
+== Solutions
 
 * Verify that your deployment server group *B2BServerGroup* is in the `Running` state.
 
-For On-Premises, try redeploying the message flow.
+* For on-premises deployments, attempt to redeploy the message flow, wait 10 minutes, and try again.
 
-* Try redeploying the message flow after 10 minutes.
-
-If the error persists, create a support ticket with MuleSoft along with the Reference number in the deployment error.
+If the error persists, create a MuleSoft support ticket, including the error reference number.
