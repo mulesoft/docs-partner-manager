@@ -1,4 +1,4 @@
-= Troubleshooting Connectivity or System Related Errors
+= Troubleshooting Connectivity or System-Related Errors
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
