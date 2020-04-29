@@ -11,12 +11,12 @@ You have not configured the Payload Storage.
 
 == Solutions
 
-Verify that your Payload Storage is active.
+If your payload storage is configured, verify that it is active:
 
-. From within your Anypoint Partner Manager, select your <Hostname> profile.
+. From within Anypoint Partner Manager, select your `hostname` profile.
 
-. Scroll down to the `Payload storage` section and click *Edit*.
+. Scroll down to Payload storage and click *Edit*.
 
-. Review your payload storage configuration.
+. Review your payload storage configuration and status.
 
-. If not configured, refer to https://docs.mulesoft.com/partner-manager/2.0/setup#setup-the-payload-storage-api[Set up the Payload Storage API].
+. If your payload storage is not configured, configure it according to https://docs.mulesoft.com/partner-manager/2.0/setup#setup-the-payload-storage-api[Set up the Payload Storage API].
