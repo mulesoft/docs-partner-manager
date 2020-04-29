@@ -1,4 +1,5 @@
-= Failed to deploy: You cannot deploy this message flow because there is not enough capacity in this environment to deploy this message flow. You need x.x more vCores
+= Failed to deploy: You cannot deploy this message flow because there is not enough capacity in this environment to deploy this message flow.
+You need x.x more vCores
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
@@ -7,7 +8,7 @@ endif::[]
 
 == Cause
 
-You do not have sufficient vCore capacity to deploy the applications to support the message flow.
+You do not have sufficient vCore capacity to deploy the applications in order to support the message flow.
 
 == Solutions
 

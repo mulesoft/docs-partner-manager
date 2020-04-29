@@ -4,4 +4,4 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-If you encounter problems with message validations and transformations, refer to this section for information that can help you resolve your issue(s).
+If you encounter problems with message validations and transformations, the messages and solutions in this section can help you resolve your issue.

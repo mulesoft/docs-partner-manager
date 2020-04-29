@@ -4,11 +4,12 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Anypoint Partner Manager makes use of or depends on several different MuleSoft technologies,
-including but not limited to your Mule runtimes, Anypoint Runtime Manager, Anypoint Secrets Manager, and your infrastructure for B2B storage payloads.
+Anypoint Partner Manager makes use of or depends on several different MuleSoft technologies
+including but not limited to Mule, Anypoint Runtime Manager, Anypoint Secrets Manager, and your infrastructure for B2B storage payloads.
 
 Because Anypoint Partner Manager is used with other technologies,
-troubleshooting an issue with Anypoint Partner Manager often involves troubleshooting these other technologies.
+troubleshooting an issue with Partner Manager often involves troubleshooting these other technologies.
 
-Look for solutions under the Configuration and Deployment, Connectivity or System, Data Processing errors or use the topic links in the left navigation pane of the documentation to locate troubleshooting information specific to either
+Look for solutions here under the Configuration and Deployment, Connectivity or System, Data Processing error sections,
+or use the topic links in the left navigation pane to locate troubleshooting information specific to either
 Anypoint Partner Manager or its related technologies.

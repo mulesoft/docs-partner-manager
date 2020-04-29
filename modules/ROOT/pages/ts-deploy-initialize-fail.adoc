@@ -6,11 +6,12 @@ endif::[]
 
 == Cause
 
-Temporary System or connectivity issues between the Partner Manager control plane and the deployment server or Anypoint MQ (in case of CloudHub deployment)
+Temporary System or connectivity issues between the Partner Manager control plane and the deployment server or (in case of CloudHub deployment) Anypoint MQ. 
 
 == Solution
 
-* Verify that your deployment server group (B2BServerGroup) is in the `Running` state.
+* Verify that your deployment server group *B2BServerGroup* is in the `Running` state.
+
 For On-Premises, try redeploying the message flow.
 
 * Try redeploying the message flow after 10 minutes.
