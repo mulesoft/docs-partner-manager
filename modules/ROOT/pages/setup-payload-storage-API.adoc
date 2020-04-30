@@ -1,0 +1,37 @@
+= Set up the Payload Storage API for Partner Manager
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Prior to creating your first trading partner and message flow, you need to configure your Payload Storage API under the Host organization in Partner Manager.
+Anypoint Partner Manager enables you to connect your own storage solution (such as a database, Amazon S3, Azure Blob Storage, and so on) to store the transmission content such as incoming and outgoing B2B message payloads.
+
+To store this content, you must implement an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage.
+
+Follow these steps to set up the Payload Storage API.
+
+. Download these APIs from Anypoint Exchange:
++
+https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-api[Partner Manager Content Storage API]
++
+https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-service-s3[Partner Manager Content Storage API - S3 Template] (sample implementation template)
++
+. Implement the API to connect with your choice of storage location (S3, Database, File System, and so on).
+
+. Deploy the API on a runtime that can access the storage solution.
+
+. Make a note of the API URL and configurations:
+* Host, port, and path connection
+* Connection Idle and Response timeouts
+* Authentication types: None, API Key, Basic, Client Credentials, and OAuth Token
+* Certificate (.PEM format) and connection types
+* Decide whether users can download the payload from the transmissions. You can manage your payload storage later.
++
+You’ll need this information while associating Anypoint Partner Manager to your Payload Storage API.
+Your payload storage API must be accessible over the internet via HTTPS. Ensure that the appropriate authentication mechanisms have been implemented to make this happen.
++
+. Open Anypoint Partner Manager and locate your organization’s profile (host) page from the left navigation.
+. Select the Payload storage section and configure the path to your storage.
+. If you want to view (or have your users view) the raw payloads of the files you receive or send, select *Allow users to download payloads* while configuring your payload storage API.
+
+You are ready to set up message flows between you and your trading partners.
