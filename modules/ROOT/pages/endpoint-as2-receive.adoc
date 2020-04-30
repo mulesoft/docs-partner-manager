@@ -1,4 +1,4 @@
-= AS2 Endpoint Settings
+= AS2 Receive Endpoint Settings
 Use these when setting up AS2 with HTTPS.
 
 [%header,cols="3s,7a"]
@@ -13,105 +13,75 @@ Required: Yes +
 |Describe any important details for this endpoint. +
 Required: No +
 
-| AS2 URL (Automatically generated at time of deployment)
+| AS2 URL
 | The HTTP or HTTPS address where you receive AS2 messages.
-The port is automatically generated when you deploy a message flow that uses this endpoint.
-You can see it by selecting the receiving endpoint from your deployed message flow.
-The hostname displayed is created by your administrator at setup.
 
+When deploying to CloudHub the URL is automatically generated when you deploy a message flow that uses this endpoint.
+You can see the URL  by selecting the receiving endpoint from your deployed message flow.
 
-| Message Signature Encryption
-| If your partner sends an encrypted signature in the message, choose the appropriate algorithm for validating that signature: +
+You view the URL by selecting the receiving endpoint from your deployed message flow.
 
-Options are: +
+If deploying to on-premises Mule with a firewall and load balancer,
+work with your hosting or network security team to obtain the externally accessible DNS or name of the host where the Mule runtime server is executing,
+and replace {runtime_host} in the URL. For example, if the DNS host name is `b2b.mycompany.com` - the AS2 receiver URL is: `https://b2b.mycompany.com/receive-as2/`
 
-`None` +
-
-`MD5` +
-
-`SHA1` +
-
-`SHA224` +
-
-`SHA256` +
-
-`SHA384` +
-
-`SHA512` +
+| <Host> public certificate
+| This is your organization’s digital certificate (based on the RSA algorithm) for the AS2 transport protocol).
+NOTE: If a single certificate is uploaded, Partner Manager prevents you from deleting your only certificate. +
 
 Required: Yes +
 
-| Encryption Algorithm
-| The preferred algorithm for the encryption of received messages. +
-
-Valid values:
-`None` +
-`3DES` +
-`AES128` +
-`AES192` +
-`AES256` +
-`AES256_WRAP` +
-`CAST5` +
-`IDEA` +
-`RC2_CBC` +
+| <Host> private key file
+| This is your private key.
 
 Required: Yes +
 
-| Message Subject
-| Specify a default subject for messages you send to this partner +
+| Key passphrase
+| This is the passphrase for your private key.
 
-Required: Yes +
-
-| Encoding
-| Type of encoding to use with AS2. +
-
-Options are:
-
-* `*Binary*` +
-A method of encoding in which a message is represented using a combination of 0s and 1s.
-
-* `*7-bit*`
-+
-Data that is represented as relatively short lines with 998 bytes or less between CRLF line separation sequences.
-No bytes with decimal values greater than 127 are allowed and neither are NULLs (bytes with decimal value 0).
-CR (decimal value 13) and LF (decimal value 10) bytes only occur as part of CRLF line separation sequences.
-
-* `*8-bit*`
-+
-Data that is represented as relatively
-short lines with 998 bytes or less between CRLF line separation
-sequences. Bytes with decimal values greater than 127
-can be used.  As with "7bit data" CR and LF bytes only occur as part
-of CRLF line separation sequences. No NULLs are allowed.
-
-* `*Base 64*`
-+
-Encoding scheme that represents binary data in an ASCII string format to carry data across channels that only reliably support text content.
-It is used to embed image files or other binary assets inside textual assets such as HTML and CSS files.
-
-* `*Quoted Printable*`
-+
-Intended to represent data that largely consists of bytes that correspond to printable characters in
-the US-ASCII character set.
-
-Required: Yes +
-
-| Compress
-| Indicates if the trading partner wants to see the incoming message and associated signature in compressed form.
-Zlib is used for compression. +
-Required: No +
-Default: False +
-
-|MDN Response Wait Time
-|The maximum time within which the sender expects to receive an MDN. The value of this field is in seconds. +
-Default: 60 +
-
-| Partner from email
-|The Sending partner’s email used in AS2 transmissions. +
-Required: Yes +
-
-| Partner to email
-|The Receiving partner’s email used in AS2 transmissions. +
 Required: Yes +
 
 |===
+
+== Signature and Encryption Algorithms
+
+AS2 receive endpoints deployed from Partner Manager support the following signature and encryption algorithms.
+
+
+=== Signature Algorithm
+
+The preferred algorithm for the signature of received messages. This is Required.
+
+* `UNSIGNED (Default)` +
+
+* `MD5` +
+
+* `SHA1` +
+
+* `SHA224` +
+
+* `SHA256` +
+
+* `SHA384` +
+
+* `SHA512` +
+
+=== Encryption Algorithm
+
+The preferred algorithm for the encryption of received messages. This is Required.
+
+* `UNENCRYPTED (Default)` +
+* `AES128_CBC` +
+* `AES128_CCM` +
+* `AES128_GCM` +
+* `AES192_CBC` +
+* `AES192_CCM` +
+* `AES192_GCM` +
+* `AES256_CBC` +
+* `AES256_CCM` +
+* `AES256_GCM` +
+* `AES256_WRAP` +
+* `CAST5` +
+* `3DES` +
+* `DES_EDE3` +
+* `RC2` +

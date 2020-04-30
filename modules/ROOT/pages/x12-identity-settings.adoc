@@ -102,7 +102,6 @@ Remember that there must always be at least one identifier per message flow.
 
 After successfully deleting an identifier, you can create a new identifier with the same value as the one you deleted.
 
-You can delete non AS2 indentifiers.
 
 . If you need to replace the identifier, record the values and qualifier type needed.
 

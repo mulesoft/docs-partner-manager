@@ -26,6 +26,14 @@ You can add more information to the partner later.
 * xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
 
 +
+
+NOTE:
+For B2B workloads on-premises, deploying a message flow for a new trading partner while using an existing AS2 endpoint to receive messages can result in a brief interruption to the service for existing AS2 trading partner users.
+To minimize the impact of the service interruption, we recommend performing these message flow deployments outside of your regular business hours.
+This issue does not exist on CloudHub, as CloudHub provides a zero-downtime update of the AS2 endpoint application.
+
++
+
 . In the *Source message* section, click *Select* to expand the Message Type section.
 
 . Either search and click *Select* to choose a previously used message type or click *New* to create a new message type.
@@ -58,6 +66,15 @@ This is the target message type and the Endpoint where you want to route the tra
 * xref:document-types.adoc[X12 and JSON Message Types]
 +
 .  Click *Select* to set up a target endpoint.
+
++
+
+NOTE:
+Translated files are delivered to file-based endpoints with a unique file name with the pattern `<doctype>-<senderid>-<ISACtrlNum>-<GSCtrlNum>-<STCtrlNum>-<timeInMillis>.<format>`.
+Example: 850-ABCCORP-40952-5850-179960-1587685726355.JSON
+
++
+
 . Either search for and select an existing endpoint or create a new endpoint by clicking *New*.
 +
 * To create a new endpoint, depending on the protocol, refer to the following:
