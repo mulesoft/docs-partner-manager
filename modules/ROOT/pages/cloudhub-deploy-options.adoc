@@ -10,9 +10,42 @@ To access the default deployment settings for your organization, navigate to *Ac
 
 You can configure the following Partner Manager Settings for CloudHub deployment.
 
-* Mule runtime version
+* Runtime version
 
-The default and recommended option is ‘Use latest version’, which deploys Partner Manager new message flows on the latest Mule runtime version. If you want the applications deployed to a specific older version, choose the appropriate version from the menu.
+The default and recommended option is ‘Use latest version’, which deploys Partner Manager new message flows on the latest Mule runtime version.
+If you want the applications deployed to a specific older version, choose the appropriate version from the menu.
+
+* CloudHub region
+
+This is the region specified in your business group’s default settings within Access Manager at the time of first deployment from Partner Manager.
+
+Deploying to a different region:
+
+. Stop your current deployment by clicking *Stop Deploying to CloudHub*.
+
+. Set the new region for your business group in Access Manager. For information refer to https://docs.mulesoft.com/access-management/[About Anypoint Access Management]
+
+. Restart your deployment.
+
+New and existing message flows now deploy to the new region.
+
+
+* Anypoint MQ region
+
+This is the region specified in your MQ settings.
+
+Deploying to a different MQ region:
+
+. Stop your current deployment by clicking *Stop Deploying to CloudHub*.
+
+. Select or set the new region for your business group in Access Manager.
+For information refer to https://docs.mulesoft.com/mq/mq-access-management/[Configure Environment, User, and Role Access]
+
+. Restart your deployment.
+
+New and existing message flows now deploy to the new MQ region.
+
+
 
 * Automatically restart app when not responding
 
