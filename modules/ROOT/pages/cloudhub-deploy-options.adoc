@@ -17,35 +17,13 @@ If you want the applications deployed to a specific older version, choose the ap
 
 * CloudHub region
 
-This is the region specified in your business group’s default settings within Access Manager at the time of first deployment from Partner Manager.
-
-Deploying to a different region:
-
-. Stop your current deployment by clicking *Stop Deploying to CloudHub*.
-
-. Set the new region for your business group in Access Manager. For information refer to https://docs.mulesoft.com/access-management/[About Anypoint Access Management]
-
-. Restart your deployment.
-
-New and existing message flows now deploy to the new region.
+The default option is retrieved from the business group’s default region setting for Runtime Manager in Access Manager. If you want the B2B integration flows from Partner Manager to be deployed to a different region, select from the drop-down menu prior to the deployment of first message flow. Subsequent deployments get deployed to the same region as the first deployment.
+If you need to change the default region in future, all the previously deployed message flows should be undeployed and redeployed.
 
 
 * Anypoint MQ region
 
-This is the region specified in your MQ settings.
-
-Deploying to a different MQ region:
-
-. Stop your current deployment by clicking *Stop Deploying to CloudHub*.
-
-. Select or set the new region for your business group in Access Manager.
-For information refer to https://docs.mulesoft.com/mq/mq-access-management/[Configure Environment, User, and Role Access]
-
-. Restart your deployment.
-
-New and existing message flows now deploy to the new MQ region.
-
-
+This is automatically chosen based on the CloudHub region and cannot be changed.
 
 * Automatically restart app when not responding
 
@@ -53,4 +31,5 @@ If your system allows, you can set this to restart Partner Manager if it doesn�
 
 * vCore Settings
 
-These settings are configurable at the environment type level (such as Sandbox or Production). The `Document Processing` and `API Replication Services` are core components of the Partner Manager workflow, requiring a minimum of 1 vCore each. Each unique trading partner and internal endpoints get deployed to isolated workers - requiring a minimum of 0.1 vCore each. If you require assistance with sizing, please contact your Account representative.
+These settings are configurable at the environment type level (such as Sandbox or Production). The Document Processing and API Replication Services are core components of the Partner Manager workflow, requiring a minimum of 1 vCore each. Each unique trading partner and internal endpoints get deployed to isolated workers - requiring a minimum of 0.1 vCore each.
+If you require assistance with sizing, please contact your Account representative.
