@@ -40,13 +40,18 @@ These are the levels of roles you can assign to your Partner Manager users.
 
 *  Partner Manager Administrator has full permissions.
 
-* View Host, Partners and Message Flows has view-only access to the host, partner, and message flow configurations. Cannot view Transactions activity.
+* View Host, Partners and Message Flows has view-only access to the host, partner, and message flow configurations.
 
-* Manage Partners and Message Flows can create, modify, and delete partners or message flow configurations. Can view host partner configurations, but cannot view Transactions activity.
+Cannot view Transactions activity.
+
+* Manage Partners and Message Flows can create, modify, and delete partners or message flow configurations.
+
+Can view host partner configurations, but cannot view Transactions activity.
 
 * Manage Activity can view and manage transaction activity, but cannot view or modify either partner or message flow configurations.
 
-* Manage Host can create, modify, and delete host configurations, but cannot view or modify trading partner configurations or activity as well as Partner Manager Settings under Access Management when the user also has Org Admin role.
+* Manage Host can create, modify, and delete host configurations,
+but cannot view or modify trading partner configurations or activity as well as Partner Manager Settings under Access Management (when the user also has the Org Admin role).
 
 * View Activity has view-only access to transaction activity, and cannot view or modify either partner or message flow configurations.
 
