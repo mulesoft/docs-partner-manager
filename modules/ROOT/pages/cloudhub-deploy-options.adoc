@@ -13,7 +13,7 @@ You can configure the following Partner Manager Settings for CloudHub deployment
 * Runtime version
 
 The default and recommended option is `Use latest version`, which deploys Partner Manager new message flows on the latest Mule runtime version.
-If you want the applications deployed to a specific older version, choose the appropriate version from the menu.
+If you want the applications deployed to another version, choose it from the menu.
 
 * CloudHub region
 
