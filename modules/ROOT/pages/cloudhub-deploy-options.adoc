@@ -6,13 +6,11 @@ endif::[]
 Partner Manager message flows are initially deployed by default to the CloudHub region specified in the default
 settings of Access Manager's business group. Subsequent deployments are deployed to the same region as the first deployment.
 
-To access the default deployment settings for your organization, navigate to *Access Management > Partner Manager*.
-
-You can configure the following Partner Manager Settings for CloudHub deployment.
+To access the deployment settings for your organization, navigate to *Access Management > Partner Manager*.
 
 * Runtime version
 
-The default and recommended option is `Use latest version`, which deploys Partner Manager new message flows on the latest Mule runtime version.
+The default and recommended option is `Use latest version`, which deploys new Partner Manager message flows by using the latest Mule runtime version.
 If you want the applications deployed to another version, choose it from the menu.
 
 * CloudHub region
@@ -20,22 +18,22 @@ If you want the applications deployed to another version, choose it from the men
 The default option is retrieved from the business group’s default region setting for Runtime Manager in Access Manager.
 If you want the B2B integration flows from Partner Manager to be deployed to a different region,
 select it from the drop-down menu prior to deploying your first message flow.
+
 Subsequent deployments get deployed to the same region as the first deployment.
-To change the default region moving forward, you must undeploy and redeploy all the previously deployed message flows.
-For more information refer to xref:configure-message-flows.adoc[Configure Message Flows].
+To change the default region and have it persist as the default, you must undeploy and redeploy any previously deployed message flows.
+For more information about undeploying message flows, refer to xref:configure-message-flows.adoc[Configure Message Flows].
 
 * Anypoint MQ region
 
-This is automatically chosen based on the CloudHub region and cannot be changed.
+This is automatically assigned, based on the CloudHub region; you cannot change it.
 
 * Automatically restart app when not responding
 
-If your system allows, you can set this to restart Partner Manager if it does not respond.
-For more information, refer to https://docs.mulesoft.com/runtime-manager/worker-monitoring#enable-automatic-restarts[Enable Automatic Restarts].
+CloudHub automatically restarts your application when the monitoring system discovers an issue.
 
-* vCore Settings
+* vCore settings
 
-Configure these at the Sandbox or Production environment level.
-The `Document Processing` and `API Replication` Services are core components of the Partner Manager workflow,
+Configure these at the sandbox or production environment type.
+The `Document Processing` and `API Replication` services are core components of the Partner Manager workflow,
 requiring a minimum of 1 vCore each. Each unique trading partner and internal endpoints get deployed to isolated workers - requiring a minimum of 0.1 vCore each.
-If you require assistance with sizing, please contact your Account representative.
+If you require assistance with sizing, contact your account representative.
