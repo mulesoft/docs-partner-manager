@@ -34,9 +34,9 @@ For more information, refer to xref:setup-payload-storage-API.adoc[Set up the Pa
 
 * The Partner Manager Administrator role that assigns permission levels for all users who need access to B2B message flows in their environment (Production or  Sandbox).
 
-=== Parter Manager Role Granularity
+=== Parter Manager Roles
 
-These are the levels of roles you can assign to your Partner Manager users.
+These levels of roles can be assigned to your Partner Manager users.
 
 *  Partner Manager Administrator has full permissions.
 
@@ -46,12 +46,13 @@ Cannot view Transactions activity.
 
 * Manage Partners and Message Flows can create, modify, and delete partners or message flow configurations.
 
-Can view host partner configurations, but cannot view Transactions activity.
+Can view the host partner configurations, but cannot view Transactions activity.
 
 * Manage Activity can view and manage transaction activity, but cannot view or modify either partner or message flow configurations.
 
 * Manage Host can create, modify, and delete host configurations,
-but cannot view or modify trading partner configurations or activity as well as Partner Manager Settings under Access Management (when the user also has the Org Admin role).
+but cannot view or modify trading partner configurations or activity.
+This is also true for Partner Manager Settings under Access Management (when the user also has the Org Admin role).
 
 * View Activity has view-only access to transaction activity, and cannot view or modify either partner or message flow configurations.
 
