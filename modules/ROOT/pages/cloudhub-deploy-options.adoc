@@ -3,9 +3,6 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Partner Manager message flows are initially deployed by default to the CloudHub region specified in the default
-settings of Access Manager's business group. Subsequent deployments are deployed to the same region as the first deployment.
-
 To access the deployment settings for your organization, navigate to *Access Management > Partner Manager*.
 
 * Runtime version
