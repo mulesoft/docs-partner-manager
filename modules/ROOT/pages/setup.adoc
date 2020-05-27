@@ -30,9 +30,38 @@ For more information, refer to xref:setup-payload-storage-API.adoc[Set up the Pa
 
 * Mule runtime engine (Mule) 4.2.2 or later (for On-Premises only).
 
-* The Partner Manager Administrator role for all users who need access to B2B message flows in their environment (Production or  Sandbox).
-
 * Keep the default deployment of message flows to CloudHub (for information on CloudHub settings, refer to xref:cloudhub-deploy-options.adoc[CloudHub Deployment Options], or deploy to your own hosted on-premise Mule runtime, by clicking *Stop deploying to CloudHub* and going to  xref:deploy-onpremise.adoc[Deploy On-Premises for Partner Manager]).
+
+* The Partner Manager Administrator role that assigns permission levels for all users who need access to B2B message flows in their environment (production or  sandbox).
+
+=== Parter Manager Roles
+
+You can assign your Partner Manager users the following roles:
+
+*  Partner Manager Administrator 
+
+Has full permissions.
+
+* View Host, Partners, and Message Flows has view-only access to the host, partner, and message flow configurations.
+
+Cannot view Transactions activity.
+
+* Manage Partners and Message Flows 
+
+Can create, modify, and delete partners or message flow configurations; can view host partner configurations but cannot view transaction activity
+
+Can view the host partner configurations, but cannot view Transactions activity
+
+* Manage Activity can view and manage transaction activity, but cannot view or modify either partner or message flow configurations.
+
+* Manage Host 
+
+Can create, modify, and delete host configurations but cannot view or modify trading partner configurations or activity.
+This is also true for Partner Manager Settings under Access Management (when the user also has the Org Admin role).
+
+* View Activity 
+
+Has view-only access to transaction activity and cannot view or modify either partner or message flow configurations.
 
 == See Also
 
