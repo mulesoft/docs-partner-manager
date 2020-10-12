@@ -6,7 +6,7 @@ endif::[]
 
 Anypoint B2B enables Mule users to connect with trading partners using EDI over AS2, FTP, and other protocols. Anypoint B2B integrates seamlessly into the Mule runtime.
 
-NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
+NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. For the latest version of Anypoint Partner Manager, please leverage the latest generation of our solution available https://docs.mulesoft.com/partner-manager/2.0/[here]. Contact your MuleSoft representative for the latest information about MuleSoft's B2B solutions.
 
 == About this Page
 
