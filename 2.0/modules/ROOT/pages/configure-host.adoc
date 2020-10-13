@@ -1,0 +1,63 @@
+= Configure Host
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Your organization or your business group is considered the host partner in Anypoint Partner Manager.
+In the Anypoint platform, your hostname is the same name as your Anypoint Platform business group.
+An Anypoint Platform business group is a self-contained resource that was set up to hold Anypoint Platform resources such as APIs and applications.
+
+Within the host page you can do the following:
+
+* Add identifiers to uniquely identify yourself.
+
+* Add digital certificates associated with your organization.
+
+* Configure details associated with the Payload Storage API (the same one that was configured as part of the Setup instructions).
+
+The storage API is a mandatory configuration where your B2B message payloads are stored.
+
+== Update the Host's Profile
+
+. Open Anypoint Partner Manager and select the name of your organization from the left navigation pane.
+You can configure your indentifiers, certificates, and the location and configuration of your payload storage.
+
+. Click *New* within the *Identifiers* section to begin adding an identifier related to your organization.
+
+. Select an identifier type from the *Type* drop-down menu. This uniquely identifies you.
+For example, depending on your setup, select one of the following: AS2, DUNS number, X12 GS, or X12-ISA.
+
+. Provide a value for your identifier (and qualifier for X12-ISA) and click *Create identifier* to save your changes. See xref:x12-identity-settings.adoc[Identifiers] for more information about X12-ISA settings.
+
+. Click *New* within the *Certificates* section to begin to upload any needed digital certificates (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
+
+. Click *Choose file* to select the certificate (typically a `<certificate name>.PEM` file), and click *Upload certificate* to upload your chosen certificate file.
+See xref:Certificates.adoc[Certificates] for more information about configuring certificates in Partner Manager.
+
+. Click *New* from within _Endpoints: Receive from partners_ or _Endpoints: Targets at <partner name>_ for the Host, and select your protocol type.
+
+. Set up your endpoint based on the protocol type you selected.
++
+For more information about your protocol type refer to:
+
+* xref:endpoint-as2-receive.adoc[AS2 Endpoint Settings]
+
+* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
+
+* xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
++
+. Click *Save* when you are done.
+
+. If you need to make changes later, click *Edit* within the *Payload storage* section.
+
+For example, you changing the URL location, timeout settings, or acknowledgments.
+
+Refer to xref:x12-identity-settings.adoc[Identifiers] for information about deleting an identifier.
+
+Refer to xref:endpoints.adoc[Endpoint Types and Protocols] for information about deleting an endpoint.
+
+== See Also
+
+* xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner]
+
+* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]

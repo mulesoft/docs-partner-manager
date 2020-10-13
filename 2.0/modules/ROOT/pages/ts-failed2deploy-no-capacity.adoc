@@ -1,0 +1,17 @@
+= Failed to deploy: You cannot deploy this message flow because there is not enough capacity in this environment to deploy this message flow.
+You need x.x more vCores
+
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+
+== Cause
+
+You do not have sufficient vCore capacity to deploy the applications that support the message flow.
+
+== Solution
+
+* Contact your MuleSoft Platform Administrator to review the vCore allocation for your business group.
+
+If vCores are added, wait at least 15 minutes before attempting deployment.

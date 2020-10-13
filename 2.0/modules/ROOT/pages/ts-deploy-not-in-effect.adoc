@@ -1,0 +1,42 @@
+= Updated message flow configuration does not take effect on the runtime B2B integration applications
+
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+As you continue to use Anypoint Partner Manager, you might need to update the configuration associated with a previously deployed message flow.
+For example, after updating the configuration, you still find your message flow executing with the previous or older set of configurations.
+
+== Causes
+
+Any of the following can lead to this type of error:
+
+* You might have not deployed the message flow after making changes to the message flow’s configuration.
+
+* You might be within the five-minute synchronization window for changes from Anypoint Partner Manager to reflect on your B2B integration applications.
+
+
+== Solutions
+
+You can deploy the changed message flow or wait for the synchronization window to complete.
+
+=== Deploy the Changed Message Flow
+
+After you make changes to the message flow configuration, you must deploy it in order for the new configurations to become effective on your B2B integration applications.
+
+To deploy your message flow after making changes:
+
+. From within your Anypoint Partner Manager environment (either Sandbox or Production), select your <Hostname> profile.
+. Select *Message Flows*.
+. Search for your message flow by name.
+. After you locate the message flow, click on the message flow card to open it.
+. Confirm that each section in the flow shown in the interface displays a green checkmark next to it, and click Deploy to deploy the configurations to Mule.
+. Provide the necessary reason to trigger a new deployment, and wait for the process to complete.
+
+When the deployment is successfully completed, Anypoint partner manager responds with a successful notification.
+
+=== Wait for the Synchronization Window to Complete for All Changes
+
+Your runtime B2B integration applications executing on your Mule runtimes receives the latest configuration from the Anypoint Partner Manager control plane at five-minute intervals.
+Depending on when you made the configuration changes to your message flows in Partner Manager and deployed them,
+it can take up to five minutes for those changes to take effect on the runtime B2B integration applications.

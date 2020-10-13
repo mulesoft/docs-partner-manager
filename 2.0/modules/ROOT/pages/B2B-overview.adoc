@@ -1,0 +1,55 @@
+= Configure Anypoint Partner Manager
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Anypoint Partner Manager enables you to manage transmissions of business messages with a large number of trading partners through the creation and deployment of message flows.
+A transmission is a single communication event during which a payload is transferred between two business entities.
+These payloads can contain one or more business messages.
+A message flow is the path along which a message travels from its source, through a DataWeave transformation map, to its target.
+
+You'll need to perform some tasks before you can begin transmitting messages with your trading partners.
+In Anypoint Partner Manager, you set yourself up as a host partner, configure your trading partners, and then create message flows between you and your trading partners.
+
+== Prepare to Use Anypoint Partner Manager
+
+Before you configure the host (your organization), your partners, and message flows, you'll need to collect some information from your partners.
+You’ll also need to have an understanding of how your backend systems work.
+
+Information you'll need about your organization:
+
+* Your organization's identifiers (such as the AS2 ID, X12-ISA, X12 GS, and so on).
+
+* Endpoints: There are three types of endpoints you'll work with in AnyPoint Partner Manager -
+
+** Receive endpoints. +
+Your organization needs to provide endpoints to receive transmissions from your trading partners. +
+These endpoints are resources your organization exposes to your trading partners.
+
+** Target endpoints. +
+Your organization also has internal endpoints to which it routes messages from the trading partners. The messages routed to the target endpoint are typically validated and transformed before they are routed to the configured target endpoint.
+
+** Acknowledgement endpoints +
+Your partners provide you with their own endpoint configurations to which your organization can send acknowledgments, such as an X12 997 or X12 999. Acknowledgements are typically sent back to trading partners and correspond to one or more B2B messages you receive from your trading partners.
+
+* Your digital certificates (such as an X.509 certificate).
+
+* Electronic Data Interchange (EDI) message type preferences for your organization.
+
+* DataWeave transformation maps your organization uses for B2B transformations. Create these maps using Anypoint Studio before using Partner Manager.
+
+Information you need about each partner:
+
+* The partner's name (usually the name of the company).
+
+* Partner identifiers (such as the AS2 ID, X12-ISA, X12 GS, and so on).
+
+* Partner endpoints (where you send transmissions to your partners, including acknowledgement endpoints).
+
+* EDI message format preferences for your partner (such as X12), and any associated validations such as the need for acknowledgments (like TA1, 997, 999, and so on).
+
+* Message types to use. For example, a purchase order in X12 is an 850 message. You also need to know the X12 version to use in your transactions (such as 004010, 005010, and so on).
+
+* Your partner's digital certificates (such as an X.509 certificate).
+
+After gathering this information, you are ready to configure your organization as host, configure your partners, and create message flows.

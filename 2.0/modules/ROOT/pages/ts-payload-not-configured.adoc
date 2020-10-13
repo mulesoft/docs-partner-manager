@@ -1,0 +1,22 @@
+= You cannot deploy this message flow because the payload storage is not properly configured
+
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+
+== Cause
+
+You have not configured the Payload Storage.
+
+== Solutions
+
+If your payload storage is configured, verify that it is active:
+
+. From within Anypoint Partner Manager, select your `hostname` profile.
+
+. Scroll down to Payload storage and click *Edit*.
+
+. Review your payload storage configuration and status.
+
+. If your payload storage is not configured, configure it according to https://docs.mulesoft.com/partner-manager/2.0/setup#setup-the-payload-storage-api[Set up the Payload Storage API].

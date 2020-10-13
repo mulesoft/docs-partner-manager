@@ -1,0 +1,39 @@
+= `Failure to store message payload`
+
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+You might occasionally see tracking information such as this in the Activity section of Anypoint Partner Manager:
+
+[source,xml,linenums]
+----
+Unrecognized standard from unrecognized partner
+Received <datetime>  `Failure to store message payload`
+File <name>
+----
+
+== Causes
+
+This information appears in the Activity section when one of the following occurs:
+
+** The payload storage API on the host’s profile is not appropriately configured.
+
+** The payload storage API is not functioning.
+
+** The storage solution associated with the payload storage API is not functioning.
+
+== Solution
+
+Take the following actions to verify the Payload Storage API configuration:
+
+. Verify the appropriate configuration for the payload storage API by performing a simple test request using a browser extension such as Postman on Google Chrome.
+
+. Visit Anypoint Runtime Manager to verify that the related payload storage API is active and functioning by restarting the app.
+
+. If the payload storage app is functioning, verify that the storage solution you are using (such as the S3 bucket, Azure Blob store, database, and so on) is up and functioning.
+
+If all these scenarios have been verified successfully, and you still cannot deploy message flows, please raise a case on the MuleSoft Support Portal.
+
+If you have an existing commercial relationship with MuleSoft and are experiencing problems accessing your Anypoint Platform account, you can open a case from the https://help.mulesoft.com/s/support[MuleSoft Support Portal].
+If you can't access the Support Portal, contact your Customer Success Manager or MuleSoft Account Management team for assistance.

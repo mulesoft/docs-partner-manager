@@ -1,0 +1,15 @@
+= Troubleshooting Anypoint Partner Manager
+
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Anypoint Partner Manager relies on several different MuleSoft technologies
+including but not limited to Mule, Anypoint Runtime Manager, secrets manager, and your infrastructure for B2B storage payloads.
+
+Because Anypoint Partner Manager is used with other technologies,
+troubleshooting an issue with Partner Manager often involves troubleshooting these other technologies as well.
+
+Look for solutions in the documentation about connectivity and related errors,
+or use documentation page's left navigation pane to locate troubleshooting information specific to either
+Anypoint Partner Manager or its related technologies.
