@@ -1,0 +1,1 @@
+= Partner Manager Configuration Objects
