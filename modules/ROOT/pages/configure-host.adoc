@@ -44,7 +44,6 @@ See xref:x12-identity-settings.adoc[Identifiers] for more information about X12-
 See xref:Certificates.adoc[Certificates] for more information about configuring certificates in Partner Manager.
 . Click *New* from within *Endpoints: Receive from partners* or *Endpoints: Targets at <partner name>* for the Host, and select your protocol type.
 . Set up your endpoint based on the protocol type you selected.
-+
 For more information about your protocol type, see:
 * xref:endpoint-as2-receive.adoc[AS2 Endpoint Settings]
 * xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]

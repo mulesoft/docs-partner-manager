@@ -1,0 +1,3 @@
+= Identifiers
+
+Identifiers are used to identify the sender and receiver partners that are involved in a B2B transaction. For X12 messages, the identifiers in the ISA and GS headers provide valuable information that enables identification of the appropriate flow to use to process the transaction.
