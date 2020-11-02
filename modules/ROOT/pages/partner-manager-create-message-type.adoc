@@ -1,0 +1,15 @@
+== Creating Message Types
+
+Message types can be created in the following two ways:
+
+From the Message types section host page:
+Click New
+Select the Usage from the drop down menu
+Make appropriate selections to define the X12, JSON or XML structure
+
+== Create a Message Type From the Flow Configuration Wizard
+
+From the Message flow configuration wizard
+When message types are created from the message flow, Partner Manager automatically designates the Usage
+Receive from partners & Send to partners
+These are Inbound transactions that are received from your trading partners or outbound transactions your organization sends to your trading partners, typically following EDI standards such as X12.
