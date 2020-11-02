@@ -1,0 +1,29 @@
+= SFTP Send Endpoint
+
+Use these settings to setup SFTP endpoints in one of the following contexts:
+Send to partners: to send outbound EDI files to your trading partners used in outbound message flows.
+Target at host: Send application messages (JSON or XML) to your backend applications used in inbound message flows
+Name
+Description
+Endpoint Name
+Name used to refer to the endpoint. The name is auto populated, but you can overwrite it based on your organization’s naming conventions for consistency.
+Required: Yes
+Description
+Freeform description of the endpoint.
+Required: No
+Host
+The SFTP server host, such as sftp.mulesoft.com, localhost, or 192.168.0.1. The host should be accessible from your runtime environment.
+Required: Yes
+Port
+The port number of the SFTP server to connect.
+Username
+Username for the SFTP Server.
+Required: Yes.
+Password
+Password for the SFTP Server.
+Required: Yes.
+Target Path
+Path on the SFTP server EDI files generated from outbound message flows or need to be dropped for your trading partners, or where your back-end applications require you to drop translated JSON/XML files generated from inbound message flows.
+Required: Yes
+Filename pattern
+File name pattern as required by your trading partner or back-end application

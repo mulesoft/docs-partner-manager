@@ -1,21 +1,43 @@
 = Endpoint Types and Protocols
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
-There are three types of endpoints within AnyPoint Partner Manager:
+Endpoints define the transport protocol configurations necessary to receive or send messages with external trading partners or internal back-end applications.
+
+An endpoint in Partner Manager can be used in one of the below contexts:
+Receive from partners
+Target at host 
+Source at host
+Send to partners
+
+Endpoint ownership: In order to control the usage of endpoints within inbound and outbound message flows, Partner Manager allows you to assign the host or a particular partner as the owner of endpoints that are partner facing (receive or send). Endpoints owned by the host are available for selection in message flows for any trading partners. Endpoints owned by a specific trading partner are available for selection in message flows created for that partner only.  
+
+
+== Endpoints
+
+AnyPoint Partner Manager provides three types of endpoints:
 
 * Receive endpoints. +
 Your organization needs to provide endpoints to receive transmissions from your trading partners. +
 These endpoints are resources your organization exposes to your trading partners.
-
 * Target endpoints. +
 Your organization also has internal endpoints to which it routes messages from the trading partners. The messages routed to the target endpoint are typically validated and transformed before they are routed to the configured target endpoint.
-
 * Acknowledgement endpoints +
 Your partners provide you with their own endpoint configurations to which your organization can send acknowledgments, such as an X12 997 or X12 999. Acknowledgments are typically sent back to trading partners and correspond to one or more B2B messages you receive from your trading partners.
 
 Refer to the following to configure your endpoint. Your configuration varies based on the protocol you are using.
+
+== Protocols
+
+The way you configure Partner Manager endpoints depends on the protocol you use to send and receive messages. 
+
+Partner Manager supports the following endpoint protocols:
+
+[%header%autowidth.spread]
+|===
+|Protocol | Trading Partners | Backend
+|SFTP | Receive, Send | Receive, Send
+| HTTP/HTTPS | Send | Receive, Send
+| AS2 | Receive, Send | N/A
+|===
 
 == Endpoint Name, Protocol and Type
 
