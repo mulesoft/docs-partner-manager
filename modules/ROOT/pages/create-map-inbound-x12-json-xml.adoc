@@ -1,0 +1,43 @@
+= Create a Map For Inbound X12 to JSON/XML
+
+Follow these steps to create the DataWeave map to transform inbound EDI X12 messages to your application message formats, such as XML or JSON:
+
+. Launch Anypoint Studio.
+. From the File menu, Click New and Project from Template
+. Log in to Anypoint Exchange with your Anypoint platform credentials
+Search for X12.
+. Click the template titled Template to map inbound EDI X12 transactions to application message format.
+. Click Open, to create a new project in your Studio workspace pre-loaded with the template.
+The template can also be downloaded from Anypoint Exchange and exported to Anypoint Studio.
+. Setting the source X12 message type for the map
+The template has the X12 configuration for the below X12 transaction set
+Version: 4010
+Transaction Set: 850 (Purchase order)
+Navigate to the Global Elements configuration in global-configs.xml
+Edit the configuration named X12_EDI_Inbound
+Under the Schema definitions section, click the value /x12/004010/850.esl
+. Click the Edit button
+. Change the Schema value to the version and transaction set you want to map from.
+Example: Set the value to /x12/004010/204.esl, if you want to map from 4010-204 Load tender transaction
+Setting the target JSON/XML message type for the map
+Copy the schema file of your target application message type into src/main/resources folder in the project
+. Click the Transform message component in the Mule application
+. Click Define metadata under Output
+. Click Add
+. Enter a new message type id; Example: enterprise-inbound-purchase-order
+. From the drop-down menu Type, Select JSON or XML
+. Select you JSON/XML schema file imported in the earlier step
+. Click Select
+You will now see the X12 transaction set structure on the input pane in the left, and your application message structure (JSON or XML) on the output pane in the right.
+You can begin mapping from input to the output.
+
+== Download a Sample Project From Exchange
+
+You can download a sample project from Exchange that has pre-built mapping to transform 4010 850 purchase order transactions into a JSON application message structure.
+You can test the map locally in Anypoint Studio following the below steps
+Right click on the project, and click Run → Run as Mule application
+Using a REST client, POST an EDI message payload to the URL http://localhost:8081/x12/in
+The application will return the translated JSON/XML.
+Copy the dataweave map from src/main/resources/x12/IN-X12-version-transaction-to-applicationmessage.dwl, and rename it.
+Example: IN-X12-4010-850-to-SAP-purchaseorder.dwl
+Import the dwl file in the Map section of inbound message flows.

@@ -22,6 +22,8 @@
   *** xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
   *** xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
  ** xref:partner-manager-maps.adoc[Maps]
+  *** xref:create-map-inbound-x12-json-xml.adoc[Create a Map for Inbound X12 to JSON or XML]
+  *** xref:create-map-json-xml-to-outbound-x12.adoc[Create a Map For XML or JSON to Outbound EDI X12]
 * xref:configure-message-flows.adoc[Inbound Message Flow Configuration]
  ** xref:message-flows.adoc[Message Flows] 
  ** xref:manage-message-flows.adoc[Manage Message Flows]
