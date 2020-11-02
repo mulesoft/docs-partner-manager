@@ -1,88 +1,70 @@
 = AS2 Receive Endpoint Settings
 
-Use these when setting up AS2 with HTTPS.
+AS2 endpoint settings specify where to receive inbound files from your trading partners. You can use the same AS2 Receive endpoints to receive inbound transmissions from multiple partners.
 
-[%header,cols="3s,7a"]
+Create the AS2 identifiers for your organization and your trading partners in the respective host and trading partner profile pages.
+
+[%header%autowidth.spread]
 |===
-|Setting |Description
-
+|Setting |Description | Required
 |Endpoint Name
-|Name used to easily identify the purpose of this endpoint. The name is auto-populated, but can be overwritten. +
-Required: Yes +
+|Name used to easily identify the purpose of this endpoint. The name is auto-populated, but can be overwritten. 
+|Yes 
 
 |Description
-|Describe any important details for this endpoint. +
-Required: No +
+|Describe any important details for this endpoint. 
+| No
 
 | AS2 URL
-| The HTTP or HTTPS address where you receive AS2 messages.
+a| The HTTP or HTTPS address where you receive AS2 messages.
 
-When deploying to CloudHub the URL is automatically generated when you deploy a message flow that uses this endpoint.
+When deploying to CloudHub, the URL is automatically generated when you deploy a message flow that uses this endpoint.
 You can see the URL  by selecting the receiving endpoint from your deployed message flow.
 
-You view the URL by selecting the receiving endpoint from your deployed message flow.
+Select the receiving endpoint from your deployed message flow to view the URL.
 
-If deploying to on-premises Mule with a firewall and load balancer,
-work with your hosting or network security team to obtain the externally accessible DNS or name of the host where the Mule runtime server is executing,
-and replace {runtime_host} in the URL. For example, if the DNS host name is `b2b.mycompany.com` - the AS2 receiver URL is: `https://b2b.mycompany.com/receive-as2/`
+If you are deploying to on-premises Mule with a firewall and load balancer, work with your organization's hosting or network security team to obtain the externally accessible DNS or name of the host where the Mule server is executing. You must replace the {runtime_host} value in the URL with the value that is specific to your organization. For example, if the DNS host name is `b2b.mycompany.com`, the AS2 receiver URL is: `https://b2b.mycompany.com/receive-as2/`
+|
 
 | <Host> public certificate
-| This is your organization’s digital certificate (based on the RSA algorithm) for the AS2 transport protocol).
-NOTE: If a single certificate is uploaded, Partner Manager prevents you from deleting your only certificate. +
-
-Required: Yes +
+a| This is your organization’s digital certificate, which is based on the RSA algorithm for the AS2 transport protocol.
+NOTE: If a single certificate is uploaded, Partner Manager prevents you from deleting your only certificate. 
+|Yes 
 
 | <Host> private key file
 | This is your private key.
-
-Required: Yes +
+|Yes 
 
 | Key passphrase
 | This is the passphrase for your private key.
-
-Required: Yes +
-
+| Yes 
 |===
 
 == Signature and Encryption Algorithms
 
-AS2 receive endpoints deployed from Partner Manager support the following signature and encryption algorithms.
+AS2 Receive endpoints deployed from Partner Manager support the following signature and encryption algorithms:
 
-
-=== Signature Algorithm
-
-The preferred algorithm for the signature of received messages. This is Required.
-
-* `UNSIGNED (Default)` +
-
-* `MD5` +
-
-* `SHA1` +
-
-* `SHA224` +
-
-* `SHA256` +
-
-* `SHA384` +
-
-* `SHA512` +
-
-=== Encryption Algorithm
-
-The preferred algorithm for the encryption of received messages. This is Required.
-
-* `UNENCRYPTED (Default)` +
-* `AES128_CBC` +
-* `AES128_CCM` +
-* `AES128_GCM` +
-* `AES192_CBC` +
-* `AES192_CCM` +
-* `AES192_GCM` +
-* `AES256_CBC` +
-* `AES256_CCM` +
-* `AES256_GCM` +
-* `AES256_WRAP` +
-* `CAST5` +
-* `3DES` +
-* `DES_EDE3` +
-* `RC2` +
+* Signature algorithms
+** `UNSIGNED (Default)` 
+** `MD5` 
+** `SHA1` 
+** `SHA224` 
+** `SHA256` 
+** `SHA384` 
+** `SHA512` 
+* Encryption algorithms
+** `UNENCRYPTED (Default)` 
+** `AES128_CBC` 
+** `AES128_CCM` 
+** `AES128_GCM` 
+** `AES192_CBC` 
+** `AES192_CCM` 
+** `AES192_GCM` 
+** `AES256_CBC` 
+** `AES256_CCM` 
+** `AES256_GCM` 
+** `AES256_WRAP` 
+** `CAST5` 
+** `3DES` 
+** `DES_EDE3` 
+** `RC2` 
