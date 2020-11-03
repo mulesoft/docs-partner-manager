@@ -1,4 +1,13 @@
-= Configure Trading Partners
+= Create, Configure, and Update Trading Partners
+
+The Partner Manager *Partners* page lists all the configured trading partner profiles. You can click the trading partner name to view the detailed profile of the partner and can do the following within the partner page:
+
+* <<create-partner,Create and configure new trading partners>>
+* View the details of a partner
+* Add the EDI & AS2 identifiers used by your trading partner.
+* Add digital certificates associated with your trading partner.
+* Create and manage source and target endpoints owned by the trading partner.
+Manage EDI validation settings to be applied on inbound and outbound transactions.
 
 == Prerequisites
 
@@ -7,28 +16,20 @@ To create a new partner, you need the following information:
 * The partner's name (usually the name of the company).
 * Partner identifiers (such as the AS2 ID, X12-ISA, X12 GS, and so on).
 
-== Partner Detail Page
-
-After you create a new partner, you can add other information in the *Partners* section in the left navigation menu.
-
-From the Partner detail page you can:
-
-* Add information about your partner along with contact details.
-* Partner endpoints (where you send transmissions to your partners, including acknowledgement endpoints).
-* EDI message format preferences for your partner (such as X12), and any associated validations such as the need for acknowledgments (like TA1, 997, 999, and so on).
-* Message types to use. For example, a purchase order in X12 is an 850 message. You also need to know the X12 version to use in your transactions (such as 004010, 005010, and so on).
-* Your partner's digital certificates (such as an X.509 certificate).
-
-You can also configure validation, acknowledgment, control number, and character set settings applicable to all message flows for the trading partner.
-
+[[create-partner]]
 == Create a Partner
 
 . From within your Anypoint Partner Manager environment, select *Partners* from the left navigation.
 . Click *New partner*.
-. Add a name that easily identifies your partner.
-. Select an identifier from the *Type* list. This uniquely identifies your partner.
-For example, depending on your setup, select one of the following: AS2 ID, X12-ISA, X12 GS, or the DUNS number.
-. Provide a value for your identifier (and qualifier for X12-ISA) and click *Create partner* to create your trading partner.
+. In *Name*, enter a name that easily identifies your partner.
+. Select an identifier from the *Type* list: 
+* *AS2 Identity*
+* *Reference ID*
+* *X12-GS*
+* *X12-ISA*
+. In *Identifier Value*, enter a value to uniquely identify your partner. +
+. If you selected *X12-ISA* as the *Type*, you must also select a *Qualifier* from the list. 
+. Click *Create partner* to create your trading partner.
 +
 See xref:x12-identity-settings.adoc[Identifiers] for more information about X12 Identity settings.
 +
@@ -43,21 +44,49 @@ For more information about your protocol type refer to:
 * xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
 You can now set up message flows related to this trading partner by using xref:configure-message-flows.adoc[Create a Message Flow] or continue to update this partner.
 
+== View a Partner's Details
+
+After you create a new partner, you can view and update details for the partner:
+
+. In Partner Manager, select *Partners* in the left navigation menu. 
+. Click the partner to view its details and make updates. +
+From the partner's detail page you can:
+* Add information about your partner along with contact details.
+* Add partner endpoints (where you send and receive messages to and from your partners, including acknowledgment endpoints).
+* Specify EDI message format preferences for your partner (such as X12), and any associated validations such as the need for acknowledgments (like TA1, 997, 999, and so on).
+* Specify the message types to use. +
+For example, a purchase order in X12 is an 850 message. You also need to know the X12 version to use in your transactions (such as 004010, 005010, and so on).
+* Add your partner's digital certificates (such as an X.509 certificate).
+
+You can also configure validation, acknowledgment, control number, and character set settings applicable to all message flows for the trading partner.
+
 == Update a Partner's Profile
 
-You can add the following information for each trading partner from the *Partners* selection in the left navigation:
+You can add the following information for each trading partner from the *Partners* tab in the left navigation:
 
+. In Partner Manager, select *Partners* in the left navigation menu. 
+. Click the partner for whom to update the profile.
 . Under the *About* section, click *Edit* to add or update the following information:
-* Description - Provide a brief description of your partner's business, what kind of trading relationship your organization has with them, and so on.
-* Website - enter a valid URL to your trading partner's website.
-* Logo - upload a logo associated to your trading partner. Supported logo file formats are: `.jpg`, `.jpeg`, `.png`, `.gif`, or `.svg` files. Maximum file size is 30KB.
-* Corporate address - provide a complete address that includes the Street, City, State, Postal code, and Country.
-* Add contacts - available contact types are: Business, Technical or Other. You can add up to three contacts associated with a trading partner's profile. You can also delete contacts from here.
-+
+* Description +
+Provide a brief description of your partner's business, what kind of trading relationship your organization has with them, and so on.
+* Website +
+Enter a valid URL to your trading partner's website.
+* Logo +
+Upload a logo associated to your trading partner. Supported logo file formats are: `.jpg`, `.jpeg`, `.png`, `.gif`, or `.svg` files. Maximum file size is 30KB.
+* Corporate address +
+Provide a complete address that includes the Street, City, State, Postal code, and Country.
+* Add contacts +
+You can add up to three contacts associated with a trading partner's profile. You can also delete contacts from here. 
+
+Available contact types are: 
+
+** Business
+** Technical 
+** Other 
 . Click *Save*. +
 A message confirms that the partner's profile is successfully updated.
 . If you want to add more identifiers for your trading partner click *New* within the *Identifiers* section.
-. Select an identifier type from the *Type* drop-down menu to uniquely identify your partner. +
+. Select an identifier type from the *Type* drop-down list to uniquely identify your partner. +
 For example, depending on your setup, select one of the following: 
 * AS2 ID
 * X12-ISA
@@ -83,27 +112,6 @@ Validation settings include:
 * Acknowledgment
 * Control numbers
 * Character sets
-
-
-
-== Delete Identifiers
-
-You might want to delete an identifier when it is no longer needed.
-Consider that deleting an existing host or partner identifier impacts the identification and routing of B2B messages to the associated partner.
-Ask yourself the following when deleting an identifier: Why do you want to delete it? Do you need to replace it with another identifier?
-Remember that there must always be at least one identifier per message flow before you can delete it.
-
-After successfully deleting an identifier, you can create a new identifier with the same value as the one you deleted.
-
-You can delete identifiers such as X12 ISA, X12 GS, AS2, and DUNS. You cannot delete the last identifier, as there must be at least one in the list.
-
-. If you need to replace the identifier, record the values and qualifier type needed.
-
-. Choose the partner name and click *<Partner name>* to expand it.
-
-. Hover over the identifier you want to delete and click the trash can icon that appears towards the right-hand side of the identifiers row.
-
-. If you need a replacement, add it now by clicking *New*.
 
 == Delete Endpoints
 
