@@ -1,19 +1,20 @@
 = Configure a Host
 
-Your organization or your business group is considered the host partner in Anypoint Partner Manager. In the Anypoint platform, your hostname is the same name as your Anypoint Platform business group.
+Your organization or your business group is referred to as the Anypoint Partner Manager Host. In the Anypoint Platform, your hostname is the same name as your Anypoint Platform business group. An Anypoint Platform business group contains Anypoint Platform resources, such as APIs and applications.
 
-An Anypoint Platform business group contains Anypoint Platform resources such as APIs and applications.
-
-Within the Host page you can:
+Within the Partner Manager host page you can:
 
 * Add identifiers to uniquely identify yourself.
 * Add digital certificates associated with your organization.
-* Configure details associated with the Payload Storage API (the same one that was configured as part of the Setup instructions). +
+* Create new endpoints.
+* Create new message types.
+* Configure the details associated with the Payload Storage API you configured as part of Partner Manager setup. +
 The storage API is a mandatory configuration where your B2B message payloads are stored.
+
 
 == Prerequisites
 
-Information you'll need about your organization:
+To configure the host, you need the following information about your organization:
 
 * Your organization's identifiers, such as the AS2 ID, X12-ISA, X12 GS, and so on
 * Endpoints +
@@ -23,8 +24,8 @@ Your organization needs to provide endpoints to receive transmissions from your 
 These endpoints are resources your organization exposes to your trading partners.
 ** Target endpoints +
 Your organization also has internal endpoints to which it routes messages from the trading partners. The messages routed to the target endpoint are typically validated and transformed before they are routed to the configured target endpoint.
-** Acknowledgement endpoints +
-Your partners provide you with their own endpoint configurations to which your organization can send acknowledgments, such as an X12 997 or X12 999. Acknowledgements are typically sent back to trading partners and correspond to one or more B2B messages you receive from your trading partners.
+** Acknowledgment endpoints +
+Your partners provide you with their own endpoint configurations to which your organization can send acknowledgments, such as an X12 997 or X12 999. Acknowledgments are typically sent back to trading partners and correspond to one or more B2B messages you receive from your trading partners.
 * Your digital certificates, such as an X.509 certificate
 * Electronic Data Interchange (EDI) message type preferences for your organization
 * DataWeave transformation maps your organization uses for B2B transformations +
@@ -32,30 +33,36 @@ Create these maps using Anypoint Studio before you use Partner Manager.
 
 == Update the Host's Profile
 
-. Open Anypoint Partner Manager and select the name of your organization from the left navigation pane. +
-You can configure your indentifiers, certificates, and the location and configuration of your payload storage.
-. Click *New* within the *Identifiers* section to begin adding an identifier related to your organization.
-. Select an identifier type from the *Type* drop-down menu. This uniquely identifies you. +
-For example, depending on your setup, select one of the following: AS2, DUNS number, X12 GS, or X12-ISA.
+On the host page, you can configure your indentifiers, certificates, and the location and configuration of your payload storage.
+
+. Open Anypoint Partner Manager and select the name of your organization from the left navigation menu. 
+. In the *Identifiers* section, click *New* to add an identifier related to your organization.
+. Select an identifier type from the *Type* drop-down list. +
+The identifier type uniquely identifies you. +
+For example, depending on your setup, select one of the following: 
+* AS2
+* DUNS number
+* X12 GS
+* X12-ISA
 . Provide a value for your identifier and a qualifier for X12-ISA and click *Create identifier* to save your changes. +
 See xref:x12-identity-settings.adoc[Identifiers] for more information about X12-ISA settings.
-. Click *New* within the *Certificates* section to begin to upload any needed digital certificates, such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol.
+. In *Certificates* section, click *New* to upload any needed digital certificates, such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol.
 . Click *Choose file* to select the certificate (typically a `<certificate name>.PEM` file), and click *Upload certificate* to upload your chosen certificate file. +
 See xref:Certificates.adoc[Certificates] for more information about configuring certificates in Partner Manager.
-. Click *New* from within *Endpoints: Receive from partners* or *Endpoints: Targets at <partner name>* for the Host, and select your protocol type.
-. Set up your endpoint based on the protocol type you selected.
-For more information about your protocol type, see:
+. From *Endpoints: Receive from partners* or *Endpoints: Targets at <partner name>*, click *New* and select your protocol type.
+. Set up your endpoint based on the protocol type you selected:
 * xref:endpoint-as2-receive.adoc[AS2 Endpoint Settings]
 * xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
 * xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
-. Click *Save* when you are done.
-. If you need to make changes later, for example, changing the URL location, timeout settings, or acknowledgments click *Edit* within the *Payload storage* section.
+. Click *Save*.
+. If you need to make changes later, for example, changing the URL location, timeout settings, or acknowledgments, click *Edit* in the *Payload storage* section.
 
-See xref:x12-identity-settings.adoc[Identifiers] for information about deleting an identifier.
 
-See xref:endpoints.adoc[Endpoint Types and Protocols] for information about deleting an endpoint.
 
 == See Also
 
 * xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner]
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
+* xref:partner-manager-identifiers.adoc[Identifiers] 
+* xref:delete-identifiers.adoc[Delete Identifiers] 
+* xref:endpoints.adoc[Endpoint Types and Protocols]
