@@ -1,36 +1,54 @@
-= CloudHub Deployment Options
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= CloudHub Deployment Settings
 
-To access the deployment settings for your organization, navigate to *Access Management > Partner Manager*.
+If you are deploying Partner Manager applications to CloudHub, use the Partner Manager Settings to specify CloudHub deployment options for the Sandbox and Production environments, including the Mule runtime engine (Mule) version, CloudHub region, Anypoint MQ region, and so on. 
 
-* Runtime version
+== Mule Version
 
-The default and recommended option is `Use latest version`, which deploys new Partner Manager message flows by using the latest Mule runtime version.
-If you want the applications deployed to another version, choose it from the menu.
+You can specify the Mule version to use to deploy your application in the *Runtime version* drop-down. 
 
-* CloudHub region
+The default and recommended option is *Use latest version*, which deploys new Partner Manager message flows using the latest Mule version. 
 
-The default option is retrieved from the business group’s default region setting for Runtime Manager in Access Manager.
-If you want the B2B integration flows from Partner Manager to be deployed to a different region,
-select it from the drop-down menu prior to deploying your first message flow.
+If you want to deploy Partner Manager applications to a specific Mule version, you can select it from the drop-down list. 
 
-Subsequent deployments get deployed to the same region as the first deployment.
-To change the default region and have it persist as the default, you must undeploy and redeploy any previously deployed message flows.
-For more information about undeploying message flows, refer to xref:configure-message-flows.adoc[Configure Message Flows].
+== CloudHub Region
 
-* Anypoint MQ region
+The default CloudHub region is retrieved from the business group’s Runtime Manager region setting in Access Manager.
 
-This is automatically assigned, based on the CloudHub region; you cannot change it.
+If you want to deploy the B2B integration flows from Partner Manager to a different region, select it from the *CloudHub Region* drop-down list before you deploy your first message flow. The CloudHub region you specify for the first deployment becomes the default setting for subsequent deployments.
 
-* Automatically restart app when not responding
+=== Change the Default CloudHub Region
 
-CloudHub automatically restarts your application when the monitoring system discovers an issue.
+To change the default CloudHub region:
 
-* vCore settings
+. Undeploy message flows that are deployed to the currently specified CloudHub region. 
+. Redeploy the message flows after you specify a new default region.
 
-Configure these at the sandbox or production environment type.
-The `Document Processing` and `API Replication` services are core components of the Partner Manager workflow,
-requiring a minimum of 1 vCore each. Each unique trading partner and internal endpoints get deployed to isolated workers - requiring a minimum of 0.1 vCore each.
-If you require assistance with sizing, contact your account representative.
+For more information about undeploying message flows, see xref:configure-message-flows.adoc[Configure Message Flows].
+
+== Anypoint MQ Region
+
+This is automatically assigned, based on the specified CloudHub region; you cannot change it.
+
+== Automatically Restart the App
+
+Select the *Automatically restart app when not responding* checkbox if you want CloudHub to automatically restart your application when the monitoring system discovers an issue.
+
+== vCore settings
+
+Configure the following vCore settings for the Sandbox and Production environments:
+
+* *Each B2B endpoint (inbound, outbound, and ack)* +
+Each unique trading partner and internal endpoint gets deployed to isolated workers, and require a minimum of *0.1 vCore* each.
+* *B2B DocumentProcessingService* +
+Core component of the Partner Manager workflow that requires a minimum of *1 vCore*.
+* *B2B APIReplicationService* +
+Core component of the Partner Manager workflow that requires a minimum of *1 vCore*.
+
+If you need assistance with sizing, contact your MuleSoft account representative.
+
+== Access Partner Manager Settings
+
+To access the deployment settings for your organization:
+
+. In Anypoint Platform, navigate to *Access Management*. 
+. From the menu on the left, select *Settings > Partner Manager*.
