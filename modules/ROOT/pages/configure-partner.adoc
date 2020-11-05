@@ -1,6 +1,8 @@
 = Create, Configure, and Update Trading Partners
 
-The Partner Manager *Partners* page lists all the configured trading partner profiles. You can click the trading partner name to view the detailed profile of the partner and can do the following within the partner page:
+The Partner Manager *Partners* page lists all the configured trading partner profiles. 
+
+On the *Partners* page, you can:
 
 * <<create-partner,Create and configure new trading partners>>
 * View the details of a partner
