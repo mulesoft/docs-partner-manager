@@ -1,18 +1,16 @@
 = Configure a Host
 
-Your organization or your business group is referred to as the Anypoint Partner Manager Host. In the Anypoint Platform, your hostname is the same name as your Anypoint Platform business group. An Anypoint Platform business group contains Anypoint Platform resources, such as APIs and applications.
+Your Anypoint Platform organization or your business group is referred to as the "host" in Anypoint Partner Manager. In Anypoint Platform, your host name is the same as your Anypoint Platform business group name. 
 
-Within the Partner Manager host page you can:
+You can use the host page in Partner Manager to:
 
 * Add identifiers to uniquely identify yourself.
 * Add digital certificates associated with your organization.
-* Create new endpoints.
+* Create new receive, target, and send endpoints.
 * Create new message types.
-* Configure the details associated with the Payload Storage API you configured as part of Partner Manager setup. +
-The storage API is a mandatory configuration where your B2B message payloads are stored.
+* Configure the details associated with the Payload Storage API you configured as part of Partner Manager setup. 
 
-
-== Prerequisites
+== Host Configuration Settings
 
 To configure the host, you need the following information about your organization:
 
@@ -29,7 +27,7 @@ Your partners provide you with their own endpoint configurations to which your o
 * Your digital certificates, such as an X.509 certificate
 * Electronic Data Interchange (EDI) message type preferences for your organization
 * DataWeave transformation maps your organization uses for B2B transformations +
-Create these maps using Anypoint Studio before you use Partner Manager.
+Use Anypoint Studio to create the DataWeave transformation maps before you use Partner Manager.
 
 == Update the Host's Profile
 
