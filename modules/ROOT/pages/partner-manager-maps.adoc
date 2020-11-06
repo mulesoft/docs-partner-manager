@@ -1,11 +1,10 @@
-= Maps
+= Create and Configure EDI Translation Maps
 
-Maps are used by Partner Manager to transform business transactions between EDI message format (X12) and your organization’s enterprise application message formats, such as JSON and XML. 
+Partner Manager uses DataWeave maps to transform business transactions between EDI message format (X12) and your organization’s enterprise application message formats, such as JSON and XML. 
 
-You need to create EDI translation maps in Anypoint Studio, leveraging the X12 Connector and Dataweave and import the map in Partner Manager while configuring inbound or outbound message flows.
+You need to use the Anypoint X12 Connector and DataWeave to create EDI translation maps in Anypoint Studio and then import the map in to Partner Manager when you configure inbound or outbound message flows.
 
 == Create a DataWeave Map for Inbound X12 to JSON/XML
-
 
 JSON/XML to outbound X12
 You can create the dataweave map to transform your application message formats such as XML or JSON to outbound EDI X12 transactions following the below steps:
@@ -45,3 +44,8 @@ The application will return the translated EDI X12 transaction.
 Copy the dataweave map from src/main/resources/x12/OUT-application-message-to-X12-version-transaction-partner.dwl, and rename it.
 Example: OUT-SAP-purchaseorder-XML-to-X12-4010-850-MythicalSupplier.dwl
 Import the dwl file in the Map section of outbound message flows.
+
+== See Also
+
+* xref:configure-message-flows.adoc[Create and Configure an Inbound Message Flow]
+* xref:partner-manager-outbound-message-flow-config.adoc[Create and Configure an Outbound Message Flow]
