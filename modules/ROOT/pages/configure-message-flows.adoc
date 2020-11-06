@@ -1,121 +1,75 @@
-= Create and Configure a Message Flow
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= Create and Deploy an Inbound Message Flow
 
-You can create and configure a message flow either when you create a trading partner or afterward. After you deploy the message flow, it's best to test it.
+You can create and configure an inbound message flow either when you create a trading partner, or after you create a trading partner. After you deploy the message flow, it's best to test it.
 
-. From within your Anypoint Partner Manager Sandbox or Production environment click *New message flows* in the upper right.
-
-. Select an existing Partner. You can do this from the *Select a partner* dialog, by searching for a partner by name.
-
-. Once you find a match, choose the partner name and click *Select*. Clicking each section of the message flow expands it. A green checkmark next to any section indicates that it is complete.
-
-* Alternatively from the *Select a partner* dialog, you can create a new partner by clicking *New*.
-This is the same as xref:configure-partner.adoc#create-a-trading-partner[Create a Trading Partner] except that when you are finished, you'll click *Create Partner and Message Flow*.
-You can add more information to the partner later.
+. From your Anypoint Partner Manager *Sandbox* or *Production* environment, select *Message Flows* in the left navigation menu. 
+. Click *New message flow > Receive from partner* in the upper right of the page.
+. Select an existing Partner from the list and click *Select*. +
+A new message flow is created. +
+Alternatively, from the *Select a partner* dialog, you can click *New* to create a new partner.
+Follow the process to xref:configure-partner.adoc#create-a-trading-partner[create a Trading Partner], except that when you are finished, click *Create Partner and Message Flow*.
+. Click each section of the message flow to expand it. +
+A green checkmark next to any section indicates that it is complete.
+. Expand the *Receiving endpoint* section and click *Select*.
+. To use an existing receiving endpoint, select the endpoint from the list and click *Select* in the lower right side of the page. +
+To create a new receiving endpoint, click *New* on the right of the search box and follow the instructions for creating a new endpoint. 
 +
-. Click *Select* from the *Receiving endpoint* section to configure the source endpoint where you receive the transmission.
-
-. Click *Select* to search and select an existing endpoint or click *New* to create a new endpoint.
-
-. To create a new endpoint, depending on the protocol, refer to the following:
-+
-* xref:endpoint-as2-receive.adoc[AS2 Endpoint Settings]
-
-* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
-
-+
-
-NOTE:
-For B2B workloads on-premises, deploying a message flow for a new trading partner while using an existing AS2 endpoint to receive messages can result in a brief interruption to the service for existing AS2 trading partner users.
-To minimize the impact of the service interruption, we recommend performing these message flow deployments outside of your regular business hours.
-This issue does not exist on CloudHub, as CloudHub provides a zero-downtime update of the AS2 endpoint application.
-
-+
-
-. In the *Source message* section, click *Select* to expand the Message Type section.
-
-. Either search and click *Select* to choose a previously used message type or click *New* to create a new message type.
-
-. For a new message type, depending on the message standard, refer to the following:
-+
-* xref:document-types.adoc[X12 and JSON Message Types]
-+
-. To optionally edit the validation settings, click *View* and the hostname.
-For more information, see xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner].
-+
-NOTE: It may take five minutes or so for your configuration changes to sync with Mule runtime.
-+
-. For X12 partner requirements, optionally configure the type of functional acknowledgment and the endpoint to which you send it.
-+
-* xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
-
-* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
-+
-. Click the *Map* section and then click *Import* to choose a DataWeave map.
-
-. Select a map and click *Upload mapping*.
-
-. Click the *Target at <Partner name>* section and click *Select* to set up a target message type.
-This is the target message type and the Endpoint where you want to route the transformed message.
-
-. Either search and select an existing message type, or create a new message type. To create a new message type, depending on the message standard, follow instructions in one of these sections.
-
-+
-* xref:document-types.adoc[X12 and JSON Message Types]
-+
-.  Click *Select* to set up a target endpoint.
-
-+
-
+[NOTE]
+Translated files are delivered to file-based endpoints with a unique file name with the pattern `<doctype>-<senderid>-<ISACtrlNum>-<GSCtrlNum>-<STCtrlNum>-<timeInMillis>.<format>`, for example: `850-ABCCORP-40952-5850-179960-1587685726355.JSON`
+. Expand the *Source message type* section, and click *Select*.
+. To use an existing message type, select the message type from the list and click *Select* in the lower right side of the page. +
+To create a new message type, click *New* on the right side of the search box and follow the instructions for creating a message type. 
+. Expand the *Map* section and click *Import* to upload the DataWeave map to translate the EDI message to your application message format. +
+Follow these instructions to create your inbound EDI-to-application message (JSON or XML) map in Anypoint Studio.
+. Expand the *Target at <your organization>* section.
+. Select the message type of your backend system to which to map the EDI transaction. +
+Partner Manager routes inbound EDI transactions based on matching identifiers configured at the Partner level. +
 NOTE:
 Translated files are delivered to file-based endpoints with a unique file name with the pattern `<doctype>-<senderid>-<ISACtrlNum>-<GSCtrlNum>-<STCtrlNum>-<timeInMillis>.<format>`.
 Example: 850-ABCCORP-40952-5850-179960-1587685726355.JSON
+In the *Select message type* window, click *New* to create a new target at host message type.
+. Select the endpoint to which to send the translated message (XML or JSON) for further processing in your backend system. +
+In the *Select endpoint* window, click *New* to create a new endpoint. 
 
-+
+== Deploy the Message Flow
 
-. Either search for and select an existing endpoint or create a new endpoint by clicking *New*.
-+
-* To create a new endpoint, depending on the protocol, refer to the following:
+Partner Manager dynamically validates the message flow configuration elements for completeness and displays a green checkmark next to each of the message flow building blocks as they are completed and validated. 
 
-* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
+It is best to test the message flow by deploying it in a sandbox environment. When you verify that the message flow is successful, you can then undeploy it from the sandbox and deploy it to your production environment.
 
-* xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
+After you verify that each part of the message flow is complete, click the *Deploy* button to deploy the message flow to the runtime.
 
-. After you create the source, map, and target sections in the interface, confirm that each shows a green checkmark next to it in the flow, and click *Deploy* to deploy the configurations to Mule.
+[NOTE]
+---
+For B2B workloads on-premises, deploying a message flow for a new trading partner while using an existing AS2 endpoint to receive messages can result in a brief interruption to the service for existing AS2 trading partner users.
 
-Your message flow configuration is deployed to your Mule runtime engine and you can start receiving messages from your partner. After a message flow is successfully deployed, you can track its processed messages using the Activity page.
+To minimize the impact of the service interruption, it is best to perform message flow deployments outside of your regular business hours.
+
+This issue does not exist on CloudHub, as CloudHub provides a zero-downtime update of the AS2 endpoint application.
+---
+
+Your message flow configuration is deployed to Mule runtime engine and you can start receiving messages from your partner. After a message flow is successfully deployed, you can track its processed messages using the *Activity* page.
 
 == Test Message Flows
 
-You should send test messages through the message flow after you deploy to verify the following:
+After you deploy the message flow, send test messages to verify the following:
 
 * You are receiving messages and acknowledgments from your partners.
+* The DataWeave map is working and your backend systems receive the transformed message.
 
-* Make sure that the DataWeave map is working and your backend systems receive the transformed message.
-
-You can test the flow by deploying it in a sandbox environment. When you verify that the flow is successful, you can undeploy it from the sandbox and deploy it to your production environment.
-
-Test your message flow in your Anypoint Partner Manager Sandbox or Production environment:
+Test your message flow in your Anypoint Partner Manager Sandbox environment:
 
 . Initiate a transmission on the receiving endpoint.
-
-. From within Anypoint Partner Manager, select *Activity* and select the transmission from the list.
-
-. Scan for an exclamation point (!) in any of the boxes next to the displayed flow stages, indicating an issue with the transmission and address them.
-
-. If the system was set up to view payloads, you can review the received payload by clicking *View payload* next to the Received transmission section. If you are unsure about whether you should be able to view a payload, contact your B2B System Administrator.
-
+. From the Partner Manager left navigation, select *Activity*.
+. Select the transmission to test from the list.
+. Scan for an exclamation point (!) in any of the boxes next to the displayed flow stages. Exclamation points indicate that there is an issue with the transmission. Address any issues you find.
+. If the system was set up to view payloads, you can review the received payload by clicking *View payload* next to the *Received transmission* section. +
+If you are unsure about whether you should be able to view a payload, contact your B2B System Administrator.
 . If you have TA1 and functional acknowledgments (999 or 997) set, review and confirm that they are there.
-
-. Verify that the transmission routed messages to the correct message flows.
-
-. Verify that the messages are routed to the target system:
-
-** Successfully delivered to the target endpoint
-
-** Transformed correctly
+. Verify that the transmission routed the messages to the correct message flows.
+. Verify that the messages are routed to the target system and that they:
+* Were successfully delivered to the target endpoint
+* Transformed correctly
 
 == See Also
 
