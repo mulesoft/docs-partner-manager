@@ -12,7 +12,7 @@ Identifiers are used to identify the sender and receiver partners that are invol
 * <<x12-gs,*X12 - GS*>>
 * <<x12-isa,*X12 - ISA*>>
 . In *Identifier Value*, enter a value to uniquely identify your identifier. 
-. If you selected *X12-ISA* as the *Type*, you must also select a *Qualifier* from the list. 
+. If you selected *X12-ISA* as the *Type* value, you must also select a *Qualifier* from the list. 
 . Click *Create identifier*.
 
 [[x12-isa]]
