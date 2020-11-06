@@ -2,7 +2,7 @@
 
 Your Anypoint Platform organization or your business group is referred to as the "host" in Anypoint Partner Manager. In Anypoint Platform, your host name is the same as your Anypoint Platform business group name. 
 
-You can use the host page in Partner Manager to:
+Use the host page in Partner Manager to:
 
 * Add identifiers to uniquely identify yourself.
 * Add digital certificates associated with your organization.
@@ -55,12 +55,10 @@ See xref:Certificates.adoc[Certificates] for more information about configuring 
 . Click *Save*.
 . If you need to make changes later, for example, changing the URL location, timeout settings, or acknowledgments, click *Edit* in the *Payload storage* section.
 
-
-
 == See Also
 
-* xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner]
-* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
-* xref:partner-manager-identifiers.adoc[Identifiers] 
+* xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers] 
 * xref:delete-identifiers.adoc[Delete Identifiers] 
 * xref:endpoints.adoc[Endpoint Types and Protocols]
+* xref:partner-manager-maps.adoc[Create and Configure EDI Translation Maps]
+* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]

@@ -1,6 +1,8 @@
-= Identifiers
+= Sender and Receiver Identifiers
 
-Identifiers are used to identify the sender and receiver partners that are involved in a B2B transaction. For X12 messages, the identifiers in the ISA and GS headers provide valuable information that enables identification of the appropriate flow to use to process the transaction.
+B2B transactions use identifiers in messages to identify the senders and receivers of the messages. For X12 messages, the identifiers in the ISA and GS headers provide valuable information that enables identification of the appropriate flow to use to process the transaction.
+
+Add identifiers and configure their values in the Partner Manager host page.
 
 == Add and Configure a New Identifier
 
@@ -11,7 +13,7 @@ Identifiers are used to identify the sender and receiver partners that are invol
 * <<reference-id,*Reference ID*>>
 * <<x12-gs,*X12 - GS*>>
 * <<x12-isa,*X12 - ISA*>>
-. In *Identifier Value*, enter a value to uniquely identify your identifier. 
+. In *Identifier Value*, enter a value to uniquely name your identifier. 
 . If you selected *X12-ISA* as the *Type* value, you must also select a *Qualifier* from the list. 
 . Click *Create identifier*.
 
@@ -60,7 +62,7 @@ Use the following values to configure the X12 GS identifier type:
 |===
 |Setting |Description | Required
 
-|Identifier Value
+|Identifier value
 |EDI X12-GS ID for your trading partner, which can be up to 15 characters. Your trading partner supplies you with the proper EDI X12 Group Sender and Receiver IDs during onboarding.
 |Yes
 |===
@@ -75,15 +77,15 @@ Use the following values to configure the AS2 identifier:
 [%header%autowidth.spread]
 |===
 |Setting |Description | Required
-|Identifier Value
-|The AS2 identity for your trading partner. Your trading partner should supply you with the corresponding Sender and Receiver AS2 IDs during the onboarding process.
+|Identifier value
+|The AS2 identity for your trading partner. Your trading partner supplies you with the corresponding Sender and Receiver AS2 IDs during the onboarding process.
 |Yes 
 |===
 
 [[reference-id]]
 == Partner Reference Identifiers
 
-The Partner Reference ID is used in outbound message flows that translate your backend application messages to EDI format and then send the data to your trading partners. 
+Outbound message flows that translate your backend application messages to EDI format use the Partner Reference ID when sending data to your trading partners. 
 
 Unlike EDI transactions that have well-defined standards for how sender, receiver, and document type information is presented in the data, the source messages for outbound B2B data exchange originating from your enterprise backend systems typically follow schemas. These schemas are usually defined by your backend application teams according to your organization’s data models. 
 
