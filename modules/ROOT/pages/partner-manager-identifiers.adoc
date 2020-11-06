@@ -61,7 +61,7 @@ Use the following values to configure the X12 GS identifier type:
 |Setting |Description | Required
 
 |Identifier Value
-|EDI X12-GS ID for your trading partner, which can be up to 15 characters. Your trading partner should supply you with the proper EDI X12 Group Sender and Receiver IDs during the onboarding process.
+|EDI X12-GS ID for your trading partner, which can be up to 15 characters. Your trading partner supplies you with the proper EDI X12 Group Sender and Receiver IDs during onboarding.
 |Yes
 |===
 
