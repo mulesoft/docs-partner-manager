@@ -1,3 +1,90 @@
 = Identifiers
 
 Identifiers are used to identify the sender and receiver partners that are involved in a B2B transaction. For X12 messages, the identifiers in the ISA and GS headers provide valuable information that enables identification of the appropriate flow to use to process the transaction.
+
+== Add and Configure a New Identifier
+
+. In Partner Manager, select the name of your host organization in the left navigation menu. 
+. In the *Identifiers* section, click *New*. 
+. In the *New Identifier* dialog, select the identifier type from the drop-down list:
+* <<as2-identifier,*AS2 Identity*>>
+* <<reference-id,*Reference ID*>>
+* <<x12-gs,*X12 - GS*>>
+* <<x12-isa,*X12 - ISA*>>
+. In *Identifier Value*, enter a value to uniquely identify your identifier. 
+. If you selected *X12-ISA* as the *Type*, you must also select a *Qualifier* from the list. 
+. Click *Create identifier*.
+
+[[x12-isa]]
+== X12 ISA Identifier Values
+
+Use the following values to configure the X12 ISA identifier type:
+
+[%header%autowidth.spread]
+|===
+|Setting |Description | Required
+
+|Qualifier
+a|The Qualifier types available with Anypoint Partner Manager are:
+
+* `01 (DUNS Number)`
+* `02 (SCAC - Standard Carrier Alpha Code)`
+* `03 (FMC - Federal Maritime Commission)`
+* `04 (IATA - International Air Transport Association)`
+* `08 (UCC EDI Number)`
+* `09 (X.121)`
+* `10 (DoD - Department of Defense Activity Address Code)`
+* `11 (DEA - Drug Enforcement Administration)`
+* `12 (Phone Number)`
+* `13 (UCS Code)`
+* `14 (DUNS Number and Suffix Number)`
+* `16 (DUNS Number with a Four Character Suffix)`
+* `19 (EDI Council of Australia Communications ID)`
+* `20 (HIN - Health Industry Number)`
+* `30 (U.S. Federal Tax Identification Number)`
+* `NR (NRMA - National Retail Merchants Association)`
+* `SN (Standard Address Number)`
+* `ZZ (Mutually Defined)`
+|Yes 
+|Identifier value
+|EDI X12-ISA ID for your trading partner, which can be up to 15 characters. Your trading partner should supply you with the proper EDI X12 Interchange Sender and Receiver IDs during the partner onboarding process.
+|Yes 
+|===
+
+[[x12-gs]]
+== X12 GS Identifier Values
+
+Use the following values to configure the X12 GS identifier type:
+
+[%header%autowidth.spread]
+|===
+|Setting |Description | Required
+
+|Identifier Value
+|EDI X12-GS ID for your trading partner, which can be up to 15 characters. Your trading partner should supply you with the proper EDI X12 Group Sender and Receiver IDs during the onboarding process.
+|Yes
+|===
+
+[[as2-identifier]]
+== AS2 Identity 
+
+When AS2 transport is used to exchange B2B transactions with your trading partner, you must configure the AS2 identifier for your organization and for your trading partner.
+
+Use the following values to configure the AS2 identifier:
+
+[%header%autowidth.spread]
+|===
+|Setting |Description | Required
+|Identifier Value
+|The AS2 identity for your trading partner. Your trading partner should supply you with the corresponding Sender and Receiver AS2 IDs during the onboarding process.
+|Yes 
+|===
+
+[[reference-id]]
+== Partner Reference Identifiers
+
+The Partner Reference ID is used in outbound message flows that translate your backend application messages to EDI format and then send the data to your trading partners. 
+
+Unlike EDI transactions that have well-defined standards defining how sender, receiver, and document type information is presented on the data, the source messages for outbound B2B data exchange originating from your enterprise backend systems typically follow schemas. These schemas are usually defined by your backend application teams according to your organization’s data models. 
+
+The receiving trading partner information on the application message from the backend system may not necessarily be the same as the name of the partner in Partner Manager. This is similar to how ISA and GS identifiers on an inbound EDI message may not be the same as the profile name of the partner.
