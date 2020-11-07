@@ -23,11 +23,7 @@ To create a new message type, click *New* on the right side of the search box an
 Follow these instructions to create your inbound EDI-to-application message (JSON or XML) map in Anypoint Studio.
 . Expand the *Target at <your organization>* section.
 . Select the message type of your backend system to which to map the EDI transaction. +
-Partner Manager routes inbound EDI transactions based on matching identifiers configured at the Partner level. +
-NOTE:
-Translated files are delivered to file-based endpoints with a unique file name with the pattern `<doctype>-<senderid>-<ISACtrlNum>-<GSCtrlNum>-<STCtrlNum>-<timeInMillis>.<format>`.
-Example: 850-ABCCORP-40952-5850-179960-1587685726355.JSON
-In the *Select message type* window, click *New* to create a new target at host message type.
+Partner Manager routes inbound EDI transactions based on matching identifiers configured at the Partner level. 
 . Select the endpoint to which to send the translated message (XML or JSON) for further processing in your backend system. +
 In the *Select endpoint* window, click *New* to create a new endpoint. 
 

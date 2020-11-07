@@ -45,8 +45,9 @@ The summary information contains:
 * The number of messages received in the file
 +
 If there is an exclamation point (!) next to any of the rectangle boxes in the *Transmission Flow* section, this indicates there is an issue with the transmission.
-
++
 The *Transmission Flow* section shows the steps the file was processed in, for example, if:
++
 * The file was successfully received and routed
 * An acknowledgement was sent back to the trading partner
 * The message was appropriately transformed and routed to the target endpoint 

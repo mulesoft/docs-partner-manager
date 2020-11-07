@@ -12,7 +12,7 @@
   *** xref:x12-send-settings.adoc[X12 Send (Outbound) Settings]
   *** xref:partner-manager-delete-partner.adoc[Delete a Partner]
 * xref:partner-manager-configuration-objects.adoc[Configuration Objects]
- ** xref:partner-manager-identifiers.adoc[Identifiers] 
+ ** xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers] 
   *** xref:delete-identifiers.adoc[Delete Identifiers] 
  ** xref:document-types.adoc[Message Types]
   *** xref:partner-manager-create-message-type.adoc[Creating Message Types]

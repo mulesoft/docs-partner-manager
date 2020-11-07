@@ -90,3 +90,7 @@ Outbound message flows that translate your backend application messages to EDI f
 Unlike EDI transactions that have well-defined standards for how sender, receiver, and document type information is presented in the data, the source messages for outbound B2B data exchange originating from your enterprise backend systems typically follow schemas. These schemas are usually defined by your backend application teams according to your organization’s data models. 
 
 The receiving trading partner information on the application message from the backend system might not necessarily be the same as the name of the partner in Partner Manager. This is similar to how ISA and GS identifiers on an inbound EDI message might not be the same as the profile name of the partner.
+
+== See Also
+
+* xref:configure-host.adoc[Configure and Manage a Host Profile]
