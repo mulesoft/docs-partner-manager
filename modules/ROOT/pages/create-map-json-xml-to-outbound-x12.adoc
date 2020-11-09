@@ -29,6 +29,7 @@ image::xml-to-outbound-x12-payload-add-metadata.png[Transform Message component 
 == Set the Target X12 Message Type
 
 The template has the X12 configuration for the below X12 transaction set:
+
 * Version +
 `4010`
 * Transaction Set + 
@@ -46,12 +47,14 @@ image::xml-to-outbound-x12-edit-schema.png[X12 EDI Config dialog]
 +
 . Change the Schema value to the version and transaction set you want to map from, for example, set the value to `/x12/004010/204.esl`, if you want to map to a 4010-204 Load tender transaction. +
 You now see your application message structure (JSON or XML) on the input pane in the left, and the X12 transaction set structure on the output pane in the right.
-. You can begin mapping from input to the output.
-. You can download a sample project from Exchange that has pre-built mapping to transform outbound purchase order messages from XML to 4010 850 transactions.
+. Click *Finish*, then click *OK*. +
+You can now begin mapping from input to the output.
+
+You can download a sample project from Exchange that has prebuilt mapping to transform outbound purchase order messages from XML to 4010 850 transactions.
 
 == Test the Map Locally
 
-You can test the map locally in Anypoint Studio following the below steps:
+Follow these steps to test the map locally in Anypoint Studio: 
 
 . Right-click on the project, and click *Run > Run as Mule application*.
 . Use a REST client to POST a JSON or an XML payload to the URL `+http://localhost:8081/x12/out+`. +
