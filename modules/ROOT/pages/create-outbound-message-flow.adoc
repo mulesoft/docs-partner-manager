@@ -86,7 +86,7 @@ If you want to apply custom validation settings and delimiters for the message f
 
 Expand the *Map* section and click *Import* to translate the application message format to EDI.
 
-Follow these instructions to create your application message-to-outbound EDI map (XML or JSON) in Anypoint Studio.
+Follow xref:create-map-json-xml-to-outbound-x12.adoc[these instructions] to create your application message-to-outbound EDI map (XML or JSON) in Anypoint Studio.
 
 == Verify the Message Flow is Complete
 
@@ -94,4 +94,5 @@ Partner Manager dynamically validates the message flow configuration elements fo
 
 == See Also
 
+* xref:create-map-json-xml-to-outbound-x12.adoc[Create a Map For XML or JSON to Outbound EDI X12]
 * xref:deploy-message-flows.adoc[Deploy, Test, and Undeploy Message Flows]
