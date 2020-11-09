@@ -1,6 +1,10 @@
 = Create and Configure an Inbound Message Flow
 
-You can create and configure an inbound message flow either when you create a trading partner, or after you create a trading partner. After you deploy the message flow, it's best to test it.
+You can create and configure an inbound message flow either when you create a trading partner, or after you create a trading partner. 
+
+After you create the inbound message flow, you configure the receive endpoint, source message type, target message type, and target endpoint. 
+
+== Create an Inbound Message Flow
 
 . From your Anypoint Partner Manager *Sandbox* or *Production* environment, select *Message Flows* in the left navigation menu. 
 . Click *New message flow > Receive from partner* in the upper right of the page.
@@ -8,29 +12,39 @@ You can create and configure an inbound message flow either when you create a tr
 A new message flow is created. +
 Alternatively, from the *Select a partner* dialog, you can click *New* to create a new partner.
 Follow the process to xref:configure-partner.adoc#create-a-trading-partner[create a Trading Partner], except that when you are finished, click *Create Partner and Message Flow*.
-. Click each section of the message flow to expand it. +
-A green checkmark next to a section indicates that it is complete.
+
+== Configure the Receive Endpoint
+
 . Expand the *Receiving endpoint* section and click *Select*.
-. To use an existing receiving endpoint, select the endpoint from the list and click *Select* in the lower right side of the page. +
-To create a new receiving endpoint, click *New* on the right of the search box and follow the instructions for creating a new endpoint. 
+. To use an existing receiving endpoint, select the endpoint from the list and click *Select* in the lower right side of the page.
+. To create a new receiving endpoint, click *New* on the right of the search box and follow the instructions for creating a new endpoint. 
 +
 [NOTE]
 Translated files are delivered to file-based endpoints with a unique file name with the pattern `<doctype>-<senderid>-<ISACtrlNum>-<GSCtrlNum>-<STCtrlNum>-<timeInMillis>.<format>`, for example: `850-ABCCORP-40952-5850-179960-1587685726355.JSON`
+
+== Configure the Source Message Type
+
 . Expand the *Source message type* section, and click *Select*.
 . To use an existing message type, select the message type from the list and click *Select* in the lower right side of the page. +
 To create a new message type, click *New* on the right side of the search box and follow the instructions for creating a message type. 
 . Expand the *Map* section and click *Import* to upload the DataWeave map to translate the EDI message to your application message format. +
 Follow these instructions to create your inbound EDI-to-application message (JSON or XML) map in Anypoint Studio.
+
+== Configure the Target Message Type
+
 . Expand the *Target at <your organization>* section. 
 . Select the message type of your backend system to which to map the EDI transaction. +
 Partner Manager routes inbound EDI transactions based on matching identifiers configured at the Partner level. 
+
+== Configure the Target Endpoint
+
 . Select the endpoint to which to send the translated message (XML or JSON) for further processing in your backend system. +
 In the *Select endpoint* window, click *New* to create a new endpoint. +
 Partner Manager routes inbound EDI transactions based on matching identifiers configured at the Partner level.
 
+== Verify the Message Flow is Complete
+
 Partner Manager dynamically validates the message flow configuration elements for completeness and displays a green checkmark if all the building blocks of the message flow are complete. After you verify the configurations, you are ready to deploy the message flow.
-
-
 
 == See Also
 

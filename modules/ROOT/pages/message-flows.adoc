@@ -14,13 +14,11 @@ Receive messages from trading partners
 * Outbound +
 Send messages to trading partners. An outbound message flow receives application messages from your backend systems, translates the message to EDI, and sends the EDI transmissions to your trading partner.
 
-
 == Inbound Message Flows
 
 Create an inbound message flow to receive EDI transactions from your trading partner, transform, and then send the translated application message to your backend systems.
 
 The following diagram shows the inbound message configuration building blocks of an inbound message flow and how the Partner Manager’s message processing framework orchestrates the end-to-end routing and transformation of your inbound EDI transactions from your trading partners to your backend systems at runtime.
-
 
 . Receiving endpoint +
 Endpoint where you (the host) receive transmissions from the trading partner. Supported protocols include:
@@ -39,29 +37,32 @@ The target endpoint is the final destination of a message flow and is defined by
 * HTTP
 * HTTPS
 
-
-
-To configure the source section of the message flow, you need the following information:
-
-* The partner's name and associated identifiers (such as X12-ISA, X12 GS, and so on)
-
-* The endpoint where you, as the host, receive transmissions
-
-* The message type to process for this message flow (such as X12, 4010, 850, and so on)
-
-* The endpoint where your partner might want to receive an acknowledgment related to the messages they send
-
-* A DataWeave map to transform the received message contents into a format you can use
-
-To configure the target section of the message flow, you need the following information:
-
-* The message type your system understands. +
-This is also the format into which DataWeave map transforms received messages.
-* The endpoint in your organization where you route the transformed message. +
-If a separate URL is required for returning MDNs, it is sent in the AS2 transmission and Anypoint Partner Manager reads it from there.
-
-
 == Outbound Message Flows
+
+You can create an outbound message flow to receive application messages from your backend systems, transform, and then send the translated EDI message to your trading partners.
+
+The following diagram shows the configurations that are building blocks of an outbound message flow, and how the Partner Manager’s message processing framework orchestrates the end-to-end routing and transformation of your outbound business transactions from your organization’s backend systems to your trading partners.
+
+. Receiving endpoint +
+Endpoint where you (the host) receive transmissions from the backend. Supported protocols include:
+* HTTP
+* HTTPS 
+* SFTP
+. Source message type +
+Supported formats include:
+* JSON 
+* XML 
+. Transform +
+The DataWeave map for JSON or XML to EDI translation.
+. Target message type +
+Message type to process for this message flow, using the X12 format and EDI identifiers. 
+. Target endpoint +
+The target endpoint is the final destination of a message flow. Supported protocols include:
+* AS2
+* SFTP
+* HTTP
+* HTTPS
+
 
 == See Also
 

@@ -1,1 +1,16 @@
-= Outbound Message Configuration
+= Create and Configure an Outbound Message Flow
+
+Create an outbound message flow to receive application messages from your backend systems, transform and send the translated EDI message to your trading partners.
+
+After you create the outbound message flow, you configure the receive endpoint, source message type, target message type, and target endpoint. 
+
+== Create an Outbound Message Flow
+
+== Configure the Receive Endpoint
+
+== Configure the Source Message Type
+
+== Configure the Target Message Type
+
+== Configure the Target Endpoint
+
