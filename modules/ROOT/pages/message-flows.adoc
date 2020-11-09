@@ -20,6 +20,8 @@ Create an inbound message flow to receive EDI transactions from your trading par
 
 The following diagram shows the inbound message configuration building blocks of an inbound message flow and how the Partner Manager’s message processing framework orchestrates the end-to-end routing and transformation of your inbound EDI transactions from your trading partners to your backend systems at runtime.
 
+image::inbound-message-flow.png[Inbound message flow configuration building blocks diagram]
+
 . Receiving endpoint +
 Endpoint where you (the host) receive transmissions from the trading partner. Supported protocols include:
 * AS2 
@@ -42,6 +44,8 @@ The target endpoint is the final destination of a message flow and is defined by
 You can create an outbound message flow to receive application messages from your backend systems, transform, and then send the translated EDI message to your trading partners.
 
 The following diagram shows the configurations that are building blocks of an outbound message flow, and how the Partner Manager’s message processing framework orchestrates the end-to-end routing and transformation of your outbound business transactions from your organization’s backend systems to your trading partners.
+
+image::outbound-message-flow.png[Outbound message flow configuration building blocks diagram]
 
 . Receiving endpoint +
 Endpoint where you (the host) receive transmissions from the backend. Supported protocols include:

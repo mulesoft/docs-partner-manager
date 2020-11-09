@@ -1,6 +1,6 @@
 = SFTP Receive Endpoint Settings
 
-Use these settings to setup SFTP endpoints in one of the following contexts:
+Use these settings to set up SFTP endpoints in one of the following contexts:
 
 * Receive from partners +
 Receive inbound EDI files from your trading partners used in inbound message flows.

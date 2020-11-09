@@ -14,3 +14,10 @@ After you create the outbound message flow, you configure the receive endpoint, 
 
 == Configure the Target Endpoint
 
+== Verify the Message Flow is Complete
+
+Partner Manager dynamically validates the message flow configuration elements for completeness and displays a green checkmark if all the building blocks of the message flow are complete. After you verify the configurations, you are ready to deploy the message flow.
+
+== See Also
+
+* xref:deploy-message-flows.adoc[Deploy, Test, and Undeploy Message Flows]
