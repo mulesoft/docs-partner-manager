@@ -34,7 +34,7 @@ https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-stora
 You’ll need this information when you associate Anypoint Partner Manager with your Payload Storage API.
 Your payload storage API must be accessible over the internet via HTTPS. Ensure that the appropriate authentication mechanisms are implemented to enable access over HTTPS.
 
-== Associate Partner Manager With Your Payload Storage API
+== Configure the Payload Storage API
 
 . In Anypoint Platform, open Anypoint Partner Manager. 
 . In the navigation menu on the left, select your organization’s profile (host) page.
