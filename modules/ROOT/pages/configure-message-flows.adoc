@@ -45,7 +45,6 @@ The message type is added to the message flow.
 .. From schema select *Use standard X12-<version>-<message-type>* or select *Customize* to define a custom schema.
 .. Click *Save*. +
 The message type and its validation settings are added to the message flow. 
-. In the *Acknowledgment* section, select the *Send functional acknowledgment* checkbox to receive an acknowledgment. 
 
 == Import the Translation Map
 
@@ -56,7 +55,7 @@ Follow these instructions to create your inbound EDI-to-application message (JSO
 == Configure the Target Message Type
 
 . Expand the *Target at <your organization>* section. 
-. Select the message type of your backend system to which to map the EDI transaction. +
+. Click *Select* to select the message type of your backend system to which to map the EDI transaction. +
 Partner Manager routes inbound EDI transactions based on matching identifiers configured at the Partner level. 
 
 == Configure the Target Endpoint
