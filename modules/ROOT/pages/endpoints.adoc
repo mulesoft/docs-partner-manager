@@ -28,67 +28,11 @@ Your organization also has internal endpoints to which it routes messages from t
 * Acknowledgement endpoints +
 Your partners provide you with their own endpoint configurations to which your organization can send acknowledgments, such as an X12 997 or X12 999. Acknowledgments are typically sent back to trading partners and correspond to one or more B2B messages you receive from your trading partners.
 
-== Supported Endpoint Protocols
+== See Also
 
-The way you configure Partner Manager endpoints depends on the protocol you use to send and receive messages. 
+xref:create-endpoint.adoc[Create and Configure Endpoints]
 
-Partner Manager supports the following endpoint protocols:
 
-[%header%autowidth.spread]
-|===
-|Protocol | Trading Partners | Backend
-|SFTP | Receive, Send | Receive, Send
-| HTTP/HTTPS | Send | Receive, Send
-| AS2 | Receive, Send | N/A
-|===
-
-== Endpoint Name, Protocol and Type
-
-[%header,cols="3s,7a"]
-|===
-|Setting |Description
-
-|Name
-
-|Name for this endpoint
-
-Required: Yes +
-
-Default: Automatically populates based on the following values: `Protocol` or `Type`
-
-|Protocol
-
-|Protocol for this endpoint
-
-Required: No +
-
-Valid values: +
-
-`AS2` +
-
-`SFTP` +
-
-`HTTPS` +
-
-Default: None +
-
-|Type
-
-|Type of endpoint
-
-Required: No +
-
-Default: None +
-
-|===
-
-== Configure Endpoint Protocol and Type-Specific Settings
-
-The values for the endpoint's settings vary according to the protocol-type of the endpoint for which you are configuring the settings:
-
-* xref:endpoint-as2-receive.adoc[AS2 Endpoint Settings]
-* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
-* xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
 
 
 

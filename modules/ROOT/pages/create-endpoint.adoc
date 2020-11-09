@@ -1,0 +1,39 @@
+= Create and Configure Endpoints
+
+You can create endpoints in the host or partner page, or from the Message Flow configuration wizard. 
+
+== Creating Endpoints From the Host or Partner Page
+
+Endpoints can be created in the following two ways:
+From the Endpoints section host or partner page:
+Click New
+Make appropriate selections to select the protocol
+For partners facing endpoints (receive or send) ownership is automatically assigned based on where you are creating the endpoint from.
+
+== Creating Endpoints From the Message Flow
+
+From the Message flow configuration wizard
+When endpoints types are created from the message flow, Partner Manager automatically designates the Usage
+When creating partner facing (receive or send) endpoints from message flow wizard, you can assign the owner by making appropriate selection
+
+== Supported Endpoint Protocols
+
+The way you configure Partner Manager endpoints depends on the protocol you use to send and receive messages. 
+
+Partner Manager supports the following endpoint protocols:
+
+[%header%autowidth.spread]
+|===
+|Protocol | Trading Partners | Backend
+|SFTP | Receive, Send | Receive, Send
+| HTTP/HTTPS | Send | Receive, Send
+| AS2 | Receive, Send | N/A
+|===
+
+== Configure Endpoint Protocol and Type-Specific Settings
+
+The values for the endpoint's settings vary according to the protocol-type of the endpoint for which you are configuring the settings:
+
+* xref:endpoint-as2-receive.adoc[AS2 Endpoint Settings]
+* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
+* xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
