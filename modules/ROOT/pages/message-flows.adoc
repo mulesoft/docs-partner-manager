@@ -67,10 +67,10 @@ The target endpoint is the final destination of a message flow. Supported protoc
 * HTTP
 * HTTPS
 
-
 == See Also
 
 * xref:configure-message-flows.adoc[Create an Inbound Message Flow]
 * xref:create-outbound-message-flow.adoc[Create and Configure Outbound Message Flows]
+* xref:outbound-message-routing.adoc[Outbound Message Routing]
 * xref:manage-message-flows.adoc[Manage Message Flows]
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
