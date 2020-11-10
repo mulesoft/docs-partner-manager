@@ -1,0 +1,12 @@
+= Maps
+
+Partner Manager uses DataWeave maps to transform business transactions between EDI message format (X12) and your organization’s enterprise application message formats, such as JSON and XML. 
+
+Use Anypoint Connector for X12 and DataWeave 2.0 together to create EDI translation maps in Anypoint Studio and then import the maps in to Partner Manager when you configure inbound and outbound message flows.
+
+== See Also
+
+* xref:create-map-inbound-x12-json-xml.adoc[Create a Map For Inbound X12 to JSON/XML]
+* xref:create-map-json-xml-to-outbound-x12.adoc[Create a Map For XML or JSON to Outbound EDI X12]
+* xref:configure-message-flows.adoc[Create and Configure an Inbound Message Flow]
+* xref:partner-manager-outbound-message-flow-config.adoc[Create and Configure an Outbound Message Flow]
