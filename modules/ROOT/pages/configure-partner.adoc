@@ -105,26 +105,13 @@ If a single certificate is uploaded, Partner Manager prevents you from deleting 
 +
 View information about an uploaded certificate by clicking its link. See xref:Certificates.adoc[Certificates] for more information about configuring certificates in Partner Manager.
 +
-. Configure X12 validation settings that can be used for all message flows that you are configuring with your trading partners. +
+. Configure X12 validation settings that all message flows that you are configuring with your trading partners can use. +
 Validation settings include:
 
 * Validations
 * Acknowledgment
 * Control numbers
 * Character sets
-
-== Delete Endpoints
-
-You can delete any endpoints that are not used in a message flow configuration:
-
-. From within your Anypoint Partner Manager Sandbox or Production environment, select <host partner name> from the upper left.
-
-. From _Endpoints: Send to <partner name>_, search for the endpoint you want to delete by name, protocol, URL, or description.
-+
-If you can’t remember what to search for, scan the list for any endpoints that don’t have a message flow associated with them. These are indicated by a 0 in the message flow column.
-+
-. Hover over the endpoint name until you see the garbage can icon, click the icon, and then click *Delete*.
-
 
 == See Also
 

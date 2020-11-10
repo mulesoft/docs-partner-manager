@@ -45,7 +45,7 @@ For example, depending on your setup, select one of the following:
 . Provide a value for your identifier and a qualifier for X12-ISA and click *Create identifier* to save your changes. +
 See xref:x12-identity-settings.adoc[Identifiers] for more information about X12-ISA settings.
 . In *Certificates* section, click *New* to upload any needed digital certificates, such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol.
-. Click *Choose file* to select the certificate (typically a `<certificate name>.PEM` file), and click *Upload certificate* to upload your chosen certificate file. +
+.. Click *Choose file* to select the certificate (typically a `<certificate name>.PEM` file), and click *Upload certificate* to upload your chosen certificate file. +
 See xref:Certificates.adoc[Certificates] for more information about configuring certificates in Partner Manager.
 . From *Endpoints: Receive from partners* or *Endpoints: Targets at <partner name>*, click *New* and select your protocol type.
 . Set up your endpoint based on the protocol type you selected:
