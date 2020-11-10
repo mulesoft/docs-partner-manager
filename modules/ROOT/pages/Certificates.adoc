@@ -1,27 +1,27 @@
 = Certificate Settings
 
-You can configure your SSL certificate settings based on your certificate needs.
-
 All certificates in Anypoint Partner Manager are securely stored in Anypoint Platform's secrets manager, which uses a secure vault technology to store and control access to private keys, passwords, certificates, and other secrets.
+
+Configure your SSL certificate settings based on your certificate needs.
 
 The information provided for each certificate includes:
 
-** *Authority* +
+* *Authority* +
 Certificate provider
-** *Serial Number* +
+* *Serial Number* +
 Serial number from the certificate
-** *Status* +
+* *Status* +
 Active is shown with a green icon or Inactive is shown with a red icon. +
-** *Start Date* +
+* *Start Date* +
 Date from when the certificate is valid
-** *Expires* +
+* *Expires* +
 Date after which the certificate is no longer valid 
-** *Endpoints* +
+* *Endpoints* +
 Number of endpoints where the certificate is used
-** *Message Flows* +
+* *Message Flows* +
 Number of message flows that use the certificate
 
-You can:
+In Partner Manager, you can:
 
 * Use a CA-signed certificate. +
 You do not need to upload an additional certificate because this endpoint already uses a CA-signed certificate. +
@@ -33,7 +33,7 @@ You can upload a new certificate (in `<certifcate name>.PEM` format), or view al
 
 You can add certificates from the Host or Partner page.
 
-. Select *<host name>* or *Partners* from the navigation menu on the left. 
+. In Partner Manager's left navigation, select *<host name>* or *Partners*.
 . In the *Certificates* section, click *New*. 
 . Click *Choose file* to upload a PEM certificate. 
 . Click *Upload Certificate*.
@@ -42,5 +42,11 @@ You can add certificates from the Host or Partner page.
 
 You can delete certificates that are not deployed or associated with endpoints. 
 
-If a single certificate is uploaded, Partner Manager prevents you from deleting your only certificate.
+You cannot delete a certificate if it is the only certificate that is uploaded.
+
+To delete a certificate:
+
+. In Partner Manager's left navigation, select *<host name>* or *Partners*.
+. In the *Certificates* section, click the certificate to delete.
+. In the dialog window, click *Delete*.
 

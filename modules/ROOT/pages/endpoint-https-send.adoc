@@ -2,69 +2,83 @@
 
 The HTTP and the secure HTTPS protocol send settings are used with endpoints for sending transmissions to your partner and endpoints that are targets at your organization.
 
-NOTE: HTTPS and HTTPS endpoints are currently only avaialble for use to define `Acknowledgement endpoints` and `Target endpoints`.
+NOTE: HTTPS and HTTPS endpoints are only used to define Acknowledgement and Target endpoints.
 
-[%header,cols="3s,7a"]
+[%header%autowidth.spread]
 |===
-|Name |Description
+|Name |Description |Required
 |Protocol
-|Select *HTTP* or *HTTPS* +
-Required: Yes +
-Default: HTTPS
+|Select *HTTP* or *HTTPS*. The default is *HTTPS*.
+|Yes 
 
 |Endpoint Name
-|Name used to easily identify the function of this endpoint. Names are automatically assigned, but can be overwritten by the end user.  +
-Required: Yes +
+|Name used to easily identify the function of this endpoint. Names are automatically assigned, but can be overwritten.  
+|Yes 
 
 |Description
-|Describe a purpose and any other important details for this endpoint. +
-Required: No +
+|Describe a purpose and any other important details for this endpoint. 
+|No 
 
 |URL
-|Enter a well-formed URL (including the path) that specifies where the request is to be sent, such as:
-+ https://www.mulesoft.com/sendRequest?name=something +
-Required: Yes +
+|Enter a well-formed URL (including the path) that specifies where to send the request, for example:
+`+https://www.mulesoft.com/sendRequest?name=something+`
+|Yes 
 
 |Connection Idle Timeout (milliseconds)
-|Must be an integer greater than or equal to 1000. +
-Required: Yes +
-Default: 3000
+|Must be an integer greater than or equal to 1000. The default is `3000`.
+|Yes 
 
 |Response Timeout (milliseconds)
-|Must be an integer greater than or equal to 1000. +
-Required: No +
-Default: 1000
+|Must be an integer greater than or equal to 1000. The default is `1000`.
+|No 
 |===
 
 See xref:Certificates.adoc[Certificates] for more information about configuring certificates in Anypoint Partner Manager.
 
-=== Authentication Settings
+== Authentication Settings
 
 Depending on how you set up your authentication policy, refer to the appropriate authentication type and descriptions here.
 
-[%header,cols="3s,7a"]
+[%header%autowidth.spread]
 |===
 |Authentication Type |Description
 |None
-|No authentication. +
+|No authentication. 
 
 |API Key
-|`HTTP Header Name` - The Header parameter associated to the API Key. +
-`API Key` - The value for the access key you set. +
+a| * HTTP Header Name +
+Header parameter associated with the API Key. +
+* API Key +
+Value for the access key you set. 
 
 |Basic
-|Specifes a simple authentication policy that protects the API by requiring a username and password when calling apps make a request. +
-`Username` is the username you set up with this authentication policy. +
-`Password` is the password you set up with this authentication policy. +
+a|Specifies a simple authentication policy that protects the API by requiring a username and password when calling apps to make a request. 
+
+* Username +
+Username you set up with this authentication policy
+* Password +
+Password you set up with this authentication policy 
 
 |Client Credentials
-|`Client ID` - The client ID provided when registering your application. +
-`Client Secret` - The client secret provided when registering your application.
-`Client Header` - Add the client Header. +
-`Client Secret Header` - Add the client secret header. +
+a|* Client ID +
+Client ID provided when registering your application. 
+* Client Secret +
+Client secret provided when registering your application.
+* Client Header +
+Add the client header. 
+* Client Secret Header +
+Add the client secret header. 
 
 |OAuth Token
-|`Token URL` - Enter a valid authorization URL. +
-`Client ID` - The client ID provided when registering your application. +
-`Client Secret` - The client secret provided when registering your application.
+a|* Token URL +
+Enter a valid authorization URL. 
+* Client ID +
+Client ID provided when registering your application. 
+* Client Secret +
+Client secret provided when registering your application.
 |===
+
+== See Also
+
+* xref:endpoints.adoc[Endpoints]
+* xref:create-endpoint.adoc[Create and Configure Endpoints]
