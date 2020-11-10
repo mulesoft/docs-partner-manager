@@ -1,14 +1,15 @@
 = Create a Map For Inbound X12 to JSON/XML
 
-Follow these steps to create the DataWeave map to transform inbound EDI X12 messages to your application message formats, such as XML or JSON:
+Follow these steps to create the DataWeave map in Anypoint Studio to transform inbound EDI X12 messages to your application message formats, such as XML or JSON.
+
+== Create a New Project From a Template
 
 . Launch Anypoint Studio.
-. From the File menu, Click New and Project from Template
+. From the *File* menu, select *New > Project from Template*. 
 . Log in to Anypoint Exchange with your Anypoint platform credentials
-Search for X12.
-. Click the template titled Template to map inbound EDI X12 transactions to application message format.
-. Click Open, to create a new project in your Studio workspace pre-loaded with the template.
-The template can also be downloaded from Anypoint Exchange and exported to Anypoint Studio.
+. Search for `X12`.
+. Click the template named `Template to map inbound EDI X12 transactions to application message format`.
+. Click *Open*, to create a new project in your Studio workspace pre-loaded with the template.
 
 == Set the Source X12 Message Type
 
@@ -26,7 +27,8 @@ Follow these steps to set the source X12 message type for the map:
 . In *Name*, change the name of the configuration.
 . In the *Schema definitions*, select *Edit inline*. 
 . Select the value */x12/004010/850.esl* and click the edit icon.
-. Change the Schema value to the version and transaction set you want to map from, for example, set the *Value* to `/x12/004010/204.esl`, if you want to map to a 4010-204 Load tender transaction. 
+. Change the Schema value to the version and transaction set you want to map from. +
+For example, set the *Value* to `/x12/004010/204.esl`, if you want to map to a `4010-204 Load tender` transaction. 
 
 == Set the Target JSON or XML Message Type
 
@@ -40,21 +42,21 @@ To set the target JSON or XML message type for the map:
 . Click *Create type*.
 . In the *Select metadata type* dialog window, from the *Type* drop-down menu, select *JSON* or *XML*. 
 . Browse to the location of the JSON or XML schema file you imported earlier and click *Select*. +
-You will now see the X12 transaction set structure on the input pane in the left, and your application message structure (JSON or XML) on the output pane in the right.
-
-You can begin mapping from input to the output.
+You now see the X12 transaction set structure in the input pane on the left, and your application message structure (JSON or XML) in the output pane on the right. +
+You can now begin mapping from input to the output.
 
 == Test the Map Locally
 
-Follow these steps to test the map locally in Anypoint Studio: 
+Follow these steps to test the translation map locally in Anypoint Studio: 
 
-. Right-click on the project, and click *Run > Run as Mule application*.
+. Right-click on the template project, and select *Run > Run as Mule application*.
 . Use a REST client to POST an EDI message payload to the URL `+http://localhost:8081/x12/in+`. +
-The application will return the translated JSON or XML.
-. Copy the DataWeave map from `src/main/resources/x12/IN-X12-version-transaction-to-applicationmessage.dwl` and rename it, for example: +
+The application returns the translated JSON or XML.
+. After you verify that the map works correctly, copy the DataWeave map from `src/main/resources/x12/IN-X12-version-transaction-to-applicationmessage.dwl` and rename it to something meaningful, for example: +
 `IN-X12-4010-850-to-SAP-purchaseorder.dwl`
-. Import the `dwl` file in the *Map* section of inbound message flows.
+
+Later, when you create and configure an inbound message flow, you can import the `dwl` file in to the *Map* section of inbound message flow.
 
 == See Also
 
-xref:configure-message-flows.adoc[Create and Configure an Inbound Message Flow]
+* xref:configure-message-flows.adoc[Create and Configure an Inbound Message Flow]
