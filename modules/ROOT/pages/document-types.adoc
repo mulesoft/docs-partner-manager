@@ -13,7 +13,7 @@ Message types are always managed within the host partner profile page, regardles
 
 You configure a message type for a partner by configuring settings specific to that EDI document type standard.
 
-Refer to these when configuring either JSON or X12. Refer to  https://docs.mulesoft.com/connectors/x12-edi/x12-edi-supported-doc-types[X12 EDI supported Doc Types] for more information.
+Refer to these when configuring either JSON or X12. Refer to  xref:connectors::x12-edi/x12-edi-supported-doc-types.adoc[X12 EDI supported Doc Types] for more information.
 
 [%header,cols="3s,7a"]
 |===

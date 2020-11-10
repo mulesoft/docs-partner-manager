@@ -1,18 +1,22 @@
 = Delete Identifiers
 
-You might want to delete an identifier when it is no longer needed.
-Consider that deleting an existing host or partner identifier impacts the identification and routing of B2B messages to the associated partner.
-Ask yourself the following when deleting an identifier: Why do you want to delete it? Do you need to replace it with another identifier?
-Remember that there must always be at least one identifier per message flow before you can delete it.
+You might want to delete an identifier when it is no longer needed. 
 
-After successfully deleting an identifier, you can create a new identifier with the same value as the one you deleted.
+You can delete identifiers such as X12 ISA, X12 GS, AS2, and DUNS. You cannot delete the last identifier, as there must be at least one identifier in the list of identifiers.
 
-You can delete identifiers such as X12 ISA, X12 GS, AS2, and DUNS. You cannot delete the last identifier, as there must be at least one in the list.
+Before you delete an identifier, consider the following: 
 
-. If you need to replace the identifier, record the values and qualifier type needed.
+* Deleting an existing host or partner identifier impacts the identification and routing of B2B messages to the associated partner.
+* Do you need to replace the identifier with another identifier? +
+If you need to replace the identifier, record the values and qualifier type needed.
+* Remember that there must always be at least one identifier per message flow before you can delete it.
+* You cannot delete an identifier that is used in a message flow.
 
-. Choose the partner name and click *<Partner name>* to expand it.
+== Deleting Identifiers
 
-. Hover over the identifier you want to delete and click the trash can icon that appears towards the right-hand side of the identifiers row.
+. In the left navigation menu, select *Partners*.
+. From the list of partners, select the partner that has the identifier to delete. 
+. In the *Identifiers* section, hover over the identifier you want to delete and click the trash can icon that appears on right-hand side of the *Identifiers* row.
+. If you want to replace the identifier, click *New* and xref:partner-manager-identifeiers.adoc[follow the steps to create an identifier]. 
 
-. If you need a replacement, add it now by clicking *New*.
+After successfully deleting an identifier, you can create a new identifier with the same name as the one you deleted.
