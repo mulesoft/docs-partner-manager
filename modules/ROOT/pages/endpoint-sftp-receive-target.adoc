@@ -11,7 +11,7 @@ Receive application messages (in JSON or XML format) from your backend applicati
 [%header%autowidth.spread]
 |===
 |Name |Description | Required
-|Endpoint Name | Name used to refer to the endpoint. This name is typically autopopulated, but can be overwritten. 
+|Endpoint Name | The name is auto-populated, but you can overwrite it based on your organization’s naming conventions for consistency. 
 | Yes
 
 |Description
@@ -39,18 +39,19 @@ Receive application messages (in JSON or XML format) from your backend applicati
 | Yes 
 
 |Polling Frequency
-| Frequency in milliseconds to check the source path for new files. The default value is `1000`.
+| Frequency in milliseconds to check the source path for new files. The default value is `1 minute`.
 |Yes 
 
 |Size check wait time
 | The wait time in milliseconds between size checks to determine if a file is ready to be processed. This allows a file write to complete before processing.
-Disable this feature by setting it to a negative number or omitting a value. The default value is `1000`.
-When enabled, Mule performs two size checks by waiting the amount of time specified in between calls.
-If both checks return the same value, the file is ready to process. +
+
+When enabled, Mule performs two size checks by waiting the amount of time specified in between calls. To disable this feature, specify a negative number or omit the value. The default value is `1 second`.
+
+If both checks return the same value, the file is ready to process. 
 |Yes 
 
 |Archival Path
-| Specify an optional path on the SFTP server where a copy of the file that was picked up from the `source path` can be stored. 
+| Specify an optional path on the SFTP server for where to store a copy of the file that was picked up from the `source path`. 
 |
 |===
 

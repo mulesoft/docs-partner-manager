@@ -1,11 +1,11 @@
 = SFTP Send Endpoint
 
-Use these settings to setup SFTP endpoints in one of the following contexts:
+Use SFTP endpoints to:
 
 * Send to partners +
-Send outbound EDI files to your trading partners used in outbound message flows.
+Send outbound EDI files to your trading partners in outbound message flows.
 * Target at host +
-Send application messages (JSON or XML) to your backend applications used in inbound message flows.
+Send application messages (JSON or XML) to your backend applications in inbound message flows.
 
 [%header%autowidth.spread]
 |===
