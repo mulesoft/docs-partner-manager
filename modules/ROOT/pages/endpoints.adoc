@@ -1,4 +1,4 @@
-= Endpoint Types and Protocols
+= Endpoints
 
 Endpoints define the transport protocol configurations necessary to receive or send messages with external trading partners or internal backend applications.
 

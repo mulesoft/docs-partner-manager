@@ -1,0 +1,52 @@
+= File Name Patterns for Send Endpoints
+
+Partner Manager enables you to configure the file name patterns to use on the target files delivered to SFTP and AS2 Send endpoints, through the use of property placeholders.
+
+When the file name pattern is configured with property placeholders, specified within `${ }`, Partner Manager replaces the property dynamically at runtime. Any string that is not specified within the placeholder is used as static text in the file name.
+
+The following are the supported property placeholders and the dynamic value the placeholder is replaced with at runtime:
+
+[%header%autowidth.spread]
+|===
+|Placeholder |Replaced with
+|${DocType} |EDI Document Type
+|${GSSender} |Group ID of the Sender
+|${GSReceiver} |Group ID of the Receiver
+|${ISASender} |Interchange ID of the Sender
+|${ISAReceiver} |Interchange ID of the Receiver
+|${uuid} |Unique Identifier, for example: `93de0793-63e1-5a06-aedf-fcd052ed2155`
+|${YYYY} |Year: 2020  (All date and times must be in UTC format)
+|${MM} |Month: 04
+|${DD} |Date: 14
+|${HH} |Hour: 15
+|${mm} |Minute: 25
+|${sss} |Second: 46
+|${timeInMillis} |Milliseconds: 345
+|${ICN} |Interchange Control Number
+|${BusKey} |Primary Business Key value for example: `PO12345`
+|${formatTypeExt} a|Format of the file. Possible replaced values include: 
+
+* JSON
+* X12
+* XML
+|===
+
+== Examples
+
+|===
+|File Name Pattern |Generated File Name
+|${DocType}_${ISASender}_${YYYYMMDD}_${HHmmSSsss}_${ICN}.edi |`850_NTORETAIL_20201102_192655521_300001.edi`
+|INVOICE_${SenderGSID}_${ICN}.${formatTypeExt}
+|`INVOICE_MYTHICALSUPPLIERS_12355343.XML`
+|${uuid}.edi
+|`93de0793-63e1-5a06-aedf-fcd052ed2155.edi`
+|${DocType}-${YYYY}-${MM}-${DD}-${HHmmSSsss}.dat
+|`204-2020-06-24-192655521.dat`
+|${DocType}_${ISASender}_${YYYYMMDD}_${HHmmSSsss}_${ICN}.${formatTypeExt}
+|`850_NTORETAIL_20201102_192655521_300001.JSON`
+|===
+
+== See Also
+
+* xref:endpoint-as2-send.adoc[AS2 Send Endpoints]
+* xref:endpoint-sftp-send.adoc[SFTP Send Endpoints]

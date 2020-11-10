@@ -11,7 +11,7 @@ Receive application messages (in JSON or XML format) from your backend applicati
 [%header%autowidth.spread]
 |===
 |Name |Description | Required
-|Endpoint Name | Name used to refer to the endpoint. The name is typically autopopulated, but can be overwritten by the end user. 
+|Endpoint Name | Name used to refer to the endpoint. This name is typically autopopulated, but can be overwritten. 
 | Yes
 
 |Description
@@ -23,7 +23,7 @@ Receive application messages (in JSON or XML format) from your backend applicati
 | Yes 
 
 |Port
-|The port number of the SFTP server to connect upon.  
+|The port number of the SFTP server.  
 |
 
 |Username
@@ -31,7 +31,7 @@ Receive application messages (in JSON or XML format) from your backend applicati
 |Yes, if the server is authenticated. 
 
 |Password
-| Password for the SFTP Server.  
+|Password for the SFTP Server.  
 |Yes, if the server is authenticated. 
 
 |Source Path
@@ -56,34 +56,35 @@ If both checks return the same value, the file is ready to process. +
 
 == SFTP Acknowledgment Endpoint Settings
 
-Use these to set up SFTP endpoint settings to send acknowledgement files (TA1 and/or 997/999) to your trading partners.
+The configuration options for the acknowledgment endpoints are the same as the SFTP Receive endpoint, except that the `Source Path` and the `Archival Path` are replaced by the `Acknowledgement Path`.
 
-Most configuration options are the same as the SFTP Receive endpoint listed previously.
+Use this setting to specify the SFTP endpoint to which to send acknowledgement files (TA1 and/or 997/999) to your trading partners:
 
-In this case, the `Source Path` and the `Archival Path` are replaced by the `Acknowledgement Path` detailed as follows.
-
-[%header,cols="3s,7a"]
+[%header%autowidth.spread]
 |===
-|Name |Description
+|Name |Description |Required
 
 |Acknowledgement Path
-| A path on the SFTP server where your trading partner is expecting to receive an acknowledgement (such as TA1 and/or 997/999) related to an EDI transaction they may have sent. +
-Required: Yes +
-
+| A path on the SFTP server where your trading partner is expecting to receive an acknowledgement (such as TA1 and/or 997/999) related to an EDI transaction they may have sent.
+|Yes
 |===
 
 == SFTP Target Endpoint Settings
 
-Use these to set up SFTP endpoint settings to route transformed files to an internal SFTP server address within your organization.
-Most configurations options are the same as the SFTP Receive endpoint listed previously.
-The `Source Path` and the `Archival Path` are replaced by the `Target Path` detailed as follows.
+The configuration options for the acknowledgment endpoints are the same as the SFTP Receive endpoint, except that the `Source Path` and the `Archival Path` are replaced by the `Target Path`.
 
-[%header,cols="3s,7a"]
+Use this setting to specify the SFTP endpoint to which to route transformed files to an internal SFTP server address within your organization:
+
+[%header%autowidth.spread]
 |===
-|Name |Description
+|Name |Description |Required
 
 |Target Path
 | A path on your SFTP server where you can route transformed output for a message flow processed via Anypoint Partner Manager. +
-Required: Yes +
-
+|Yes 
 |===
+
+== See Also
+
+* xref:endpoints.adoc[Endpoints]
+* xref:create-endpoints.adoc[Create and Configure Endpoints]

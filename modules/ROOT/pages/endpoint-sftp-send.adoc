@@ -24,7 +24,7 @@ Send application messages (JSON or XML) to your backend applications used in inb
 
 |Port
 |The port number of the SFTP server to connect.
-|
+|Yes
 
 |Username
 |Username for the SFTP Server.
@@ -38,8 +38,8 @@ Send application messages (JSON or XML) to your backend applications used in inb
 a|Path to the SFTP server EDI files:
 
 * That are generated from outbound message flows
-* Need to be dropped for your trading partners
-* Where your backend applications require you to drop translated JSON and XML files generated from inbound message flows
+* Need to be placed for your trading partners
+* Where your backend applications require you to place translated JSON and XML files generated from inbound message flows
 |Yes
 
 |Filename pattern
