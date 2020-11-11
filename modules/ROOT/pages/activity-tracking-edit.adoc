@@ -36,7 +36,7 @@ To track message flow activity:
 * Date the file was received
 . Select the transmission that matches your search criteria and review the summary information. +
 The summary information contains:
-* The status of the transmission, which indicates either a success (Green checkmark) or failure (red circle with an exclamation point)
+* The status of the transmission, which indicates either a success (green checkmark) or failure (red circle with an exclamation point)
 * The name of the file that was received
 * The control number associated with the file (if available)
 * The receiving endpoint at which the file was received
