@@ -9,7 +9,7 @@ Use Anypoint Partner Manager to:
 
 * Perform technical onboarding of your partners.
 * Set up, manage, and monitor business message flows between your systems and your trading partners' systems. +
-The ability to track and report on business transactions drives greater operational efficiency for B2B transactions.
+Track and report on business transactions to achieve greater operational efficiency in B2B transactions.
 * View meta information, validation errors, and all messages included with each transmission payload. +
 A transmission is a single communication event during which a payload is transferred between two business entities.
 These payloads can contain one or more business messages.
