@@ -3,7 +3,7 @@
 Anypoint Partner Manager enables Business-to-Business (B2B) message exchanges using APIs and Electronic Data Interchange (EDI) formats.
 
 Anypoint Partner Manager enables enterprises to conduct business transactions, such as purchasing products from one another.
-Transactions are typically transmitted over transports such as HTTPS and SFTP, and exchanges such as AS2. Partner Manager supports X12, JSON, and XML message formats to transmit data. 
+Transactions are typically transmitted over transports such as HTTPS and SFTP, and exchanges such as AS2. Partner Manager supports X12, JSON, and XML message formats. 
 
 Use Anypoint Partner Manager to:
 
