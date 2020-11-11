@@ -44,7 +44,7 @@ This core component of the Partner Manager workflow requires a minimum of *1 vCo
 * *B2B APIReplicationService* +
 Core component of the Partner Manager workflow that requires a minimum of *1 vCore*.
 
-If you need assistance with sizing, contact your MuleSoft account representative.
+For assistance with sizing, contact your MuleSoft account representative.
 
 == Access Partner Manager Settings
 
