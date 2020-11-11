@@ -33,7 +33,7 @@ This is automatically assigned, based on the specified CloudHub region; you cann
 
 To have CloudHub automatically restart your application when the monitoring system discovers an issue, select the *Automatically restart app when not responding* checkbox.
 
-== vCore settings
+== vCore Settings
 
 Configure the following vCore settings for the Sandbox and Production environments:
 
