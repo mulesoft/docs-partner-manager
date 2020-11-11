@@ -13,6 +13,6 @@ You can delete identifiers such as X12 ISA, X12 GS, AS2, and DUNS. You cannot de
 
 . Choose the partner name and click *<Partner name>* to expand it.
 
-. Hover over the identifier you want to delete and click the trash can icon that appears towards the right-hand side of the identifiers row.
+. Hover over the identifier you want to delete and click the trashcan icon that appears towards the right-hand side of the identifiers row.
 
 . If you need a replacement, add it now by clicking *New*.
