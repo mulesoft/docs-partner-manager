@@ -6,7 +6,7 @@ Before you can deploy message flows from Anypoint Partner Manager, you must set 
 
 To set up Partner Manager, you must have:
 
-* An Aypoint Platform user account with the Anypoint Partner Manager entitlement.
+* An Anypoint Platform user account with the Anypoint Partner Manager entitlement.
 * The Partner Manager Administrator role, which assigns permission levels for all users who need access to B2B message flows in their environment (Production or  Sandbox).
 * The required Mule vCore capacity to handle your B2B transaction workload needs. 
 * Licenses for the connectors that are used in your B2B message flows based on the protocols and message formats you are using:
