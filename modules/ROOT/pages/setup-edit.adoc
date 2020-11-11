@@ -28,7 +28,7 @@ For more information, refer to xref:setup-payload-storage-API.adoc[Set up the Pa
 
 == Parter Manager Permissions
 
-You can assign the following permissions, per Anypoint Platform environment, to your Partner Manager users:
+For each sandbox and production environment, assign the following permissions to your Partner Manager users:
 
 *  *Partner Manager Administrator* +
 Has full permissions.
