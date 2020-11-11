@@ -40,7 +40,7 @@ The summary information contains:
 * The name of the file that was received
 * The control number associated with the file (if available)
 * The endpoint at which the file was received
-* The date and time when the file was received
+* The date and time that the file was received
 * The types of messages received (depending on the message flows you configured)
 * The number of messages received in the file
 +
