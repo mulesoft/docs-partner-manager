@@ -38,7 +38,7 @@ Select the *Automatically restart app when not responding* checkbox if you want 
 Configure the following vCore settings for the Sandbox and Production environments:
 
 * *Each B2B endpoint (inbound, outbound, and ack)* +
-Each unique trading partner and internal endpoint gets deployed to isolated workers, and require a minimum of *0.1 vCore* each.
+Each unique trading partner and internal endpoint is deployed to isolated workers, requiring a minimum of *0.1 vCore* each.
 * *B2B DocumentProcessingService* +
 This core component of the Partner Manager workflow requires a minimum of *1 vCore*.
 * *B2B APIReplicationService* +
