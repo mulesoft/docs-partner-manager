@@ -40,7 +40,7 @@ Configure the following vCore settings for the Sandbox and Production environmen
 * *Each B2B endpoint (inbound, outbound, and ack)* +
 Each unique trading partner and internal endpoint gets deployed to isolated workers, and require a minimum of *0.1 vCore* each.
 * *B2B DocumentProcessingService* +
-Core component of the Partner Manager workflow that requires a minimum of *1 vCore*.
+This core component of the Partner Manager workflow requires a minimum of *1 vCore*.
 * *B2B APIReplicationService* +
 Core component of the Partner Manager workflow that requires a minimum of *1 vCore*.
 
