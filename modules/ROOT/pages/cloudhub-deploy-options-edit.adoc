@@ -14,7 +14,7 @@ Otherwise, deploy Partner Manager applications to a specific Mule version by sel
 
 The default CloudHub region is retrieved from the business group’s Runtime Manager region setting in Access Manager.
 
-If you want to deploy the B2B integration flows from Partner Manager to a different region, select it from the *CloudHub Region* drop-down list before you deploy your first message flow. The CloudHub region you specify for the first deployment becomes the default setting for subsequent deployments.
+To deploy the B2B integration flows from Partner Manager to a different region, select that region from the *CloudHub Region* drop-down list before you deploy your first message flow. The CloudHub region you specify for the first deployment becomes the default setting for subsequent deployments.
 
 === Change the Default CloudHub Region
 
