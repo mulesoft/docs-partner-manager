@@ -17,7 +17,7 @@ These payloads can contain one or more business messages.
 Different users with different roles in your organization can use Partner Manager, for example, those who:
 
 * Primarily design and test message flows
-* Manage activity of the business transactions with your trading partners
+* Manage the activity of the business transactions with your trading partners
 * Optimize backend services and performance
 
 == Prerequisites
