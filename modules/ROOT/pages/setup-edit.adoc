@@ -41,7 +41,7 @@ Has full permissions.
 ** Cannot view transaction activity
 * *Manage Activity* + 
 ** Can view and manage transaction activity
-** Cannot view or modify either partner or message flow configurations.
+** Cannot view or modify either partner or message flow configurations
 * *Manage Host* +
 ** Can create, modify, and delete host configurations
 ** Cannot view or modify trading partner configurations or activity +
