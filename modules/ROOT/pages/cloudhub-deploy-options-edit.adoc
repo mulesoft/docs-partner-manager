@@ -8,7 +8,7 @@ You can specify the Mule version to use to deploy your application in the *Runti
 
 The default and recommended option is *Use latest version*, which deploys new Partner Manager message flows using the latest Mule version. 
 
-If you want to deploy Partner Manager applications to a specific Mule version, you can select it from the drop-down list. 
+Otherwise, deploy Partner Manager applications to a specific Mule version by selecting that version from the drop-down list. 
 
 == CloudHub Region
 
