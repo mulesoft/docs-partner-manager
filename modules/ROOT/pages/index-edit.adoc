@@ -22,7 +22,7 @@ Different users with different roles in your organization can use Partner Manage
 
 == Prerequisites
 
-To use Partner Manager you must be familiar with EDI message formats, and how to create DataWeave transformations.
+To use Partner Manager, you must be familiar with EDI message formats and how to create DataWeave transformations.
 
 To get started, ask your Anypoint Platform administrator to follow the Setup instructions.
 
