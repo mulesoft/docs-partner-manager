@@ -12,7 +12,7 @@ To set up Partner Manager, you must have:
 * Licenses for the connectors that are used in your B2B message flows based on the protocols and message formats you are using:
 * AS2 connector
 * X12 connector
-* Anypoint Studio 7.4 or later in order to create DataWeave maps for EDI data transformation.
+* Anypoint Studio 7.4 or later, to create DataWeave maps for EDI data transformation
 
 If you require assistance, contact your account representative.
 
