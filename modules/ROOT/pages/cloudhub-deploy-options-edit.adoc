@@ -4,7 +4,7 @@ If you are deploying Partner Manager applications to CloudHub, use the Partner M
 
 == Mule Version
 
-You can specify the Mule version to use to deploy your application in the *Runtime version* drop-down. 
+You can specify the Mule version to use to deploy your application in the *Runtime version* drop-down menu. 
 
 The default and recommended option is *Use latest version*, which deploys new Partner Manager message flows using the latest Mule version. 
 
