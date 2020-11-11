@@ -96,3 +96,4 @@ Partner Manager dynamically validates the message flow configuration elements fo
 
 * xref:create-map-json-xml-to-outbound-x12.adoc[Create a Map For XML or JSON to Outbound EDI X12]
 * xref:deploy-message-flows.adoc[Deploy, Test, and Undeploy Message Flows]
+* xref:partner-manager-create-message-type.adoc[Create and Configure a Message Type]

@@ -9,7 +9,7 @@ Refer to this information specifically for using ISA with X12.
 |Qualifier
 |The Qualifier types available with Anypoint Partner Manager are listed here.
 
-Required: Yes +
+Required: Yes 
 
 Valid values::
 
