@@ -23,7 +23,7 @@ For more information, refer to xref:setup-payload-storage-API.adoc[Set up the Pa
 
 == Deployment Requirements
 
-* Mule runtime engine (Mule) 4.2.2 or later (for on-premises only).
+* Mule runtime engine (Mule) 4.2.2 or later for on-premises installations
 * Keep the default deployment of message flows to CloudHub (for information on CloudHub settings, refer to xref:cloudhub-deploy-options.adoc[CloudHub Deployment Options], or deploy to your own hosted on-premise Mule runtime, by clicking *Stop deploying to CloudHub* and going to  xref:deploy-onpremise.adoc[Deploy On-Premises for Partner Manager]).
 
 == Parter Manager Permissions
