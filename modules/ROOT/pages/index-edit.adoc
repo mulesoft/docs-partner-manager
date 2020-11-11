@@ -8,7 +8,7 @@ Transactions are typically transmitted over transports such as HTTPS and SFTP, a
 Use Anypoint Partner Manager to:
 
 * Perform technical onboarding of your partners.
-* Set up, manage and monitor business message flows to receive messages between your systems and your trading partners' systems. +
+* Set up, manage, and monitor business message flows between your systems and your trading partners' systems. +
 The ability to track and report on business transactions drives greater operational efficiency for B2B transactions.
 * View meta information, validation errors, and all messages included with each transmission payload. +
 A transmission is a single communication event during which a payload is transferred between two business entities.
