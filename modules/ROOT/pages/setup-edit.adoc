@@ -31,7 +31,7 @@ For more information, refer to xref:setup-payload-storage-API.adoc[Set up the Pa
 For each sandbox and production environment, assign the following permissions to your Partner Manager users:
 
 *  *Partner Manager Administrator* +
-Has full permissions.
+Has full permissions
 * *View Host, Partners, and Message Flows* +
 ** View-only access to the host, partner, and message flow configurations
 ** Cannot view Transactions activity
