@@ -1,6 +1,6 @@
 = Set Up Partner Manager
 
-Before you can deploy message flows from Partner Manager, you must set up and configure Anypoint Partner Manager for use by the team members in your organization who configure, deploy, and monitor B2B Trading Partner profiles and message flows.
+Before you can deploy message flows from Anypoint Partner Manager, you must set up and configure it for use by your teammates who configure, deploy, and monitor B2B trading partner profiles and message flows.
 
 == Prerequisites
 
