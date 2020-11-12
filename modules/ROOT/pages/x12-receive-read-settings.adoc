@@ -1,15 +1,25 @@
 = X12 Settings - Receive from Partner
 
-Refer to these as you set up your X12 settings to receive messages from your partners. There are two levels of settings, global and partner:
+Partner Manager enables you to configure the X12 acknowledgments, validation rules, character encoding, and control numbers to apply when receiving an inbound X12 transmission.
 
-* Global level settings control all X12 messages received from all partners.
-* Partner level settings are optionally configured for each partner and override global settings.
+== Configure the Receive Settings
 
+. In the left navigation menu, select the partner for whom to configure the send settings. 
+. In the *Validation and acknowledgment settings* section, under *Send to <partner-name>*, click *X12*.
+. In the menu on the left, select the setting to configure:
+* <<ack-settings,*Acknowledgments*>>
+* <<validation-settings,*Validation*>>
+* <<control-numbers,Control Numbers>>
+* <<character-set,*Character sets*>>
+. Click *Save*. 
+
+[NOTE]
+It can take up to five minutes or so for your configuration changes to sync with Mule.
+
+[[ack-settings]]
 == Acknowledgment Settings
 
-Configure as needed for your specific partners.
-
-NOTE: It may take five minutes or so for your configuration changes to sync with Mule runtime.
+Use the following settings to configure acknowledgment settings:
 
 [%header%autowidth.spread]
 |===
@@ -65,6 +75,7 @@ Default: Disabled +
 
 |===
 
+[[validation-settings]]
 == Validation Settings
 
 Selecting the checkbox (Yes) for any of these options means that all the X12 documents meet this condition criteria and receive a 997 failure message.
@@ -121,6 +132,7 @@ Default: Selected
 
 |===
 
+[[control-numbers]]
 === Control Numbers
 
 Apply validations related to your partners or your use of control numbers within the X12 message.
@@ -148,6 +160,7 @@ Required: No +
 Default: Not Selected
 |===
 
+[[character-sets]]
 === Character Sets
 
 Selected character set and encoding options pertaining to your partners and/or your X12 message.

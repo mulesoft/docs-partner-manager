@@ -1,11 +1,11 @@
 = Manage Message Flows
 
-After your message flow is running and you are using it with your partners, it doesn't require a lot of maintenance, but in some cases, you might want to manage a message flow, for example:
+After your message flow is running and you are using it with your partners, it doesn't require a lot of maintenance, but you can manage a message flow anytime, for example:
 
 * If you are no longer trading with a particular partner and need to delete the message flow you created for them.
 * You completed the testing for a deployed message flow in a pre-production environment, and now want to reclaim the previously allocated Mule runtime engine resources.
 * You want to change a message flow by adding identifiers, selecting different endpoints, or importing a different DataWeave map.
-* You want to upgrade the message flow to use the latest Mule version.
+
 
 After a message flow is deployed, you can:
 
@@ -20,7 +20,7 @@ After you establish a successful message flow with your partner, you can edit th
 
 Before you make changes, carefully consider the impact on your existing message flow.
 
-. From within your Anypoint Partner Manager Sandbox or Production environment click *Message Flows* in the upper left, select a *<Message flow name>* and click it to expand it.
+. From the Anypoint Partner Manager menu on the left, select *Message Flows* in the upper left, select a *<Message flow name>* and click it to expand it.
 
 . If you want to add an identifier to the message flow, click *See All* and then *New*.
 
@@ -51,7 +51,8 @@ For more information about DataWeave map files, https://docs.mulesoft.com/mule-r
 . Verify that any sections of the flow that you updated show a green checkmark next to them, and click *Deploy* to deploy the configurations to Mule.
 
 +
-NOTE: It may take five minutes or so for your configuration changes to sync with Mule runtime.
+[NOTE]
+It can take five minutes or so for your configuration changes to sync with Mule.
 +
 
 . To test your edited message flow. See xref:configure-message-flows.adoc[Create and Configure a Message Flow].
