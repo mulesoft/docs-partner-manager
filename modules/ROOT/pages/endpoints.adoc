@@ -18,12 +18,14 @@ Endpoints owned by the host are available for selection in message flows for any
 
 == Types of Endpoints
 
-AnyPoint Partner Manager provides three types of endpoints:
+AnyPoint Partner Manager provides the following types of endpoints:
 
-* Receive endpoints. +
-Your organization needs to provide endpoints to receive transmissions from your trading partners. +
+* Receive endpoints +
+Receive transmissions from your trading partners. +
 These endpoints are resources your organization exposes to your trading partners.
-* Target endpoints. +
+* Send endpoints +
+Send transmissions to your trading partners
+* Target endpoints +
 Your organization also has internal endpoints to which it routes messages from the trading partners. The messages routed to the target endpoint are typically validated and transformed before they are routed to the configured target endpoint.
 
 

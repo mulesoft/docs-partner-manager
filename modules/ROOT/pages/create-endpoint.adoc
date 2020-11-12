@@ -2,12 +2,28 @@
 
 You can create endpoints in the host or partner page, or from the Message Flow configuration wizard. 
 
-== Creating Endpoints From the Host or Partner Page
+== Creating Endpoints From the Partner Page
 
-From the Endpoints section host or partner page:
-Click New
-Make appropriate selections to select the protocol
-For partners facing endpoints (receive or send) ownership is automatically assigned based on where you are creating the endpoint from.
+Create and configure new send or receive endpoints in the partner page: 
+
+. In the left navigation menu, select *Partners*.
+. Select the partner for which to create and configure the endpoint.  
+. Click *New* in the *Endpoints: Receive from <partner-name>* or *Endpoints: Send to <partner-name>* section.
+. <<configure-endpoint,Configure the endpoint>> according to the type of endpoint you are creating and the protocol you selected. 
+. Click *Save*. 
+
+Ownership of facing endpoints (receive or send) is automatically assigned based on the partner from which you are creating the endpoint.
+
+== Creating Endpoints From the Host Page
+
+. In the left navigation, select the host.
+. Click *New* in the section for the type of endpoint you are creating:
+* *Endpoints: Receive from partners*
+* *Endpoints: Send to partners*
+* *Endpoints: Target at <host-name>*
+* *Endpoints: Source at <host-name*
+. <<configure-endpoint,Configure the endpoint>> according the type of endpoint you are creating and the protocol you selected. 
+. Click *Save*.
 
 == Creating Endpoints From the Message Flow
 
@@ -29,10 +45,14 @@ Partner Manager supports the following endpoint protocols:
 | AS2 | Receive, Send | N/A
 |===
 
+[[configure-endpoint]]
 == Configure Endpoint Protocol and Type-Specific Settings
 
 The values for the endpoint's settings vary according to the protocol-type of the endpoint for which you are configuring the settings:
 
-* xref:endpoint-as2-receive.adoc[AS2 Endpoint Settings]
+* xref:endpoint-as2-receive.adoc[AS2 Receive Endpoint Settings]
+* xref:endpoint-as2-send.adoc[AS2 Send Endpoint Settings]
 * xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
-* xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
+* xref:endpoint-sftp-send.adoc[SFTP Send Endpoint Settings]
+* xref:endpoint-https-receive.adoc[HTTP and HTTPS Receive Endpoint Settings]
+* xref:endpoint-https-send.adoc[HTTP and HTTPS Send Endpoint Settings]

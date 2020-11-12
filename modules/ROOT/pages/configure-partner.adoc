@@ -5,13 +5,13 @@ The Partner Manager *Partners* page lists all the configured trading partner pro
 On the *Partners* page, you can:
 
 * <<create-partner,Create and configure new trading partners>>
-* View the details of a partner
-* Add the EDI & AS2 identifiers used by your trading partner.
-* Add digital certificates associated with your trading partner.
-* Create and manage source and target endpoints owned by the trading partner.
-Manage EDI validation settings to be applied on inbound and outbound transactions.
+* <<view-partner-details,View the details>> of a partner
+* xref:partner-manager-identifiers.adoc[Add the EDI and AS2 identifiers] used by your trading partner.
+* Add xref:Certificates.adoc[digital certificates] associated with your trading partner.
+* xref:create-endpoint.adoc[Create] and manage source and target endpoints owned by the trading partner.
+* Manage EDI validation settings for inbound and outbound transactions.
 
-== Prerequisites
+== Required Information
 
 To create a new partner, you need the following information:
 
@@ -29,23 +29,41 @@ To create a new partner, you need the following information:
 * *Reference ID*
 * *X12-GS*
 * *X12-ISA*
-. In *Identifier Value*, enter a value to uniquely identify your partner. +
+. In *Identifier Value*, enter a value to uniquely identify your partner. 
 . If you selected *X12-ISA* as the *Type*, you must also select a *Qualifier* from the list. 
 . Click *Create partner* to create your trading partner.
+
+You can now xref:configure-message-flows.adoc[set up message flows] for this trading partner or continue to <<update-partner,update this partner>>.
+
+[[update-partner]]
+== Update a Partner's Profile
+
+You can add and update the following information for each trading partner from the *Partners* tab in the left navigation:
+
+. In Partner Manager, select *Partners* in the left navigation menu. 
+. Click the partner for whom to update the profile.
+. Under the *About* section, click *Edit* to add or update the following information:
+* *Description* +
+Provide a brief description of your partner's business, what kind of trading relationship your organization has with them, and so on.
+* *Website* +
+Enter a valid URL to your trading partner's website.
+* *Logo* +
+Upload a logo for your trading partner. Supported logo file formats are: `.jpg`, `.jpeg`, `.png`, `.gif`, and `.svg`. +
+The maximum file size is 30KB.
+* *Corporate address* +
+Provide a complete address that includes the Street, City, State, Postal code, and Country.
+* *Add contacts* +
+You can add up to three contacts associated with a trading partner's profile. You can also delete contacts from here. 
 +
-See xref:x12-identity-settings.adoc[Identifiers] for more information about X12 Identity settings.
+Available contact types are: 
 +
-. If you want to add an endpoint now, click *New* under *Endpoints: Send to <partner name>*.
-. Select the Protocol-Type of the Endpoint for which you are entering settings.
-. Set up your endpoint based on the protocol type you selected.
+** Business
+** Technical 
+** Other 
+. Click *Save*. +
+A message confirms that the partner's profile is successfully updated.
 
-For more information about your protocol type refer to:
-
-* xref:endpoint-as2-receive.adoc[AS2 Endpoint Settings]
-* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
-* xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
-You can now set up message flows related to this trading partner by using xref:configure-message-flows.adoc[Create a Message Flow] or continue to update this partner.
-
+[[view-partner-details]]
 == View a Partner's Details
 
 After you create a new partner, you can view and update details for the partner:
@@ -62,59 +80,14 @@ For example, a purchase order in X12 is an 850 message. You also need to know th
 
 You can also configure validation, acknowledgment, control number, and character set settings applicable to all message flows for the trading partner.
 
-== Update a Partner's Profile
-
-You can add the following information for each trading partner from the *Partners* tab in the left navigation:
-
-. In Partner Manager, select *Partners* in the left navigation menu. 
-. Click the partner for whom to update the profile.
-. Under the *About* section, click *Edit* to add or update the following information:
-* Description +
-Provide a brief description of your partner's business, what kind of trading relationship your organization has with them, and so on.
-* Website +
-Enter a valid URL to your trading partner's website.
-* Logo +
-Upload a logo associated to your trading partner. Supported logo file formats are: `.jpg`, `.jpeg`, `.png`, `.gif`, or `.svg` files. Maximum file size is 30KB.
-* Corporate address +
-Provide a complete address that includes the Street, City, State, Postal code, and Country.
-* Add contacts +
-You can add up to three contacts associated with a trading partner's profile. You can also delete contacts from here. 
-
-Available contact types are: 
-
-** Business
-** Technical 
-** Other 
-. Click *Save*. +
-A message confirms that the partner's profile is successfully updated.
-. If you want to add more identifiers for your trading partner click *New* within the *Identifiers* section.
-. Select an identifier type from the *Type* drop-down list to uniquely identify your partner. +
-For example, depending on your setup, select one of the following: 
-* AS2 ID
-* X12-ISA
-* X12 GS
-* DUNS number
-. Provide a value for the identifier and a qualifier for X12-ISA and click *Create identifier* to save your changes. +
-See xref:x12-identity-settings.adoc[Identifiers] for more information about X12 settings.
-. Click *New* within the *Certificates* section to upload any needed digital certificates. +
-This is your partner's digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
-+
-[NOTE]
-If a single certificate is uploaded, Partner Manager prevents you from deleting your only certificate.
-+
-. Click *Choose file* to select and upload the certificate.
-. Click *Upload certificate* (typically a `<certificate name>.pem` file provided by your trading partner) to upload the chosen digital certificate file.
-+
-View information about an uploaded certificate by clicking its link. See xref:Certificates.adoc[Certificates] for more information about configuring certificates in Partner Manager.
-+
-. Configure X12 validation settings that all message flows that you are configuring with your trading partners can use. +
-Validation settings include:
-
-* Validations
-* Acknowledgment
-* Control numbers
-* Character sets
-
 == See Also
 
+* xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
+* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:endpoint-as2-receive.adoc[AS2 Receive Endpoint Settings]
+* xref:endpoint-as2-send.adoc[AS2 Send Endpoint Settings]
+* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
+* xref:endpoint-sftp-send-adoc[SFTP Send Endpoint Settings]
+* xref:endpoint-https-send.adoc[HTTP and HTTPS Send Settings]
+* xref:endpoint-https-receive.adoc[HTTP and HTTPS Receive Settings]
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]

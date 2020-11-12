@@ -69,7 +69,7 @@ Use the following values to configure the X12 GS identifier type:
 |===
 
 [[as2-identifier]]
-== AS2 Identity 
+== AS2 Identifier Values
 
 To use AS2 transport to exchange B2B transactions with your trading partner, first configure the AS2 identifier for your organization and for your trading partner.
 
