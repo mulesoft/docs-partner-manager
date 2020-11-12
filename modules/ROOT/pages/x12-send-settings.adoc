@@ -22,6 +22,8 @@ It can take up to five minutes for your configuration changes to sync with Mule.
 [[general-settings]]
 == General Settings
 
+Use the following settings to configure the transaction usage, the responsible standards agency, and to enforce length limits and conditional relationship validations:
+
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default Value
@@ -48,36 +50,61 @@ Possible values include:
 
 |Enforce length limits
 a|If selected, any data elements with a length outside of the definition in the X12 schema cause the generation of the X12 transaction to fail.
-|Selected
+|Enabled
 
 |Enforce conditional relationship validations
 |If selected, any missing conditional data elements will cause the generation of the X12 transaction to fail.
-|Selected
+|Enabled
 |===
 
 [[authorization-settings]]
 == Authorization Settings
 
-[[ta1-ack-settings]]
-== TA1 Acknowledgment Settings
+Use the following settings to configure the authorization and security qualifier for the transactions:
 
 [%header%autowidth.spread]
 |===
-|Setting |Description 
+|Setting |Description |Default
+|Authorization qualifier (ISA01)
+|
+|None
+|Security qaulifier (ISA03)
+|
+|None
+|===
+
+
+[[ta1-ack-settings]]
+== TA1 Acknowledgment Settings
+
+Use the following settings to configure whether a technical acknowledgment is required, and the receive endpoint for the acknowledgment:
+
+[%header%autowidth.spread]
+|===
+|Setting |Description |Default
 
 |Expect TA1 for each transmission sent to <partner>
 a|If selected, sets the value in ISA14 to 1 on the generated X12 payload indicating that a Technical acknowledgement (TA1) is required.
-By default, this option is not selected.
+|Not selected
 |Endpoint
 a|When the option to expect a TA1 is selected, you should also select a Receive from partner endpoint through which the acknowledgement will be received as an inbound transmission.
+|
 |===
 
 [[global-control-numbers]]
 == Global Control Numbers
 
-Partner Manager applies a global control number at a partner level on the X12 interchanges and functional groups generated from outbound message flows. These control numbers are sequenced across all message types (including functional acknowledgements) sent to a trading partner.
+Partner Manager applies a global control number at the partner level on the X12 interchanges and functional groups generated from outbound message flows. These control numbers are sequenced across all message types (including functional acknowledgements) that are sent to a trading partner.
 
-The control number starts with a default value or 1 and is sequentially increased as your organization begins sending outbound transmissions. If you need to set the control number sequence value to a different number to maintain sequencing and avoid duplication, click Change and enter the desired control number. It may take up to 5 minutes for the change to be applied at runtime.
+The control number starts with a default value, or 1, and is sequentially increased as your organization begins sending outbound transmissions. 
+
+If you need to set the control number sequence value to a different number to maintain sequencing and avoid duplication:
+
+. Click *Change* and enter the desired control number.
+. Click *Save*. 
+ 
+[NOTE]
+It can take up to five minutes to apply the change at runtime.
 
 [[character-set]]
 == Character Set and Separators
@@ -129,7 +156,7 @@ Possible values include:
 * CR - Carriage Return
 * CRLF - Carriage Return & Line Feed
 * LF - Line Feed
-|
+|`CRLF`
 |===
 
 == See Also
