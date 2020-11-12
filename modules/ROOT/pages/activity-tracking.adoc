@@ -2,31 +2,23 @@
 
 B2B transactions often communicate contractual obligations between companies. Due to the sensitivity of this information, it is desirable (and often necessary) to track transmissions and store both transmission content and metadata.
 
-Anypoint Partner Manager enables you to monitor trading partner transmission activity. Activity is the complete set of end-to-end events related to transmission metadata, messages, and errors that are involved in processing a transmission.
-
-Metadata includes things like the date and time the transmission was sent or received, the identity of the partner, and the success or failure of processing.
-
-Common uses for this metadata include:
-
-* Nonrepudiation
-* Auditing
-* Correlation of acknowledgments
-* Error reporting
+Anypoint Partner Manager enables you to monitor trading partner transmission activity. _Activity_ is the complete set of end-to-end events related to transmission metadata in processing a transmission. Use transmission metadata to troubleshoot issues.
 
 With activity tracking, you can:
 
 * Search for message metadata (such as partner name, message type, filename, control number, endpoint, or date received).
-* View and download the original payload related to the transmission.
+* View and download the original payload related to the transmission to help you troubleshoot, or to keep records of transmissions.
 * Review errors and acknowledgment payloads.
 
 == Track Message Flow Activity
 
-To track message flow activity:
+Select a message flow to view its transmission details and view and download the payload:
 
 . Open Anypoint Partner Manager.
 . Select *Activity* from the left navigation menu.
-. Locate a transmission you are interested in viewing. 
-. Use the search box and filters to find the transmission based on criteria such as:
+. Locate the message flow for which you want to track the activity. 
++
+Use the search box to find the transmission based on criteria such as:
 +
 * Trading partner name
 * Message type
@@ -34,23 +26,38 @@ To track message flow activity:
 * Control number
 * Endpoint
 * Date the file was received
-. Select the transmission that matches your search criteria and review the summary information. +
-The summary information contains:
-* The status of the transmission, which indicates either a success (Green checkmark) or failure (red circle with an exclamation point)
+
+Use the filters to find transmissions based on:
+
+* *Type* +
+Type of message transmission:
+** *Both directions*
+** *Sent to partners*
+** *Received from partners*
+* *From Date*
+Filter for transmissions that sent or received after this date. 
+* *To Date* +
+Filter for transmissions that are sent or received up to this date. 
+* *Ack Status* +
+Filter for transmissions based on their acknowledgment status:
+** *All*
+** *Overdue*
+** *Rejected*
+. Select the transmission that matches your search criteria and review the summary information:
+* The status of the transmission, indicated by a green checkmark for a successful transmission, or a red circle with an exclamation point for a failed transmission
 * The name of the file that was received
 * The control number associated with the file (if available)
-* The receiving endpoint at which the file was received
+* The receiving endpoint 
 * The date and time when the file was received
 * The types of messages received (depending on the message flows you configured)
 * The number of messages received in the file
+* Transmission flow +
+The *Transmission Flow* section of the summary information shows:
+* Success or failure of the transmission
+* Acknowledgment status
+* Transformation and routing information 
 +
 If there is an exclamation point (!) next to any of the rectangle boxes in the *Transmission Flow* section, this indicates there is an issue with the transmission.
-+
-The *Transmission Flow* section shows the steps the file was processed in, for example, if:
-+
-* The file was successfully received and routed
-* An acknowledgement was sent back to the trading partner
-* The message was appropriately transformed and routed to the target endpoint 
 . Click *View Payload* to view and download the original payload that was received. +
 Examining the received payload can help you to determine where there might be a problem in the message flow.
 
