@@ -1,7 +1,4 @@
 = X12 Settings - Receive from Partner
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
 Refer to these as you set up your X12 settings to receive messages from your partners. There are two levels of settings, global and partner:
 
@@ -14,7 +11,7 @@ Configure as needed for your specific partners.
 
 NOTE: It may take five minutes or so for your configuration changes to sync with Mule runtime.
 
-[%header,cols="3s,7a"]
+[%header%autowidth.spread]
 |===
 |Setting |Description, Values, Default
 
@@ -72,7 +69,7 @@ Default: Disabled +
 
 Selecting the checkbox (Yes) for any of these options means that all the X12 documents meet this condition criteria and receive a 997 failure message.
 
-[%header,cols="3s,7a"]
+[%header%autowidth.spread]
 |===
 |Setting |Description
 
@@ -128,7 +125,7 @@ Default: Selected
 
 Apply validations related to your partners or your use of control numbers within the X12 message.
 
-[%header,cols="3s,7a"]
+[%header%autowidth.spread]
 |===
 |Setting |Description
 
@@ -155,7 +152,7 @@ Default: Not Selected
 
 Selected character set and encoding options pertaining to your partners and/or your X12 message.
 
-[%header,cols="3s,7a"]
+[%header%autowidth.spread]
 |===
 |Setting |Description
 

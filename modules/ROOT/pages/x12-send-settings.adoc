@@ -22,7 +22,7 @@ It can take up to five minutes for your configuration changes to sync with Mule.
 [[general-settings]]
 == General Settings
 
-[%header,cols="3s,7a"]
+[%header%autowidth.spread]
 |===
 |Setting |Description |Default Value
 
@@ -61,7 +61,7 @@ a|If selected, any data elements with a length outside of the definition in the 
 [[ta1-ack-settings]]
 == TA1 Acknowledgment Settings
 
-[%header,cols="3s,7a"]
+[%header%autowidth.spread]
 |===
 |Setting |Description 
 
@@ -84,7 +84,7 @@ The control number starts with a default value or 1 and is sequentially increase
 
 These settings enable you to set the character encoding and delimiters to use on the generated X12 payload:
 
-[%header,cols="3s,7a"]
+[%header%autowidth.spread]
 |===
 |Setting |Description | Default Value
 
