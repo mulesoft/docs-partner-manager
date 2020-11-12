@@ -1,9 +1,6 @@
 = Anypoint Partner Manager
 
-Anypoint Partner Manager enables Business-to-Business (B2B) message exchanges using APIs and Electronic Data Interchange (EDI) formats.
-
-Anypoint Partner Manager enables enterprises to conduct business transactions, such as purchasing products from one another.
-Transactions are typically transmitted over transports such as HTTPS and SFTP, and exchanges such as AS2. Partner Manager supports X12, JSON, and XML message formats. 
+Anypoint Partner Manager enables you to perform Business-to-Business (B2B) message exchanges using APIs and Electronic Data Interchange (EDI) formats, and to conduct business transactions such as buying and selling products with your partners. Transactions are typically transmitted over transports such as HTTPS and SFTP, and exchanges such as AS2. Partner Manager supports X12, JSON, and XML message formats. 
 
 Use Anypoint Partner Manager to:
 
@@ -11,18 +8,20 @@ Use Anypoint Partner Manager to:
 * Set up, manage, and monitor business message flows between your systems and your trading partners' systems. +
 Track and report on business transactions to achieve greater operational efficiency in B2B transactions.
 * View meta information, validation errors, and all messages included with each transmission payload. +
-A transmission is a single communication event during which a payload is transferred between two business entities.
-These payloads can contain one or more business messages.
+Transmission payloads can contain one or more business messages.
 
-Different users with different roles in your organization can use Partner Manager, for example, those who:
+Members of your organization can use Partner Manager to perform a variety of functions, including: 
 
-* Primarily design and test message flows
-* Manage the activity of the business transactions with your trading partners
-* Optimize backend services and performance
+* Designing and testing message flows
+* Managing the activity of the business transactions with your trading partners
+* Optimizing backend services and performance
 
-== Prerequisites
+== Prerequisites for Using Partner Manager
 
-To use Partner Manager, you must be familiar with EDI message formats and how to create DataWeave transformations.
+To use Partner Manager, you must be familiar with:
+
+* EDI message formats 
+* How to create DataWeave maps to perform data transformations
 
 To get started, ask your Anypoint Platform administrator to follow the Setup instructions.
 

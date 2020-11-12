@@ -1,30 +1,19 @@
-= Set Up Partner Manager
+= Partner Manager Setup Requirements
 
 Before you can deploy message flows from Anypoint Partner Manager, you must set up and configure it for use by your teammates who configure, deploy, and monitor B2B trading partner profiles and message flows.
 
-== Prerequisites
+== Partner Manager Requirements
 
 To set up Partner Manager, you must have:
 
 * An Anypoint Platform user account with the Anypoint Partner Manager entitlement.
 * The Partner Manager Administrator role, which assigns permission levels for all users who need access to B2B message flows in their environments (production or  sandbox).
-* The required Mule vCore capacity to handle your B2B transaction workload needs. 
-* Licenses for the connectors that are used in your B2B message flows based on the protocols and message formats you are using:
-* AS2 connector
-* X12 connector
+* The required Mule vCore capacity to manage your B2B transaction workload needs. 
+* Storage for the B2B transmission payloads you send or receive, such as a database, Amazon S3, Azure Blob Storage, and so on.
+* Licenses for the AS2 or X12 connectors used in your B2B message flows.
 * Anypoint Studio 7.4 or later, to create DataWeave maps for EDI data transformation
 
 If you require assistance, contact your account representative.
-
-== Storage Requirements
-
-Storage for the B2B transmission payloads you send or receive, such as a database, Amazon S3, Azure Blob Storage, and so on. +
-For more information, refer to xref:setup-payload-storage-API.adoc[Set up the Payload Storage API for Partner Manager].
-
-== Deployment Requirements
-
-* Mule runtime engine (Mule) 4.2.2 or later for on-premises installations
-* Keep the default deployment of message flows to CloudHub (for information on CloudHub settings, refer to xref:cloudhub-deploy-options.adoc[CloudHub Deployment Options], or deploy to your own hosted on-premise Mule runtime, by clicking *Stop deploying to CloudHub* and going to  xref:deploy-onpremise.adoc[Deploy On-Premises for Partner Manager]).
 
 == Parter Manager Permissions
 
@@ -53,3 +42,4 @@ This also applies to Partner Manager settings that are under Access Management (
 == See Also
 
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
+* xref:setup-payload-storage-API.adoc[Set up the Payload Storage API for Partner Manager]
