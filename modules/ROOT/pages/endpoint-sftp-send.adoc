@@ -1,11 +1,11 @@
 = SFTP Send Endpoint
 
-Use these settings to setup SFTP endpoints in one of the following contexts:
+Use SFTP endpoints to:
 
 * Send to partners +
-Send outbound EDI files to your trading partners used in outbound message flows.
+Send outbound EDI files to your trading partners in outbound message flows.
 * Target at host +
-Send application messages (JSON or XML) to your backend applications used in inbound message flows.
+Send application messages (JSON or XML) to your backend applications in inbound message flows.
 
 [%header%autowidth.spread]
 |===
@@ -24,7 +24,7 @@ Send application messages (JSON or XML) to your backend applications used in inb
 
 |Port
 |The port number of the SFTP server to connect.
-|
+|Yes
 
 |Username
 |Username for the SFTP Server.
@@ -38,11 +38,16 @@ Send application messages (JSON or XML) to your backend applications used in inb
 a|Path to the SFTP server EDI files:
 
 * That are generated from outbound message flows
-* Need to be dropped for your trading partners
-* Where your backend applications require you to drop translated JSON and XML files generated from inbound message flows
+* Need to be placed for your trading partners
+* Where your backend applications require you to place translated JSON and XML files generated from inbound message flows
 |Yes
 
 |Filename pattern
-|File name pattern as required by your trading partner or backend application
+|xref:file-name-patterns.adoc[File name pattern] as required by your trading partner or backend application
 |
 |===
+
+== See Also
+
+* xref:endpoints.adoc[Endpoints]
+* xref:create-endpoint.adoc[Create and Configure Endpoints]

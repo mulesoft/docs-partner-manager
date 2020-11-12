@@ -48,7 +48,7 @@ Create the AS2 identifiers for your organization and your trading partners in th
 |Yes
 
 |Filename pattern
-|File name pattern as required by your trading partner or back-end application
+|xref:file-name-pattern.adoc[File name pattern] as required by your trading partner or backend application
 |Yes
 
 |Request receipt
@@ -90,3 +90,8 @@ Allowed values include:
 Default: Sync
 |
 |===
+
+== See Also
+
+* xref:endpoints.adoc[Endpoints]
+* xref:create-endpoint.adoc[Create and Configure Endpoints]

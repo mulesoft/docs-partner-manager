@@ -1,6 +1,6 @@
 = AS2 Receive Endpoint Settings
 
-AS2 endpoint settings specify where to receive inbound files from your trading partners. You can use the same AS2 Receive endpoints to receive inbound transmissions from multiple partners.
+AS2 endpoint settings specify where to receive inbound files from your trading partners. You can use the same AS2 receive endpoints to receive inbound transmissions from multiple partners.
 
 Create the AS2 identifiers for your organization and your trading partners in the respective host and trading partner profile pages.
 
@@ -68,3 +68,8 @@ AS2 Receive endpoints deployed from Partner Manager support the following signat
 ** `3DES` 
 ** `DES_EDE3` 
 ** `RC2` 
+
+== See Also
+
+* xref:endpoints.adoc[Endpoints]
+* xref:create-endpoint.adoc[Create and Configure Endpoints]

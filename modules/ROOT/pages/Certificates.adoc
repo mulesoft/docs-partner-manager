@@ -1,39 +1,52 @@
 = Certificate Settings
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
+All certificates in Anypoint Partner Manager are securely stored in Anypoint Platform's secrets manager, which uses a secure vault technology to store and control access to private keys, passwords, certificates, and other secrets.
 
-You can configure your SSL certificate settings based on your certificate needs.
-All certificates in Anypoint Partner Manager are securely stored in Anypoint platform's secrets manager.
-It uses a secure vault technology to store and control access to private keys, passwords, certificates, and other secrets.
+Configure your SSL certificate settings based on your certificate needs.
 
-You can:
+The information provided for each certificate includes:
 
-* Use a CA-signed certificate where no upload is necessary. +
-You do not require an additional certificate because this endpoint already uses a CA-signed certificate. +
+* *Authority* +
+Certificate provider
+* *Serial Number* +
+Serial number from the certificate
+* *Status* +
+Active is shown with a green icon or Inactive is shown with a red icon. +
+* *Start Date* +
+Date from when the certificate is valid
+* *Expires* +
+Date after which the certificate is no longer valid 
+* *Endpoints* +
+Number of endpoints where the certificate is used
+* *Message Flows* +
+Number of message flows that use the certificate
 
+In Partner Manager, you can:
+
+* Use a CA-signed certificate. +
+You do not need to upload an additional certificate because this endpoint already uses a CA-signed certificate. +
 * Upload your own, self-signed certificate. +
-You can upload a new certificate (in `<certifcate name>.PEM` format), or view all the certificates available for use with this endpoint setup. +
+You can upload a new certificate (in `<certifcate name>.PEM` format), or view all the certificates available for use with this endpoint setup. 
+* Enable an insecure connection for local testing that doesn’t perform certificate validation by selecting *Allow insecure connection*. 
 
-* Enable an insecure connection for local testing that doesn’t perform certificate validation. +
-You can use Allow insecure connection. +
+== Adding PEM Certificates
 
-If a single certificate is uploaded, Partner Manager prevents you from deleting your only certificate.
-Otherwise, you can delete any certificates that are not deployed or associated with endpoints.
+You can add certificates from the Host or Partner page.
 
-Information provided for each certificate: +
+. In Partner Manager's left navigation, select *<host name>* or *Partners*.
+. In the *Certificates* section, click *New*. 
+. Click *Choose file* to upload a PEM certificate. 
+. Click *Upload Certificate*.
 
-`Authority` is the certificate provider. +
+== Deleting Certificates
 
-`Serial Number` is from the certificate. +
+You can delete certificates that are not deployed or associated with endpoints. 
 
-`Status` Active is shown with a green icon or Inactive is shown with a red icon. +
+You cannot delete a certificate if it is the only certificate that is uploaded.
 
-`Endpoints` are the number of endpoints where it is used. +
+To delete a certificate:
 
-`Start Date` is the date from when the certificate can be used. +
+. In Partner Manager's left navigation, select *<host name>* or *Partners*.
+. In the *Certificates* section, click the certificate to delete.
+. In the dialog window, click *Delete*.
 
-`Expires` is the date from when the certificate can no longer be used. +
-
-`Days to expiration` is the countdown to the expiration date. +

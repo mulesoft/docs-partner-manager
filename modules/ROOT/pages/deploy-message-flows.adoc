@@ -1,1 +1,76 @@
-= Deploy Message Flows
+= Deploy, Test, and Undeploy Message Flows
+
+Partner Manager dynamically validates the message flow configuration elements for completeness and displays a green checkmark next to each of the message flow building blocks as they are completed and validated. 
+
+After the message flow is completed and validated, you are ready to deploy and test it.
+
+[NOTE]
+It is best to test the message flow by deploying it in a sandbox environment. When you verify that the message flow is successful, you can then undeploy it from the sandbox and redeploy it to your production environment.
+
+== Deploy the Message Flow
+
+After you verify that each part of the message flow is complete, click the *Deploy* button to deploy the message flow to the runtime.
+
+[NOTE]
+----
+For B2B workloads on-premises, deploying a message flow for a new trading partner while using an existing AS2 endpoint to receive messages can result in a brief interruption to the service for existing AS2 trading partner users.
+
+To minimize the impact of the service interruption, it is best to perform message flow deployments outside of your regular business hours.
+
+This issue does not exist on CloudHub, as CloudHub provides a zero-downtime update of the AS2 endpoint application.
+----
+
+Your message flow configuration is deployed to Mule runtime engine and you can start receiving messages from your partner. After a message flow is successfully deployed, you can track its processed messages using the *Activity* page.
+
+== Test Message Flows
+
+After you deploy the message flow, send test messages to verify the following:
+
+* You are receiving messages and acknowledgments from your partners.
+* The DataWeave map is working and your backend systems receive the transformed message.
+
+Test your message flow in your Anypoint Partner Manager Sandbox environment:
+
+. Initiate a transmission on the receiving endpoint.
+. From the Partner Manager left navigation, select *Activity*.
+. Select the transmission to test from the list.
+. Scan for an exclamation point (!) in any of the boxes next to the displayed flow stages. Exclamation points indicate that there is an issue with the transmission. Address any issues you find.
+. If the system was set up to view payloads, you can review the received payload by clicking *View payload* next to the *Received transmission* section. +
+If you are unsure about whether you should be able to view a payload, contact your B2B System Administrator.
+. If you have TA1 and functional acknowledgments (999 or 997) set, review and confirm that they are there.
+. Verify that the transmission routed the messages to the correct message flows.
+. Verify that the messages are routed to the target system and that they:
+* Were successfully delivered to the target endpoint
+* Transformed correctly
+
+[undeploy-message-flows]
+== Undeploy Message Flows
+
+Undeploying a message flow prevents future messages from being processed, or enables you to recover resources that are consumed by a message flow that you no longer need, for example, if your relationship with your partner changes.
+
+You can undeploy your message flow from either a sandbox or a production environment.
+
+The undeployment process takes about five minutes, during which actions such as `Deploy` and `Delete` are unavailable.
+
+[IMPORTANT]
+During the undeployment process, do not log out of Anypoint Partner Manager or close your browser window.
+
+=== Prerequisites
+
+Before you undeploy a message flow, you must:
+
+Ensure that your on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager called `B2BserverGroup` are active and running.  +
+Contact your B2B System Administrator to ensure that your on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager called `B2BserverGroup` are active and running. 
+
+=== Steps
+
+. In the Partner Manager left navigation menu, select *Message Flows*.
+. Select the message flow to undeploy from the list and click *Undeploy*.
+
+Anypoint Partner Manager checks to see if any of the applications deployed to Mule are orphaned as a result of the undeployment.
+Orphaned applications are cleaned up to release any resources they were consuming.
+
+== See Also
+
+* xref:configure-message-flows.adoc[Create and Configure an Inbound Message Flow]
+* xref:partner-manager-outbound-message-flow-config.adoc[Create and Configure an Outbound Message Flow]

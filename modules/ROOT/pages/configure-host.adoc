@@ -1,18 +1,17 @@
-= Configure a Host
+= Configure and Manage a Host Profile
 
-Your organization or your business group is referred to as the Anypoint Partner Manager Host. In the Anypoint Platform, your hostname is the same name as your Anypoint Platform business group. An Anypoint Platform business group contains Anypoint Platform resources, such as APIs and applications.
+Your Anypoint Platform organization or your business group is referred to as the "host" in Anypoint Partner Manager. In Anypoint Platform, your host name is the same as your Anypoint Platform business group name. 
 
-Within the Partner Manager host page you can:
+Use the host page in Partner Manager to:
 
-* Add identifiers to uniquely identify yourself.
-* Add digital certificates associated with your organization.
-* Create new endpoints.
-* Create new message types.
-* Configure the details associated with the Payload Storage API you configured as part of Partner Manager setup. +
-The storage API is a mandatory configuration where your B2B message payloads are stored.
+* Add the EDI and AS2 xref:partner-manager-identifiers.adoc[identifiers] used by your organization.
+* Add digital xref:certificates.adoc[certificates] associated with your organization.
+* Create and manage source and target xref:create-endpoint.adoc[endpoints].
+* Create and manage source and target xref:partner-manager-create-message-type.adoc[message types].
+* Configure details associated with the xref:setup-payload-storage-api.adoc[Payload Storage API].
+ 
 
-
-== Prerequisites
+== Host Configuration Settings
 
 To configure the host, you need the following information about your organization:
 
@@ -29,40 +28,13 @@ Your partners provide you with their own endpoint configurations to which your o
 * Your digital certificates, such as an X.509 certificate
 * Electronic Data Interchange (EDI) message type preferences for your organization
 * DataWeave transformation maps your organization uses for B2B transformations +
-Create these maps using Anypoint Studio before you use Partner Manager.
-
-== Update the Host's Profile
-
-On the host page, you can configure your indentifiers, certificates, and the location and configuration of your payload storage.
-
-. Open Anypoint Partner Manager and select the name of your organization from the left navigation menu. 
-. In the *Identifiers* section, click *New* to add an identifier related to your organization.
-. Select an identifier type from the *Type* drop-down list. +
-The identifier type uniquely identifies you. +
-For example, depending on your setup, select one of the following: 
-* AS2
-* DUNS number
-* X12 GS
-* X12-ISA
-. Provide a value for your identifier and a qualifier for X12-ISA and click *Create identifier* to save your changes. +
-See xref:x12-identity-settings.adoc[Identifiers] for more information about X12-ISA settings.
-. In *Certificates* section, click *New* to upload any needed digital certificates, such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol.
-. Click *Choose file* to select the certificate (typically a `<certificate name>.PEM` file), and click *Upload certificate* to upload your chosen certificate file. +
-See xref:Certificates.adoc[Certificates] for more information about configuring certificates in Partner Manager.
-. From *Endpoints: Receive from partners* or *Endpoints: Targets at <partner name>*, click *New* and select your protocol type.
-. Set up your endpoint based on the protocol type you selected:
-* xref:endpoint-as2-receive.adoc[AS2 Endpoint Settings]
-* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
-* xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
-. Click *Save*.
-. If you need to make changes later, for example, changing the URL location, timeout settings, or acknowledgments, click *Edit* in the *Payload storage* section.
-
+Use Anypoint Studio to create the DataWeave transformation maps before you use Partner Manager.
 
 
 == See Also
 
-* xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner]
-* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
-* xref:partner-manager-identifiers.adoc[Identifiers] 
+* xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers] 
 * xref:delete-identifiers.adoc[Delete Identifiers] 
 * xref:endpoints.adoc[Endpoint Types and Protocols]
+* xref:partner-manager-maps.adoc[Create and Configure EDI Translation Maps]
+* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
