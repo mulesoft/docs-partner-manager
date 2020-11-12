@@ -1,4 +1,4 @@
-= Activity Tracking
+= Track Transmission Activity
 
 B2B transactions often communicate contractual obligations between companies. Due to the sensitivity of this information, it is desirable (and often necessary) to track transmissions and store both transmission content and metadata.
 
@@ -26,9 +26,9 @@ Use the search box to find the transmission based on criteria such as:
 * Control number
 * Endpoint
 * Date the file was received
-
++
 Use the filters to find transmissions based on:
-
++
 * *Type* +
 Type of message transmission:
 ** *Both directions*
@@ -43,7 +43,8 @@ Filter for transmissions based on their acknowledgment status:
 ** *All*
 ** *Overdue*
 ** *Rejected*
-. Select the transmission that matches your search criteria and review the summary information:
+. Select the transmission that matches your search criteria and review the summary information: 
++
 * The status of the transmission, indicated by a green checkmark for a successful transmission, or a red circle with an exclamation point for a failed transmission
 * The name of the file that was received
 * The control number associated with the file (if available)
