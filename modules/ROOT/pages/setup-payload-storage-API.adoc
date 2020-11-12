@@ -2,13 +2,13 @@
 
 Anypoint Partner Manager enables you to configure your own storage solution, such as database, Amazon S3, Azure Blob Storage, and so on to store transmission content, such as incoming and outgoing B2B message payloads.  
 
-Before you create your first trading partner and message flow, you must configure your Payload Storage API within the Host organization in Partner Manager.
+Before you create your first trading partner and message flow, you must configure your payload storage API within the host organization in Partner Manager.
 
 To store your content, you must implement an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage.
 
 == Download and Deploy the Payload Storage API 
 
-Follow these steps to set up the Payload Storage API:
+Follow these steps to set up the payload storage API:
 
 . Download these APIs from Anypoint Exchange:
 +
@@ -31,7 +31,7 @@ https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-stora
  ** OAuth Token
 * Certificate (.PEM format) and connection types
 +
-You’ll need this information when you associate Anypoint Partner Manager with your Payload Storage API.
+You’ll need this information when you associate Anypoint Partner Manager with your payload storage API.
 Your payload storage API must be accessible over the internet via HTTPS. Ensure that the appropriate authentication mechanisms are implemented to enable access over HTTPS.
 
 == Configure the Payload Storage API
@@ -48,6 +48,10 @@ Optional description for your payload storage
 Path to your payload storage 
 . Optionally, if you want to view (or allow your users to view) the raw payloads of the files you receive or send, select *Allow users to download payloads*.
 . Click *Save*.
+
+== See Also
+
+* xref:configure-host.adoc[Configure and Manage a Host Profile]
 
 
 
