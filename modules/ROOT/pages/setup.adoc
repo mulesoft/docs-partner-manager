@@ -1,39 +1,28 @@
-= Set Up Partner Manager
+= Partner Manager Setup Requirements
 
-Before you can deploy message flows from Partner Manager, you must set up and configure Anypoint Partner Manager for use by the team members in your organization who configure, deploy, and monitor B2B Trading Partner profiles and message flows.
+Before you can deploy message flows from Anypoint Partner Manager, you must set up and configure it for use by your teammates who configure, deploy, and monitor B2B trading partner profiles and message flows.
 
-== Prerequisites
+== Partner Manager Requirements
 
-Before you set up Partner Manager, you must have:
+To set up Partner Manager, you must have:
 
-* An Aypoint Platform user account with the Anypoint Partner Manager entitlement.
-* The Partner Manager Administrator role, which assigns permission levels for all users who need access to B2B message flows in their environment (Production or  Sandbox).
-* The required Mule vCore capacity to handle your B2B transaction workload needs. 
-* Licenses for the connectors that are used in your B2B message flows based on the protocols and message formats you are using:
-* AS2 connector
-* X12 connector
-* Anypoint Studio 7.4 or later in order to create DataWeave maps for EDI data transformation.
+* An Anypoint Platform user account with the Anypoint Partner Manager entitlement.
+* The Partner Manager Administrator role, which assigns permission levels for all users who need access to B2B message flows in their environments (production or  sandbox).
+* The required Mule vCore capacity to manage your B2B transaction workload needs. 
+* Storage for the B2B transmission payloads you send or receive, such as a database, Amazon S3, Azure Blob Storage, and so on.
+* Licenses for the AS2 or X12 connectors used in your B2B message flows.
+* Anypoint Studio 7.4 or later, to create DataWeave maps for EDI data transformation
 
 If you require assistance, contact your account representative.
 
-== Storage Requirements
-
-Storage for the B2B transmission payloads you send or receive, such as a database, Amazon S3, Azure Blob Storage, and so on. +
-For more information, refer to xref:setup-payload-storage-API.adoc[Set up the Payload Storage API for Partner Manager].
-
-== Deployment Requirements
-
-* Mule runtime engine (Mule) 4.2.2 or later (for on-premises only).
-* Keep the default deployment of message flows to CloudHub (for information on CloudHub settings, refer to xref:cloudhub-deploy-options.adoc[CloudHub Deployment Options], or deploy to your own hosted on-premise Mule runtime, by clicking *Stop deploying to CloudHub* and going to  xref:deploy-onpremise.adoc[Deploy On-Premises for Partner Manager]).
-
 == Parter Manager Permissions
 
-You can assign the following permissions, per Anypoint Platform environment, to your Partner Manager users:
+For each sandbox and production environment, assign the following permissions to your Partner Manager users:
 
 *  *Partner Manager Administrator* +
-Has full permissions.
+Has full permissions
 * *View Host, Partners, and Message Flows* +
-** View-only access to the host, partner, and message flow configurations
+** Has view-only access to the host, partner, and message flow configurations
 ** Cannot view Transactions activity
 * *Manage Partners and Message Flows* +
 ** Can create, modify, and delete partners or message flow configurations
@@ -41,7 +30,7 @@ Has full permissions.
 ** Cannot view transaction activity
 * *Manage Activity* + 
 ** Can view and manage transaction activity
-** Cannot view or modify either partner or message flow configurations.
+** Cannot view or modify either partner or message flow configurations
 * *Manage Host* +
 ** Can create, modify, and delete host configurations
 ** Cannot view or modify trading partner configurations or activity +
@@ -53,3 +42,4 @@ This also applies to Partner Manager settings that are under Access Management (
 == See Also
 
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
+* xref:setup-payload-storage-API.adoc[Set up the Payload Storage API for Partner Manager]
