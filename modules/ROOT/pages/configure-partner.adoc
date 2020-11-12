@@ -78,7 +78,7 @@ From the partner's detail page you can:
 For example, a purchase order in X12 is an 850 message. You also need to know the X12 version to use in your transactions (such as 004010, 005010, and so on).
 * Add your partner's digital certificates (such as an X.509 certificate).
 
-You can also configure validation, acknowledgment, control number, and character set settings applicable to all message flows for the trading partner.
+You can also configure validation, acknowledgment, control number, and character set settings applicable to all message flows for the trading partner. 
 
 == See Also
 
@@ -90,4 +90,6 @@ You can also configure validation, acknowledgment, control number, and character
 * xref:endpoint-sftp-send-adoc[SFTP Send Endpoint Settings]
 * xref:endpoint-https-send.adoc[HTTP and HTTPS Send Settings]
 * xref:endpoint-https-receive.adoc[HTTP and HTTPS Receive Settings]
+* xref:x12-receive-read-settings.adoc[Configure X12 Receive (Inbound) Settings]
+* xref:x12-send-settings.adoc[Configure X12 Send (Outbound) Settings]
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
