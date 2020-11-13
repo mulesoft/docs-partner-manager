@@ -36,9 +36,9 @@ Possible values include:
 * I - Information
 * T - Test
 * P - Production
-a|* P - Production +
+a|* `P - Production` +
 For production environments
-* T - Test +
+* `T - Test` +
 For sandbox environments
 
 |Responsible agency code (GS07)
@@ -70,7 +70,7 @@ Use the following settings to configure the authorization and security qualifier
 |Authorization qualifier (ISA01)
 |
 |None
-|Security qaulifier (ISA03)
+|Security qualifier (ISA03)
 |
 |None
 |===
@@ -87,10 +87,10 @@ Use the following settings to configure whether a technical acknowledgment is re
 
 |Expect TA1 for each transmission sent to <partner>
 a|If selected, sets the value in ISA14 to 1 on the generated X12 payload indicating that a Technical acknowledgement (TA1) is required.
-|Not selected
+|Disabled
 |Endpoint
-a|When the option to expect a TA1 is selected, you should also select a Receive from partner endpoint through which the acknowledgement will be received as an inbound transmission.
-|
+a|When the option to expect a TA1 is selected, click *Select* to specify the *Receive from <partner>* endpoint the acknowledgment will be received from as an inbound transmission. 
+|None
 |===
 
 [[global-control-numbers]]
@@ -98,7 +98,7 @@ a|When the option to expect a TA1 is selected, you should also select a Receive 
 
 Partner Manager applies a global control number at the partner level on the X12 interchanges and functional groups generated from outbound message flows. These control numbers are sequenced across all message types (including functional acknowledgements) that are sent to a trading partner.
 
-The control number starts with a default value, or 1, and is sequentially increased as your organization begins sending outbound transmissions. 
+The control number starts with a default value of `1`, and is sequentially increased as your organization begins sending outbound transmissions. 
 
 If you need to set the control number sequence value to a different number to maintain sequencing and avoid duplication:
 
@@ -122,20 +122,20 @@ a|Characters allowed in string data.
 
 Possible values include:
 
-* BASIC
-* EXTENDED
-* UNRESTRICTED | `EXTENDED`
+* *Basic*
+* *Extended*
+* *Unrestricted* | `Extended`
 
 |Character encoding
 a|Character encoding for messages.
 
 Possible values include:
 
-* PLATFORM
-* ASCII
-* ISO8859_1
-* IBM1047
-* UTF8 | `UTF8`
+* *PLATFORM*
+* *ASCII*
+* *ISO8859_1*
+* *IBM1047*
+* *UTF8* | `UTF8`
 
 |Segment terminator
 a|Segment terminator character. 
@@ -154,10 +154,14 @@ a|Line ending to add between segments. This allows you to add line endings betwe
 
 Possible values include:
 
-* NONE - X12 payload generated will be a single line, with segments separated by the segment terminator character
-* CR - Carriage Return
-* CRLF - Carriage Return & Line Feed
-* LF - Line Feed
+* *NONE* +
+X12 payload generated will be a single line, with segments separated by the segment terminator character
+* *CR* +
+Carriage Return
+* *CRLF* +
+Carriage Return & Line Feed
+* *LF* +
+Line Feed
 |`CRLF`
 |===
 

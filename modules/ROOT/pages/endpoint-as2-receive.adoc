@@ -23,7 +23,7 @@ You can see the URL  by selecting the receiving endpoint from your deployed mess
 
 Select the receiving endpoint from your deployed message flow to view the URL.
 
-If you are deploying to on-premises Mule with a firewall and load balancer, work with your organization's hosting or network security team to obtain the externally accessible DNS or name of the host where the Mule server is executing. You must replace the {runtime_host} value in the URL with the value that is specific to your organization. For example, if the DNS host name is `b2b.mycompany.com`, the AS2 receiver URL is: `https://b2b.mycompany.com/receive-as2/`
+If you are deploying to on-premises Mule with a firewall and load balancer, work with your organization's hosting or network security team to obtain the externally accessible DNS or name of the host where the Mule server is executing. You must replace the {runtime_host} value in the URL with the value that is specific to your organization. For example, if the DNS host name is `b2b.mycompany.com`, the AS2 receiver URL is: `+https://b2b.mycompany.com/receive-as2/+`
 |
 
 | <Host> public certificate
