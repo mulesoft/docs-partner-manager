@@ -10,7 +10,6 @@ Use the host page in Partner Manager to:
 * Create and manage source and target xref:partner-manager-create-message-type.adoc[message types].
 * Configure details associated with the xref:setup-payload-storage-api.adoc[Payload Storage API].
  
-
 == Host Configuration Settings
 
 To configure the host, you need the following information about your organization:
