@@ -59,9 +59,17 @@ The *Transmission Flow* section of the summary information shows:
 * Transformation and routing information 
 +
 If there is an exclamation point (!) next to any of the rectangle boxes in the *Transmission Flow* section, this indicates there is an issue with the transmission.
-. Click *View Payload* to view and download the original payload that was received. +
+. Click *View Payload* to view and download the original payload that was received. 
++
 Examining the received payload can help you to determine where there might be a problem in the message flow.
++
+* For outbound transmissions, you can view the payload of the source message received from your backend systems and the EDI message you sent to your trading partner
+* For inbound transmissions, you can view the payload of the EDI message you received from your trading partner.
+. You can view the acknowledgement (997 and TA1) payloads from the transmission detail page if the outbound message flow is configured to expect an acknowledgement from the trading partner, or the inbound message flow is configured to return an acknowledgement to the trading partner.
++
+You can review the acknowledgement status of outbound transactions when you have not received an acknowledgement back from your trading partner or when your trading partner has sent an acknowledgement indicating a rejection of your message.
 
 == See Also
 
+* xref:edi-ack-reconciliation.adoc[EDI Acknowledgment Reconciliation]
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
