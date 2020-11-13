@@ -35,6 +35,8 @@
  ** xref:manage-message-flows.adoc[Manage Message Flows]
 * xref:partner-manager-administration.[Partner Manager Administration]
  ** xref:activity-tracking.adoc[Track Transmission Activity]
+ ** xref:edi-ack-reconciliation.adoc[EDI Acknowledgment Reconciliation]
+ ** xref:upgrade-message-flows.adoc[Upgrade Message Flows]
 * xref:troubleshooting.adoc[Troubleshooting]
  ** xref:ts-config-deploy.adoc[Configuration and Deployment Errors]
   *** xref:ts-payload-not-configured.adoc[Payload storage is not properly configured]

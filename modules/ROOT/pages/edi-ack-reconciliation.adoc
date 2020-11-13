@@ -1,0 +1,55 @@
+= EDI Acknowledgment Reconciliation
+
+Partner Manager automatically updates the acknowledgement status of outbound EDI messages you send to your trading partners, as your trading partners return 997 functional acknowledgement transactions.
+
+If you are expecting to receive functional acknowledgements back from your trading partner, you must configure the acknowledgement settings when creating the outbound message flow. 
+
+When your organization receives the functional acknowledgement (X12 997) back from the trading partner, the status of the corresponding outbound transaction is updated as follows:
+
+* The status is updated to `Accepted` if the 997 indicates the acceptance of the transaction by the trading partner.
+* The status is updated to `Rejected` if the 997 indicates a rejection.
+* When the functional acknowledgement is not received within the time period specified in the message flow’s acknowledgement configuration, Partner Manager marks the outbound transaction’s acknowledgement status as `Overdue`.
+
+The following are examples of the actions your operations team might take while troubleshooting acknowledgement issues: 
+
+* Contacting your trading partner asking them to confirm the receipt of the outbound transaction when reviewing overdue transactions
+* Retriggering the transaction from the backend system when reviewing rejected transactions due to missing data elements
+
+== Review Acknowledgment Issues
+
+You can view all the outbound transactions that have either received a 997 rejection or that are overdue for the functional acknowledgement:
+
+. In the Partner Manager menu, select *Activity*. 
+. Use the search filters to filter functional acknowledgments by:
+* *Type* +
+Type of message transmission:
+** *Both directions*
+** *Sent to partners*
+** *Received from partners*
+* *From Date*
+Filter for transmissions that sent or received after this date. 
+* *To Date* +
+Filter for transmissions that are sent or received up to this date. 
+* *Ack Status* +
+Filter for transmissions based on their acknowledgment status:
+** *All*
+** *Overdue*
+** *Rejected*
+. Click the transaction you want to review and take action as part of your problem resolution procedure. 
+. From the transaction detail page, expand the *Sent to <partner name>* section.
+. Click *Review*. +
+When you are reviewing a 997 rejection, you will see the X12 997 payload received from your trading partner.
++
+You can download the 997 payload by clicking the *Download* button.
+. Enter a review comment, indicating the action being taken on the transaction’s acknowledgement status.
+. Click *Mark reviewed*.
+
+When an overdue or rejected transaction is marked as reviewed, it is no longer displayed in the transaction *Activity* page when you search for transactions with the acknowledgment status of `Overdue` or `Rejected`. You see only the transactions that are not reviewed by your operations team.
+
+
+
+
+
+
+
+

@@ -1,0 +1,4 @@
+= Upgrade Message Flows
+
+You can upgrade your message flows to use the latest version of Mule. 
+
