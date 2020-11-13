@@ -88,4 +88,4 @@ Use this setting to specify the SFTP endpoint to which to route transformed file
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoints.adoc[Create and Configure Endpoints]
+* xref:create-endpoint.adoc[Create and Configure Endpoints]
