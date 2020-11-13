@@ -1,7 +1,15 @@
 = Partner Manager Configuration Objects
 
 A message flow in Partner manager comprises the below configuration objects that execute an end to end B2B message processing.
-Partner identifiers - such as X12 ISA / GS identifiers, AS2 identifiers
-Receive / Send endpoints - to receive source messages or to send translated messages via a standard transport protocol
-Source / target message types - the standard/format and associated settings defining the structure of the message received from source endpoints or of the messages sent to the target endpoints after translation.
-Map - The dataweave transformation map converting inbound EDI transactions to the back-end application format, or converting outbound transactions from back-end systems to EDI format.
+
+
+* xref:partner-manager-identifiers.adoc[Partner identifiers] +
+Send and receive identifiers, such as X12 ISA and GS identifiers and AS2 identifiers
+* xref:endpoints.adoc[Receive and Send endpoints] +
+Receive source messages or send translated messages using a standard transport protocol
+* xref:partner-manager-create-message-type.adoc[Source and target message types] +
+Standard, or format, and associated settings that define the structure of the message received from source endpoints, or of the messages sent to the target endpoints after translation
+* xref:partner-manager-maps.adoc[Maps] +
+DataWeave transformation maps that converts inbound EDI transactions to the backend application format, or converts outbound transactions from backend systems to EDI format
+
+

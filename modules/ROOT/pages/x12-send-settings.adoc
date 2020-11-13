@@ -29,7 +29,9 @@ Use the following settings to configure the transaction usage, the responsible s
 |Setting |Description |Default Value
 
 |Usage indicator (ISA15)
-a|Indicates if the X12 transaction sent is for testing, production or information only. Possible values include:
+a|Indicates if the X12 transaction sent is for testing, production or information only. 
+
+Possible values include:
 
 * I - Information
 * T - Test
