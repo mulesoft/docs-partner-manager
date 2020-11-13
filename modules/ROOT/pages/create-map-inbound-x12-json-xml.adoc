@@ -1,4 +1,4 @@
-= Create a Map For Inbound X12 to JSON/XML
+= Create a Map For Inbound X12 to JSON or XML
 
 Create a template project in Anypoint Studio to import a template to map inbound EDI X12 transactions to an application message format, such as JSON or XML, then test the map locally.
 
