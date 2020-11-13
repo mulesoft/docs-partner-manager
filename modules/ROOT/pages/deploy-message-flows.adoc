@@ -73,4 +73,4 @@ Orphaned applications are cleaned up to release any resources they were consumin
 == See Also
 
 * xref:configure-message-flows.adoc[Create and Configure an Inbound Message Flow]
-* xref:partner-manager-outbound-message-flow-config.adoc[Create and Configure an Outbound Message Flow]
+* xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow]
