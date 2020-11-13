@@ -26,7 +26,7 @@ Type of message transmission:
 ** *Both directions*
 ** *Sent to partners*
 ** *Received from partners*
-* *From Date*
+* *From Date* +
 Filter for transmissions that sent or received after this date. 
 * *To Date* +
 Filter for transmissions that are sent or received up to this date. 

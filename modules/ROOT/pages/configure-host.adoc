@@ -8,9 +8,8 @@ Use the host page in Partner Manager to:
 * Add digital xref:certificates.adoc[certificates] associated with your organization.
 * Create and manage source and target xref:create-endpoint.adoc[endpoints].
 * Create and manage source and target xref:partner-manager-create-message-type.adoc[message types].
-* Configure details associated with the xref:setup-payload-storage-api.adoc[Payload Storage API].
+* Configure details associated with the xref:setup-payload-storage-API.adoc[Payload Storage API].
  
-
 == Host Configuration Settings
 
 To configure the host, you need the following information about your organization:
