@@ -17,6 +17,6 @@ If you need to replace the identifier, record the values and qualifier type need
 . In the left navigation menu, select *Partners*.
 . From the list of partners, select the partner that has the identifier to delete. 
 . In the *Identifiers* section, hover over the identifier you want to delete and click the trash can icon that appears on right-hand side of the *Identifiers* row.
-. If you want to replace the identifier, click *New* and xref:partner-manager-identifeiers.adoc[follow the steps to create an identifier]. 
+. If you want to replace the identifier, click *New* and xref:partner-manager-identifiers.adoc[follow the steps to create an identifier]. 
 
 After successfully deleting an identifier, you can create a new identifier with the same name as the one you deleted.

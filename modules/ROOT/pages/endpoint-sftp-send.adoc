@@ -43,7 +43,7 @@ a|Path to the SFTP server EDI files:
 |Yes
 
 |Filename pattern
-|xref:file-name-patterns.adoc[File name pattern] as required by your trading partner or backend application
+|xref:file-name-pattern.adoc[File name pattern] as required by your trading partner or backend application
 |
 |===
 
