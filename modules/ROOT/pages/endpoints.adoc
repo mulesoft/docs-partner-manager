@@ -1,90 +1,40 @@
-= Endpoint Types and Protocols
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= Endpoints
 
-There are three types of endpoints within AnyPoint Partner Manager:
+Endpoints define the transport protocol configurations necessary to receive or send messages with external trading partners or internal backend applications.
 
-* Receive endpoints. +
-Your organization needs to provide endpoints to receive transmissions from your trading partners. +
+Partner Manager uses endpoints to:
+
+* Receive transmissions from partners 
+* Receive application messages from the backend system
+* Specify the final destination of the message 
+* Define transport protocols
+* Specify where to send acknowledgments
+
+== Endpoint Ownership
+
+Partner Manager enables you to assign the host or a particular partner as the owner of endpoints that are partner-facing (receive or send) to control the usage of endpoints within inbound and outbound message flows. 
+
+Endpoints owned by the host are available for selection in message flows for any trading partners. Endpoints owned by a specific trading partner are available for selection in message flows created for that partner only.  
+
+== Types of Endpoints
+
+AnyPoint Partner Manager provides the following types of endpoints:
+
+* Receive endpoints +
+Receive transmissions from your trading partners. +
 These endpoints are resources your organization exposes to your trading partners.
-
-* Target endpoints. +
+* Send endpoints +
+Send transmissions to your trading partners
+* Target endpoints +
 Your organization also has internal endpoints to which it routes messages from the trading partners. The messages routed to the target endpoint are typically validated and transformed before they are routed to the configured target endpoint.
 
-* Acknowledgement endpoints +
-Your partners provide you with their own endpoint configurations to which your organization can send acknowledgments, such as an X12 997 or X12 999. Acknowledgments are typically sent back to trading partners and correspond to one or more B2B messages you receive from your trading partners.
 
-Refer to the following to configure your endpoint. Your configuration varies based on the protocol you are using.
+== See Also
 
-== Endpoint Name, Protocol and Type
+xref:create-endpoint.adoc[Create and Configure Endpoints]
 
-[%header,cols="3s,7a"]
-|===
-|Setting |Description
 
-|Name
 
-|Name for this endpoint
 
-Required: Yes +
 
-Default: Automatically populates based on the following values: `Protocol` or `Type`
 
-|Protocol
-
-|Protocol for this endpoint
-
-Required: No +
-
-Valid values: +
-
-`AS2` +
-
-`SFTP` +
-
-`HTTPS` +
-
-Default: None +
-
-|Type
-
-|Type of endpoint
-
-Required: No +
-
-Default: None +
-
-// |Default for partner_ checkbox
-
-// |Select this box if you want the choices you make for this endpoint to apply to all endpoints for this partner.
-
-|===
-
-== Protocol/Type-Specific Endpoint Settings
-
-Select the section that corresponds to the Protocol-Type of the Endpoint for which you are entering settings.
-
-* xref:endpoint-as2-receive.adoc[AS2 Endpoint Settings]
-
-* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
-
-* xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
-
-// ====
-
-== Delete Endpoints
-
-From either the Partner or Host page, you can delete any endpoints that are not used in message flow configurations:
-
-. From within your Anypoint Partner Manager Sandbox or Production environment, select Partner or <host partner name> from the upper left.
-
-. Search for the endpoint you want to delete by name, protocol, URL, or description.
-+
-You can search from within _Endpoints: Receive from partners_, _Endpoints: Targets at <partner name>_ for the Host, or _Endpoints: Send to <partner name>_ for your partners.
-
-. If you can’t remember what to search for, scan the list for any endpoints that don’t have a message flow associated with them.
-+
-These are indicated by a 0 in the message flow column.
-+
-. Hover over the endpoint name until you see the garbage can icon, click it and then click *Delete*.

@@ -1,158 +1,95 @@
-= Configure Trading Partners
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= Create, Configure, and Update Trading Partners
 
-The only information you need to create a new partner is its name and a single identifier related to that partner.
-You can add other information after creating a partner.
-Once created, each partner has its own page located in the _Partners_ section in the left navigation menu.
+The Partner Manager *Partners* page lists all the configured trading partner profiles. 
 
-From the Partner detail page you can:
+On the *Partners* page, you can:
 
-* Add information about your partner along with contact details.
+* <<create-partner,Create and configure new trading partners>>
+* <<view-partner-details,View the details>> of a partner
+* xref:partner-manager-identifiers.adoc[Add the EDI and AS2 identifiers] used by your trading partner.
+* Add digital certificates associated with your trading partner.
+* xref:create-endpoint.adoc[Create] and manage source and target endpoints owned by the trading partner.
+* Manage EDI validation settings for xref:x12-receive-read-settings.adoc[inbound] and xref:x12-send-settings.adoc[outbound] transactions.
 
-* Add identifiers to uniquely identify it from other partners.
+== Required Information
 
-* Add certificates owned by the partner.
+To create a new partner, you need the following information:
 
-* Configure validation, acknowledgment, control number, and character set settings applicable to all message flows for this trading partner.
+* The partner's name (usually the name of the company).
+* Partner identifiers (such as the AS2 ID, X12-ISA, X12 GS, and so on).
 
+[[create-partner]]
 == Create a Partner
 
 . From within your Anypoint Partner Manager environment, select *Partners* from the left navigation.
-
 . Click *New partner*.
+. In *Name*, enter a name that easily identifies your partner.
+. Select an identifier from the *Type* list: 
+* *AS2 Identity*
+* *Reference ID*
+* *X12-GS*
+* *X12-ISA*
+. In *Identifier Value*, enter a value to uniquely identify your partner. 
+. If you selected *X12-ISA* as the *Type*, you must also select a *Qualifier* from the list. 
+. Click *Create partner* to create your trading partner.
 
-. Add a name that easily identifies your partner.
+You can now xref:configure-message-flows.adoc[set up message flows] for this trading partner or continue to <<update-partner,update this partner>>.
 
-. Select an identifier from the *Type* list. This uniquely identifies your partner.
-For example, depending on your setup, select one of the following: AS2 ID, X12-ISA, X12 GS, or the DUNS number.
-
-. Provide a value for your identifier (and qualifier for X12-ISA) and click *Create partner* to create your trading partner.
-+
-See xref:x12-identity-settings.adoc[Identifiers] for more information about X12 Identity settings.
-+
-. If you want to add an endpoint now, click *New* under _Endpoints: Send to <partner name>_.
-
-. Select the Protocol-Type of the Endpoint for which you are entering settings.
-
-. Set up your endpoint based on the protocol type you selected.
-
-For more information about your protocol type refer to:
-
-* xref:endpoint-as2-receive.adoc[AS2 Endpoint Settings]
-
-* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
-
-* xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
-
-You can now setup message flows related to this trading partner by using xref:configure-message-flows.adoc[Create a Message Flow] or continue to update this partner.
-
+[[update-partner]]
 == Update a Partner's Profile
 
-You can add the following information for each trading partner from the *Partners* selection in the left navigation:
+You can add and update the following information for each trading partner from the *Partners* tab in the left navigation:
 
-. Under the *About* section, click *Edit*. Add or update the following information:
-
-* Description - Provide a brief description of your partner's business, what kind of trading relationship your organization has with them, and so on.
-
-* Website - enter a valid URL to your trading partner's website.
-
-* Logo - upload a logo associated to your trading partner. Supported logo file formats are: `.jpg`, `.jpeg`, `.png`, `.gif`, or `.svg` files. Maximum file size is 30KB.
-
-* Corporate address - provide a complete address that includes the Street, City, State, Postal code, and Country.
-
-* Add contacts - available contact types are: Business, Technical or Other. You can add up to three contacts associated with a trading partner's profile. You can also delete contacts from here.
+. In Partner Manager, select *Partners* in the left navigation menu. 
+. Click the partner for whom to update the profile.
+. Under the *About* section, click *Edit* to add or update the following information:
+* *Description* +
+Provide a brief description of your partner's business, what kind of trading relationship your organization has with them, and so on.
+* *Website* +
+Enter a valid URL to your trading partner's website.
+* *Logo* +
+Upload a logo for your trading partner. Supported logo file formats are: `.jpg`, `.jpeg`, `.png`, `.gif`, and `.svg`. +
+The maximum file size is 30KB.
+* *Corporate address* +
+Provide a complete address that includes the Street, City, State, Postal code, and Country.
+* *Add contacts* +
+You can add up to three contacts associated with a trading partner's profile. You can also delete contacts from here. 
 +
-. Click *Save*. A message confirms that the partner's profile is successfully updated.
-
-. If you want to add more identifiers for your trading partner click *New* within the *Identifiers* section.
-
-* Select an identifier type from the *Type* drop-down menu. This uniquely identifies your partner.
-For example, depending on your setup, select one of the following: AS2 ID, X12-ISA, X12 GS, or the DUNS number.
-
-* Provide a value for your identifier (and qualifier for X12-ISA) and click *Create identifier* to save your changes.
-See xref:x12-identity-settings.adoc[Identifiers] for more information about X12 settings.
-
-. Click *New* within the *Certificates* section to upload any needed digital certificates. This is your partner's digital certificate (such as an X.509 certificate in PKCS12 file format for the AS2 transport protocol).
-
+Available contact types are: 
 +
-NOTE: If a single certificate is uploaded, Partner Manager prevents you from deleting your only certificate.
-+
+** Business
+** Technical 
+** Other 
+. Click *Save*. +
+A message confirms that the partner's profile is successfully updated.
 
-* Click *Choose file* to select and upload the certificate.
+[[view-partner-details]]
+== View a Partner's Details
 
-* Click *Upload certificate* (typically a `<certificate name>.pem` file provided by your trading partner) to upload the chosen digital certificate file.
-+
-View information about an uploaded certificate by clicking its link. See xref:Certificates.adoc[Certificates] for more information about configuring certificates in Partner Manager.
-+
-. Configure X12 validation settings that can be used for all message flows that you are configuring with your trading partners. These include:
+After you create a new partner, you can view and update details for the partner:
 
-* Validations
-* Acknowledgment
-* Control numbers
-* Character sets
+. In Partner Manager, select *Partners* in the left navigation menu. 
+. Click the partner to view its details and make updates. +
+From the partner's detail page you can:
+* Add information about your partner along with contact details.
+* Add partner endpoints (where you send and receive messages to and from your partners, including acknowledgment endpoints).
+* Specify EDI message format preferences for your partner (such as X12), and any associated validations such as the need for acknowledgments (like TA1, 997, 999, and so on).
+* Specify the message types to use. +
+For example, a purchase order in X12 is an 850 message. You also need to know the X12 version to use in your transactions (such as 004010, 005010, and so on).
+* Add your partner's digital certificates (such as an X.509 certificate).
 
-== Delete a Partner
-
-If you are no longer trading with a partner, you can remove the partner by deleting it. Consider that deleting a partner deletes all assets associated with that partner as well as configuration records for it. For example:
-
-** Undeployment of all deployed messages
-
-** Deletion of all message flows, identifiers, endpoints, and certificates associated with that partner
-
-** Removes all listed assets
-
-** Removes the partner from the partner list
-
-Deleting a trading partner deletes the information associated with that partner, such as identifiers, certificates, endpoints, and message flows. Activities for the partner that occurred before the partner was deleted are not deleted,
-although the Activities page shows that the partner has since been deleted.
-After successfully deleting a partner, you can create a new partner with the same name as the deleted partner.
-
-Ensure that your on-premise Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager called: `B2BserverGroup` are active and running by contacting your B2B System Administrator or checking the status of the server in Anypoint Runtime Manager (see https://docs.mulesoft.com/runtime-manager/servers-settings[Server Settings]).
-
-NOTE: You cannot delete a partner if the server is not running.
-
-. From within your Anypoint Partner Manager Sandbox or Production environment, select Partner from the upper left.
-
-. Select a partner and click *Delete* in the upper-right and confirm your deletion in the dialog that follows.
-
-. If you need to create a new partner, add it now.
-
-Refer to the options for each at xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner]
-
-== Delete Identifiers
-
-You might want to delete an identifier when it is no longer needed.
-Consider that deleting an existing host or partner identifier impacts the identification and routing of B2B messages to the associated partner.
-Ask yourself the following when deleting an identifier: Why do you want to delete it? Do you need to replace it with another identifier?
-Remember that there must always be at least one identifier per message flow before you can delete it.
-
-After successfully deleting an identifier, you can create a new identifier with the same value as the one you deleted.
-
-You can delete identifiers such as X12 ISA, X12 GS, AS2, and DUNS. You cannot delete the last identifier, as there must be at least one in the list.
-
-. If you need to replace the identifier, record the values and qualifier type needed.
-
-. Choose the partner name and click *<Partner name>* to expand it.
-
-. Hover over the identifier you want to delete and click the trash can icon that appears towards the right-hand side of the identifiers row.
-
-. If you need a replacement, add it now by clicking *New*.
-
-== Delete Endpoints
-
-You can delete any endpoints that are not used in a message flow configuration:
-
-. From within your Anypoint Partner Manager Sandbox or Production environment, select <host partner name> from the upper left.
-
-. From _Endpoints: Send to <partner name>_, search for the endpoint you want to delete by name, protocol, URL, or description.
-+
-If you can’t remember what to search for, scan the list for any endpoints that don’t have a message flow associated with them. These are indicated by a 0 in the message flow column.
-+
-. Hover over the endpoint name until you see the garbage can icon, click the icon, and then click *Delete*.
-
+You can also configure validation, acknowledgment, control number, and character set settings applicable to all message flows for the trading partner. 
 
 == See Also
 
+* xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
+* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:endpoint-as2-receive.adoc[AS2 Receive Endpoint Settings]
+* xref:endpoint-as2-send.adoc[AS2 Send Endpoint Settings]
+* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
+* xref:endpoint-sftp-send-adoc[SFTP Send Endpoint Settings]
+* xref:endpoint-https-send.adoc[HTTP and HTTPS Send Settings]
+* xref:endpoint-https-receive.adoc[HTTP and HTTPS Receive Settings]
+* xref:x12-receive-read-settings.adoc[Configure X12 Receive (Inbound) Settings]
+* xref:x12-send-settings.adoc[Configure X12 Send (Outbound) Settings]
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]

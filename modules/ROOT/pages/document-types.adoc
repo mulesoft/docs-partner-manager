@@ -1,64 +1,18 @@
-= X12 and JSON Message Types
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= Message Types
 
-You configure a message type for a partner by configuring settings specific to that EDI document type standard.
-Refer to these when configuring either JSON or X12. Refer to  https://docs.mulesoft.com/connectors/x12-edi/x12-edi-supported-doc-types[X12 EDI supported Doc Types] for more information.
+Message types define the schematic structure of the transactions that are received or sent by Partner Manager. 
 
-[%header,cols="3s,7a"]
-|===
-|Setting |Description
+In Partner Manager, a message type can be used in one of the following contexts:
 
-|Standard
+* Receive from partners
+* Target at host
+* Source at host
+* Send to partners
 
-|Select a value from the drop-down menu.
+Message types are always managed within the host profile page, regardless of whether they are used specifically for a single partner or across multiple trading partners. Message types are reusable across message flows for different trading partners.
 
-Required:
-Yes
+== See Also
 
-Valid values:
-`X12`
-`JSON`
+* xref:partner-manager-create-message-type.adoc[Create and Configure Message Types]
 
-Default:
-None
 
-|Version - X12 only
-
-|Select a version from the drop-down menu: `3010`, `3020`, `3030`, `3040`, `3050`, `3060`, `3070`, `4010`, `4020`, `4030`, `4040`, `4050`, `4060`, `5010`, `5020`, `5030`, `5040`, `5050`, or `6020`.
-
-Required:
-Yes
-
-|Message Types - X12 only
-
-|Select a value from the dropdown list, or enter a different value.
-
-Required:
-Yes
-
-|Name
-
-|Name for this document type
-
-Required:
-Yes
-
-Default:
-Auto-populates based on the following values:
-
-* Company name
-* Standard
-* Version
-
-|Schema
-
-|Clicking *Use Standard* accepts the standard you named and selected, or clicking *Custom* allows you to choose a file to download.
-You must use a custom schema for JSON. Supported Schema types are from the following formats:
-.schema, .JSON, .ESL (for X12)
-
-Required:
-*For JSON Only*
-
-|===

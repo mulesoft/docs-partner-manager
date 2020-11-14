@@ -1,0 +1,53 @@
+= SFTP Send Endpoint
+
+Use SFTP endpoints to:
+
+* Send to partners +
+Send outbound EDI files to your trading partners in outbound message flows.
+* Target at host +
+Send application messages (JSON or XML) to your backend applications in inbound message flows.
+
+[%header%autowidth.spread]
+|===
+|Name |Description | Required
+|Endpoint Name 
+| Name used to refer to the endpoint. The name is auto-populated, but you can overwrite it based on your organization’s naming conventions for consistency.
+| Yes
+
+|Description
+| Description of the endpoint.
+| No
+
+|Host
+| The SFTP server host, such as `sftp.mulesoft.com`, `localhost`, or `192.168.0.1`. The host must be accessible from your Mule environment.
+|Yes
+
+|Port
+|The port number of the SFTP server to connect.
+|Yes
+
+|Username
+|Username for the SFTP Server.
+|Yes
+
+|Password
+|Password for the SFTP Server.
+|Yes
+
+|Target Path
+a|Path to the SFTP server EDI files:
+
+* That are generated from outbound message flows
+* Need to be placed for your trading partners
+* Where your backend applications require you to place translated JSON and XML files generated from inbound message flows
+|Yes
+
+|Filename pattern
+|xref:file-name-pattern.adoc[File name pattern] as required by your trading partner or backend application
+|
+|===
+
+== See Also
+
+* xref:endpoints.adoc[Endpoints]
+* xref:create-endpoint.adoc[Create and Configure Endpoints]

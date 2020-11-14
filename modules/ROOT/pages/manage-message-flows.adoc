@@ -1,120 +1,103 @@
 = Manage Message Flows
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
-After your message flow is running and you are using it with your partners, you should not have to do much to it, except in certain cases:
+After your message flow is running and you are using it with your partners, it doesn't require a lot of maintenance, but you can manage a message flow anytime, for example:
 
-* You are no longer trading with a particular partner and need to delete the message flow you created for them.
-
-* You completed the testing for a deployed message flow in a pre-production environment, and now want to reclaim the previously allocated Mule runtime resources.
-
+* If you are no longer trading with a particular partner and need to delete the message flow you created for them.
+* You completed the testing for a deployed message flow in a pre-production environment, and now want to reclaim the previously allocated Mule runtime engine resources.
 * You want to change a message flow by adding identifiers, selecting different endpoints, or importing a different DataWeave map.
 
-After a message flow is deployed, you can edit it, or undeploy and delete it.
 
-== Edit Message Flows
+[[edit-message-flows]]
+== Edit Inbound Message Flows
 
-After you establish a successful message flow with your partner, you can edit the flow to add identifiers, endpoints and message types, or add different DataWeave maps.
+After you establish a successful inbound message flow with your partner, you can edit the flow to add identifiers, endpoints and message types, or add different DataWeave maps.
+
 Before you make changes, carefully consider the impact on your existing message flow.
 
-You can also undeploy or delete message flows entirely if your partner relationships change or you want to reclaim Mule resources used for testing.
-
-. From within your Anypoint Partner Manager Sandbox or Production environment click *Message Flows* in the upper left, select a *<Message flow name>* and click it to expand it.
-
-. If you want to add an identifier to the message flow, click *See All* and then *New*.
-
-. If you want to change a receiving endpoint, click *Select* from the *Receiving endpoint* section, click *New*, select your AS2 or SFTP protocol type.
-
-. If you want to create a new endpoint (depending on the protocol) refer to one of the following:
-+
-* xref:endpoint-as2-receive.adoc[AS2 Endpoint Settings]
-
-* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
-+
-. If you want to replace your existing DataWeave map, click *Import* from the Map section to choose a different DataWeave map and click *Upload mapping*.
-+
-. If you want to examine the map, you can download it by clicking its <name>.dwl link.
+. From the Anypoint Partner Manager menu on the left, select *Message Flows* in the upper left, select a *<Message flow name>* and click it to expand it.
+. To add an identifier to the message flow, click *See All* and then *New*.
+. To change a receiving endpoint, click *Select* from the *Receiving endpoint* section, click *New*, select your AS2 or SFTP protocol type.
+. To create a new endpoint, see xref:create-endpoint.adoc[Create and Configure Endpoints].
+. To replace your existing DataWeave map, click *Import* from the Map section to choose a different DataWeave map and click *Upload mapping*.
+. To view the map, you can download it by clicking the `<name>.dwl` link.
 +
 For more information about DataWeave map files, https://docs.mulesoft.com/mule-runtime/4.1/dataweave[DataWeave Language]
 +
-. If you want to add a message type, click *Select* under the Source message, select *New*, and select a standard type such as X12 or JSON:
-+
-* xref:document-types.adoc[X12 and JSON Message Types]
-+
-. If you want to set up a target endpoint, click *Select* from the _Target at <partner name>_, and depending on the protocol, refer to one of the following:
+. To add a message type, click *Select* under the Source message, select *New*, and select a standard type such as X12 or JSON.
+. To set up a target endpoint, click *Select* from the _Target at <partner name>_, and depending on the protocol, refer to one of the following:
 +
 * xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
 
 * xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
 +
 . Verify that any sections of the flow that you updated show a green checkmark next to them, and click *Deploy* to deploy the configurations to Mule.
-
 +
-NOTE: It may take five minutes or so for your configuration changes to sync with Mule runtime.
+[NOTE]
+It can take five minutes or so for your configuration changes to sync with Mule.
 +
+. To test your edited message flow. See xref:deploy-message-flows.adoc[Deploy and Test Message Flows].
 
-. To test your edited message flow. See xref:configure-message-flows.adoc[Create and Configure a Message Flow].
+After you confirm the successful deployment of your message flow, you can track its processed messages from the *Activity* page.
 
-After you confirm the successful deployment of your message flow, you can track its processed messages from the Activity page.
+== Manage Outbound Message Flows
 
-== Undeploy Message Flows
+After you establish a successful outbound message flow with your partner, you can edit the flow to add identifiers, endpoints and message types, or add different DataWeave maps.
 
-Undeploying a message flow is a prerequisite to deleting it.
-Undeployment can stop future messages from being processed, or enable you to recover resources being consumed by a message flow that you no longer need:
-for example, if your relationship with your partner changes.
+Before you make changes, carefully consider the impact on your existing message flow.
 
-You can undeploy your message flow from either a sandbox or a production environment.
+. From the Anypoint Partner Manager menu on the left, select *Message Flows* in the upper left, select a *<Message flow name>* and click it to expand it.
+. To change the outbound endpoint, click *Select* from the *Endpoint: Source at <host>*, select the endpoint, and click *Save*.
+. To create a new outbound endpoint, see xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow].
+. To update your reference IDs, expand *Reference IDs* and select the new reference IDs from the drop-down menus.
+. To replace your existing DataWeave map, click *Import* from the *Map* section to choose a different DataWeave map and click *Upload mapping*.
+. To view the map, you can download it by clicking the `<name>.dwl` link.
++
+For more information about DataWeave map files, https://docs.mulesoft.com/mule-runtime/4.1/dataweave[DataWeave Language]
++
+. To update your message type, click *Select* under the Source message and select a message type from the drop-down list. +
+To create a new message type for the outbound message flow, click *New*. +
+See xref:partner-manager-create-message-type.adoc[Create and Configure Message Types].
+. Verify that any sections of the flow that you updated show a green checkmark next to them, and click *Deploy* to deploy the configurations to Mule.
++
+[NOTE]
+It can take five minutes or so for your configuration changes to sync with Mule.
++
+. To test your edited message flow. See xref:deploy-message-flows.adoc[Deploy and Test Message Flows].
 
-Before you undeploy a message flow, you must:
+After you confirm the successful deployment of your message flow, you can track its processed messages from the *Activity* page.
 
-Ensure that your on-premise Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager called: `B2BserverGroup` are active and running by contacting your B2B System Administrator or checking the status of the server in Anypoint Runtime Manager (see https://docs.mulesoft.com/runtime-manager/servers-settings[Server Settings]).
 
-Understand that the process takes about five minutes, during which actions such as `Deploy` and `Delete` are unavailable.
-
-IMPORTANT: During this time, do not log out of Anypoint Partner Manager or close your browser window.
-
-. From within your Anypoint Partner Manager Sandbox or Production environment, click _Message Flows_ in the upper left and select a message flow.
-
-. Click *Undeploy* in the upper right.
-
-Anypoint Partner Manager checks to see if any of the applications in your Mule runtime are orphaned as a result of the undeployment.
-These applications are cleaned up to release any resources they may be consuming.
-
+[[delete-message-flows]]
 == Delete Message Flows
 
-You might want to delete a message flow when it no longer serves its purpose: for example, if your relationship with your partner changes.
+You might want to delete a message flow when it no longer serves its purpose, for example, if your relationship with your partner changes.
 
-If you delete a message flow before it has been deployed, it does not affect the Mule runtime apps.
+You can delete your message flow from either a sandbox or a production environment.
 
-Undeploying a message flow is a prerequisite to deleting it. You can delete your message flow from either a sandbox or a production environment.
+If you delete a message flow before it is deployed, it does not affect the Mule apps.
 
-Before you delete a message flow, you must:
+[NOTE]
+For on
+* You must xref:deploy-message-flows#UndeployMessageFlows[undeploy a message flow] before you can delete it. 
+* Ensure that your on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager called `B2BserverGroup` are active and running.  +
+Contact your B2B System Administrator to ensure that your on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager called `B2BserverGroup` are active and running. 
 
-Ensure that your on-premise Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager called: `B2BserverGroup` are active and running by contacting your B2B System Administrator or checking the status of the server in Anypoint Runtime Manager (see https://docs.mulesoft.com/runtime-manager/servers-settings[Server Settings]).
+=== Steps
 
-Understand that the process takes about five minutes, during which actions such as `Deploy` and `Delete`  unavailable.
+After the undeployment is successful, delete the message flow:
 
+. In the Partner Manager left navigation menu, select *Message Flows*.
+. Select the message flow to delete from the list and click *Delete* in the upper right of the screen.
 
-IMPORTANT: During this time, do not log out of Anypoint Partner Manager or close your browser window.
+Any previous transmissions that were created as a result of a message being processed by the message flow you deleted have the following behavior:
 
-. From within your Anypoint Partner Manager Sandbox or Production environment, click _Message Flows_ in the upper left and select a message flow.
-
-. Click *Undeploy* in the upper right.
-+
-Anypoint Partner Manager checks to see if any of the applications on your Mule runtime are orphaned as a result of the undeployment.
-These applications are cleaned up to release any resources they may be consuming.
-+
-. After the undeployment is successful, delete the message flow by clicking  *Delete* in the upper right.
-
-Any previous transmissions that were created as a result of a message being processed via the now-deleted message flow have the following behavior:
-
-* They continue to stay in the transmission records within the Activity page, but the records indicate that the corresponding message flow used to process this transmission is now deleted.
-
+* The transmissions continue to stay in the transmission records within the *Activity* page, but the records indicate that the corresponding message flow used to process the transmission is now deleted.
 * These activities are converted into read-only mode, so no links to the message flow work.
+* Only links to the stored payloads (such as the original B2B message, any TA1 acknowledgments, the transformed payload, on so on) that were set up continue to work.
 
-* Only links that were set up to the stored payloads (such as the original B2B message, any TA1 acknowledgments, the transformed payload, on so on) continue to work.
 
 == See Also
 
+* xref:runtime-manager::servers-settings.adoc[Runtime Manager Server Settings]
+* xref:deploy-message-flows.adoc[Deploy and Undeploy Message Flows]
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]

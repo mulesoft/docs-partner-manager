@@ -1,38 +1,29 @@
 = Anypoint Partner Manager
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:keywords: b2b, edi, portal
 
-Anypoint Partner Manager allows Business-to-Business (B2B) message exchange using APIs and Electronic Data Interchange (EDI) formats.
+Anypoint Partner Manager enables you to perform bidirectional Business-to-Business (B2B) message exchanges using APIs and Electronic Data Interchange (EDI) formats, and to conduct business transactions such as buying and selling products with your partners. Transactions are typically transmitted over transports such as HTTPS and SFTP, and exchanges such as AS2. Partner Manager supports X12, JSON, and XML message formats. 
 
-== Overview
+Use Anypoint Partner Manager to:
 
-Enterprises use Anypoint Partner Manager to carry out business transactions such as purchasing goods from one another.
-They are typically transmitted over transports such as HTTPS and SFTP, and exchanges such as AS2. The business transactions can be transmitted via the use of message formats such as X12 and JSON.
+* Perform technical onboarding of your partners.
+* Set up, manage, and monitor business message flows between your systems and your trading partners' systems. +
+Track and report on business transactions to achieve greater operational efficiency in B2B transactions.
+* View meta information, validation errors, and all messages included with each transmission payload. +
+Transmission payloads can contain one or more business messages.
 
-Use Anypoint Partner Manager to set up, manage, and monitor the flow of business messages between you and your business trading partners. The ability to track and report on this drives greater operational efficiency while managing B2B transactions.
+Members of your organization can use Partner Manager to perform a variety of functions, including: 
 
-With Anypoint Partner Manager you can:
+* Designing and testing message flows
+* Managing the activity of the business transactions with your trading partners
+* Optimizing backend services and performance
 
-* Perform technical on-boarding of your partners.
+== Prerequisites for Using Partner Manager
 
-* Set up message flows to receive messages between your systems and your trading partners.
-A message flow is the path along which a message travels from its source, through a DataWeave transformation map, to its target.
+To use Partner Manager, you must be familiar with:
 
-* View meta information, validation errors, and all messages included with each transmission payload.
-A transmission is a single communication event during which a payload is transferred between two business entities.
-These payloads can contain one or more business messages.
+* EDI message formats 
+* How to create DataWeave maps to perform data transformations
 
-// * Set up message flows to receive and send messages between your systems and your partners.
-// * View and monitor how partner messages are being processed in the system in case of failure in order to take corrective action.
-
-Partner Manager can be used by different people in your organization.
-For example, primarily those that design and test message flows, those who manage activity of the business transactions with your trading partners, and those who optimize backend services and performance.
-
-To use Partner Manager you need to be familiar with EDI message formats, and how to create Dataweave transformations.
-
-To get started, have your Anypoint Platform administrator follow the Setup instructions.
+To get started, ask your Anypoint Platform administrator to follow the Setup instructions.
 
 == See Also
 

@@ -1,0 +1,58 @@
+= HTTP and HTTPS Receive Endpoint Settings
+
+Configure HTTP and HTTPS receive endpoints to receive application messages (JSON or XML format) from your backend applications in outbound message flows.
+
+[%header%autowidth.spread]
+|===
+|Name |Description |Required
+|Endpoint Name
+|Name used to refer to the endpoint. The name is auto populated, but you can overwrite it based on your organization’s naming conventions for consistency.
+|Yes
+
+|Description
+|Freeform description of the endpoint.
+|No
+
+|URL
+a|The HTTP or HTTPS address where you will receive outbound source messages from backend systems.
+
+When deploying to CloudHub, the URL is automatically generated when you deploy a message flow that uses this endpoint. You can view the URL by selecting the receiving endpoint from your deployed message flow.
+
+If you are deploying to on-premises Mule with a firewall and load balancer, work with your hosting or network security team to obtain the externally accessible DNS or name of the host where the Mule server is running, and replace `{runtime_host}` in the URL with the DNS name of your host. For example, if your DNS host name is `b2b.mycompany.com`, the receiver URL is `+https://b2b.mycompany.com/base-path/+`.
+|
+
+|Connection idle timeout
+|Connection idle timeout in milliseconds. The default is `3000`.
+|
+
+|Base path
+|Base path for the HTTP listener
+|
+
+|Authentication type
+a|Type of authentication method to use to protect the HTTP receive service.
+
+Possible values include:
+
+* None
+* API Key
+* Basic
+|Yes
+
+|Basic authentication
+a|When Basic authentication is selected, specify the user name and password to protect the HTTP listener.
+
+You need to note the password specified during the creation of the endpoint. After the configuration is saved, you cannot retrieve or modify the password.
+
+The backend applications that send JSON or XML payloads to the HTTP receive endpoint must pass the credentials in the HTTP request header.
+|
+
+|API Key
+a|When API Key is selected, specify the HTTP header name and API key to protect the HTTP listener.
+
+You need to note the API key specified during the creation of the endpoint. After the configuration is saved, you cannot retrieve or modify the API key.
+
+The backend applications that send JSON or XML payloads to the HTTP receive endpoint must pass the API key in the HTTP request with the configured HTTP header name.
+|
+|===
+
