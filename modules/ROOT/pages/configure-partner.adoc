@@ -7,7 +7,7 @@ On the *Partners* page, you can:
 * <<create-partner,Create and configure new trading partners>>
 * <<view-partner-details,View the details>> of a partner
 * xref:partner-manager-identifiers.adoc[Add the EDI and AS2 identifiers] used by your trading partner.
-* Add xref:certificates.adoc[digital certificates] associated with your trading partner.
+* Add digital certificates associated with your trading partner.
 * xref:create-endpoint.adoc[Create] and manage source and target endpoints owned by the trading partner.
 * Manage EDI validation settings for xref:x12-receive-read-settings.adoc[inbound] and xref:x12-send-settings.adoc[outbound] transactions.
 
