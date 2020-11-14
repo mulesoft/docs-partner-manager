@@ -1,4 +1,4 @@
-= X12 Settings - Receive from Partner
+= X12 Receive (Inbound) Settings 
 
 Partner Manager enables you to configure the X12 acknowledgments, validation rules, character encoding, and control numbers to apply when receiving an inbound X12 transmission.
 

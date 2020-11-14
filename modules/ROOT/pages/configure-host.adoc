@@ -5,29 +5,11 @@ Your Anypoint Platform organization or your business group is referred to as the
 Use the host page in Partner Manager to:
 
 * Add the EDI and AS2 xref:partner-manager-identifiers.adoc[identifiers] used by your organization.
-* Add digital digital certificates associated with your organization.
+* Add digital certificates associated with your organization.
 * Create and manage source and target xref:create-endpoint.adoc[endpoints].
 * Create and manage source and target xref:partner-manager-create-message-type.adoc[message types].
 * Configure details associated with the xref:setup-payload-storage-API.adoc[Payload Storage API].
  
-== Host Configuration Settings
-
-To configure the host, you need the following information about your organization:
-
-* Your organization's identifiers, such as the AS2 ID, X12-ISA, X12 GS, and so on
-* Endpoints +
-There are three types of endpoints you'll work with in AnyPoint Partner Manager, including:
-** Receive endpoints +
-Your organization needs to provide endpoints to receive transmissions from your trading partners. +
-These endpoints are resources your organization exposes to your trading partners.
-** Target endpoints +
-Your organization also has internal endpoints to which it routes messages from the trading partners. The messages routed to the target endpoint are typically validated and transformed before they are routed to the configured target endpoint.
-** Acknowledgment endpoints +
-Your partners provide you with their own endpoint configurations to which your organization can send acknowledgments, such as an X12 997 or X12 999. Acknowledgments are typically sent back to trading partners and correspond to one or more B2B messages you receive from your trading partners.
-* Your digital certificates, such as an X.509 certificate
-* Electronic Data Interchange (EDI) message type preferences for your organization
-* DataWeave transformation maps your organization uses for B2B transformations +
-Use Anypoint Studio to create the DataWeave transformation maps before you use Partner Manager.
 
 
 == See Also

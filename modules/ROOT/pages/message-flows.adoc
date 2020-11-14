@@ -9,11 +9,12 @@ image::partner-manager-message-flow.png[Partner Manager message flow configurati
 
 You can create message flows in one of the following contexts:
 
-* Inbound +
+* <<inbound-message-flow,Inbound>> +
 Receive messages from trading partners
-* Outbound +
+* <<outbound-message-flow,Outbound>> +
 Send messages to trading partners. An outbound message flow receives application messages from your backend systems, translates the message to EDI, and sends the EDI transmissions to your trading partner.
 
+[[inbound-message-flow]]
 == Inbound Message Flows
 
 Create an inbound message flow to receive EDI transactions from your trading partner, transform, and then send the translated application message to your backend systems.
@@ -39,6 +40,7 @@ The target endpoint is the final destination of a message flow and is defined by
 * HTTP
 * HTTPS
 
+[[outbound-message-flow]]
 == Outbound Message Flows
 
 You can create an outbound message flow to receive application messages from your backend systems, transform, and then send the translated EDI message to your trading partners.
