@@ -8,9 +8,9 @@ After your message flow is running and you are using it with your partners, it d
 
 
 [[edit-message-flows]]
-== Edit Message Flows
+== Edit Inbound Message Flows
 
-After you establish a successful message flow with your partner, you can edit the flow to add identifiers, endpoints and message types, or add different DataWeave maps.
+After you establish a successful inbound message flow with your partner, you can edit the flow to add identifiers, endpoints and message types, or add different DataWeave maps.
 
 Before you make changes, carefully consider the impact on your existing message flow.
 
@@ -38,6 +38,34 @@ It can take five minutes or so for your configuration changes to sync with Mule.
 . To test your edited message flow. See xref:deploy-message-flows.adoc[Deploy and Test Message Flows].
 
 After you confirm the successful deployment of your message flow, you can track its processed messages from the *Activity* page.
+
+== Manage Outbound Message Flows
+
+After you establish a successful outbound message flow with your partner, you can edit the flow to add identifiers, endpoints and message types, or add different DataWeave maps.
+
+Before you make changes, carefully consider the impact on your existing message flow.
+
+. From the Anypoint Partner Manager menu on the left, select *Message Flows* in the upper left, select a *<Message flow name>* and click it to expand it.
+. To change the outbound endpoint, click *Select* from the *Endpoint: Source at <host>*, select the endpoint, and click *Save*.
+. To create a new outbound endpoint, see xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow].
+. To update your reference IDs, expand *Reference IDs* and select the new reference IDs from the drop-down menus.
+. To replace your existing DataWeave map, click *Import* from the *Map* section to choose a different DataWeave map and click *Upload mapping*.
+. To view the map, you can download it by clicking the `<name>.dwl` link.
++
+For more information about DataWeave map files, https://docs.mulesoft.com/mule-runtime/4.1/dataweave[DataWeave Language]
++
+. To update your message type, click *Select* under the Source message and select a message type from the drop-down list. +
+To create a new message type for the outbound message flow, click *New*. +
+See xref:partner-manager-create-message-type.adoc[Create and Configure Message Types].
+. Verify that any sections of the flow that you updated show a green checkmark next to them, and click *Deploy* to deploy the configurations to Mule.
++
+[NOTE]
+It can take five minutes or so for your configuration changes to sync with Mule.
++
+. To test your edited message flow. See xref:deploy-message-flows.adoc[Deploy and Test Message Flows].
+
+After you confirm the successful deployment of your message flow, you can track its processed messages from the *Activity* page.
+
 
 [[delete-message-flows]]
 == Delete Message Flows

@@ -9,7 +9,7 @@ The following are the supported property placeholders and the dynamic value the 
 [%header%autowidth.spread]
 |===
 |Placeholder |Replaced with
-|${DocType} |EDI Document Type
+|$&#123;DocType&#125; |EDI Document Type
 |${GSSender} |Group ID of the Sender
 |${GSReceiver} |Group ID of the Receiver
 |${ISASender} |Interchange ID of the Sender
