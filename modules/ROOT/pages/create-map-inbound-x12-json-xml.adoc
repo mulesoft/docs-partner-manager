@@ -39,6 +39,9 @@ Set the target JSON or XML message type to transform inbound EDI X12 messages to
 . Copy the schema file of your target application message type into the `<Project-name>/src/main/resources` folder in the template project.
 . From the *Mule Palette* view, click the *Transform Message* component and drag it on to the Studio canvas.
 . Select the *Transform Message* component and in the output section, next to *Payload*, click *Define metadata*.
++
+image::partner-manager-inbound-map-1.png[Transform Message component add payload metadata]
++
 . Click *Add*.
 . In *Type id*, enter a new message type ID, for example `enterprise-inbound-purchase-order`.
 . Click *Create type*.

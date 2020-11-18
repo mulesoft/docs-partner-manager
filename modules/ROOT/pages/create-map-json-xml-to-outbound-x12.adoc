@@ -21,7 +21,7 @@ To set the source JSON or XML message type for the map:
 . From the *Mule Palette* view, click *Transform Message* and drag it on to the Studio canvas.
 . Select the *Transform Message* component and in the input section, next to *Payload*, click *Define metadata*:
 +
-image::xml-to-outbound-x12-payload-add-metadata.png[Transform Message component add payload metadata]
+image::partner-manager-outbound-map-1.png[Transform Message component add payload metadata]
 +
 . Click *Add*.
 . In *Type id*, enter a new message type ID, for example, `enterprise-outbound-purchase-order`.
