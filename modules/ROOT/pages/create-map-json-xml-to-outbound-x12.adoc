@@ -13,6 +13,8 @@ Create a template project in Anypoint Studio and import a DataWeave map template
 . Click `Template to map application messages to outbound EDI X12 transactions`.
 . Click *Open* to create a new project in your Studio workspace that is preloaded with the template. 
 
+You can also download the template to map inbound EDI X12 transactions to the application format https://anypoint.mulesoft.com/exchange/org.mule.examples/template-b2b-edi-outbound-x12-map[from Exchange].
+
 == Set the Source Message Type
 
 To set the source JSON or XML message type for the map:
