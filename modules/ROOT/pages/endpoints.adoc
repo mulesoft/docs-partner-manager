@@ -4,17 +4,17 @@ Endpoints define the transport protocol configurations necessary to receive or s
 
 Partner Manager uses endpoints to:
 
-* Receive transmissions from partners 
+* Receive transmissions from partners
 * Receive application messages from the backend system
-* Specify the final destination of the message 
+* Specify the final destination of the message
 * Define transport protocols
 * Specify where to send acknowledgments
 
 == Endpoint Ownership
 
-Partner Manager enables you to assign the host or a particular partner as the owner of endpoints that are partner-facing (receive or send) to control the usage of endpoints within inbound and outbound message flows. 
+Partner Manager enables you to assign the host or a particular partner as the owner of endpoints that are partner-facing (receive or send) to control the usage of endpoints within inbound and outbound message flows.
 
-Endpoints owned by the host are available for selection in message flows for any trading partners. Endpoints owned by a specific trading partner are available for selection in message flows created for that partner only.  
+Endpoints owned by the host are available for selection in message flows for any trading partners. Endpoints owned by a specific trading partner are available for selection in message flows created for that partner only.
 
 == Types of Endpoints
 
@@ -31,10 +31,5 @@ Your organization also has internal endpoints to which it routes messages from t
 
 == See Also
 
-xref:create-endpoint.adoc[Create and Configure Endpoints]
-
-
-
-
-
-
+* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:delete-endpoints.adoc[Delete Endpoints]
