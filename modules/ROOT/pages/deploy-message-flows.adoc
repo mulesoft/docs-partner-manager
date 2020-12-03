@@ -57,10 +57,7 @@ During the undeployment process, do not log out of Anypoint Partner Manager or c
 
 === Prerequisites
 
-Before you undeploy a message flow, you must:
-
-Ensure that your on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager called `B2BserverGroup` are active and running.  +
-Contact your B2B System Administrator to ensure that your on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager called `B2BserverGroup` are active and running. 
+Before you undeploy a message flow, you must ensure that your on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager called `B2BserverGroup` are active and running.  
 
 === Steps
 

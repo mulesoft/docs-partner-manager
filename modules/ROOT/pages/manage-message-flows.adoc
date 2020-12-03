@@ -77,10 +77,7 @@ You can delete your message flow from either a sandbox or a production environme
 If you delete a message flow before it is deployed, it does not affect the Mule apps.
 
 [NOTE]
-For on
-* You must xref:deploy-message-flows#UndeployMessageFlows[undeploy a message flow] before you can delete it. 
-* Ensure that your on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager called `B2BserverGroup` are active and running.  +
-Contact your B2B System Administrator to ensure that your on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager called `B2BserverGroup` are active and running. 
+For on-premises installations, you must xref:deploy-message-flows#undeploy-message-flows[undeploy a message flow] before you can delete it. 
 
 === Steps
 
