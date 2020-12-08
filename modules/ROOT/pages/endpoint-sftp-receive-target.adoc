@@ -7,12 +7,13 @@ Receive inbound EDI files from your trading partners used in inbound message flo
 * Source at host +
 Receive application messages (in JSON or XML format) from your backend applications used in outbound message flows.
 
+You can create the STFP identifiers for your organization and for your trading partners in the respective xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner] profile pages.
 
 [%header%autowidth.spread]
 |===
 |Name |Description | Required
 | Endpoint Name
-| The name used to easily identify the purpose of this endpoint. The `Endpoint Name` field is automatically generated, but can be modified manually.
+| The name used to identify the endpoint. The value in the `Endpoint Name` field is generated automatically, but can be modified manually.
 | Yes
 
 | Owner
