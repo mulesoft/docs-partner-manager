@@ -15,7 +15,7 @@ Active is shown with a green icon or Inactive is shown with a red icon. +
 * *Start Date* +
 Date from when the certificate is valid
 * *Expires* +
-Date after which the certificate is no longer valid 
+Date after which the certificate is no longer valid
 * *Endpoints* +
 Number of endpoints where the certificate is used
 * *Message Flows* +
@@ -26,21 +26,21 @@ In Partner Manager, you can:
 * Use a CA-signed certificate. +
 You do not need to upload an additional certificate because this endpoint already uses a CA-signed certificate. +
 * Upload your own, self-signed certificate. +
-You can upload a new certificate (in `<certifcate name>.PEM` format), or view all the certificates available for use with this endpoint setup. 
-* Enable an insecure connection for local testing that doesn’t perform certificate validation by selecting *Allow insecure connection*. 
+You can upload a new certificate (in `<certifcate name>.PEM` format), or view all the certificates available for use with this endpoint setup.
+* Enable an insecure connection for local testing that doesn’t perform certificate validation by selecting *Allow insecure connection*.
 
 == Adding PEM Certificates
 
 You can add certificates from the Host or Partner page.
 
 . In Partner Manager's left navigation, select *<host name>* or *Partners*.
-. In the *Certificates* section, click *New*. 
-. Click *Choose file* to upload a PEM certificate. 
+. In the *Certificates* section, click *New*.
+. Click *Choose file* to upload a PEM certificate.
 . Click *Upload Certificate*.
 
 == Deleting Certificates
 
-You can delete certificates that are not deployed or associated with endpoints. 
+You can delete certificates that are not deployed or associated with endpoints.
 
 You cannot delete a certificate if it is the only certificate that is uploaded.
 
@@ -54,5 +54,3 @@ To delete a certificate:
 
 * xref:configure-host.adoc[Configure and Manage a Host Profile]
 * xref:configure-partner.adoc[Create, Configure, and Update Trading Partners]
-
-

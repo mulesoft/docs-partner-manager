@@ -1,6 +1,8 @@
 = Create, Configure, and Update Trading Partners
 
-The Partner Manager *Partners* page lists all the configured trading partner profiles. 
+The Partner Manager *Partners* page lists all the configured trading partner profiles.
+
+Before you create your first trading partner, you must configure your xref:setup-payload-storage.adoc[payload storage API].
 
 On the *Partners* page, you can:
 
@@ -24,13 +26,13 @@ To create a new partner, you need the following information:
 . From within your Anypoint Partner Manager environment, select *Partners* from the left navigation.
 . Click *New partner*.
 . In *Name*, enter a name that easily identifies your partner.
-. Select an identifier from the *Type* list: 
+. Select an identifier from the *Type* list:
 * *AS2 Identity*
 * *Reference ID*
 * *X12-GS*
 * *X12-ISA*
-. In *Identifier Value*, enter a value to uniquely identify your partner. 
-. If you selected *X12-ISA* as the *Type*, you must also select a *Qualifier* from the list. 
+. In *Identifier Value*, enter a value to uniquely identify your partner.
+. If you selected *X12-ISA* as the *Type*, you must also select a *Qualifier* from the list.
 . Click *Create partner* to create your trading partner.
 
 You can now xref:configure-message-flows.adoc[set up message flows] for this trading partner or continue to <<update-partner,update this partner>>.
@@ -40,7 +42,7 @@ You can now xref:configure-message-flows.adoc[set up message flows] for this tra
 
 You can add and update the following information for each trading partner from the *Partners* tab in the left navigation:
 
-. In Partner Manager, select *Partners* in the left navigation menu. 
+. In Partner Manager, select *Partners* in the left navigation menu.
 . Click the partner for whom to update the profile.
 . Under the *About* section, click *Edit* to add or update the following information:
 * *Description* +
@@ -53,13 +55,13 @@ The maximum file size is 30KB.
 * *Corporate address* +
 Provide a complete address that includes the Street, City, State, Postal code, and Country.
 * *Add contacts* +
-You can add up to three contacts associated with a trading partner's profile. You can also delete contacts from here. 
+You can add up to three contacts associated with a trading partner's profile. You can also delete contacts from here.
 +
-Available contact types are: 
+Available contact types are:
 +
 ** Business
-** Technical 
-** Other 
+** Technical
+** Other
 . Click *Save*. +
 A message confirms that the partner's profile is successfully updated.
 
@@ -68,7 +70,7 @@ A message confirms that the partner's profile is successfully updated.
 
 After you create a new partner, you can view and update details for the partner:
 
-. In Partner Manager, select *Partners* in the left navigation menu. 
+. In Partner Manager, select *Partners* in the left navigation menu.
 . Click the partner to view its details and make updates. +
 From the partner's detail page you can:
 * Add information about your partner along with contact details.
@@ -78,7 +80,7 @@ From the partner's detail page you can:
 For example, a purchase order in X12 is an 850 message. You also need to know the X12 version to use in your transactions (such as 004010, 005010, and so on).
 * Add your partner's digital certificates (such as an X.509 certificate).
 
-You can also configure validation, acknowledgment, control number, and character set settings applicable to all message flows for the trading partner. 
+You can also configure validation, acknowledgment, control number, and character set settings applicable to all message flows for the trading partner.
 
 == See Also
 
