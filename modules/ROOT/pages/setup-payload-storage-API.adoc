@@ -16,9 +16,9 @@ Follow these steps to set up the payload storage API:
 +
 * https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-service-s3[Partner Manager Content Storage API - S3 Template] (sample implementation template)
 +
-. Implement the API to connect with your choice of storage location (for example, a database, Amazon S3, or File System).
+. xref:general::api-led-develop.adoc[Implement the API] to connect with your choice of storage location (for example, a database, Amazon S3, or File System).
 
-. Deploy the API on a runtime that can access the storage solution.
+. xref:runtime-manager::deployment-strategies.adoc[Deploy the API] on a runtime that can access the storage solution.
 
 . Make a note of the API URL and configuration values:
 * Host, port, and path connection
@@ -34,15 +34,15 @@ Follow these steps to set up the payload storage API:
 You’ll need this information when you associate Anypoint Partner Manager with your payload storage API.
 Your payload storage API must be accessible over the internet via HTTPS. Ensure that the appropriate authentication mechanisms are implemented to enable access over HTTPS.
 
-== Configure the Payload Storage API
+== Add the Payload Storage API
 
 . In Anypoint Platform, open Anypoint Partner Manager.
-. In the navigation menu on the left, select your organization’s profile (host) page.
+. In the navigation menu on the left, select your organization’s host page.
 . In the *Payload storage* section of the page, click *Edit* to add the path to your payload storage.
 . Enter the following values:
-* *Endpoint name*: Name for the payload storage API
-* *Description*: Optional description for your payload storage
-* *URL*: Path to your payload storage
+* *Endpoint name*: The name of the payload storage API
+* *Description*: The optional description for your payload storage
+* *URL*: The path to your payload storage
 . Optionally, if you want to view (or allow your users to view) the raw payloads of the files you receive or send, select *Allow users to download payloads*.
 . Click *Save*.
 
