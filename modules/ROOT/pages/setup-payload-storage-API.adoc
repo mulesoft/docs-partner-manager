@@ -16,7 +16,7 @@ Follow these steps to set up the payload storage API:
 +
 * https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-service-s3[Partner Manager Content Storage API - S3 Template] (sample implementation template)
 +
-. Implement the API to connect with your choice of storage location (S3, Database, File System, and so on).
+. Implement the API to connect with your choice of storage location (for example, a database, Amazon S3, or File System).
 
 . Deploy the API on a runtime that can access the storage solution.
 
@@ -42,7 +42,7 @@ Your payload storage API must be accessible over the internet via HTTPS. Ensure 
 . Enter the following values:
 * *Endpoint name*: Name for the payload storage API
 * *Description*: Optional description for your payload storage
-* *URL*: Path to your payload storage 
+* *URL*: Path to your payload storage
 . Optionally, if you want to view (or allow your users to view) the raw payloads of the files you receive or send, select *Allow users to download payloads*.
 . Click *Save*.
 

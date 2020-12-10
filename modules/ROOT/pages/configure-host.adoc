@@ -5,7 +5,7 @@ Your Anypoint Platform organization or your business group is referred to as the
 Use the host page in Partner Manager to:
 
 * Add the EDI and AS2 xref:partner-manager-identifiers.adoc[identifiers] used by your organization.
-* Add digital certificates associated with your organization.
+* Add xref:certifates.adoc[digital certificates] associated with your organization.
 * Create and manage source and target xref:create-endpoint.adoc[endpoints].
 * Create and manage source and target xref:partner-manager-create-message-type.adoc[message types].
 * Configure details associated with the xref:setup-payload-storage-API.adoc[Payload Storage API].
