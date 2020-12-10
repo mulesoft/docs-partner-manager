@@ -20,7 +20,7 @@ Create the AS2 identifiers for your organization and your trading partners in th
 |Yes
 
 |Connection timeout
-|The timeout for establishing connection to the remote service. 
+|The timeout for establishing connection to the remote service.
 |Yes
 
 |Retry interval
@@ -39,7 +39,7 @@ Create the AS2 identifiers for your organization and your trading partners in th
 |Your trading partner’s AS2 identifier
 |Yes
 
-|Respond to email address 
+|Respond to email address
 |Email address used as HTTP 'From' header when sending.
 |Yes
 
@@ -62,7 +62,7 @@ Allowed values include:
 |Yes
 
 |<Host> public certificate
-|This is your organization’s digital certificate (based on the RSA algorithm) for the AS2 transport protocol). 
+|This is your organization’s digital certificate (based on the RSA algorithm) for the AS2 transport protocol).
 |Yes
 
 |<Host> private key file
