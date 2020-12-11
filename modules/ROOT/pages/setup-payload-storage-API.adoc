@@ -8,14 +8,18 @@ To use your own storage solution for warehousing content, you must implement an 
 
 == Download and Deploy the Payload Storage API
 
-Follow these steps to set up the payload storage API:
+=== Prerequisites
+
+Before you can deploy the Payload Storage API, you must first access and download the following APIs from Anypoint Exchange:
 
 . Access and download the following APIs from Anypoint Exchange:
 +
 * https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-api[Partner Manager Content Storage API]
 +
 * https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-service-s3[Partner Manager Content Storage API - S3 Template] (sample implementation template)
-+
+
+=== Steps
+
 . xref:general::api-led-develop.adoc[Implement the API] to connect with your choice of storage location (for example, a database, Amazon S3, or File System).
 
 . xref:runtime-manager::deployment-strategies.adoc[Deploy the API] on a runtime that can access the storage solution.
