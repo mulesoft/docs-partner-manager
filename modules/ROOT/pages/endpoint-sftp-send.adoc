@@ -18,7 +18,7 @@ You can create the STFP identifiers for your organization and for your trading p
 | Yes
 
 | Protocol
-| The protocol selected in the `Protocol` field of the *New endpoint: Receive from partners* window. The value in this field cannot be modified.
+| The protocol selected in the `Protocol` field of the *New endpoint: Receive from partners* window.
 | Yes
 
 |Endpoint Name
