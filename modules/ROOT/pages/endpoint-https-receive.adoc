@@ -10,7 +10,7 @@ Configure HTTP and HTTPS receive endpoints to receive application messages (JSON
 |Yes
 
 | Owner
-| The Business Group that owns the endpoint. The value in this field is populated automatically and cannot be modified.
+| The trading partner or host that owns the endpoint. The value in this field is populated automatically and cannot be modified.
 | Yes
 
 | Protocol

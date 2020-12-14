@@ -12,7 +12,7 @@ You can create the AS2 identifiers for your organization and for your trading pa
 | Yes
 
 | Owner
-| The Business Group that owns the endpoint. The value in this field is populated automatically and cannot be modified.
+| The trading partner or host that owns the endpoint. The value in this field is populated automatically and cannot be modified.
 | Yes
 
 | Protocol
