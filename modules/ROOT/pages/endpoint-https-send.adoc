@@ -13,7 +13,7 @@ Send application messages (JSON or XML) to your backend applications in inbound 
 |===
 |Name |Description |Required
 | Owner
-| The Business Group that owns the endpoint. The value in this field is populated automatically and cannot be modified.
+| The trading partner or host that owns the endpoint. The value in this field is populated automatically and cannot be modified.
 | Yes
 
 |Protocol
@@ -35,7 +35,7 @@ Enter a well-formed URL (including the path) that specifies where to send the re
 |Yes
 
 |Connection Idle Timeout (milliseconds)
-|The connection idle timeout period in milliseconds. The value in this field is set to `3000` by default.
+|The connection idle timeout period in milliseconds. The value in this field is set to `30000` by default.
 |Yes
 
 |Response Timeout (milliseconds)

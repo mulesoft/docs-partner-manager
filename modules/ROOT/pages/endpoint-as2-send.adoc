@@ -9,7 +9,7 @@ Create the AS2 identifiers for your organization and your trading partners in th
 |Setting |Description |Required
 
 | Owner
-| The Business Group that owns the endpoint. The value in this field is populated automatically and cannot be modified.
+| The trading partner or host that owns the endpoint. The value in this field is populated automatically and cannot be modified.
 | Yes
 
 | Protocol
@@ -100,7 +100,7 @@ Allowed values include:
 
 |MDN response
 |The AS2 messages sent from Partner Manager always request the receiver to send a Synchronous MDN receipt back. The value in this field is set to `Sync` by default.
-| Yes 
+| Yes
 |===
 
 == See Also
