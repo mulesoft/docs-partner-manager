@@ -13,7 +13,7 @@ Send application messages (JSON or XML) to your backend applications in inbound 
 |===
 |Name |Description |Required
 | Owner
-| The trading partner or host that owns the endpoint. The value in this field is populated automatically and cannot be modified.
+| The trading partner or host that owns the endpoint. 
 | Yes
 
 |Protocol

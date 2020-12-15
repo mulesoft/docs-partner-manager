@@ -14,7 +14,7 @@ You can create the STFP identifiers for your organization and for your trading p
 |Name |Description | Required
 
 | Owner
-| The trading partner or host that owns the endpoint. The value in this field is populated automatically and cannot be modified.
+| The trading partner or host that owns the endpoint. 
 | Yes
 
 | Protocol

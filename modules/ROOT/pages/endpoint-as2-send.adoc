@@ -9,15 +9,11 @@ Create the AS2 identifiers for your organization and your trading partners in th
 |Setting |Description |Required
 
 | Owner
-| The trading partner or host that owns the endpoint. The value in this field is populated automatically and cannot be modified.
+| The trading partner or host that owns the endpoint.
 | Yes
 
 | Protocol
 | The protocol selected in the `Protocol` field of the *New endpoint: Receive from partners* window.
-| Yes
-
-| Partner
-|
 | Yes
 
 |Endpoint Name
