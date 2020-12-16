@@ -10,7 +10,7 @@ Configure HTTP and HTTPS receive endpoints to receive application messages (JSON
 |Yes
 
 | Owner
-| The trading partner or host that owns the endpoint. The value in this field is populated automatically and cannot be modified.
+| The trading partner or host that owns the endpoint.
 | Yes
 
 | Protocol
@@ -48,7 +48,7 @@ Possible values include:
 |Yes
 
 |Basic authentication
-a|When Basic authentication is enabled, specify the user name and password to protect the HTTP listener.
+a|When Basic authentication selected, specify the user name and password to protect the HTTP listener.
 
 After the configuration or creation of the endpoint is saved, you cannot retrieve or modify the password.
 

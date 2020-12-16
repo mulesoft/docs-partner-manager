@@ -17,7 +17,7 @@ You can create the STFP identifiers for your organization and for your trading p
 | Yes
 
 | Owner
-| The trading partner or host that owns the endpoint. The value in this field is populated automatically and cannot be modified.
+| The trading partner or host that owns the endpoint.
 | Yes
 
 | Protocol
@@ -64,36 +64,6 @@ To disable this feature, specify a negative number or omit the value.
 | Archival Path
 | You can specify a path on the SFTP server to store a copy of the file that was picked up from the `source path`.
 | No
-|===
-
-== SFTP Acknowledgment Endpoint Settings
-
-The configuration options for  Acknowledgment endpoints are the same as the SFTP Receive endpoint, except that the `Source path` and the `Archival path` are replaced by the `Acknowledgement path`.
-
-You can use this setting to specify the SFTP endpoint to which to send acknowledgement files (TA1 and/or 997/999) to your trading partners:
-
-[%header%autowidth.spread]
-|===
-|Name |Description |Required
-
-|Acknowledgement path
-| A path on the SFTP server where your trading partner is expecting to receive an acknowledgement (such as TA1 and/or 997/999) related to an EDI transaction they may have sent.
-|Yes
-|===
-
-== SFTP Target Endpoint Settings
-
-The configuration options for Acknowledgment endpoints are the same as the SFTP Receive endpoint, except that the `Source path` and the `Archival path` are replaced by the `Target path`.
-
-Use this setting to specify the SFTP endpoint to which to route transformed files to an internal SFTP server address within your organization:
-
-[%header%autowidth.spread]
-|===
-|Name |Description |Required
-
-|Target path
-| A path on your SFTP server where you can route transformed output for a message flow processed via Anypoint Partner Manager. +
-|Yes
 |===
 
 == See Also
