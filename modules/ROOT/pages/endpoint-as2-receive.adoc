@@ -2,7 +2,7 @@
 
 Your AS2 endpoint settings determine where you receive inbound data from your trading partners. One AS2 endpoint can receive inbound data from multiple partners.
 
-You can create the AS2 identifiers for your organization and for your trading partners in the respective xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner] profile pages.
+Create AS2 identifiers for your organization as host and for your trading partners in their respective xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner] profile pages.
 
 [%header%autowidth.spread]
 |===
