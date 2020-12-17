@@ -20,7 +20,7 @@ You can create the AS2 identifiers for your organization and for your trading pa
 | Yes
 
 | Description
-| The user-defined field for describing the purpose and use of the endpoint.
+| The user-supplied description of the purpose and use of the endpoint.
 | No
 
 | AS2 URL
