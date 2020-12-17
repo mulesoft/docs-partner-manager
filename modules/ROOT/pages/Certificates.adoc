@@ -4,7 +4,7 @@ All certificates in Anypoint Partner Manager are securely stored in the Anypoint
 
 You can configure your SSL certificate settings based on your certificate needs.
 
-The information provided for each certificate includes:
+Configure your certificate to include the following information:
 
 * *Authority*: The certificate provider
 * *Serial Number*: The serial number from the certificate
