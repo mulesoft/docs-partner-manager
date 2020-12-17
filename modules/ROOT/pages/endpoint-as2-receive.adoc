@@ -1,6 +1,6 @@
 = AS2 Receive Endpoint Settings
 
-Your AS2 endpoint settings determine where you receive inbound data from your trading partners. One AS2 endpoint can receive inbound data from multiple partners.
+Your organization's AS2 endpoint settings determine where to receive inbound data from trading partners. One AS2 endpoint can receive inbound data from multiple partners.
 
 Create AS2 identifiers for your organization as host and for your trading partners in their respective xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner] profile pages.
 
@@ -8,15 +8,15 @@ Create AS2 identifiers for your organization as host and for your trading partne
 |===
 | Setting | Description | Required
 | Endpoint Name
-| The name used to identify the endpoint. The `Endpoint Name` is automatically generated, but can be modified manually.
+| The automatically generated name used to identify the endpoint, which you can subsequently modify manually.
 | Yes
 
 | Owner
-| The trading partner or host that owns the endpoint. 
+| The host or trading partner that owns the endpoint.
 | Yes
 
 | Protocol
-| The protocol previously selected in the `Protocol` field of the *New endpoint: Receive from partners* window. This value cannot be subsequently modified.
+| The protocol previously selected in the *Protocol* field of the *New endpoint: Receive from partners* window. This value cannot be subsequently modified.
 | Yes
 
 | Description
@@ -25,16 +25,10 @@ Create AS2 identifiers for your organization as host and for your trading partne
 
 | AS2 URL
 a| The HTTP or HTTPS address where you receive AS2 messages.
-
-When deploying to CloudHub, the URL is automatically generated when you deploy a message flow that uses this endpoint. To view the URL, select the receiving endpoint from your deployed message flow.
-
-If you are deploying to an on-premises Mule instance with a firewall and load balancer, work with your organization's hosting or network security team to obtain the externally accessible DNS or the name of the instance host. You must replace the `{runtime_host}` value in the URL with the value that is specific to your organization. For example, if the DNS host name is `b2b.mycompany.com`, the AS2 receiver URL is `+https://b2b.mycompany.com/receive-as2/+`.
 | No
 
 | <Host> public certificate
 | The digital certificate for your organization. This certificate is based on the RSA algorithm for the AS2 transport protocol.
-
-NOTE: You must have at least one certificate uploaded to the endpoint. If there is only one certificate uploaded to the endpoint, Partner Manager prevents you from deleting your only certificate.
 | Yes
 
 | <Host> private key file
@@ -46,9 +40,16 @@ NOTE: You must have at least one certificate uploaded to the endpoint. If there 
 | Yes
 |===
 
+
+== AS2 URL
+
+The value in the URL field is automatically generated when you deploy a message flow to CloudHub that uses this endpoint. You can view this URL by selecting the receiving endpoint from your deployed message flow.
+
+If you are deploying to an on-premises Mule instance with a firewall and load balancer, work with your organization's hosting or network security team to obtain the externally accessible DNS or the name of the instance host. You must replace the `{runtime_host}` value in the URL with the value that is specific to your organization. For example, if the DNS host name is `b2b.mycompany.com`, the AS2 receiver URL is `+https://b2b.mycompany.com/receive-as2/+`.
+
 == Signature and Encryption Algorithms
 
-AS2 Receive endpoints deployed from Partner Manager support the following signature and encryption algorithms:
+AS2 receive endpoints deployed from Partner Manager support the following signature and encryption algorithms:
 
 * Signature algorithms
 ** `UNSIGNED (Default)`
@@ -71,9 +72,9 @@ AS2 Receive endpoints deployed from Partner Manager support the following signat
 ** `AES256_GCM`
 ** `AES256_WRAP`
 ** `CAST5`
-** `3DES`
 ** `DES_EDE3`
 ** `RC2`
+** `3DES`
 
 == See Also
 

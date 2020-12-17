@@ -6,7 +6,7 @@ Configure HTTP and HTTPS receive endpoints to receive application messages (JSON
 |===
 |Name |Description |Required
 |Endpoint Name
-|The name used to identify the endpoint. The `Endpoint Name` field is generated automatically, but can be modified manually.
+|The automatically generated name used to identify the endpoint, which you can subsequently modify manually.
 |Yes
 
 | Owner
@@ -14,28 +14,20 @@ Configure HTTP and HTTPS receive endpoints to receive application messages (JSON
 | Yes
 
 | Protocol
-| The protocol selected in the `Protocol` field of the *New endpoint: Receive from partners* window. The value in this field cannot be modified.
+| The protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window. The value in this field cannot be modified.
 | Yes
 
 | Description
-| The user-defined field for describing the purpose and use of the endpoint.
+| The user-supplied value for describing the purpose and use of the endpoint.
 | No
 
 |URL
 a|The HTTP or HTTPS address where you will receive outbound source messages from backend systems.
-
-When deploying to CloudHub, the URL is automatically generated when you deploy a message flow that uses this endpoint. To view the URL, you can select the receiving endpoint from your deployed message flow.
-
-If you are deploying to on-premises Mule server with a firewall and load balancer, work with your hosting or network security team to obtain the externally accessible DNS or name of the host where the Mule server is running, and replace `{runtime_host}` in the URL with the DNS name of your host. For example, if your DNS host name is `b2b.mycompany.com`, the receiver URL is `+https://b2b.mycompany.com/base-path/+`.
-|
+|Yes
 
 |Connection idle timeout
-|The connection idle timeout period in milliseconds. The value in this field is set to `3000` by default.
-|
-
-|Base path
-|The base path for the HTTP listener
-|
+|The connection idle timeout period in milliseconds. The value in this field is set to `30000` by default.
+|Yes
 
 |Authentication type
 a|The type of authentication method used to protect the HTTP receive service.
@@ -43,23 +35,35 @@ a|The type of authentication method used to protect the HTTP receive service.
 Possible values include:
 
 * None
-* API Key
+* API key
 * Basic
 |Yes
 
 |Basic authentication
 a|When Basic authentication selected, specify the user name and password to protect the HTTP listener.
 
-After the configuration or creation of the endpoint is saved, you cannot retrieve or modify the password.
+After your new or or reconfigured endpoint is saved, you cannot subsequently retrieve or modify the password.
 
 The backend applications that send JSON or XML payloads to the HTTP receive endpoint must pass the credentials in the HTTP request header.
 |
 
 |API Key
-a|The API Key for the HTTP listener.
+a|The API key for the HTTP listener.
 
-When the API Key is selected, specify the HTTP header name and API key to protect the HTTP listener. After the configuration or creation of the endpoint is saved, you cannot retrieve or modify the API key.
+After selecting *API Key* in the *Authentication type* picklist, specify the HTTP header name and API key to protect the HTTP listener. After your new or reconfigured endpoint is saved, you cannot subsequently retreive or modify the API key.
+
 
 The backend applications that send JSON or XML payloads to the HTTP receive endpoint must pass the API key in the HTTP request with the configured HTTP header name.
 |
 |===
+
+== HTTP or HTTPS URL
+
+The value in the URL field is automatically generated when you deploy a message flow to CloudHub that uses this endpoint. You can view this URL by selecting the receiving endpoint from your deployed message flow.
+
+If you are deploying to on-premises Mule instance with a firewall and load balancer, work with your hosting or network security team to obtain the externally accessible DNS or name of the host where the Mule server is running, and replace `{runtime_host}` in the URL with the DNS name of your host. For example, if your DNS host name is `b2b.mycompany.com`, the receiver URL is `+https://b2b.mycompany.com/base-path/+`.
+
+== See Also
+
+* xref:endpoints.adoc[Endpoints]
+* xref:create-endpoint.adoc[Create and Configure Endpoints]

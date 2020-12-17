@@ -3,9 +3,9 @@
 You can use these settings to set up SFTP endpoints in one of the following contexts:
 
 * Receive from partners +
-Receive inbound EDI files from your trading partners used in inbound message flows.
+Receive inbound EDI files from your trading partners used in inbound message flows
 * Source at host +
-Receive application messages (in JSON or XML format) from your backend applications used in outbound message flows.
+Receive application messages (in JSON or XML format) from your backend applications used in outbound message flows
 
 You can create the STFP identifiers for your organization and for your trading partners in the respective xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner] profile pages.
 
@@ -13,7 +13,7 @@ You can create the STFP identifiers for your organization and for your trading p
 |===
 |Name |Description | Required
 | Endpoint Name
-| The name used to identify the endpoint. The value in the `Endpoint Name` field is generated automatically, but can be modified manually.
+| The automatically generated name used to identify the endpoint, which you can subsequently modify manually.
 | Yes
 
 | Owner
@@ -21,11 +21,11 @@ You can create the STFP identifiers for your organization and for your trading p
 | Yes
 
 | Protocol
-| The protocol selected in the `Protocol` field of the *New endpoint: Receive from partners* window. The value in this field cannot be modified.
+| The protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window. The value in this field cannot be modified.
 | Yes
 
 | Description
-| The user-defined field for describing the purpose and use of the endpoint.
+| The user-supplied value for describing the purpose and use of the endpoint.
 | No
 
 | Host
@@ -53,9 +53,9 @@ You can create the STFP identifiers for your organization and for your trading p
 | Yes
 
 | Size check wait time
-| The wait time in seconds between size checks to determine if a file is ready for processing.. The value in this field is set to `1 second` by default. This allows a file write to complete before processing.
+| The wait time in seconds between size checks to determine if a file is ready for processing. The value in this field is set to `1 second` by default. This allows a file write to complete before processing.
 
-When enabled, Mule performs two size checks by waiting the amount of time specified in the `Size check wait time` field. If both checks return the same value, the file is ready to process.
+Mule performs two size checks by waiting the amount of time specified in the `Size check wait time` field. If both checks return the same value, the file is ready to process.
 
 To disable this feature, specify a negative number or omit the value.
 
