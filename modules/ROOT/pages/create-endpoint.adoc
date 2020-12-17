@@ -7,7 +7,7 @@ You can create endpoints in either the host or partner page or from the Message 
 Create and configure new send or receive endpoints in the partner page:
 
 . In the left navigation menu, select *Partners*.
-. Select the partner for which to create and configure the endpoint.
+. Select the partner for which to you want to create and configure an endpoint.
 . Click *New* in the *Endpoints: Receive from <partner-name>* or *Endpoints: Send to <partner-name>* section.
 . <<configure-endpoint,Configure the endpoint>> according to the type of endpoint you are creating and the protocol you selected.
 . Click *Save*.
