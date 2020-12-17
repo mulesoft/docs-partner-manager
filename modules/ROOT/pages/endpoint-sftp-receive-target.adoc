@@ -41,7 +41,7 @@ You can create the STFP identifiers for your organization and for your trading p
 | Yes, if the server is authenticated.
 
 | Password
-| The password for the SFTP Server.
+| The password for the SFTP server.
 | Yes, if the server is authenticated.
 
 | Source path
