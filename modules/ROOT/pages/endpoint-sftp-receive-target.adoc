@@ -45,7 +45,7 @@ You can create the STFP identifiers for your organization and for your trading p
 | Yes, if the server is authenticated.
 
 | Source path
-| The path on the SFTP server to which your trading partner sends  the inbound files.
+| The path on the SFTP server to which your trading partner sends the inbound files.
 | Yes
 
 | Polling Frequency
