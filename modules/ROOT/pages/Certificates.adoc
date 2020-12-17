@@ -31,7 +31,7 @@ You can upload a new certificate (in `<certifcate name>.PEM` format) or view all
 You can add certificates from the Host or Partner page.
 
 . In Partner Manager's left navigation, select either *<host name>* or *Partners*. +
-If you select Partners, select the parter to which you want to add the certificate from the list.
+If you select *Partners*, select from the list displayed the partner to which you want to add the certificate.
 . In the *Certificates* section, click *New*.
 . In the *New certificate for <host name>* or the *New certificate for Partners* window, in the *Certificate* field, click *Choose file* to upload a certificate.
 . Click *Upload Certificate*. +
