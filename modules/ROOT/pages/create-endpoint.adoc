@@ -1,41 +1,37 @@
 = Create and Configure Endpoints
 
-You can create endpoints in the host or partner page, or from the Message Flow configuration wizard. 
+You can create endpoints in the host or partner page, or by using the Message Flow wizard.
 
-== Creating Endpoints From the Partner Page
+== Create and Configure Endpoints from the Partner Page
 
-Create and configure new send or receive endpoints in the partner page: 
+Create and configure new send or receive endpoints using the partner page:
 
 . In the left navigation menu, select *Partners*.
-. Select the partner for which to create and configure the endpoint.  
+. Select the partner for which to create and configure the endpoint.
 . Click *New* in the *Endpoints: Receive from <partner-name>* or *Endpoints: Send to <partner-name>* section.
-. <<configure-endpoint,Configure the endpoint>> according to the type of endpoint you are creating and the protocol you selected. 
-. Click *Save*. 
+. <<configure-endpoint,Configure the endpoint>> according to the type of endpoint you are creating and the protocol you selected in the *Endpoints: Send to <partner-name>* window.
+. Click *Save*.
 
-Ownership of facing endpoints (receive or send) is automatically assigned based on the partner from which you are creating the endpoint.
+Ownership of the endpoints (receive or send) is automatically assigned based on the partner from which you are creating the endpoint.
 
-== Creating Endpoints From the Host Page
+== Create and Configure Endpoints from the Host Page
 
 . In the left navigation, select the host.
 . Click *New* in the section for the type of endpoint you are creating:
 * *Endpoints: Receive from partners*
 * *Endpoints: Send to partners*
 * *Endpoints: Target at <host-name>*
-* *Endpoints: Source at <host-name*
-. <<configure-endpoint,Configure the endpoint>> according the type of endpoint you are creating and the protocol you selected. 
+* *Endpoints: Source at <host-name>*
+. <<configure-endpoint,Configure the endpoint>> according the type of endpoint you are creating and the protocol you selected in the *New endpoint: <endpoint-type>* window.
 . Click *Save*.
 
-== Creating Endpoints From the Message Flow
+== Create and Configure Endpoints using the Message Flow Wizard
 
-When you create endpoint types from the message flow, Partner Manager automatically designates the usage.
-
-When you create partner facing (receive or send) endpoints from the message flow wizard, you can assign the owner by making appropriate selection.
-
-For more information about creating endpoints from the message flow wizard, see xref:configure-message-flows.adoc[Create and Configure an Inbound Message] and xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow].
+When creating endpoint types using the Message Flow wizard, Partner Manager automatically designates the usage. Using the Message Flow Wizard, you can xref:configure-message-flows.adoc[Create and Configure an Inbound Message Flow] or xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow].
 
 == Supported Endpoint Protocols
 
-The way you configure Partner Manager endpoints depends on the protocol you use to send and receive messages. 
+The configuration of Partner Manager endpoints depends on the protocol used to send and receive messages.
 
 Partner Manager supports the following endpoint protocols:
 
