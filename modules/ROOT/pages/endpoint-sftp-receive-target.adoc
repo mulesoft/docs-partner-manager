@@ -49,7 +49,7 @@ You can create the STFP identifiers for your organization and for your trading p
 | Yes
 
 | Polling Frequency
-| The frequency in which the server checks the source path for new files. The value in this field is set to `1 minute` by default.
+| The frequency in which the server checks the source path for new files. The value in this field is `1 minute` by default.
 | Yes
 
 | Size check wait time
