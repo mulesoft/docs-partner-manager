@@ -39,9 +39,7 @@ The new certificate is added to the host or the trading partner.
 
 == Delete Certificates
 
-You can delete certificates that are not deployed or associated with endpoints.
-
-You cannot delete a certificate if it is the only certificate that is uploaded.
+You can delete certificates that are not deployed or associated with endpoints; however, you cannot delete a certificate if it is the only certificate that is uploaded.
 
 To delete a certificate:
 
