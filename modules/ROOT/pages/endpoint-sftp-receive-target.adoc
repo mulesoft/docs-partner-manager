@@ -7,7 +7,7 @@ Receive inbound EDI files from your trading partners used in inbound message flo
 * Source at host +
 Receive application messages (in JSON or XML format) from your backend applications used in outbound message flows
 
-You can create the STFP identifiers for your organization and for your trading partners in the respective xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner] profile pages.
+You can create the STFP identifiers for your organization and for your trading partners in the profile pages xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner].
 
 [%header%autowidth.spread]
 |===
@@ -37,23 +37,23 @@ You can create the STFP identifiers for your organization and for your trading p
 | Yes
 
 | Username
-| The username for the SFTP Server.
+| The username for the SFTP server.
 | Yes, if the server is authenticated.
 
 | Password
-| The password for the SFTP Server.
+| The password for the SFTP server.
 | Yes, if the server is authenticated.
 
 | Source path
-| The path on the SFTP server to which your trading partner sends  the inbound files.
+| The path on the SFTP server to which your trading partner sends the inbound files.
 | Yes
 
 | Polling Frequency
-| The frequency in which the server checks the source path for new files. The value in this field is set to `1 minute` by default.
+| The frequency in which the server checks the source path for new files. The value in this field is `1 minute` by default.
 | Yes
 
 | Size check wait time
-| The wait time in seconds between size checks to determine if a file is ready for processing. The value in this field is set to `1 second` by default. This allows a file write to complete before processing.
+| The wait time, in seconds, between size checks to determine if a file is ready for processing. The value in this field is `1 second` by default. This allows a file write to complete before processing.
 
 Mule performs two size checks by waiting the amount of time specified in the `Size check wait time` field. If both checks return the same value, the file is ready to process.
 
@@ -62,7 +62,7 @@ To disable this feature, specify a negative number or omit the value.
 | Yes
 
 | Archival Path
-| You can specify a path on the SFTP server to store a copy of the file that was picked up from the `source path`.
+| Specify an SFTP server path at which to store a copy of the file that was obtained from `source path`.
 | No
 |===
 
