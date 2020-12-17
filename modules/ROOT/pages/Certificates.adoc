@@ -16,7 +16,7 @@ The color-coded icon on the certificate shows the user the status of the certifi
 * *Start Date*: The date from which the certificate is valid
 * *Expires*: The date after which the certificate is no longer valid
 * *Endpoints*: The number of endpoints using the certificate
-* *Message Flows*: Number of message flows using the certificate
+* *Message Flows*: The number of message flows using the certificate
 
 In Partner Manager, you can:
 
