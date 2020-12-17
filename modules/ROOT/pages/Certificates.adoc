@@ -8,7 +8,9 @@ Configure your certificate to include the following information:
 
 * *Authority*: The certificate provider
 * *Serial Number*: The serial number from the certificate
-* *Status*: The status of the certificate. The color coded icon on the certificate shows the user the status of the certificate:
+* *Status*: The status of the certificate. 
++
+The color-coded icon on the certificate shows the user the status of the certificate:
 ** Green: The certificate is active
 ** Red: The certificate is inactive
 * *Start Date*: The date from when the certificate is valid
