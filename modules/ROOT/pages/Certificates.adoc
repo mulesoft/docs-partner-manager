@@ -23,7 +23,7 @@ In Partner Manager, you can:
 * Use a CA-signed certificate. +
 If an endpoint is currently using a CA-signed certificate, you do not need to upload an additional certificate. +
 * Upload your own, self-signed certificate. +
-You can upload a new certificate (in `<certifcate name>.PEM` format), or view all the certificates available for use with this endpoint setup.
+You can upload a new certificate (in `<certifcate name>.PEM` format) or view all the certificates available for use with this endpoint setup.
 * Enable an insecure connection for local testing that doesn’t perform certificate validation by selecting *Allow insecure connection*.
 
 == Add Certificates
