@@ -22,7 +22,7 @@ Configure HTTP and HTTPS receive endpoints to receive application messages (JSON
 | No
 
 |URL
-a|The HTTP or HTTPS address where you will receive outbound source messages from backend systems.
+a|The HTTP or HTTPS address that receives outbound source messages from backend systems.
 
 When deploying to CloudHub, the URL is automatically generated when you deploy a message flow that uses this endpoint. To view the URL, you can select the receiving endpoint from your deployed message flow.
 
