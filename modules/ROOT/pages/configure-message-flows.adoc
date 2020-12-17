@@ -2,7 +2,7 @@
 
 You can create and configure an inbound message flow either when you create a trading partner or after you create a trading partner.
 
-Before you create your first message flow, you must configure your xref:setup-payload-storage.adoc[payload storage API].
+Before you create your first inbound message flow, you must configure your xref:setup-payload-storage.adoc[payload storage API].
 
 After you create the inbound message flow, you configure the receive endpoint, source message type, target message type, and target endpoint.
 

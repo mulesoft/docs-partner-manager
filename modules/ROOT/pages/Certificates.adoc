@@ -2,21 +2,21 @@
 
 All certificates in Anypoint Partner Manager are securely stored in the Anypoint Platform secrets manager, which uses secure vault technology to store and to control access to private keys, passwords, certificates, and other secrets.
 
-You can configure your SSL certificate settings based on your certificate needs.
-
-Configure your certificate to include the following information:
+Based on your organization's needs, configure your certificate to include the following information:
 
 * *Authority*: The certificate provider
 * *Serial Number*: The serial number from the certificate
-* *Status*: The status of the certificate. 
+* *Status*: The status of the certificate.
 +
 The color-coded icon on the certificate shows the user the status of the certificate:
-** Green: The certificate is active
-** Red: The certificate is inactive
+** Green: The certificate is active.
+** Red: The certificate is inactive.
 * *Start Date*: The date from which the certificate is valid
 * *Expires*: The date after which the certificate is no longer valid
 * *Endpoints*: The number of endpoints using the certificate
 * *Message Flows*: The number of message flows using the certificate
+
+== Certificate Types and Connection Settings
 
 In Partner Manager, you can:
 
@@ -28,9 +28,9 @@ You can upload a new certificate (in `<certifcate name>.PEM` format) or view all
 
 == Add Certificates
 
-You can add certificates from the Host or Partner page.
+You can add certificates from the host or partner page.
 
-. In Partner Manager's left navigation, select either *<host name>* or *Partners*. +
+. In the Partner Manager home page, select either *<host name>* or *Partners*. +
 If you select *Partners*, select from the list displayed the partner to which you want to add the certificate.
 . In the *Certificates* section, click *New*.
 . In the *Certificate* field of the *New certificate for <host name>* or the *New certificate for Partners* window, click *Choose file* to upload a certificate.
@@ -43,10 +43,10 @@ You can delete certificates that are not deployed or associated with endpoints; 
 
 To delete a certificate:
 
-. In Partner Manager's left navigation, select *<host name>* or *Partners*. +
-If you select Partners, select the parter to which you want to add the certificate from the list.
+. In the Partner Manager home page, select *<host name>* or *Partners*. +
+If you select Partners, select the partner to which you want to add the certificate from the list.
 . In the *Certificates* section, click the certificate to delete.
-. In the dialog window, click *Delete*.
+. In the dialog box, click *Delete*.
 
 == See Also
 
