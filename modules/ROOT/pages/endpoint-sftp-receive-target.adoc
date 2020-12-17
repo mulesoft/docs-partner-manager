@@ -37,7 +37,7 @@ You can create the STFP identifiers for your organization and for your trading p
 | Yes
 
 | Username
-| The username for the SFTP Server.
+| The username for the SFTP server.
 | Yes, if the server is authenticated.
 
 | Password
