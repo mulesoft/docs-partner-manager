@@ -12,7 +12,7 @@ Create and configure new send or receive endpoints in the partner page:
 . <<configure-endpoint,Configure the endpoint>> according to the type of endpoint you are creating and the protocol you selected.
 . Click *Save*.
 
-Ownership of facing endpoints (receive or send) is automatically assigned based on the partner from which you are creating the endpoint.
+The partner page in which you create send and receive endpoints automatically owns those endpoints.
 
 == Creating Endpoints From the Host Page
 
