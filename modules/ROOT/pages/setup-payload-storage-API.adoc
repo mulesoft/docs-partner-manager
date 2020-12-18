@@ -1,29 +1,27 @@
-= Payload Storage API for Partner Manager
+= Download and Deploy a Payload Storage API
 
-Anypoint Partner Manager enables you to configure your own storage solution, such as database, Amazon S3, Azure Blob Storage, and so on to store transmission content, such as incoming and outgoing B2B message payloads.  
+Anypoint Partner Manager enables you to configure your own storage solution (for example, a database, Amazon S3, or Azure Blob Storage) to store transmission content.
 
-Before you create your first trading partner and message flow, you must configure your payload storage API within the host organization in Partner Manager.
+To use your own storage solution, you must implement an API that provides Anypoint Partner Manager with a standardized way to connect to your storage.
 
-To store your content, you must implement an API that provides Anypoint Partner Manager with a standardized way to connect to your unique storage.
+== Download and Deploy the Payload Storage API
 
-== Download and Deploy the Payload Storage API 
+Before you create your first xref:configure-partner#create-partner[trading partner] and xref:configure-message-flow[message flow], you must configure your payload storage API within the host organization in Partner Manager.
 
-Follow these steps to set up the payload storage API:
-
-. Download these APIs from Anypoint Exchange:
+. Access and download the following APIs from Anypoint Exchange:
 +
-https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-api[Partner Manager Content Storage API]
+* https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-api[Partner Manager Content Storage API]
 +
-https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-service-s3[Partner Manager Content Storage API - S3 Template] (sample implementation template)
-+
-. Implement the API to connect with your choice of storage location (S3, Database, File System, and so on).
+* https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-service-s3[Partner Manager Content Storage API - S3 Template] (sample implementation template)
 
-. Deploy the API on a runtime that can access the storage solution.
+. xref:general::api-led-develop.adoc[Implement the API] to connect with your choice of storage location (for example, a database, Amazon S3, or File System).
+
+. xref:runtime-manager::deployment-strategies.adoc[Deploy the API] on a runtime that can access the storage solution.
 
 . Make a note of the API URL and configuration values:
 * Host, port, and path connection
 * Connection Idle and Response timeouts
-* Authentication types: 
+* Authentication types:
  ** None
  ** API Key
  ** Basic
@@ -34,25 +32,18 @@ https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-stora
 You’ll need this information when you associate Anypoint Partner Manager with your payload storage API.
 Your payload storage API must be accessible over the internet via HTTPS. Ensure that the appropriate authentication mechanisms are implemented to enable access over HTTPS.
 
-== Configure the Payload Storage API
+== Add the Payload Storage API to the Host Profile
 
-. In Anypoint Platform, open Anypoint Partner Manager. 
-. In the navigation menu on the left, select your organization’s profile (host) page.
-. In the *Payload storage* section of the page, click *Edit* to add the path to your payload storage.  
+. In Anypoint Platform, open Anypoint Partner Manager.
+. From the navigation menu on the left, select your organization’s host page.
+. In the *Payload storage* section of the page, click *Edit* to add the path to your payload storage.
 . Enter the following values:
-* *Endpoint name*
-Name for the payload storage API
-* *Description*
-Optional description for your payload storage
-* *URL* +
-Path to your payload storage 
+* *Endpoint name*: The name of the payload storage API
+* *Description*: The optional description for your payload storage
+* *URL*: The path to your payload storage
 . Optionally, if you want to view (or allow your users to view) the raw payloads of the files you receive or send, select *Allow users to download payloads*.
 . Click *Save*.
 
 == See Also
 
 * xref:configure-host.adoc[Configure and Manage a Host Profile]
-
-
-
-

@@ -1,12 +1,12 @@
 = Create and Configure an Inbound Message Flow
 
-You can create and configure an inbound message flow either when you create a trading partner, or after you create a trading partner. 
-
-After you create the inbound message flow, you configure the receive endpoint, source message type, target message type, and target endpoint. 
+Before you can communicate with your trading partners, you must create an inbound message flow and then configure a receive endpoint, configure a message source type, import a translation map, and configure the target message type and endpoint.
 
 == Create an Inbound Message Flow
 
-. From your Anypoint Partner Manager *Sandbox* or *Production* environment, select *Message Flows* in the left navigation menu. 
+Before you create your first inbound message flow, you must configure your xref:setup-payload-storage.adoc[payload storage API].
+
+. From your Anypoint Partner Manager *Sandbox* or *Production* environment, select *Message Flows* in the left navigation menu.
 . Click *New message flow > Receive from partner* in the upper right of the page.
 . Select an existing Partner from the list and click *Select*. +
 A new message flow is created. +
@@ -16,47 +16,47 @@ Follow the process to xref:configure-partner.adoc#create-a-trading-partner[creat
 == Configure the Receive Endpoint
 
 . Expand the *Receiving endpoint* section and click *Select*.
-. To use an existing receiving endpoint: 
+. To use an existing receiving endpoint:
 .. Select the endpoint from the list and click *Select* in the lower right side of the page. +
-The endpoint is added to the message flow, and you see a message that tells you the endpoint is missing an identifier. 
+The endpoint is added to the message flow, and you see a message that tells you the endpoint is missing an identifier.
 .. Click *Add* to add a unique identifier for the endpoint.
 . To create a new receiving endpoint:
-.. Click *New* on the right of the search box. 
-.. From the *Owner* drop-down, select the endpoint's owner. 
+.. Click *New* on the right of the search box.
+.. From the *Owner* drop-down, select the endpoint's owner.
 .. From the *Protocol* drop-down, select the protocol and configure it according to the protocol you select:
 * xref:endpoint-as2-receive.adoc[*AS2*]
 * xref:endpoint-sftp-receive-target.adoc[*SFTP*]
 +
 [NOTE]
 Translated files are delivered to file-based endpoints with a unique file name with the pattern `<doctype>-<senderid>-<ISACtrlNum>-<GSCtrlNum>-<STCtrlNum>-<timeInMillis>.<format>`, for example: `850-ABCCORP-40952-5850-179960-1587685726355.JSON`
-. Click *Save*. 
+. Click *Save*.
 
 == Configure the Source Message Type
 
 . Expand the *Source message type* section, and click *Select*.
 . To use an existing message type:
 .. Select the message type from the list and click *Select* in the lower right side of the page. +
-The message type is added to the message flow. 
-. To create a new message type: 
+The message type is added to the message flow.
+. To create a new message type:
 .. Click *New* on the right side of the search box.
 .. From *Format*, select *X12*.
 .. From *Version*, select the X12 version.
 .. From *Message type*, select the message type.
 .. From schema select *Use standard X12-<version>-<message-type>* or select *Customize* to define a custom schema.
 .. Click *Save*. +
-The message type and its validation settings are added to the message flow. 
+The message type and its validation settings are added to the message flow.
 
 == Import the Translation Map
 
-Expand the *Map* section and click *Import* to upload the DataWeave map to translate the EDI message to your application message format. 
+Expand the *Map* section and click *Import* to upload the DataWeave map to translate the EDI message to your application message format.
 
 Follow these instructions to create your inbound EDI-to-application message (JSON or XML) map in Anypoint Studio.
 
 == Configure the Target Message Type
 
-. Expand the *Target at <your organization>* section. 
+. Expand the *Target at <your organization>* section.
 . Click *Select* to select the message type of your backend system to which to map the EDI transaction. +
-Partner Manager routes inbound EDI transactions based on matching identifiers configured at the Partner level. 
+Partner Manager routes inbound EDI transactions based on matching identifiers configured at the Partner level.
 
 == Configure the Target Endpoint
 

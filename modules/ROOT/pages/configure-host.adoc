@@ -1,21 +1,23 @@
-= Configure and Manage a Host Profile
+= Configure and Manage the Host Profile
 
-Your Anypoint Platform organization or your business group is referred to as the "host" in Anypoint Partner Manager. In Anypoint Platform, your host name is the same as your Anypoint Platform business group name. 
+Your Anypoint Platform organization or your business group is referred to as the _host_ in Anypoint Partner Manager. In Anypoint Platform, your host name is the same as your Anypoint Platform business group name.
 
 Use the host page in Partner Manager to:
 
-* Add the EDI and AS2 xref:partner-manager-identifiers.adoc[identifiers] used by your organization.
-* Add digital certificates associated with your organization.
-* Create and manage source and target xref:create-endpoint.adoc[endpoints].
-* Create and manage source and target xref:partner-manager-create-message-type.adoc[message types].
-* Configure details associated with the xref:setup-payload-storage-API.adoc[Payload Storage API].
- 
+* Add the EDI and AS2 xref:partner-manager-identifiers.adoc[identifiers] used by your organization
+* Add xref:certifates.adoc[digital certificates] associated with your organization
+* Create and manage source and target xref:create-endpoint.adoc[endpoints]
+* Create and manage source and target xref:partner-manager-create-message-type.adoc[message types]
+* Configure details associated with the xref:setup-payload-storage-API.adoc[Payload Storage API]
+
 
 
 == See Also
 
-* xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers] 
-* xref:delete-identifiers.adoc[Delete Identifiers] 
+* xref:access-management::organization.adoc[Organization]
+* xref:access-management::business-groups.adoc[Business Groups]
+* xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
+* xref:delete-identifiers.adoc[Delete Identifiers]
 * xref:endpoints.adoc[Endpoint Types and Protocols]
 * xref:partner-manager-maps.adoc[Create and Configure EDI Translation Maps]
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
