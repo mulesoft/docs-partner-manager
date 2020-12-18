@@ -32,7 +32,7 @@ To create a new partner, you need the following information:
 * *X12-GS*
 * *X12-ISA*
 . In *Identifier Value*, enter a value to uniquely identify your partner.
-. If you selected *X12-ISA* as the *Type*, you must also select a *Qualifier* from the list.
+. If you selected *X12-ISA* for *Type*, you must also select a *Qualifier* value from the list.
 . Click *Create partner* to create your trading partner.
 
 You can now xref:configure-message-flows.adoc[set up message flows] for this trading partner or continue to <<update-partner,update this partner>>.
