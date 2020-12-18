@@ -43,7 +43,7 @@ You can now xref:configure-message-flows.adoc[set up message flows] for this tra
 You can add and update the following information for each trading partner from the *Partners* tab in the left navigation:
 
 . In Partner Manager, select *Partners* in the left navigation menu.
-. Click the partner for whom to update the profile.
+. Click the partner whose profile you want to update.
 . Under the *About* section, click *Edit* to add or update the following information:
 * *Description* +
 Provide a brief description of your partner's business, what kind of trading relationship your organization has with them, and so on.
