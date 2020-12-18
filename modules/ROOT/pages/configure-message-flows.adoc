@@ -1,12 +1,10 @@
 = Create and Configure an Inbound Message Flow
 
-You can create and configure an inbound message flow either when you create a trading partner or after you create a trading partner.
-
-Before you create your first inbound message flow, you must configure your xref:setup-payload-storage.adoc[payload storage API].
-
-After you create the inbound message flow, you configure the receive endpoint, source message type, target message type, and target endpoint.
+Before you can communicate with your trading partners, you must create an inbound message flow and then configure a receive endpoint, configure a message source type, import a translation map, and configure the target message type and endpoint.
 
 == Create an Inbound Message Flow
+
+Before you create your first inbound message flow, you must configure your xref:setup-payload-storage.adoc[payload storage API].
 
 . From your Anypoint Partner Manager *Sandbox* or *Production* environment, select *Message Flows* in the left navigation menu.
 . Click *New message flow > Receive from partner* in the upper right of the page.

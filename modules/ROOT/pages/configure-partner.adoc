@@ -1,8 +1,6 @@
 = Create, Configure, and Update Trading Partners
 
-The Partner Manager *Partners* page lists all the configured trading partner profiles.
-
-Before you create your first trading partner, you must configure your xref:setup-payload-storage.adoc[payload storage API].
+The Partner Manager *Partners* page displays configured trading partner profiles.
 
 On the *Partners* page, you can:
 
@@ -23,6 +21,8 @@ To create a new partner, you need the following information:
 [[create-partner]]
 == Create a Partner
 
+Before you create your first trading partner, you must configure your xref:setup-payload-storage.adoc[payload storage API].
+
 . From within your Anypoint Partner Manager environment, select *Partners* from the left navigation.
 . Click *New partner*.
 . In *Name*, enter a name that easily identifies your partner.
@@ -39,8 +39,6 @@ You can now xref:configure-message-flows.adoc[set up message flows] for this tra
 
 [[update-partner]]
 == Update a Partner's Profile
-
-You can add and update the following information for each trading partner from the *Partners* tab in the left navigation:
 
 . In Partner Manager, select *Partners* in the left navigation menu.
 . Click the partner whose profile you want to update.
