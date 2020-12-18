@@ -4,7 +4,7 @@ Before you can communicate with your trading partners, you must create an inboun
 
 == Create an Inbound Message Flow
 
-Before you create your first inbound message flow, you must configure your xref:setup-payload-storage.adoc[payload storage API].
+Before you create your first inbound message flow, you must configure your xref:setup-payload-storage-API.adoc[payload storage API].
 
 . From your Anypoint Partner Manager *Sandbox* or *Production* environment, select *Message Flows* in the left navigation menu.
 . Click *New message flow > Receive from partner* in the upper right of the page.
