@@ -21,7 +21,7 @@ To create a new partner, you need the following information:
 [[create-partner]]
 == Create a Partner
 
-Before you create your first trading partner, you must configure your xref:setup-payload-storage.adoc[payload storage API].
+Before you create your first trading partner, you must configure your xref:setup-payload-storage-API.adoc[payload storage API].
 
 . From within your Anypoint Partner Manager environment, select *Partners* from the left navigation.
 . Click *New partner*.
