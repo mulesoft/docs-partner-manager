@@ -73,7 +73,7 @@ Allowed values include:
 |Yes
 
 |<Host> public certificate
-|Your organization’s digital certificate (based on the RSA algorithm) for the AS2 transport protocol.
+|Your organization’s digital certificate for the AS2 transport protocol, based on the RSA algorithm.
 |Yes
 
 |<Host> private key file
