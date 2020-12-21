@@ -39,7 +39,7 @@ Enter a well-formed URL (including the path) that specifies where to send the re
 |Yes
 
 |Response Timeout (milliseconds)
-|The maximum time in milliseconds that the request element blocks the execution of the flow that is waiting for the HTTP response.
+|The maximum time, in milliseconds, that the request element blocks the execution of the flow that is waiting for the HTTP response.
 |No
 |===
 
