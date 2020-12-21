@@ -14,15 +14,15 @@ You can create the STFP identifiers for your organization and for your trading p
 |Name |Description | Required
 
 | Owner
-| The trading partner or host that owns the endpoint. 
+| The trading partner or host that owns the endpoint.
 | Yes
 
 | Protocol
-| The protocol selected in the `Protocol` field of the *New endpoint: Receive from partners* window.
+| The protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window.
 | Yes
 
 |Endpoint Name
-| The name used to identify the endpoint. The value in the `Endpoint Name` field is generated automatically, but can be modified manually.
+| The name used to identify the endpoint. The value in the *Endpoint Name* field is generated automatically, but can be modified manually.
 | Yes
 
 |Description
@@ -38,23 +38,20 @@ You can create the STFP identifiers for your organization and for your trading p
 |Yes
 
 |Username
-|The username for the SFTP Server.
+|The username for the SFTP server.
 |Yes
 
 |Password
-|The password for the SFTP Server.
+|The password for the SFTP server.
 |Yes
 
 |Target Path
-a|The path to the SFTP server EDI files:
-
-* That are generated from outbound message flows
-* Need to be placed for your trading partners
-* Where your backend applications require you to place translated JSON and XML files generated from inbound message flows
+|The path on your SFTP server to EDI files that were generated from outbound message flows. This is also the path on your SFTP server for storing
+translated JSON and XML files generated from inbound message flows.
 |Yes
 
 |Filename pattern
-|The xref:file-name-pattern.adoc[file name pattern] required by your trading partner or backend application
+|The xref:file-name-pattern.adoc[file name pattern] required by your trading partner or backend application.
 |
 |===
 

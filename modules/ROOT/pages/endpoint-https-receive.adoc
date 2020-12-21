@@ -55,4 +55,3 @@ You need to note the API key specified during the creation of the endpoint. Afte
 The backend applications that send JSON or XML payloads to the HTTP receive endpoint must pass the API key in the HTTP request with the configured HTTP header name.
 |
 |===
-

@@ -13,13 +13,13 @@ Create the AS2 identifiers for your organization and your trading partners in th
 | Yes
 
 | Protocol
-| The protocol selected in the `Protocol` field of the *New endpoint: Receive from partners* window.
+| The protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window.
 | Yes
 
 |Endpoint Name
 | The name used to identify the endpoint
 +
-The value in the `Endpoint Name` field is generated automatically but can be modified manually.
+The value in the *Endpoint Name* field is generated automatically but can be modified manually.
 | Yes
 
 |Description
@@ -27,7 +27,7 @@ The value in the `Endpoint Name` field is generated automatically but can be mod
 | No
 
 |Trading partner AS2 URL
-|Your trading partner’s AS2 URL to which outbound EDI transmissions need to be sent to
+|Your trading partner’s AS2 URL to which outbound EDI transmissions need to be sent.
 |Yes
 
 |Connection timeout
@@ -55,11 +55,11 @@ The value in the `Endpoint Name` field is generated automatically but can be mod
 |Yes
 
 |Message subject
-|The user-defined field for MIME Subject header
+|The user-defined field for MIME Subject header.
 |Yes
 
 |Filename pattern
-|xref:file-name-pattern.adoc[File name pattern] as required by your trading partner or backend application
+|xref:file-name-pattern.adoc[File name pattern] as required by your trading partner or backend application.
 |Yes
 
 |Request receipt
@@ -77,7 +77,7 @@ Allowed values include:
 |Yes
 
 |<Host> private key file
-|Your organization’s private key file
+|Your organization’s private key file.
 |Yes
 
 |Key passphrase
@@ -85,11 +85,11 @@ Allowed values include:
 |Yes
 
 |Signature algorithm
-|The algorithm to use when setting the message integrity check value
+|The algorithm to use when setting the message integrity check value.
 |Yes
 
 |MDN signature algorithm
-|The request partner to respond with a signed MDN using this algorithm for calculating MIC
+|The request partner to respond with a signed MDN using this algorithm for calculating MIC.
 |Yes
 
 |Encryption algorithm
