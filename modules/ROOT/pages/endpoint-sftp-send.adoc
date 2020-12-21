@@ -1,21 +1,32 @@
 = SFTP Send Endpoint
 
-Use SFTP endpoints to:
+You can use these settings to set up SFTP endpoints in one of the following contexts:
 
 * Send to partners +
 Send outbound EDI files to your trading partners in outbound message flows.
 * Target at host +
 Send application messages (JSON or XML) to your backend applications in inbound message flows.
 
+You can create the STFP identifiers for your organization and for your trading partners in the respective xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner] profile pages.
+
 [%header%autowidth.spread]
 |===
 |Name |Description | Required
-|Endpoint Name 
-| Name used to refer to the endpoint. The name is auto-populated, but you can overwrite it based on your organization’s naming conventions for consistency.
+
+| Owner
+| The trading partner or host that owns the endpoint.
+| Yes
+
+| Protocol
+| The protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window.
+| Yes
+
+|Endpoint Name
+| The name used to identify the endpoint. The value in the *Endpoint Name* field is generated automatically, but can be modified manually.
 | Yes
 
 |Description
-| Description of the endpoint.
+|The user-defined field for describing the purpose and use of the endpoint.
 | No
 
 |Host
@@ -27,23 +38,20 @@ Send application messages (JSON or XML) to your backend applications in inbound 
 |Yes
 
 |Username
-|Username for the SFTP Server.
+|The username for the SFTP server.
 |Yes
 
 |Password
-|Password for the SFTP Server.
+|The password for the SFTP server.
 |Yes
 
 |Target Path
-a|Path to the SFTP server EDI files:
-
-* That are generated from outbound message flows
-* Need to be placed for your trading partners
-* Where your backend applications require you to place translated JSON and XML files generated from inbound message flows
+|The path on your SFTP server to EDI files that were generated from outbound message flows. This is also the path on your SFTP server for storing
+translated JSON and XML files generated from inbound message flows.
 |Yes
 
 |Filename pattern
-|xref:file-name-pattern.adoc[File name pattern] as required by your trading partner or backend application
+|The xref:file-name-pattern.adoc[file name pattern] required by your trading partner or backend application.
 |
 |===
 
