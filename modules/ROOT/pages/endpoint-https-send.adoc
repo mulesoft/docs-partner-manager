@@ -2,7 +2,7 @@
 
 The HTTP and the secure HTTPS protocol send settings are used with endpoints for sending transmissions to your partner and endpoints that are targets at your organization.
 
-Use the HTTP and HTTPS endpoint to:
+You can use the HTTP and HTTPS endpoint to:
 
 * Send to partners +
 Send outbound EDI files to your trading partners in outbound message flows.
@@ -12,34 +12,37 @@ Send application messages (JSON or XML) to your backend applications in inbound 
 [%header%autowidth.spread]
 |===
 |Name |Description |Required
+| Owner
+| The trading partner or host that owns the endpoint.
+| Yes
+
 |Protocol
-|Select *HTTP* or *HTTPS*. The default is *HTTPS*.
-|Yes 
+| The protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window. You can select *HTTP* or *HTTPS*. The value in this field is set to *HTTPS* by default.
+|Yes
 
 |Endpoint Name
-|Name used to easily identify the function of this endpoint. Names are automatically assigned, but can be overwritten.  
-|Yes 
+|The name used to identify the endpoint. The *Endpoint Name* field is generated automatically, but can be modified manually.
+|Yes
 
 |Description
-|Describe a purpose and any other important details for this endpoint. 
-|No 
+|The user-defined field for describing the purpose and use of the endpoint.
+|No
 
 |URL
-|Target HTTP service to which to send translated EDI, JSON, or XML messages. The URL must be accessible from the runtime environment that processes your B2B integrations. 
+|The target HTTP or HTTPs service to which to send translated EDI, JSON, or XML messages. The URL must be accessible from the runtime environment that processes your B2B integrations.
 Enter a well-formed URL (including the path) that specifies where to send the request, for example:
 `+https://www.mulesoft.com/sendRequest?name=something+`
-|Yes 
+|Yes
 
 |Connection Idle Timeout (milliseconds)
-|The number of milliseconds that a connection can remain idle before it is closed. The default is `30000`.
-|Yes 
+|The connection idle timeout period in milliseconds. The value in this field is set to `30000` by default.
+|Yes
 
 |Response Timeout (milliseconds)
-|Maximum time in milliseconds that the request element blocks the execution of the flow that is waiting for the HTTP response.
-|No 
+|The maximum time, in milliseconds, that the request element blocks the execution of the flow that is waiting for the HTTP response.
+|No
 |===
 
-See xref:Certificates.adoc[Certificates] for more information about configuring certificates in Anypoint Partner Manager.
 
 == Authentication Settings
 
@@ -49,42 +52,43 @@ Depending on how you set up your authentication policy, refer to the appropriate
 |===
 |Authentication Type |Description
 |None
-|No authentication. 
+|No authentication.
 
 |API Key
 a| * HTTP Header Name +
-Header parameter associated with the API Key. +
+The HTTP header parameter associated with the *API Key* value. +
 * API Key +
-Value for the access key you set. 
+The value for the access key you set.
 
 |Basic
-a|Specifies a simple authentication policy that protects the API by requiring a username and password when calling apps to make a request. 
+a|Specifies a simple authentication policy that protects the API by requiring a username and password when calling apps to make a request.
 
 * Username +
-Username you set up with this authentication policy
+The username you set up with this authentication policy.
 * Password +
-Password you set up with this authentication policy 
+The password you set up with this authentication policy.
 
 |Client Credentials
 a|* Client ID +
-Client ID provided when registering your application. 
+The client ID provided when registering your application.
 * Client Secret +
-Client secret provided when registering your application.
+The client secret provided when registering your application.
 * Client Header +
-Add the client header. 
+The client header.
 * Client Secret Header +
-Add the client secret header. 
+The client secret header.
 
 |OAuth Token
 a|* Token URL +
-Enter a valid authorization URL. 
+The valid authorization URL.
 * Client ID +
-Client ID provided when registering your application. 
+The client ID provided when registering your application.
 * Client Secret +
-Client secret provided when registering your application.
+The client secret provided when registering your application.
 |===
 
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
 * xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:Certificates.adoc[Certificates]

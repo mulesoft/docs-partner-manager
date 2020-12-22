@@ -7,48 +7,59 @@ Create the AS2 identifiers for your organization and your trading partners in th
 [%header%autowidth.spread]
 |===
 |Setting |Description |Required
+
+| Owner
+| The trading partner or host that owns the endpoint.
+| Yes
+
+| Protocol
+| The protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window.
+| Yes
+
 |Endpoint Name
-|Name used to refer to the endpoint. The name is auto populated, but you can overwrite it based on your organization’s naming conventions for consistency.
-|Yes
+| The name used to identify the endpoint
++
+The value in the *Endpoint Name* field is generated automatically but can be modified manually.
+| Yes
 
 |Description
-|Freeform description of the endpoint.
-|No
+|The user-defined field for describing the purpose and use of the endpoint.
+| No
 
 |Trading partner AS2 URL
-|Your trading partner’s AS2 URL to which outbound EDI transmissions need to be sent to
+|Your trading partner’s AS2 URL to which outbound EDI transmissions need to be sent.
 |Yes
 
 |Connection timeout
-|The timeout for establishing connection to the remote service. 
+|The timeout for establishing connection to the remote service. The value in this field is set to `30 Seconds` by default.
 |Yes
 
 |Retry interval
-|How often to reconnect when unable to connect to the remote AS2 service
+|The frequency of reconnection attempts when unable to connect to the remote AS2 service. The value in this field is set to `30 Seconds` by default.
 |Yes
 
 |Maximum retry attempts
-|How many reconnection attempts to make.
+|The maximum number of reconnection attempts to make.
 |Yes
 
 |<Host> AS2 identifier
-|Your organization’s AS2 identifier
+|Your organization’s AS2 identifier.
 |Yes
 
 |<Partner> AS2 identifier
-|Your trading partner’s AS2 identifier
+|Your trading partner’s AS2 identifier.
 |Yes
 
-|Respond to email address 
-|Email address used as HTTP 'From' header when sending.
+|Respond to email address
+|The email address used as HTTP 'From' header when sending.
 |Yes
 
 |Message subject
-|Free form text for MIME Subject header
+|The user-defined field for MIME Subject header.
 |Yes
 
 |Filename pattern
-|xref:file-name-pattern.adoc[File name pattern] as required by your trading partner or backend application
+|xref:file-name-pattern.adoc[File name pattern] as required by your trading partner or backend application.
 |Yes
 
 |Request receipt
@@ -62,23 +73,23 @@ Allowed values include:
 |Yes
 
 |<Host> public certificate
-|This is your organization’s digital certificate (based on the RSA algorithm) for the AS2 transport protocol). 
+|Your organization’s digital certificate for the AS2 transport protocol, based on the RSA algorithm.
 |Yes
 
 |<Host> private key file
-|Your organization’s private key file
+|Your organization’s private key file.
 |Yes
 
 |Key passphrase
-|This is the passphrase for your private key.
+|The passphrase for your private key.
 |Yes
 
 |Signature algorithm
-|The algorithm to use when setting the message integrity check value
+|The algorithm to use when setting the message integrity check value.
 |Yes
 
 |MDN signature algorithm
-|Request partner to respond with a signed MDN using this algorithm for calculating MIC
+|The request partner to respond with a signed MDN using this algorithm for calculating MIC.
 |Yes
 
 |Encryption algorithm
@@ -86,9 +97,8 @@ Allowed values include:
 |Yes
 
 |MDN response
-|AS2 messages sent from Partner Manager always request the receiver to send a Synchronous MDN receipt back.
-Default: Sync
-|
+|The AS2 messages sent from Partner Manager always request the receiver to send a Synchronous MDN receipt back. The value in this field is set to `Sync` by default.
+| Yes
 |===
 
 == See Also
