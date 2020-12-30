@@ -11,20 +11,20 @@ A message type in Partner Manager can be used in one of the following ways:
 
 Message types are always managed in the host profile page, regardless of whether they are used for a single partner or for multiple trading partners. Additionally, message types are reusable across message flows for different trading partners.
 
-You can create message types from the Host page or from the message flow configuration wizard. When you create message types during message flow configuration, Partner Manager automatically designates the usage for the message type.
+You can create message types from the Host page or from the Message Flow wizard.
 
 == Create a Message Type
 
 . In Partner Manager left navigation, select *<host-name>*.
 . From the *Message types* section host page:
-. Click *New*.
-. In the *Usage* drop-down list, select the message type use:
+.. Click *New*.
+..  In the *Usage* drop-down list, select the message type use:
 * <<receive-and-send-to-partners,*Receive from Partners*>>
 * <<target-at-host,*Target at host*>>
 * <<source-at-host,*Source at host*>>
 * <<receive-and-send-to-partners,*Send to partners*>>
 +
-If you create a message type from the message flow, Partner Manager automatically designates the *Usage* value.
+If you create a message type from the message flow, Partner Manager automatically determines the *Usage* value.
 . Configure the message type according to the usage you selected.
 . Click *Save*. +
 The message type appears in the *Message types* section on the host page.
@@ -32,7 +32,7 @@ The message type appears in the *Message types* section on the host page.
 [[receive-and-send-to-partners]]
 == Receive From and Send To Partners
 
-These are inbound transactions that are received from your trading partners or outbound transactions your organization sends to your trading partners, typically following EDI standards such as X12.
+Inbound transactions that are received from your trading partners or outbound transactions that your organization sends to your trading partners typically follow EDI standards such as X12.
 
 Use the following settings to define X12 as an inbound or outbound message type:
 
@@ -46,7 +46,7 @@ Use the following settings to define X12 as an inbound or outbound message type:
 |Schema a| Options include:
 
 * *Use standard X12-<version>* +
-Applies the standard X12 schema for the version and message type configured
+Applies the standard X12 schema for the version and message type configured.
 * *Customize* +
 Allows you to import a customized xref:connectors::x12-edi/x12-edi-schema-language-reference.adoc[EDI schema language] file, if your requirement is to make adjustments to the standard X12 schema.
 
@@ -60,7 +60,7 @@ Only segment level customization is supported.
 [[target-at-host]]
 == Target at Host
 
-These are application message structure (JSON or XML) to which inbound EDI transactions are translated into and sent to your back-end applications.
+The application message structure (JSON or XML) to which inbound EDI transactions are translated into and sent to your back-end applications.
 
 [%header%autowidth.spread]
 |===
@@ -70,7 +70,7 @@ These are application message structure (JSON or XML) to which inbound EDI trans
 * *XML*
 * *JSON* |None |Yes
 |Schema |Import the XSD or JSON schema file for the message type. |None |Yes
-|Name |Partner Manager automatically generates a message type name from the schema file name. You can override it if you need to. |None |Yes
+|Name |Partner Manager automatically generates a message type name from the schema file name. This value can be modified. |None |Yes
 |===
 
 [[source-at-host]]
@@ -84,7 +84,7 @@ These are application message structure (JSON or XML) to which inbound EDI trans
 * *XML*
 * *JSON* |None |Yes
 |Schema |Import the XSD or JSON schema file for the message type. |None |Yes
-|Message type identifier a|Partner Manager automatically generates a message type identifier from the schema file name, which you can change.
+|Message type identifier a|Partner Manager automatically generates a message type identifier from the schema file name. This value can be modified.
 
 The message identifier value is used in the dynamic message routing for outbound B2B transactions.
 
