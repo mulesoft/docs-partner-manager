@@ -20,17 +20,6 @@ In a message flow, availability depends on the endpoint assignment:
 * Any trading partner can select an endpoint assigned to the host.
 * Only the same trading partner can select an endpoint assigned to that trading partner.
 
-== Types of Endpoints
-
-AnyPoint Partner Manager provides the following types of endpoints:
-
-* Receive endpoints +
-Receive transmissions from your trading partners. These endpoints are resources your organization exposes to your trading partners.
-* Send endpoints +
-Send transmissions to your trading partners.
-* Target endpoints +
-Route messages from trading partners from your organization's internal endpoints The messages routed to the target endpoint are typically validated and transformed before they are routed to the configured target endpoint.
-
 == See Also
 
 * xref:create-endpoint.adoc[Create and Configure Endpoints]
