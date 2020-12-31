@@ -20,3 +20,9 @@ Before you delete an identifier, consider the following:
 . If you want to replace the identifier, click *New* and xref:partner-manager-identifiers.adoc[follow the steps to create an identifier].
 
 After successfully deleting an identifier, you can create a new identifier with the same name as the one you deleted.
+
+== See Also
+
+* xref:configure-host.adoc[Configure and Manage a Host Profile]
+* xref:message-flows.adoc[Message Flows]
+* xref:outbound-message-routing.adoc[Outbound Message Routing]
