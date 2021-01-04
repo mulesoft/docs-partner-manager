@@ -1,12 +1,12 @@
 = Create and Configure an Outbound Message Flow
 
-Create an outbound message flow to receive application messages from your backend systems, transform and send the translated EDI message to your trading partners.
+Create an outbound message flow to receive application messages from your backend systems, transform, and then send the translated EDI message to your trading partners.
 
-After you create the outbound message flow, you configure the receive endpoint, source message type, target message type, and target endpoint. 
+After you create the outbound message flow, you configure the receive endpoint, source message type, target message type, and target endpoint.
 
 == Create an Outbound Message Flow
 
-. From your Anypoint Partner Manager *Sandbox* or *Production* environment, select *Message Flows* in the left navigation menu. 
+. From your Anypoint Partner Manager *Sandbox* or *Production* environment, select *Message Flows* in the left navigation menu.
 . Click *New message flow > Send to partner* in the upper right of the page.
 . Select an existing Partner from the list and click *Select*. +
 A new message flow is created. +
@@ -19,52 +19,51 @@ A new message flow is created. +
 
 . Expand the *Source at <host-name>* section.
 . In *Endpoint:Source at <host-name>*, click *Select*.
-. To use an existing receiving endpoint: 
+. To use an existing receiving endpoint:
 .. Select the endpoint from the list and click *Select* in the lower right side of the page. +
-The endpoint is added to the message flow, and you see a message that tells you the endpoint is missing an identifier. 
+The endpoint is added to the message flow, and a message appears indicating that the endpoint is missing an identifier.
 .. Click *Add* to add a unique identifier for the endpoint.
 . To create a new receiving endpoint:
-.. Click *New* on the right of the search box. 
-.. From the *Owner* drop-down, select the endpoint's owner. 
+.. Click *New* on the right of the search box.
+.. From the *Owner* drop-down, select the endpoint's owner.
 .. From the *Protocol* drop-down, select the protocol and configure it according to the protocol you select:
 * xref:endpoint-https-send.adoc[*HTTP(S)*]
 * xref:endpoint-sftp-send.adoc[*SFTP*]
 . Click *Save*. +
-The endpoint is added to the message flow. 
+The endpoint is added to the message flow.
 
 == Configure the Source Message Type
 
 . Expand the *Source message type* section, and click *Select*.
-. To use an existing message type:
-.. Select the message type from the list and click *Select* in the lower right side of the page. +
-The message type is added to the message flow. 
-. To create a new message type: 
+. To use an existing message type, select the message type from the list and click *Select* in the lower right side of the page. +
+The message type is added to the message flow.
+. To create a new message type:
 .. Click *New* on the right side of the search box.
 .. From *Format*, select either:
-* *XML*
 * *JSON*
-.. From *Schema*, click *Choose file* and browse to the location of your custom schema.  
+* *XML*
+.. From *Schema*, click *Choose file* and browse to the location of your custom schema.
 .. Accept the default value for *Message type identifier* or enter a new value.
-.. Click *Choose file* to browse to the location of the DataWeave map, and select it. 
+.. Click *Choose file* to browse to the location of the DataWeave map, and select it.
 .. Click *Save*.
 . Under the *Reference IDs* section:
-.. Click *Select* to add the reference identifier for the trading partner. 
-.. From the *<host-name> reference ID* drop-down list, select your organization’s internal reference ID (such as business unit name) as it would appear in the data element of the source JSON/XML payload from your backend systems.
+.. Click *Select* to add the reference identifier for the trading partner.
+.. From the *<host-name> reference ID* drop-down list, select your organization’s internal reference ID (such as business unit name) as it would appear in the data element of the source JSON or XML payload from your backend systems.
 
 == Configure the Target Message Type
 
 . Expand the *Message type* section.
-. Click *Select* to select a message type or to create a new message type. 
-. To use an existing message type, select the message type from the list and click *Select*. 
+. Click *Select* to select a message type or to create a new message type.
+. To use an existing message type, select the message type from the list and click *Select*.
 . To create a new message type:
-.. Click *New* on the right of the search box. 
-.. From *Format*, select *X12*. 
+.. Click *New* on the right of the search box.
+.. From *Format*, select *X12*.
 .. From *Version*, select the X12 version.
 .. From *Message type*, select the message type.
 .. From schema select *Use standard X12-<version>-<message-type>* or select *Customize* to define a custom schema.
 .. Click *Save*. +
-The message type and its validation settings are added to the message flow. 
-. In the *Acknowledgment* section, select the *Expect functional acknowledgment* checkbox if you expect to receive functional acknowledgments (997) back from your trading partner. 
+The message type and its validation settings are added to the message flow.
+. In the *Acknowledgment* section, select the *Expect functional acknowledgment* checkbox if you expect to receive functional acknowledgments (997) back from your trading partner.
 . Click *Select* to specify the endpoint from which to receive the acknowledgement transactions from your partner. +
 . Alternatively, you can create a new receive from partner endpoint:
 .. Click *New*.
@@ -75,7 +74,7 @@ The message type and its validation settings are added to the message flow.
 .. Click *Save*.
 . In *Mark overdue after*, accept the default value of *24 Hours* or configure values based on when you want the outbound transaction to be designated as overdue for an acknowledgment, according to the SLAs you have with your trading partner. +
 When functional acknowledgement is not received within the specified timer value, Partner Manager marks the outbound transactions as `Overdue`.
-. In the *X12 Settings* drop-down list, select the X12 settings.  
+. In the *X12 Settings* drop-down list, select the X12 settings.
 +
 By default, Partner Manager uses the X12 send settings that are configured in the trading partner profile page for message validation, delimiters, and character encoding.
 +
@@ -86,7 +85,7 @@ If you want to apply custom validation settings and delimiters for the message f
 
 Expand the *Map* section and click *Import* to translate the application message format to EDI.
 
-Follow xref:create-map-json-xml-to-outbound-x12.adoc[these instructions] to create your application message-to-outbound EDI map (XML or JSON) in Anypoint Studio.
+Follow xref:create-map-json-xml-to-outbound-x12.adoc[these instructions] to create your application message-to-outbound EDI map (JSON or XML) in Anypoint Studio.
 
 == Verify the Message Flow is Complete
 

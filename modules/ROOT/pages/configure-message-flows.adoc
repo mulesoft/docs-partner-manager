@@ -1,6 +1,6 @@
 = Create and Configure an Inbound Message Flow
 
-Before you can communicate with your trading partners, you must create an inbound message flow and then configure a receive endpoint, configure a message source type, import a translation map, and configure the target message type and endpoint.
+Before you can communicate with your trading partners, you must create an inbound message flow. You must then configure a receive endpoint, configure a message source type, import a translation map, and configure the target message type and endpoint.
 
 == Create an Inbound Message Flow
 
