@@ -11,7 +11,7 @@ A message type in Partner Manager can be used in one of the following ways:
 
 Message types are always managed in the host profile page, regardless of whether they are used for a single partner or for multiple trading partners. Additionally, message types are reusable across message flows for different trading partners.
 
-You can create message types from the Host page or from the Message Flow wizard.
+You can create message types from the Host page or from the Message Flow wizard. When you create message types during message flow configuration, Partner Manager automatically designates the usage for the message type.
 
 == Create a Message Type
 
@@ -74,7 +74,7 @@ The application message structure (JSON or XML) to which inbound EDI transaction
 
 [[source-at-host]]
 == Source at Host
-The DESCRIPTION REQUIRED.
+Application message structures (JSON or XML) from your back-end applications that get translated into  outbound EDI transactions and sent to your trading partners.
 
 [%header%autowidth.spread]
 |===
