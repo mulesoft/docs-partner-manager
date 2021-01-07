@@ -1,6 +1,6 @@
 = Create and Configure an Inbound Message Flow
 
-Before you can communicate with your trading partners, you must create an inbound message flow. You must then configure a receive endpoint, configure a message source type, import a translation map, and configure the target message type and endpoint.
+Create an inbound message flow to receive EDI messages from your trading partners, validate, transform, and then send the translated application (JSON/XML) message to your back-end applications.
 
 == Create an Inbound Message Flow
 
