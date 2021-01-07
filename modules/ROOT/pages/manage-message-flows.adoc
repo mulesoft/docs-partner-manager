@@ -1,36 +1,38 @@
 = Manage Message Flows
 
-After your message flow is running and you are using it with your partners, it doesn't require a lot of maintenance, but you can manage a message flow anytime, for example:
+Active message flows between you and your partners don't require much maintenance. You might need to modify your message flow to:
 
-* If you are no longer trading with a particular partner and need to delete the message flow you created for them.
-* You completed the testing for a deployed message flow in a pre-production environment, and now want to reclaim the previously allocated Mule runtime engine resources.
-* You want to change a message flow by adding identifiers, selecting different endpoints, or importing a different DataWeave map.
-
+* Deleting the flow when it becomes inactive
+* Switching from a sandbox environment and reclaiming production-environment resources
+* Changing flow identifiers, endpoints, or maps
 
 [[edit-message-flows]]
 == Edit Inbound Message Flows
 
-After you establish a successful inbound message flow with your partner, you can edit the flow to add identifiers, endpoints and message types, or add different DataWeave maps.
+After establishing a successful inbound message flow with your partner, you can modify the flow to add identifiers, endpoints, message types, or different DataWeave maps.
 
-Before you make changes, carefully consider the impact on your existing message flow.
+[IMPORTANT]
+Before making changes, carefully consider the impact on your existing message flow.
 
-. From the Anypoint Partner Manager menu on the left, select *Message Flows* in the upper left, select a *<Message flow name>* and click it to expand it.
-. To add an identifier to the message flow, click *See All* and then *New*.
-. To change a receiving endpoint, click *Select* from the *Receiving endpoint* section, click *New*, select your AS2 or SFTP protocol type.
-. To create a new endpoint, see xref:create-endpoint.adoc[Create and Configure Endpoints].
-. To replace your existing DataWeave map, click *Import* from the Map section to choose a different DataWeave map and click *Upload mapping*.
-. To view the map, you can download it by clicking the `<name>.dwl` link.
+. In the left navigation menu, select *Message Flows* and then then *<Message flow name>*. +
+The selected message flow appears.
+. In the message flow:
+.. To add an identifier to the message flow, click *See All* and then *New*.
+.. To change a receiving endpoint, click *Select* from the *Receiving endpoint* section, click *New*, and then select your AS2 or SFTP protocol type.
+.. To create a new endpoint, see xref:create-endpoint.adoc[Create and Configure Endpoints].
+.. To replace your existing DataWeave map, click *Import* in the *Map* section, and then click *Upload mapping*.
+.. To view the map, you can download it by clicking the `<name>.dwl` link.
 +
 For more information about DataWeave map files, https://docs.mulesoft.com/mule-runtime/4.1/dataweave[DataWeave Language]
 +
-. To add a message type, click *Select* under the Source message, select *New*, and select a standard type such as X12 or JSON.
-. To set up a target endpoint, click *Select* from the _Target at <partner name>_, and depending on the protocol, refer to one of the following:
+.. To add a message type, click *Select* under the Source message, click *New*, and then select a standard type such as X12 or JSON.
+.. To set up a target endpoint, click *Select* from the _Target at <partner name>_, and depending on the protocol, refer to one of the following:
 +
 * xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
 
 * xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
 +
-. Verify that any sections of the flow that you updated show a green checkmark next to them, and click *Deploy* to deploy the configurations to Mule.
+. Verify that any modified sections of the flow show a green checkmark next to them and then click *Deploy* to deploy the configurations to Mule.
 +
 [NOTE]
 It can take five minutes or so for your configuration changes to sync with Mule.
@@ -41,27 +43,29 @@ After you confirm the successful deployment of your message flow, you can track 
 
 == Manage Outbound Message Flows
 
-After you establish a successful outbound message flow with your partner, you can edit the flow to add identifiers, endpoints and message types, or add different DataWeave maps.
+After establishing a successful outbound message flow with your partner, you can edit the flow to add identifiers, endpoints, message types, or different DataWeave maps.
 
-Before you make changes, carefully consider the impact on your existing message flow.
+[IMPORTANT]
+Before making changes, carefully consider the impact on your existing message flow.
 
-. From the Anypoint Partner Manager menu on the left, select *Message Flows* in the upper left, select a *<Message flow name>* and click it to expand it.
-. To change the outbound endpoint, click *Select* from the *Endpoint: Source at <host>*, select the endpoint, and click *Save*.
-. To create a new outbound endpoint, see xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow].
-. To update your reference IDs, expand *Reference IDs* and select the new reference IDs from the drop-down menus.
-. To replace your existing DataWeave map, click *Import* from the *Map* section to choose a different DataWeave map and click *Upload mapping*.
-. To view the map, you can download it by clicking the `<name>.dwl` link.
+. In the left navigation menu, select *Message Flows* and then select *<Message flow name>*.
+. In the message flow:
+.. To change the outbound endpoint, click *Select* from the *Endpoint: Source at <host>*, select the endpoint, and click *Save*.
+.. To create a new outbound endpoint, see xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow].
+.. To update your reference IDs, expand *Reference IDs* and select the new reference IDs from the drop-down menus.
+.. To replace your existing DataWeave map, click *Import* from the *Map* section and click *Upload mapping*.
+.. To view the map, you can download it by clicking the `<name>.dwl` link.
 +
 For more information about DataWeave map files, https://docs.mulesoft.com/mule-runtime/4.1/dataweave[DataWeave Language]
 +
-. To update your message type, click *Select* under the Source message and select a message type from the drop-down list. +
+.. To update your message type, click *Select* under the Source message and select a message type from the drop-down list. +
 To create a new message type for the outbound message flow, click *New*. +
 See xref:partner-manager-create-message-type.adoc[Create and Configure Message Types].
-. Verify that any sections of the flow that you updated show a green checkmark next to them, and click *Deploy* to deploy the configurations to Mule.
+. Verify that any modified sections of the flow show a green checkmark next to them and then click *Deploy* to deploy the configurations to Mule.
 +
 [NOTE]
 It can take five minutes or so for your configuration changes to sync with Mule.
-+
+
 . To test your edited message flow. See xref:deploy-message-flows.adoc[Deploy and Test Message Flows].
 
 After you confirm the successful deployment of your message flow, you can track its processed messages from the *Activity* page.
@@ -77,20 +81,20 @@ You can delete your message flow from either a sandbox or a production environme
 If you delete a message flow before it is deployed, it does not affect the Mule apps.
 
 [NOTE]
-For on-premises installations, you must xref:deploy-message-flows#undeploy-message-flows[undeploy a message flow] before you can delete it. 
+For on-premises installations, you must xref:deploy-message-flows#undeploy-message-flows[undeploy a message flow] before you can delete it.
 
 === Steps
 
 After the undeployment is successful, delete the message flow:
 
-. In the Partner Manager left navigation menu, select *Message Flows*.
+. In the left navigation menu, select *Message Flows*.
 . Select the message flow to delete from the list and click *Delete* in the upper right of the screen.
 
 Any previous transmissions that were created as a result of a message being processed by the message flow you deleted have the following behavior:
 
-* The transmissions continue to stay in the transmission records within the *Activity* page, but the records indicate that the corresponding message flow used to process the transmission is now deleted.
+* The transmissions continue to stay in the transmission records within the *Activity* page; however, the records indicate that the corresponding message flow used to process the transmission is now deleted.
 * These activities are converted into read-only mode, so no links to the message flow work.
-* Only links to the stored payloads (such as the original B2B message, any TA1 acknowledgments, the transformed payload, on so on) that were set up continue to work.
+* Only links to the stored payloads (such as the original B2B message, any TA1 acknowledgments, the transformed payload, on so on) continue to work.
 
 
 == See Also
