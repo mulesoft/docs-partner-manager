@@ -22,7 +22,7 @@ Ownership of the endpoints (receive or send) is automatically assigned based on 
 * *Endpoints: Send to partners*
 * *Endpoints: Target at <host-name>*
 * *Endpoints: Source at <host-name>*
-. <<configure-endpoint,Configure the endpoint>> according to the type of endpoint you are creating and the protocol you selected in the *New endpoint: <endpoint-type>* window.
+. <<configure-endpoint,Configure the endpoint>> type and compatibility with the protocol you selected in the *New endpoint: <endpoint-type>* window.
 . Click *Save*.
 
 == Create and Configure Endpoints using the Message Flow Wizard
