@@ -11,15 +11,14 @@ A message type in Partner Manager can be used in one of the following ways:
 
 Message types are always managed in the host profile page, regardless of whether they are used for a single partner or for multiple trading partners. Additionally, message types are reusable across message flows for different trading partners.
 
-You can create message types from the Host page or from the Message Flow wizard. When you create message types during message flow configuration, Partner Manager automatically designates the usage for the message type.
+You can create message types from the host page or from the Message Flow wizard. When you create message types during message flow configuration, Partner Manager automatically designates the usage for the message type.
 
 == Create a Message Type
 
 . In Partner Manager left navigation, select *<host-name>*.
-. From the *Message types* section host page:
-.. Click *New*.
-..  In the *Usage* drop-down list, select the message type:
-* <<receive-and-send-to-partners,*Receive from Partners*>>
+. From the *Message types* section host page, click *New*.
+. In the *Usage* drop-down list, select the message type:
+* <<receive-and-send-to-partners,*Receive from partners*>>
 * <<target-at-host,*Target at host*>>
 * <<source-at-host,*Source at host*>>
 * <<receive-and-send-to-partners,*Send to partners*>>
@@ -39,9 +38,9 @@ Use the following settings to define X12 as an inbound or outbound message type:
 |===
 |Setting |Description |Default | Required
 |Format | The format of the message. |`X12`|Yes
-|Version | Select a version from the drop-down list. Valid values include: `3010`, `3020`, `3030`, `3040`, `3050`, `3060`, `3070`, `4010`, `4020`, `4030`, `4040`, `4050`, `4060`, `5010`, `5020`, `5030`, `5040`, `5050`, `6020`, `6030`, `6040`, `6050`, `7010`, `7020`, `7030`, `7040`, `7050`
+|Version | List of valid versions: `3010`, `3020`, `3030`, `3040`, `3050`, `3060`, `3070`, `4010`, `4020`, `4030`, `4040`, `4050`, `4060`, `5010`, `5020`, `5030`, `5040`, `5050`, `6020`, `6030`, `6040`, `6050`, `7010`, `7020`, `7030`, `7040`, `7050`
  | None |Yes
-|Message Type |The X12 transaction set number, such as `850` for Purchase Order or `214` for Shipment Status. |None | Yes
+|Message Type |The X12 transaction set number, such as `850` for *Purchase Order* or `214` for *Shipment Status*. |None | Yes
 |Schema a| The EDI schema for the message type. Options include:
 
 * *Use standard X12-<version>* +
