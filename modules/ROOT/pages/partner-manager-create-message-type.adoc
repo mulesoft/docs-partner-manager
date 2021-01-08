@@ -103,7 +103,7 @@ Required identifier that uniquely identifies the receiving partner.
 * `hostReferenceId` +
 Optional, except when backend systems are sending outbound transactions on behalf of different internal business units that require different mapping or sender identifiers to be set on the EDI data.
 * `businessDocumentKey` +
-Optional key reference value, such as `Order Number`, `Invoice Number`, and so on.
+Optional key reference value, such as `Order Number`or `Invoice Number`.
 
 This is an example DataWeave map for an XML payload from the backend application:
 
