@@ -69,7 +69,7 @@ The application message structure (JSON or XML) to which inbound EDI transaction
 * *XML*
 * *JSON* |None |Yes
 |Schema |The imported XSD or JSON schema file for the message type. |None |Yes
-|Name |Partner Manager automatically generates a message type name from the schema file name. This value can be modified. |None |Yes
+|Name |The message type name that Partner Manager automatically generates from the schema file name, which you can later modify |None |Yes
 |===
 
 [[source-at-host]]
