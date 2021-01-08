@@ -1,6 +1,6 @@
 = Create and Configure Endpoints
 
-You can create endpoints in the host, or partner page or by using the Message Flow wizard.
+You can create endpoints in the host or partner page or by using the Message Flow wizard.
 
 == Create and Configure Endpoints from the Partner Page
 
