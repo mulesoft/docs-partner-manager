@@ -24,7 +24,7 @@ The following are the supported property placeholders and the dynamic value the 
 |${timeInMillis} |Milliseconds: 345
 |${ICN} |Interchange Control Number
 |${BusKey} |Primary Business Key value, for example, `PO12345`
-|${formatTypeExt} a|Format of the file. Possible values include:
+|${formatTypeExt} a|File format, either JSON or X12
 
 * JSON
 * X12
