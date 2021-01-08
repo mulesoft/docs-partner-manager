@@ -25,7 +25,7 @@ Ownership of the endpoints (receive or send) is automatically assigned based on 
 . <<configure-endpoint,Configure the endpoint>> type and compatibility with the protocol you selected in the *New endpoint: <endpoint-type>* window.
 . Click *Save*.
 
-== Create and Configure Endpoints using the Message Flow Wizard
+== Create and Configure Endpoints Using the Message Flow Wizard
 
 When creating endpoint types using the Message Flow wizard, Partner Manager automatically designates the usage. Using the Message Flow wizard, you can xref:configure-message-flows.adoc[Create and Configure an Inbound Message Flow] or xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow].
 
