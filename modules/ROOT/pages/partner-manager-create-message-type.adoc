@@ -47,7 +47,7 @@ Use the following settings to define X12 as an inbound or outbound message type:
 * *Use standard X12-<version>* +
 Applies the standard X12 schema for the version and message type configured.
 * *Customize* +
-Allows you to import a customized xref:connectors::x12-edi/x12-edi-schema-language-reference.adoc[EDI schema language] file, if your requirement is to make adjustments to the standard X12 schema.
+Enables you to import a customized xref:connectors::x12-edi/x12-edi-schema-language-reference.adoc[EDI schema language] file, if your requirement is to make adjustments to the standard X12 schema.
 +
 When using customized EDI schema, you can assign a custom name to the message type definition, for example, `X12-7050-204-PartnerName`.
 
