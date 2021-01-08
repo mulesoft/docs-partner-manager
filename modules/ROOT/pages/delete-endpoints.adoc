@@ -1,19 +1,14 @@
 = Delete Endpoints
 
-You can delete endpoints that are not used in message flow configurations from the Host or Partner page:
+You can delete endpoints that are not used in message flows from the host or partner page:
 
-. From your Anypoint Partner Manager *Sandbox* or *Production* environment, select the *<host name>* or *Partners* from the left navigation menu.  
-. Search for the endpoint you want to delete by name, protocol, URL, or description.
+. From Anypoint Partner Manager, select the *<host name>* or *Partners* from the left navigation menu.
+. Locate the endpoint that you want to delete.
 +
-From the Host page, you can search from within *Endpoints: Receive from <partner name>*, *Endpoints: Targets at <partner name>*. 
+Note that you can search for any endpoints that don’t have an associated message flow by looking for `0` in the *Message Flows* column.
 +
-From the Partner page you can search for an endpoint from within *Endpoints: Receive from <partner name>* or *Endpoints: Send to <partner name>*.
-. If you can’t remember what to search for, scan the list for any endpoints that don’t have a message flow associated with them.
-+
-Endpoints that are not associated with a message flow are indicated by a `0` in the message flow column.
-+
-. Hover over the endpoint name until you see the garbage can icon.
-. Select the trashcan icon and then click *Delete*.
+. In the row containing the endpoint that you want to delete, hover over the endpoint name, select the trashcan icon that appears, and click *Delete*.
+. Select the trashcan icon and click *Delete*.
 
 == See Also
 
