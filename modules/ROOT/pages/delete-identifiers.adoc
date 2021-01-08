@@ -12,7 +12,6 @@ Before you delete an identifier, consider the following:
 * If you need to replace the identifier with another identifier, record the required values and qualifier type.
 
 
-== Deleting Identifiers
 
 . In the left navigation menu, select *Partners*.
 . From the list of partners, select the partner containing the identifier you want to delete.
