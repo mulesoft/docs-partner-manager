@@ -31,7 +31,7 @@ The message type appears in the *Message types* section on the host page.
 [[receive-and-send-to-partners]]
 == Receive From and Send To Partners
 
-Inbound transactions that are received from your trading partners or outbound transactions that your organization sends to your trading partners typically follow EDI standards such as X12.
+Inbound and outbound transactions between your organization and your trading partners typically follow EDI standards such as X12.
 
 Use the following settings to define X12 as an inbound or outbound message type:
 
