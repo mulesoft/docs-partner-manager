@@ -6,7 +6,7 @@ After you create the outbound message flow, you configure the receive endpoint, 
 
 == Create an Outbound Message Flow
 
-. From your Anypoint Partner Manager *Sandbox* or *Production* environment, select *Message Flows* in the left navigation menu.
+. From your Anypoint Partner Manager sandbox or production environment, select *Message Flows* in the left navigation menu.
 . Click *New message flow > Send to partner* in the upper right of the page.
 . Select an existing Partner from the list and click *Select*. +
 A new message flow is created. +
