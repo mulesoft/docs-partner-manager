@@ -1,6 +1,6 @@
 = Create and Configure Endpoints
 
-You can create endpoints in the host or partner page, or by using the Message Flow wizard.
+You can create endpoints in the host or partner page or by using the Message Flow wizard.
 
 == Create and Configure Endpoints from the Partner Page
 
@@ -22,14 +22,12 @@ Ownership of the endpoints (receive or send) is automatically assigned based on 
 * *Endpoints: Send to partners*
 * *Endpoints: Target at <host-name>*
 * *Endpoints: Source at <host-name>*
-. <<configure-endpoint,Configure the endpoint>> according the type of endpoint you are creating and the protocol you selected in the *New endpoint: <endpoint-type>* window.
+. <<configure-endpoint,Configure the endpoint>> type and compatibility with the protocol you selected in the *New endpoint: <endpoint-type>* window.
 . Click *Save*.
 
-== Create and Configure Endpoints using the Message Flow Wizard
+== Create and Configure Endpoints Using the Message Flow Wizard
 
 When creating endpoint types using the Message Flow wizard, the ownership of the endpoint is automatically assigned to the host or trading partner from which the endpoint was created. Using the Message Flow wizard, you can xref:configure-message-flows.adoc[Create and Configure an Inbound Message Flow] or xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow].
-
-
 
 == Supported Endpoint Protocols
 
@@ -56,3 +54,7 @@ The values for the endpoint's settings vary according to the protocol-type of th
 * xref:endpoint-sftp-send.adoc[SFTP Send Endpoint Settings]
 * xref:endpoint-https-receive.adoc[HTTP and HTTPS Receive Endpoint Settings]
 * xref:endpoint-https-send.adoc[HTTP and HTTPS Send Endpoint Settings]
+
+== See Also
+
+* xref:endpoints.adoc[Endpoints]
