@@ -54,8 +54,8 @@ The message type is added to the message flow.
 
 . Expand the *Message type* section.
 . Click *Select* to select a message type or to create a new message type.
-. To use an existing message type, select the message type from the list and click *Select*.
-. To create a new message type:
+. To use an existing message type, select the message type from the list and click *Select*:
+.. To create a new message type:
 .. Click *New* on the right of the search box.
 .. From *Format*, select *X12*.
 .. From *Version*, select the X12 version.
