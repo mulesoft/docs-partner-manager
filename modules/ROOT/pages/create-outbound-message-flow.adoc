@@ -1,32 +1,26 @@
 = Create and Configure an Outbound Message Flow
 
-Create an outbound message flow to receive application messages from your backend systems, transform, and then send the translated EDI message to your trading partners.
-
-After you create the outbound message flow, you configure the receive endpoint, source message type, target message type, and target endpoint.
+Create an outbound message flow to receive application messages from your backend systems, validate and transform these messages, and then send the translated EDI message to your trading partners.
 
 == Create an Outbound Message Flow
 
 . From your Anypoint Partner Manager sandbox or production environment, select *Message Flows* in the left navigation menu.
 . Click *New message flow > Send to partner* in the upper right of the page.
-. Select an existing Partner from the list and click *Select*. +
+. Select an existing partner from the list and click *Select* or select *New* to xref:configure-partner.adoc#create-partner[create a trading partner]. +
 A new message flow is created. +
-. Alternatively, you can create a new partner:
-.. From the *Select a partner* dialog, click *New* to create a new partner.
-.. Follow the process to xref:configure-partner.adoc#create-partner[create a Trading Partner].
-.. Click *Create Partner and Message Flow*.
 
 == Configure the Source at Host Endpoint
 
 . Expand the *Source at <host-name>* section.
-. In *Endpoint:Source at <host-name>*, click *Select*.
-. To use an existing receiving endpoint:
-.. Select the endpoint from the list and click *Select* in the lower right side of the page. +
+. In *Endpoint: Source at <host-name>*, click *Select*.
+.. To use an existing receiving endpoint:
+... Select the endpoint from the list and click *Select* in the lower right side of the page. +
 The endpoint is added to the message flow, and a message appears indicating that the endpoint is missing an identifier.
-.. Click *Add* to add a unique identifier for the endpoint.
-. To create a new receiving endpoint:
-.. Click *New* on the right of the search box.
-.. From the *Owner* drop-down list, select the endpoint's owner.
-.. From the *Protocol* drop-down, select the protocol and configure it according to the protocol you select:
+... Click *Add* to add a unique identifier for the endpoint.
+.. To create a new receiving endpoint:
+... Click *New* on the right of the search box.
+... From the *Owner* drop-down list, select the endpoint's owner.
+... From the *Protocol* drop-down, select the protocol and configure it according to the protocol you select:
 * xref:endpoint-https-send.adoc[*HTTP(S)*]
 * xref:endpoint-sftp-send.adoc[*SFTP*]
 . Click *Save*. +
@@ -34,21 +28,20 @@ The endpoint is added to the message flow.
 
 == Configure the Source Message Type
 
-. Expand the *Source message type* section, and click *Select*.
-. To use an existing message type, select the message type from the list and click *Select* in the lower right side of the page. +
-The message type is added to the message flow.
-. To create a new message type:
-.. Click *New* on the right side of the search box.
-.. From *Format*, select either:
+. Expand the *Source at <host>* section, and click *Select*.
+.. To use an existing message type, select the message type from the list and click *Select* in the lower right side of the page. +
+.. To create a new message type:
+... Click *New* on the right side of the search box.
+... From *Format*, select either:
 * *JSON*
 * *XML*
-.. From *Schema*, click *Choose file* and browse to the location of your custom schema.
-.. Accept the default value for *Message type identifier* or enter a new value.
-.. Click *Choose file* to browse to the location of the DataWeave map and select it.
-.. Click *Save*.
-. Under the *Reference IDs* section:
-.. Click *Select* to add the reference identifier for the trading partner.
-.. From the *<host-name> reference ID* drop-down list, select your organization’s internal reference ID (such as business unit name) as it would appear in the data element of the source JSON or XML payload from your backend systems.
+... From *Schema*, click *Choose file* and browse to the location of your custom schema.
+... Accept the default value for *Message type identifier* or enter a new value.
+... Click *Choose file* to browse to the location of the DataWeave map and select it.
+... Click *Save*.
+. Under the *Reference IDs* section, click *Select* to add the reference identifier for the trading partner.
+. From the *<host-name> reference ID* drop-down list, select your organization’s internal reference ID (such as business unit name) as it would appear in the data element of the source JSON or XML payload from your backend systems. +
+The message type is added to the message flow.
 
 == Configure the Target Message Type
 
