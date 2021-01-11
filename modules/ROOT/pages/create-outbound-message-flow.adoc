@@ -25,7 +25,7 @@ The endpoint is added to the message flow, and a message appears indicating that
 .. Click *Add* to add a unique identifier for the endpoint.
 . To create a new receiving endpoint:
 .. Click *New* on the right of the search box.
-.. From the *Owner* drop-down, select the endpoint's owner.
+.. From the *Owner* drop-down list, select the endpoint's owner.
 .. From the *Protocol* drop-down, select the protocol and configure it according to the protocol you select:
 * xref:endpoint-https-send.adoc[*HTTP(S)*]
 * xref:endpoint-sftp-send.adoc[*SFTP*]
