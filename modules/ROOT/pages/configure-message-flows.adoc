@@ -55,7 +55,7 @@ Follow xref:partner-manager-maps.adoc[these instructions] to create your inbound
 == Configure the Target Message Type
 
 . In the message flow, expand the *Target at <your organization>* section.
-. Click *Select* to select the message type for your backend system to map the EDI transaction. +
+. Select a message type for your backend system to use to map the EDI transaction. +
 Partner Manager routes inbound EDI transactions based on matching identifiers configured at the Partner level.
 
 == Configure the Target Endpoint
