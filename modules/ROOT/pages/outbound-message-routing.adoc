@@ -15,7 +15,7 @@ When messages are received by the endpoint, Partner Manager routes the payload t
 ** File name for SFTP
 * The payload is validated against the schema supplied during the message type definition.
 * Partner Manager leverages the DataWeave map supplied during the source at host message type definition to extract the partner reference ID, host reference ID, and business key.
-* The partner reference identifier and host reference identifier (optional) are used to resolve the message flow through which the transaction must be processed as shown in the following diagram:
+* The partner reference identifier and optional host reference identifier specify the message flow through which the transaction is processed:
 
 image::outbound-message-routing.png[Outbound message routing flow diagram]
 
