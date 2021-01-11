@@ -9,23 +9,23 @@ A message type in Partner Manager can be used in one of the following ways:
 * Source at host
 * Send to partners
 
-Message types are always managed in the host profile page, regardless of whether they are used for a single partner or for multiple trading partners. Additionally, message types are reusable across message flows for different trading partners.
+Message types are always managed in the host page , regardless of whether they are used for a single partner or for multiple trading partners. Additionally, message types are reusable across message flows for different trading partners.
 
-You can create message types from the host page or from the Message Flow wizard. When you create message types during message flow configuration, Partner Manager automatically designates the usage for the message type.
+You can create message types from the host page  or from the Message Flow wizard. When you create message types during message flow configuration, Partner Manager automatically designates the usage for the message type.
 
 == Create a Message Type
 
 . In Partner Manager left navigation, select *<host-name>*.
-. From the *Message types* section host page, click *New*.
+. From the *Message types* section host page , click *New*.
 . In the *Usage* drop-down list, select the message type:
 * <<receive-and-send-to-partners,*Receive from partners*>>
 * <<target-at-host,*Target at host*>>
 * <<source-at-host,*Source at host*>>
 * <<receive-and-send-to-partners,*Send to partners*>>
 +
-If you create a message type from the message flow, Partner Manager automatically determines the *Usage* value.
+If you create a message type from the message flow, Partner Manager automatically determines the *Usage* value, which is automatically assigned to the host or trading partner from which the message type was created.
 . Click *Save*. +
-The message type appears in the *Message types* section on the host page.
+The message type appears in the *Message types* section on the host page .
 
 [[receive-and-send-to-partners]]
 == Receive From and Send To Partners
@@ -41,12 +41,12 @@ Use the following settings to define X12 as an inbound or outbound message type:
 |Version | List of valid versions: `3010`, `3020`, `3030`, `3040`, `3050`, `3060`, `3070`, `4010`, `4020`, `4030`, `4040`, `4050`, `4060`, `5010`, `5020`, `5030`, `5040`, `5050`, `6020`, `6030`, `6040`, `6050`, `7010`, `7020`, `7030`, `7040`, `7050`
  | None |Yes
 |Message Type |The X12 transaction set number, such as `850` for *Purchase Order* or `214` for *Shipment Status*. |None | Yes
-|Schema a| The EDI schema for the message type. Options include:
+|Schema a|The EDI schema for the message type. Options include:
 
 * *Use standard X12-<version>* +
-Applies the standard X12 schema for the version and message type configured.
+This setting applies the standard X12 schema for the version and message type configured.
 * *Customize* +
-Enables you to import a customized xref:connectors::x12-edi/x12-edi-schema-language-reference.adoc[EDI schema language] file, if your requirement is to make adjustments to the standard X12 schema.
+This setting enables you to import a customized xref:connectors::x12-edi/x12-edi-schema-language-reference.adoc[EDI schema language] file, if your requirement is to make adjustments to the standard X12 schema.
 +
 When using customized EDI schema, you can assign a custom name to the message type definition, for example, `X12-7050-204-PartnerName`.
 
@@ -58,34 +58,38 @@ Only segment level customization is supported.
 [[target-at-host]]
 == Target at Host
 
-The application message structure (JSON or XML) to which inbound EDI transactions are translated and sent to your back-end applications.
+The target at host application message structure (JSON or XML) defines the way in which inbound EDI transactions are translated and sent to your back-end applications.
+
+Use the following settings to define JSON or XML settings for inbound EDI transactions:
 
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default | Required
 |Format a|The selected application message structure format:
 
-* *XML*
-* *JSON* |None |Yes
+* *JSON*
+* *XML* |None |Yes
 |Schema |The imported XSD or JSON schema file for the message type. |None |Yes
-|Name |The message type name that Partner Manager automatically generates from the schema file name, which you can later modify |None |Yes
+|Name |The message type name that Partner Manager automatically generates from the schema file name, which you can later modify. |None |Yes
 |===
 
 [[source-at-host]]
 == Source at Host
-Application message structures (JSON or XML) from your back-end applications that get translated into  outbound EDI transactions and sent to your trading partners.
+The source at host application message structure (JSON or XML) defines the way in which your back-end applications translate outbound EDI transactions and sent them to your trading partners.
+
+Use the following settings to define JSON or XML settings for outbound EDI transactions:
 
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default | Required
 |Format a|The selected application message structure format:
 
-* *XML*
-* *JSON* |None |Yes
+* *JSON*
+* *XML* |None |Yes
 |Schema |The imported XSD or JSON schema file for the message type. |None |Yes
 |Message type identifier a|Partner Manager automatically generates a message type identifier from the schema file name. This value can be modified.
 
-The message identifier value is used in the dynamic message routing for outbound B2B transactions.
+The message identifier value used in the dynamic message routing for outbound B2B transactions.
 
 See xref:outbound-message-routing.adoc[Outbound Message Routing] to understand how this routing is performed and how your backend applications should pass the message type identifier when sending application messages to Partner Manager endpoints. |None |Yes
 

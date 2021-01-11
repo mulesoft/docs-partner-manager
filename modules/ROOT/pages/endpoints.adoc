@@ -17,6 +17,7 @@ You can assign the host or a trading partner as the owner of partner-facing endp
 When creating partner-facing endpoints directly from the host or a trading partner, the ownership of the endpoint is automatically assigned to the host or trading partner from which the endpoint was created.
 
 In a message flow, availability depends on the endpoint assignment:
+
 * Any trading partner can select an endpoint assigned to the host.
 * Only the same trading partner can select an endpoint assigned to that trading partner.
 
