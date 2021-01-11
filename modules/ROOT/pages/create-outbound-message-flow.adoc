@@ -63,7 +63,7 @@ The message type is added to the message flow.
 .. From schema select *Use standard X12-<version>-<message-type>* or select *Customize* to define a custom schema.
 .. Click *Save*. +
 The message type and its validation settings are added to the message flow.
-. In the *Acknowledgment* section, select the *Expect functional acknowledgment* checkbox if you expect to receive functional acknowledgments (997) back from your trading partner.
+. In the *Acknowledgment* section, select *Expect functional acknowledgment* if you expect your partner to return functional acknowledgments (997).
 . Click *Select* to specify the endpoint from which to receive the acknowledgement transactions from your partner. +
 . Alternatively, you can create a new receive from partner endpoint:
 .. Click *New*.
