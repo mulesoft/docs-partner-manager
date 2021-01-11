@@ -1,6 +1,6 @@
 = Outbound Message Routing
 
-Partner Manager’s outbound message processing framework provides the flexibility to implement receive endpoints in a variety of ways.
+The Partner Manager outbound message processing framework enables you to implement receive endpoints in a variety of ways:
 
 You can:
 
