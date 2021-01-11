@@ -44,7 +44,7 @@ The message type is added to the message flow.
 * *XML*
 .. From *Schema*, click *Choose file* and browse to the location of your custom schema.
 .. Accept the default value for *Message type identifier* or enter a new value.
-.. Click *Choose file* to browse to the location of the DataWeave map, and select it.
+.. Click *Choose file* to browse to the location of the DataWeave map and select it.
 .. Click *Save*.
 . Under the *Reference IDs* section:
 .. Click *Select* to add the reference identifier for the trading partner.
