@@ -17,7 +17,7 @@ Send messages to trading partners. An outbound message flow receives application
 [[inbound-message-flow]]
 == Inbound Message Flows
 
-Create an inbound message flow to receive EDI transactions from your trading partner, transform, and then send the translated application message to your backend systems.
+Create an inbound message flow to receive and translate application messages from your partner and forward them to your backend systems:
 
 image::inbound-message-flow.png[Inbound message flow configuration building blocks diagram]
 
