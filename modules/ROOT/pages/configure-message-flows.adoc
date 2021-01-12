@@ -1,6 +1,6 @@
 = Create and Configure an Inbound Message Flow
 
-Create an inbound message flow to receive EDI messages from your trading partners, validate and transform those messages, and then send the translated application (JSON or XML) message to your back-end applications.
+You can create and configure an inbound message flow to receive EDI messages from your trading partners, validate and transform those messages, and then send the translated application (JSON or XML) message to your back-end applications.
 
 == Create an Inbound Message Flow
 

@@ -1,6 +1,6 @@
 = Create and Configure an Outbound Message Flow
 
-Create an outbound message flow to receive application messages from your backend systems, validate and transform these messages, and then send the translated EDI message to your trading partners.
+You can create and configure an outbound message flow to receive application messages from your backend systems, validate and transform these messages, and then send the translated EDI message to your trading partners.
 
 == Create an Outbound Message Flow
 
@@ -18,7 +18,7 @@ A new message flow is created. +
 The endpoint is added to the message flow, and a message appears indicating that the endpoint is missing an identifier.
 ... Click *Add* to add a unique identifier for the endpoint.
 .. To create a new receiving endpoint:
-... Click *New* on the right of the search box.
+... Click *New* to the right of the search box.
 ... From the *Owner* drop-down list, select the endpoint's owner.
 ... From the *Protocol* drop-down, select the protocol and configure it according to the protocol you select:
 * xref:endpoint-https-send.adoc[*HTTP(S)*]
@@ -31,7 +31,7 @@ The endpoint is added to the message flow.
 . Expand the *Source at <host>* section, and click *Select*.
 .. To use an existing message type, select the message type from the list and click *Select* in the lower right side of the page. +
 .. To create a new message type:
-... Click *New* on the right side of the search box.
+... Click *New* to the right side of the search box.
 ... From *Format*, select either:
 * *JSON*
 * *XML*
@@ -49,7 +49,7 @@ The message type is added to the message flow.
 . Click *Select* to select a message type or to create a new message type.
 . To use an existing message type, select the message type from the list and click *Select*:
 .. To create a new message type:
-.. Click *New* on the right of the search box.
+.. Click *New* to the right of the search box.
 .. From *Format*, select *X12*.
 .. From *Version*, select the X12 version.
 .. From *Message type*, select the message type.

@@ -1,7 +1,6 @@
 = Partner Manager Message Flows
 
-A message flow is the path along which a message travels from its source, through a DataWeave transformation map, to its target.
-You set up message flows to send and receive messages between your systems and your trading partners.
+A message flow is the path along which a message travels from its source, through a DataWeave transformation map, to its target. You set up message flows to send and receive messages between your systems and your trading partners.
 
 Partner Manager message flows consist of objects such as endpoints, message types, identifiers, and mappings. Partner Manager’s message framework orchestrates the processing of your business transactions from source to target using these configuration objects as shown in the following diagram:
 
@@ -50,7 +49,7 @@ image::inbound-message-flow.png[Inbound message flow configuration building bloc
 [[outbound-message-flow]]
 == Outbound Message Flows
 
-You can create an outbound message flow to receive application messages from your backend systems, transform, and then send the translated EDI message to your trading partners.
+Create an outbound message flow to receive and transform application messages from your backend systems and then forward the translated EDI messages to your partners.
 
 The following diagram shows the configurations of an outbound message flow. The diagram also shows how Partner Manager’s message processing framework orchestrates the end-to-end routing and transformation of your outbound business transactions from your organization’s backend systems to your trading partners.
 

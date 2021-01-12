@@ -1,6 +1,6 @@
 = Outbound Message Routing
 
-The Partner Manager outbound message processing framework enables you to implement receive endpoints in a variety of ways:
+The Partner Manager outbound message processing framework enables you to implement receiving endpoints in a variety of ways:
 
 You can:
 
@@ -10,11 +10,11 @@ You can:
 
 When messages are received by the endpoint, Partner Manager routes the payload to the appropriate message flow based on the message type, partner reference identifier, and host reference ID configurations:
 
-* Partner Manager Identifies the message type:
-** Relative path for HTTP(s) endpoints
-** File name for SFTP
-* The payload is validated against the schema supplied during the message type definition.
-* Partner Manager leverages the DataWeave map supplied during the source at host message type definition to extract the partner reference ID, host reference ID, and business key.
+* Partner Manager identifies the message type:
+. Relative path for HTTP or HTTPS endpoints
+. File name for SFTP
+* Partner Manager valides the payload against the schema supplied during the message type definition.
+* Partner Manager uses the supplied DataWeave map to obtain the partner and host reference IDs and the business key.
 * The partner reference identifier and optional host reference identifier specify the message flow through which the transaction is processed:
 
 image::outbound-message-routing.png[Outbound message routing flow diagram]
