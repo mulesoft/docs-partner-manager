@@ -1,68 +1,98 @@
 = Create and Configure an Inbound Message Flow
 
-Before you can communicate with your trading partners, you must create an inbound message flow and then configure a receive endpoint, configure a message source type, import a translation map, and configure the target message type and endpoint.
+You can create and configure an inbound message flow to receive EDI messages from your trading partners, validate and transform those messages, and then send the translated application (JSON or XML) message to your back-end applications.
 
 == Create an Inbound Message Flow
 
+=== Prerequisites
 Before you create your first inbound message flow, you must configure your xref:setup-payload-storage-API.adoc[payload storage API].
 
-. From your Anypoint Partner Manager *Sandbox* or *Production* environment, select *Message Flows* in the left navigation menu.
+=== Steps
+
+. From your Anypoint Partner Manager sandbox or production environment, select *Message Flows* in the left navigation menu.
 . Click *New message flow > Receive from partner* in the upper right of the page.
-. Select an existing Partner from the list and click *Select*. +
+. Either select an existing partner from the list and click *Select* or select *New* to xref:configure-partner.adoc#create-partner[create a trading partner]. +
 A new message flow is created. +
-Alternatively, from the *Select a partner* dialog, you can click *New* to create a new partner.
-Follow the process to xref:configure-partner.adoc#create-a-trading-partner[create a Trading Partner], except that when you are finished, click *Create Partner and Message Flow*.
 
-== Configure the Receive Endpoint
+== Configure the Receiving Endpoint
 
-. Expand the *Receiving endpoint* section and click *Select*.
-. To use an existing receiving endpoint:
-.. Select the endpoint from the list and click *Select* in the lower right side of the page. +
-The endpoint is added to the message flow, and you see a message that tells you the endpoint is missing an identifier.
-.. Click *Add* to add a unique identifier for the endpoint.
-. To create a new receiving endpoint:
-.. Click *New* on the right of the search box.
-.. From the *Owner* drop-down, select the endpoint's owner.
-.. From the *Protocol* drop-down, select the protocol and configure it according to the protocol you select:
+. In the message flow, expand the *Receiving from <partner>* section and click *Select endpoint*.
+. In the *Receiving endpoint* section, click *Select*.
+. In the *Select an endpoint: Receive from <host>* window:
+.. To use an existing receiving endpoint:
+... Select the endpoint from the list and click *Select*.  +
+The endpoint is added to the message flow, and a message appears indicating that the endpoint is missing an identifier.
+... Click *Add* to add a unique identifier for the endpoint.
+.. To create a new receiving endpoint:
+... Click *New* on the right of the search box.
+... From the *Owner* drop-down, select the endpoint's owner.
+... From the *Protocol* drop-down, select the protocol and configure it according to the protocol you select:
 * xref:endpoint-as2-receive.adoc[*AS2*]
 * xref:endpoint-sftp-receive-target.adoc[*SFTP*]
 +
 [NOTE]
 Translated files are delivered to file-based endpoints with a unique file name with the pattern `<doctype>-<senderid>-<ISACtrlNum>-<GSCtrlNum>-<STCtrlNum>-<timeInMillis>.<format>`, for example: `850-ABCCORP-40952-5850-179960-1587685726355.JSON`
-. Click *Save*.
+
+... Click *Save*. +
+The endpoint is added to the message flow.
 
 == Configure the Source Message Type
 
-. Expand the *Source message type* section, and click *Select*.
-. To use an existing message type:
-.. Select the message type from the list and click *Select* in the lower right side of the page. +
-The message type is added to the message flow.
-. To create a new message type:
-.. Click *New* on the right side of the search box.
-.. From *Format*, select *X12*.
-.. From *Version*, select the X12 version.
-.. From *Message type*, select the message type.
-.. From schema select *Use standard X12-<version>-<message-type>* or select *Customize* to define a custom schema.
-.. Click *Save*. +
+. In the message flow, expand the *Source message* section and click *Select*.
+. In the *Select message type* window:
+.. To use an existing message type, select the message type from the list and then click *Select*.
+.. To create a new message type:
+... Click *New* on the right side of the search box.
+... From *Format*, select *X12*.
+... From *Version*, select the X12 version.
+... From *Message type*, select the message type.
+... From schema select *Use standard X12-<version>-<message-type>* or select *Customize* to define a custom schema.
+... Click *Save*. +
 The message type and its validation settings are added to the message flow.
 
 == Import the Translation Map
 
-Expand the *Map* section and click *Import* to upload the DataWeave map to translate the EDI message to your application message format.
+=== Prerequisites
+To create your inbound EDI-to-application message (JSON or XML) map in Anypoint Studio, follow xref:partner-manager-maps.adoc[these instructions].
 
-Follow these instructions to create your inbound EDI-to-application message (JSON or XML) map in Anypoint Studio.
+=== Steps
 
-== Configure the Target Message Type
+. In the message flow, expand the *Map* section.
+. Click *Import* and then click *Choose file*.
+. In the *New mapping file* window, navigate to the DataWeave map you want to use and then click *Open*.
+. Click *Upload mapping*. +
+The translation map is added to the message flow.
 
-. Expand the *Target at <your organization>* section.
-. Click *Select* to select the message type of your backend system to which to map the EDI transaction. +
-Partner Manager routes inbound EDI transactions based on matching identifiers configured at the Partner level.
 
-== Configure the Target Endpoint
+== Configure the Target
 
-. Select the endpoint to which to send the translated message (XML or JSON) for further processing in your backend system. +
-In the *Select endpoint* window, click *New* to create a new endpoint. +
-Partner Manager routes inbound EDI transactions based on matching identifiers configured at the Partner level.
+. In the message flow, expand the *Target at <your organization>* section.
+. In the *Message Type* section, click *Select*.
+. In the *Select message type* window:
+.. To use an existing message type, select the message type from the list and then click *Select*.
+.. To create a new message type:
+... Click *New* on the right side of the search box.
+... From *Format*, select *X12*.
+... From *Version*, select the X12 version.
+... From *Message type*, select the message type.
+... From schema select *Use standard X12-<version>-<message-type>* or select *Customize* to define a custom schema.
+... Click *Save*. +
+The message type is selected for your backend system to use to map the EDI transaction. Partner Manager routes inbound EDI transactions based on matching identifiers configured at the Partner level.
+. In the *Target at <your organization>* section, exand the *Endpoint* section and click *Select*.
+. In the *Select an endpoint: Target to <host>* window:
+.. To use an existing endpoint, select the endpoint from the list and  then click *Select*.
+.. To create a new endpoint:
+... Click *New* on the right of the search box.
+... From the *Owner* drop-down, select the endpoint's owner.
+... From the *Protocol* drop-down, select the protocol and configure it according to the protocol you select:
+* xref:endpoint-https-send.adoc[HTTP or HTTPS]
+* xref:endpoint-sftp-send.adoc[SFTP]
++
+[NOTE]
+Translated files are delivered to file-based endpoints with a unique file name with the pattern `<doctype>-<senderid>-<ISACtrlNum>-<GSCtrlNum>-<STCtrlNum>-<timeInMillis>.<format>`, for example: `850-ABCCORP-40952-5850-179960-1587685726355.JSON`
+
+... Click *Save*. +
+The endpoint to which to send the translated message (JSON or XML) for further processing in your backend system is added to the message flow. Partner Manager routes inbound EDI transactions based on matching identifiers configured at the partner level.
 
 == Verify the Message Flow is Complete
 
