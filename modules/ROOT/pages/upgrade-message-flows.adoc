@@ -21,7 +21,7 @@ When your message flows are deployed to CloudHub, your existing message flows ar
 
 When your message flows are deployed to your hosted runtimes, your runtime applications are stopped when the upgrade process begins, and then restarted when the upgrade is complete, which results in down time.
 
-It is best to perform the upgrade in your non-production environments and then to test some of your message flows before you perform the upgrade in your production environment.
+Upgrade your nonproduction environments first to test the changes on some of your message flows before upgrading your production environment.
 
 == See Also
 
