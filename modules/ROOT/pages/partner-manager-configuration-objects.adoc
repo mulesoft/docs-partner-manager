@@ -1,6 +1,6 @@
 = Partner Manager Configuration Objects
 
-A message flow in Partner manager comprises the following configuration objects that execute end-to-end B2B message processing.
+A message flow in Partner manager comprises configuration objects that execute end-to-end B2B message processing:
 
 
 * xref:partner-manager-identifiers.adoc[Partner identifiers] +
