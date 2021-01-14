@@ -2,9 +2,9 @@
 
 Active message flows between you and your partners don't require much maintenance. You might need to modify your message flow to:
 
-* Deleting the flow when it becomes inactive
-* Switching from a sandbox environment and reclaiming production-environment resources
-* Changing flow identifiers, endpoints, or maps
+* Change flow identifiers, endpoints, or maps
+* Switch from a sandbox environment and reclaiming production-environment resources
+* Delete the flow when it becomes inactive
 
 [[edit-message-flows]]
 == Edit Inbound Message Flows
@@ -14,19 +14,37 @@ After establishing a successful inbound message flow with your partner, you can 
 [IMPORTANT]
 Before making changes, carefully consider the impact on your existing message flow.
 
-. In the left navigation menu, select *Message Flows* and then then *<Message flow name>*. +
+. In the left navigation menu, select *Message Flows*.
+. In the *Message flows* page, select *<Message flow name>*. +
 The selected message flow appears.
-. In the message flow:
-.. To add an identifier to the message flow, click *See All* and then *New*.
-.. To change a receiving endpoint, click *Select* from the *Receiving endpoint* section, click *New*, and then select your AS2 or SFTP protocol type.
-.. To create a new endpoint, see xref:create-endpoint.adoc[Create and Configure Endpoints].
-.. To replace your existing DataWeave map, click *Import* in the *Map* section, and then click *Upload mapping*.
-.. To view the map, you can download it by clicking the `<name>.dwl` link.
+. To add an identifier to the message flow:
+.. Expand the *Receive from <partner>* section.
+.. In the *AND identifiers include* subsection, click the link.
+.. In the *<parter> identifiers* window, click *New*, and then xref:partner-manager-identifiers.adoc#add-and-configure-a-new-identifier [add and configure a new identifier].
+. To edit the receiving endpoint:
+.. Expand the *Receiving endpoint* section.
+.. Click *Select* and then select an existing identifier from the list or click *New*.
+.. If adding a new identifier, in the *New endpoint: Receive from partners* window,you can  xref:create-endpoint.adoc[create and configure the endpoint].
+. To edit the message type:
+.. Expand the *Source Message* section and click *Select*.
+.. In the *Select message type* window, either select a message type from the list or click *New*.
+.. If the *New message type: Receive from partners* window, xref:partner-manager-create-message-type,adoc[create and configure the message type].
+. To edit the validation settings, expand the *Validation settings* section, click the link, and then select the link in the window that appears to update the settings in the partner page.
+. To edit whether or not an acknowledgement is sent to the partner, expand the *Acknowledgement* section and select or clear the checkbox.
+. To replace your existing DataWeave map:
+.. Expand the *Map* section and then click *Import*.
+.. In the *Replace mapping file* window, navigate to the DataWeave map you would like to use, and then click *Upload mapping*.
+.. To view the map, you can download it by clicking the `<name>.dwl` link, and then clicking the *Download* button.
 +
 For more information about DataWeave map files, https://docs.mulesoft.com/mule-runtime/4.1/dataweave[DataWeave Language]
 +
-.. To add a message type, click *Select* under the Source message, click *New*, and then select a standard type such as X12 or JSON.
-.. To set up a target endpoint, click *Select* from the _Target at <partner name>_, and depending on the protocol, refer to one of the following:
+. To add the target message type:
+.. Expand the *Target at <host>* section, and in the *Message type* subsection, click *Select*.
+.. In the *Select message type* window, click *New*.
+.. In the *New message type: Receive from partners* window, xref:partner-manager-create-message-type,adoc[create and configure the message type].
+. To edit the target endpoint:
+.. Expand the *Target at <partner name>* section.
+.. In the *Endpoint* section, click *Select* and depending on the protocol, refer to one of the following:
 +
 * xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
 
@@ -37,11 +55,11 @@ For more information about DataWeave map files, https://docs.mulesoft.com/mule-r
 [NOTE]
 It can take five minutes or so for your configuration changes to sync with Mule.
 +
-. To test your edited message flow. See xref:deploy-message-flows.adoc[Deploy and Test Message Flows].
+. To test your edited message flow, see xref:deploy-message-flows.adoc[Deploy and Test Message Flows].
 
 After you confirm the successful deployment of your message flow, you can track its processed messages from the *Activity* page.
 
-== Manage Outbound Message Flows
+== Edit Outbound Message Flows
 
 After establishing a successful outbound message flow with your partner, you can edit the flow to add identifiers, endpoints, message types, or different DataWeave maps.
 
@@ -85,7 +103,7 @@ For on-premises installations, you must xref:deploy-message-flows#undeploy-messa
 
 === Steps
 
-After the undeployment is successful, delete the message flow:
+After the undeployment is successful, you can delete the message flow:
 
 . In the left navigation menu, select *Message Flows*.
 . Select the message flow to delete from the list and click *Delete* in the upper right of the screen.
