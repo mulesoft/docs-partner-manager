@@ -1,17 +1,17 @@
-= X12 Receive (Inbound) Settings 
+= X12 Receive (Inbound) Settings
 
 Partner Manager enables you to configure the X12 acknowledgments, validation rules, character encoding, and control numbers to apply when receiving an inbound X12 transmission.
 
 == Configure the Receive Settings
 
-. In the left navigation menu, select the partner for whom to configure the send settings. 
+. In the left navigation menu, select the partner for whom to configure the send settings.
 . In the *Validation and acknowledgment settings* section, under *Send to <partner-name>*, click *X12*.
 . In the menu on the left, select the setting to configure:
 * <<ack-settings,*Acknowledgments*>>
 * <<validation-settings,*Validation*>>
 * <<control-numbers,Control Numbers>>
 * <<character-set,*Character sets*>>
-. Click *Save*. 
+. Click *Save*.
 
 [NOTE]
 It can take up to five minutes or so for your configuration changes to sync with Mule.
@@ -36,7 +36,7 @@ The TA1 ACK is sent inside an ISA or IEA envelope. The ISA and IEA are no differ
 
 |Send 997 functional acknowledgment when messages fail to route to a message flow
 a|Provides a functional acknowledgment (the receipt and syntactical acceptability of a message) with the exchange. Functional acknowledgment settings are configured for each message flow, and only apply when there is a failure to route the message to one of the message flows.
-|Disabled 
+|Disabled
 |===
 
 === X12 997 Functional Acknowledgment
@@ -103,7 +103,7 @@ Use these settings to apply validations related to your partners or your use of 
 |Setting |Description |Default
 
 |Requires unique interchange control number (ISA13)
-|If selected, Partner Manager records the interchange numbers previously processed and rejects any duplicate interchange numbers from the same partner (as determined by the interchange sender and receiver identification). If unselected, it allows processing of the received interchange to continue.
+|If selected, Partner Manager records the interchange numbers previously processed and rejects any duplicate interchange numbers from the same partner (as determined by the interchange sender and receiver identification). If unselected, it enables processing of the received interchange to continue.
 |Disabled
 
 |Requires unique group control number (GS06)
@@ -128,7 +128,7 @@ Use these settings to apply selected character set and encoding options pertaini
 a|This option is required and defines the characters allowed in string data. When set, invalid characters are replaced by the substitution character. If no substitution character is set or enabled for receive messages in the parser options, they are rejected as errors.
 Either way, the invalid characters are logged and are reported in the 997 functional acknowledgments for the receive messages.
 
-Possible values include: 
+Possible values include:
 
 * `Basic`
 * `Extended`
@@ -138,7 +138,7 @@ Possible values include:
 |Character encoding
 a|Indicates the character encoding for messages. This character encoding is used for both send and receive messages.
 
-Possible values include: 
+Possible values include:
 
 * `ASCII`
 * `ISO8859_1`
