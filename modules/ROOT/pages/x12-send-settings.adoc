@@ -4,7 +4,7 @@ Partner Manager enables you to configure the X12 envelope parameters, delimiters
 
 == Configure the Send Settings
 
-. In the left navigation menu, select the partner for whom to configure the send settings. 
+. In the left navigation menu, select the partner for whom to configure the send settings.
 . In the *Validation and acknowledgment settings* section, under *Send to <partner-name>*, click *X12*.
 . In the menu on the left, select the setting to configure:
 * <<general-settings,*General*>>
@@ -12,9 +12,9 @@ Partner Manager enables you to configure the X12 envelope parameters, delimiters
 * <<ta1-ack-settings,*TA1 Acknowledgment*>>
 * <<global-control-numbers,Global control numbers>>
 * <<character-set,*Character set & separators*>>
-. Click *Save*. 
+. Click *Save*.
 
-The values you configure in the partner's settings page are used by default for all X12 messages going to that trading partner. You can override the settings you configure at the partner level, with the exception of TA1 and control numbers, at the message flow level by selecting the *Custom* option while creating an outbound message flow. 
+The values you configure in the partner's settings page are used by default for all X12 messages going to that trading partner. You can override the settings you configure at the partner level, with the exception of TA1 and control numbers, or at the message flow level by selecting the *Custom* option while creating an outbound message flow.
 
 [NOTE]
 It can take up to five minutes for your configuration changes to sync with Mule.
@@ -29,7 +29,7 @@ Use the following settings to configure the transaction usage, the responsible s
 |Setting |Description |Default Value
 
 |Usage indicator (ISA15)
-a|Indicates if the X12 transaction sent is for testing, production or information only. 
+a|Indicates if the X12 transaction sent is for testing, production, or information only.
 
 Possible values include:
 
@@ -86,25 +86,25 @@ Use the following settings to configure whether a technical acknowledgment is re
 |Setting |Description |Default
 
 |Expect TA1 for each transmission sent to <partner>
-a|If selected, sets the value in ISA14 to 1 on the generated X12 payload indicating that a Technical acknowledgement (TA1) is required.
+a|If selected, sets the value in ISA14 to 1 on the generated X12 payload, indicating that a Technical acknowledgment (TA1) is required.
 |Disabled
 |Endpoint
-a|When the option to expect a TA1 is selected, click *Select* to specify the *Receive from <partner>* endpoint the acknowledgment will be received from as an inbound transmission. 
+a|When the option to expect a TA1 is selected, click *Select* to specify the *Receive from <partner>* endpoint. The acknowledgment will be received as an inbound transmission.
 |None
 |===
 
 [[global-control-numbers]]
 == Global Control Numbers
 
-Partner Manager applies a global control number at the partner level on the X12 interchanges and functional groups generated from outbound message flows. These control numbers are sequenced across all message types (including functional acknowledgements) that are sent to a trading partner.
+Partner Manager applies a global control number at the partner level on the X12 interchanges and functional groups generated from outbound message flows. These control numbers are sequenced across all message types (including functional acknowledgments) that are sent to a trading partner.
 
-The control number starts with a default value of `1`, and is sequentially increased as your organization begins sending outbound transmissions. 
+The control number starts with a default value of `1`, and is sequentially increased as your organization begins sending outbound transmissions.
 
 If you need to set the control number sequence value to a different number to maintain sequencing and avoid duplication:
 
 . Click *Change* and enter the desired control number.
-. Click *Save*. 
- 
+. Click *Save*.
+
 [NOTE]
 It can take up to five minutes to apply the change at runtime.
 
@@ -118,7 +118,7 @@ These settings enable you to set the character encoding and delimiters to use on
 |Setting |Description | Default Value
 
 |Character set
-a|Characters allowed in string data. 
+a|Characters allowed in string data.
 
 Possible values include:
 
@@ -138,7 +138,7 @@ Possible values include:
 * *UTF8* | `UTF8`
 
 |Segment terminator
-a|Segment terminator character. 
+a|Segment terminator character.
 | `~`
 
 |Data element separator
@@ -150,7 +150,7 @@ a|Component element separator character.
 | `>`
 
 |Line ending between segments
-a|Line ending to add between segments. This allows you to add line endings between segments to improve the readability of the output message text.
+a|Line ending to add between segments. This enables you to add line endings between segments to improve the readability of the output message text.
 
 Possible values include:
 

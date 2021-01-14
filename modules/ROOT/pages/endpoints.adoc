@@ -2,7 +2,7 @@
 
 Endpoints define the transport protocol configurations necessary to receive or send messages with external trading partners or internal backend applications.
 
-Partner Manager uses endpoints to receive transmissions from partners and messages from backend application, define transport protocols, and specify message or message acknowledgement destinations.
+Partner Manager uses endpoints to receive transmissions from partners and messages from backend application, define transport protocols, and specify message or message acknowledgment destinations.
 
 == Endpoint Ownership
 
