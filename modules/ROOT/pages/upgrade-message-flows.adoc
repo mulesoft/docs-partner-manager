@@ -1,30 +1,27 @@
-= Template Version Upgrades
+= Upgrade Message Flow Runtime Templates
 
-Partner Manager leverages prebuilt templates that convert your B2B message flow configurations into runtime applications. These templates are periodically updated to add new features and enhancements. You can upgrade your message flows to use the updated templates to take advantage of the new capabilities that enable you to better integrate with your trading partner ecosystem.
+Partner Manager uses prebuilt templates to convert your B2B message flow configurations into runtime applications. As these templates are updated, you can upgrade your message flows to use them to take advantage of new capabilities that enable better integration with your trading partner's ecosystem.
 
-Runtime templates related to Anypoint Partner Manager 2.5 are upgraded when: 
+Runtime templates related to Anypoint Partner Manager 2.5 are upgraded when:
 
 * A new feature or functionality is added
-* A dependent component, such as a connector version, is upgraded
+* A component on which your environment is dependent, such as a connector version, is upgraded
 * A security vulnerability is fixed
 * Functional and performance defects are resolved in the template
 * Flow optimizations are implemented
 
-== Perform the Upgrade
+When new runtime templates are available, the *Upgrade deployments* button in the top right corner of the *Message Flow* page is enabled.
 
-When new template versions are released, you see the *Upgrade deployments* button enabled in the top right corner of the *Message Flows* page. 
+Before upgrading your production environment, upgrade your nonproduction environments to test the changes on some of your message flows.
 
-To take advantage of new features, click the *Upgrade deployments* button. The process of updating all your message flows to use the latest template version begins. 
+To take advantage of new features, click the *Upgrade deployments* button.
 
-This process can take several minutes, depending on the number of message flow configurations and runtime applications your environment has. 
+The process of updating all your message flows can take several minutes, depending on the number of message flow configurations and runtime applications in your environment.
+
 When your message flows are deployed to CloudHub, your existing message flows are uninterrupted during the upgrade process.
 
 When your message flows are deployed to your hosted runtimes, your runtime applications are stopped when the upgrade process begins, and then restarted when the upgrade is complete, which results in down time.
 
-It is best to perform the upgrade in your non-production environments and then test some of your message flows before you perform the upgrade in your production environment.
-
 == See Also
 
 * xref:deploy-message-flows.adoc[Deploy, Test, and Undeploy Message Flows]
-
-
