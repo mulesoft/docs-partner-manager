@@ -86,7 +86,7 @@ The message type and its validation settings are added to the message flow.
 * *SFTP*
 ... Click *Save*.
 ... In *Mark overdue after*, accept the default value of *24 Hours* or configure values based on when you want the outbound transaction to be designated as overdue for an acknowledgment, according to the SLAs you have with your trading partner. +
-When functional acknowledgment is not received within the specified timer value, Partner Manager marks the outbound transactions as `Overdue`.
+When a functional acknowledgment is not received within the specified timer value, Partner Manager marks the outbound transactions as `Overdue`.
 . In the *X12 Settings* drop-down list, select the X12 settings.
 +
 By default, Partner Manager uses the X12 send settings that are configured in the trading partner profile page for message validation, delimiters, and character encoding.

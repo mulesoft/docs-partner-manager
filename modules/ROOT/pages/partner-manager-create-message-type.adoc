@@ -75,7 +75,7 @@ Use the following settings to define JSON or XML settings for inbound EDI transa
 
 [[source-at-host]]
 == Source at Host
-The source at host application message structure (JSON or XML) defines the way in which your backend applications translate outbound EDI transactions and sent them to your trading partners.
+The source at host application message structure (JSON or XML) defines the way in which your backend applications translate outbound EDI transactions and send them to your trading partners.
 
 Use the following settings to define JSON or XML settings for outbound EDI transactions:
 

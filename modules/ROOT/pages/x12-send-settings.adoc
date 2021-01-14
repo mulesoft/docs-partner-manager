@@ -14,7 +14,7 @@ Partner Manager enables you to configure the X12 envelope parameters, delimiters
 * <<character-set,*Character set & separators*>>
 . Click *Save*.
 
-The values you configure in the partner's settings page are used by default for all X12 messages going to that trading partner. You can override the settings you configure at the partner level, with the exception of TA1 and control numbers, at the message flow level by selecting the *Custom* option while creating an outbound message flow.
+The values you configure in the partner's settings page are used by default for all X12 messages going to that trading partner. You can override the settings you configure at the partner level, with the exception of TA1 and control numbers, or at the message flow level by selecting the *Custom* option while creating an outbound message flow.
 
 [NOTE]
 It can take up to five minutes for your configuration changes to sync with Mule.
@@ -29,7 +29,7 @@ Use the following settings to configure the transaction usage, the responsible s
 |Setting |Description |Default Value
 
 |Usage indicator (ISA15)
-a|Indicates if the X12 transaction sent is for testing, production or information only.
+a|Indicates if the X12 transaction sent is for testing, production, or information only.
 
 Possible values include:
 
@@ -86,10 +86,10 @@ Use the following settings to configure whether a technical acknowledgment is re
 |Setting |Description |Default
 
 |Expect TA1 for each transmission sent to <partner>
-a|If selected, sets the value in ISA14 to 1 on the generated X12 payload indicating that a Technical acknowledgment (TA1) is required.
+a|If selected, sets the value in ISA14 to 1 on the generated X12 payload, indicating that a Technical acknowledgment (TA1) is required.
 |Disabled
 |Endpoint
-a|When the option to expect a TA1 is selected, click *Select* to specify the *Receive from <partner>* endpoint the acknowledgment will be received from as an inbound transmission.
+a|When the option to expect a TA1 is selected, click *Select* to specify the *Receive from <partner>* endpoint. The acknowledgment will be received as an inbound transmission.
 |None
 |===
 
