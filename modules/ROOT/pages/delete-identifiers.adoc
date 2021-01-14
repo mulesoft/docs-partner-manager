@@ -1,22 +1,23 @@
 = Delete Identifiers
 
-You might want to delete an identifier when it is no longer needed. 
+You can delete identifiers such as X12 ISA, X12 GS, AS2, and DUNS.
 
-You can delete identifiers such as X12 ISA, X12 GS, AS2, and DUNS. You cannot delete the last identifier, as there must be at least one identifier in the list of identifiers.
+Although you must always have at least one identifier per message flow, you can delete identifiers that are no longer used in that message flow.
 
-Before you delete an identifier, consider the following: 
+Before you delete an identifier, consider the following:
 
-* Deleting an existing host or partner identifier impacts the identification and routing of B2B messages to the associated partner.
-* Do you need to replace the identifier with another identifier? +
-If you need to replace the identifier, record the values and qualifier type needed.
-* Remember that there must always be at least one identifier per message flow before you can delete it.
 * You cannot delete an identifier that is used in a message flow.
+* Deleting an existing host or partner identifier impacts the identification and routing of B2B messages to the associated partner.
+* If you need to replace the identifier with another identifier, record the required values and qualifier type.
 
-== Deleting Identifiers
-
+== Steps 
 . In the left navigation menu, select *Partners*.
-. From the list of partners, select the partner that has the identifier to delete. 
-. In the *Identifiers* section, hover over the identifier you want to delete and click the trash can icon that appears on right-hand side of the *Identifiers* row.
-. If you want to replace the identifier, click *New* and xref:partner-manager-identifiers.adoc[follow the steps to create an identifier]. 
+. Select the partner containing the identifier you want to delete.
+. In the *Identifiers* row, hover over the identifier you want to delete and click the trash can icon.
 
-After successfully deleting an identifier, you can create a new identifier with the same name as the one you deleted.
+== See Also
+
+* xref:configure-host.adoc[Configure and Manage a Host Profile]
+* xref:message-flows.adoc[Message Flows]
+* xref:outbound-message-routing.adoc[Outbound Message Routing]
+* xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]

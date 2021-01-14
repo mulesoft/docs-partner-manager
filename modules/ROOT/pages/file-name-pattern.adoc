@@ -1,8 +1,8 @@
 = File Name Patterns for Send Endpoints
 
-Partner Manager enables you to configure the file name patterns to use on the target files delivered to SFTP and AS2 Send endpoints, through the use of property placeholders.
+Using property placeholders, Partner Manager enables you to configure a template that specifies properties and their order in the the file name patterns for files delivered to SFTP and AS2 send endpoints.
 
-When the file name pattern is configured with property placeholders, specified within `${ }`, Partner Manager replaces the property dynamically at runtime. Any string that is not specified within the placeholder is used as static text in the file name.
+When file name pattern fields are configured with property placeholders (specified within `${ }`), Partner Manager dynamically populates the file name with updated information at runtime. Any file name property field that is not specified within the placeholder is static and is not updated at runtime.
 
 The following are the supported property placeholders and the dynamic value the placeholder is replaced with at runtime:
 
@@ -23,8 +23,8 @@ The following are the supported property placeholders and the dynamic value the 
 |${sss} |Second: 46
 |${timeInMillis} |Milliseconds: 345
 |${ICN} |Interchange Control Number
-|${BusKey} |Primary Business Key value for example: `PO12345`
-|${formatTypeExt} a|Format of the file. Possible replaced values include: 
+|${BusKey} |Primary Business Key value, for example, `PO12345`
+|${formatTypeExt} a|File format, either JSON or X12
 
 * JSON
 * X12

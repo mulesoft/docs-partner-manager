@@ -1,6 +1,6 @@
 = Message Types
 
-Message types define the schematic structure of the transactions that are received or sent by Partner Manager. 
+Message types define the schematic structure of the transactions that are received or sent by Partner Manager.
 
 In Partner Manager, a message type can be used in one of the following contexts:
 
@@ -9,10 +9,8 @@ In Partner Manager, a message type can be used in one of the following contexts:
 * Source at host
 * Send to partners
 
-Message types are always managed within the host profile page, regardless of whether they are used specifically for a single partner or across multiple trading partners. Message types are reusable across message flows for different trading partners.
+Message types are always managed in the host profile page, regardless of whether they are used for a single partner or for multiple trading partners. Additionally, message types are reusable across message flows for different trading partners.
 
 == See Also
 
 * xref:partner-manager-create-message-type.adoc[Create and Configure Message Types]
-
-

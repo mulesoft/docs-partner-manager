@@ -34,5 +34,4 @@ wrapper.java.maxmemory=4606
 . Add the server in Runtime Manager based on the instructions xref:runtime-manager::servers-create#create-a-server[Create a Server].
 . Start Mule and verify it is active within Anypoint Runtime Manager.
 . Add the servers you created to the `B2BServerGroup` server group you created earlier. +
-See xref:runtime-manager::server-group-add[Add Servers to a Group].
-
+See xref:runtime-manager::server-group-add.adoc[Add Servers to a Group].
