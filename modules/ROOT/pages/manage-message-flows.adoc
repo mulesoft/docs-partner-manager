@@ -9,7 +9,7 @@ Active message flows between you and your partners don't require much maintenanc
 [[edit-message-flows]]
 == Edit Inbound Message Flows
 
-After establishing a successful inbound message flow with your partner, you can modify the flow to add identifiers, endpoints, message types, or different DataWeave maps.
+After establishing a successful inbound message flow with your partner, you can modify the identifiers, endpoints, message types, or DataWeave maps in the flow.
 
 [IMPORTANT]
 Before making changes, carefully consider the impact on your existing message flow.
@@ -17,6 +17,42 @@ Before making changes, carefully consider the impact on your existing message fl
 . In the left navigation menu, select *Message Flows*.
 . In the *Message flows* page, select *<Message flow name>*. +
 The selected message flow appears.
+. In the message flow, you can modify the following:
+
+|===
+| Subsection | Actions | Deployment Required?
+| Receive from <partner>
+a|
+* Add or edit the receiving endpoint
+* Add or edit the identifier
+| yes or no
+
+| Receiving endpoint <endpoint name>
+a|
+* Add or edit the receiving endpoint
+* View the certificate
+| yes or no
+
+| Source message
+a|
+* Add or edit the message type
+* View validation settings
+* Indicate whether or not to send a 997 functional acknowledgment
+* Select the endpoint to which to send the acknowledgment
+| yes or no
+
+| Map
+a|
+* View the DataWeave map
+* Import a new DataWeave map
+| yes or no
+
+| Target at <host> a|
+* Select the target message type
+* Select the target endpoint 
+| yes or no
+
+|===
 . To add an identifier to the message flow:
 .. Expand the *Receive from <partner>* section.
 .. In the *AND identifiers include* subsection, click the link.
