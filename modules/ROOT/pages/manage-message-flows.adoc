@@ -9,83 +9,50 @@ Active message flows between you and your partners don't require much maintenanc
 [[edit-message-flows]]
 == Edit Inbound Message Flows
 
-After establishing a successful inbound message flow with your partner, you can modify the identifiers, endpoints, message types, or DataWeave maps in the flow.
+After establishing a successful inbound message flow with your partner, you can edit the identifiers, endpoints, message types, or DataWeave maps in the flow.
 
 [IMPORTANT]
 Before making changes, carefully consider the impact on your existing message flow.
 
 . In the left navigation menu, select *Message Flows*.
 . In the *Message flows* page, select *<Message flow name>*. +
-The selected message flow appears.
-. In the message flow, you can modify the following:
+The selected inbound message flow appears.
+. In the inbound message flow, you can complete the following modifications or actions:
 
 |===
-| Subsection | Actions | Deployment Required?
+| *Subsection* | *Actions* | *Deployment Required?*
 | Receive from <partner>
 a|
-* Add or edit the receiving endpoint
-* Add or edit the identifier
+* xref:create-endpoint.adoc[Add a new or edit the existing endpoint]
+* xref:partner-manager-identifiers.adoc[Add a new or edit the existing identifier]
 | yes or no
 
 | Receiving endpoint <endpoint name>
 a|
-* Add or edit the receiving endpoint
-* View the certificate
+* xref:create-endpoint.adoc[Add a new or edit the existing receiving endpoint]
+* xref:Certificates.adoc[View the certificate]
 | yes or no
 
 | Source message
 a|
-* Add or edit the message type
-* View validation settings
-* Indicate whether or not to send a 997 functional acknowledgment
-* Select the endpoint to which to send the acknowledgment
+* xref:partner-manager-create-message-type[Add a new or edit the existing message type]
+* View current validation settings
+* xref:edi-ack-reconciliation.adoc[Indicate whether or not to send a 997 functional acknowledgment and select the endpoint to which to send the acknowledgment]
 | yes or no
 
 | Map
 a|
-* View the DataWeave map
-* Import a new DataWeave map
+* View the current DataWeave map
+* xref:partner-manager-maps[Import a new DataWeave map]
 | yes or no
 
 | Target at <host> a|
-* Select the target message type
-* Select the target endpoint 
+* xref:partner-manager-create-message-type[Add a new or edit the existing target message type]
+* xref:create-endpoint.adoc[Add a new or edit the existing target endpoint]
 | yes or no
 
 |===
-. To add an identifier to the message flow:
-.. Expand the *Receive from <partner>* section.
-.. In the *AND identifiers include* subsection, click the link.
-.. In the *<parter> identifiers* window, click *New*, and then xref:partner-manager-identifiers.adoc#add-and-configure-a-new-identifier [add and configure a new identifier].
-. To edit the receiving endpoint:
-.. Expand the *Receiving endpoint* section.
-.. Click *Select* and then select an existing identifier from the list or click *New*.
-.. If adding a new identifier, in the *New endpoint: Receive from partners* window,you can  xref:create-endpoint.adoc[create and configure the endpoint].
-. To edit the message type:
-.. Expand the *Source Message* section and click *Select*.
-.. In the *Select message type* window, either select a message type from the list or click *New*.
-.. If the *New message type: Receive from partners* window, xref:partner-manager-create-message-type,adoc[create and configure the message type].
-. To edit the validation settings, expand the *Validation settings* section, click the link, and then select the link in the window that appears to update the settings in the partner page.
-. To edit whether or not an acknowledgement is sent to the partner, expand the *Acknowledgement* section and select or clear the checkbox.
-. To replace your existing DataWeave map:
-.. Expand the *Map* section and then click *Import*.
-.. In the *Replace mapping file* window, navigate to the DataWeave map you would like to use, and then click *Upload mapping*.
-.. To view the map, you can download it by clicking the `<name>.dwl` link, and then clicking the *Download* button.
-+
-For more information about DataWeave map files, https://docs.mulesoft.com/mule-runtime/4.1/dataweave[DataWeave Language]
-+
-. To add the target message type:
-.. Expand the *Target at <host>* section, and in the *Message type* subsection, click *Select*.
-.. In the *Select message type* window, click *New*.
-.. In the *New message type: Receive from partners* window, xref:partner-manager-create-message-type,adoc[create and configure the message type].
-. To edit the target endpoint:
-.. Expand the *Target at <partner name>* section.
-.. In the *Endpoint* section, click *Select* and depending on the protocol, refer to one of the following:
-+
-* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
-
-* xref:endpoint-https-send.adoc[HTTP and HTTPS Send Configuration]
-+
+[start=4]
 . Verify that any modified sections of the flow show a green checkmark next to them and then click *Deploy* to deploy the configurations to Mule.
 +
 [NOTE]
@@ -97,33 +64,63 @@ After you confirm the successful deployment of your message flow, you can track 
 
 == Edit Outbound Message Flows
 
-After establishing a successful outbound message flow with your partner, you can edit the flow to add identifiers, endpoints, message types, or different DataWeave maps.
+After establishing a successful outbound message flow with your partner, you can edit the identifiers, endpoints, message types, or DataWeave maps in the flow.
 
 [IMPORTANT]
 Before making changes, carefully consider the impact on your existing message flow.
 
-. In the left navigation menu, select *Message Flows* and then select *<Message flow name>*.
-. In the message flow:
-.. To change the outbound endpoint, click *Select* from the *Endpoint: Source at <host>*, select the endpoint, and click *Save*.
-.. To create a new outbound endpoint, see xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow].
-.. To update your reference IDs, expand *Reference IDs* and select the new reference IDs from the drop-down menus.
-.. To replace your existing DataWeave map, click *Import* from the *Map* section and click *Upload mapping*.
-.. To view the map, you can download it by clicking the `<name>.dwl` link.
-+
-For more information about DataWeave map files, https://docs.mulesoft.com/mule-runtime/4.1/dataweave[DataWeave Language]
-+
-.. To update your message type, click *Select* under the Source message and select a message type from the drop-down list. +
-To create a new message type for the outbound message flow, click *New*. +
-See xref:partner-manager-create-message-type.adoc[Create and Configure Message Types].
+
+. In the left navigation menu, select *Message Flows*.
+. In the *Message flows* page, select *<Message flow name>*. +
+The selected outbound message flow appears.
+. In the outbound message flow, you can complete the following modifications or actions:
+
+|===
+| *Subsection* | *Actions* | *Deployment Required?*
+| Source at <host>
+a|
+* xref:create-endpoint.adoc[Add a new or edit the existing endpoint]
+* xref:partner-manager-create-message-type[Add a new or edit the existing source message type]
+* Add or edit the existing reference IDs
+| yes or no
+
+| Map
+a|
+* View the current DataWeave map
+* xref:partner-manager-maps[Import a new DataWeave map]
+| yes or no
+
+| Message type
+a|
+* xref:partner-manager-create-message-type[Add a new or edit the existing message type]
+
+* xref:edi-ack-reconciliation.adoc[Indicate whether or not to send a 997 functional acknowledgment and select the endpoint to which to send the acknowledgment]
+| yes or no
+
+| Receiving endpoint <endpoint name>
+a|
+* xref:create-endpoint.adoc[Add a new or edit the existing receiving endpoint]
+* xref:Certificates.adoc[View the certificate]
+| yes or no
+
+
+
+
+| Target at <host> a|
+* xref:partner-manager-create-message-type[Add a new or edit the existing target message type]
+* xref:create-endpoint.adoc[Add a new or edit the existing target endpoint]
+| yes or no
+
+|===
+[start=4]
 . Verify that any modified sections of the flow show a green checkmark next to them and then click *Deploy* to deploy the configurations to Mule.
 +
 [NOTE]
 It can take five minutes or so for your configuration changes to sync with Mule.
-
-. To test your edited message flow. See xref:deploy-message-flows.adoc[Deploy and Test Message Flows].
++
+. To test your edited message flow, see xref:deploy-message-flows.adoc[Deploy and Test Message Flows].
 
 After you confirm the successful deployment of your message flow, you can track its processed messages from the *Activity* page.
-
 
 [[delete-message-flows]]
 == Delete Message Flows
