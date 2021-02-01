@@ -1,22 +1,22 @@
 = CloudHub Deployment Settings
 
-If you are deploying Partner Manager applications to CloudHub, use the *Partner Manager Settings* page in access management to specify CloudHub deployment options for the sandbox and production environments, including the Mule runtime engine (Mule) version, CloudHub region, Anypoint MQ region, and so on. 
+If you are deploying Partner Manager applications to CloudHub, use the *Partner Manager Settings* page in access management to specify CloudHub deployment options for the sandbox and production environments, including the Mule runtime engine (Mule) version, CloudHub region, Anypoint MQ region, and so on.
 
 == Access Partner Manager Settings
 
 To access the deployment settings for your organization:
 
-. In Anypoint Platform, navigate to *Access Management*. 
+. In Anypoint Platform, navigate to *Access Management*.
 . From the menu on the left, select *Settings > Partner Manager*. +
 On the *Partner Manager Settings* page, you can configure the following settings:
 
 === Mule Version Setting
 
-Specify the Mule version to use to deploy your application in the *Runtime version* drop-down menu. 
+Specify the Mule version to use to deploy your application in the *Runtime version* drop-down menu.
 
-The default is *Use latest version*, which deploys new Partner Manager message flows using the latest Mule version. 
+The default is *Use latest version*, which deploys new Partner Manager message flows using the latest Mule version.
 
-Otherwise, deploy Partner Manager applications to a specific Mule version by selecting that version from the drop-down list. 
+Otherwise, deploy Partner Manager applications to a specific Mule version by selecting that version from the drop-down list.
 
 === CloudHub Region Setting
 
@@ -26,7 +26,7 @@ If you want to change the default CloudHub region, you must select the new regio
 
 To change the default CloudHub region:
 
-. Undeploy message flows that are deployed to the currently specified CloudHub region. 
+. Undeploy message flows that are deployed to the currently specified CloudHub region.
 . Redeploy the message flows after you specify a new default region.
 
 === Anypoint MQ Region
@@ -50,9 +50,8 @@ Core component of the Partner Manager workflow that requires a minimum of *1 vCo
 
 For assistance with sizing, contact your MuleSoft account representative.
 
-
-
 == See Also
 
-* xref:configure-message-flows.adoc[Configure Message Flows]
-* xref:deploy-message-flows.adoc[Deploy Message Flows]
+* xref:message-flows.adoc[Partner Manager Message Flows]
+* xref:configure-message-flows.adoc[Create and Configure an Inbound Message Flow]
+* xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow]
