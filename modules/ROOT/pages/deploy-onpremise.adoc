@@ -11,7 +11,7 @@ The server group name is case-sensitive, and you must use the name `B2BServerGro
 . xref:mule-runtime::runtime-installation-task.adoc[Download and Install Mule]. +
 Partner Manager supports Mule 4.2 and later.
 . After you install Mule, navigate to the `wrapper.conf` file, which is located in `$MULE_HOME/conf/`.
-. In the `wrapper.conf` file, add the required parameters and adjust the memory and heap size configuration values for your environment. 
+. In the `wrapper.conf` file, add the required parameters and adjust the memory and heap size configuration values for your environment.
 +
 If you are unsure about the Mule capacity you need to manage your B2B transactions, contact your MuleSoft account representative for assistance.
 +
@@ -31,7 +31,7 @@ wrapper.java.maxmemory=4606
 ----
 +
 . xref:mule-runtime::installing-an-enterprise-license.adoc[Install an Enterprise License].
-. Add the server in Runtime Manager based on the instructions xref:runtime-manager::servers-create#create-a-server[Create a Server].
+. Add the server in Runtime Manager based on the instructions xref:runtime-manager::servers-create#create-a-server[Add Servers to Runtime Manager].
 . Start Mule and verify it is active within Anypoint Runtime Manager.
 . Add the servers you created to the `B2BServerGroup` server group you created earlier. +
 See xref:runtime-manager::server-group-add.adoc[Add Servers to a Group].
