@@ -7,7 +7,7 @@ On the *Partners* page, you can:
 * <<create-partner,Create and configure new trading partners>>
 * <<view-partner-details,View the details>> of a partner
 * xref:partner-manager-identifiers.adoc[Add the EDI and AS2 identifiers] used by your trading partner.
-* Add digital certificates associated with your trading partner.
+* Add digital xref:Certificates.adoc[Certificates] associated with your trading partner.
 * xref:create-endpoint.adoc[Create] and manage source and target endpoints owned by the trading partner.
 * Manage EDI validation settings for xref:x12-receive-read-settings.adoc[inbound] and xref:x12-send-settings.adoc[outbound] transactions.
 
@@ -21,7 +21,7 @@ To create a new partner, you need the following information:
 [[create-partner]]
 == Create a Partner
 
-Before you create your first trading partner, you must configure your xref:setup-payload-storage-API.adoc[payload storage API].
+Before you create your first trading partner, ensure you configure your xref:setup-payload-storage-API.adoc[payload storage API].
 
 . From within your Anypoint Partner Manager environment, select *Partners* from the left navigation.
 . Click *New partner*.
@@ -35,7 +35,7 @@ Before you create your first trading partner, you must configure your xref:setup
 . If you selected *X12-ISA* for *Type*, you must also select a *Qualifier* value from the list.
 . Click *Create partner* to create your trading partner.
 
-You can now xref:configure-message-flows.adoc[set up message flows] for this trading partner or continue to <<update-partner,update this partner>>.
+You can now xref:message-flows.adoc[set up message flows] for this trading partner or continue to <<update-partner,update this partner>>.
 
 [[update-partner]]
 == Update a Partner's Profile
@@ -82,14 +82,5 @@ You can also configure validation, acknowledgment, control number, and character
 
 == See Also
 
-* xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
 * xref:create-endpoint.adoc[Create and Configure Endpoints]
-* xref:endpoint-as2-receive.adoc[AS2 Receive Endpoint Settings]
-* xref:endpoint-as2-send.adoc[AS2 Send Endpoint Settings]
-* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
-* xref:endpoint-sftp-send-adoc[SFTP Send Endpoint Settings]
-* xref:endpoint-https-send.adoc[HTTP and HTTPS Send Settings]
-* xref:endpoint-https-receive.adoc[HTTP and HTTPS Receive Settings]
-* xref:x12-receive-read-settings.adoc[Configure X12 Receive (Inbound) Settings]
-* xref:x12-send-settings.adoc[Configure X12 Send (Outbound) Settings]
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
