@@ -53,7 +53,7 @@ The reference ID is added to the message flow.
 == Import the Translation Map
 
 === Prerequisites
-To create your outbound EDI-to-application message (JSON or XML) map in Anypoint Studio, follow xref:partner-manager-maps.adoc[these instructions].
+To create your outbound EDI-to-application message (JSON or XML) map in Anypoint Studio, see xref:partner-manager-maps.adoc[EDI Translation Maps].
 
 === Steps
 

@@ -6,7 +6,7 @@ To use your own storage solution, you must implement an API that provides Anypoi
 
 == Download and Deploy the Payload Storage API
 
-Before you create your first xref:configure-partner#create-partner[trading partner] and xref:configure-message-flow[message flow], you must configure your payload storage API within the host organization in Partner Manager.
+Before you create your first trading partner and message flow, you must configure your payload storage API within the host organization in Partner Manager.
 
 . Access and download the following APIs from Anypoint Exchange:
 +
