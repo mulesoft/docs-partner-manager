@@ -24,9 +24,9 @@ If you are not receiving TA1 configurations, review the following configuration:
 
 . Scroll to Validation and Acknowledgment settings and click *X12*.
 
-. Within the Acknowledgements section, ensure that the option for _Send TA1 for each transmission from <partner name>_ is selected.
+. Within the Acknowledgments section, ensure that the option for _Send TA1 for each transmission from <partner name>_ is selected.
 
-. Configure the Acknowledgement endpoint as in xref:endpoints.adoc[Endpoints].
+. Configure the acknowledgment endpoint as in xref:endpoints.adoc[Endpoints].
 
 . Click *Save* when done.
 

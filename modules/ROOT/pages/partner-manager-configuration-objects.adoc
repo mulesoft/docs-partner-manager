@@ -8,6 +8,6 @@ Send and receive identifiers, such as X12 ISA and GS identifiers and AS2 identif
 * xref:endpoints.adoc[Receive and Send endpoints] +
 Receive source messages or send translated messages using a standard transport protocol
 * xref:partner-manager-create-message-type.adoc[Source and target message types] +
-Settings that define the structures of received messages and of the translated messages sent to the back end.
+Settings that define the structures of received messages and of the translated messages sent to the backend.
 * xref:partner-manager-maps.adoc[Maps] +
-DataWeave transformation maps that convert inbound EDI transactions to backend application format or transactions outbound from back end to EDI format
+DataWeave transformation maps that convert inbound EDI transactions to backend application format or transactions outbound from the backend to EDI format

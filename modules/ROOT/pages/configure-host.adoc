@@ -14,10 +14,4 @@ Use the host page in Partner Manager to:
 
 == See Also
 
-* xref:access-management::organization.adoc[Organization]
-* xref:access-management::business-groups.adoc[Business Groups]
-* xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
-* xref:delete-identifiers.adoc[Delete Identifiers]
-* xref:endpoints.adoc[Endpoint Types and Protocols]
-* xref:partner-manager-maps.adoc[Create and Configure EDI Translation Maps]
-* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
+* xref:configure-partner.adoc[Create, Configure, and Update Trading Partners]
