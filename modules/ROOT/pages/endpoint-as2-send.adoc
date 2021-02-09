@@ -26,7 +26,7 @@ The value in the *Endpoint Name* field is generated automatically but can be mod
 |The user-defined field for describing the purpose and use of the endpoint.
 | No
 
-|Trading partner AS2 URL
+|Partner AS2 URL
 |Your trading partner’s AS2 URL to which outbound EDI transmissions need to be sent.
 |Yes
 
