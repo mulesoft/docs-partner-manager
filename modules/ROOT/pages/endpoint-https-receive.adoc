@@ -59,7 +59,11 @@ The backend applications that send JSON or XML payloads to the HTTP receive endp
 
 == HTTP or HTTPS URL
 
-The value in the URL field is automatically generated when you deploy a message flow to CloudHub that uses this endpoint. You can view this URL by selecting the receiving endpoint from your deployed message flow.
+The value in the URL field is automatically generated when you deploy a message flow...
+
+An example of the ‘External URL’ with the endpoint details:
+
+https://{DLB-domain}/b2b-pattern-example/{path}
 
 If you are deploying to on-premises Mule instance with a firewall and load balancer, work with your hosting or network security team to obtain the externally accessible DNS or name of the host where the Mule server is running, and replace `{runtime_host}` in the URL with the DNS name of your host. For example, if your DNS host name is `b2b.mycompany.com`, the receiver URL is `+https://b2b.mycompany.com/base-path/+`.
 

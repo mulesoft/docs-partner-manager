@@ -1,6 +1,7 @@
 = AS2 Receive Endpoint Settings
 
-Your organization's AS2 endpoint settings determine where to receive inbound data from trading partners. One AS2 endpoint can receive inbound data from multiple partners.
+Your organization's AS2 endpoint settings determine where to receive inbound data from trading partners.
+One AS2 endpoint can receive inbound data from multiple partners.
 
 Create AS2 identifiers for your organization as host and for your trading partners in their respective xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner] profile pages.
 
@@ -43,7 +44,11 @@ a| The HTTP or HTTPS address where you receive AS2 messages.
 
 == AS2 URL
 
-The value in the URL field is automatically generated when you deploy a message flow to CloudHub that uses this endpoint. You can view this URL by selecting the receiving endpoint from your deployed message flow.
+The value in the URL field is automatically generated when you deploy a message ...
+
+An example of the ‘External URL’ with the endpoint details:
+
+https://{DLB-domain}/b2b-pattern-example/{path}
 
 If you are deploying to an on-premises Mule instance with a firewall and load balancer, work with your organization's hosting or network security team to obtain the externally accessible DNS or the name of the instance host. You must replace the `{runtime_host}` value in the URL with the value that is specific to your organization. For example, if the DNS host name is `b2b.mycompany.com`, the AS2 receiver URL is `+https://b2b.mycompany.com/receive-as2/+`.
 
