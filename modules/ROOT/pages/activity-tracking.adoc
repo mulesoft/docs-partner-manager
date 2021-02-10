@@ -42,9 +42,9 @@ Filter for transmissions that are sent or received up to this date.
 Filter for transmissions based on their acknowledgment status:
 ** *All*
 ** *Overdue*
-** *Rejected*
-
-Filter for message processing status:
+** *Rejected* +
++
+Filter for message processing status: +
 ** *All*
 ** *Delivered*
 ** *Errored*
