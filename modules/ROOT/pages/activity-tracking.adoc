@@ -49,7 +49,7 @@ Filter for message processing status: +
 ** *Delivered*
 ** *Errored*
 ** *Processing*
-** *Received*
+** *Received* +S
 
 Filter your (trading) Partner name
 
