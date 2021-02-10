@@ -43,13 +43,13 @@ Filter for transmissions based on their acknowledgment status:
 ** *All*
 ** *Overdue*
 ** *Rejected* +
-+
+
 Filter for message processing status: +
 ** *All*
 ** *Delivered*
 ** *Errored*
 ** *Processing*
-** *Received* +S
+** *Received* +
 
 Filter your (trading) Partner name
 
