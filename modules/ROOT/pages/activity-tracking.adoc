@@ -44,7 +44,7 @@ Filter for transmissions based on their acknowledgment status:
 ** *Overdue*
 ** *Rejected* +
 
-Filter for message processing status: +
+Filter for message processing status:
 ** *All*
 ** *Delivered*
 ** *Errored*
