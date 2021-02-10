@@ -45,10 +45,15 @@ Filter for transmissions based on their acknowledgment status:
 ** *Rejected* +
 
 Filter for message processing status:
+
 ** *All*
+
 ** *Delivered*
+
 ** *Errored*
+
 ** *Processing*
+
 ** *Received* +
 
 Filter your (trading) Partner name
