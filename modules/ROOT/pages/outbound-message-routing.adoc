@@ -11,9 +11,10 @@ You can:
 When messages are received by the endpoint, Partner Manager routes the payload to the appropriate message flow based on the message type, partner reference identifier, and host reference ID configurations:
 
 * Partner Manager identifies the message type:
-. Relative path for HTTP or HTTPS endpoints
-. File name for SFTP
-* Partner Manager valides the payload against the schema supplied during the message type definition.
+** Relative path for HTTP or HTTPS endpoints
+** File name for SFTP endpoints +
+The file name for SFTP endpoints should follow the following convention: `<message-type>_<endpoint-information>.<file-type>`. For example, if your message type identifier is ar-invoice, then the file name is `ar-invoice_20210217_1055_000.json`.
+* Partner Manager validates the payload against the schema supplied during the message type definition.
 * Partner Manager uses the supplied DataWeave map to obtain the partner and host reference IDs and the business key.
 * The partner reference identifier and optional host reference identifier specify the message flow through which the transaction is processed:
 
