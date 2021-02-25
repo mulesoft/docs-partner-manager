@@ -7,12 +7,16 @@ Create AS2 identifiers for your organization as host and for your trading partne
 [%header%autowidth.spread]
 |===
 | Setting | Description | Required
-| Endpoint Name
-| The automatically generated name used to identify the endpoint, which you can subsequently modify manually.
-| Yes
-
 | Owner
 | The host or trading partner that owns the endpoint.
+| Yes
+
+| Usage
+| The usage of the endpoint. For receive endpoints, the value in this field is `Receive from partners`. The value in this field is automatically generated based on the type of endpoint created.
+| No
+
+| Endpoint Name
+| The automatically generated name used to identify the endpoint, which you can subsequently modify manually.
 | Yes
 
 | Protocol
@@ -23,23 +27,18 @@ Create AS2 identifiers for your organization as host and for your trading partne
 | The user-supplied description of the purpose and use of the endpoint.
 | No
 
+| Private port (when deploying to VPC)
+| The checkbox indicating whether or not to use a private port when deploying to a virtual private cloud.
+| No
+
 | AS2 URL
 a| The HTTP or HTTPS address where you receive AS2 messages.
 | No
 
-| <Host> public certificate
+| <Host> keytstore
 | The digital certificate for your organization. This certificate is based on the RSA algorithm for the AS2 transport protocol.
 | Yes
-
-| <Host> private key file
-| The private key.
-| Yes
-
-| Key passphrase
-| The passphrase for your private key.
-| Yes
 |===
-
 
 == AS2 URL
 

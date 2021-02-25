@@ -52,3 +52,4 @@ If you select Partners, select the partner to which you want to add the certific
 
 * xref:configure-host.adoc[Configure and Manage a Host Profile]
 * xref:configure-partner.adoc[Create, Configure, and Update Trading Partners]
+* xref:create-keystore.adoc[Create a Keystore]
