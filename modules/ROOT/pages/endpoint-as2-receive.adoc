@@ -15,13 +15,18 @@ Create AS2 identifiers for your organization as host and for your trading partne
 | The usage of the endpoint. For receive endpoints, the value in this field is `Receive from partners`. The value in this field is automatically generated based on the type of endpoint created.
 | No
 
+| Protocol
+| The protocol previously selected in the *Protocol* field of the *New endpoint: Receive from partners* window. This value cannot be subsequently modified.
+| Yes
+
+| Partner
+|
+|
+
 | Endpoint Name
 | The automatically generated name used to identify the endpoint, which you can subsequently modify manually.
 | Yes
 
-| Protocol
-| The protocol previously selected in the *Protocol* field of the *New endpoint: Receive from partners* window. This value cannot be subsequently modified.
-| Yes
 
 | Description
 | The user-supplied description of the purpose and use of the endpoint.
