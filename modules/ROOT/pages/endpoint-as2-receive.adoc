@@ -7,42 +7,37 @@ Create AS2 identifiers for your organization as host and for your trading partne
 [%header%autowidth.spread]
 |===
 | Setting | Description | Required
-| Owner
-| The host or trading partner that owns the endpoint.
-| Yes
+|Owner
+|The host or trading partner that owns the endpoint.
+|Yes
 
-| Usage
-| The usage of the endpoint. For receive endpoints, the value in this field is `Receive from partners`. The value in this field is automatically generated based on the type of endpoint created.
-| No
+|Usage
+|The usage of the endpoint. For receive endpoints, the value in this field is `Receive from partners`. The value in this field is automatically generated based on the type of endpoint created.
+|No
 
-| Protocol
-| The protocol previously selected in the *Protocol* field of the *New endpoint: Receive from partners* window. This value cannot be subsequently modified.
-| Yes
+|Protocol
+|The protocol previously selected in the *Protocol* field of the *New endpoint: Receive from partners* window. This value cannot be subsequently modified.
+|Yes
 
-| Partner
-|
-|
+|Endpoint Name
+|The automatically generated name used to identify the endpoint, which you can subsequently modify manually.
+|Yes
 
-| Endpoint Name
-| The automatically generated name used to identify the endpoint, which you can subsequently modify manually.
-| Yes
+|Description
+|The user-supplied description of the purpose and use of the endpoint.
+|No
 
-
-| Description
-| The user-supplied description of the purpose and use of the endpoint.
-| No
-
-| Private port (when deploying to VPC)
-| The checkbox indicating whether or not to use a private port when deploying to a virtual private cloud.
-| No
+|Private port (when deploying to VPC)
+|The checkbox indicating whether or not to use a private port when deploying to a virtual private cloud.
+|No
 
 | AS2 URL
-a| The HTTP or HTTPS address where you receive AS2 messages.
-| No
+|The HTTP or HTTPS address where you receive AS2 messages.
+|No
 
-| <Host> keytstore
-| The digital certificate for your organization. This certificate is based on the RSA algorithm for the AS2 transport protocol.
-| Yes
+|<Host> keytstore
+|The digital xref:create-keystore.adoc[keystore] certificate and private key for your organization.
+|Yes
 |===
 
 == AS2 URL
