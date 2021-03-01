@@ -25,16 +25,16 @@ Use the search box to find the transmission based on criteria such as:
 * Filename
 * Control number
 * Endpoint
-* Date the file was received
-+
-Use the filters to find transmissions based on:
-+
+* Date the file was received +
+
+. You can then use the filters to find transmissions based on:
+
 * *Type* +
 Type of message transmission:
 ** *Both directions*
 ** *Sent to partners*
 ** *Received from partners*
-* *From Date*
+* *From Date* +
 Filter for transmissions that sent or received after this date.
 * *To Date* +
 Filter for transmissions that are sent or received up to this date.
@@ -43,29 +43,21 @@ Filter for transmissions based on their acknowledgment status:
 ** *All*
 ** *Overdue*
 ** *Rejected* +
-
-Filter for message processing status:
-
+* *Message Processing Status* +
+Filter for transmissions based on their message processing status:
 ** *All*
-
 ** *Delivered*
-
 ** *Errored*
-
 ** *Processing*
-
-** *Received* +
-
-Filter your (trading) Partner name
-
-Filter your (trading) Partner Message Type (Example: X12, 850
-note: for X12 custom message types names should not be considered)
-
-Filter your Host Message Type (Example: JSON host-purchase-order)
-
-Business message type (Source at partner, Target at partner: EDI 850, 810 etc)???
-Application message type (Source at host / Target at host: ar-invoice, enterprise-po etc)???
-
+** *Received*
+* *Partner name* +
+Filter for transmissions based on your partner's name.
+* *Partner message type* +
+Filter for transmissions based on the message type, such as `X12` or `850`. +
+[NOTE]
+For X12 custom message types, partner names should not be considered.
+* *Host message type* +
+Filter for transmissions based on the host message type, such as `JSON host-purchase-order`.
 . Select the transmission that matches your search criteria and review the summary information:
 +
 * The status of the transmission, indicated by a green checkmark for a successful transmission, or a red circle with an exclamation point for a failed transmission
