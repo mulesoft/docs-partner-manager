@@ -1,4 +1,4 @@
-== Create and Configure Message Types
+= Create and Configure Message Types
 
 Message types define the schematic structure of the transactions received or sent by Partner Manager.
 
