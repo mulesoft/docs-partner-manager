@@ -28,15 +28,16 @@ Create AS2 identifiers for your organization as host and for your trading partne
 |No
 
 |Private port (when deploying to VPC)
-|The checkbox indicating whether or not to use a private port when deploying to a virtual private cloud.
+a|When enabled, the AS2 receive endpoint application is deployed to private port 8092 in the runtime in your xref:runtime-manager::virtual-private-cloud.adoc [CloudHub VPC]. You can manage the access control to the endpoint via the VPC and the Dedicated Load Balancer settings.
+
+When disabled, the AS2 receive endpoint application is deployed to public port 8082 by default. The endpoint URL can be directly accessed over the internet.
+
+[Note]
+This configuration is applicable only for CloudHub VPC deployments from Partner Manager
 |No
 
-| AS2 URL
-|The HTTP or HTTPS address where you receive AS2 messages.
-|No
-
-|<Host> keytstore
-|The digital xref:create-keystore.adoc[keystore] certificate and private key for your organization.
+|<Host> keystore
+|The host xref:create-keystore.adoc[keystore] files in your environment that house your organization's public certificate and private key.
 |Yes
 |===
 
