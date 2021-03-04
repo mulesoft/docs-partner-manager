@@ -1,7 +1,37 @@
 = Anypoint Partner Manager Architecture
 
+With Anypoint Partner Manager, you can deploy B2B Integration message flows with your partners, either to your own hosted Mule runtimes or to MuleSoft hosted CloudHub iPaaS platform.
+
+The functional features and user experience in configuring B2B Integrations with Partner Manager are deployment-target agnostic; however, there are differences in the underlying architecture when implementing the functionality in the runtime.
+
+When you deploy a configured message flow, Partner Manager automatically translates the configurations used in the message flow and deploys and updates a set of applications necessary to orchestrate end-to-end B2B processing to the Mule runtime. These applications include:
+* Receive endpoint services
+* Document processing service
+* Replication service
+* Send endpoint services
+
+IMAGE - CAPTION: Anypoint Partner Manager Architecture
+
+INCLUDE CHART
+
 == Partner Manager for CloudHub
+
+When deploying B2B Integration message flows to CloudHub, Anypoint MQ queues are used between processing stages to add additional reliability to the B2B message processing.
+
+As of the time of first deployment from Partner Manager, runtime applications are deployed by default to the CloudHub region specified in the business group’s default settings in Runtime Manager. Anypoint MQ queues are automatically created during the deployment process in the same or the nearest available region. Any new runtime application from subsequent deployments is deployed to the same region as the first deployment.
+
+IMAGE - CAPTION: Anypoint Partner Manager for CloudHub
 
 == Partner Manager for On-Premise Mule Runtime
 
+When deploying B2B Integration message flows to your own hosted on-premise Mule runtime, HTTP calls are used between processing stages during B2B message processing.
+
+The runtime applications are deployed to the server group (B2BServerGroup) that you will have configured in your data center or your private cloud.
+
+IMAGE - CAPTION: Anypoint Partner Manager for customer-hosted Mule runtime
+
+
 == See Also
+* xref:deploy-onpremised.adoc[Deploy Message Flows On-Premises]
+* xref:cloudhub-deploy-options.adoc[CloudHub Deployment Settings]
+* xref:message-flows.adoc[Partner Manager Message Flows]
