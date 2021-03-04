@@ -1,2 +1,7 @@
 = Anypoint Partner Manager Architecture
 
+== Partner Manager for CloudHub
+
+== Partner Manager for On-Premise Mule Runtime
+
+== See Also
