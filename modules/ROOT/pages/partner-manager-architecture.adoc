@@ -5,6 +5,7 @@ With Anypoint Partner Manager, you can deploy B2B Integration message flows with
 The functional features and user experience in configuring B2B Integrations with Partner Manager are deployment-target agnostic; however, there are differences in the underlying architecture when implementing the functionality in the runtime.
 
 When you deploy a configured message flow, Partner Manager automatically translates the configurations used in the message flow and deploys and updates a set of applications necessary to orchestrate end-to-end B2B processing to the Mule runtime. These applications include:
+
 * Receive endpoint services
 * Document processing service
 * Replication service
