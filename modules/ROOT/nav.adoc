@@ -3,7 +3,7 @@
 * xref:setup.adoc[Setup and Installation]
  ** xref:cloudhub-deploy-options.adoc[CloudHub Deployment]
  ** xref:deploy-onpremise.adoc[On-Premises Deployment]
- ** xref:partner-manager-architecture[Anypoint Partner Manager Architecture]
+ ** xref:partner-manager-architecture.adoc[Anypoint Partner Manager Architecture]
  ** xref:Certificates.adoc[Certificate Settings]
  ** xref:setup-payload-storage-API.adoc[Set Up Payload Storage API]
 * xref:configure-host.adoc[Configure and Manage a Host Profile]
