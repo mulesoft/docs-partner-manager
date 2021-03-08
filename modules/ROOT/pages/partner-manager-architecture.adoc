@@ -12,7 +12,32 @@ When you deploy a configured message flow, Partner Manager automatically transla
 
 image::partner-manager-high-level-arch.png[Anypoint Partner Manager Architecture]
 
-INCLUDE CHART
+[%header%autowidth.spread]
+|===
+|(image:pm-arch-diagram-1.png[])
+|Partner Manager
+|MuleSoft hosted cloud control plane allowing users to configure trading partner profiles, build and deploy B2B integration message flows, and monitor B2B transactions activity.
+
+|(image:pm-arch-diagram-2.png[])
+|Receive Endpoint Services
+|Service to receive inbound B2B or EDI messages from partners via communication protocols such as AS2 and SFTP or outbound application messages from your organization’s backend systems via HTTP, HTTPS, or SFTP.
+
+|(image:pm-arch-diagram-3.png[])
+|Document Processing Service
+|Core B2B processing engine responsible for parsing, validating and translating received B2B messages based on configurations and mapping in Partner Manager.
+
+|(image:pm-arch-diagram-4.png[])
+|API Replication Service
+|Tracking service responsible for updating transmissions and transaction activities to the control plane and to the payload storage API.
+
+|(image:pm-arch-diagram-5.png[])
+|Send Endpoint Services
+|Service to deliver translated inbound application messages to internal applications such as ERP, billing, Order Management via HTTP, HTTPS or SFTP; or outbound B2B/EDI payloads to your trading partners via AS2, HTTP, HTTPS or SFTP.
+
+|(image:pm-arch-diagram-6.png[])
+|Payload Storage API
+|API to store B2B payload data in your own storage solution.
+|===
 
 == Partner Manager for CloudHub
 
