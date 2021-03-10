@@ -18,7 +18,7 @@ image::partner-manager-high-level-arch.png[Anypoint Partner Manager Architecture
 |Callout |Name |Description
 |image:pm-arch-diagram-1.png[]
 |Partner Manager
-|MuleSoft hosted cloud control plane allowing users to configure trading partner profiles, build and deploy B2B integration message flows, and monitor B2B transactions activity.
+|MuleSoft-hosted cloud control plane enabling users to configure trading partner profiles, build and deploy B2B integration message flows, and monitor B2B transaction activity
 
 |image:pm-arch-diagram-2.png[]
 |Receive Endpoint Services
