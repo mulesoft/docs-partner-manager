@@ -51,7 +51,7 @@ image::partner-manager-cloud-deployment.png[Anypoint Partner Manager for CloudHu
 
 == Partner Manager for On-Premise Mule Instances
 
-When deploying B2B Integration message flows to your own hosted on-premise Mule runtime, HTTP calls are used between processing stages during B2B message processing.
+When deploying B2B Integration message flows to your own hosted on-premise Mule instance, HTTP calls are used between processing stages during B2B message processing.
 
 The runtime applications are deployed to the server group (B2BServerGroup) that you will have configured in your data center or your private cloud.
 
