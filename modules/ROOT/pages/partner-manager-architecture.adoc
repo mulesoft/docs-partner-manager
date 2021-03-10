@@ -22,7 +22,7 @@ image::partner-manager-high-level-arch.png[Anypoint Partner Manager Architecture
 
 |image:pm-arch-diagram-2.png[]
 |Receive Endpoint Services
-|Service to receive inbound B2B or EDI messages from partners transport protocols such as AS2 and SFTP or outbound application messages from your organization’s backend systems via HTTP, HTTPS, or SFTP.
+|Services to receive inbound B2B or EDI messages from partner transport protocols such as AS2 and SFTP or outbound application messages from your organization’s backend systems via HTTP, HTTPS, or SFTP
 
 |image:pm-arch-diagram-3.png[]
 |Document Processing Service
