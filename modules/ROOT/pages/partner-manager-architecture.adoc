@@ -26,7 +26,7 @@ image::partner-manager-high-level-arch.png[Anypoint Partner Manager Architecture
 
 |image:pm-arch-diagram-3.png[]
 |Document Processing Service
-|Core B2B processing engine responsible for parsing, validating and translating received B2B messages based on configurations and mapping in Partner Manager.
+|Core B2B processing engine responsible for parsing, validating, and translating received B2B messages based on configurations and mapping in Partner Manager
 
 |image:pm-arch-diagram-4.png[]
 |API Replication Service
