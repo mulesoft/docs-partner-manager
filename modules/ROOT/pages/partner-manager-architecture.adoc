@@ -58,6 +58,6 @@ Runtime applications deployed to the server group (B2BServerGroup) contain confi
 image::partner-manager-onprem-deployment.png[Anypoint Partner Manager for customer-hosted Mule runtime]
 
 == See Also
-* xref:deploy-onpremised.adoc[Deploy Message Flows On-Premises]
+* xref:deploy-onpremise.adoc[Deploy Message Flows On-Premises]
 * xref:cloudhub-deploy-options.adoc[CloudHub Deployment Settings]
 * xref:message-flows.adoc[Partner Manager Message Flows]
