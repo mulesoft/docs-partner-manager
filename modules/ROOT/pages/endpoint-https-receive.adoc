@@ -6,7 +6,7 @@ Configure HTTP and HTTPS receive endpoints to receive application messages (JSON
 |===
 |Name |Description |Required
 |Endpoint Name
-|The automatically generated name used to identify the endpoint, which you can subsequently modify manually.
+|The automatically generated name to identify the endpoint, which you can subsequently modify manually.
 |Yes
 
 | Owner
@@ -40,9 +40,9 @@ Possible values include:
 |Yes
 
 |Basic authentication
-a|When Basic authentication selected, specify the user name and password to protect the HTTP listener.
+a|When Basic authentication is selected, specify the user name and password to protect the HTTP listener.
 
-After your new or or reconfigured endpoint is saved, you cannot subsequently retrieve or modify the password.
+After saving your new or reconfigured endpoint, you cannot subsequently retrieve or modify the password.
 
 The backend applications that send JSON or XML payloads to the HTTP receive endpoint must pass the credentials in the HTTP request header.
 |
@@ -50,7 +50,7 @@ The backend applications that send JSON or XML payloads to the HTTP receive endp
 |API Key
 a|The API key for the HTTP listener.
 
-After selecting *API Key* in the *Authentication type* picklist, specify the HTTP header name and API key to protect the HTTP listener. After your new or reconfigured endpoint is saved, you cannot subsequently retreive or modify the API key.
+After selecting *API Key* in the *Authentication type* picklist, specify the HTTP header name and API key to protect the HTTP listener. After saving your new or reconfigured endpoint, you cannot subsequently retrieve or modify the API key.
 
 
 The backend applications that send JSON or XML payloads to the HTTP receive endpoint must pass the API key in the HTTP request with the configured HTTP header name.
@@ -63,7 +63,7 @@ The backend applications that send JSON or XML payloads to the HTTP receive endp
 
 When an HTTP or HTTPS receive endpoint is deployed with the private port configuration enabled, the endpoint application is deployed on the public HTTPS port (8082), with the traffic routed through the xref:runtime-manager::dedicated-load-balancer-tutorial#shared-load-balancers [shared load balancer]. The value in the URL field is automatically generated when you deploy a message flow to CloudHub that uses this endpoint.
 
-You can view this URL by selecting the receiving endpoint from your deployed message flow or by clicking the endpoint name from the endpoints list. This URL can be shared with the partners that would send HTTP or HTTPS messages to this endpoint.
+You can view this URL by selecting the receiving endpoint from your deployed message flow or by clicking the endpoint name from the endpoints list. You can share this URL with the partners that would send HTTP or HTTPS messages to this endpoint.
 
 If your organization uses CloudHub VPC without a dedicated load balancer, your organization’s platform administrator can configure the necessary xref:runtime-manager::vpc-firewall-rules-concept.adoc[VPC Firewall Rules] to allow specific IP addresses of your
 partners to access the endpoint.
@@ -74,7 +74,7 @@ When an HTTP or HTTPS receive endpoint is deployed with the private port configu
 
 After deploying the first message flow using the HTTP or HTTPS receive endpoint configuration, you can view the runtime application name for the endpoint from the *Endpoint* details page or from the *Receive* section of your message flow. To configure xref:runtime-manager/lb-mapping-rules[URL mapping rules] in the xref:runtime-manager::cloudhub-dedicated-load-balancer.adoc[Dedicated Load Balancer] to forward HTTP or HTTPS messages received from your backend applications to outbound B2B message flows, provide the application name to your organization’s platform administrator.
 
-If your backend processes consuming the HTTP or HTTPS receive endpoint are also running inside the same VPC, they can call the internal URL directly.
+If your backend processes consuming the HTTP or HTTPS receive endpoints are also running inside the same VPC, they can call the internal URL directly.
 
 If your backend processes consuming the endpoint are in a different network, your organization’s platform administrator can update Dedicated Load Balancer settings to xref:runtime-manager::lb-whitelists.adoc[whitelist] specific IP addresses to access the endpoint.
 
@@ -92,7 +92,7 @@ https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/enterprise-ob-po-ack.
 
 === Deploy to On-Premise Mule Runtime
 
-If you are deploying to on-premises Mule instance with a firewall and load balancer, work with your hosting or network security team to obtain the externally accessible DNS or name of the host where the Mule server is running, and replace `{runtime_host}` in the URL with the DNS name of your host. For example, if your DNS host name is `b2b.mycompany.com`, the receiver URL is `+https://b2b.mycompany.com/base-path/+`, and your backend systems should be posting the HTTPS request to https://b2b.mycompany.com/base-path/{message-type}.
+If you are deploying to an on-premises Mule instance with a firewall and load balancer, work with your hosting or network security team to obtain the externally accessible DNS or name of the host where the Mule server is running, and replace `{runtime_host}` in the URL with the DNS name of your host. For example, if your DNS host name is `b2b.mycompany.com`, the receiver URL is `+https://b2b.mycompany.com/base-path/+`, and your backend systems should be posting the HTTPS request to https://b2b.mycompany.com/base-path/{message-type}.
 
 == See Also
 
