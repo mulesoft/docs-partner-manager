@@ -1,2 +1,63 @@
 = Anypoint Partner Manager Architecture
 
+With Anypoint Partner Manager, you can deploy B2B integration message flows with your partners, either to your own hosted Mule instances or to a MuleSoft-hosted CloudHub iPaaS platform.
+
+The functional features and user experience in configuring B2B integrations with Partner Manager are deployment-target agnostic; however, differences in the underlying architecture when implementing the functionality in the runtime occur.
+
+When you deploy a configured message flow, Partner Manager automatically translates the configurations used in the message flow and deploys and updates a set of applications necessary to orchestrate end-to-end B2B processing to the Mule instance. These applications include:
+
+* Receive endpoint services
+* Document processing service
+* Replication service
+* Send endpoint services
+
+image::partner-manager-high-level-arch.png[Anypoint Partner Manager Architecture]
+
+[%header%autowidth.spread]
+|===
+|Callout |Name |Description
+|image:pm-arch-diagram-1.png[]
+|Partner Manager
+|MuleSoft-hosted cloud control plane enabling users to configure trading partner profiles, build and deploy B2B integration message flows, and monitor B2B transaction activity
+
+|image:pm-arch-diagram-2.png[]
+|Receive Endpoint Services
+|Services to receive inbound B2B or EDI messages from partner transport protocols such as AS2 and SFTP or outbound application messages from your organization’s backend systems via HTTP, HTTPS, or SFTP
+
+|image:pm-arch-diagram-3.png[]
+|Document Processing Service
+|Core B2B processing engine responsible for parsing, validating, and translating received B2B messages based on configurations and mapping in Partner Manager
+
+|image:pm-arch-diagram-4.png[]
+|API Replication Service
+|Tracking service responsible for updating transmissions and transaction activities to the control plane and the payload storage API
+
+|image:pm-arch-diagram-5.png[]
+|Send Endpoint Services
+|Services to deliver translated inbound application messages to internal applications such as ERP, billing, Order Management via transport protocols like HTTP(S)/SFTP; or outbound B2B/EDI payloads to your trading partners via AS2/HTTP(s)/SFTP
+
+|image:pm-arch-diagram-6.png[]
+|Payload Storage API
+|API to store B2B payload data in your storage solution
+|===
+
+== Partner Manager for CloudHub
+
+When deploying B2B integration message flows to CloudHub, Anypoint MQ uses queues between processing stages to add additional reliability to B2B message processing.
+
+As of the first deployment from Partner Manager, runtime applications deploy to the CloudHub region specified in the business group’s default settings in Runtime Manager by default. Anypoint MQ queues automatically generate during the deployment process in the same or the nearest available region. Any new runtime applications deploy to the same region as the first deployment.
+
+image::partner-manager-cloud-deployment.png[Anypoint Partner Manager for CloudHub]
+
+== Partner Manager for On-Premise Mule Instances
+
+When deploying B2B integration message flows to your own hosted on-premise Mule instance, the instance uses HTTP calls between processing stages during B2B message processing.
+
+Runtime applications deployed to the server group (B2BServerGroup) contain configured data in your data center or private cloud.
+
+image::partner-manager-onprem-deployment.png[Anypoint Partner Manager for customer-hosted Mule runtime]
+
+== See Also
+* xref:deploy-onpremise.adoc[Deploy Message Flows On-Premises]
+* xref:cloudhub-deploy-options.adoc[CloudHub Deployment Settings]
+* xref:message-flows.adoc[Partner Manager Message Flows]
