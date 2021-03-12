@@ -15,7 +15,7 @@
  ** xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
   *** xref:delete-identifiers.adoc[Delete Identifiers]
  ** xref:document-types.adoc[Message Types]
-  *** xref:partner-manager-create-message-type.adoc[Creating Message Types]
+  *** xref:partner-manager-create-message-type.adoc[Create and Configure Message Types]
  ** xref:endpoints.adoc[Endpoints]
   *** xref:create-endpoint.adoc[Create and Configure Endpoints]
   *** xref:endpoint-as2-receive.adoc[AS2 Receive Endpoint Settings]
