@@ -15,7 +15,7 @@ With activity tracking, you can:
 Select a message flow to view its transmission details and view and download the payload:
 
 . Open Anypoint Partner Manager.
-. In the menu on the left, select *Activity*.
+. In the navigation menu, select *Activity*.
 . Locate the message flow whose activity you want to track.
 +
 Use the search box to find the transmission based on criteria such as:
@@ -25,10 +25,8 @@ Use the search box to find the transmission based on criteria such as:
 * Filename
 * Control number
 * Endpoint
-* Received date the file +
-
+* Received date of the file +
 . You can then use the filters to find transmissions based on:
-
 * *Type* +
 Type of message transmission:
 ** *Both directions*
@@ -37,7 +35,7 @@ Type of message transmission:
 * *From Date* +
 Filter for transmissions sent or received after this date.
 * *To Date* +
-Filter for transmissions sent or received up to this date.
+Filter for transmissions sent or received up to and including this date.
 * *Ack Status* +
 Filter for transmissions based on their acknowledgment status:
 ** *All*
@@ -58,7 +56,7 @@ Filter for transmissions based on the message type, such as `X12` or `850`. +
 Filter for transmissions based on the host message type, such as `JSON host-purchase-order`.
 . Select the transmission that matches your search criteria and review the summary information:
 +
-* The success or failure status of the transmission (indicated by either a green checkmark for success or a red circle with an exclamation point for failure)
+* The success or failure status of the transmission (indicated by either a checkmark for success or a circle with an exclamation point for failure)
 * The name of the received file
 * The control number associated with the file (if available)
 * The receiving endpoint
@@ -75,7 +73,7 @@ If you have not received an acknowledgment from your trading partner or if your 
 * Transformation and routing information
 +
 An exclamation point (!) appearing next to any of the rectangle boxes in the *Transmission Flow* section indicates an issue with the transmission.
-. Click *View Payload* to view and download the originally-received payload.
+. Click *View Payload* to view and download the originally received payload.
 +
 You can examine the received payload to troubleshoot issues and find the issue location within the message flow.
 +
