@@ -17,7 +17,7 @@ Create the AS2 identifiers for your organization and your trading partners in th
 | Yes
 
 |Endpoint Name
-| The name used to identify the endpoint
+| The name used to identify the endpoint.
 +
 The value in the *Endpoint Name* field is generated automatically but can be modified manually.
 | Yes
@@ -93,7 +93,7 @@ Allowed values include:
 |Yes
 
 |Encryption algorithm
-|The algorithm to use when encrypting the message to be sent
+|The algorithm to use when encrypting the message to be sent.
 |Yes
 
 |MDN response
