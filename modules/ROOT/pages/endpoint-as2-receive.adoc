@@ -63,7 +63,7 @@ Your organization’s platform administrator can also xref:runtime-manager::lb-w
 
 The external URL that you will share with your partners will be https://{DLB-domain}/{Input-path}/receive-as2
 
-For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, and the runtime application name is `b2b-inbound-as2-zap3`, then your administrator will add a URL mapping rule in the Dedicated Load Balancer settings to forward incoming requests to the runtime application within your VPC.
+For example, if the name of your DLB domain is `mythical.lb.anypointdns.net` and the runtime application name is `b2b-inbound-as2-zap3`, then your administrator adds a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC:
 
 image::URL-mapping-rules.png[URL mapping rules in the Dedicated Load Balancer]
 
