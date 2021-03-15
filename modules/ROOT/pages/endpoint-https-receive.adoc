@@ -90,7 +90,7 @@ With these configurations:
 * If `enterprise-ob-po-ack` is the message type, your backend systems post the HTTPS requests to the URL
 https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/enterprise-ob-po-ack.
 
-=== Deploy to On-Premise Mule Runtime
+=== Deploy to On-Premises Mule Instance
 
 If you are deploying to an on-premises Mule instance with a firewall and load balancer, work with your hosting or network security team to obtain the externally accessible DNS or name of the host where the Mule server is running, and replace `{runtime_host}` in the URL with the DNS name of your host. For example, if your DNS host name is `b2b.mycompany.com`, the receiver URL is `+https://b2b.mycompany.com/base-path/+`, and your backend systems should be posting the HTTPS request to https://b2b.mycompany.com/base-path/{message-type}.
 
