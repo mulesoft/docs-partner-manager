@@ -71,7 +71,7 @@ With these configurations, the external AS2 endpoint URL is https://mythical.lb.
 
 === Deploy to On-Premises Mule Instance
 
-If you are deploying to an on-premises Mule instance with a firewall and load balancer, work with your organization's hosting or network security team to obtain the externally accessible DNS or the name of the instance host. You must replace the `{runtime_host}` value in the URL with the specific value for your organization. For example, if the DNS host name is `b2b.mycompany.com`, the AS2 receiver URL is `+https://b2b.mycompany.com/receive-as2/+`.
+If you want to deploy to an on-premises Mule instance that uses a firewall and load balancer, work with your organization's hosting or network security team to obtain the externally accessible DNS or the name of the instance host. You must replace the `{runtime_host}` value in the URL with the specific value for your organization. For example, if the DNS host name is `b2b.mycompany.com`, then the AS2 receiver URL is `+https://b2b.mycompany.com/receive-as2/+`.
 
 == Signature and Encryption Algorithms
 
