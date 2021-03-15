@@ -80,7 +80,7 @@ If your backend processes consuming the endpoint are in a different network, you
 
 The external URL that you will share with your partners will be https://{DLB-domain}/{Input-path}/{base-path}/{message-type}.
 
-For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, and the runtime application name is `b2b-inbound-http-ognq`, and the base path you configured in the HTTPS receive endpoint is `send2`, then your administrator will add a URL mapping rule in the Dedicated Load Balancer settings to forward incoming requests to the runtime application within your VPC.
+For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, the runtime application name is `b2b-inbound-http-ognq`, and the base path you configured in the HTTPS receive endpoint is `send2`, then your administrator adds a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC:
 
 image::URL-mapping-rules-http.png[URL mapping rules in the Dedicated Load Balancer]
 
