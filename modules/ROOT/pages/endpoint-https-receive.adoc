@@ -68,7 +68,7 @@ You can view this URL by selecting the receiving endpoint from your deployed mes
 If your organization uses CloudHub VPC without a dedicated load balancer, your organization’s platform administrator can configure the necessary xref:runtime-manager::vpc-firewall-rules-concept.adoc[VPC firewall rules] to allow specific IP addresses of your
 partners to access the endpoint.
 
-=== Deploy to CloudHub on Private Port
+=== Deploy to CloudHub on a Private Port
 
 When an HTTP or HTTPS receive endpoint is deployed with the private port configuration enabled, the endpoint is deployed to the private HTTPS port (8092) and the internal URL of the endpoint appears on the the *Message Flow* or *Endpoint* detail page.
 
