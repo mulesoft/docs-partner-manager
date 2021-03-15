@@ -50,7 +50,7 @@ When an AS2 receive endpoint is deployed with the private port configuration ena
 
 You can view this URL by selecting the receiving endpoint from your deployed message flow or by clicking the endpoint name from the endpoints list. You can share this URL with the partners that would send AS2 messages to this endpoint.
 
-If your organization uses CloudHub VPC without a dedicated load balancer, your organization’s platform administrator can configure the necessary xref:runtime-manager::vpc-firewall-rules-concept.adoc[VPC Firewall Rules] to allow specific IP addresses of your
+If your organization uses CloudHub VPC without a dedicated load balancer, your organization’s platform administrator can configure the necessary xref:runtime-manager::vpc-firewall-rules-concept.adoc[VPC firewall rules] to allow specific IP addresses of your
 partners to access the endpoint.
 
 === Deploy to CloudHub on Private Port
