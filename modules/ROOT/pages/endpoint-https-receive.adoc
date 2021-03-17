@@ -85,7 +85,7 @@ For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, th
 image::URL-mapping-rules-http.png[URL mapping rules in the DLB]
 
 With these configurations:
-* The external HTTPS receive endpoint URL is `https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/``.
+* The external HTTPS receive endpoint URL is `https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/`.
 * Your backend applications send the application JSON/XML messages for your outbound message flows from `https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/{message-type}``.
 * If `enterprise-ob-po-ack` is the message type, your backend systems post the HTTPS requests to the URL
 `https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/enterprise-ob-po-ack`.
