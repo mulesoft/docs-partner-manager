@@ -1,0 +1,2 @@
+[WARNING]
+Anypoint Partner Manager V1.0 was deprecated on DATE. Its https://www.mulesoft.com/legal/versioning-back-support-policy#anypoint-partner-manager[End of Life] is DATE. For more information see the xref:release-notes::anypoint-partner-manager-2.0-release-notes.adoc[Anypoint Partner Manager 2.x Release Notes] or contact your Customer Success Manager to determine how you can migrate to the current version of xref:partner-manager::index.adoc[Anypoint Partner Manager].
