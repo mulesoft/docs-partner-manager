@@ -59,7 +59,7 @@ The backend applications that send JSON or XML payloads to the HTTP receive endp
 
 == HTTP or HTTPS Receive Endpoint URL
 
-=== Deploy to CloudHub on Public Port
+=== Deploy to CloudHub on a Public Port
 
 When an HTTP or HTTPS receive endpoint is deployed with the private port configuration enabled, the endpoint application is deployed on the public HTTPS port (8082), with the traffic routed through the xref:runtime-manager::dedicated-load-balancer-tutorial#shared-load-balancers [shared load balancer]. The value in the URL field is automatically generated when you deploy a message flow that uses this endpoint to CloudHub.
 
