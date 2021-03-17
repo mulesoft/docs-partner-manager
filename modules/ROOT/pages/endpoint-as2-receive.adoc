@@ -67,7 +67,7 @@ For example, if the name of your DLB domain is `mythical.lb.anypointdns.net` and
 
 image::URL-mapping-rules.png[URL mapping rules in the DLB]
 
-With these configurations, the external AS2 endpoint URL is `https://mythical.lb.anypointdns.net/as2/mythical/receive-as2/``.
+With these configurations, the external AS2 endpoint URL is `https://mythical.lb.anypointdns.net/as2/mythical/receive-as2/`.
 
 === Deploy to On-Premises Mule Instance
 
