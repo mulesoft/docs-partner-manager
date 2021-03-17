@@ -49,10 +49,7 @@ Filter for transmissions based on their message processing status:
 ** *Processing*
 ** *Received*
 * *Partner name* +
-Filter for transmissions based on your partner's name. +
-[NOTE]
-Only five partners appear in the *Partner name* list; however, you can enter characters in the search box to access partners that do not appear in the list.
-
+Filter for transmissions based on your partner's name. Only five partners appear in the *Partner name* list; however, you can enter characters in the search box to access partners that do not appear in the list.
 * *Partner message type* +
 Filter for transmissions based on the message type, such as `X12` or `850`. +
 * *Host message type* +

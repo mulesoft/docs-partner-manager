@@ -76,7 +76,7 @@ After deploying the first message flow using the HTTP or HTTPS receive endpoint 
 
 If your backend processes consuming the HTTP or HTTPS receive endpoints are also running inside the same VPC, they can call the internal URL directly.
 
-If your backend processes consuming the endpoint are in a different network, your organization’s platform administrator can update DLB settings to xref:runtime-manager::lb-whitelists.adoc[whitelist] specific IP addresses to access the endpoint.
+If your backend processes consuming the endpoint are in a different network, your organization’s platform administrator xref:runtime-manager::lb-whitelists.adoc[add your partner's IP addresses to a list of allowed addresses] in the DLB settings to allow specific IP addresses to access the endpoint.
 
 The external URL that you can share with your partners is `https://{DLB-domain}/{Input-path}/{base-path}/{message-type}`.
 
@@ -84,7 +84,7 @@ For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, th
 
 image::URL-mapping-rules-http.png[URL mapping rules in the DLB]
 
-With these configurations:
+Using the following values, depending on your environment:
 * The external HTTPS receive endpoint URL is `https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/`.
 * Your backend applications send the application JSON/XML messages for your outbound message flows from `https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/{message-type}`.
 * If `enterprise-ob-po-ack` is the message type, your backend systems post the HTTPS requests to the URL
