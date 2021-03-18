@@ -72,27 +72,27 @@ partners to access the endpoint.
 
 When an HTTP or HTTPS receive endpoint is deployed with the private port configuration enabled, the endpoint is deployed to the private HTTPS port (8092) and the internal URL of the endpoint appears on the the *Message Flow* or *Endpoint* detail page.
 
-After deploying the first message flow using the HTTP or HTTPS receive endpoint configuration, you can view the runtime application name for the endpoint from the *Endpoint* details page or from the *Receive* section of your message flow. To configure xref:runtime-manager/lb-mapping-rules[URL mapping rules] in the xref:runtime-manager::cloudhub-dedicated-load-balancer.adoc[DLB] to forward HTTP or HTTPS messages received from your backend applications to outbound B2B message flows, provide the application name to your organization’s platform administrator.
+After deploying the first message flow using the HTTP or HTTPS receive endpoint configuration, you can view the runtime application name for the endpoint from the *Endpoint* details page or from the *Receive* section of your message flow. To configure xref:runtime-manager/lb-mapping-rules.adoc[URL mapping rules] in the xref:runtime-manager::cloudhub-dedicated-load-balancer.adoc[DLB] to forward HTTP or HTTPS messages received from your backend applications to outbound B2B message flows, provide the application name to your organization’s platform administrator.
 
 If your backend processes consuming the HTTP or HTTPS receive endpoints are also running inside the same VPC, they can call the internal URL directly.
 
 If your backend processes consuming the endpoint are in a different network, your organization’s platform administrator xref:runtime-manager::lb-whitelists.adoc[add your partner's IP addresses to a list of allowed addresses] in the DLB settings to allow specific IP addresses to access the endpoint.
 
-The external URL that you can share with your partners is `https://{DLB-domain}/{Input-path}/{base-path}/{message-type}`.
+The external URL that you can share with your partners is `+https://{DLB-domain}/{Input-path}/{base-path}/{message-type}+`.
 
 For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, the runtime application name is `b2b-inbound-http-ognq`, and the base path you configured in the HTTPS receive endpoint is `send2`, then your administrator adds a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC:
 
 image::URL-mapping-rules-http.png[URL mapping rules in the DLB]
 
 Using the following values, depending on your environment:
-* The external HTTPS receive endpoint URL is `https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/`.
-* Your backend applications send the application JSON/XML messages for your outbound message flows from `https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/{message-type}`.
+* The external HTTPS receive endpoint URL is `+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/+`.
+* Your backend applications send the application JSON/XML messages for your outbound message flows from `+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/{message-type}+`.
 * If `enterprise-ob-po-ack` is the message type, your backend systems post the HTTPS requests to the URL
-`https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/enterprise-ob-po-ack`.
+`+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/enterprise-ob-po-ack+`.
 
 === Deploy to an On-Premises Mule Instance
 
-If you are deploying to an on-premises Mule instance with a firewall and load balancer, work with your hosting or network security team to obtain the externally accessible DNS or name of the host where the Mule instance is running, and replace `{runtime_host}` in the URL with the DNS name of your host. For example, if your DNS host name is `b2b.mycompany.com`, the receiver URL is `https://b2b.mycompany.com/base-path/+`, and your backend systems post the HTTPS request to `https://b2b.mycompany.com/base-path/{message-type}``.
+If you are deploying to an on-premises Mule instance with a firewall and load balancer, work with your hosting or network security team to obtain the externally accessible DNS or name of the host where the Mule instance is running, and replace `{runtime_host}` in the URL with the DNS name of your host. For example, if your DNS host name is `b2b.mycompany.com`, the receiver URL is `+https://b2b.mycompany.com/base-path/+`, and your backend systems post the HTTPS request to `+https://b2b.mycompany.com/base-path/{message-type}+`.
 
 == See Also
 

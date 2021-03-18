@@ -17,8 +17,7 @@ Create the AS2 identifiers for your organization and your trading partners in th
 | Yes
 
 |Endpoint Name
-| The name used to identify the endpoint.
-+
+| The name used to identify the endpoint. +
 The value in the *Endpoint Name* field is generated automatically but can be modified manually.
 | Yes
 
@@ -66,10 +65,12 @@ The value in the *Endpoint Name* field is generated automatically but can be mod
 a|Specify if you want the trading partner to send an MDN receipt back, confirming the receipt of the message.
 
 Allowed values include:
+
 * NONE
 * UNSIGNED
 * SIGNED_OPTIONAL
 * SIGNED_REQUIRED
+
 |Yes
 
 |<Host> public certificate
