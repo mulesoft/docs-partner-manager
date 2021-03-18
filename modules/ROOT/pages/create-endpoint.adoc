@@ -24,11 +24,15 @@ Ownership of the endpoints (receive or send) is automatically assigned based on 
 . Click *New* in the *Endpoints* section. +
 The *New Endpoint* window appears.
 . In the *New Endpoint* window, in the *Usage* field, select one of the following endpoint types:
++
+--
 * *Receive from partners*
 * *Target at <host-name>*
 * *Source at <host-name>*
-* *Send to partners* +
+* *Send to partners*
+
 The *Protocol* field appears.
+--
 . In the *Protocol* field, select the protocol to use for the endpoint.
 . <<configure-endpoint,Configure the endpoint>> according to the type of endpoint you are creating and the protocol you selected.
 . Click *Save*.
