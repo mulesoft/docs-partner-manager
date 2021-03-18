@@ -16,7 +16,7 @@ Create AS2 identifiers for your organization as host and for your trading partne
 |No
 
 |Protocol
-|The protocol previously selected in the *Protocol* field of the *New endpoint: Receive from partners* window. This value cannot be subsequently modified.
+|The protocol previously selected in the *Protocol* field of the *New endpoint: Receive from partners* window. You cannot later modify this value.
 |Yes
 
 |Endpoint Name
