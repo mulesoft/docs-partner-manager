@@ -13,7 +13,7 @@ Create the AS2 identifiers for your organization and your trading partners in th
 |Yes
 
 |Usage
-|The usage of the endpoint. For receive endpoints, the value in this field is `Send to partners`. The value in this field is automatically generated based on the type of endpoint created.
+|How the endpoint is used. For receive endpoints, the value in this field is `Send to partners`. The value in this field is automatically generated based on the type of endpoint created.
 |No
 
 |Protocol
@@ -35,7 +35,7 @@ The value in the *Endpoint Name* field is generated automatically but can be mod
 | No
 
 |Partner AS2 URL
-|Your trading partner’s AS2 URL to which outbound EDI transmissions need to be sent.
+|Your trading partner’s AS2 URL to which outbound EDI transmissions must be sent.
 |Yes
 
 |Connection timeout
