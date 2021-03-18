@@ -12,7 +12,7 @@ Create AS2 identifiers for your organization as host and for your trading partne
 |Yes
 
 |Usage
-|The usage of the endpoint. For receive endpoints, the value in this field is `Receive from partners`. The value in this field is automatically generated based on the type of endpoint created.
+|How the endpoint is used. For receive endpoints, the value in this field is `Receive from partners`. The value in this field is automatically generated based on the type of endpoint created.
 |No
 
 |Protocol
