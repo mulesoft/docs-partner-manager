@@ -45,7 +45,7 @@ Filter for transmissions based on their acknowledgment status:
 Filter for transmissions based on their message processing status:
 ** *All*
 ** *Delivered*
-** *Errored*
+** *Failed*
 ** *Processing*
 ** *Received*
 * *Partner name* +
