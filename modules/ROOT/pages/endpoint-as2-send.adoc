@@ -1,15 +1,15 @@
 = AS2 Send Endpoint Settings
 
-Use these to set up AS2 endpoint settings to send outbound EDI files to your trading partners.
+Use these to set up AS2 endpoint settings to send outbound EDI files to your partners.
 
-Create the AS2 identifiers for your organization and your trading partners in the respective host and trading partner profile pages.
+Create the AS2 identifiers for your organization and your partners in the respective host and partner profile pages.
 
 [%header%autowidth.spread]
 |===
 |Setting |Description |Required
 
 |Owner
-|The trading partner or host that owns the endpoint.
+|The partner or host that owns the endpoint.
 |Yes
 
 |Usage
@@ -67,11 +67,11 @@ The value in the *Endpoint Name* field is generated automatically but can be mod
 |Yes
 
 |Filename pattern
-|xref:file-name-pattern.adoc[File name pattern] as required by your trading partner or backend application.
+|xref:file-name-pattern.adoc[File name pattern] as required by your partner or backend application.
 |Yes
 
 |Request receipt
-a|Specify if you want the trading partner to send an MDN receipt back, confirming the receipt of the message.
+a|Specify if you want the partner to send an MDN receipt back, confirming the receipt of the message.
 
 Allowed values include:
 * NONE
