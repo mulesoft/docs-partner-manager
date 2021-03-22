@@ -30,7 +30,7 @@ Create AS2 identifiers for your organization as the host and for your trading pa
 |Private port (when deploying to VPC)
 a|When enabled, the AS2 receive endpoint application is deployed to the private port 8092 in Mule in your xref:runtime-manager::virtual-private-cloud.adoc[CloudHub VPC]. You can manage the access control to the endpoint via the VPC and the dedicated load balancer settings.
 
-When disabled, the AS2 receive endpoint application is deployed to public port 8082 by default. You can access the endpoint URL directly over the internet.
+When disabled, the AS2 receive endpoint application is deployed to the public port 8082 by default. You can access the endpoint URL directly over the internet.
 
 [Note]
 This configuration is applicable to CloudHub VPC deployments from Partner Manager only.
