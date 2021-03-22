@@ -25,9 +25,7 @@ Create the AS2 identifiers for your organization and your partners in the respec
 |Yes
 
 |Endpoint Name
-|The name used to identify the endpoint.
-+
-The value in the *Endpoint Name* field is generated automatically but can be modified manually.
+|The name used to identify the endpoint. The value in the *Endpoint Name* field is generated automatically but can be modified manually.
 | Yes
 
 |Description
@@ -74,6 +72,7 @@ The value in the *Endpoint Name* field is generated automatically but can be mod
 a|Specify if you want the partner to return an MDN receipt, confirming the receipt of the message.
 
 Allowed values include:
+
 * NONE
 * UNSIGNED
 * SIGNED_OPTIONAL
