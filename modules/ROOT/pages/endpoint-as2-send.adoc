@@ -71,7 +71,7 @@ The value in the *Endpoint Name* field is generated automatically but can be mod
 |Yes
 
 |Request receipt
-a|Specify if you want the partner to send an MDN receipt back, confirming the receipt of the message.
+a|Specify if you want the partner to return an MDN receipt, confirming the receipt of the message.
 
 Allowed values include:
 * NONE
