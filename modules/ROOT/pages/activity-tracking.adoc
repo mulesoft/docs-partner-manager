@@ -51,7 +51,7 @@ Filter for transmissions based on their message processing status:
 * *Partner name* +
 Filter for transmissions based on your partner's name. Only five partners appear in the *Partner name* list; however, you can enter characters in the search box to access partners that do not appear in the list.
 * *Partner message type* +
-Filter for transmissions based on the message type, such as `X12` or `850`. +
+Filter for transmissions based on the message type, such as `X12 - 850`. +
 * *Host message type* +
 Filter for transmissions based on the host message type, such as `JSON host-purchase-order`.
 . Select the transmission that matches your search criteria and review the summary information:
