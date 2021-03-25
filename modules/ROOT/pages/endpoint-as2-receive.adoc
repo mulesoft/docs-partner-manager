@@ -1,46 +1,45 @@
 = AS2 Receive Endpoint Settings
 
-Your organization's AS2 endpoint settings determine where to receive inbound data from partners.
-One AS2 endpoint can receive inbound data from multiple partners.
+Your organization's AS2 endpoint settings determine where to receive inbound data from partners. One AS2 endpoint can receive inbound data from multiple partners.
 
-Create AS2 identifiers for your organization as host and for your partners in their respective xref:configure-host.adoc[host] and xref:configure-partner.adoc[partner] profile pages.
+Create AS2 identifiers for your organization as the host and for your trading partners in their respective xref:configure-host.adoc[host] and xref:configure-partner.adoc[partner] profile pages.
 
 [%header%autowidth.spread]
 |===
 | Setting | Description | Required
-| Endpoint Name
-| The automatically generated name that identifies the endpoint, which you can subsequently modify manually.
-| Yes
+|Owner
+|The host or partner that owns the endpoint.
+|Yes
 
-| Owner
-| The host or partner that owns the endpoint.
-| Yes
+|Usage
+|How the endpoint is used. For receive endpoints, the value in this field is `Receive from partners`. The value in this field is automatically generated based on the type of endpoint created.
+|No
 
-| Protocol
-| The protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window. This value cannot be modified.
-| Yes
+|Protocol
+|The protocol previously selected in the *Protocol* field of the *New endpoint: Receive from partners* window, which you can subsequently modify manually.
+|Yes
 
-| Description
-| The user-supplied description of the purpose and use of the endpoint.
-| No
+|Endpoint name
+|The automatically generated name used to identify the endpoint, which you can subsequently modify manually.
+|Yes
 
-| AS2 URL
-a| The HTTP or HTTPS address where you receive AS2 messages.
-| No
+|Description
+|The user-supplied description of the purpose and use of the endpoint.
+|No
 
-| <Host> public certificate
-| The digital certificate for your organization. This certificate is based on the RSA algorithm for the AS2 transport protocol.
-| Yes
+|Private port (when deploying to VPC)
+a|When enabled, the AS2 receive endpoint application is deployed to the private port 8092 in Mule in your xref:runtime-manager::virtual-private-cloud.adoc[CloudHub VPC]. You can manage the access control to the endpoint via the VPC and the dedicated load balancer settings.
 
-| <Host> private key file
-| The private key.
-| Yes
+When disabled, the AS2 receive endpoint application is deployed to the public port 8082 by default. You can access the endpoint URL directly over the internet.
 
-| Key passphrase
-| The passphrase for your private key.
-| Yes
+[Note]
+This configuration is applicable to CloudHub VPC deployments from Partner Manager only.
+|No
+
+|<Host> keystore
+|The host xref:create-keystore.adoc[keystore] files in your environment that house your organization's public certificate and private key.
+|Yes
 |===
-
 
 == AS2 Receive Endpoint URL
 

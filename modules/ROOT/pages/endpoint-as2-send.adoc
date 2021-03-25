@@ -1,24 +1,31 @@
 = AS2 Send Endpoint Settings
 
-Use these to set up AS2 endpoint settings to send outbound EDI files to your trading partners.
+Use these to set up AS2 endpoint settings to send outbound EDI files to your partners.
 
-Create the AS2 identifiers for your organization and your trading partners in the respective host and trading partner profile pages.
+Create the AS2 identifiers for your organization and your partners in the respective host and partner profile pages.
 
 [%header%autowidth.spread]
 |===
 |Setting |Description |Required
 
-| Owner
-| The trading partner or host that owns the endpoint.
-| Yes
+|Owner
+|The partner or host that owns the endpoint.
+|Yes
 
-| Protocol
-| The protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window.
-| Yes
+|Usage
+|How the endpoint is used. For receive endpoints, the value in this field is `Send to partners`. The value in this field is automatically generated based on the type of endpoint created.
+|No
+
+|Protocol
+|The protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window.
+|Yes
+
+|Partner
+|The partner to whom the transaction is sent.
+|Yes
 
 |Endpoint Name
-| The name used to identify the endpoint. +
-The value in the *Endpoint Name* field is generated automatically but can be modified manually.
+|The name used to identify the endpoint. The value in the *Endpoint Name* field is generated automatically but can be modified manually.
 | Yes
 
 |Description
@@ -45,7 +52,7 @@ The value in the *Endpoint Name* field is generated automatically but can be mod
 |Your organization’s AS2 identifier.
 |Yes
 
-|<Partner> AS2 identifier
+|Partner AS2 identifier
 |Your trading partner’s AS2 identifier.
 |Yes
 
@@ -58,11 +65,11 @@ The value in the *Endpoint Name* field is generated automatically but can be mod
 |Yes
 
 |Filename pattern
-|xref:file-name-pattern.adoc[File name pattern] as required by your trading partner or backend application.
+|xref:file-name-pattern.adoc[File name pattern] as required by your partner or backend application.
 |Yes
 
 |Request receipt
-a|Specify if you want the trading partner to send an MDN receipt back, confirming the receipt of the message.
+a|Specify if you want the partner to return an MDN receipt, confirming the receipt of the message.
 
 Allowed values include:
 
@@ -73,16 +80,8 @@ Allowed values include:
 
 |Yes
 
-|<Host> public certificate
-|Your organization’s digital certificate for the AS2 transport protocol, based on the RSA algorithm.
-|Yes
-
-|<Host> private key file
-|Your organization’s private key file.
-|Yes
-
-|Key passphrase
-|The passphrase for your private key.
+|<Host> keystore
+|The host xref:create-keystore.adoc[keystore] files in your environment that house your organization's public certificate and private key.
 |Yes
 
 |Signature algorithm
