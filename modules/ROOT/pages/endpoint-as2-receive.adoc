@@ -1,22 +1,23 @@
 = AS2 Receive Endpoint Settings
 
-Your organization's AS2 endpoint settings determine where to receive inbound data from trading partners. One AS2 endpoint can receive inbound data from multiple partners.
+Your organization's AS2 endpoint settings determine where to receive inbound data from partners.
+One AS2 endpoint can receive inbound data from multiple partners.
 
-Create AS2 identifiers for your organization as host and for your trading partners in their respective xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner] profile pages.
+Create AS2 identifiers for your organization as host and for your partners in their respective xref:configure-host.adoc[host] and xref:configure-partner.adoc[partner] profile pages.
 
 [%header%autowidth.spread]
 |===
 | Setting | Description | Required
 | Endpoint Name
-| The automatically generated name used to identify the endpoint, which you can subsequently modify manually.
+| The automatically generated name that identifies the endpoint, which you can subsequently modify manually.
 | Yes
 
 | Owner
-| The host or trading partner that owns the endpoint.
+| The host or partner that owns the endpoint.
 | Yes
 
 | Protocol
-| The protocol previously selected in the *Protocol* field of the *New endpoint: Receive from partners* window. This value cannot be subsequently modified.
+| The protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window. This value cannot be modified.
 | Yes
 
 | Description
@@ -41,11 +42,36 @@ a| The HTTP or HTTPS address where you receive AS2 messages.
 |===
 
 
-== AS2 URL
+== AS2 Receive Endpoint URL
 
-The value in the URL field is automatically generated when you deploy a message flow to CloudHub that uses this endpoint. You can view this URL by selecting the receiving endpoint from your deployed message flow.
+=== Deploy to CloudHub on a Public Port
 
-If you are deploying to an on-premises Mule instance with a firewall and load balancer, work with your organization's hosting or network security team to obtain the externally accessible DNS or the name of the instance host. You must replace the `{runtime_host}` value in the URL with the value that is specific to your organization. For example, if the DNS host name is `b2b.mycompany.com`, the AS2 receiver URL is `+https://b2b.mycompany.com/receive-as2/+`.
+When an AS2 receive endpoint is deployed with the private port configuration enabled, the endpoint application is deployed on the public HTTPS port (8082), with the traffic routed through the xref:runtime-manager::dedicated-load-balancer-tutorial#shared-load-balancers [shared load balancer]. The value in the URL field is automatically generated when you deploy a message flow to CloudHub that uses this endpoint.
+
+You can view this URL by selecting the receiving endpoint from your deployed message flow or by clicking the endpoint name from the endpoints list. You can share this URL with the partners that send AS2 messages to this endpoint.
+
+If your organization uses CloudHub VPC without a dedicated load balancer (DLB), your organization’s platform administrator can configure the necessary xref:runtime-manager::vpc-firewall-rules-concept.adoc[VPC firewall rules] to allow specific IP addresses of your
+partners to access the endpoint.
+
+=== Deploy to CloudHub on a Private Port
+
+When an AS2 receive endpoint is deployed with the private port configuration enabled, the endpoint is deployed to the private HTTPS port (8092) and the internal URL of the endpoint appears on the *Message Flow* or *Endpoint* detail page.
+
+After deploying the first message flow using the AS2 receive endpoint configuration, you can view the runtime application name for the endpoint from the *Endpoint* details page or the *Receive* section of your message flow. To configure xref:runtime-manager::lb-mapping-rules.adoc[URL mapping rules] in the xref:runtime-manager::cloudhub-dedicated-load-balancer.adoc[DLB] to forward AS2 messages received from your partners to the application, provide the application name to your organization’s platform administrator.
+
+Your organization’s platform administrator can also xref:runtime-manager::lb-whitelists.adoc[add your partner's IP addresses to a list of allowed addresses] in the DLB settings to allow specific IP addresses to access the endpoint.
+
+The external URL that you can share with your partners is `+https://{DLB-domain}/{Input-path}/receive-as2+`.
+
+For example, if the name of your DLB domain is `mythical.lb.anypointdns.net` and the runtime application name is `b2b-inbound-as2-zap3`, then your administrator adds a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC:
+
+image::URL-mapping-rules.png[URL mapping rules in the DLB]
+
+With these configurations, the external AS2 endpoint URL is `+https://mythical.lb.anypointdns.net/as2/mythical/receive-as2/+`.
+
+=== Deploy to On-Premises Mule Instance
+
+If you want to deploy to an on-premises Mule instance that uses a firewall and load balancer, work with your organization's hosting or network security team to obtain the externally accessible DNS or the name of the instance host. You must replace the `{runtime_host}` value in the URL with the specific value for your organization. For example, if the DNS host name is `b2b.mycompany.com`, then the AS2 receiver URL is `+https://b2b.mycompany.com/receive-as2/+`.
 
 == Signature and Encryption Algorithms
 

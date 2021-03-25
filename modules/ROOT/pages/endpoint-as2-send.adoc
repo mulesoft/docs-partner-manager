@@ -17,8 +17,7 @@ Create the AS2 identifiers for your organization and your trading partners in th
 | Yes
 
 |Endpoint Name
-| The name used to identify the endpoint
-+
+| The name used to identify the endpoint. +
 The value in the *Endpoint Name* field is generated automatically but can be modified manually.
 | Yes
 
@@ -26,12 +25,12 @@ The value in the *Endpoint Name* field is generated automatically but can be mod
 |The user-defined field for describing the purpose and use of the endpoint.
 | No
 
-|Trading partner AS2 URL
-|Your trading partner’s AS2 URL to which outbound EDI transmissions need to be sent.
+|Partner AS2 URL
+|Your trading partner’s AS2 URL to which outbound EDI transmissions are sent.
 |Yes
 
 |Connection timeout
-|The timeout for establishing connection to the remote service. The value in this field is set to `30 Seconds` by default.
+|The timeout for establishing a connection to the remote service. The value in this field is set to `30 Seconds` by default.
 |Yes
 
 |Retry interval
@@ -66,10 +65,12 @@ The value in the *Endpoint Name* field is generated automatically but can be mod
 a|Specify if you want the trading partner to send an MDN receipt back, confirming the receipt of the message.
 
 Allowed values include:
+
 * NONE
 * UNSIGNED
 * SIGNED_OPTIONAL
 * SIGNED_REQUIRED
+
 |Yes
 
 |<Host> public certificate
@@ -89,11 +90,11 @@ Allowed values include:
 |Yes
 
 |MDN signature algorithm
-|The request partner to respond with a signed MDN using this algorithm for calculating MIC.
+|The request for a partner to respond with a signed MDN using this algorithm for calculating MIC.
 |Yes
 
 |Encryption algorithm
-|The Algorithm to use when encrypting the message to be sent
+|The algorithm to use when encrypting the message to be sent.
 |Yes
 
 |MDN response
