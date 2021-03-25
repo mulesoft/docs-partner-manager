@@ -6,11 +6,11 @@ Configure HTTP and HTTPS receive endpoints to receive application messages (JSON
 |===
 |Name |Description |Required
 |Endpoint Name
-|The automatically generated name used to identify the endpoint, which you can subsequently modify manually.
+|The automatically generated name to identify the endpoint, which you can subsequently modify manually.
 |Yes
 
 | Owner
-| The trading partner or host that owns the endpoint.
+| The partner or host that owns the endpoint.
 | Yes
 
 | Protocol
@@ -22,7 +22,7 @@ Configure HTTP and HTTPS receive endpoints to receive application messages (JSON
 | No
 
 |URL
-a|The HTTP or HTTPS address where you will receive outbound source messages from backend systems.
+a|The HTTP or HTTPS address where you receive outbound source messages from backend systems.
 |Yes
 
 |Connection idle timeout
@@ -40,28 +40,59 @@ Possible values include:
 |Yes
 
 |Basic authentication
-a|When Basic authentication selected, specify the user name and password to protect the HTTP listener.
+a|When Basic authentication is selected, specify the user name and password to protect the HTTP listener.
 
-After your new or or reconfigured endpoint is saved, you cannot subsequently retrieve or modify the password.
+After saving your new or reconfigured endpoint, you cannot subsequently retrieve or modify the password.
 
 The backend applications that send JSON or XML payloads to the HTTP receive endpoint must pass the credentials in the HTTP request header.
-|
+|Yes
 
 |API Key
 a|The API key for the HTTP listener.
 
-After selecting *API Key* in the *Authentication type* picklist, specify the HTTP header name and API key to protect the HTTP listener. After your new or reconfigured endpoint is saved, you cannot subsequently retreive or modify the API key.
+After selecting *API Key* in the *Authentication type* picklist, specify the HTTP header name and API key to protect the HTTP listener. After saving your new or reconfigured endpoint, you cannot subsequently retrieve or modify the API key.
 
 
 The backend applications that send JSON or XML payloads to the HTTP receive endpoint must pass the API key in the HTTP request with the configured HTTP header name.
-|
+|Yes
 |===
 
-== HTTP or HTTPS URL
+== HTTP or HTTPS Receive Endpoint URL
 
-The value in the URL field is automatically generated when you deploy a message flow to CloudHub that uses this endpoint. You can view this URL by selecting the receiving endpoint from your deployed message flow.
+=== Deploy to CloudHub on a Public Port
 
-If you are deploying to on-premises Mule instance with a firewall and load balancer, work with your hosting or network security team to obtain the externally accessible DNS or name of the host where the Mule server is running, and replace `{runtime_host}` in the URL with the DNS name of your host. For example, if your DNS host name is `b2b.mycompany.com`, the receiver URL is `+https://b2b.mycompany.com/base-path/+`.
+When an HTTP or HTTPS receive endpoint is deployed with the private port configuration enabled, the endpoint application is deployed on the public HTTPS port (8082), with the traffic routed through the xref:runtime-manager::dedicated-load-balancer-tutorial#shared-load-balancers [shared load balancer]. The value in the URL field is automatically generated when you deploy a message flow that uses this endpoint to CloudHub.
+
+You can view this URL by selecting the receiving endpoint from your deployed message flow or by clicking the endpoint name from the endpoints list. You can share this URL with the partners that send HTTP or HTTPS messages to this endpoint.
+
+If your organization uses CloudHub VPC without a dedicated load balancer (DLB), your organization’s platform administrator can configure the necessary xref:runtime-manager::vpc-firewall-rules-concept.adoc[VPC firewall rules] to allow specific IP addresses of your
+partners to access the endpoint.
+
+=== Deploy to CloudHub on a Private Port
+
+When an HTTP or HTTPS receive endpoint is deployed with the private port configuration enabled, the endpoint is deployed to the private HTTPS port (8092) and the internal URL of the endpoint appears on the the *Message Flow* or *Endpoint* detail page.
+
+After deploying the first message flow using the HTTP or HTTPS receive endpoint configuration, you can view the runtime application name for the endpoint from the *Endpoint* details page or from the *Receive* section of your message flow. To configure xref:runtime-manager::lb-mapping-rules.adoc[URL mapping rules] in the xref:runtime-manager::cloudhub-dedicated-load-balancer.adoc[DLB] to forward HTTP or HTTPS messages received from your backend applications to outbound B2B message flows, provide the application name to your organization’s platform administrator.
+
+If your backend processes consuming the HTTP or HTTPS receive endpoints are also running inside the same VPC, they can call the internal URL directly.
+
+If your backend processes consuming the endpoint are in a different network, your organization’s platform administrator xref:runtime-manager::lb-whitelists.adoc[add your partner's IP addresses to a list of allowed addresses] in the DLB settings to allow specific IP addresses to access the endpoint.
+
+The external URL that you can share with your partners is `+https://{DLB-domain}/{Input-path}/{base-path}/{message-type}+`.
+
+For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, the runtime application name is `b2b-inbound-http-ognq`, and the base path you configured in the HTTPS receive endpoint is `send2`, then your administrator adds a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC:
+
+image::URL-mapping-rules-http.png[URL mapping rules in the DLB]
+
+Using the following values, depending on your environment:
+* The external HTTPS receive endpoint URL is `+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/+`.
+* Your backend applications send the application JSON/XML messages for your outbound message flows from `+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/{message-type}+`.
+* If `enterprise-ob-po-ack` is the message type, your backend systems post the HTTPS requests to the URL
+`+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/enterprise-ob-po-ack+`.
+
+=== Deploy to an On-Premises Mule Instance
+
+If you are deploying to an on-premises Mule instance with a firewall and load balancer, work with your hosting or network security team to obtain the externally accessible DNS or name of the host where the Mule instance is running, and replace `{runtime_host}` in the URL with the DNS name of your host. For example, if your DNS host name is `b2b.mycompany.com`, the receiver URL is `+https://b2b.mycompany.com/base-path/+`, and your backend systems post the HTTPS request to `+https://b2b.mycompany.com/base-path/{message-type}+`.
 
 == See Also
 
