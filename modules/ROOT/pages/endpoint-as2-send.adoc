@@ -33,11 +33,11 @@ Create the AS2 identifiers for your organization and your partners in the respec
 | No
 
 |Partner AS2 URL
-|Your trading partner’s AS2 URL to which outbound EDI transmissions must be sent.
+|Your trading partner’s AS2 URL to which outbound EDI transmissions are sent.
 |Yes
 
 |Connection timeout
-|The timeout for establishing connection to the remote service. The value in this field is set to `30 Seconds` by default.
+|The timeout for establishing a connection to the remote service. The value in this field is set to `30 Seconds` by default.
 |Yes
 
 |Retry interval
@@ -77,6 +77,7 @@ Allowed values include:
 * UNSIGNED
 * SIGNED_OPTIONAL
 * SIGNED_REQUIRED
+
 |Yes
 
 |<Host> keystore
@@ -88,11 +89,11 @@ Allowed values include:
 |Yes
 
 |MDN signature algorithm
-|The request partner to respond with a signed MDN using this algorithm for calculating MIC.
+|The request for a partner to respond with a signed MDN using this algorithm for calculating MIC.
 |Yes
 
 |Encryption algorithm
-|The Algorithm to use when encrypting the message to be sent
+|The algorithm to use when encrypting the message to be sent.
 |Yes
 
 |MDN response

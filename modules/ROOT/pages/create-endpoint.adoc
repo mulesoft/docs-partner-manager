@@ -8,8 +8,12 @@ Create and configure new send or receive endpoints using the partner page:
 
 . In the left navigation menu, select *Partners*.
 . Select the partner for which to create and configure the endpoint.
-. Click *New* in the *Endpoints: Receive from <partner-name>* or *Endpoints: Send to <partner-name>* section.
-. <<configure-endpoint,Configure the endpoint>> according to the type of endpoint you are creating and the protocol you selected in the *Endpoints: Send to <partner-name>* window.
+. In the *Endpoints* section, click *New*. +
+The *New Endpoint* window appears.
+. In the *New Endpoint* window, in the *Usage* field, select *Receive from Partners* or *Send to partners*. +
+The *Protocol* field appears.
+. In the *Protocol* field, select the protocol to use for the endpoint.
+. <<configure-endpoint,Configure the endpoint>> according to the type of endpoint you are creating and the protocol you selected.
 . Click *Save*.
 
 Ownership of the endpoints (receive or send) is automatically assigned based on the partner from which you are creating the endpoint.
@@ -17,12 +21,20 @@ Ownership of the endpoints (receive or send) is automatically assigned based on 
 == Create and Configure Endpoints from the Host Page
 
 . In the left navigation, select the host.
-. Click *New* in the section for the type of endpoint you are creating:
-* *Endpoints: Receive from partners*
-* *Endpoints: Send to partners*
-* *Endpoints: Target at <host-name>*
-* *Endpoints: Source at <host-name>*
-. <<configure-endpoint,Configure the endpoint>> type and compatibility with the protocol you selected in the *New endpoint: <endpoint-type>* window.
+. In the *Endpoints* section, click *New*. +
+The *New Endpoint* window appears.
+. In the *New Endpoint* window, in the *Usage* field, select one of the following endpoint types:
++
+--
+* *Receive from partners*
+* *Target at <host-name>*
+* *Source at <host-name>*
+* *Send to partners*
+
+The *Protocol* field appears.
+--
+. In the *Protocol* field, select the protocol to use for the endpoint.
+. <<configure-endpoint,Configure the endpoint>> according to the type of endpoint you are creating and the protocol you selected.
 . Click *Save*.
 
 == Create and Configure Endpoints Using the Message Flow Wizard
