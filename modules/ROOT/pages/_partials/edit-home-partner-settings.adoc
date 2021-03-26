@@ -1,8 +1,5 @@
 == Get Started
 
-include::partial$include-v1-eol.adoc[]
-
-
 These settings are editable for your company (as identified on the
 xref:partner-configuration.adoc#img-partner-configuration[Partner Configuration Page]) only.
 

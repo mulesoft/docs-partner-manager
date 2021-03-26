@@ -1,6 +1,3 @@
-include::partial$include-v1-eol.adoc[]
-
-
 == Get Started
 
 . xref:anypoint-partner-manager.adoc#start-anypoint-manager[Start APM].

@@ -1,8 +1,5 @@
 = Promotion Scenarios
 
-include::partial$include-v1-eol.adoc[]
-
-
 This section identifies common scenarios for promoting partners from one environment to another. For more information, see  xref:partner-configuration.adoc#promoting-a-partner[Promoting a Partner].
 
 
