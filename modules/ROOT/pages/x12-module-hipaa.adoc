@@ -4,6 +4,8 @@ include::_attributes.adoc[]
 endif::[]
 :keywords: b2b, x12, schema, module, edi
 
+include::partial$include-v1-eol.adoc[]
+
 In addition to the base X12 standards, the X12 Module also supports the HIPAA (Health Insurance Portability and Accountability Act) standards based on X12 version 005010.
 
 The X12 Module HIPAA support includes:

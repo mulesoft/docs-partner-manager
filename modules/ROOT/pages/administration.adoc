@@ -5,8 +5,6 @@ endif::[]
 
 include::partial$include-v1-eol.adoc[]
 
-NOTE: Current Anypoint Partner Manager solutions will continue to be supported in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but will not be available for new customers or upgrades. Contact your MuleSoft representative for more information on MuleSoft's B2B solutions.
-
 Use these pages to configure administrative settings for your company.
 
 Your company may have been set up during the provisioning process. If so, its name appears at the top of the Name list on the Partner Configuration Page, identified as *Your company*.

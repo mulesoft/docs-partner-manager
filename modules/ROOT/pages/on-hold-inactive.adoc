@@ -3,6 +3,8 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
+include::partial$include-v1-eol.adoc[]
+
 You can configure windows (periods of time) during which partners or transactions are on-hold or inactive.
 
 include::partial$edit-settings.adoc[]

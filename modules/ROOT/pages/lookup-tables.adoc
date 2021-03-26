@@ -3,6 +3,8 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
+include::partial$include-v1-eol.adoc[]
+
 Anypoint Partner Manager (APM) enables you to create, populate and edit a _lookup table_.  A lookup table is a table that facilitates transaction processing by associating values. For example, this page shows how to create a lookup table that associates internal partner product codes with customer product codes.
 
 include::partial$edit-home-partner-settings.adoc[]

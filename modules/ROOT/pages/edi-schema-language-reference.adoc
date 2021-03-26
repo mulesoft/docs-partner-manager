@@ -4,6 +4,8 @@ include::_attributes.adoc[]
 endif::[]
 :keywords: b2b, edi, schema, yaml, language, reference
 
+include::partial$include-v1-eol.adoc[]
+
 The EDI Module uses a YAML format called ESL (for EDI Schema Language) to represent EDI schemas. Basic ESLs define the structure of EDI messages in terms of structures, segments, composites, and elements. ESL supports X12, EDIFACT, TRADACOMS, and HL7.
 
 == Components of an ESL Document

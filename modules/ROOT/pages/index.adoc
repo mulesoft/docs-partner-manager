@@ -4,6 +4,8 @@ include::_attributes.adoc[]
 endif::[]
 :keywords: b2b, edi, portal
 
+include::partial$include-v1-eol.adoc[]
+
 Anypoint B2B enables Mule users to connect with trading partners using EDI over AS2, FTP, and other protocols. Anypoint B2B integrates seamlessly into the Mule runtime.
 
 [NOTE]

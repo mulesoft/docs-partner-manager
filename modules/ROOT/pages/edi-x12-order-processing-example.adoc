@@ -4,6 +4,8 @@ include::_attributes.adoc[]
 endif::[]
 :keywords: b2b, edi, x12, order, processing, example
 
+include::partial$include-v1-eol.adoc[]
+
 This example shows how to process an X12 850 document, export data to a CSV file, and generate a 997 acknowledgement using the File endpoint, xref:x12-module.adoc[X12 Module], xref:3.9@mule-runtime::using-mel-with-batch-processing.adoc[Using MEL with Batch Processing] module, and xref:3.9@mule-runtime::dataweave.adoc[DataWeave].
 
 == Prerequisites

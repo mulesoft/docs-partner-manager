@@ -4,6 +4,8 @@ include::_attributes.adoc[]
 endif::[]
 :keywords: ftps connector, user guide, ftps
 
+include::partial$include-v1-eol.adoc[]
+
 _Premium_
 
 The Anypoint Connector for FTPS allows you to send and receive files over FTPS, enabling seamless

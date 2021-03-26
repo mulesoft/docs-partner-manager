@@ -3,6 +3,8 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
+include::partial$include-v1-eol.adoc[]
+
 When you create a  _Partner Conversation_, you establish a sequence of events between your company and a trading partner. You can track each event in the sequence of the conversation as it proceeds from the first event to the last.
 
 This page provides instructing for creating and editing Partner Conversations. For information about tracking Conversations, see  xref:transaction-monitoring.adoc[Transaction Monitoring].

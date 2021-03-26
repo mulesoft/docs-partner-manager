@@ -4,6 +4,8 @@ include::_attributes.adoc[]
 endif::[]
 :keywords: b2b, edifact, maven, module, DataSense, DataWeave
 
+include::partial$include-v1-eol.adoc[]
+
 The EDIFACT Module provides message reading, validation, and writing capabilities to communicate with trading partners using EDIFACT EDI exchanges.
 
 Included in the EDIFACT Module are the following capabilities:
