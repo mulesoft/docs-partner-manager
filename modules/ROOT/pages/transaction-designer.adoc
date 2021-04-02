@@ -3,6 +3,8 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
+include::partial$include-v1-eol.adoc[]
+
 _Transaction Designer_ is an APM feature that enables you to design the _elements_ of a transaction. Transaction elements include:
 
 * Document Types

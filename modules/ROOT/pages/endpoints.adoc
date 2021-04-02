@@ -3,6 +3,8 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
+include::partial$include-v1-eol.adoc[]
+
 An _endpoint_ is the entry point to a service, a process, or a queue or topic destination in service-oriented architecture. In APM, an endpoint defines the protocol, address, and other details specific to an exchange of messages between partners.
 
 

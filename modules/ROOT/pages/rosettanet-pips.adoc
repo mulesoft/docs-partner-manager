@@ -3,6 +3,8 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
+include::partial$include-v1-eol.adoc[]
+
 Configuring a _PIP type_ for a partner means specifying a *Name* and *Process Code*.
 
 include::partial$edit-settings.adoc[]

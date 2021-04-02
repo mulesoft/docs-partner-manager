@@ -4,6 +4,8 @@ include::_attributes.adoc[]
 endif::[]
 :keywords: b2b, edi, document types, modules, edifact, x12, hipaa
 
+include::partial$include-v1-eol.adoc[]
+
 The following is the complete list of documents types supported by the EDI Modules. For HL7 related information, see the xref:3.0@healthcare-toolkit::index.adoc[Mule Healthcare Toolkit].
 
 X12

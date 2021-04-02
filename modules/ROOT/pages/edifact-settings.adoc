@@ -3,6 +3,8 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
+include::partial$include-v1-eol.adoc[]
+
 EDIFACT (Electronic Data Interchange For Administration, Commerce and Transport) provides a set of standard messages which allow multi-country and multi-industry business document exchanges. EDIFACT is widely used across Europe.
 
 include::partial$edit-settings.adoc[]

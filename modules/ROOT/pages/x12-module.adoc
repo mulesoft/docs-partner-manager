@@ -4,6 +4,8 @@ include::_attributes.adoc[]
 endif::[]
 :keywords: b2b, x12, schema, module, edi
 
+include::partial$include-v1-eol.adoc[]
+
 _Premium_
 
 The X12 Module provides you with the ability to communicate with trading partners using X12 EDI (electronic data interchange).

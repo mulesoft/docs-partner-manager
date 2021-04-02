@@ -3,8 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-[NOTE]
-Support for Anypoint Partner Manager 1.0 continues in accordance with the https://www.mulesoft.com/legal/support-maintenance-terms[Product Support and Maintenance Terms] but is not available for new customers or upgrades. For the latest version of Anypoint Partner Manager, see https://docs.mulesoft.com/partner-manager/2.5/[About Partner Manager] documentation. Contact your MuleSoft representative for the latest information about MuleSoft B2B solutions.
+include::partial$include-v1-eol.adoc[]
 
 Anypoint Partner Manager (APM) provides a single web-based user interface for <<Transaction Monitoring>>, <<Partner Configuration>>, and <<Administration>>.
 

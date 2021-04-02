@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-The <<img-certificate>> enables you to upload an AS2 or RNIF certificate for the partner you selected on the xref:partner-configuration.adoc#img-partner-configuration[Partner Configuration Page].
+include::partial$include-v1-eol.adoc[]
 
 include::partial$edit-settings.adoc[]
 
