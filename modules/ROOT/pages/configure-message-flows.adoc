@@ -62,7 +62,7 @@ The message type and its validation settings are added to the message flow.
 * *HTTP*
 * *HTTPS*
 * *SFTP*
-... Click *Save*.
+... Click *Save*. +
 The acknowledgment is added to the message flow.
 
 == Import the Translation Map
