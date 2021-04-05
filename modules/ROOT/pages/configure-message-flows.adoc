@@ -48,7 +48,22 @@ The endpoint is added to the message flow.
 ... From *Message type*, select the message type.
 ... From schema select *Use standard X12-<version>-<message-type>* or select *Customize* to define a custom schema.
 ... Click *Save*. +
+... From schema select *Use standard X12-<version>-<message-type>* or select *Customize* to define a custom schema.
+... Click *Save*. +
 The message type and its validation settings are added to the message flow.
+. In the *Acknowledgment* section, select the check box next to *Send 997 functional acknowledgment* if your partner expects your organization to return functional acknowledgments.
+.. Click *Select*.
+.. In the *Select an endpoint: Send acknowledgment to <parter>* window, click *Select* to specify the endpoint to which to sent the acknowledgment transactions to your partner. +
+.. Alternatively, you can create a new send to partner endpoint:
+... Click *New*.
+... From *Owner*, select the endpoint owner.
+... From *Protocol*, select the protocol and configure it accordingly:
+* *AS2*
+* *HTTP*
+* *HTTPS*
+* *SFTP*
+... Click *Save*. +
+The acknowledgment is added to the message flow.
 
 == Import the Translation Map
 
