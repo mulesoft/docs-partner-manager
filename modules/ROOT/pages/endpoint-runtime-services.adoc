@@ -10,6 +10,7 @@ Each unique AS2 and HTTP(s) receive endpoint configurations result in deployment
 
 SFTP Receive, SFTP Send, AS2 Send and HTTP(s) send endpoints are always managed within a single generic endpoint service for the protocol & direction.
 
+== CloudHub Deployments
 [%header%autowidth.spread]
 |===
 |Protocol |Direction |Application Name Prefix
@@ -20,5 +21,18 @@ SFTP Receive, SFTP Send, AS2 Send and HTTP(s) send endpoints are always managed 
 |HTTP or HTTPS |Receive |b2b-inbound-http-
 |HTTP or HTTPS |Send |b2b-outbound-http-
 |===
+
+== On Premise Deployments
+[%header%autowidth.spread]
+|===
+|Protocol |Direction |Application Name Prefix
+|SFTP |Receive |inbound-sftp-
+|SFTP |Send |outbound-sftp-
+|AS2 |Receive |inbound-as2-
+|AS2 |Send |outbound-as2-
+|HTTP or HTTPS |Receive |inbound-http-
+|HTTP or HTTPS |Send |outbound-http-
+|===
+
 
 If your deployment target is CloudHub, You can assign static IP addresses to your endpoint applications connecting to external systems from xref:runtime-manager::managing-applications-on-cloudhub#static-ips[Runtime Manager], if your organization or your trading partners require whitelisting IP addresses. You can share the static IP address assigned to your endpoint application with your trading partners for them to whitelist the IP address, allowing the application to connect with their server.
