@@ -79,7 +79,7 @@ SFTP Receive, SFTP Send, AS2 Send and HTTP(s) send endpoints are always managed 
 |HTTP or HTTPS |Send |b2b-outbound-http-
 |===
 
-If your deployment target is CloudHub, You can assign static IP addresses to your endpoint applications connecting to external systems from Runtime Manager, if your organization or your trading partners require allowlisting IP addresses. You can share the xref:runtime-manager::managing-applications-on-cloudhub#static-ips[static IP] address assigned to your endpoint application with your trading partners for them to allowlist the IP address, allowing the application to connect with their server.
+If your deployment target is CloudHub, you can assign static IP addresses to your endpoint applications connecting to external systems from Runtime Manager, if your organization or your trading partners require allowlisting IP addresses. You can share the xref:runtime-manager::managing-applications-on-cloudhub#static-ips[static IP] address assigned to your endpoint application with your trading partners for them to allowlist the IP address, allowing the application to connect with their server.
 
 [[configure-endpoint]]
 == Configure Endpoint Protocol and Type-Specific Settings
