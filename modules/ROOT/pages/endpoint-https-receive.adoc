@@ -72,6 +72,8 @@ partners to access the endpoint.
 
 When an HTTP or HTTPS receive endpoint is deployed with the private port configuration enabled, the endpoint is deployed to the private HTTPS port (8092) and the internal URL of the endpoint appears on the the *Message Flow* or *Endpoint* detail page.
 
+You can also set CloudHub to automatically deploy newly created HTTP, HTTPS, and AS2 endpoints to a private port via the xref:cloudhub-deploy-options.adoc[CloudHub Deployment Settings].  
+
 After deploying the first message flow using the HTTP or HTTPS receive endpoint configuration, you can view the runtime application name for the endpoint from the *Endpoint* details page or from the *Receive* section of your message flow. To configure xref:runtime-manager::lb-mapping-rules.adoc[URL mapping rules] in the xref:runtime-manager::cloudhub-dedicated-load-balancer.adoc[DLB] to forward HTTP or HTTPS messages received from your backend applications to outbound B2B message flows, provide the application name to your organization’s platform administrator.
 
 If your backend processes consuming the HTTP or HTTPS receive endpoints are also running inside the same VPC, they can call the internal URL directly.

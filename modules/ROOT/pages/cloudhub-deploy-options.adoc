@@ -48,6 +48,8 @@ This core component of the Partner Manager workflow requires a minimum of *1 vCo
 * *B2B APIReplicationService* +
 Core component of the Partner Manager workflow that requires a minimum of *1 vCore*.
 
+To have CloudHub automatically deploy newly created HTTP, HTTPS, and AS2 endpoints to a private port, select the *Deploy HTTP/AS2 apps to private port* checkbox.
+
 For assistance with sizing, contact your MuleSoft account representative.
 
 == See Also

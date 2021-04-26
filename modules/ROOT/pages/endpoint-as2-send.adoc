@@ -85,15 +85,15 @@ Allowed values include:
 |Yes
 
 |Signature algorithm
-|The algorithm to use when setting the message integrity check value.
+|The xref:as2-endpoints-algorithms.adoc[algorithm] to use when setting the message integrity check value.
 |Yes
 
 |MDN signature algorithm
-|The request for a partner to respond with a signed MDN using this algorithm for calculating MIC.
+|The request for a partner to respond with a signed MDN using this xref:as2-endpoints-algorithms.adoc[algorithm] for calculating MIC.
 |Yes
 
 |Encryption algorithm
-|The algorithm to use when encrypting the message to be sent.
+|The xref:as2-endpoints-algorithms.adoc[algorithm] to use when encrypting the message to be sent.
 |Yes
 
 |MDN response
