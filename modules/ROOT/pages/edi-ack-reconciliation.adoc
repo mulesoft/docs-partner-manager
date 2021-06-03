@@ -4,7 +4,7 @@ As your trading partners acknowledge your messages, Partner Manager automaticall
 
 If you are expecting to receive functional acknowledgments from your trading partners, you must xref:x12-send-settings.adoc[configure the acknowledgment  settings] when creating the outbound message flow.
 
-When your organization receives the functional acknowledgment  (X12 997) from the trading partner, the status of the corresponding outbound transaction is updated. Possible status updates include:
+When your organization receives the functional acknowledgment (X12 997 or EDIFACT CONTRL) from the trading partner, the status of the corresponding outbound transaction is updated. Possible status updates include:
 
 * `Accepted`
 * `Rejected`
@@ -16,7 +16,7 @@ The following are examples of the actions your operations team might take while 
 * Asking your trading partner to confirm the receipt of the outbound transaction when reviewing overdue transactions
 
 == Troubleshoot Rejected or Overdue Acknowledgments
-You can view all the outbound transactions that have either received a 997 rejection or that are overdue for the functional acknowledgment:
+You can view all the outbound transactions that have either received an X12 997 or EDIFACT CONTRL rejection or that are overdue for the functional acknowledgment:
 
 . In the left navigation menu, select *Activity*.
 . Use the search filters to filter functional acknowledgments by:
@@ -40,12 +40,12 @@ Filter for transmissions based on their acknowledgment status:
 +
 image::partner-manager-review-ack.png[Expand the transmission and click Review to enter notes about action taken and mark the transmission as reviewed]
 +
-When you are reviewing a 997 rejection, you see the X12 997 payload received from your trading partner.
+When you review an X12 997 or CONTRL rejection, you see the payload received from your trading partner.
 +
 image::partner-manager-997-ack-review-payload.png[X12 997 payload received from the partner]
 +
-. Enter a review comment, indicating the action taken on the transaction’s acknowledgment  status and click *Mark reviewed*.
-. Optionally, you can download the 997 payload by clicking the *Download* button.
+. Enter a review comment to indicate the action taken on the transaction’s acknowledgment status and then click *Mark reviewed*.
+. Optionally, download the payload by clicking the *Download* button.
 
 After an overdue or rejected transaction is marked as reviewed, it is no longer displayed in the transaction *Activity* page when you search for transactions with the acknowledgment status of `Overdue` or `Rejected`. You see only the transactions that are not reviewed by your operations team.
 

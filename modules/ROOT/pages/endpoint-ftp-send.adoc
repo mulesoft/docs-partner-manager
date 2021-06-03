@@ -1,0 +1,61 @@
+FTP Send Endpoint
+
+You can use these settings to set up FTP endpoints in one of the following contexts:
+
+* Send to partners +
+Send outbound EDI files to your trading partners in outbound message flows.
+* Target at host +
+Send application messages (JSON or XML) to your backend applications in inbound message flows.
+
+You can create the STFP identifiers for your organization and for your trading partners in the respective xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner] profile pages.
+
+[%header%autowidth.spread]
+|===
+|Name |Description | Required
+
+| Owner
+| The trading partner or host that owns the endpoint.
+| Yes
+
+| Protocol
+| The protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window.
+| Yes
+
+|Endpoint Name
+| The name used to identify the endpoint. The value in the *Endpoint Name* field is generated automatically, but can be modified manually.
+| Yes
+
+|Description
+|The user-defined field for describing the purpose and use of the endpoint.
+| No
+
+|Host
+| The FTP server host, such as `ftp.mulesoft.com`, `localhost`, or `192.168.0.1`. The host must be accessible from your Mule environment.
+|Yes
+
+|Port
+|The port number of the FTP server to connect.
+|Yes
+
+|Username
+|The username for the FTP server.
+|Yes
+
+|Password
+|The password for the FTP server.
+|Yes
+
+|Target Path
+|The path on your FTP server to EDI files that were generated from outbound message flows. This is also the path on your FTP server for storing
+translated JSON and XML files generated from inbound message flows.
+|Yes
+
+|Filename pattern
+|The xref:file-name-pattern.adoc[file name pattern] required by your trading partner or backend application.
+|
+|===
+
+== See Also
+
+* xref:endpoints.adoc[Endpoints]
+* xref:create-endpoint.adoc[Create and Configure Endpoints]

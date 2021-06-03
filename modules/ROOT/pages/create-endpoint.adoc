@@ -50,9 +50,11 @@ Partner Manager supports the following endpoint protocols:
 [%header%autowidth.spread]
 |===
 |Protocol | Trading Partners | Backend
-|SFTP | Receive, Send | Receive, Send
-| HTTP/HTTPS | Send | Receive, Send
 | AS2 | Receive, Send | N/A
+| FTP | Receive, Send | Receive, Send
+| HTTP/HTTPS | Send | Receive, Send
+|SFTP | Receive, Send | Receive, Send
+
 |===
 
 == Endpoint Runtime Services
@@ -65,18 +67,20 @@ The number and type of endpoint services deployed to your runtime depends on the
 
 Each unique AS2 and HTTP and HTTPS receive endpoint configurations result in the deployment of their own runtime applications. You can view the Runtime application name corresponding to a given configuration in Partner Manager, from the endpoint detail page.
 
-The send endpoints for SFTP Receive, SFTP Send, AS2 Send and HTTP(s) are always managed within a single generic endpoint service for the protocol & direction.
+The endpoints for AS2 Send, FTP Receive, FTP Send, HTTP(s) Receive, HTTP(s) Send, SFTP Receive, and SFTP Send are always managed within a single generic endpoint service for the protocol & direction.
 
 === Endpoint Services
 [%header%autowidth.spread]
 |===
 |Protocol |Direction |Application Name Prefix
-|SFTP |Receive |b2b-inbound-sftp-
-|SFTP |Send |b2b-outbound-sftp-
 |AS2 |Receive |b2b-inbound-as2-
 |AS2 |Send |b2b-outbound-as2-
+|FTP | Receive | b2b-inbound-ftp-
+|FTP | Send | b2b-outbound-ftp-
 |HTTP or HTTPS |Receive |b2b-inbound-http-
 |HTTP or HTTPS |Send |b2b-outbound-http-
+|SFTP |Receive |b2b-inbound-sftp-
+|SFTP |Send |b2b-outbound-sftp-
 |===
 
 If your deployment target is CloudHub, you can assign static IP addresses to your endpoint applications connecting to external systems from Runtime Manager, if your organization or your trading partners require allowlisting IP addresses. You can share the xref:runtime-manager::managing-applications-on-cloudhub#static-ips[static IP] address assigned to your endpoint application with your trading partners for them to allowlist the IP address, allowing the application to connect with their server.
@@ -88,10 +92,12 @@ The values for the endpoint's settings vary according to the protocol-type of th
 
 * xref:endpoint-as2-receive.adoc[AS2 Receive Endpoint Settings]
 * xref:endpoint-as2-send.adoc[AS2 Send Endpoint Settings]
-* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
-* xref:endpoint-sftp-send.adoc[SFTP Send Endpoint Settings]
+* xref:endpoint-ftp-receive-target.adoc[FTP Receive Endpoint Settings]
+* xref:endpoint-ftp-send.adoc[FTP Send Endpoint Settings]
 * xref:endpoint-https-receive.adoc[HTTP and HTTPS Receive Endpoint Settings]
 * xref:endpoint-https-send.adoc[HTTP and HTTPS Send Endpoint Settings]
+* xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
+* xref:endpoint-sftp-send.adoc[SFTP Send Endpoint Settings]
 
 == See Also
 
