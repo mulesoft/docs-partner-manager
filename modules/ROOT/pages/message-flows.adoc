@@ -25,24 +25,25 @@ image::inbound-message-flow.png[Inbound message flow configuration building bloc
 
 |Receiving endpoint | The endpoint where the host receives transmissions from the trading partner. a|
 * AS2
+* FTP
 * SFTP
 
-|Source message type |The message type to process for the message flow. a|
+|Source message type |The message type of the input payload. a|
 * EDI X12 formats
 * EDI identifiers
 
 |Transform |The DataWeave map used to transform EDI into XML or JSON formats. a|
-* JSON
-* XML
 
 |Target message type |The format into which the DataWeave map transforms received messages. a|
 * JSON
 * XML
 
-|Target endpoint |The final destination of a message flow. The target endpoint is defined by a host message type and endpoint, often a host API. a|
-* SFTP
+|Target endpoint | The endpoint to which the translated JSON/XML payload needs to be sent to. This is typically a process API.
+ a|
+* FTP
 * HTTP
 * HTTPS
+* SFTP
 
 |===
 
@@ -59,27 +60,27 @@ image::outbound-message-flow.png[Outbound message flow configuration building bl
 |Setting |Description |Supported Formats or Protocols
 
 |Receiving endpoint |The endpoint where the host receives transmissions from the backend. a|
+* FTP
 * HTTP
 * HTTPS
 * SFTP
 
-|Source message type |The message type to process for the message flow. a|
+|Source message type |The message type of the input payload, received from the backend. a|
 * JSON
 * XML
 
 |Transform |The DataWeave map for JSON or XML to EDI translation. a|
-* JSON
-* XML
 
 |Target message type |The message type to process for this message flow, using the X12 format and EDI identifiers. a|
-* JSON
-* XML
+* EDIFACT
+* X12
 
 |Target endpoint |The final destination of a message flow. a|
 * AS2
-* SFTP
+* FTP
 * HTTP
 * HTTPS
+* SFTP
 |===
 
 == See Also
