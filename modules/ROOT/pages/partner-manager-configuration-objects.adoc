@@ -2,7 +2,6 @@
 
 A message flow in Partner manager comprises configuration objects that execute end-to-end B2B message processing:
 
-
 * xref:partner-manager-identifiers.adoc[Partner identifiers] +
 Send and receive identifiers, such as X12 ISA and GS identifiers and AS2 identifiers
 * xref:endpoints.adoc[Receive and Send endpoints] +

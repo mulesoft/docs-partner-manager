@@ -16,7 +16,7 @@ Add identifiers and configure their values in the Partner Manager host page.
 * <<x12-gs,*X12 - GS*>>
 * <<x12-isa,*X12 - ISA*>>
 . In *Identifier Value*, enter a value to uniquely name your identifier.
-. If you selected *X12-ISA* as the *Type* value, you must also select a *Qualifier* from the list.
+. If you selected *EDIFACT-UNB* or *X12-ISA* as the *Type* value, you must also select a *Qualifier* from the list.
 . Click *Create identifier*.
 
 [[x12-isa]]
@@ -29,26 +29,7 @@ Use the following values to configure the X12 ISA identifier type:
 |Setting |Description | Required
 
 |Qualifier
-a|The Qualifier types available with Anypoint Partner Manager are:
-
-* `01 (DUNS Number)`
-* `02 (SCAC - Standard Carrier Alpha Code)`
-* `03 (FMC - Federal Maritime Commission)`
-* `04 (IATA - International Air Transport Association)`
-* `08 (UCC EDI Number)`
-* `09 (X.121)`
-* `10 (DoD - Department of Defense Activity Address Code)`
-* `11 (DEA - Drug Enforcement Administration)`
-* `12 (Phone Number)`
-* `13 (UCS Code)`
-* `14 (DUNS Number and Suffix Number)`
-* `16 (DUNS Number with a Four Character Suffix)`
-* `19 (EDI Council of Australia Communications ID)`
-* `20 (HIN - Health Industry Number)`
-* `30 (U.S. Federal Tax Identification Number)`
-* `NR (NRMA - National Retail Merchants Association)`
-* `SN (Standard Address Number)`
-* `ZZ (Mutually Defined)`
+a| Select the qualifier type for the partner’s X12-ISA identifier from the drop-down menu.
 |Yes
 |Identifier value
 |EDI X12-ISA ID for your trading partner, which can be up to 15 characters. Your trading partner supplies you with the proper EDI X12 Interchange Sender and Receiver IDs during onboarding.

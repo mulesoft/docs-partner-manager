@@ -92,6 +92,7 @@ The message type is selected for your backend system to use to map the EDI trans
 ... From the *Owner* drop-down, select the endpoint's owner.
 ... From the *Protocol* drop-down, select the protocol and configure it according to the protocol you select:
 * xref:endpoint-https-send.adoc[HTTP or HTTPS]
+* xref:endpoint-ftp-send.adoc[FTP]
 * xref:endpoint-sftp-send.adoc[SFTP]
 +
 ... Click *Save*. +

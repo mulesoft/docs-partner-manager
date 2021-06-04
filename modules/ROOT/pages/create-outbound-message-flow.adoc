@@ -23,6 +23,7 @@ The endpoint is added to the message flow, and a message appears indicating that
 ... From the *Owner* drop-down list, select the endpoint's owner.
 ... From the *Protocol* drop-down, select the protocol and configure it according to the protocol you select:
 * xref:endpoint-https-send.adoc[*HTTP or HTTPS*]
+* xref:endpoint-ftp-send.adoc[*FTP*]
 * xref:endpoint-sftp-send.adoc[*SFTP*]
 . Click *Save*. +
 The endpoint is added to the message flow.
@@ -70,8 +71,8 @@ The translation map is added to the message flow.
 .. To use an existing message type, select the message type from the list and click *Select*.
 .. To create a new message type:
 ... Click *New* to the right of the search box.
-... From *Format*, select *X12*.
-... From *Version*, select the X12 version.
+... From *Format*, select the message format
+... From *Version*, select the format version.
 ... From *Message type*, select the message type.
 ... From schema select *Use standard X12-<version>-<message-type>* or select *Customize* to define a custom schema.
 ... Click *Save*. +

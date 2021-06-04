@@ -30,13 +30,9 @@ Before you create your first trading partner, ensure you configure your xref:set
 The *New partner* window appears.
 . In the *New partner* window:
 .. In the *Name* field, enter a name that easily identifies your partner.
-.. In the *Type* list, select one of the following identifiers:
-* *AS2 Identity*
-* *Reference ID*
-* *X12-GS*
-* *X12-ISA*
+.. In the *Type* list, select an identifier.
 .. In the *Identifier Value* field, enter a value to uniquely identify your partner.
-.. Optionally, if you selected *X12-ISA* for *Type*, also select a *Qualifier* value from the list.
+.. Optionally, if you selected *X12-ISA* or *EDIFACT-UNB* for *Type*, also select a *Qualifier* value from the list.
 . Click *Create partner* to create your trading partner.
 
 You can now xref:message-flows.adoc[set up message flows] for this trading partner or continue to <<update-partner,update this partner>>.
