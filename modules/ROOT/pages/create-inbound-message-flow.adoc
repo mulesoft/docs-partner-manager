@@ -29,6 +29,7 @@ The endpoint is added to the message flow, and a message appears indicating that
 ... From the *Owner* drop-down, select the endpoint's owner.
 ... From the *Protocol* drop-down, select the protocol and configure it according to the protocol you select:
 * xref:endpoint-as2-receive.adoc[*AS2*]
+* xref:endpoint-ftp-receive-target.adoc[*FTP*]
 * xref:endpoint-sftp-receive-target.adoc[*SFTP*]
 +
 [NOTE]
@@ -42,27 +43,16 @@ The endpoint is added to the message flow.
 . In the message flow, expand the *Source message* section and click *Select*.
 . In the *Select message type* window:
 .. To use an existing message type, select the message type from the list and then click *Select*.
-.. To create a new message type:
-... Click *New* on the right side of the search box.
-... From *Format*, select *X12*.
-... From *Version*, select the X12 version.
-... From *Message type*, select the message type.
-... From schema select *Use standard X12-<version>-<message-type>* or select *Customize* to define a custom schema.
-... Click *Save*. +
-... From schema select *Use standard X12-<version>-<message-type>* or select *Customize* to define a custom schema.
-... Click *Save*. +
+.. To create a new message, click *New* on the right side of the search box and configure the X12 or EDIFACT message type.
 The message type and its validation settings are added to the message flow.
-. In the *Acknowledgment* section, select the check box next to *Send 997 functional acknowledgment* if your partner expects your organization to return functional acknowledgments.
+. In the *Acknowledgment* section, select the check box next to *Send 997 functional acknowledgment* or *Send CONTROL functional acknowledgement* if your partner expects your organization to return functional acknowledgments.
+. If you are using EDIFACT and your partner expects your organization to return functional acknowledgements:
 .. Click *Select*.
 .. In the *Select an endpoint: Send acknowledgment to <parter>* window, click *Select* to specify the endpoint to which to sent the acknowledgment transactions to your partner. +
 .. Alternatively, you can create a new send to partner endpoint:
 ... Click *New*.
 ... From *Owner*, select the endpoint owner.
-... From *Protocol*, select the protocol and configure it accordingly:
-* *AS2*
-* *HTTP*
-* *HTTPS*
-* *SFTP*
+... From *Protocol*, select the protocol and configure it accordingly.
 ... Click *Save*. +
 The acknowledgment is added to the message flow.
 
@@ -104,9 +94,6 @@ The message type is selected for your backend system to use to map the EDI trans
 * xref:endpoint-https-send.adoc[HTTP or HTTPS]
 * xref:endpoint-sftp-send.adoc[SFTP]
 +
-[NOTE]
-Translated files are delivered to file-based endpoints with a unique file name with the pattern `<doctype>-<senderid>-<ISACtrlNum>-<GSCtrlNum>-<STCtrlNum>-<timeInMillis>.<format>`, for example: `850-ABCCORP-40952-5850-179960-1587685726355.JSON`
-
 ... Click *Save*. +
 The endpoint to which to send the translated message (JSON or XML) for further processing in your backend system is added to the message flow. Partner Manager routes inbound EDI transactions based on matching identifiers configured at the partner level.
 

@@ -2,8 +2,9 @@
 
 Partner Manager uses DataWeave maps to transform business transactions between EDI message format (X12 or EDIFACT) and your organization’s enterprise application message formats, such as JSON and XML.
 
-Use Anypoint Connector for X12 or Anypoint Connector for EDIFACT with DataWeave 2.0
-to create EDI translation maps in Anypoint Studio and then import the maps to Partner Manager when you configure inbound and outbound message flows.
+Use Anypoint Connector for X12 or Anypoint Connector for EDIFACT with DataWeave 2.0 to:
+. Create EDI translation maps in Anypoint Studio.
+. Import the maps to Partner Manager when you configure inbound and outbound message flows.
 
 == See Also
 
