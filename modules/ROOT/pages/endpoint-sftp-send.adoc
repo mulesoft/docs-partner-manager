@@ -1,4 +1,4 @@
-= SFTP Send Endpoint
+= SFTP Send Endpoint Settings
 
 You can use these settings to set up SFTP endpoints in one of the following contexts:
 

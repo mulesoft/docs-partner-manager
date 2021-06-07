@@ -10,11 +10,11 @@ Add identifiers and configure their values in the Partner Manager host page.
 . In Partner Manager, select the name of your host organization in the left navigation menu.
 . In the *Identifiers* section, click *New*.
 . In the *New Identifier* dialog, select the identifier type from the drop-down list:
-* <<as2-identifier,*AS2 Identity*>>
-* <<edifact-unb, *EDIFACT-UNB*>>
-* <<reference-id,*Reference ID*>>
-* <<x12-gs,*X12 - GS*>>
-* <<x12-isa,*X12 - ISA*>>
+* <<as2-identifier,AS2 Identity>>
+* <<edifact-unb, EDIFACT-UNB>>
+* <<reference-id,Reference ID>>
+* <<x12-gs,X12 - GS>>
+* <<x12-isa,X12 - ISA>>
 . In *Identifier Value*, enter a value to uniquely name your identifier.
 . If you selected *EDIFACT-UNB* or *X12-ISA* as the *Type* value, you must also select a *Qualifier* from the list.
 . Click *Create identifier*.
@@ -65,6 +65,7 @@ Select the qualifier types for the partner’s EDIFACT UNB identifier from the d
 |Yes
 | Identifier value
 | Specify the EDIFACT-UNB ID for your trading partner, which can be up to 15 characters. Your trading partner supplies you with the proper EDIFACT Interchange sender and receiver IDs during onboarding.
+| Yes
 
 |===
 

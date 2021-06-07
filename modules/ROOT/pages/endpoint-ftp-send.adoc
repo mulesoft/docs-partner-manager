@@ -1,4 +1,4 @@
-FTP Send Endpoint
+= FTP Send Endpoint Settings
 
 You can use these settings to set up FTP endpoints in one of the following contexts:
 

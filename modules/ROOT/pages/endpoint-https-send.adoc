@@ -1,4 +1,4 @@
-= HTTP and HTTPS Send Configuration
+= HTTP and HTTPS Send Endpoint Settings
 
 The HTTP and the secure HTTPS protocol send settings are used with endpoints for sending transmissions to your partner and endpoints that are targets at your organization.
 
