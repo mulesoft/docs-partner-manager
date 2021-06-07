@@ -68,14 +68,9 @@ The translation map is added to the message flow.
 
 . Expand the *Message type* section and click *Select*.
 . In the *Select message type* window:
-.. To use an existing message type, select the message type from the list and click *Select*.
-.. To create a new message type:
-... Click *New* to the right of the search box.
-... From *Format*, select the message format
-... From *Version*, select the format version.
-... From *Message type*, select the message type.
-... From schema select *Use standard X12-<version>-<message-type>* or select *Customize* to define a custom schema.
-... Click *Save*. +
+* To use an existing message type, select the message type from the list and click *Select*.
+* To create a new message type, click *New* to the right of the search box, define the xref:partner-manager-create-message-type.adoc#create-message-type[EDIFACT and X12 message type], and click *Save*.
++
 The message type and its validation settings are added to the message flow.
 . In the *Acknowledgment* section, select *Expect functional acknowledgment* if you expect your partner to return functional acknowledgments (997).
 .. In the *Select an endpoint: Receive acknowledgment from <parter>* window, click *Select* to specify the endpoint from which to receive the acknowledgment transactions from your partner. +

@@ -13,6 +13,7 @@ Message types are always managed in the host page, regardless of whether they ar
 
 You can create message types from the host page  or from the Message Flow wizard. When you create message types during message flow configuration, Partner Manager automatically designates the usage for the message type.
 
+[[create-message-type]]
 == Create a Message Type
 
 . In Partner Manager left navigation, select *<host-name>*.
