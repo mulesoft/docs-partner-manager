@@ -7,7 +7,7 @@ Send outbound EDI files to your trading partners in outbound message flows.
 * Target at host +
 Send application messages (JSON or XML) to your backend applications in inbound message flows.
 
-You can create the STFP identifiers for your organization and for your trading partners in the respective xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner] profile pages.
+You can create the FTP identifiers for your organization and for your trading partners in the respective xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner] profile pages.
 
 [%header%autowidth.spread]
 |===

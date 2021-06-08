@@ -9,9 +9,12 @@ image::partner-manager-message-flow.png[Partner Manager message flow configurati
 You can create message flows in one of the following contexts:
 
 * <<inbound-message-flow,Inbound>> +
-Receive messages from trading partners
-* <<outbound-message-flow,Outbound>> +
-Send messages to trading partners. An outbound message flow receives application messages from your backend systems, translates the message to EDI, and sends the EDI transmissions to your trading partner.
++
+An inbound message flow receives EDI payloads from your trading partners, translates them into your internal application message format, and sends the translated messages to your backend systems.
+
+* <<outbound-message-flow,Outbound>>
++
+An outbound message flow receives application messages from your backend systems, translates the message to EDI, and sends the EDI transmissions to your trading partner.
 
 [[inbound-message-flow]]
 == Inbound Message Flows
@@ -29,22 +32,21 @@ image::inbound-message-flow.png[Inbound message flow configuration building bloc
 * SFTP
 
 |Source message type |The message type of the input payload. a|
-* EDI X12 formats
-* EDI identifiers
+* X12
+* EDIFACT
 
-|Transform |The DataWeave map used to transform EDI into XML or JSON formats. a|
+|Transform |The DataWeave map used to transform EDI into XML or JSON formats. a| N/A
 
 |Target message type |The format into which the DataWeave map transforms received messages. a|
 * JSON
 * XML
 
-|Target endpoint | The endpoint to which the translated JSON/XML payload needs to be sent to. This is typically a process API.
+|Target endpoint | The endpoint to which the translated JSON or XML payload needs to be sent. This is typically a process API.
  a|
 * FTP
 * HTTP
 * HTTPS
 * SFTP
-
 |===
 
 [[outbound-message-flow]]
@@ -69,13 +71,15 @@ image::outbound-message-flow.png[Outbound message flow configuration building bl
 * JSON
 * XML
 
-|Transform |The DataWeave map for JSON or XML to EDI translation. a|
+|Transform |The DataWeave map for JSON or XML to EDI translation. a| N/A
 
 |Target message type |The message type to process for this message flow, using the X12 format and EDI identifiers. a|
 * EDIFACT
 * X12
 
-|Target endpoint |The final destination of a message flow. a|
+|Target endpoint |
+The trading partner endpoint to which the translated EDI payload needs to be sent.
+ a|
 * AS2
 * FTP
 * HTTP
