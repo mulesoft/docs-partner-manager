@@ -67,13 +67,15 @@ image::outbound-message-flow.png[Outbound message flow configuration building bl
 * HTTPS
 * SFTP
 
-|Source message type |The message type of the input payload, received from the backend. a|
+|Source message type |The message type of the input payload received from the backend. a|
 * JSON
 * XML
 
 |Transform |The DataWeave map for JSON or XML to EDI translation. a| N/A
 
-|Target message type |The message type to process for this message flow, using the X12 format and EDI identifiers. a|
+|Target message type |
+The message type to which the input payload needs to be translated.
+a|
 * EDIFACT
 * X12
 
