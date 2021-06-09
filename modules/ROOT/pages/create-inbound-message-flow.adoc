@@ -42,15 +42,17 @@ The endpoint is added to the message flow.
 .. To use an existing message type, select the message type from the list and then click *Select*.
 .. To create a new message, click *New* on the right side of the search box,configure the X12 or EDIFACT xref:partner-manager-create-message-type.adoc[message type], and click *Save*.
 The message type and its validation settings are added to the message flow.
-. In the *Acknowledgment* section, select the check box next to *Send 997 functional acknowledgment (X12)* or *Send CONTRL functional acknowledgement (EDIFACT)* if your partner expects your organization to return functional acknowledgments.
 . If your partner expects your organization to return functional acknowledgements:
+.. In the *Acknowledgement* section, select the check box next to *Send 997 functional acknowledgment (X12)* or *Send CONTRL functional acknowledgement (EDIFACT)* .
 .. Click *Select*.
-.. In the *Select an endpoint: Send acknowledgment to <partner>* window, click *Select* to specify the endpoint to which to sent the acknowledgment transactions to your partner. +
+.. In the *Select an endpoint: Send acknowledgment to <partner>* window, click *Select* to specify the endpoint from which to receive the acknowledgment transactions from your partner.
++
 .. Alternatively, you can create a new send to partner endpoint:
 ... Click *New*.
-... From *Owner*, select the endpoint owner.
-... From *Protocol*, select the protocol and configure it accordingly.
-... Click *Save*. +
+... In the *Owner* field, select the endpoint owner.
+... In the *Protocol* field, select the protocol and configure it accordingly.
+... Click *Save*.
++
 The acknowledgment is added to the message flow.
 
 == Import the Translation Map

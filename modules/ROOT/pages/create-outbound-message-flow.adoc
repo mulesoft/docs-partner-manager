@@ -69,26 +69,31 @@ The translation map is added to the message flow.
 . Expand the *Message type* section and click *Select*.
 . In the *Select message type* window:
 * To use an existing message type, select the message type from the list and click *Select*.
-* To create a new message type, click *New* to the right of the search box, define the xref:partner-manager-create-message-type.adoc#create-message-type[EDIFACT and X12 message type], and click *Save*.
+* To create a new message type, click *New* next to the search box, define the xref:partner-manager-create-message-type.adoc#create-message-type[EDIFACT and X12 message type], and click *Save*.
 +
 The message type and its validation settings are added to the message flow.
-. In the *Acknowledgment* section, select *Expect functional acknowledgment* if you expect your partner to return functional acknowledgments (997).
-.. In the *Select an endpoint: Receive acknowledgment from <parter>* window, click *Select* to specify the endpoint from which to receive the acknowledgment transactions from your partner. +
+.  If your partner expects your organization to return functional acknowledgements:
+. In the *Acknowledgement* section, select *Expect functional acknowledgement* (X12) or *Expect CONTRL functional acknowledgment* (EDIFACT).
+.. Click *Select*.
+.. In the *Select an endpoint: Receive acknowledgment from <partner>* window, click *Select* to specify the endpoint from which to receive your partner's acknowledgment transactions.
++
 .. Alternatively, you can create a new receive from partner endpoint:
 ... Click *New*.
-... From *Owner*, select the endpoint owner.
-... From *Protocol*, select the protocol and configure it accordingly:
-* *AS2*
-* *SFTP*
+... In the *Owner* field, select the endpoint owner.
+... In the *Protocol* field, select the protocol and configure it accordingly:
+* xref:edifact-as2-receive.adoc[AS2]
+* xref:edifact-ftp-receive.adoc[FTP]
+* xref:edifact-sftp-receive.adoc[SFTP]
 ... Click *Save*.
-... In *Mark overdue after*, accept the default value of *24 Hours* or configure values based on when you want the outbound transaction to be designated as overdue for an acknowledgment, according to the SLAs you have with your trading partner. +
+.. In the *Mark overdue after* field, accept the default value of *24 Hours* or configure values based on when you want the outbound transaction to be designated as overdue for an acknowledgment, according to the SLAs you have with your trading partner.
++
 When a functional acknowledgment is not received within the specified timer value, Partner Manager marks the outbound transactions as `Overdue`.
-. In the *X12 Settings* drop-down list, select the X12 settings.
+. In the *<protocol> Settings* list, select the settings.
 +
-By default, Partner Manager uses the X12 send settings that are configured in the trading partner profile page for message validation, delimiters, and character encoding.
+By default, Partner Manager uses the X12 send or EDIFACT send settings that are configured in the trading partner profile page for message validation, delimiters, and character encoding.
 +
-If you want to apply custom validation settings and delimiters for the message flow you are setting up, you can select *Custom X12 settings* and provide custom configuration values.
-. In *X12 Identifiers*, select the sender and receiver identifiers that are configured under the host and trading partner profiles to use them on the X12 ISA and GS segments.
+To apply custom validation settings and delimiters for the message flow you are setting up, select *Custom X12 settings* or *Custom EDIFACT settings* and provide custom configuration values.
+. In *<protocol> Identifiers* section, select the sender and receiver identifiers that are configured under the host and trading partner profiles to use them on the X12 ISA and GS segmenets or the EDIFACT UNB segments.
 
 == Verify the Message Flow is Complete
 
