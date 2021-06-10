@@ -29,7 +29,7 @@ The endpoint is added to the message flow, and a message appears indicating that
 ... From the *Owner* drop-down, select the endpoint's owner.
 ... From the *Protocol* drop-down, select the protocol and configure it according to the protocol you select:
 * xref:endpoint-as2-receive.adoc[AS2]
-* xref:endpoint-ftp-receive-target.adoc[FTP]
+* xref:endpoint-ftp-receive.adoc[FTP]
 * xref:endpoint-sftp-receive-target.adoc[SFTP]
 +
 ... Click *Save*. +
@@ -40,7 +40,7 @@ The endpoint is added to the message flow.
 . In the message flow, expand the *Source message* section and click *Select*.
 . In the *Select message type* window:
 .. To use an existing message type, select the message type from the list and then click *Select*.
-.. To create a new message, click *New* on the right side of the search box,configure the X12 or EDIFACT xref:partner-manager-create-message-type.adoc[message type], and click *Save*.
+.. To create a new message type, click *New* next to the search box, configure the X12 or EDIFACT xref:partner-manager-create-message-type.adoc[message type], and click *Save*.
 The message type and its validation settings are added to the message flow.
 . If your partner expects your organization to return functional acknowledgements:
 .. In the *Acknowledgement* section, select the check box next to *Send 997 functional acknowledgment (X12)* or *Send CONTRL functional acknowledgement (EDIFACT)* .
@@ -50,7 +50,7 @@ The message type and its validation settings are added to the message flow.
 .. Alternatively, you can create a new send to partner endpoint:
 ... Click *New*.
 ... In the *Owner* field, select the endpoint owner.
-... In the *Protocol* field, select the protocol and configure it accordingly.
+... In the *Protocol* field, select and configure the protocol.
 ... Click *Save*.
 +
 The acknowledgment is added to the message flow.
@@ -75,7 +75,7 @@ The translation map is added to the message flow.
 . In the *Message Type* section, click *Select*.
 . In the *Select message type* window:
 * To use an existing message type, select the message type from the list and then click *Select*.
-* To create a new message type click *New* on the right side of the search box and define the xref:partner-manager-create-message-type.adoc#target-at-host[target at host message type], and click *Save*.
+* To create a new message type, click *New* on the right side of the search box, define the xref:partner-manager-create-message-type.adoc#target-at-host[target at host message type], and click *Save*.
 +
 The message type is selected for your backend system to use to map the EDI transaction. Partner Manager routes inbound EDI transactions based on matching identifiers configured at the Partner level.
 . In the *Target at <your organization>* section, exand the *Endpoint* section and click *Select*.

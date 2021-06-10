@@ -93,7 +93,7 @@ When a functional acknowledgment is not received within the specified timer valu
 By default, Partner Manager uses the X12 send or EDIFACT send settings that are configured in the trading partner profile page for message validation, delimiters, and character encoding.
 +
 To apply custom validation settings and delimiters for the message flow you are setting up, select *Custom X12 settings* or *Custom EDIFACT settings* and provide custom configuration values.
-. In *<protocol> Identifiers* section, select the sender and receiver identifiers that are configured under the host and trading partner profiles to use them on the X12 ISA and GS segmenets or the EDIFACT UNB segments.
+. In the *<protocol> Identifiers* section, select the sender and receiver identifiers that are configured under the host and trading partner profiles to use them on the X12 ISA and GS segments or the EDIFACT UNB segments.
 
 == Verify the Message Flow is Complete
 
