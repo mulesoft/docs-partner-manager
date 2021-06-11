@@ -12,6 +12,6 @@ You do not have sufficient vCore capacity to deploy the applications that suppor
 
 == Solution
 
-* Contact your MuleSoft Platform Administrator to review the vCore allocation for your business group.
+Contact your MuleSoft Platform Administrator to review the vCore allocation for your business group.
 
 If vCores are added, wait at least 15 minutes before attempting deployment.
