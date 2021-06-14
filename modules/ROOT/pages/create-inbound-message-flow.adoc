@@ -19,7 +19,7 @@ A new message flow is created. +
 
 . In the message flow, expand the *Receiving from <partner>* section and click *Select endpoint*.
 . In the *Receiving endpoint* section, click *Select*.
-. In the *Select an endpoint: Receive from <host>* window:
+. In the *Select an endpoint: Receive from <partner>* window:
 .. To use an existing receiving endpoint:
 ... Select the endpoint from the list and click *Select*.  +
 The endpoint is added to the message flow, and a message appears indicating that the endpoint is missing an identifier.
@@ -71,14 +71,14 @@ The translation map is added to the message flow.
 
 == Configure the Target
 
-. In the message flow, expand the *Target at <your organization>* section.
+. In the message flow, expand the *Target at <host>* section.
 . In the *Message Type* section, click *Select*.
 . In the *Select message type* window:
 * To use an existing message type, select the message type from the list and then click *Select*.
 * To create a new message type, click *New* on the right side of the search box, define the xref:partner-manager-create-message-type.adoc#target-at-host[target at host message type], and click *Save*.
 +
 The message type is selected for your backend system to use to map the EDI transaction. Partner Manager routes inbound EDI transactions based on matching identifiers configured at the Partner level.
-. In the *Target at <your organization>* section, exand the *Endpoint* section and click *Select*.
+. In the *Target at <host>* section, expand the *Endpoint* section and click *Select*.
 . In the *Select an endpoint: Target to <host>* window:
 .. To use an existing endpoint, select the endpoint from the list and  then click *Select*.
 .. To create a new endpoint:
