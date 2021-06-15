@@ -47,7 +47,7 @@ Set the target message type to transform inbound EDI EDIFACT messages to your ap
 . From the *Message Flow* tab in the *Mule Palette* view, select the *Transform Message* component.
 . In the *Output* section, click the *Define metadata* link.
 +
-image::pm-inbound-map-1.png[Transform Message component add payload metadata]
+image::pm-inbound-map-1.png[Metadata for the payload transform ]
 +
 . Click *Add*.
 . In *Type id*, enter a new message type ID, for example `inbound-po`.
@@ -57,18 +57,16 @@ image::pm-inbound-map-1.png[Transform Message component add payload metadata]
 +
 The new EDIFACT message structure displays in the Input pane, and your application message structure displays in the Output pane:
 +
-+
-image::pm-inbound-map-2.png[Transform Message component add payload metadata]
+image::pm-inbound-map-2.png[EDIFACT and application message structures]
 +
 . Click the Edit current target icon:
 +
-image::pm-inbound-map-2.png[Transform Message component add payload metadata]
+image::pm-inbound-map-3.png[Edit current icon]
 +
-. Select *File* and save the DataWeave map with a meaningful name, such as `INB-EDIFACT-D97A-ORDERS-to-Canonical-Purchase-Order-JSON.dwl`:
-+
-image
-+
-. Download an https://anypoint.mulesoft.com/exchange/works.integration/b2b-edifact-transform-demo/[sample] project from Exchange that has pre-built mapping to transform D97A ORDERS messages into a JSON application message structure.
+. Select *File* and save the DataWeave map with a meaningful name, such as `INB-EDIFACT-D97A-ORDERS-to-Canonical-Purchase-Order-JSON.dwl`.
+. Modify the map to work with your schema.
+
+The `Template to create inbound and outbound EDIFACT message transformation` contains a sample inbound EDIFACT to JSON mapping in the Mule `configuration 01-inbound-edifact-json.xml` file in the *Transform* component. The DataWeave file is in the `src/main/resources/maps/EDIFACT_D97A_ORDERS_to_Canonical_PurchaseOrder_JSON.dwl` file.
 
 == Test the Map Locally
 
