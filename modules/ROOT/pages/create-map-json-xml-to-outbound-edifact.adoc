@@ -1,72 +1,75 @@
 = Create a Map For XML or JSON to Outbound EDI EDIFACT
 
-Create a new Mule project in Anypoint Studio to import a template to map application messages from canonical formats such as XML or JSON, to outbound EDI EDIFACT messages to send to your trading partners.
+Use the MuleSoft template named `Template to create inbound and outbound EDIFACT message transformation` to help you map application messages from canonical formats such as XML or JSON to outbound EDI EDIFACT messages to send to your trading partners.
+
+This template uses DataWeave to create the mapping between the XML or JSON format and the EDI EDIFACT format. To use the template to create the mapping:
+
+. Create a project in Anypoint Studio based on the template.
+. Set the source message type.
+. Set the Target EDIFACT Message Type
+. Test the map locally.
 
 == Create a New Project From a Template
 
 Create a template project in Anypoint Studio and import a DataWeave map template that maps outbound EDI EDIFACT transactions to an application format:
 
 . Launch Anypoint Studio.
-. From the Anypoint Studio *File* menu, select *New > Project from Template*.
+. From the *File* menu, select *New > Project from Template*.
 . Log in to Anypoint Exchange with your Anypoint Platform credentials.
 . Search for `edifact`.
-. Click `Template to create inbound and outbound EDIFACT message transformation`.
-. Click *Open* to create a new project in your Studio workspace that is preloaded with the template.
-
-You can also download the template to map outbound EDI EDIFACT transactions to the application format https://anypoint.mulesoft.com/exchange/org.mule.examples/template-b2b-edi-outbound-EDIFACT-map[from Exchange].
-
-Open the Mule configuration `file02-outbound-edifact-transform` to create the outbound EDIFACT message transformation.
+. Click `Template to create inbound and outbound EDIFACT message`.
+. Do either of the following:
+* Click *Open*, to create a new project in your Studio workspace that preloads the template.
+* Download the template from Exchange and open the Mule configuration file `02-outbound-edifact-transform.xml` in the downloaded template.
 
 == Set the Source Message Type
 
 Set the source message type to define the metadata structure of your application message, such as XML or JSON:
 
 . Copy the schema file of your target application message type into the `<Project-name>/src/main/resources` folder in the template project.
-. From the *Mule Palette* view, click *Transform Message* and drag it on to the Studio canvas.
-. Select the *Transform Message* component and in the input section, next to *Payload*, click *Define metadata*:
+. Select the *02-outbound-edifact-transform.xml* flow.
+. From the *Message Flow* tab in the *Mule Palette* view, select the *Transform Message* component.
+. In the *Payload* section, click the *Define metadata* link.
 +
-image::partner-manager-outbound-map-1.png[Transform Message component add payload metadata]
+image::pm-outbound-map-1.png[Metadata for the payload transform]
 +
 . Click *Add*.
 . In *Type id*, enter a new message type ID, for example, `outbound-po-ack`.
 . Click *Create type*.
-. In the *Select metadata type* dialog window, from the *Type* drop-down menu, select *JSON* or *XML*.
+. In the *Select metadata type* window, from the *Type* field, select `JSON` or `XML`.
 . Browse to the location of the JSON or XML schema file you imported in step 1 and click *Select*.
 
 == Set the Target EDIFACT Message Type
 
 The template `02-outbound-edifact-transform.xml` is configured with the EDIFACT version D97A, ORDRSP message type. Follow these steps to change the target EDIFACT message type:
 
-. Click the *Global Elements* tab at the base of the Studio canvas in `00-global-configs.xml`.
-. From *Global Configuration Elements*, EDIFACT_Write and click *Edit*.
-. In *Name*, change the name of the configuration.
-. In Schema definitions select the value `/edifact/d97a/ORDRSP.esl` and click the edit icon.
+. From the Studio *Package Explorer* select *00-global-configs.xml* in the *b2b-edifact-transform-template* project.
+. In the Studio canvas, click the *Global Elements* tab.
+. Select *EDIFACT_Write* and click *Edit*.
+. In *Value* field, select the value `/edifact/d97a/ORDRSP.esl` and click the edit icon.
 . Change the schema value to the version and transaction set you want to map to.
 +
-For example, set *Value* to /edifact/d96a/INVOIC.esl`, to map to a `D96A Invoice` message.
-
-=== JSON/XML to EDI EDIFACT mapping
-
-The new EDIFACT message structure displays in the output pane on the right, and your application message structure (JSON or XML) displays in the input pane on the left:
-
-image
-
-To create the mapping:
-
-. Click the edit current target icon on top of the right side pane:
+For example, set *Value* to `/edifact/d96a/INVOIC.esl`, to map to a `D96A Invoice` message.
 +
-image
+The new EDIFACT message structure displays in the output pane, and your application message structure (JSON or XML) displays in the input pane:
 +
-Select *File*, and save the DataWeave map with a meaningful name, such as: `OTB-Canonical-Purchase-Order-Ack-JSON-to-EDIFACT-D97A-ORDRSP.dwl`:
+image::pm-outbound-map-2.png[EDIFACT and application message structures]
 +
-image
+. Click the Edit current target icon:
++
+image::pm-outbound-map-3.png[Edit current target icon]
++
+.Select *File*, and save the DataWeave map with a meaningful name, such as: `OTB-Canonical-Purchase-Order-Ack-JSON-to-EDIFACT-D97A-ORDRSP.dwl`:
+. Modify the map to work with your schema.
+
+The `Template to create inbound and outbound EDIFACT message transformation` contains a sample mapping to transform the canonical JSON message structure into D97A ORDRSP messages. This mapping is in the *configuration 02-outbound-edifact-json.xml* file in the *Transform* component. The DataWeave file is `src/main/resources/maps/Canonical_PO_Ack_JSON_to_EDIFACT_D97A_ORDRSP` file.
 
 == Test the Map Locally
 
 Follow these steps to test the map locally in Anypoint Studio:
 
 . In *Package Explorer*, right-click on the project, and click *Run > Run as Mule application*.
-. Use a REST client to post a JSON or an XML payload to the URL `+http://localhost:8081/edifact/outbound.+`.
+. Use a REST client to post a JSON or an XML payload to `+http://localhost:8081/edifact/outbound+`
 +
 The application returns the translated EDI EDIFACT transaction.
 +
