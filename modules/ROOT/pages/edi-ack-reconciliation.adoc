@@ -1,6 +1,6 @@
 = EDI Acknowledgment Reconciliation
 
-As your trading partners acknowledge your messages, Partner Manager automatically and updates their acknowledgment status. If you want to be notified, you must specifically configure acknowledgment settings when you create the message.
+As your trading partners acknowledge your messages, Partner Manager automatically updates their acknowledgment status. If you want to be notified, you must specifically configure acknowledgment settings when you create the message.
 
 If you are expecting to receive functional acknowledgments from your trading partners, you must xref:x12-send-settings.adoc[configure the acknowledgment  settings] when creating the outbound message flow.
 
