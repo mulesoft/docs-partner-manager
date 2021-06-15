@@ -1,0 +1,110 @@
+= Configure EDIFACT Send (Outbound) Settings
+
+Partner Manager enables you to configure the EDIFACT envelope parameters, delimiters, validation rules, character encoding, and control numbers to apply when sending an outbound EDIFACT transmission to a trading partner.
+
+== Configure the Send Settings
+
+. In the left navigation menu, select the partner for whom to configure the send settings.
+. In the *Validation and acknowledgment settings* section, under *Send to <partner-name>*, click *EDIFACT*.
+. In the menu on the left, select the setting to configure:
+* <<general-settings,General>>
+* <<global-control-numbers,Global control numbers>>
+* <<character-set,Character set & separators>>
+. Click *Save*.
+
+The values you configure in the partner's settings page are used by default for all EDIFACT messages sent to that trading partner. You can override the settings you configure at the message flow level by selecting the Custom option while creating an outbound message flow.
+
+[NOTE]
+It can take up to five minutes for your configuration changes to sync with Mule.
+
+[[general-settings]]
+== General Settings
+
+Use the following settings to configure the general validation rules:
+
+[%header%autowidth.spread]
+|===
+|Setting |Description |Default Value
+|Send Syntax Version
+|Syntax version for outbound messages
+|VERSION4
+|Send UNA
+|If enabled, adds a UNA segment at the beginning of the generated EDIFACT payload
+|Enabled
+|Enforce valid characters
+|Enforces valid characters
+|Enabled
+|Enforce length limits
+| Validates data elements against length limits defined in the used EDI schema
+|Enabled
+|Expect CONTRL for each transmission sent to <partner>
+|When enabled, sets UNB-09 to `1`, indicating that a technical acknowledgment is expected in the partner's response
+|Disabled
+|===
+
+== Character Set and Separators
+
+Use the following settings to set the character encoding and delimiters for the generated EDIFACT payload:
+
+[%header%autowidth.spread]
+|===
+|Setting |Description |Default
+|Character encoding
+a|Character encoding for messages
+|ASCII_B
+|Data element separator
+|Data element separator character
+|+
+|Component separator
+|Component element separator characters
+|:
+|Repetition separator
+|Repetition separator character
+|*
+|Segment terminator
+|Segment terminator character
+|'
+|Release character
+|Release character
+|?
+|Line ending between segments
+a|
+Character that adds line endings between segments to improve the readability of the output message text. Possible values include:
+
+* NONE
++
+Generates the EDIFACT payload as a single line with segments separated by this character
++
+* CR
++
+Carriage return
++
+* CRLF
++
+Carriage return and line feed
++
+* LF
++
+Line Feed
+|CRLF
+|Test Indicator
+a| When you select *Test* from the drop-down, sets UNB-11 to `1`, which indicates that this is a test message.
+|Production
+|===
+
+[[global-control-numbers]]
+== Global Control Numbers
+
+Partner Manager applies a global control number at the partner level on the EDIFACT interchanges generated from outbound message flows. These control numbers are sequenced across all message types sent to a trading parter, including functional acknowledgments.
+
+The control number starts with a default value of `1` and increases sequentially each time your organization sends outbound transmissions. To set the control number sequence value to a different number to maintain sequencing and avoid duplication:
+
+. Click *Change* and enter the desired control number.
+. Click *Save*.
+
+[NOTE]
+It can take up to five minutes to apply the change at runtime.
+
+== See Also
+
+* xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow]

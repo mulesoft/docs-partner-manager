@@ -1,13 +1,13 @@
-= SFTP Send Endpoint Settings
+= FTP Send Endpoint Settings
 
-You can use these settings to set up SFTP endpoints in one of the following contexts:
+You can use these settings to set up FTP endpoints in one of the following contexts:
 
 * Send to partners +
 Send outbound EDI files to your trading partners in outbound message flows.
 * Target at host +
 Send application messages (JSON or XML) to your backend applications in inbound message flows.
 
-You can create the STFP identifiers for your organization and for your trading partners in the respective xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner] profile pages.
+You can create the FTP identifiers for your organization and for your trading partners in the respective xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner] profile pages.
 
 [%header%autowidth.spread]
 |===
@@ -30,23 +30,23 @@ You can create the STFP identifiers for your organization and for your trading p
 | No
 
 |Host
-| The SFTP server host, such as `sftp.mulesoft.com`, `localhost`, or `192.168.0.1`. The host must be accessible from your Mule environment.
+| The FTP server host, such as `ftp.mulesoft.com`, `localhost`, or `192.168.0.1`. The host must be accessible from your Mule environment.
 |Yes
 
 |Port
-|The port number of the SFTP server to connect.
+|The port number of the FTP server to connect.
 |Yes
 
 |Username
-|The username for the SFTP server.
+|The username for the FTP server.
 |Yes
 
 |Password
-|The password for the SFTP server.
+|The password for the FTP server.
 |Yes
 
 |Target Path
-|The path on your SFTP server to EDI files that were generated from outbound message flows. This is also the path on your SFTP server for storing
+|The path on your FTP server to EDI files that were generated from outbound message flows. This is also the path on your FTP server for storing
 translated JSON and XML files generated from inbound message flows.
 |Yes
 
@@ -54,6 +54,8 @@ translated JSON and XML files generated from inbound message flows.
 |The xref:file-name-pattern.adoc[file name pattern] required by your trading partner or backend application.
 |
 |===
+
+For EDI messages that are not time-sensitive, such as invoice and payment remittances, use the Write batch operation to merge multiple individual messages into a single interchange and send to your trading partners.
 
 == See Also
 

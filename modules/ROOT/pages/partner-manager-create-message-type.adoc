@@ -9,10 +9,11 @@ A message type in Partner Manager can be used in one of the following ways:
 * Source at host
 * Send to partners
 
-Message types are always managed in the host page , regardless of whether they are used for a single partner or for multiple trading partners. Additionally, message types are reusable across message flows for different trading partners.
+Message types are always managed in the host page, regardless of whether they are used for a single partner or for multiple trading partners. Additionally, message types are reusable across message flows for different trading partners.
 
 You can create message types from the host page  or from the Message Flow wizard. When you create message types during message flow configuration, Partner Manager automatically designates the usage for the message type.
 
+[[create-message-type]]
 == Create a Message Type
 
 . In Partner Manager left navigation, select *<host-name>*.
@@ -30,7 +31,9 @@ The message type appears in the *Message types* section on the host page .
 [[receive-and-send-to-partners]]
 == Receive From and Send To Partners
 
-Inbound and outbound transactions between your organization and your trading partners typically follow EDI standards such as X12.
+Inbound and outbound transactions between your organization and your trading partners typically follow EDI standards such as X12 or EDIFACT.
+
+== Define X12 as an Inbound or Outbound Message Type
 
 Use the following settings to define X12 as an inbound or outbound message type:
 
@@ -48,11 +51,34 @@ This setting applies the standard X12 schema for the version and message type co
 * *Customize* +
 This setting enables you to import a customized xref:connectors::x12-edi/x12-edi-schema-language-reference.adoc[EDI schema language] file, if your requirement is to make adjustments to the standard X12 schema.
 +
-When using customized EDI schema, you can assign a custom name to the message type definition, for example, `X12-7050-204-PartnerName`.
-
-[NOTE]
-Only segment level customization is supported.
+When using the customized EDI schema, you can assign a custom name to the message type definition, for example, `X12-7050-204-PartnerName`.
 | None |Yes
+|===
+
+You can find an https://www.mulesoft.com/exchange/works.integration/b2b-x12-custom-schema-example[example] of how to customize EDI schema in Anypoint Exchange.
+
+== Define EDIFACT as an Inbound or Outbound Message Type
+
+Use the following settings to define EDIFACT as an inbound or outbound message type:
+
+[%header%autowidth.spread]
+|===
+|Setting |Description |Default | Required
+|Format | The format of the message. |`EDIFACT`|Yes
+|Version | List of valid versions: `D00A`, `D00B,` `D01A`, `D01B`, `D01C`, `D02A`, `D02B`, `D03A`, `D03B`, `D04A`, `D04B`, `D05A`, `D05B`, `D06A`, `D06B`, `D07A`, `D07B`, `D08A`, `D08B`, `D09A`, `D09B`, `D10A`, `D10B`, `D11A`, `D11B`, `D12A`, `D12B`, `D13A`, `D13B`, `D14A`, `D14B`, `D15A`, `D15B`, `D93A`, `D95B`, `D96A`, `D97A`, `D98A`, `D98B`, `D99A`, `D99B`
+ | None |Yes
+|Message Type |
+The EDIFACT message type, such as `ORDERS`, `DESADV`, or `INVOIC`.
+ |None | Yes
+|Schema a|The EDI schema for the message type. Options include:
+
+* *Use standard EDIFACT-<version>* +
+This setting applies the standard EDIFACT schema for the version and message type configured.
+* *Customize* +
+This setting enables you to import a customized xref:connectors::x12-edi/x12-edi-schema-language-reference.adoc[EDI schema language] file, if your requirement is to make adjustments to the standard EDIFACT schema.
++
+When using the customized EDI schema, you can assign a custom name to the message type definition, for example, `EDIFACT-d97a-ORDERS-<PartnerName>`.
+|None| Yes
 |===
 
 [[target-at-host]]
