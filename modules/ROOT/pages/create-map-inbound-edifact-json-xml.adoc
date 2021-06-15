@@ -20,16 +20,16 @@ Create a template project in Anypoint Studio:
 . From the *File* menu, select *New > Project from Template*.
 . Log in to Anypoint Exchange with your Anypoint Platform credentials.
 . Search for `edifact`.
-. Click the template named `Template to create inbound and outbound EDIFACT message transformation`.
+. Click `Template to create inbound and outbound EDIFACT message`.
 . Do either of the following:
 * Click *Open*, to create a new project in your Studio workspace that preloads the template.
-* Download the template from Exchange and open the Mule configuration file `01-inbound-edifact-transform` in the downloaded template.
+* Download the template from Exchange and open the Mule configuration file `01-inbound-edifact-transform.xml` in the downloaded template.
 
 == Set the Source EDIFACT Message Type
 
 The `01-inbound-edifact-transform.xml` template is configured with the EDIFACT version D97A, ORDERS message type. Follow these steps if you need to change the message type:
 
-. From the Studio *Package Explorer*, select *00-global-configs.xml* in the *b2b-edifact-transform-template* project.
+. From the Studio *Package Explorer*, select *00-global-configs.xml* in the *b2b-edifact-transform-template*.
 . In the Studio canvas, click the *Global Elements* tab.
 . Select *EDIFACT_Read* and click *Edit*.
 . In the *Value* field, select */edifact/d97a/ORDERS.esl* and click the edit icon.
@@ -42,8 +42,8 @@ For example, set *Value* to `/edifact/d96a/INVOIC.esl`, to map from the D96A Inv
 
 Set the target message type to transform inbound EDI EDIFACT messages to your application's message format:
 
-. Copy the schema file of your target application message type into the `<Project-name>/src/main/resources` folder in the Studio project.
-. Select the *01-inbound-edifact-transform.xml* flow in the Studio project.
+. Copy the schema file of your target application message type into the `<Project-name>/src/main/resources` folder in *Package Explorer*.
+. Select the *01-inbound-edifact-transform.xml* flow.
 . From the *Message Flow* tab in the *Mule Palette* view, select the *Transform Message* component.
 . In the *Output* section, click the *Define metadata* link.
 +
@@ -73,10 +73,10 @@ The `Template to create inbound and outbound EDIFACT message transformation` con
 Follow these steps to test the translation map locally in Anypoint Studio:
 
 . In *Package Explorer*, right-click on the template project, and select *Run > Run as Mule application*.
-. Use a REST client to post an EDI message payload to the URL `+http://localhost:8081/EDIFACT/inbound`.
+. Use a REST client to post an EDI message payload to `+http://localhost:8081/EDIFACT/inbound`.
 +
 The application returns the translated application message (JSON or XML) according to the mapping.
-. After you verify that the map works correctly, copy the DataWeave map (dwl file) and import it in the Map section of your inbound EDIFACT message flow.
+. After you verify that the map works correctly, copy the DataWeave map (dwl file) and import it to the Map section of your inbound EDIFACT message flow.
 
 == See Also
 
