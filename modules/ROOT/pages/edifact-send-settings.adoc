@@ -38,7 +38,7 @@ Use the following settings to configure the general validation rules:
 | Validates data elements against length limits defined in the used EDI schema
 |Enabled
 |Expect CONTRL for each transmission sent to <partner>
-|When enabled, sets UNB-09 to `1`, indicating that a technical acknowledgement is expected in the partner's response
+|When enabled, sets UNB-09 to `1`, indicating that a technical acknowledgment is expected in the partner's response
 |Disabled
 |===
 
