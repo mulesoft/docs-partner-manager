@@ -2,7 +2,7 @@
 
 Use the MuleSoft template named `Template to create inbound and outbound EDIFACT message transformation` to help you map EDI EDIFACT transactions to an application message format, such as JSON or XML.
 
-This template uses the DataWeave to create the mapping between the inbound EDI EDIFACT transactions and the application format. It uses the application JSON or XML schema as input for the mapping.
+This template uses DataWeave to create the mapping between the inbound EDI EDIFACT transactions and the application format. It uses the application JSON or XML schema as input for the mapping.
 
 To use the template to create the mapping:
 
