@@ -7,7 +7,6 @@
  ** xref:Certificates.adoc[Certificate Settings]
  ** xref:setup-payload-storage-API.adoc[Set Up Payload Storage API]
 * xref:configure-host.adoc[Configure and Manage a Host Profile]
-  ** xref:edifact-global-receive-settings.adoc[EDIFACT Glbal Receive Settings]
 * xref:configure-partner.adoc[Configure a Trading Partner]
   ** xref:edifact-receive-read-settings.adoc[EDIFACT Receive (Inbound) Settings]
   ** xref:edifact-send-settings.adoc[EDIFACT Send (Outbound) Settings]

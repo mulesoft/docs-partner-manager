@@ -29,7 +29,7 @@ Use the following settings to configure the general validation rules:
 |Syntax version for outbound messages
 |VERSION4
 |Send UNA
-|If enabled, adds a UNA segment at the beginning of the generated EDIFACT payload containing the delimiter characters in the payload
+|If enabled, adds a UNA segment at the beginning of the generated EDIFACT payload
 |Enabled
 |Enforce valid characters
 |Enforces valid characters

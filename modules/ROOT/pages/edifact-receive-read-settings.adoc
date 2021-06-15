@@ -35,28 +35,28 @@ Select one or more of the following options to ensure that all EDIFACT messages 
 
 |Enforce length limits
 a|
-If selected, rejects a message with values that are too short or long. If unselected, accepts the message.
+If selected, Partner Manager rejects a message with values that are too short or long. If unselected, Partner Manager accepts the message.
 |Enabled
 |Enforce value repeats
 a|
-If selected, rejects a message with values that are repeated too many or too few times. If unselected, accepts the message.
+If selected, Partner Manager rejects a message with values that are repeated too many or too few times. If unselected, Partner Manager accepts the message.
 |Enabled
 |Enforce valid characters
-| If selected, rejects a message with invalid characters. If unselected, the characters are either passed through or substituted and the message is accepted.
+| If selected, Partner Manager rejects a message with invalid characters. If unselected, the characters are either passed through or substituted and Partner Manager accepts the message.
 |Enabled
 | Allow unknown segments
 a|
-If selected, ignores unknown segments. If unselected, rejects a message that contains unknown segments.
+If selected, Partner Manager ignores unknown segments. If unselected, Partner Manager rejects a message that contains unknown segments.
 |Disabled
 |Enforce segment order
 |
-If selected, enables the segment to be reordered. If unselected, rejects a message that contains segments that are out of order.
+If selected, Partner Manager enables the segment to be reordered. If unselected, Partner Manager rejects a message that contains segments that are out of order.
 |Enabled
 |Allow Unused segments
-|If selected, ignores unused segments. If unselected, rejects a message that contains unused segments.
+|If selected, Partner Manager ignores unused segments. If unselected, Partner Manager rejects a message that contains unused segments.
 |Enabled
 |Enforce segment repeats
-|If selected, rejects a message that contains segments that repeat too many times.
+|If selected, Partner Manager rejects a message that contains segments that repeat too many times. If unselected, Partner Manager accepts the message.
 |Enabled
 |===
 
