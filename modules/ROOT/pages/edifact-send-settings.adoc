@@ -7,14 +7,12 @@ Partner Manager enables you to configure the EDIFACT envelope parameters, delimi
 . In the left navigation menu, select the partner for whom to configure the send settings.
 . In the *Validation and acknowledgment settings* section, under *Send to <partner-name>*, click *EDIFACT*.
 . In the menu on the left, select the setting to configure:
-* <<general-settings,*General*>>
-* <<authorization-settings,*Authorization*>>
-* <<ta1-ack-settings,*TA1 Acknowledgment*>>
+* <<general-settings,General>>
 * <<global-control-numbers,Global control numbers>>
-* <<character-set,*Character set & separators*>>
+* <<character-set,Character set & separators>>
 . Click *Save*.
 
-The values you configure in the partner's settings page are used by default for all EDIFACT messages going to that trading partner. You can override the settings you configure at the partner level, with the exception of TA1 and control numbers, or at the message flow level by selecting the *Custom* option while creating an outbound message flow.
+The values you configure in the partner's settings page are used by default for all EDIFACT messages sent to that trading partner. You can override the settings you configure at the message flow level by selecting the Custom option while creating an outbound message flow.
 
 [NOTE]
 It can take up to five minutes for your configuration changes to sync with Mule.
@@ -22,148 +20,90 @@ It can take up to five minutes for your configuration changes to sync with Mule.
 [[general-settings]]
 == General Settings
 
-Use the following settings to configure the transaction usage, the responsible standards agency, and to enforce length limits and conditional relationship validations:
+Use the following settings to configure the general validation rules:
 
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default Value
-
-|Usage indicator (ISA15)
-a|Indicates if the EDIFACT transaction sent is for testing, production, or information only.
-
-Possible values include:
-
-* I - Information
-* T - Test
-* P - Production
-a|* `P - Production` +
-For production environments
-* `T - Test` +
-For sandbox environments
-
-|Responsible agency code (GS07)
-a|Define the standards agency responsible for the standard in the GS segment.
-
-Possible values include:
-
-* T - Transportation Data Coordinating Committee (TDCC)
-* X - Accredited Standards Committee EDIFACT
-|`X`
-
+|Send Syntax Version
+|Syntax version for outbound messages
+|VERSION4
+|Send UNA
+|If enabled, adds a UNA segment at the beginning of the generated EDIFACT payload containing the delimiter characters in the payload
+|Enabled
+|Enforce valid characters
+|Enforces valid characters
+|Enabled
 |Enforce length limits
-a|If selected, any data elements with a length outside of the definition in the EDIFACT schema cause the generation of the EDIFACT transaction to fail.
+| Validates data elements against length limits defined in the used EDI schema
 |Enabled
-
-|Enforce conditional relationship validations
-|If selected, any missing conditional data elements will cause the generation of the EDIFACT transaction to fail.
-|Enabled
-|===
-
-[[authorization-settings]]
-== Authorization Settings
-
-Use the following settings to configure the authorization and security qualifier for the transactions:
-
-[%header%autowidth.spread]
-|===
-|Setting |Description |Default
-|Authorization qualifier (ISA01)
-|
-|None
-|Security qualifier (ISA03)
-|
-|None
-|===
-
-
-[[ta1-ack-settings]]
-== TA1 Acknowledgment Settings
-
-Use the following settings to configure whether a technical acknowledgment is required, and the receive endpoint for the acknowledgment:
-
-[%header%autowidth.spread]
-|===
-|Setting |Description |Default
-
-|Expect TA1 for each transmission sent to <partner>
-a|If selected, sets the value in ISA14 to 1 on the generated EDIFACT payload, indicating that a Technical acknowledgment (TA1) is required.
+|Expect CONTRL for each transmission sent to <partner>
+|When enabled, sets UNB-09 to `1`, indicating that a technical acknowledgement is expected in the partner's response
 |Disabled
-|Endpoint
-a|When the option to expect a TA1 is selected, click *Select* to specify the *Receive from <partner>* endpoint. The acknowledgment will be received as an inbound transmission.
-|None
+|===
+
+== Character Set and Separators
+
+Use the following settings to set the character encoding and delimiters for the generated EDIFACT payload:
+
+[%header%autowidth.spread]
+|===
+|Setting |Description |Default
+|Character encoding
+a|Character encoding for messages
+|ASCII_B
+|Data element separator
+|Data element separator character
+|+
+|Component separator
+|Component element separator characters
+|:
+|Repetition separator
+|Repetition separator character
+|*
+|Segment terminator
+|Segment terminator character
+|'
+|Release character
+|Release character
+|?
+|Line ending between segments
+a|
+Character that adds line endings between segments to improve the readability of the output message text. Possible values include:
+
+* NONE
++
+Generates the EDIFACT payload as a single line with segments separated by this character
++
+* CR
++
+Carriage return
++
+* CRLF
++
+Carriage return and line feed
++
+* LF
++
+Line Feed
+|CRLF
+|Test Indicator
+a| When you select *Test* from the drop-down, sets UNB-11 to `1`, which indicates that this is a test message.
+|Production
 |===
 
 [[global-control-numbers]]
 == Global Control Numbers
 
-Partner Manager applies a global control number at the partner level on the EDIFACT interchanges and functional groups generated from outbound message flows. These control numbers are sequenced across all message types (including functional acknowledgments) that are sent to a trading partner.
+Partner Manager applies a global control number at the partner level on the EDIFACT interchanges generated from outbound message flows. These control numbers are sequenced across all message types sent to a trading parter, including functional acknowledgments.
 
-The control number starts with a default value of `1`, and is sequentially increased as your organization begins sending outbound transmissions.
-
-If you need to set the control number sequence value to a different number to maintain sequencing and avoid duplication:
+The control number starts with a default value of `1` and increases sequentially each time your organization sends outbound transmissions. To set the control number sequence value to a different number to maintain sequencing and avoid duplication:
 
 . Click *Change* and enter the desired control number.
 . Click *Save*.
 
 [NOTE]
 It can take up to five minutes to apply the change at runtime.
-
-[[character-set]]
-== Character Set and Separators
-
-These settings enable you to set the character encoding and delimiters to use on the generated EDIFACT payload:
-
-[%header%autowidth.spread]
-|===
-|Setting |Description | Default Value
-
-|Character set
-a|Characters allowed in string data.
-
-Possible values include:
-
-* *Basic*
-* *Extended*
-* *Unrestricted* | `Extended`
-
-|Character encoding
-a|Character encoding for messages.
-
-Possible values include:
-
-* *PLATFORM*
-* *ASCII*
-* *ISO8859_1*
-* *IBM1047*
-* *UTF8* | `UTF8`
-
-|Segment terminator
-a|Segment terminator character.
-| `~`
-
-|Data element separator
-a|Data element separator character.
-| `*`
-
-|Component element separator (ISA16)
-a|Component element separator character.
-| `>`
-
-|Line ending between segments
-a|Line ending to add between segments. This enables you to add line endings between segments to improve the readability of the output message text.
-
-Possible values include:
-
-* *NONE* +
-EDIFACT payload generated will be a single line, with segments separated by the segment terminator character
-* *CR* +
-Carriage Return
-* *CRLF* +
-Carriage Return & Line Feed
-* *LF* +
-Line Feed
-|`CRLF`
-|===
 
 == See Also
 

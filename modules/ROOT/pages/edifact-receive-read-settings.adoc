@@ -1,16 +1,15 @@
 = EDIFACT Receive (Inbound) Settings
 
-Partner Manager enables you to configure the EDIFACT acknowledgments, validation rules, character encoding, and control numbers to apply when receiving an inbound EDIFACT transmission.
+Partner Manager enables you to configure the EDIFACT acknowledgments and validation rules to apply when processing an inbound EDIFACT message.
 
 == Configure the Receive Settings
 
 . In the left navigation menu, select the partner for whom you want to configure the settings.
 . In the *Validation and acknowledgment settings* section, under *Send to <partner-name>*, click *EDIFACT*.
 . In the menu on the left, select the setting to configure:
-* <<ack-settings,*Acknowledgments*>>
-* <<validation-settings,*Validation*>>
+* <<ack-settings,Acknowledgments>>
+* <<validation-settings,Validation>>
 * <<control-numbers,Control Numbers>>
-* <<character-set,*Character sets*>>
 . Click *Save*.
 
 [NOTE]
@@ -19,82 +18,50 @@ It can take up to five minutes or so for your configuration changes to sync with
 [[ack-settings]]
 == Acknowledgment Settings
 
-Use the following settings to configure acknowledgment settings:
+To configure acknowledgements:
+
+. Enable the *Send CONTRL functional acknowledgement when messages fail to route to a message flow* setting.
+. Select an endpoint where the functional acknowledgement message will be sent to the trading partner.
+
+The *Send CONTRL functional acknowledgement when messages fail to route to a message flow* setting provides a functional acknowledgment (the receipt and syntactical acceptability of a message) with the exchange. Functional acknowledgment settings are configured for each message flow and apply only when there is a failure to route the message to one of the message flows.
+
+== Validation settings
+
+Select one or more of the following options to ensure that all EDIFACT messages received from the trading partner meet validation rules. If a message does not meet an enabled rule, Partner Manager rejects it. Parter Manager logs all validation errors and reports them in the CONTRL acknowledgments.
 
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default
 
-|Send TA1 for each transmission from <recipient>.
-a|Provides a Technical Acknowledgment (TA1) to the Interchange sender that reports the status of the processing of an interchange header and trailer by the address receiver.
-
-When the ISA and IEA of the received EDIFACT message are valid, a positive TA1 ACK is sent, regardless of what the status of the other content is.
-If the ISA and IEA of the received EDIFACT message is not valid, a TA1 ACK with an error code is sent.
-
-The TA1 ACK is sent inside an ISA or IEA envelope. The ISA and IEA are no different than any other interchange.
+|Enforce length limits
+a|
+If selected, rejects a message with values that are too short or long. If unselected, accepts the message.
+|Enabled
+|Enforce value repeats
+a|
+If selected, rejects a message with values that are repeated too many or too few times. If unselected, accepts the message.
+|Enabled
+|Enforce valid characters
+| If selected, rejects a message with invalid characters. If unselected, the characters are either passed through or substituted and the message is accepted.
+|Enabled
+| Allow unknown segments
+a|
+If selected, ignores unknown segments. If unselected, rejects a message that contains unknown segments.
 |Disabled
-
-|Send 997 functional acknowledgment when messages fail to route to a message flow
-a|Provides a functional acknowledgment (the receipt and syntactical acceptability of a message) with the exchange. Functional acknowledgment settings are configured for each message flow, and only apply when there is a failure to route the message to one of the message flows.
-|Disabled
-|===
-
-=== EDIFACT 997 Functional Acknowledgment
-
-The EDIFACT 997 functional acknowledgment reports the status of a received interchange. It reports all the errors encountered while processing the received document.
-
-As with all EDIFACT transaction sets, the 997 functional acknowledgment is sent inside a GS or GE envelope.
-
-The 997 functional acknowledgment is used to:
-
-* Acknowledge the receipt of an interchange or functional group.
-* Accept or reject one or more functional groups or transactions.
-* Verify and report compliance with the standard.
-
-If an interchange contains multiple groups, then a 997 acknowledgment is returned for each group.
-
-If a group contains multiple transaction sets, then the acknowledgment for that group contains multiple AK2 loops, that is, one for each transaction set. This applies only if the AK2 loops are generated for accepted transaction sets.
-
-[[validation-settings]]
-== Validation Settings
-
-Selecting the checkbox (enabling) for any of these options means that all the EDIFACT documents meet this condition criteria and receive a 997 failure message:
-
-[%header%autowidth.spread]
-|===
-|Setting |Description |Default
-
-|Fail document when value length outside allowed range
-|If selected, a transaction with values that are too long or too short is rejected. If unselected, the values are used and the transaction is not rejected. In either case, the error is logged and reported in the 997 acknowledgments.
+|Enforce segment order
+|
+If selected, enables the segment to be reordered. If unselected, rejects a message that contains segments that are out of order.
 |Enabled
-
-|Fail document when invalid character in value
-|If selected, a transaction with invalid characters is rejected. If unselected, the characters are either passed through or substituted and the transaction is not rejected. In either case, the error is reported in the 997 acknowledgments.
-|Disabled
-
-|Fail document if value is repeated too many times
-|If selected, a transaction with values that are repeated too many or too few times are rejected. If unselected, the values are accepted and the transaction is not rejected. In either case, the error is reported in the 997 acknowledgments.
+|Allow Unused segments
+|If selected, ignores unused segments. If unselected, rejects a message that contains unused segments.
 |Enabled
-
-|Fail document if unknown segments are used
-|If selected, a transaction containing any unknown segments is rejected. If unselected, unknown segments are ignored and the transaction is not rejected. In either case, the error is reported in the 997 acknowledgments.
-|Enabled
-
-|Fail document when segments are out of order
-|If selected, a transaction with segments that are out of order is rejected. If unselected, the segment can be reordered the transaction is not rejected. In either case, the error is reported in the 997 or 999 acknowledgments.
-|Enabled
-
-|Fail document when too many repeats of a segment
-|A transaction with a segment repeated too many times is rejected. The error is reported in the 997 or 999 acknowledgments.
-|Enabled
-
-|Fail document when unused segments are included
-|If selected, a transaction containing segments marked as unused in the schema is rejected. If unselected, the transaction is not rejected and the unused segments are ignored. In either case, the error is reported in the 997 or 999 acknowledgments.
+|Enforce segment repeats
+|If selected, rejects a message that contains segments that repeat too many times.
 |Enabled
 |===
 
 [[control-numbers]]
-=== Control Numbers
+== Control Numbers
 
 Use these settings to apply validations related to your partners or your use of control numbers within the EDIFACT message:
 
@@ -102,46 +69,11 @@ Use these settings to apply validations related to your partners or your use of 
 |===
 |Setting |Description |Default
 
-|Requires unique interchange control number (ISA13)
-|If selected, Partner Manager records the interchange numbers previously processed and rejects any duplicate interchange numbers from the same partner (as determined by the interchange sender and receiver identification). If unselected, it enables processing of the received interchange to continue.
+|Requires unique interchange control number
+|If selected, Partner Manager records the interchange numbers previously processed and rejects duplicate interchange numbers from the same partner, as determined by the interchange sender and receiver identification. If unselected, Partner Manager enables processing of the received interchange to continue.
 |Disabled
 
-|Requires unique group control number (GS06)
-|If selected, Partner Manager enforces globally unique Group Control Numbers (GS06) for received functional groups. This configuration requires group numbers to be unique across all interchanges received from the same partner and application (as determined by the interchange sender and receiver identification, combined with the functional group sender and receiver application codes).
+|Requires unique message control number
+| If selected, Partner Manager enforces globally unique message control numbers (UNH01) for received transaction sets. This configuration requires message control numbers to be unique across all EDIFACT messages received from the same partner and application, as determined by the interchange sender and receiver identification, and application codes.
 | Disabled
-
-|Requires unique transaction set control number (ST02)
-|If selected, Partner Manager enforces globally unique Transaction Set Control Numbers (ST02) for received transaction sets. This configuration requires transaction set numbers to be unique across all functional groups received from the same partner and application (as determined by the interchange sender and receiver identification, combined with the functional group sender and receiver application codes).
-|Disabled
-|===
-
-[[character-sets]]
-=== Character Sets
-
-Use these settings to apply selected character set and encoding options pertaining to your partners and your EDIFACT message:
-
-[%header%autowidth.spread]
-|===
-|Setting |Description |Default
-
-|Character set
-a|This option is required and defines the characters allowed in string data. When set, invalid characters are replaced by the substitution character. If no substitution character is set or enabled for receive messages in the parser options, they are rejected as errors.
-Either way, the invalid characters are logged and are reported in the 997 functional acknowledgments for the receive messages.
-
-Possible values include:
-
-* `Basic`
-* `Extended`
-* `Unrestricted`
-| `Extended`
-
-|Character encoding
-a|Indicates the character encoding for messages. This character encoding is used for both send and receive messages.
-
-Possible values include:
-
-* `ASCII`
-* `ISO8859_1`
-* `UTF-8`
-|Disabled
 |===

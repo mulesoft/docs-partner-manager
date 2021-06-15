@@ -2,18 +2,19 @@
 
 Use the MuleSoft template named `Template to create inbound and outbound EDIFACT message transformation` to help you map EDI EDIFACT transactions to an application message format, such as JSON or XML.
 
-To use the `Template to create inbound and outbound EDIFACT message transformation`:
+This template uses the DataWeave to create the mapping between the inbound EDI EDIFACT transactions and the application format. It uses the application JSON or XML schema as input for the mapping.
+
+To use the template to create the mapping:
 
 . Create a project in Anypoint Studio based on the template.
 . Set the source EDIFACT message type.
 . Set the Target JSON or XML Message Type
 . Test the map locally.
 
- to import a template to map inbound EDI EDIFACT transactions to an application message format, such as JSON or XML, then test the map locally.
+[[edifact-create-inound-project]]
+== Create a Project From a Template
 
-== Create a New Project From a Template
-
-Create a template project in Anypoint Studio and import a DataWeave map template that maps inbound EDI EDIFACT transactions to an application format:
+Create a template project in Anypoint Studio:
 
 . Launch Anypoint Studio.
 . From the *File* menu, select *New > Project from Template*.
@@ -24,7 +25,7 @@ Create a template project in Anypoint Studio and import a DataWeave map template
 * Click *Open*, to create a new project in your Studio workspace that is preloaded with the template.
 * Download the template from Exchange and open the Mule configuration file `01-inbound-edifact-transform` in the downloaded template.
 
-== Set the Source JSON or XML Message Type
+== Set the Source EDIFACT Message Type
 
 The `01-inbound-edifact-transform.xml` template is configured with the EDIFACT version D97A, ORDERS message type. Follow these steps if you need to change the message type:
 
@@ -39,7 +40,7 @@ For example, set *Value* to `/edifact/d96a/INVOIC.esl`, to map from the D96A Inv
 
 == Set the Target EDIFACT Message Type
 
-Set the target message type to transform inbound EDI EDIFACT messages to your application message format, such as XML or JSON:
+Set the target message type to transform inbound EDI EDIFACT messages to your application message format:
 
 . Copy the schema file of your target application message type into the `<Project-name>/src/main/resources` folder in the template project.
 . From the *Mule Palette* view, click the *Transform Message* component and drag it on to the Studio canvas.
@@ -64,7 +65,7 @@ image
 +
 image
 +
-. Download a https://anypoint.mulesoft.com/exchange/works.integration/b2b-edifact-transform-demo/[sample] project from Exchange that has pre-built mapping to transform D97A ORDERS messages into a JSON application message structure.
+. Download an https://anypoint.mulesoft.com/exchange/works.integration/b2b-edifact-transform-demo/[sample] project from Exchange that has pre-built mapping to transform D97A ORDERS messages into a JSON application message structure.
 ////
 Where do you find this?
 ////
