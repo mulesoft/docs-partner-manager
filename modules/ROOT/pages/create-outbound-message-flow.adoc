@@ -5,7 +5,7 @@ You can create and configure an outbound message flow to receive application mes
 == Create an Outbound Message Flow
 
 . From your Anypoint Partner Manager sandbox or production environment, select *Message Flows* in the left navigation menu.
-. Click *New message flow > Send to partner* in the upper right of the page.
+. Click *New message flow > Send to partner*.
 . Select an existing partner from the list and click *Select* or select *New* to xref:configure-partner.adoc#create-partner[create a trading partner]. +
 A new message flow is created. +
 
