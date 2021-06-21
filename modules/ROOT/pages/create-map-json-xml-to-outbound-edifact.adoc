@@ -31,7 +31,7 @@ Set the source message type to define the metadata structure of your application
 . From the *Message Flow* tab in the *Mule Palette* view, select the *Transform Message* component.
 . In the *Payload* section, click the *Define metadata* link.
 +
-image::pm-outbound-map-1.png[Metadata for the payload transform]
+image::pm-outbound-map-1.png[Define metadata for the payload transform to EDIFACT]
 +
 . Click *Add*.
 . In *Type id*, enter a new message type ID, for example, `outbound-po-ack`.

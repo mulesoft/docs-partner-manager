@@ -47,7 +47,8 @@ Set the target message type to transform inbound EDI EDIFACT messages to your ap
 . From the *Message Flow* tab in the *Mule Palette* view, select the *Transform Message* component.
 . In the *Output* section, click the *Define metadata* link.
 +
-image::pm-inbound-map-1.png[Metadata for the payload transform ]
+.Map inbound Edifact messages to your application's message format.
+image::pm-inbound-map-1.png[]
 +
 . Click *Add*.
 . In *Type id*, enter a new message type ID, for example `inbound-po`.

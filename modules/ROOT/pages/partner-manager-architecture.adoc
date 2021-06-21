@@ -11,7 +11,8 @@ When you deploy a configured message flow, Partner Manager automatically transla
 * Replication service
 * Send endpoint services
 
-image::partner-manager-high-level-arch.png[Anypoint Partner Manager Architecture]
+.Partner Manager enables end-to-end B2B processing using the services in this diagram.  
+image::pm-high-level-arch.png[Partner Manager high-level architecture]
 
 [%header%autowidth.spread]
 |===

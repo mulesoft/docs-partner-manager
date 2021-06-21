@@ -42,7 +42,7 @@ If you are unsure about whether you should be able to view a payload, contact yo
 * Delivered to the target endpoint successfully
 * Transformed correctly
 
-[[undeploy-message-flows]
+[[undeploy-message-flows]]
 == Undeploy Message Flows
 
 Undeploying a message flow prevents future messages from being processed, or enables you to recover resources that are consumed by a message flow that you no longer need.

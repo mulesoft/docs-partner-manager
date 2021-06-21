@@ -11,7 +11,7 @@ Create a template project in Anypoint Studio and import a DataWeave map template
 . Log in to Anypoint Exchange with your Anypoint Platform credentials.
 . Search for `X12`.
 . Click `Template to map application messages to outbound EDI X12 transactions`.
-. Click *Open* to create a new project in your Studio workspace that is preloaded with the template. 
+. Click *Open* to create a new project in your Studio workspace that is preloaded with the template.
 
 You can also download the template to map inbound EDI X12 transactions to the application format https://anypoint.mulesoft.com/exchange/org.mule.examples/template-b2b-edi-outbound-x12-map[from Exchange].
 
@@ -23,12 +23,13 @@ To set the source JSON or XML message type for the map:
 . From the *Mule Palette* view, click *Transform Message* and drag it on to the Studio canvas.
 . Select the *Transform Message* component and in the input section, next to *Payload*, click *Define metadata*:
 +
-image::partner-manager-outbound-map-1.png[Transform Message component add payload metadata]
+.Map your application's message format to outbound X12 messages.
+image::partner-manager-outbound-map-1.png[Define metadata for the payload transform to X12]
 +
 . Click *Add*.
 . In *Type id*, enter a new message type ID, for example, `enterprise-outbound-purchase-order`.
 . Click *Create type*.
-. In the *Select metadata type* dialog window, from the *Type* drop-down menu, select *JSON* or *XML*. 
+. In the *Select metadata type* dialog window, from the *Type* drop-down menu, select *JSON* or *XML*.
 . Browse to the location of the JSON or XML schema file you imported in Step 1 and click *Select*.
 
 == Set the Target X12 Message Type
@@ -37,7 +38,7 @@ The template has the X12 configuration for the below X12 transaction set:
 
 * Version +
 `4010`
-* Transaction Set + 
+* Transaction Set +
 `850 (Purchase order)`
 
 Follow these steps to set the target X12 message type:
@@ -45,7 +46,7 @@ Follow these steps to set the target X12 message type:
 . Click the *Global Elements* tab at the base of the Studio canvas in `global-configs.xml`.
 . From *Global Configuration Elements*, select *X12 EDO Config* and click *Edit*.
 . In *Name*, change the name of the configuration.
-. In the *Schema definitions*, select *Edit inline*. 
+. In the *Schema definitions*, select *Edit inline*.
 . Select the value */x12/004010/850.esl* and click the edit icon:
 +
 image::xml-to-outbound-x12-edit-schema.png[X12 EDI Config dialog]
@@ -57,7 +58,7 @@ You can now begin mapping from the input to the output.
 
 == Test the Map Locally
 
-Follow these steps to test the map locally in Anypoint Studio: 
+Follow these steps to test the map locally in Anypoint Studio:
 
 . In *Package Explorer*, right-click on the project, and click *Run > Run as Mule application*.
 . Use a REST client to post a JSON or an XML payload to the URL `+http://localhost:8081/x12/out+`. +
