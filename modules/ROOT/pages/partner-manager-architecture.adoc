@@ -56,7 +56,7 @@ When deploying B2B integration message flows to your own hosted on-premises Mule
 
 Runtime applications deployed to the server group (B2BServerGroup) contain configured data in your data center or private cloud.
 
-image::partner-manager-onprem-deployment.png[Deploying Partner Manager on-premises]
+image::pm-onprem-deployment.png[Deploying Partner Manager on-premises]
 
 == See Also
 * xref:deploy-onpremise.adoc[Deploy Message Flows On-Premises]

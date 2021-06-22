@@ -84,10 +84,11 @@ The external URL that you can share with your partners is `+https://{DLB-domain}
 
 For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, the runtime application name is `b2b-inbound-http-ognq`, and the base path you configured in the HTTPS receive endpoint is `send2`, then your administrator adds a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC:
 
-.Your admnistrator maps an input path and target app to an output path in the DLB.
-image::URL-mapping-rules-http.png[URL mapping rules in the DLB settings]
+.Mapping an input path to a target app and output path in the DLB.
+image::URL-mapping-rules-http.png[URL mapping rules for HTTPS in the DLB settings]
 
 Using the following values, depending on your environment:
+
 * The external HTTPS receive endpoint URL is `+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/+`.
 * Your backend applications send the application JSON/XML messages for your outbound message flows from `+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/{message-type}+`.
 * If `enterprise-ob-po-ack` is the message type, your backend systems post the HTTPS requests to the URL

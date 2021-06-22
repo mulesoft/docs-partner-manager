@@ -42,8 +42,8 @@ Set the target JSON or XML message type to transform inbound X12 messages to you
 . From the *Mule Palette* view, click the *Transform Message* component and drag it on to the Studio canvas.
 . Select the *Transform Message* component and in the output section, next to *Payload*, click *Define metadata*.
 +
-.Map inbound X12 messages to your application's message format.
-image::partner-manager-inbound-map-1.png[Define metadata for the payload transform from X12]
+.Click Define Metadata to start the mapping process.
+image::partner-manager-inbound-map-1.png[Define Metadata link]
 +
 . Click *Add*.
 . In *Type id*, enter a new message type ID, for example `enterprise-inbound-purchase-order`.
