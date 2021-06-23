@@ -16,7 +16,7 @@ You can create message types from the host page  or from the Message Flow wizard
 [[create-message-type]]
 == Create a Message Type
 
-. In left navigation menu, select *<host-name>*.
+. In navigation menu, select *<host-name>*.
 . From the *Message types* section host page , click *New*.
 . In the *Usage* drop-down list, select the message type:
 * <<receive-and-send-to-partners,Receive from partners>>

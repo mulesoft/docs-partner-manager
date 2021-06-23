@@ -14,7 +14,7 @@ After establishing a successful inbound message flow with your partner, you can 
 [IMPORTANT]
 Before making changes, carefully consider the impact on your existing message flow.
 
-. In the left navigation menu, select *Message Flows*.
+. In the navigation menu, select *Message Flows*.
 . In the *Message flows* page, select *<Message flow name>*. +
 The selected inbound message flow appears.
 . In the inbound message flow, you can complete the following modifications or actions:
@@ -70,7 +70,7 @@ After establishing a successful outbound message flow with your partner, you can
 Before making changes, carefully consider the impact on your existing message flow.
 
 
-. In the left navigation menu, select *Message Flows*.
+. In the navigation menu, select *Message Flows*.
 . In the *Message flows* page, select *<Message flow name>*. +
 The selected outbound message flow appears.
 . In the outbound message flow, you can complete the following modifications or actions:
@@ -138,7 +138,7 @@ For on-premises installations, you must xref:deploy-message-flows#undeploy-messa
 
 After the undeployment is successful, you can delete the message flow:
 
-. In the left navigation menu, select *Message Flows*.
+. In the navigation menu, select *Message Flows*.
 . Select the message flow to delete from the list and click *Delete* in the upper right of the screen.
 
 Any previous transmissions that were created as a result of a message being processed by the message flow you deleted have the following behavior:

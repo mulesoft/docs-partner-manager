@@ -10,7 +10,7 @@ Before you create your first inbound message flow, you must configure your xref:
 
 === Steps
 
-. From your Anypoint Partner Manager sandbox or production environment, select *Message Flows* in the left navigation menu.
+. From your Anypoint Partner Manager sandbox or production environment, select *Message Flows* in the navigation menu.
 . Click *New message flow > Receive from partner* in the upper right of the page.
 . Either select an existing partner from the list and click *Select* or select *New* to xref:configure-partner.adoc#create-partner[create a trading partner]. +
 A new message flow is created. +

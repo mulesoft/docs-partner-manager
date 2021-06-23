@@ -30,7 +30,7 @@ After you deploy the message flow, send test messages to verify the following:
 Test your message flow in your Anypoint Partner Manager sandbox environment:
 
 . Send a test file to the receiving endpoint.
-. In the left navigation menu, select *Activity* and select the transmission to test from the list.
+. In the navigation menu, select *Activity* and select the transmission to test from the list.
 . Scan for an exclamation point (!) in any of the boxes next to the displayed flow stages. Exclamation points indicate that there is an issue with the transmission. Address any issues you find.
 . If the system was set up to view payloads, you can review the received payload by clicking *View payload* next to the *Received transmission* section. +
 If you are unsure about whether you should be able to view a payload, contact your B2B System Administrator.
@@ -58,7 +58,7 @@ Before you undeploy a message flow, you must ensure that your on-premises Mule i
 
 === Steps
 
-. In the left navigation menu, select *Message Flows*.
+. In the navigation menu, select *Message Flows*.
 . Select the message flow to undeploy from the list and click *Undeploy*.
 
 Anypoint Partner Manager checks to see if any of the applications deployed to Mule are orphaned as a result of the undeployment. Orphaned applications are cleaned up to release any resources they were consuming.

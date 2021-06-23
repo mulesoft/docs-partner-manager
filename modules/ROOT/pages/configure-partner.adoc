@@ -25,7 +25,7 @@ To create a new partner, you need the following information:
 Before you create your first trading partner, ensure you configure your xref:setup-payload-storage-API.adoc[payload storage API].
 
 === Steps
-. In Partner Manager, select *Partners* in the left navigation menu.
+. In Partner Manager, select *Partners* in the navigation menu.
 . Click *New partner*. +
 The *New partner* window appears.
 . In the *New partner* window:
@@ -40,7 +40,7 @@ You can now xref:message-flows.adoc[set up message flows] for this trading partn
 [[update-partner]]
 == Update a Partner's Profile
 
-. In Partner Manager, select *Partners* in the left navigation menu.
+. In Partner Manager, select *Partners* in the navigation menu.
 . Click the partner whose profile you want to update.
 . Under the *About* section, click *Edit* to add or update the following information:
 * *Identity*
@@ -69,7 +69,7 @@ A message confirms that the partner's profile is successfully updated.
 
 After you create a new partner, you can view and update details for the partner:
 
-. In Partner Manager, select *Partners* in the left navigation menu.
+. In Partner Manager, select *Partners* in the navigation menu.
 . Click the partner to view its details and to make updates. +
 From the partner's detail page you can:
 * Add information about your partner along with contact details.
