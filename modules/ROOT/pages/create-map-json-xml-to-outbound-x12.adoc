@@ -23,7 +23,6 @@ To set the source JSON or XML message type for the map:
 . From the *Mule Palette* view, click *Transform Message* and drag it on to the Studio canvas.
 . Select the *Transform Message* component and in the input section, next to *Payload*, click *Define metadata*:
 +
-.Click Define Metadata to define the mapping process.
 image::partner-manager-outbound-map-1.png[Define Metadata link]
 +
 . Click *Add*.
@@ -51,8 +50,9 @@ Follow these steps to set the target X12 message type:
 +
 image::xml-to-outbound-x12-edit-schema.png[X12 EDI Config dialog]
 +
-. Change the schema value to the version and transaction set you want to map from, for example, set the value to `/x12/004010/204.esl`, if you want to map to a 4010-204 Load tender transaction. +
-You now see your application message structure (JSON or XML) on the input pane in the left, and the X12 transaction set structure on the output pane in the right.
+. Change the schema value to the version and transaction set you want to map from, for example, set the value to `/x12/004010/204.esl`, if you want to map to a 4010-204 Load tender transaction.
++
+The application message structure (JSON or XML) shows on the input pane on the left, and the X12 transaction set structure shows on the output pane on the right.
 . Click *Finish*, then click *OK*. +
 You can now begin mapping from the input to the output.
 

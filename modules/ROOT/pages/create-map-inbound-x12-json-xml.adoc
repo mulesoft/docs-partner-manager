@@ -1,12 +1,12 @@
-X12= Create a Map For Inbound X12 to JSON or XML
+= Create a Map For Inbound X12 to JSON or XML
 
 Create a template project in Anypoint Studio to import a template to map inbound EDI X12 transactions to an application message format, such as JSON or XML, then test the map locally.
 
 == Create a New Project From a Template
 
-Create a template project in Anypoint Studio and import a DataWeave map template that maps inbound X12 transactions to an application format:
+Create a template project in Studio and import a DataWeave map template that maps inbound X12 transactions to an application format:
 
-. Launch Anypoint Studio.
+. Launch Studio.
 . From the *File* menu, select *New > Project from Template*.
 . Log in to Anypoint Exchange with your Anypoint Platform credentials
 . Search for `X12`.
@@ -42,7 +42,6 @@ Set the target JSON or XML message type to transform inbound X12 messages to you
 . From the *Mule Palette* view, click the *Transform Message* component and drag it on to the Studio canvas.
 . Select the *Transform Message* component and in the output section, next to *Payload*, click *Define metadata*.
 +
-.Click Define Metadata to start the mapping process.
 image::partner-manager-inbound-map-1.png[Define Metadata link]
 +
 . Click *Add*.

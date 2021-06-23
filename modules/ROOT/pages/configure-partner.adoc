@@ -25,7 +25,7 @@ To create a new partner, you need the following information:
 Before you create your first trading partner, ensure you configure your xref:setup-payload-storage-API.adoc[payload storage API].
 
 === Steps
-. In Partner Manager, select *Partners* in the left navigation.
+. In Partner Manager, select *Partners* in the left navigation menu.
 . Click *New partner*. +
 The *New partner* window appears.
 . In the *New partner* window:

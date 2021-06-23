@@ -11,7 +11,6 @@ When you deploy a configured message flow, Partner Manager automatically transla
 * Replication service
 * Send endpoint services
 
-.Partner Manager uses the services shown in this diagram to enable end-to-end B2B processing.
 image::pm-high-level-arch.png[Partner Manager high-level architecture]
 
 [%header%autowidth.spread]
@@ -21,7 +20,7 @@ image::pm-high-level-arch.png[Partner Manager high-level architecture]
 |Partner Manager
 |MuleSoft-hosted cloud control plane enabling users to configure trading partner profiles, build and deploy B2B integration message flows, and monitor B2B transaction activity
 
-|image:pm-arch-diagram-2.png[Deploying message flows to CloudHub]
+|image:pm-arch-diagram-2.png[]
 |Receive Endpoint Services
 |Services to receive inbound B2B or EDI messages from partner transport protocols such as AS2 and SFTP or outbound application messages from your organization’s backend systems via HTTP, HTTPS, or SFTP
 
@@ -48,7 +47,7 @@ When deploying B2B integration message flows to CloudHub, Anypoint MQ uses queue
 
 As of the first deployment from Partner Manager, runtime applications deploy to the CloudHub region specified in the business group’s default settings in Runtime Manager by default. Anypoint MQ queues automatically generate during the deployment process in the same or the nearest available region. Any new runtime applications deploy to the same region as the first deployment.
 
-image::partner-manager-cloud-deployment.png[Depling Partner Manager on CloudHub]
+image::partner-manager-cloud-deployment.png[Deploying Partner Manager on CloudHub]
 
 == Partner Manager for On-Premises Mule Instances
 

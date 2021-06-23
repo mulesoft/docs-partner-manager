@@ -14,6 +14,7 @@ After you verify that each part of the message flow is complete, click the *Depl
 [NOTE]
 ---
 For on-premises B2B workloads, deploying a message flow for a new trading partner while using an existing AS2 endpoint to receive messages can result in a brief service interruption for existing AS2 trading partner users.
+---
 
 To minimize the impact of the service interruption, it is best to perform message flow deployments outside of your regular business hours.
 

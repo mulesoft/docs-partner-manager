@@ -18,7 +18,6 @@ The file name for SFTP endpoints should follow the following convention: `<messa
 * Partner Manager uses the supplied DataWeave map to obtain the partner and host reference IDs and the business key.
 * The partner reference ID and optional host reference identifier specify the message flow through which the transaction is processed:
 
-.Partner Manager routes the payload based on the message type, partner reference ID, and host reference ID.
 image::outbound-message-routing.png[Outbound message routing process]
 
 == See Also

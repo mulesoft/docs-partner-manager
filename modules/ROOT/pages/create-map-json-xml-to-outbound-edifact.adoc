@@ -2,9 +2,9 @@
 
 Use the MuleSoft template named `Template to create inbound and outbound EDIFACT message transformation` to help you map application messages from canonical formats such as XML or JSON to outbound EDI EDIFACT messages to send to your trading partners.
 
-This template uses DataWeave to create the mapping between the XML or JSON format and the EDIFACT format. To use the template to create the mapping:
+This template uses DataWeave in Anypoint Studio to create the mapping between the XML or JSON format and the EDIFACT format. To use the template to create the mapping:
 
-. Create a project in Anypoint Studio based on the template.
+. Create a project in Studio based on the template.
 . Set the source message type.
 . Set the Target EDIFACT Message Type
 . Test the map locally.
@@ -31,7 +31,6 @@ Set the source message type to define the metadata structure of your application
 . From the *Message Flow* tab in the *Mule Palette* view, select the *Transform Message* component.
 . In the *Payload* section, click the *Define metadata* link.
 +
-.Click Define Metadata to start the mapping process.
 image::pm-outbound-map-1.png[Define Metadata link]
 +
 . Click *Add*.
