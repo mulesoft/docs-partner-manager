@@ -59,8 +59,6 @@ The new EDIFACT message structure displays in the *Input* pane, and your applica
 +
 image::pm-inbound-map-2.png[Message structures]
 +
-.Click the Edit current target icon:
-+
 image::pm-inbound-map-3.png[Edit current target icon]
 +
 . Select *File* and save the DataWeave map with a meaningful name, such as `INB-EDIFACT-D97A-ORDERS-to-Canonical-Purchase-Order-JSON.dwl`.

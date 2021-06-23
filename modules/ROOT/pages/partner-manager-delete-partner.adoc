@@ -16,7 +16,7 @@ You can also check the status of the server in Anypoint Platform Runtime Manager
 == Steps to Delete a Partner
 
 . From your Anypoint Partner Manager sandbox or production environment, select *Partners* from the left navigation menu.
-. Select the partner to delete and click *Delete* in the upper-right of the page.
+. Select the partner to delete and click *Delete*.
 . In the confirmation dialog, confirm the deletion.
 
 After you delete a partner, you can reuse the partner name.

@@ -9,8 +9,10 @@ Based on your organization's needs, configure your certificate to include the fo
 * *Status*: The status of the certificate.
 +
 The circle icon in the *Status* field on the certificate shows the user the status of the certificate:
++
 ** Green: The certificate is active.
 ** Red: The certificate is inactive.
++
 * *Start Date*: The date from which the certificate is valid
 * *Expires*: The date after which the certificate is no longer valid
 * *Endpoints*: The number of endpoints using the certificate

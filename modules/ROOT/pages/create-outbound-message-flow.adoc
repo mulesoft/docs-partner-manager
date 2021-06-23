@@ -19,7 +19,7 @@ A new message flow is created. +
 The endpoint is added to the message flow, and a message appears indicating that the endpoint is missing an identifier.
 ... Click *Add* to add a unique identifier for the endpoint.
 .. To create a new receiving endpoint:
-... Click *New* to the next to the search box.
+... Click *New* next to the search box.
 ... From the *Owner* drop-down list, select the endpoint's owner.
 ... From the *Protocol* drop-down, select the protocol and configure it according to the protocol you select:
 * xref:endpoint-https-send.adoc[HTTP or HTTPS]
