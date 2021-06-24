@@ -6,7 +6,7 @@ Partner Manager enables you to configure the EDIFACT envelope parameters, delimi
 
 . In the navigation menu, select *Partners*.
 . Select the partner for whom to configure the send settings.
-. In the *Validation and acknowledgment settings* section, under *Send to <partner-name>*, click *EDIFACT*.
+. In the *Validation and acknowledgment settings* section's *Send to <partner-name>* column, click *EDIFACT*.
 . In the menu on the left, select the setting to configure:
 * <<general-settings,General>>
 * <<global-control-numbers,Global control numbers>>

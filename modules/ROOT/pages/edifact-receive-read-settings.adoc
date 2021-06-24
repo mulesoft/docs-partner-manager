@@ -6,7 +6,7 @@ Partner Manager enables you to configure the EDIFACT acknowledgments and validat
 
 . In the navigation menu, select *Partners*.
 . Select the partner for whom you want to configure the settings.
-. In the *Validation and acknowledgment settings* section, under *Send to <partner-name>*, click *EDIFACT*.
+. In the *Validation and acknowledgment settings* section's *Send to <partner-name>* column, click *EDIFACT*.
 . In menu on the left, select the setting to configure:
 * <<ack-settings,Acknowledgments>>
 * <<validation-settings,Validation>>
