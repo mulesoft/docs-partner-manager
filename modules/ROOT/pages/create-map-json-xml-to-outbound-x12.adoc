@@ -43,7 +43,7 @@ The template has the X12 configuration for the below X12 transaction set:
 Follow these steps to set the target X12 message type:
 
 . Click the *Global Elements* tab at the base of the Studio canvas in `global-configs.xml`.
-. From *Global Configuration Elements*, select *X12 EDO Config* and click *Edit*.
+. From *Global Configuration Elements*, select *X12 EDI Config* and click *Edit*.
 . In *Name*, change the name of the configuration.
 . In the *Schema definitions*, select *Edit inline*.
 . Select the value */x12/004010/850.esl* and click the edit icon:
