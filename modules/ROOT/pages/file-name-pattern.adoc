@@ -4,7 +4,7 @@ Using property placeholders, Partner Manager enables you to configure a template
 
 When file name pattern fields are configured with property placeholders (specified within `${ }`), Partner Manager dynamically populates the file name with updated information at runtime. Any file name property field that is not specified within the placeholder is static and is not updated at runtime.
 
-The following are the supported property placeholders and the dynamic value the placeholder is replaced with at runtime:
+The following are the supported property placeholders and the dynamic value the placeholder is replaced with at runtime. All dates and times must be in UTC format.
 
 [%header%autowidth.spread]
 |===
@@ -14,21 +14,21 @@ The following are the supported property placeholders and the dynamic value the 
 |${GSReceiver} |Group ID of the Receiver
 |${ISASender} |Interchange ID of the Sender
 |${ISAReceiver} |Interchange ID of the Receiver
-|${uuid} |Unique Identifier, for example: `93de0793-63e1-5a06-aedf-fcd052ed2155`
-|${YYYY} |Year: 2020  (All date and times must be in UTC format)
-|${MM} |Month: 04
-|${DD} |Date: 14
-|${HH} |Hour: 15
-|${mm} |Minute: 25
-|${sss} |Second: 46
-|${timeInMillis} |Milliseconds: 345
+|${uuid} |Unique Identifier: for example: `93de0793-63e1-5a06-aedf-fcd052ed2155`
+|${YYYY} |Year: for example, `2021`
+|${MM} |Month: for example, `04`
+|${DD} |Date: for example, `14`
+|${HH} |Hour: for example, `15`
+|${mm} |Minute: for example, `25`
+|${sss} |Second: for example, `46`
+|${timeInMillis} |Milliseconds: for example, `345`
 |${ICN} |Interchange Control Number
-|${BusKey} |Primary Business Key value, for example, `PO12345`
-|${formatTypeExt} a|File format, either JSON or X12
+|${BusKey} |Primary Business Key value: for example, `PO12345`
+|${formatTypeExt} a|File format:
 
-* JSON
-* X12
-* XML
+* `JSON`
+* `X12`
+* `XML`
 |===
 
 == Examples

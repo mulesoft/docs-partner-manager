@@ -4,13 +4,14 @@ Partner Manager enables you to configure the X12 acknowledgments, validation rul
 
 == Configure the Receive Settings
 
-. In the left navigation menu, select the partner for whom you want to configure the settings.
-. In the *Validation and acknowledgment settings* section, under *Send to <partner-name>*, click *X12*.
+. In the navigation menu, select *Partners*.
+. Select the partner for whom you want to configure the settings.
+. In the *Validation and acknowledgment settings* section's *Send to <partner-name>* column, click *X12*.
 . In the menu on the left, select the setting to configure:
-* <<ack-settings,*Acknowledgments*>>
-* <<validation-settings,*Validation*>>
+* <<ack-settings,Acknowledgments>>
+* <<validation-settings,Validation>>
 * <<control-numbers,Control Numbers>>
-* <<character-set,*Character sets*>>
+* <<character-set,Character sets>>
 . Click *Save*.
 
 [NOTE]

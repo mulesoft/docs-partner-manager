@@ -4,11 +4,11 @@ A message flow is the path along which a message travels from its source, throug
 
 Partner Manager message flows consist of objects such as endpoints, message types, identifiers, and mappings. Partner Manager’s message framework orchestrates the processing of your business transactions from source to target using these configuration objects as shown in the following diagram:
 
-image::partner-manager-message-flow.png[Partner Manager message flow configuration building blocks]
+image::pm-message-flow.png[Partner Manager message flow configuration objects]
 
 You can create message flows in one of the following contexts:
 
-* <<inbound-message-flow,Inbound>> +
+* <<inbound-message-flow,Inbound>>
 +
 An inbound message flow receives EDI payloads from your trading partners, translates them into your internal application message format, and sends the translated messages to your backend systems.
 
@@ -21,7 +21,7 @@ An outbound message flow receives application messages from your backend systems
 
 Create an inbound message flow to receive and translate application messages from your partner and forward them to your backend systems:
 
-image::inbound-message-flow.png[Inbound message flow configuration building blocks diagram]
+image::pm-inbound-message-flow.png[Inbound message flow]
 
 |===
 |Setting |Description |Supported Formats or Protocols
@@ -54,9 +54,9 @@ image::inbound-message-flow.png[Inbound message flow configuration building bloc
 
 Create an outbound message flow to receive and transform application messages from your backend systems and then forward the translated EDI messages to your partners.
 
-The following diagram shows the configurations of an outbound message flow. The diagram also shows how Partner Manager’s message processing framework orchestrates the end-to-end routing and transformation of your outbound business transactions from your organization’s backend systems to your trading partners.
+The following diagram shows the configurations of an outbound message flow. The diagram also shows how Partner Manager’s message processing framework orchestrates the end-to-end routing and the transformation of your outbound business transactions from your organization’s backend systems to your trading partners:
 
-image::outbound-message-flow.png[Outbound message flow configuration building blocks diagram]
+image::pm-outbound-message-flow.png[Outbound message flow]
 
 |===
 |Setting |Description |Supported Formats or Protocols

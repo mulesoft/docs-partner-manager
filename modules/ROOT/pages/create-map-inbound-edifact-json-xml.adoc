@@ -2,11 +2,11 @@
 
 Use the MuleSoft template named `Template to create inbound and outbound EDIFACT message transformation` to help you map EDI EDIFACT transactions to an application message format, such as JSON or XML.
 
-This template uses DataWeave to create the mapping between the inbound EDI EDIFACT transactions and the application format. It uses the application JSON or XML schema as input for the mapping.
+This template uses DataWeave in Anypoint Studio to create the mapping between the inbound EDIFACT transactions and the application format. It uses the application JSON or XML schema as input for the mapping.
 
 To use the template to create the mapping:
 
-. Create a project in Anypoint Studio based on the template.
+. Create a project in Studio based on the template.
 . Set the source EDIFACT message type.
 . Set the Target JSON or XML Message Type
 . Test the map locally.
@@ -40,14 +40,14 @@ For example, set *Value* to `/edifact/d96a/INVOIC.esl`, to map from the D96A Inv
 
 == Set the Target XML or JSON Message Type
 
-Set the target message type to transform inbound EDI EDIFACT messages to your application's message format:
+Set the target message type to transform inbound EDIFACT messages to your application's message format:
 
 . Copy the schema file of your target application message type into the `<Project-name>/src/main/resources` folder in *Package Explorer*.
 . Select the *01-inbound-edifact-transform.xml* flow.
 . From the *Message Flow* tab in the *Mule Palette* view, select the *Transform Message* component.
 . In the *Output* section, click the *Define metadata* link.
 +
-image::pm-inbound-map-1.png[Metadata for the payload transform ]
+image::pm-inbound-map-1.png[Define Metadata link]
 +
 . Click *Add*.
 . In *Type id*, enter a new message type ID, for example `inbound-po`.
@@ -55,13 +55,11 @@ image::pm-inbound-map-1.png[Metadata for the payload transform ]
 . From the *Type* field in the *Select metadata type* window, select `JSON` or `XML`.
 . In the *Schema* field, browse to the location of the schema file you imported in step 1, select the schema file, and click *Open*.
 +
-The new EDIFACT message structure displays in the Input pane, and your application message structure displays in the Output pane:
+The new EDIFACT message structure displays in the *Input* pane, and your application message structure displays in the *Output* pane:
 +
-image::pm-inbound-map-2.png[EDIFACT and application message structures]
+image::pm-inbound-map-2.png[Message structures]
 +
-. Click the Edit current target icon:
-+
-image::pm-inbound-map-3.png[Edit current icon]
+image::pm-inbound-map-3.png[Edit current target icon]
 +
 . Select *File* and save the DataWeave map with a meaningful name, such as `INB-EDIFACT-D97A-ORDERS-to-Canonical-Purchase-Order-JSON.dwl`.
 . Modify the map to work with your schema.

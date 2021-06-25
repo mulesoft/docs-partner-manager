@@ -11,7 +11,7 @@ When you deploy a configured message flow, Partner Manager automatically transla
 * Replication service
 * Send endpoint services
 
-image::partner-manager-high-level-arch.png[Anypoint Partner Manager Architecture]
+image::pm-high-level-arch.png[Partner Manager high-level architecture]
 
 [%header%autowidth.spread]
 |===
@@ -47,15 +47,15 @@ When deploying B2B integration message flows to CloudHub, Anypoint MQ uses queue
 
 As of the first deployment from Partner Manager, runtime applications deploy to the CloudHub region specified in the business group’s default settings in Runtime Manager by default. Anypoint MQ queues automatically generate during the deployment process in the same or the nearest available region. Any new runtime applications deploy to the same region as the first deployment.
 
-image::partner-manager-cloud-deployment.png[Anypoint Partner Manager for CloudHub]
+image::partner-manager-cloud-deployment.png[Deploying Partner Manager on CloudHub]
 
-== Partner Manager for On-Premise Mule Instances
+== Partner Manager for On-Premises Mule Instances
 
-When deploying B2B integration message flows to your own hosted on-premise Mule instance, the instance uses HTTP calls between processing stages during B2B message processing.
+When deploying B2B integration message flows to your own hosted on-premises Mule instance, the instance uses HTTP calls between processing stages during B2B message processing.
 
 Runtime applications deployed to the server group (B2BServerGroup) contain configured data in your data center or private cloud.
 
-image::partner-manager-onprem-deployment.png[Anypoint Partner Manager for customer-hosted Mule runtime]
+image::pm-onprem-deployment.png[Deploying Partner Manager on-premises]
 
 == See Also
 * xref:deploy-onpremise.adoc[Deploy Message Flows On-Premises]

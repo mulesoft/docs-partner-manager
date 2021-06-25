@@ -1,17 +1,17 @@
-= Create a Map For XML or JSON to Outbound EDI EDIFACT
+= Create a Map For XML or JSON to Outbound EDIFACT
 
 Use the MuleSoft template named `Template to create inbound and outbound EDIFACT message transformation` to help you map application messages from canonical formats such as XML or JSON to outbound EDI EDIFACT messages to send to your trading partners.
 
-This template uses DataWeave to create the mapping between the XML or JSON format and the EDI EDIFACT format. To use the template to create the mapping:
+This template uses DataWeave in Anypoint Studio to create the mapping between the XML or JSON format and the EDIFACT format. To use the template to create the mapping:
 
-. Create a project in Anypoint Studio based on the template.
+. Create a project in Studio based on the template.
 . Set the source message type.
 . Set the Target EDIFACT Message Type
 . Test the map locally.
 
 == Create a New Project From a Template
 
-Create a template project in Anypoint Studio and import a DataWeave map template that maps outbound EDI EDIFACT transactions to an application format:
+Create a template project in Anypoint Studio and import a DataWeave map template that maps outbound EDIFACT transactions to an application format:
 
 . Launch Anypoint Studio.
 . From the *File* menu, select *New > Project from Template*.
@@ -31,7 +31,7 @@ Set the source message type to define the metadata structure of your application
 . From the *Message Flow* tab in the *Mule Palette* view, select the *Transform Message* component.
 . In the *Payload* section, click the *Define metadata* link.
 +
-image::pm-outbound-map-1.png[Metadata for the payload transform]
+image::pm-outbound-map-1.png[Define Metadata link]
 +
 . Click *Add*.
 . In *Type id*, enter a new message type ID, for example, `outbound-po-ack`.
@@ -71,11 +71,11 @@ Follow these steps to test the map locally in Anypoint Studio:
 . In *Package Explorer*, right-click on the project, and click *Run > Run as Mule application*.
 . Use a REST client to post a JSON or an XML payload to `+http://localhost:8081/edifact/outbound+`
 +
-The application returns the translated EDI EDIFACT transaction.
+The application returns the translated EDIFACT transaction.
 +
 . After you verify that the map works correctly, copy the DataWeave (dwl) file, and import it to the Map section of your outbound EDIFACT message flow.
 
 == See Also
 
-* xref:https://anypoint.mulesoft.com/exchange/org.mule.examples/b2b-demo-EDIFACT-transform/[Transform XML to Outbound EDI EDIFACT 850 Purchase Orders Example Project on Exchange]
+* xref:https://anypoint.mulesoft.com/exchange/org.mule.examples/b2b-demo-EDIFACT-transform/[Transform XML to Outbound EDIFACT 850 Purchase Orders Example Project on Exchange]
 * xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow]
