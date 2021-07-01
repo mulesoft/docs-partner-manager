@@ -20,36 +20,31 @@ The selected inbound message flow appears.
 . In the inbound message flow, you can complete the following modifications or actions:
 
 |===
-| *Subsection* | *Actions* | *Deployment Required?*
+| *Subsection* | *Actions*
 | Receive from <partner>
 a|
 * xref:create-endpoint.adoc[Add a new or edit the existing endpoint]
 * xref:partner-manager-identifiers.adoc[Add a new or edit the existing identifier]
-| yes or no
 
 | Receiving endpoint <endpoint name>
 a|
 * xref:create-endpoint.adoc[Add a new or edit the existing receiving endpoint]
 * xref:Certificates.adoc[View the certificate]
-| yes or no
 
 | Source message
 a|
 * xref:partner-manager-create-message-type[Add a new or edit the existing message type]
 * View current validation settings
 * xref:edi-ack-reconciliation.adoc[Indicate whether or not to send a 997 functional acknowledgment and select the endpoint to which to send the acknowledgment]
-| yes or no
 
 | Map
 a|
 * View the current DataWeave map
 * xref:partner-manager-maps[Import a new DataWeave map]
-| yes or no
 
 | Target at <host> a|
 * xref:partner-manager-create-message-type[Add a new or edit the existing target message type]
 * xref:create-endpoint.adoc[Add a new or edit the existing target endpoint]
-| yes or no
 
 |===
 [start=4]
