@@ -12,7 +12,7 @@ You can create message flows in one of the following contexts:
 +
 An inbound message flow receives EDI payloads from your trading partners, translates them into your internal application message format, and sends the translated messages to your backend systems.
 
-* <<outbound-message-flow,Outbound>>
+* <<outbound-message-flow,Outbound>>[Outbound message flow]
 +
 An outbound message flow receives application messages from your backend systems, translates the message to EDI, and sends the EDI transmissions to your trading partner.
 
