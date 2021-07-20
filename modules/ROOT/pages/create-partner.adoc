@@ -1,0 +1,32 @@
+= Create a Partner
+
+Before you create your first partner, you MuleSoft configure your xref:setup-payload-storage-API.adoc[payload storage API].
+
+You need the following information to create a partner:
+
+* The partner's name (usually the name of the company)
+* Partner identifiers (such as the AS2 ID, X12-ISA, X12 GS, and so on)
+
+To create a partner:
+
+. In Partner Manager, select *Partners* in the navigation menu.
+. In the *Partners* page, click *New partner*.
+. In the *New partner* window enter the following information:
+.. *Name*: Name that easily identifies your partner
+.. *Type*: Identifier type
+.. *Identifier Value*: Value that uniquely identifes your partner
+.. *Qualifier*: A qualifier value (appears if you selected *X12-ISA* or *EDIFACT-UNB* for *Type*).
+. Click *Create partner*.
+. Optionally enter or change the following information:
+* In the *About* section, click *Edit* to add or change the partner's description, website, logo, corporate address, or other contact information.
+* In the *Identifiers* section, add one or more identifer to associate with the partner.
+* In the *Certificates* section, add one or more certificate to associate with the partner.
+* In the *Endpoints* section, add partner send endpoints, receive endpoints, or both.
+* In the *Validation and acknowledgement settings*,
+
+You can now xref:message-flows.adoc[set up message flows] for this trading partner or continue to <<update-partner,update this partner>>.
+
+== See Also
+
+* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]

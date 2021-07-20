@@ -1,0 +1,2 @@
+= Configure Send (Outbound) Settings for a Partners
+xxx
