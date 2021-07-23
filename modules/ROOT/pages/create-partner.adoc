@@ -1,4 +1,8 @@
-= Create a Partner
+= Create a Trading Partner
+
+Use the *Partners* page to create a new trading partner. This process involves specifying the partner's name, identifiers, partner-specific endpoints, validation rules, and other details.
+
+== Prerequisites
 
 Before you create your first partner, you must xref:setup-payload-storage-API.adoc[configure your payload storage API].
 
@@ -6,6 +10,8 @@ You need the following information to create a partner:
 
 * The partner's name (usually the name of the company)
 * One or more partner identifiers (such as the AS2 ID, X12-ISA, X12 GS, and so on)
+
+== Steps
 
 To create a partner:
 
@@ -19,15 +25,15 @@ To create a partner:
 . Click *Create partner*.
 +
 Partner Manager creates the partner.
-. Add the following details for the partner now or later on:
-* Information about your partner along with contact details
++
+. Optionally add the following details for the partner. (You can add them either now or later on.):
++
+* Information about the partner along with contact details
 +
 Click *Edit* in the *About* section to access this functionality.
 * One or more identifiers to associate with the partner
 +
-Click *New* in the *Identifiers* section to access this functionality.
-+
-For more information, see xref:partner-manager-identifiers[Sender and Receiver Identifiers].
+Click *New* in the *Identifiers* section to access this functionality. For more information, see xref:partner-manager-identifiers[Sender and Receiver Identifiers].
 +
 * The partner's digital certificates, such as an X.509 certificates. (*Are there usually multiple digital certificates?*)
 +
@@ -35,14 +41,11 @@ Click *New* in the *Certificates* section to access this functionality.
 +
 * The endpoints to use for sending and receiving messages to and from your partner, including acknowledgement endpoints.
 +
-Click *New* in the Endpoints section to add a new endpoint.
+Click *New* in the Endpoints section to add a new endpoint. For more information, see xref:create-endpoint.adoc[Create and Configure Endpoints].
 +
-For more information, see xref:create-endpoint.adoc[Create and Configure Endpoints].
 *  Acknowledgements, validations, and control numbers for each message format the partner will use. For X12, you can also configure character sets and separators (X12 send only).
 +
-Click the links in the *Validation and acknowledgement* settings to configure these settings.
-+
-For more information, see one of the following topics, depending on the protocol and whether you are confifuring inbound or outbound messages:
+Click the links in the *Validation and acknowledgement* settings to configure these settings. For more information, see one of the following topics, depending what protocol you are configuring and whether you are configuring inbound or outbound messages:
 +
 ** xref:edifact-receive-read-settings.adoc[EDIFACT Receive (Inbound) Settings]
 ** xref:edifact-send-settings.adoc[EDIFACT Send (Outbound) Settings]
@@ -51,9 +54,10 @@ For more information, see one of the following topics, depending on the protocol
 
 == Next Step
 
-Once you have created a partner and configured endpoints, you can xref:message-flows.adoc[Set up message flows]. *Do you have to create partner endpoints? Can you use only host endpoints for a partner*)
+Once you have created a partner and configured partner-level endpoints (if needed), you can set up message flows. *Do you have to create partner endpoints? Can you use only host endpoints for a partner*)
 
 == See Also
 
 * xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:message-flows.adoc[Set up message flows]
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]

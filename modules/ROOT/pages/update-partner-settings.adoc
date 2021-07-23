@@ -1,6 +1,6 @@
 = Update Partner Settings
 
-You can update the following types of partner settings
+To update partner settings:
 
 . In Partner Manager, select *Partners* in the navigation menu.
 . Click the partner.

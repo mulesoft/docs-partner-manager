@@ -1,0 +1,3 @@
+= Work with Partners
+
+In order to exchange data with a company, you must first set it up as a partner. Partner Manager gives you the ability to create and manage partner details such as 
