@@ -1,8 +1,6 @@
-= X12 Receive (Inbound) Settings
+= Configure X12 Receive (Inbound) Settings
 
 Partner Manager enables you to configure the X12 acknowledgments, validation rules, character encoding, and control numbers to apply when receiving an inbound X12 transmission.
-
-== Configure the Receive Settings
 
 . In the navigation menu, select *Partners*.
 . Select the partner for whom you want to configure the settings.
@@ -20,7 +18,7 @@ It can take up to five minutes or so for your configuration changes to sync with
 [[ack-settings]]
 == Acknowledgment Settings
 
-Use the following settings to configure acknowledgment settings:
+Use the following settings to configure acknowledgments:
 
 [%header%autowidth.spread]
 |===
@@ -46,20 +44,20 @@ The X12 997 functional acknowledgment reports the status of a received interchan
 
 As with all X12 transaction sets, the 997 functional acknowledgment is sent inside a GS or GE envelope.
 
-The 997 functional acknowledgment is used to:
+The 997 functional acknowledgment does the following:
 
-* Acknowledge the receipt of an interchange or functional group.
-* Accept or reject one or more functional groups or transactions.
-* Verify and report compliance with the standard.
+* Acknowledges the receipt of an interchange or functional group
+* Accepts or rejects one or more functional groups or transactions
+* Verifies and reports compliance with the standard
 
-If an interchange contains multiple groups, then a 997 acknowledgment is returned for each group.
+If an interchange contains multiple groups, a 997 acknowledgment is returned for each group.
 
 If a group contains multiple transaction sets, then the acknowledgment for that group contains multiple AK2 loops, that is, one for each transaction set. This applies only if the AK2 loops are generated for accepted transaction sets.
 
 [[validation-settings]]
 == Validation Settings
 
-Selecting the checkbox (enabling) for any of these options means that all the X12 documents meet this condition criteria and receive a 997 failure message:
+Selecting the checkbox (enabling) for any of these options means that all the X12 documents meet this condition criteria or receive a 997 failure message:
 
 [%header%autowidth.spread]
 |===
@@ -78,7 +76,7 @@ Selecting the checkbox (enabling) for any of these options means that all the X1
 |Enabled
 
 |Fail document if unknown segments are used
-|If selected, a transaction containing any unknown segments is rejected. If unselected, unknown segments are ignored and the transaction is not rejected. In either case, the error is reported in the 997 acknowledgments.
+|If selected, Partner Manager rejects transactions that contain any unknown segments. If unselected, Partner Manager ignores unknown segments In either case, the error is reported in the 997 acknowledgments.
 |Enabled
 
 |Fail document when segments are out of order

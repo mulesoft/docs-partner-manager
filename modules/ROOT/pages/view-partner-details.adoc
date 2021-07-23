@@ -1,9 +1,9 @@
 = View a Partner's Details
 
-After you create a new partner, you can view details for the partner:
+After you create a partner, you can add, update, or delete partner details:
 
 . In Partner Manager, select *Partners* in the navigation menu to access the *Partners* page.
-. Click the partner to view its details and to make the following updates.
+. Click the partner to view its details and make the following updates.
 +
 * Add information about your partner along with contact details.
 * Add partner endpoints (where you send and receive messages to and from your partners, including acknowledgment endpoints).

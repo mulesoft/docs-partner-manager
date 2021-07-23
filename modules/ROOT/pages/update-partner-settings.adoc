@@ -1,0 +1,14 @@
+= Update Partner Settings
+
+You can update the following types of partner settings
+
+. In Partner Manager, select *Partners* in the navigation menu.
+. Click the partner.
+. You can add or change the following details:
++
+* Information about your partner along with contact details.
+* Partner identifiers.
+* The partner's digital certificates (such as an X.509 certificate).
+* Partner endpoints (where you send and receive messages to and from your partners, including acknowledgment endpoints).
+* Specify EDI message format preferences for your partner (such as X12), and any associated validations such as the need for acknowledgments (like TA1, 997, 999, and so on).
+* Validation and acknowledgement settings
