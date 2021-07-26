@@ -1,4 +1,4 @@
-= EDIFACT Receive (Inbound) Settings
+= Configure a Partner's EDIFACT Receive Settings
 
 Partner Manager enables you to configure the EDIFACT acknowledgments and validation rules to apply when processing an inbound EDIFACT message.
 
@@ -24,11 +24,15 @@ To configure acknowledgements:
 . Enable the *Send CONTRL functional acknowledgement when messages fail to route to a message flow* setting.
 . Select an endpoint where the functional acknowledgement message will be sent to the trading partner.
 
-The *Send CONTRL functional acknowledgement when messages fail to route to a message flow* setting provides a functional acknowledgment (the receipt and syntactical acceptability of a message) with the exchange. Functional acknowledgment settings are configured for each message flow and apply only when there is a failure to route the message to one of the message flows.
+The *Send CONTRL functional acknowledgement when messages fail to route to a message flow* setting provides a functional acknowledgment (the receipt and syntactical acceptability of a message) with the exchange.
+
+Functional acknowledgment settings are configured for each message flow and apply only when there is a failure to route the message to one of the message flows.
 
 == Validation settings
 
-Select one or more of the following options to ensure that all EDIFACT messages received from the trading partner meet validation rules. If a message does not meet an enabled rule, Partner Manager rejects it. Parter Manager logs all validation errors and reports them in the CONTRL acknowledgments.
+Select one or more of the following options to ensure that all EDIFACT messages received from the trading partner meet validation rules. If a message does not meet an enabled rule, Partner Manager rejects it.
+
+Parter Manager logs all validation errors and reports them in the CONTRL acknowledgments.
 
 [%header%autowidth.spread]
 |===
@@ -36,28 +40,34 @@ Select one or more of the following options to ensure that all EDIFACT messages 
 
 |Enforce length limits
 a|
-If selected, Partner Manager rejects a message with values that are too short or long. If unselected, Partner Manager accepts the message.
+* If selected, Partner Manager rejects a message with values that are too short or long.
+* If unselected, Partner Manager accepts the message.
 |Enabled
 |Enforce value repeats
 a|
-If selected, Partner Manager rejects a message with values that are repeated too many or too few times. If unselected, Partner Manager accepts the message.
+* If selected, Partner Manager rejects a message with values that are repeated too many or too few times.
+* If unselected, Partner Manager accepts the message.
 |Enabled
 |Enforce valid characters
-| If selected, Partner Manager rejects a message with invalid characters. If unselected, the characters are either passed through or substituted and Partner Manager accepts the message.
+a| * If selected, Partner Manager rejects a message with invalid characters.
+* If unselected, the characters are either passed through or substituted and Partner Manager accepts the message.
 |Enabled
 | Allow unknown segments
 a|
-If selected, Partner Manager ignores unknown segments. If unselected, Partner Manager rejects a message that contains unknown segments.
+* If selected, Partner Manager ignores unknown segments.
+* If unselected, Partner Manager rejects a message that contains unknown segments.
 |Disabled
 |Enforce segment order
-|
-If selected, Partner Manager enables the segment to be reordered. If unselected, Partner Manager rejects a message that contains segments that are out of order.
+a| * If selected, Partner Manager enables the segment to be reordered.
+* If unselected, Partner Manager rejects a message that contains segments that are out of order.
 |Enabled
 |Allow Unused segments
-|If selected, Partner Manager ignores unused segments. If unselected, Partner Manager rejects a message that contains unused segments.
+a|* If selected, Partner Manager ignores unused segments.
+* If unselected, Partner Manager rejects a message that contains unused segments.
 |Enabled
 |Enforce segment repeats
-|If selected, Partner Manager rejects a message that contains segments that repeat too many times. If unselected, Partner Manager accepts the message.
+a|* If selected, Partner Manager rejects a message that contains segments that repeat too many times.
+* If unselected, Partner Manager accepts the message.
 |Enabled
 |===
 
@@ -78,3 +88,8 @@ Use these settings to apply validations related to your partners or your use of 
 | If selected, Partner Manager enforces globally unique message control numbers (UNH01) for received transaction sets. This configuration requires message control numbers to be unique across all EDIFACT messages received from the same partner and application, as determined by the interchange sender and receiver identification, and application codes.
 | Disabled
 |===
+
+== See Also
+
+* xref:create-partner.adoc[Configure a New Partner]
+* xref:create-inbound-message-flow.adoc[Create and Configure an Inbound Message Flow]
