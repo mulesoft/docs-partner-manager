@@ -46,20 +46,20 @@ You can add the following settings for the new partner either now or later on:
 |
 | One or more identifiers to associate with the partner.
 | Click *New* in the *Identifiers* section.
-| xref:partner-manager-identifiers[Sender and Receiver Identifiers]
+| xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
 | The partner's digital certificates, such as X.509 certificates. (*Are there usually multiple digital certificates?*)
 | Click *New* in the *Certificates* section.
 |
 | The endpoints to use for sending and receiving messages to and from your partner, including acknowledgement endpoints.
 | Click *New* in the *Endpoints* section.
-| xref:create-endpoint.adoc[Create and Configure Endpoints].
+| xref:create-endpoint.adoc[Create and Configure Endpoints]
 | Acknowledgements, validations, and control numbers for each message format the partner will use. For X12, you can also configure character sets and separators (X12 send format only).
-| Click the links in the *Validation and acknowledgement* settings, depending the protocol you are configuring and whether you are configuring inbound or outbound message settings.
+| Click the links in the *Validation and acknowledgement* settings.
 a|
 * xref:edifact-receive-read-settings.adoc[EDIFACT Receive Settings]
 * xref:edifact-send-settings.adoc[EDIFACT Send Settings]
 * xref:x12-receive-read-settings.adoc[X12 Receive Settings]
-* xref:X12-send-settings.adoc[X12 Send Settings]
+* xref:x12-send-settings.adoc[X12 Send Settings]
 |===
 
 == Next Step

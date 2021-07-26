@@ -1,8 +1,8 @@
 = Configure a Partner's EDIFACT Receive Settings
 
-Partner Manager enables you to configure the EDIFACT acknowledgments and validation rules to apply when processing an inbound EDIFACT message.
+Partner Manager receive settings include EDIFACT acknowledgments and the validation rules to apply when processing an inbound EDIFACT message.
 
-== Configure the Receive Settings
+To configure a partner's EDIFACT receive settings:
 
 . In the navigation menu, select *Partners*.
 . Select the partner for whom you want to configure the settings.
@@ -22,7 +22,7 @@ It can take up to five minutes or so for your configuration changes to sync with
 To configure acknowledgements:
 
 . Enable the *Send CONTRL functional acknowledgement when messages fail to route to a message flow* setting.
-. Select an endpoint where the functional acknowledgement message will be sent to the trading partner.
+. Select an endpoint from which the functional acknowledgement message will be sent to the trading partner.
 
 The *Send CONTRL functional acknowledgement when messages fail to route to a message flow* setting provides a functional acknowledgment (the receipt and syntactical acceptability of a message) with the exchange.
 

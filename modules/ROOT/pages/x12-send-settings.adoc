@@ -2,17 +2,15 @@
 
 Partner Manager enables you to configure the X12 envelope parameters, delimiters, validation rules, character encoding, and control numbers to apply when sending an outbound X12 transmission to a trading partner.
 
-== Configure the Send Settings
-
-To configure the X12 send settings:
+To configure a partner's X12 send settings:
 
 . In the navigation menu, select *Partners*.
 . Select the partner for whom you want to configure the settings.
 . In the *Validation and acknowledgment settings* section's *Send to <partner-name>* column, click *X12*.
 . In the menu on the left, select the setting to configure:
-* <<general-settings,General>>
-* <<authorization-settings,Authorization>>
-* <<ta1-ack-settings,TA1 Acknowledgment>>
+* <<general-settings,General settings>>
+* <<authorization-settings,Authorization settings>>
+* <<ta1-ack-settings,TA1 Acknowledgment settings>>
 * <<global-control-numbers,Global control numbers>>
 * <<character-set,Character set & separators>>
 . Click *Save*.
@@ -172,5 +170,5 @@ Line Feed
 
 == See Also
 
-* xref:create-partner.doc
+* xref:create-partner.adoc
 * xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow]
