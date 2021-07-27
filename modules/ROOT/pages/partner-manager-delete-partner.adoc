@@ -1,14 +1,15 @@
 = Delete a Partner
 
-If you are no longer trading with a partner, you can delete the partner.
+If you are no longer trading with a partner, you can delete it.
 
 When you delete a partner, the partner is removed from the *Partners* page. Also, all of the partner's data is deleted, except for partner-related activities that occurred before the deletion.
 
 == Prerequisites for On-Premise Installations
 
-To delete a partner in an on-premises installation, contact your B2B System Administrator to ensure that your on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager called `B2BserverGroup` are active and running.
+To delete a partner in an on-premises installation, ensure that your on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager named `B2BserverGroup` are active and running.
 
-You can also check the status of the server in Anypoint Platform Runtime Manager.
+To obtain these statuses, contact your B2B System Administrator.
+You check the status of the host servers in Anypoint Platform Runtime Manager.
 
 == Steps
 

@@ -170,5 +170,5 @@ Line Feed
 
 == See Also
 
-* xref:create-partner.adoc
+* xref:create-partner.adoc[Create and Configure a Partner]
 * xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow]

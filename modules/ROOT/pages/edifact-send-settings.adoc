@@ -8,7 +8,7 @@ To configure a partner's EDIFACT send settings:
 . Select the partner for whom to configure the send settings.
 . In the *Validation and acknowledgment settings* section's *Send to <partner-name>* column, click *EDIFACT*.
 . In the menu on the left, select the setting to configure:
-* <<general-settings,General>>
+* <<general-settings,General settings>>
 * <<global-control-numbers,Global control numbers>>
 * <<character-set,Character set & separators>>
 . Click *Save*.
@@ -42,6 +42,19 @@ Use the following settings to configure the general validation rules:
 |When enabled, sets UNB-09 to `1`, indicating that a technical acknowledgment is expected in the partner's response
 |Disabled
 |===
+
+[[global-control-numbers]]
+== Global Control Numbers
+
+Partner Manager applies a global control number at the partner level on the EDIFACT interchanges generated from outbound message flows. These control numbers are sequenced across all message types sent to a trading parter, including functional acknowledgments.
+
+The control number starts with a default value of `1` and increases sequentially each time your organization sends outbound transmissions. To set the control number sequence value to a different number to maintain sequencing and avoid duplication:
+
+. Click *Change* and enter the desired control number.
+. Click *Save*.
+
+[NOTE]
+It can take up to five minutes to apply the change at runtime.
 
 == Character Set and Separators
 
@@ -93,20 +106,7 @@ a| When you select *Test* from the drop-down, sets UNB-11 to `1`, which indicate
 |Production
 |===
 
-[[global-control-numbers]]
-== Global Control Numbers
-
-Partner Manager applies a global control number at the partner level on the EDIFACT interchanges generated from outbound message flows. These control numbers are sequenced across all message types sent to a trading parter, including functional acknowledgments.
-
-The control number starts with a default value of `1` and increases sequentially each time your organization sends outbound transmissions. To set the control number sequence value to a different number to maintain sequencing and avoid duplication:
-
-. Click *Change* and enter the desired control number.
-. Click *Save*.
-
-[NOTE]
-It can take up to five minutes to apply the change at runtime.
-
 == See Also
 
-* xref:create-partner.doc
+* xref:create-partner.adoc
 * xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow]

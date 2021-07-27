@@ -1,10 +1,10 @@
-= Update Partner Settings
+= Update a Partner's Settings
 
 To update partner settings:
 
 . In Partner Manager, select *Partners* in the navigation menu.
 . Click the partner.
-. You can perform the following actions:
+. Perform any of the following actions:
 +
 [%header%autowidth.spread]
 |===
@@ -28,7 +28,7 @@ Click *New* in the *Identifiers* section and enter the required fields.
 +
 Select the identifier and click *Delete*.
 | xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
-| The partner's digital certificates, such as X.509 certificates. (*Are there usually multiple digital certificates?*)
+| The partner's digital certificates, such as X.509 certificates
 | Click *New* in the *Certificates* section.
 |
 | Endpoints
