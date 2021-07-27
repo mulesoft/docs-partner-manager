@@ -10,7 +10,7 @@ To configure a partner's EDIFACT send settings:
 . In the menu on the left, select the setting to configure:
 * <<general-settings,General settings>>
 * <<global-control-numbers,Global control numbers>>
-* <<character-set,Character set & separators>>
+* <<character-set,Character set and separators>>
 . Click *Save*.
 
 The values you configure in the partner's settings page are used by default for all EDIFACT messages sent to that trading partner. You can override the settings you configure at the message flow level by selecting the Custom option while creating an outbound message flow.

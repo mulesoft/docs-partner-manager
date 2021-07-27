@@ -12,7 +12,7 @@ To configure a partner's X12 send settings:
 * <<authorization-settings,Authorization settings>>
 * <<ta1-ack-settings,TA1 Acknowledgment settings>>
 * <<global-control-numbers,Global control numbers>>
-* <<character-set,Character set & separators>>
+* <<character-set,Character set and separators>>
 . Click *Save*.
 
 The values you configure in the partner's settings page are used by default for all X12 messages going to that trading partner.
