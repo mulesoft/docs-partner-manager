@@ -8,8 +8,8 @@ To configure a partner's EDIFACT receive settings:
 . Select the partner for whom you want to configure the settings.
 . In the *Validation and acknowledgment settings* section's *Send to <partner-name>* column, click *EDIFACT*.
 . In menu on the left, select the setting to configure:
-* <<ack-settings,Acknowledgments>>
-* <<validation-settings,Validation>>
+* <<ack-settings,Acknowledgment settings>>
+* <<validation-settings,Validation settings>>
 * <<control-numbers,Control Numbers>>
 . Click *Save*.
 
