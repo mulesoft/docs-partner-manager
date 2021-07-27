@@ -4,11 +4,53 @@ To update partner settings:
 
 . In Partner Manager, select *Partners* in the navigation menu.
 . Click the partner.
-. You can add or change the following details:
+. You can perform the following actions:
 +
-* Information about your partner along with contact details.
-* Partner identifiers.
-* The partner's digital certificates (such as an X.509 certificate).
-* Partner endpoints (where you send and receive messages to and from your partners, including acknowledgment endpoints).
-* Specify EDI message format preferences for your partner (such as X12), and any associated validations such as the need for acknowledgments (like TA1, 997, 999, and so on).
-* Validation and acknowledgement settings
+[%header%autowidth.spread]
+|===
+|Settings |Actions a|Additional Information
+|Partner information, including a partner's address, website, and contact details a|
+* Modify partner information
++
+Click *Edit* in the *About* section, click the appropriate link and make the desired modifications.
++
+* Delete a contact
++
+Click *Edit* in the *About* section, click the contact type, and click the *Delete contact* link.
+|
+| Identifiers
+a|
+* Add a new identifier
++
+Click *New* in the *Identifiers* section and enter the required fields.
++
+* Delete an identifier
++
+Select the identifier and click *Delete*.
+| xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
+| The partner's digital certificates, such as X.509 certificates. (*Are there usually multiple digital certificates?*)
+| Click *New* in the *Certificates* section.
+|
+| Endpoints
+a| * Create a new endpoint
++
+Click *New* in the *Endpoints* section and enter the required fields.
++
+* Delete an endpoint
++
+Click the endpoint's link and click *Delete*.
+| xref:create-endpoint.adoc[Create and Configure Endpoints]
+| Acknowledgements, validations, control numbers, character sets (X12 only) and separators (X12 send format only).
+a| * Modify
++
+Click the links in the *Validation and acknowledgement settings* section, click a protocol link, and make the desired modifications.
+a|
+* xref:edifact-receive-read-settings.adoc[EDIFACT Receive Settings]
+* xref:edifact-send-settings.adoc[EDIFACT Send Settings]
+* xref:x12-receive-read-settings.adoc[X12 Receive Settings]
+* xref:x12-send-settings.adoc[X12 Send Settings]
+|===
+
+== See Also
+
+* xref:create-partner.adoc[Create and Configure a Partner]
