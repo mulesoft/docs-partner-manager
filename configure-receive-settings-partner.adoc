@@ -1,3 +1,0 @@
-== Configure Receive (Inbound) Settings for a Trading Partners
-
-xxxx

@@ -23,7 +23,7 @@ To create a partner:
 |===
 | Setting a| Description
 | *Name*
-| Name that easily identifies your partner
+| Text string that easily identifies your partner
 | *Type*
 | Identifier type
 | *Qualifier*
@@ -64,7 +64,7 @@ a|
 
 == Next Step
 
-Once you have created a partner and configured partner-level endpoints (if needed), you can set up message flows. *Do you have to create partner endpoints? Can you use only host endpoints for a partner*)
+Once you have created a partner and configured partner-level endpoints (if needed), you can set up message flows.
 
 == See Also
 

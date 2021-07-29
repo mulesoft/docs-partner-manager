@@ -1,4 +1,4 @@
-= Configure a Partner's X12 Receive Settings
+= Configure Partner X12 Receive Settings
 
 Partner Manager enables you to configure the X12 acknowledgments, validation rules, character encoding, and control numbers to apply when receiving an inbound X12 transmission.
 
@@ -61,7 +61,7 @@ If a group contains multiple transaction sets, then the acknowledgment for that 
 [[validation-settings]]
 == Validation Settings
 
-Selecting the checkbox (enabling) for any of these options means that all the X12 documents meet this condition criteria or receive a 997 failure message:
+Selecting the checkbox (enabling) for any of these options means that all the X12 documents either meet this condition criteria or receive a 997 failure message:
 
 [%header%autowidth.spread]
 |===
