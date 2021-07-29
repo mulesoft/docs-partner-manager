@@ -30,9 +30,7 @@ The *Send CONTRL functional acknowledgement when messages fail to route to a mes
 
 == Validation settings
 
-Select one or more of the following options to ensure that all EDIFACT messages received from the trading partner meet validation rules. If a message does not meet an enabled rule, Partner Manager rejects it.
-
-Parter Manager logs all validation errors and reports them in the CONTRL acknowledgments.
+Select one or more of the following options to ensure that all EDIFACT messages received from the trading partner meet validation rules:
 
 [%header%autowidth.spread]
 |===
@@ -70,6 +68,10 @@ a|* If selected, Partner Manager rejects a message that contains segments that r
 * If unselected, Partner Manager accepts the message.
 |Enabled
 |===
+
+If a message does not meet an enabled rule, Partner Manager rejects it.
+
+Parter Manager logs all validation errors and reports them in the CONTRL acknowledgments.
 
 [[control-numbers]]
 == Control Numbers
