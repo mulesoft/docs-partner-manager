@@ -13,7 +13,7 @@ You need the following information to create a partner:
 
 == Create the Partner
 
-To create a partner:
+After meeting the prerequisites to create a partner:
 
 . In Partner Manager, select *Partners* in the navigation menu.
 . Click *Create partner*.
@@ -25,11 +25,11 @@ To create a partner:
 | *Name*
 | Text string that easily identifies your partner
 | *Type*
-| Identifier type
+| Identifier type to help identify the partner
 | *Qualifier*
 | Qualifier value that appears if you selected *X12-ISA* or *EDIFACT-UNB* as the type
 | *Identifier Value*
-| Value that uniquely identifes your partner
+| Value that uniquely identifies your partner
 |===
 +
 . Click *Create partner*.

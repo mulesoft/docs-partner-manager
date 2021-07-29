@@ -19,14 +19,14 @@ It can take up to five minutes or so for your configuration changes to sync with
 [[ack-settings]]
 == Acknowledgment Settings
 
-To configure acknowledgements:
+Optionally configure functional acknowledgment settings for each message flow. These settings apply only if message routing a message flow fails.
+
+To configure acknowledgement settings:
 
 . Enable the *Send CONTRL functional acknowledgement when messages fail to route to a message flow* setting.
 . Select an endpoint from which the functional acknowledgement message will be sent to the trading partner.
 
 The *Send CONTRL functional acknowledgement when messages fail to route to a message flow* setting provides a functional acknowledgment (the receipt and syntactical acceptability of a message) with the exchange.
-
-Functional acknowledgment settings are configured for each message flow and apply only when there is a failure to route the message to one of the message flows.
 
 == Validation settings
 

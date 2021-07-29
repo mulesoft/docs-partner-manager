@@ -1,4 +1,4 @@
-= Configure Partner X12 Send Settings
+= Configure a Partner's X12 Send Settings
 
 Partner Manager enables you to configure the X12 envelope parameters, delimiters, validation rules, character encoding, and control numbers to apply when sending an outbound X12 transmission to a trading partner.
 
