@@ -1,40 +1,48 @@
 = Create and Configure an Inbound Message Flow
 :page-aliases: configure-message-flows.adoc
 
-You can create and configure an inbound message flow to receive EDI messages from your trading partners, validate and transform those messages, and then send the translated application (JSON or XML) message to your backend applications.
-
-== Create an Inbound Message Flow
+You can create and configure an inbound message flow to receive EDI messages from your trading partners, including trading partners that are 3rd party aggregators. When you create an inbound message flow, you can validate and transform the inbound messages and then send the translated message (JSON or XML) to your backend applications.
 
 === Prerequisites
 Before you create your first inbound message flow, you must configure your xref:setup-payload-storage-API.adoc[payload storage API].
 
 === Steps
 
-. From your Anypoint Partner Manager sandbox or production environment, select *Message Flows* in the navigation menu.
+. From the Anypoint Partner Manager navigation menu, select *Message Flows*.
 . Click *New message flow > Receive from partner*.
-. Either select an existing partner from the list and click *Select* or select *New* to xref:configure-partner.adoc#create-partner[create a trading partner]. +
-A new message flow is created. +
+. Either select an existing partner from the list or select *New* to xref:configure-partner.adoc#create-partner[Create a partner].
++
+A new message flow is created.
++
+. <<receiving-endpoint,Configure the receiving endpoint>>.
+. <<source-message-type,Configure the source message type>>.
+. <<import-map,Import the translation map>>.
+. <<verify-message-flow,Verify that the message flow is complete>>.
 
-== Configure the Receiving Endpoint
+[receiving-endpoint]
+== Specify the Receiving Endpoint
+
+Specify the endpoint that will receive the message you are sending. You can do either of the following:
+
+* Select an existing endpoint owned by the host, target partner, or 3rd party connection.
++
+If you select an endpoint owned by a 3rd party connection, the inbound message goes through that connection.
++
+* Create a new receiving endpoint for this message flow.
+
+To specify the receiving endpoint:
 
 . In the message flow, expand the *Receiving from <partner>* section and click *Select endpoint*.
 . In the *Receiving endpoint* section, click *Select*.
-. In the *Select an endpoint: Receive from <partner>* window:
-.. To use an existing receiving endpoint:
-... Select the endpoint from the list and click *Select*.  +
-The endpoint is added to the message flow, and a message appears indicating that the endpoint is missing an identifier.
-... Click *Add* to add a unique identifier for the endpoint.
-.. To create a new receiving endpoint:
-... Click *New* next to the search box.
-... From the *Owner* drop-down, select the endpoint's owner.
-... From the *Protocol* drop-down, select the protocol and configure it according to the protocol you select:
-* xref:endpoint-as2-receive.adoc[AS2]
-* xref:endpoint-ftp-receive.adoc[FTP]
-* xref:endpoint-sftp-receive-target.adoc[SFTP]
+. In the *Select an endpoint: Receive from <partner>* window, do either of the following:
+* Select an existing receiving endpoint and click  *Select*.
+* Click *New* to create a new endpoint, as described in xxx.
 +
-... Click *Save*. +
-The endpoint is added to the message flow.
+The endpoint is added to the message flow, and a message appears indicating that the endpoint is missing an identifier.
++
+* Click *Add* to add a unique identifier for the endpoint.
 
+[source-message-type]
 == Configure the Source Message Type
 
 . In the message flow, expand the *Source message* section and click *Select*.
@@ -55,12 +63,10 @@ The message type and its validation settings are added to the message flow.
 +
 The acknowledgment is added to the message flow.
 
+[[import-map]]
 == Import the Translation Map
 
-=== Prerequisites
 To create your inbound EDI-to-application message (JSON or XML) map in Anypoint Studio, follow xref:partner-manager-maps.adoc[these instructions].
-
-=== Steps
 
 . In the message flow, expand the *Map* section.
 . Click *Import* and then click *Choose file*.
@@ -68,7 +74,7 @@ To create your inbound EDI-to-application message (JSON or XML) map in Anypoint 
 . Click *Upload mapping*. +
 The translation map is added to the message flow.
 
-
+[[configure-target]]
 == Configure the Target
 
 . In the message flow, expand the *Target at <host>* section.
@@ -92,6 +98,7 @@ The message type is selected for your backend system to use to map the EDI trans
 ... Click *Save*. +
 The endpoint to which to send the translated message (JSON or XML) for further processing in your backend system is added to the message flow. Partner Manager routes inbound EDI transactions based on matching identifiers configured at the partner level.
 
+[[verify-message-flow]]
 == Verify the Message Flow is Complete
 
 Partner Manager dynamically validates the message flow configuration elements for completeness and displays a green checkmark if all the building blocks of the message flow are complete. After you verify the configurations, you are ready to deploy the message flow.
