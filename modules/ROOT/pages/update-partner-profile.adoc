@@ -3,15 +3,15 @@
 
 . In Partner Manager, select *Partners* in the navigation menu to access the *Partners* page.
 . Click the partner whose profile you want to update.
-. Under the *About* section, click *Edit* to add or update the following information:
+. In the *About* section, click *Edit* to add or update the following information:
 * *Identity*
 ** *Description* +
 Provide a brief description of your partner's business, what kind of trading relationship your organization has with them, and so on.
 ** *Website* +
 Enter a valid URL to your trading partner's website.
 ** *Logo* +
-Upload a logo for your trading partner. Supported logo file formats are: `.jpg`, `.jpeg`, `.png`, `.gif`, and `.svg`. +
-The maximum file size is 30KB.
+Upload a logo for your trading partner. Supported logo file formats are `.jpg`, `.jpeg`, `.png`, `.gif`, and `.svg`. +
+The maximum file size is 30 KB.
 * *Corporate address* +
 Provide a complete address that includes the Street, City, State, Postal code, and Country.
 * *Add contacts* +

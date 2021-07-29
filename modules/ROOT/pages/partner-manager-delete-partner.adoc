@@ -2,7 +2,7 @@
 
 If you are no longer trading with a partner, you can delete it.
 
-When you delete a partner, the partner is removed from the *Partners* page. Also, all of the partner's data is deleted, except for partner-related activities that occurred before the deletion.
+When you delete a partner, it is removed from the *Partners* page. Also, all of the partner's data is deleted, except for information about partner-related activities that occurred before the deletion.
 
 == Prerequisites for On-Premise Installations
 
