@@ -4,9 +4,9 @@ Create a partner by specifying the partner's name, identifiers, endpoints, valid
 
 == Prerequisites
 
-Before you create your first partner, you must xref:setup-payload-storage-API.adoc[configure your payload storage API].
+Before you create your first partner, xref:setup-payload-storage-API.adoc[configure your payload storage API].
 
-You need the following information to create a partner:
+Obtain the following information:
 
 * The partner's name (usually the name of the company)
 * One or more partner identifiers (such as the AS2 ID, X12-ISA, X12 GS, and so on)
@@ -27,7 +27,7 @@ After meeting the prerequisites to create a partner:
 | *Type*
 | Identifier type to help identify the partner
 | *Qualifier*
-| Qualifier value that appears if you selected *X12-ISA* or *EDIFACT-UNB* as the type
+| Value that appears if you selected *X12-ISA* or *EDIFACT-UNB* as the type
 | *Identifier Value*
 | Value that uniquely identifies your partner
 |===
@@ -36,7 +36,7 @@ After meeting the prerequisites to create a partner:
 
 == Configure Additional Partner Settings
 
-You can add the following settings for the new partner either now or later on:
+Add the following settings for the new partner, either now or later on:
 
 [%header%autowidth.spread]
 |===
@@ -53,7 +53,7 @@ You can add the following settings for the new partner either now or later on:
 | The endpoints to use for sending and receiving messages to and from your partner, including acknowledgement endpoints.
 | Click *New* in the *Endpoints* section.
 | xref:create-endpoint.adoc[Create and Configure Endpoints]
-| Acknowledgements, validations, and control numbers for each message format the partner will use. For X12, you can also configure character sets and separators (X12 send format only).
+| Acknowledgements, validations, and control numbers for each message format that the partner uses. For X12, you can also configure character sets and separators (X12 send format only).
 | Click the links in the *Validation and acknowledgement* settings.
 a|
 * xref:edifact-receive-read-settings.adoc[EDIFACT Receive Settings]

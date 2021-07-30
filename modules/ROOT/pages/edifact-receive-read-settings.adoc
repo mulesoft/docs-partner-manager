@@ -24,7 +24,7 @@ Optionally configure functional acknowledgment settings for each message flow. T
 To configure acknowledgement settings:
 
 . Enable the *Send CONTRL functional acknowledgement when messages fail to route to a message flow* setting.
-. Select an endpoint from which the functional acknowledgement message will be sent to the trading partner.
+. Select an endpoint from which the functional acknowledgment message is sent to the trading partner.
 
 The *Send CONTRL functional acknowledgement when messages fail to route to a message flow* setting provides a functional acknowledgment (the receipt and syntactical acceptability of a message) with the exchange.
 
@@ -47,8 +47,8 @@ a|
 * If unselected, Partner Manager accepts the message.
 |Enabled
 |Enforce valid characters
-a| * If selected, Partner Manager rejects a message with invalid characters.
-* If unselected, the characters are either passed through or substituted and Partner Manager accepts the message.
+a| * If selected, Partner Manager rejects a message that contains invalid characters.
+* If unselected, the invalid characters are either ignored or replaced, and Partner Manager accepts the message.
 |Enabled
 | Allow unknown segments
 a|
@@ -90,7 +90,7 @@ a| * If selected, Partner Manager records the interchange numbers previously pro
 |Requires unique message control number
 a| If selected, Partner Manager enforces globally unique message control numbers (UNH01) for received transaction sets.
 
-This configuration requires message control numbers to be unique across all EDIFACT messages received from the same partner and application, as determined by the interchange sender and receiver identification, and application codes.
+This configuration requires message control numbers to be unique across all EDIFACT messages received from the same partner and application, as determined by the interchange sender and receiver identification and application codes.
 | Disabled
 |===
 
