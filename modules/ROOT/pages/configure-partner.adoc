@@ -1,6 +1,8 @@
 = Configure and Manage Trading Partners
 
-Anypoint Partner Manager gives you the ability to configure and manage trading partners. Use the *Partners* page to:
+Anypoint Partner Manager gives you the ability to configure and manage trading partners.
+
+Use the *Partners* page to:
 
 * xref:create-partner.adoc[Create a new partner]
 * xref:modify-partner-settings.adoc[Modify a partner's settings]

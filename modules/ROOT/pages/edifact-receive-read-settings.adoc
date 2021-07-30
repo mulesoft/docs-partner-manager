@@ -24,7 +24,7 @@ Optionally configure functional acknowledgment settings for each message flow. T
 To configure acknowledgement settings:
 
 . Enable the *Send CONTRL functional acknowledgement when messages fail to route to a message flow* setting.
-. Select an endpoint from which the functional acknowledgment message is sent to the trading partner.
+. Select an endpoint from which the functional acknowledgment message is sent to the partner.
 
 The *Send CONTRL functional acknowledgement when messages fail to route to a message flow* setting provides a functional acknowledgment (the receipt and syntactical acceptability of a message) with the exchange.
 
@@ -96,5 +96,6 @@ This configuration requires message control numbers to be unique across all EDIF
 
 == See Also
 
-* xref:create-partner.adoc[Create a New Partner]
 * xref:create-inbound-message-flow.adoc[Create and Configure an Inbound Message Flow]
+* xref:create-partner.adoc[Create a New Partner]
+* xref:modify-partner-settings.adoc[Modify a Partner's Settings]

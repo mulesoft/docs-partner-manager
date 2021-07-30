@@ -99,7 +99,7 @@ a|When the option to expect a TA1 is selected, click *Select* to specify the *Re
 [[global-control-numbers]]
 == Global Control Numbers
 
-Partner Manager applies a global control number at the partner level on the X12 interchanges and functional groups generated from outbound message flows. These control numbers are sequenced across all message types (including functional acknowledgments) that are sent to a trading partner.
+Partner Manager applies a global control number at the partner level on the X12 interchanges and functional groups generated from outbound message flows. These control numbers are sequenced across all message types (including functional acknowledgments) that are sent to a partner.
 
 The control number starts with a default value of `1`, and is sequentially increased as your organization begins sending outbound transmissions.
 
@@ -170,5 +170,6 @@ Line Feed
 
 == See Also
 
-* xref:create-partner.adoc[Create and Configure a Partner]
 * xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow]
+* xref:create-partner.adoc[Create a New Partner]
+* xref:modify-partner-settings.adoc[Modify a Partner's Settings]

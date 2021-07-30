@@ -55,4 +55,5 @@ a|
 
 == See Also
 
-* xref:create-partner.adoc[Create and Configure a Partner]
+* xref:create-partner.adoc[Create a New Partner]
+* xref:partner-manager-delete-partner.adoc[Delete a Partner]

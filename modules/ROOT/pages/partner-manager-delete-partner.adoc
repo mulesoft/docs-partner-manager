@@ -4,7 +4,7 @@ If you are no longer trading with a partner, you can delete the partner from Par
 
 When you delete a partner, it is removed from the *Partners* page. Also, all of the partner's data is deleted, except for information about partner-related activities that occurred before the deletion.
 
-== Prerequisites On-Premises Installations
+== Prerequisites for On-Premises Installations
 
 To delete a partner in an on-premises installation, ensure that your on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager named `B2BserverGroup` are active and running.
 
@@ -22,5 +22,5 @@ After you delete a partner, you can reuse the partner name.
 
 == See Also
 
-* xref:create-partner.adoc[Configure a New Partner]
-* xref:update-partner-settings.adoc[Upgrade a Partner's Settings]
+* xref:create-partner.adoc[Create a New Partner]
+* xref:modify-partner-settings.adoc[Modify a Partner's Settings]

@@ -13,7 +13,7 @@
   ** xref:edifact-send-settings.adoc[Configure a Partner's EDIFACT Send Settings]
   ** xref:x12-receive-read-settings.adoc[Configure a Partner's X12 Receive Settings]
   ** xref:x12-send-settings.adoc[Configure a Partner's X12 Send Settings]
-  ** xref:update-partner-settings.adoc[Update a Partner's Settings]
+  ** xref:modify-partner-settings.adoc[Modify a Partner's Settings]
   ** xref:partner-manager-delete-partner.adoc[Delete a Partner]
   * xref:partner-manager-configuration-objects.adoc[Configuration Objects]
  ** xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]

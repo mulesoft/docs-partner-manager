@@ -101,4 +101,5 @@ After successfully deleting an identifier, you can create a new identifier with 
 
 == See Also
 
-* xref:x12-receive-read-settings.adoc[X12 Settings - Receive from Partner]
+* xref:create-partner.adoc[Create a New Partner]
+*xref:modify-partner-settings.adoc[Modify a Partner's Settings]

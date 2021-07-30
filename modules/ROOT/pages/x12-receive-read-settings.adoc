@@ -175,5 +175,6 @@ Possible values include:
 
 == See Also
 
-* xref:create-partner.adoc[Create a New Partner]
 * xref:create-inbound-message-flow.adoc[Create and Configure an Inbound Message Flow]
+* xref:create-partner.adoc[Create a New Partner]
+* xref:modify-partner-settings.adoc[Modify a Partner's Settings]

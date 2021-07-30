@@ -69,3 +69,5 @@ Once you have created a partner and configured partner-level endpoints (if neede
 == See Also
 
 * xref:message-flows.adoc[Set Up Message Flows]
+* xref:modify-partner-settings.adoc[Modify a Partner's Settings]
+* xref:partner-manager-delete-partner.adoc[Delete a Partner]
