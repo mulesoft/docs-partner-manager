@@ -11,7 +11,7 @@ To configure a partner's X12 receive settings:
 * <<ack-settings,Acknowledgment settings>>
 * <<validation-settings,Validation settings>>
 * <<control-numbers,Control numbers>>
-* <<character-set,Character set>>
+* <<character-set,Character set and encoding settings>>
 . Click *Save*.
 
 [NOTE]
@@ -61,7 +61,7 @@ If a group contains multiple transaction sets, then the acknowledgment for that 
 [[validation-settings]]
 == Validation Settings
 
-Selecting the checkbox (enabling) for any of these options means that all the X12 documents either meet this condition criteria or receive a 997 failure message:
+Select one or more of the following options to ensure that all X12 messages sent to the partner meet validation rules:
 
 [%header%autowidth.spread]
 |===
@@ -90,7 +90,7 @@ In either case, the error is reported in the 997 acknowledgments.
 
 |Fail document if unknown segments are used
 a|* If selected, Partner Manager rejects transactions that contain any unknown segments.
-* If unselected, Partner Manager ignores unknown segments
+* If unselected, Partner Manager ignores unknown segments.
 
 In either case, the error is reported in the 997 acknowledgments.
 |Enabled
@@ -126,25 +126,24 @@ Use these settings to apply validations related to your partners or your use of 
 |Setting |Description |Default
 
 |Requires unique interchange control number (ISA13)
-a| * If selected, Partner Manager records the interchange numbers previously processed and rejects any duplicate interchange numbers from the same partner (as determined by the interchange sender and receiver identification).
-* If unselected, Partner Manager enables processing of the received interchange to continue.
+a| If selected, Partner Manager records the interchange numbers previously processed and rejects any duplicate interchange numbers from the same partner (as determined by the interchange sender and receiver identification).
 |Disabled
 
 |Requires unique group control number (GS06)
 a| If selected, Partner Manager enforces globally unique Group Control Numbers (GS06) for received functional groups.
 
-This configuration requires group numbers to be unique across all interchanges received from the same partner and application (as determined by the interchange sender and receiver identification, combined with the functional group sender and receiver application codes).
+This configuration requires group numbers to be unique across all interchanges received from the same partner and application, as determined by the interchange sender and receiver identification, combined with the functional group sender and receiver application codes.
 | Disabled
 
 |Requires unique transaction set control number (ST02)
 a| If selected, Partner Manager enforces globally unique Transaction Set Control Numbers (ST02) for received transaction sets.
 
-This configuration requires transaction set numbers to be unique across all functional groups received from the same partner and application (as determined by the interchange sender and receiver identification, combined with the functional group sender and receiver application codes).
+This configuration requires transaction set numbers to be unique across all functional groups received from the same partner and application, as determined by the interchange sender and receiver identification, combined with the functional group sender and receiver application codes.
 |Disabled
 |===
 
-[[character-sets]]
-=== Character Sets
+[[character-set]]
+=== Character Set and Encoding
 
 Use these settings to apply selected character set and encoding options pertaining to your partners and your X12 message:
 
@@ -176,5 +175,5 @@ Possible values include:
 
 == See Also
 
-* xref:create-partner.adoc[Configure a New Partner]
+* xref:create-partner.adoc[Create a New Partner]
 * xref:create-inbound-message-flow.adoc[Create and Configure an Inbound Message Flow]

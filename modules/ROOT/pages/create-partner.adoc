@@ -1,6 +1,6 @@
-= Configure a New Trading Partner
+= Create a New Partner
 
-Create a partner by specifying the partner's name, identifiers, endpoints, validation rules, and other settings.
+Create a new partner by specifying the partner's name, identifiers, endpoints, validation rules, and other settings.
 
 == Prerequisites
 
@@ -25,7 +25,7 @@ After meeting the prerequisites to create a partner:
 | *Name*
 | Text string that easily identifies your partner
 | *Type*
-| Identifier type to help identify the partner
+| Identifier type
 | *Qualifier*
 | Value that appears if you selected *X12-ISA* or *EDIFACT-UNB* as the type
 | *Identifier Value*
@@ -50,7 +50,7 @@ Add the following settings for the new partner, either now or later on:
 | The partner's digital certificates, such as X.509 certificates. (*Are there usually multiple digital certificates?*)
 | Click *New* in the *Certificates* section.
 |
-| The endpoints to use for sending and receiving messages to and from your partner, including acknowledgement endpoints.
+| The partner-specific endpoints to use for sending and receiving messages to and from your partner, including acknowledgement endpoints. If you plan to use host endpoints only, you don't need to create endpoints for the partner.
 | Click *New* in the *Endpoints* section.
 | xref:create-endpoint.adoc[Create and Configure Endpoints]
 | Acknowledgements, validations, and control numbers for each message format that the partner uses. For X12, you can also configure character sets and separators (X12 send format only).

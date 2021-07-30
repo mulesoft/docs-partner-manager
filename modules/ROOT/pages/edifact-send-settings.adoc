@@ -13,7 +13,7 @@ To configure a partner's EDIFACT send settings:
 * <<character-set,Character set and separators>>
 . Click *Save*.
 
-The values you configure in the partner's settings page are used by default for all EDIFACT messages sent to that trading partner. You can override the settings you configure at the message flow level by selecting the Custom option while creating an outbound message flow.
+The values you configure in the partner's settings page are used by default for all EDIFACT messages sent to that trading partner. You can override the settings you configure at the message flow level by selecting the custom option while creating an outbound message flow.
 
 [NOTE]
 It can take up to five minutes for your configuration changes to sync with Mule.
@@ -21,7 +21,7 @@ It can take up to five minutes for your configuration changes to sync with Mule.
 [[general-settings]]
 == General Settings
 
-Use the following settings to configure the general validation rules:
+Use the following settings to configure the general validation rules for outbound EDIFACT messages:
 
 [%header%autowidth.spread]
 |===
@@ -56,6 +56,7 @@ The control number starts with a default value of `1` and increases sequentially
 [NOTE]
 It can take up to five minutes to apply the change at runtime.
 
+[[character-set]]
 == Character Set and Separators
 
 Use the following settings to set the character encoding and delimiters for the generated EDIFACT payload:
@@ -108,5 +109,5 @@ a| When you select *Test* from the drop-down, sets UNB-11 to `1`, which indicate
 
 == See Also
 
-* xref:create-partner.adoc
+* xref:create-partner.adoc[Create a New Partner]
 * xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow]

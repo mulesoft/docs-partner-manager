@@ -1,15 +1,7 @@
-= Work with Trading Partners
+= Configure and Manage Trading Partners
 
 Anypoint Partner Manager gives you the ability to configure and manage trading partners. Use the *Partners* page to:
 
-* xref:create-partner.adoc[Configure a new partner]
-* xref:update-partner-settings.adoc[Update a partner's settings]
+* xref:create-partner.adoc[Create a new partner]
+* xref:modify-partner-settings.adoc[Modify a partner's settings]
 * xref:delete-partner.adoc[Delete a partner]
-
-////
-* xref:Certificates.adoc[Add or delete the digital certificates] associated with a partner.
-* Configure xref:edifact-send-settings[EDIFACT send] and xref:edifact-receive-read-settings[EDIFACT receive] settings, including acknowledgements, validations, and control numbers
-* Configure xref:x12-send-settings[X12 send] and xref:x12-receive-read-settings[X12 receive] settings, including acknowledgements, validations, control numbers, character sets, and global control numbers (X12 send only)
-* xref:partner-manager-identifiers.adoc[Configure partner identifiers].
-* xref:create-endpoint.adoc[Create and manage the source and target endpoints] owned by the partner.
-////

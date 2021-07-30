@@ -1,6 +1,8 @@
-= Update a Partner's Settings
+= Modify a Partner's Settings
 
-To update partner settings:
+You can modify a partner's settings including contact details, identifiers, digital certificates, acknowledgements, control numbers, and more.
+
+To modify a partner's settings:
 
 . In Partner Manager, select *Partners* in the navigation menu.
 . Click the partner.
