@@ -1,4 +1,4 @@
-= Configure a Partner's X12 Send Settings
+= Not Ready for Review: Configure Send Settings for Outbound X12 Messages
 
 Partner Manager enables you to configure the X12 envelope parameters, delimiters, validation rules, character encoding, and control numbers to apply when sending an outbound X12 transmission to a partner.
 
@@ -123,22 +123,8 @@ Use the following settings to set the character encoding and delimiters for the 
 |Character set
 a|Characters allowed in string data.
 
-Possible values include:
-
-* *Basic*
-* *Extended*
-* *Unrestricted* | `Extended`
-
 |Character encoding
 a|Character encoding for messages.
-
-Possible values include:
-
-* *PLATFORM*
-* *ASCII*
-* *ISO8859_1*
-* *IBM1047*
-* *UTF8* | `UTF8`
 
 |Segment terminator
 a|Segment terminator character.
@@ -156,16 +142,6 @@ a|Component element separator character.
 a|Line ending to add between segments. This enables you to add line endings between segments to improve the readability of the output message text.
 
 Possible values include:
-
-* *NONE* +
-X12 payload generated will be a single line, with segments separated by the segment terminator character
-* *CR* +
-Carriage Return
-* *CRLF* +
-Carriage Return & Line Feed
-* *LF* +
-Line Feed
-|`CRLF`
 |===
 
 == See Also
