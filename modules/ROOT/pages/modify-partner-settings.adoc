@@ -14,7 +14,7 @@ To modify a partner's settings:
 |Partner information, including a partner's address, website, and contact details a|
 * Modify partner information
 +
-Click *Edit* in the *About* section, click the appropriate link, and make the desired modifications.
+Click *Edit* in the *About* section, click the contact type, and make the desired modifications.
 +
 * Delete a contact
 +
@@ -29,6 +29,9 @@ Click *New* in the *Identifiers* section and enter the required fields.
 * Delete an identifier
 +
 Select the identifier and click *Delete*.
++
+Because a partner must have at least one identifier, you can't delete the last one.
++
 | xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
 | The partner's digital certificates, such as X.509 certificates
 | Click *New* in the *Certificates* section.
@@ -45,7 +48,7 @@ Click the endpoint's link and click *Delete*.
 | Acknowledgements, validations, control numbers, character sets (X12 only), and separators (X12 send format only).
 a| * Modify
 +
-Click the links in the *Validation and acknowledgement settings* section, click a protocol link, and make the desired modifications.
+Click the appropriate link in the *Validation and acknowledgement settings* section, and make the desired modifications.
 a|
 * xref:edifact-receive-read-settings.adoc[EDIFACT Receive Settings]
 * xref:edifact-send-settings.adoc[EDIFACT Send Settings]

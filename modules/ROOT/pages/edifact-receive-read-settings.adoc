@@ -1,13 +1,13 @@
-= Configure a Partner's EDIFACT Receive Settings
+= Configure EDIFACT Receive Settings for a Partner
 
-Partner Manager receive settings include EDIFACT acknowledgments and the validation rules to apply when processing an inbound EDIFACT message.
+Partner Manager receive settings include the EDIFACT acknowledgments and validation rules to apply when processing an inbound EDIFACT message from the specified partner.
 
-To configure a partner's EDIFACT receive settings:
+To configure EDIFACT receive settings:
 
 . In the navigation menu, select *Partners*.
-. Select the partner for whom to configure the settings.
-. In the *Validation and acknowledgment settings* section's *Send to <partner-name>* column, click *EDIFACT*.
-. In menu on the left, select the setting to configure:
+. Select the partner to which these settings apply.
+. In the *Validation and acknowledgment settings* section's *Receive from <partner-name>* column, click *EDIFACT*.
+. Select a link to configure:
 * <<ack-settings,Acknowledgment settings>>
 * <<validation-settings,Validation settings>>
 * <<control-numbers,Control Numbers>>
@@ -19,14 +19,19 @@ It can take up to five minutes or so for your configuration changes to sync with
 [[ack-settings]]
 == Acknowledgment Settings
 
-Optionally configure functional acknowledgment settings for each message flow. These settings apply only if the routing of a message flow fails.
+Optionally configure acknowledgment settings for each Inbound EDIFACT message flow. To configure acknowledgement settings:
 
-To configure acknowledgement settings:
+*Vijay, please make sure these descriptions are correct. Is there a better way to distinguish them from each other in the decriptions?*
 
-. Enable the *Send CONTRL functional acknowledgement when messages fail to route to a message flow* setting.
-. Select an endpoint from which the functional acknowledgment message is sent to the partner.
+* Enable *Send CONTRL technical acknowledgement for each transmission from <partner-name>*.
++
+This acknowledgement indicates whether Partner Manager received and accepted the message.
++
+* Enable the *Send CONTRL functional acknowledgement when messages fail to route to a message flow* setting.
++
+This acknowledgement indicates whether Partner Manager received and accepted the message when there is a routing failure.
 
-The *Send CONTRL functional acknowledgement when messages fail to route to a message flow* setting provides a functional acknowledgment (the receipt and syntactical acceptability of a message) with the exchange.
+If you enable one of these options, you must either select the partner endpoint to which to send the acknowledgements or create a new endpoint for this purpose.
 
 == Validation Settings
 
@@ -82,12 +87,12 @@ Use these settings to apply validations related to your partner or to your use o
 |===
 |Setting |Description |Default
 
-|Requires unique interchange control number
+|Require unique interchange control number
 a| * If selected, Partner Manager records the interchange numbers previously processed and rejects duplicate interchange numbers from the same partner, as determined by the interchange sender and receiver identification.
 * If unselected, Partner Manager enables processing of the received interchange to continue.
 |Disabled
 
-|Requires unique message control number
+|Require unique message control number
 a| If selected, Partner Manager enforces globally unique message control numbers (UNH01) for received transaction sets.
 
 This configuration requires message control numbers to be unique across all EDIFACT messages received from the same partner and application, as determined by the interchange sender and receiver identification and application codes.

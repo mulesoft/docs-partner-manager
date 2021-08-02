@@ -44,13 +44,13 @@ Add the following settings for the new partner, either now or later on:
 |Information about the partner, such as the partner's address, website, and contact details.
 | Click *Edit* in the *About* section.
 |
-| One or more identifiers to associate with the partner.
+| Additional identifiers to associate with the partner.
 | Click *New* in the *Identifiers* section.
 | xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
-| The partner's digital certificates, such as X.509 certificates. (*Are there usually multiple digital certificates?*)
+| The partner's digital certificates, such as X.509 certificates.
 | Click *New* in the *Certificates* section.
 |
-| The partner-specific endpoints to use for sending and receiving messages to and from your partner, including acknowledgement endpoints. If you plan to use host endpoints only, you don't need to create endpoints for the partner.
+| The partner-specific endpoints to use for sending and receiving messages to and from your partner, including acknowledgement endpoints. If you plan to use host endpoints only, you don't need to create partner-specific endpoints.
 | Click *New* in the *Endpoints* section.
 | xref:create-endpoint.adoc[Create and Configure Endpoints]
 | Acknowledgements, validations, and control numbers for each message format that the partner uses. For X12, you can also configure character sets and separators (X12 send format only).
