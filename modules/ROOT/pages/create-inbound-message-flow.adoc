@@ -3,6 +3,8 @@
 
 You can create and configure an inbound message flow to receive EDI messages from your trading partners, including messages that go through 3rd party connections. When you create an inbound message flow, you can validate and transform the inbound messages and then send the translated message (JSON or XML) to your backend applications.
 
+To receive messages sent from a trading partner through a 3rd party connection, select an endpoint owned by that connection. 
+
 === Prerequisites
 Before you create your first inbound message flow, you must configure your xref:setup-payload-storage-API.adoc[payload storage API].
 
