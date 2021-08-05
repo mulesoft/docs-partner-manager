@@ -6,7 +6,7 @@ Partner Manager uses endpoints to receive transmissions from partners and messag
 
 == Endpoint Ownership
 
-You can assign the host or a trading partner as the owner of partner-facing endpoints to control the use of endpoints within inbound and outbound message flows.
+You can assign the host, partner, or 3rd party connection as the owner of endpoints to control the use of endpoints within inbound and outbound message flows.
 
 When creating partner-facing endpoints directly from the host or a trading partner, the ownership of the endpoint is automatically assigned to the host or trading partner from which the endpoint was created.
 

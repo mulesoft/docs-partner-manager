@@ -1,14 +1,10 @@
 = Create and Configure Endpoints
 
-You can create new host-owned, partner-owned, and third-party-connection-owned endpoints from the *Host* or *Partner* page or by using the Message Flow wizard.
+You can create new endpoints from the *Host* or *Partner* page, or by using the Message Flow wizard.
 
-The following table describes the endpoint types, along with their supported protocols and owners:
+== Create Endpoints from the Partners Page
 
-
-
-== Create Endpoints Using the Partners Page
-
-Use the *Partners* page to create new send and receive endpoints owned by partners or 3rd party connections:
+You can use the *Partners* page to create new send and receive endpoints owned by partners or 3rd party connections:
 
 . In the navigation menu, select *Partners*.
 . Select the partner or 3rd party connection for which to create the endpoint.
@@ -20,9 +16,9 @@ Use the *Partners* page to create new send and receive endpoints owned by partne
 
 Ownership of the endpoints (receive or send) is automatically assigned based on the partner or 3rd party connection from which you are creating the endpoint.
 
-== Use the Host Page to Create Endpoints
+== Create Endpoints from the Host page
 
-Use the *Host* page to create new end and receive endpoints owned by the host:
+You can use the *Host* page to create new send and receive endpoints owned by the host:
 
 . In the navigation menu, select the host.
 . In the *Endpoints* section, click *New*.
@@ -33,25 +29,29 @@ Use the *Host* page to create new end and receive endpoints owned by the host:
 
 == Create Endpoints Using the Message Flow Wizard
 
-When creating endpoint types using the Message Flow wizard, the ownership of the endpoint is automatically assigned to the host, partner, or third party connection from which the endpoint was created. Using the Message Flow wizard, you can xref:configure-message-flows.adoc[Create and Configure an Inbound Message Flow] or xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow].
+You can use the Message Flow Wizard to create send and receive endpoints owned by hosts, partners, or 3rd party connections.
+
+For information about using the Message Flow wizard to create new endpoints, see xref:configure-message-flows.adoc[Create and Configure an Inbound Message Flow] and xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow].
 
 == Supported Endpoint Protocols
 
 The configuration of Partner Manager endpoints depends on the protocol used to send and receive messages.
 
 Partner Manager supports the following endpoint protocols:
-*Vijay, should Backend be labeled Host instead?*
+*Vijay, should Backend be labeled Host instead?.
 
+The following table describes the endpoint types, along with their supported protocols and owners:
+
+[%header%autowidth.spread]
 |===
-|Type | Protocol | Can be owned by
-| Receive from partner | AS2 | Host
-| Receive from partner | FTP, SFTP | Host, partner, 3rd party connection
-| Send to partner | AS2 | Partner, 3rd party connection
+|Endpoint Type | Protocol | Can be owned by
+.1+| Source at host .2+.^| FTP, HTTP, HTTPS, SFTP .2+| Host
+.1+| Target at host
+.2+.^| Receive from partners .1+| AS2 .1+| Host
+.1+| FTP, SFTP .1+| Host, partner, 3rd party connection
+.2+.^| Send to partners .1+| AS2 | Partner, 3rd party connection
+.1+| FTP, HTTP, HTTPS, SFTP .1+| Host, partner, 3rd party connection
 |===
-
-
-
-
 
 == Endpoint Runtime Services
 

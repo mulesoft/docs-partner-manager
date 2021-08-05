@@ -1,7 +1,7 @@
 = Create and Configure an Inbound Message Flow
 :page-aliases: configure-message-flows.adoc
 
-You can create and configure an inbound message flow to receive EDI messages from your trading partners, including trading partners that are 3rd party aggregators. When you create an inbound message flow, you can validate and transform the inbound messages and then send the translated message (JSON or XML) to your backend applications.
+You can create and configure an inbound message flow to receive EDI messages from your trading partners, including messages that go through 3rd party connections. When you create an inbound message flow, you can validate and transform the inbound messages and then send the translated message (JSON or XML) to your backend applications.
 
 === Prerequisites
 Before you create your first inbound message flow, you must configure your xref:setup-payload-storage-API.adoc[payload storage API].
@@ -10,7 +10,7 @@ Before you create your first inbound message flow, you must configure your xref:
 
 . From the Anypoint Partner Manager navigation menu, select *Message Flows*.
 . Click *New message flow > Receive from partner*.
-. Either select an existing partner from the list or select *New* to xref:configure-partner.adoc#create-partner[Create a partner].
+. Either select an existing partner from the list or select *New* to create a new partner, as described in xref:create-partner.adoc#[Create a partner].
 +
 A new message flow is created.
 +
@@ -36,7 +36,7 @@ To specify the receiving endpoint:
 . In the *Receiving endpoint* section, click *Select*.
 . In the *Select an endpoint: Receive from <partner>* window, do either of the following:
 * Select an existing receiving endpoint and click  *Select*.
-* Click *New* to create a new endpoint, as described in xxx.
+* Click *New* to create a new endpoint, as described in xref:<<create-endpoint.adoc, Create and Configure Endpoints>>.
 +
 The endpoint is added to the message flow, and a message appears indicating that the endpoint is missing an identifier.
 +
