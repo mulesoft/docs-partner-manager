@@ -2,9 +2,15 @@
 
 You can use these settings to set up SFTP endpoints in one of the following contexts:
 
-* Receive from partners +
-Receive inbound EDI files from your trading partners used in inbound message flows
-* Source at host +
+* Receive messages directly from partners
++
+Receive inbound EDI files directly from the trading partners used in inbound message flows
++
+* Receive messages from partners through 3rd party connections
++
+Receive inbound EDI files from the trading partners used in inbound message flows through 3rd party connection endpoints
+* Source at host
++
 Receive application messages (in JSON or XML format) from your backend applications used in outbound message flows
 
 You can create the STFP identifiers for your organization and for your trading partners in the profile pages xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner].

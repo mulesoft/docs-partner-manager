@@ -1,4 +1,4 @@
-= Configure and Manage Trading Partners
+= Configure and Manage 3rd Party Connections
 
 Anypoint Partner Manager gives you the ability to configure and manage trading partners.
 

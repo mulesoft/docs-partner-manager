@@ -2,7 +2,7 @@
 
 Use these to set up AS2 endpoint settings to send outbound EDI files to your partners.
 
-Create the AS2 identifiers for your organization and your partners in the respective host and partner profile pages.
+Create the AS2 identifiers for your organization and your partners in the respective host, and partner profile pages.
 
 [%header%autowidth.spread]
 |===

@@ -2,9 +2,14 @@
 
 You can use these settings to set up SFTP endpoints in one of the following contexts:
 
-* Send to partners +
-Send outbound EDI files to your trading partners in outbound message flows.
-* Target at host +
+* Send messages directly to partners
++
+Send outbound EDI files directly to your trading partners in outbound message flows.
+* Send messages to partners through 3rd party connections
++
+Send outbound EDI files from the trading partners used in outbound message flows through 3rd party connection endpoints.
+* Target at host 
++
 Send application messages (JSON or XML) to your backend applications in inbound message flows.
 
 You can create the STFP identifiers for your organization and for your trading partners in the respective xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner] profile pages.

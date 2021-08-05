@@ -2,6 +2,8 @@
 
 You can create and configure an outbound message flow to receive application messages from your backend systems, validate and transform these messages, and then send the translated EDI message to your trading partners either directly, or through 3rd party connections.
 
+To send messages to a trading partner through a 3rd party connection, select an endpoint owned by that connection.
+
 == Create an Outbound Message Flow
 
 . From your Anypoint Partner Manager sandbox or production environment, select *Message Flows* in the navigation menu.
