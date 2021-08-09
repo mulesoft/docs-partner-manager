@@ -1,5 +1,12 @@
 = AS2 Send Endpoint Settings
 
+
+Your organization's AS2 send endpoint settings determine where to send inbound data from partners or 3rd party connections. One AS2 endpoint can receive inbound data from multiple partners, 3rd party connections, or both.
+
+Only the host and partners can own an AS2 receive endpoint. Use a host-owned AS2 endpoint for a message flow that uses a 3rd party connection.
+
+Create AS2 endpoints by using these settings in the host and partners settings pages:
+
 Use these to set up AS2 endpoint settings to send outbound EDI files to your partners.
 
 Create the AS2 identifiers for your organization and your partners in the respective host, and partner profile pages.

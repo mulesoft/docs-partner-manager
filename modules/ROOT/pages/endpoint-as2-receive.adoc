@@ -1,47 +1,49 @@
 = AS2 Receive Endpoint Settings
 
-Your organization's AS2 receive endpoint settings determine where to receive inbound data from partners or 3rd party connections. One AS2 endpoint can receive inbound data from multiple partners, third party connections, or both.
+Your organization's AS2 receive endpoint settings determine where to receive inbound data from partners or 3rd party connections. Only a host can own AS2 receive endpoints.
 
-Create AS2 identifiers for your organization as the host and for your trading partners and 3rd party connections in their respective profile pages.
+Create AS2 send endpoints by configuring these settings on the host page:
 
 [%header%autowidth.spread]
 |===
 | Setting | Description | Required
 |Owner
-|The host or partner that owns the endpoint.
+|Host that owns the endpoint
 |Yes
 
 |Usage
-|How the endpoint is used. For receive endpoints, the value in this field is `Receive from partners`. The value in this field is automatically generated based on the type of endpoint created.
+|`Receive from partners`
 |No
 
 |Protocol
-|The protocol previously selected in the *Protocol* field of the *New endpoint: Receive from partners* window, which you can subsequently modify manually.
+|`AS2`
 |Yes
 
 |Endpoint name
-|The automatically generated name used to identify the endpoint, which you can subsequently modify manually.
+|Automatically-generated name used to identify the endpoint, which you can subsequently modify manually
 |Yes
 
 |Description
-|The user-supplied description of the purpose and use of the endpoint.
+|User-supplied description of the endpoint use
 |No
 
 |Private port (when deploying to VPC)
-a|When enabled, the AS2 receive endpoint application is deployed to the private port 8092 in Mule in your xref:runtime-manager::virtual-private-cloud.adoc[CloudHub VPC]. You can manage the access control to the endpoint via the VPC and the dedicated load balancer settings.
+a|When enabled, the AS2 receive endpoint application deploys to the private port 8092 in Mule in your xref:runtime-manager::virtual-private-cloud.adoc[CloudHub VPC]. You can manage the access control to the endpoint via the VPC and the dedicated load balancer settings.
 
-When disabled, the AS2 receive endpoint application is deployed to the public port 8082 by default. You can access the endpoint URL directly over the internet.
+When disabled, the AS2 receive endpoint application deploys to the public port 8082 by default. You can access the endpoint URL directly over the internet.
 
 [Note]
 This configuration is applicable to CloudHub VPC deployments from Partner Manager only.
 |No
 
 |<Host> keystore
-|The host xref:create-keystore.adoc[keystore] files in your environment that house your organization's public certificate and private key.
+|Host xref:create-keystore.adoc[keystore] files in your environment that house your organization's public certificate and private key
 |Yes
 |===
 
 == AS2 Receive Endpoint URL
+
+You can deploy an AS2 receive endpoint on a public port, private port, or on-premises.
 
 === Deploy to CloudHub on a Public Port
 
