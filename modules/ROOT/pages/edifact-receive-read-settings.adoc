@@ -21,7 +21,7 @@ It can take up to five minutes or so for your configuration changes to sync with
 
 Optionally configure acknowledgment settings for each Inbound EDIFACT message flow. To configure acknowledgement settings:
 
-*Vijay, please make sure these descriptions are correct. Is there a better way to distinguish them from each other in the decriptions?*
+*Vijay, please make sure these descriptions are correct.*
 
 * Enable *Send CONTRL technical acknowledgement for each transmission from <partner-name>*.
 +
@@ -29,7 +29,7 @@ This acknowledgement indicates whether Partner Manager received and accepted the
 +
 * Enable the *Send CONTRL functional acknowledgement when messages fail to route to a message flow* setting.
 +
-This acknowledgement indicates whether Partner Manager received and accepted the message when there is a routing failure.
+When there is a routing failure, this acknowledgement indicates whether Partner Manager validated the message.
 
 If you enable one of these options, you must either select the partner endpoint to which to send the acknowledgements or create a new endpoint for this purpose.
 
