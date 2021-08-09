@@ -1,12 +1,10 @@
 = *Not Done* AS2 Send Endpoint Settings
 
-Your organization's AS2 send endpoint settings determine which endponts from which to send outbound EDI messages either directly to partners or to partners through 3rd party connections.
+Your organization's AS2 send endpoint settings configure the endpoints from which to send outbound EDI messages to partners, either directly or through 3rd party connections.
 
 Only the host and partners can own an AS2 receive endpoint. Use a host-owned AS2 endpoint for a message flow that uses a 3rd party connection.
 
-Create AS2 endpoints by using these settings in the host and partners settings pages:
-
-Create the AS2 identifiers for your organization and your partners in the respective host, and partner profile pages.
+Create AS2 endpoints by configuring these settings on the host or partners pages:
 
 [%header%autowidth.spread]
 |===
@@ -25,31 +23,31 @@ Create the AS2 identifiers for your organization and your partners in the respec
 |Yes
 
 |Partner
-|The partner to whom the transaction is sent.
+|Partner to whom the transaction is sent
 |Yes
 
 |Endpoint Name
-|The name used to identify the endpoint. The value in the *Endpoint Name* field is generated automatically but can be modified manually.
+|Automatically-generated name that identifies the endpoint. You can modify this name later on.
 | Yes
 
 |Description
-|The user-defined field for describing the purpose and use of the endpoint.
+|User-supplied description of the endpoint's purpose and use.
 | No
 
 |Partner AS2 URL
-|Your trading partner’s AS2 URL to which outbound EDI transmissions are sent.
+|Your partner’s AS2 URL to which outbound EDI transmissions are sent.
 |Yes
 
 |Connection timeout
-|The timeout for establishing a connection to the remote service. The value in this field is set to `30 Seconds` by default.
+|Timeout for establishing a connection to the remote service. The default is `30 Seconds`.
 |Yes
 
 |Retry interval
-|The frequency of reconnection attempts when unable to connect to the remote AS2 service. The value in this field is set to `30 Seconds` by default.
+|Frequency of reconnection attempts when unable to connect to the remote AS2 service. The default is `30 Seconds`.
 |Yes
 
 |Maximum retry attempts
-|The maximum number of reconnection attempts to make.
+|Maximum number of reconnection attempts to make.
 |Yes
 
 |<Host> AS2 identifier
@@ -57,23 +55,23 @@ Create the AS2 identifiers for your organization and your partners in the respec
 |Yes
 
 |Partner AS2 identifier
-|Your trading partner’s AS2 identifier.
+|Your partner’s AS2 identifier.
 |Yes
 
 |Respond to email address
-|The email address used as HTTP 'From' header when sending.
+|Email address used as the HTTP 'From' header when sending.
 |Yes
 
 |Message subject
-|The user-defined field for MIME Subject header.
+|User-defined field for the MIME Subject header.
 |Yes
 
 |Filename pattern
-|xref:file-name-pattern.adoc[File name pattern] as required by your partner or backend application.
+|xref:file-name-pattern.adoc[File name pattern] required by your partner or backend application.
 |Yes
 
 |Request receipt
-a|Specify if you want the partner to return an MDN receipt, confirming the receipt of the message.
+a|Whether you want the partner to return an MDN receipt, confirming the receipt of the message.
 
 Allowed values include:
 
@@ -89,15 +87,15 @@ Allowed values include:
 |Yes
 
 |Signature algorithm
-|The xref:as2-endpoints-algorithms.adoc[algorithm] to use when setting the message integrity check value.
+|xref:as2-endpoints-algorithms.adoc[Algorithm] to use when setting the message integrity check value.
 |Yes
 
 |MDN signature algorithm
-|The request for a partner to respond with a signed MDN using this xref:as2-endpoints-algorithms.adoc[algorithm] for calculating MIC.
+|Request for a partner to respond with a signed MDN using this xref:as2-endpoints-algorithms.adoc[algorithm] for calculating MIC.
 |Yes
 
 |Encryption algorithm
-|The xref:as2-endpoints-algorithms.adoc[algorithm] to use when encrypting the message to be sent.
+|xref:as2-endpoints-algorithms.adoc[Algorithm] to use when encrypting the message to send.
 |Yes
 
 |MDN response

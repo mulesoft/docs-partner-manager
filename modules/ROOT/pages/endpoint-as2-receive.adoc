@@ -20,7 +20,7 @@ Create AS2 receive endpoints by configuring these settings on the host page:
 |Yes
 
 |Endpoint name
-|Automatically-generated name used to identify the endpoint, which you can modify manually later on
+|Automatically-generated name that identifies the endpoint. You can modify this name later on.
 |Yes
 
 |Description
