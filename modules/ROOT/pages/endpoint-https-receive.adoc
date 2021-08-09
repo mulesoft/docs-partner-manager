@@ -1,42 +1,37 @@
 = HTTP and HTTPS Receive Endpoint Settings
 
-Configure HTTP and HTTPS receive endpoints to receive application messages (JSON or XML format) from your backend applications in outbound message flows.
+Configure HTTP and HTTPS receive endpoints to receive application messages (JSON or XML format) from your backend applications in outbound message flows (*Vijay, wouldn't these be inbound message flows?*).
 
 [%header%autowidth.spread]
 |===
 |Name |Description |Required
 |Endpoint Name
-|The automatically generated name to identify the endpoint, which you can subsequently modify manually.
+|Automatically-generated name to identify the endpoint, which you can modify later on
 |Yes
 
 | Owner
-| The partner or host that owns the endpoint.
+| Partner or host that owns the endpoint
 | Yes
 
 | Protocol
-| The protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window. The value in this field cannot be modified.
+| Protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window. You cannot modify this value.
 | Yes
 
 | Description
-| The user-supplied value for describing the purpose and use of the endpoint.
+| User-supplied value for describing the purpose and use of the endpoint
 | No
 
 |URL
-a|The HTTP or HTTPS address where you receive outbound source messages from backend systems.
+a|HTTP or HTTPS address where you receive outbound source messages from backend systems
 |Yes
 
 |Connection idle timeout
-|The connection idle timeout period in milliseconds. The value in this field is set to `30000` by default.
+|Connection idle timeout period in milliseconds. The default is  `30000`.
 |Yes
 
 |Authentication type
-a|The type of authentication method used to protect the HTTP receive service.
+a|Type of authentication method used to protect the HTTP receive service
 
-Possible values include:
-
-* None
-* API key
-* Basic
 |Yes
 
 |Basic authentication
@@ -48,7 +43,7 @@ The backend applications that send JSON or XML payloads to the HTTP receive endp
 |Yes
 
 |API Key
-a|The API key for the HTTP listener.
+a|API key for the HTTP listener
 
 After selecting *API Key* in the *Authentication type* picklist, specify the HTTP header name and API key to protect the HTTP listener. After saving your new or reconfigured endpoint, you cannot subsequently retrieve or modify the API key.
 
@@ -58,6 +53,8 @@ The backend applications that send JSON or XML payloads to the HTTP receive endp
 |===
 
 == HTTP or HTTPS Receive Endpoint URL
+
+You can deploy an HTTP or HTTPS receive endpoint on a public port, private port, or on-premises.
 
 === Deploy to CloudHub on a Public Port
 

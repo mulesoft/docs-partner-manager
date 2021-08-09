@@ -10,64 +10,64 @@ Receive inbound EDI files directly from the trading partners used in inbound mes
 Receive inbound EDI files from the trading partners used in inbound message flows through 3rd party connection endpoints
 * Source at host
 +
-Receive application messages (in JSON or XML format) from your backend applications used in outbound message flows
+Receive application messages (in JSON or XML format) from your backend applications through outbound message flows
 
-You can create the FTP identifiers for your organization and trading partners in the profile pages xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner].
+You can create the FTP identifiers for your organization and trading partners in the xref:configure-host.adoc[host] and xref:configure-partner.adoc[partner] settings pages.
 
 [%header%autowidth.spread]
 |===
 |Name |Description | Required
 | Endpoint Name
-| The automatically generated name used to identify the endpoint, which you can subsequently modify manually.
+| Automatically-generated name that identifies the endpoint, which you can modify later on
 | Yes
 
 | Owner
-| The trading partner or host that owns the endpoint.
+| Host or partner who owns the endpoint
 | Yes
 
 | Protocol
-| The protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window. The value in this field cannot be modified.
+| Protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window. The value in this field cannot be modified.
 | Yes
 
 | Description
-| The user-supplied value for describing the purpose and use of the endpoint.
+| User-supplied description of the endpoint's purpose and use.
 | No
 
 | Host
-| The FTP server host, such as `ftp.mulesoft.com`, `localhost`, or `192.168.0.1`. The host must be accessible from your Mule environment.
+| FTP server host, such as `ftp.mulesoft.com`, `localhost`, or `192.168.0.1`. The host must be accessible from your Mule environment.
 | Yes
 
 | Port
-| The port number of the FTP server.
+| Port number of the FTP server.
 | Yes
 
 | Username
-| The username for the FTP server.
+| Username of the FTP server.
 | Yes, if the server is authenticated.
 
 | Password
-| The password for the FTP server.
+| Password for the FTP server.
 | Yes, if the server is authenticated.
 
 | Source path
-| The path on the FTP server to which your trading partner sends the inbound files.
+| Path on the FTP server to which your trading partner sends the inbound files.
 | Yes
 
 | Polling Frequency
-| The frequency in which the server checks the source path for new files. The value in this field is `1 minute` by default.
+| Frequency with which the server checks the source path for new files. The default is `1 minute`.
 | Yes
 
 | Size check wait time
-| The wait time, in seconds, between size checks to determine if a file is ready for processing. The value in this field is `1 second` by default. This allows a file write to complete before processing.
+| Wait time, in seconds, between size checks to determine if a file is ready for processing. The default is `1 second`. This default allows a file write to complete before processing.
 
-Mule performs two size checks by waiting the amount of time specified in the `Size check wait time` field. If both checks return the same value, the file is ready to process.
+(*Needs to be reworded*. Mule performs two size checks by waiting the amount of time specified in the `Size check wait time` field. If both checks return the same value, the file is ready to process.
 
 To disable this feature, specify a negative number or omit the value.
 
 | Yes
 
 | Archival Path
-| Specify an FTP server path at which to store a copy of the file that was obtained from `source path`.
+| FTP server path at which to store a copy of the file obtained from `source path`.
 | No
 |===
 
