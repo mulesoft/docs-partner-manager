@@ -1,32 +1,26 @@
 = FTP Receive Endpoint Settings
 
-Your organization's FTP receive endpoint settings determine where to receive or send the following types of data:
+Your organization's FTP receive endpoint settings determine where to receive data in the following contexts:
 
 * Receive from partners
 +
-Inbound EDI data received by the host from partners or 3rd party connections
+Source endpoint in an inbound message flow that receives B2B/EDI messages from partners directly or via 3rd party connections.
 +
 * Source at host
 +
-Outbound JSON or XML data received on the host from backend applications
-+
-* Target at host
-+
-Inbound XML or JSON data sent to the backend applications from the host
+Source endpoint in an outbound message flow that receives application JSON and XML messages from the backend systems.
 
-A host, partner, or 3rd party connection can own FTP endpoints.
-
-Create FTP receive endpoints by configuring these settings on the xref:configure-host.adoc[host] and xref:configure-partner.adoc[Partner] pages:
+Configure an FTP endpoint from the host page or partner page:
 
 [%header%autowidth.spread]
 |===
 |Name |Description | Required
 | Endpoint Name
-| Automatically-generated name that identifies the endpoint. You can modify this value later on.
+| Automatically-generated name that identifies the endpoint, which you can modify later on
 | Yes
 
 | Owner
-| Partner, 3rd party connection, or host who owns the endpoint.
+| Host or partner who owns the endpoint
 | Yes
 
 | Protocol
@@ -34,7 +28,7 @@ Create FTP receive endpoints by configuring these settings on the xref:configure
 | Yes
 
 | Description
-| User-supplied description of the endpoint's purpose and use.
+| User-supplied value that describes the purpose and use of the enpoint.
 | No
 
 | Host
@@ -64,7 +58,16 @@ Create FTP receive endpoints by configuring these settings on the xref:configure
 | Size check wait time
 | Wait time, in seconds, between size checks to determine if a file is ready for processing. The default is `1 second`. This default allows a file write to complete before processing.
 
-Mule performs two size checks by waiting the amount of time specified in this field. If both checks return the same value, the file is ready to process.
+Mule performs two size checks by waiting the amount of time specified in the `Size check wait time` field. If
+
+
+
+
+
+
+
+
+ both checks return the same value, the file is ready to process.
 
 To disable this feature, specify a negative number or omit the value.
 

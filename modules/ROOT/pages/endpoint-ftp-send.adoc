@@ -1,20 +1,13 @@
 = FTP Send Endpoint Settings
 
-You can use these settings to set up FTP endpoints in one of the following contexts:
+Your organization's FTP send endpoint settings determine where to send data From in the following contexts:
 
-* Send to partners directly
+* Send to partners
 +
-Send outbound EDI files directly to your trading partners in outbound message flows.
-+
-* Send messages to partners through 3rd party connections
-+
-Send outbound EDI files from the trading partners used in outbound message flows through 3rd party connection endpoints.
-* Send messages to partners through 3rd party connections
-+
-Send outbound EDI files from the trading partners used in outbound message flows through 3rd party connection endpoints.
+In an outbound message flow, endpoints on the host from which to send EDI messages to partners or 3rd party connections
 * Target at host
 +
-Send application messages (JSON or XML) to your backend applications in inbound message flows.
+In an inbound message flow, endpoints on the backend systems that receive JSON or XML messages from the host
 
 You can create the FTP identifiers for your organization and for your trading partners in the respective xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner] profile pages.
 

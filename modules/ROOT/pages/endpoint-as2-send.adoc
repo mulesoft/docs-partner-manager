@@ -2,7 +2,7 @@
 
 Your organization's AS2 send endpoint settings configure the endpoints from which to send outbound EDI messages to partners, either directly or through 3rd party connections.
 
-Only the host and partners can own an AS2 receive endpoint. Use a host-owned AS2 endpoint for a message flow that uses a 3rd party connection.
+Both the host and partners can own an AS2 receive endpoint. Use a host-owned AS2 send endpoint for a message flow that uses a 3rd party connection.
 
 Create AS2 endpoints by configuring these settings on the host or partners pages:
 
@@ -11,15 +11,15 @@ Create AS2 endpoints by configuring these settings on the host or partners pages
 |Setting |Description |Required
 
 |Owner
-|The partner or host that owns the endpoint.
+|Partner or host that owns the endpoint.
 |Yes
 
 |Usage
-|How the endpoint is used. For receive endpoints, the value in this field is `Send to partners`. The value in this field is automatically generated based on the type of endpoint created.
+|`Send to partners`
 |No
 
 |Protocol
-|The protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window.
+|Protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window.
 |Yes
 
 |Partner
@@ -27,7 +27,7 @@ Create AS2 endpoints by configuring these settings on the host or partners pages
 |Yes
 
 |Endpoint Name
-|Automatically-generated name that identifies the endpoint. You can modify this name later on.
+|Automatically-generated name that identifies the endpoint. You can modify this value later on.
 | Yes
 
 |Description
@@ -59,7 +59,7 @@ Create AS2 endpoints by configuring these settings on the host or partners pages
 |Yes
 
 |Respond to email address
-|Email address used as the HTTP 'From' header when sending.
+|Email address to use as the HTTP 'From' header when sending.
 |Yes
 
 |Message subject
@@ -71,14 +71,7 @@ Create AS2 endpoints by configuring these settings on the host or partners pages
 |Yes
 
 |Request receipt
-a|Whether you want the partner to return an MDN receipt, confirming the receipt of the message.
-
-Allowed values include:
-
-* NONE
-* UNSIGNED
-* SIGNED_OPTIONAL
-* SIGNED_REQUIRED
+a|Whether you want the partner to return an MDN receipt, which confirms the receipt of the message.
 
 |Yes
 
@@ -99,7 +92,7 @@ Allowed values include:
 |Yes
 
 |MDN response
-|The AS2 messages sent from Partner Manager always request the receiver to send a Synchronous MDN receipt back. The value in this field is set to `Sync` by default.
+|The AS2 messages sent from Partner Manager always request the receiver to send a Synchronous MDN receipt back. The default is `Sync`.
 | Yes
 |===
 

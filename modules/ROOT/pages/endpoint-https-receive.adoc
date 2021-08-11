@@ -2,17 +2,12 @@
 
 Your organization's HTTP and HTTPS receive endpoint settings determine where to receive or send the following types of data:
 
+* Receive from partners
++
+Source endpoint in an inbound message flow that receives B2B/EDI messages from partners directly or via 3rd party connections.
 * Source at host
 +
-Outbound JSON or XML data received on the host from backend applications
-+
-* Send to partners
-+
-Outbound EDI data received by the partner or 3rd party connection from the host
-+
-* Target at host
-+
-Inbound JSON or XML data sent to the backend applications from the host
+Source endpoint in an outbound message flow that receives application JSON and XML messages from the backend systems.
 
 A host, partner, or 3rd party connection can own HTTP and HTTPS receive endpoints.
 
@@ -42,7 +37,7 @@ a|HTTP or HTTPS address where you receive outbound source messages from backend 
 |Yes
 
 |Response timeout (in milliseconds)
-|Connection idle timeout period in milliseconds. The default is  `15000`.
+|Response timeout period in milliseconds. The default is  `15000`.
 |Yes
 
 |Authentication type

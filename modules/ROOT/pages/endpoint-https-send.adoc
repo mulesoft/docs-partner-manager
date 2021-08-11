@@ -6,10 +6,10 @@ You can use the following types of send endponts:
 
 * Send to partners
 +
-Sends outbound EDI files to your partners or 3rd party connections, or both, in outbound message flows
+In an outbound message flow, endpoints on the host from which to send EDI messages to partners or 3rd party connections
 * Target at host
 +
-Sends application messages (JSON or XML) to your backend applications in inbound message flows (*Vijay should this be outbound messageflows?*)
+In an inbound message flow, endpoints on the backend systems that receive JSON or XML messages from the host
 
 Only hosts and partners can own HTTP and HTTPS send endpoints.
 
