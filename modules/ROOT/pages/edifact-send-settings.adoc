@@ -1,19 +1,19 @@
-= Configure EDIFACT Send (Outbound) Settings
+= Configure Send Settings for Outbound EDIFACT Messages
 
-Partner Manager enables you to configure the EDIFACT envelope parameters, delimiters, validation rules, character encoding, and control numbers to apply when sending an outbound EDIFACT transmission to a trading partner.
+Partner Manager enables you to configure the EDIFACT envelope parameters, delimiters, validation rules, character encoding, and control numbers to apply when sending an outbound EDIFACT transmission from the host to a trading partner.
 
-== Configure the Send Settings
+To configure a partner's EDIFACT send settings:
 
 . In the navigation menu, select *Partners*.
 . Select the partner for whom to configure the send settings.
 . In the *Validation and acknowledgment settings* section's *Send to <partner-name>* column, click *EDIFACT*.
 . In the menu on the left, select the setting to configure:
-* <<general-settings,General>>
+* <<general-settings,General settings>>
 * <<global-control-numbers,Global control numbers>>
-* <<character-set,Character set & separators>>
+* <<character-set,Character set and separators>>
 . Click *Save*.
 
-The values you configure in the partner's settings page are used by default for all EDIFACT messages sent to that trading partner. You can override the settings you configure at the message flow level by selecting the Custom option while creating an outbound message flow.
+The values you configure in the partner's settings page are used by default for all EDIFACT messages sent to that trading partner. You can override the settings you configure at the message flow level by selecting the custom option while creating an outbound message flow.
 
 [NOTE]
 It can take up to five minutes for your configuration changes to sync with Mule.
@@ -21,7 +21,7 @@ It can take up to five minutes for your configuration changes to sync with Mule.
 [[general-settings]]
 == General Settings
 
-Use the following settings to configure the general validation rules:
+Use the following settings to configure the general validation rules for outbound EDIFACT messages:
 
 [%header%autowidth.spread]
 |===
@@ -43,6 +43,20 @@ Use the following settings to configure the general validation rules:
 |Disabled
 |===
 
+[[global-control-numbers]]
+== Global Control Numbers
+
+Partner Manager applies a global control number at the partner level on the EDIFACT interchanges generated from outbound message flows. These control numbers are sequenced across all message types sent to a trading parter, including functional acknowledgments.
+
+The control number starts with a default value of `1` and increases sequentially each time your organization sends outbound transmissions. To change the initial value to maintain sequencing and avoid duplication:
+
+. Click *Change* and enter the desired initial control number.
+. Click *Save*.
+
+[NOTE]
+It can take up to five minutes to apply the change at runtime.
+
+[[character-set]]
 == Character Set and Separators
 
 Use the following settings to set the character encoding and delimiters for the generated EDIFACT payload:
@@ -93,19 +107,8 @@ a| When you select *Test* from the drop-down, sets UNB-11 to `1`, which indicate
 |Production
 |===
 
-[[global-control-numbers]]
-== Global Control Numbers
-
-Partner Manager applies a global control number at the partner level on the EDIFACT interchanges generated from outbound message flows. These control numbers are sequenced across all message types sent to a trading parter, including functional acknowledgments.
-
-The control number starts with a default value of `1` and increases sequentially each time your organization sends outbound transmissions. To set the control number sequence value to a different number to maintain sequencing and avoid duplication:
-
-. Click *Change* and enter the desired control number.
-. Click *Save*.
-
-[NOTE]
-It can take up to five minutes to apply the change at runtime.
-
 == See Also
 
 * xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow]
+* xref:create-partner.adoc[Create a New Partner]
+* xref:modify-partner-settings.adoc[Modify a Partner's Settings]
