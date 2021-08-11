@@ -1,13 +1,14 @@
 = SFTP Send Endpoint Settings
 
-You can use these settings to set up SFTP endpoints in one of the following contexts:
+Your organization's SFTP send endpoint settings configure where to send messages in the following contexts:
 
 * Send to partners
 +
-In an outbound message flow, endpoints on the host from which to send EDI messages to partners or 3rd party connections
+Target endpoint in an outbound message flow to which translated B2B/EDI messages are sent to the partners
++
 * Target at host
 +
-In an inbound message flow, endpoints on the backend systems that receive JSON or XML messages from the host
+Target endpoint in an inbound message flow to which translated application JSON and XML messages are sent to the backend systems
 
 You can create the STFP identifiers for your organization and for your trading partners in the respective xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner] profile pages.
 

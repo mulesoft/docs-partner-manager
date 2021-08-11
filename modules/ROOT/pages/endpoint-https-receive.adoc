@@ -1,13 +1,13 @@
 = HTTP and HTTPS Receive Endpoint Settings
 
-Your organization's HTTP and HTTPS receive endpoint settings determine where to receive or send the following types of data:
+Your organization's HTTP and HTTPS receive endpoint settings configure where to receive messages in the following contexts:
 
 * Receive from partners
 +
-Source endpoint in an inbound message flow that receives B2B/EDI messages from partners directly or via 3rd party connections.
+Source endpoint in an inbound message flow that receives B2B/EDI messages from partners either directly or via 3rd party connections
 * Source at host
 +
-Source endpoint in an outbound message flow that receives application JSON and XML messages from the backend systems.
+Source endpoint in an outbound message flow that receives application JSON and XML messages from the backend systems
 
 A host, partner, or 3rd party connection can own HTTP and HTTPS receive endpoints.
 

@@ -1,6 +1,8 @@
 = AS2 Receive Endpoint Settings
 
-Your organization's AS2 receive endpoint settings determine where on the host to receive inbound data that comes either directly from partners or from 3rd party connections. One AS2 endpoint can receive inbound data from multiple partners, 3rd party connections, or both. Only a host can own AS2 receive endpoints.
+Your organization's AS2 receive endpoint settings configure the source endpoint in an inbound message flow that receives B2B/EDI messages from partners directly or via 3rd party connections. One AS2 endpoint can receive data from multiple partners, 3rd party connections, or both.
+
+Only a host can own AS2 receive endpoints. Use a host-owned AS2 receive endpoint for an inbound message flow that uses a 3rd party connection.
 
 Create AS2 receive endpoints by configuring these settings on the host or Partners page:
 
