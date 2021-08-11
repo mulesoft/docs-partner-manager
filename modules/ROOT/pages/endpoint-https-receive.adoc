@@ -1,16 +1,32 @@
 = HTTP and HTTPS Receive Endpoint Settings
 
-Configure HTTP and HTTPS receive endpoints to receive application messages (JSON or XML format) from your backend applications in outbound message flows (*Vijay, wouldn't these be inbound message flows?*).
+Your organization's HTTP and HTTPS receive endpoint settings determine where to receive or send the following types of data:
+
+* Source at host
++
+Outbound JSON or XML data received on the host from backend applications
++
+* Send to partners
++
+Outbound EDI data received by the partner or 3rd party connection from the host
++
+* Target at host
++
+Inbound JSON or XML data sent to the backend applications from the host
+
+A host, partner, or 3rd party connection can own HTTP and HTTPS receive endpoints.
+
+Create HTTP and HTTPS receive endpoints by configuring these settings on the host or Partner page:
 
 [%header%autowidth.spread]
 |===
 |Name |Description |Required
 |Endpoint Name
-|Automatically-generated name to identify the endpoint, which you can modify later on
+|Automatically-generated name to identify the endpoint. You can modify this value later on.
 |Yes
 
 | Owner
-| Partner or host that owns the endpoint
+| Partner, 3rd party connection, or host that owns the endpoint.
 | Yes
 
 | Protocol
@@ -18,35 +34,34 @@ Configure HTTP and HTTPS receive endpoints to receive application messages (JSON
 | Yes
 
 | Description
-| User-supplied value for describing the purpose and use of the endpoint
+| User-supplied value that describes the purpose and use of the endpoint.
 | No
 
 |URL
-a|HTTP or HTTPS address where you receive outbound source messages from backend systems
+a|HTTP or HTTPS address where you receive outbound source messages from backend systems.
 |Yes
 
-|Connection idle timeout
-|Connection idle timeout period in milliseconds. The default is  `30000`.
+|Response timeout (in milliseconds)
+|Connection idle timeout period in milliseconds. The default is  `15000`.
 |Yes
 
 |Authentication type
-a|Type of authentication method used to protect the HTTP receive service
+a|Type of authentication method used to protect the HTTP receive service.
 
 |Yes
 
 |Basic authentication
-a|When Basic authentication is selected, specify the user name and password to protect the HTTP listener.
+a|User name and password that protects the HTTP listener.
 
 After saving your new or reconfigured endpoint, you cannot subsequently retrieve or modify the password.
 
-The backend applications that send JSON or XML payloads to the HTTP receive endpoint must pass the credentials in the HTTP request header.
+The backend applications that send JSON or XML payloads to the HTTP or HTTPS receive endpoint must pass the credentials in the HTTP request header.
 |Yes
 
 |API Key
-a|API key for the HTTP listener
+a|API key for the HTTP listener.
 
-After selecting *API Key* in the *Authentication type* picklist, specify the HTTP header name and API key to protect the HTTP listener. After saving your new or reconfigured endpoint, you cannot subsequently retrieve or modify the API key.
-
+After selecting *API Key* in the *Authentication type* list, specify the HTTP header name and API key to protect the HTTP listener. After saving your new or reconfigured endpoint, you cannot subsequently retrieve or modify the API key.
 
 The backend applications that send JSON or XML payloads to the HTTP receive endpoint must pass the API key in the HTTP request with the configured HTTP header name.
 |Yes
@@ -58,7 +73,7 @@ You can deploy an HTTP or HTTPS receive endpoint on a public port, private port,
 
 === Deploy to CloudHub on a Public Port
 
-When an HTTP or HTTPS receive endpoint is deployed with the private port configuration enabled, the endpoint application is deployed on the public HTTPS port (8082), with the traffic routed through the xref:runtime-manager::dedicated-load-balancer-tutorial#shared-load-balancers [shared load balancer]. The value in the URL field is automatically generated when you deploy a message flow that uses this endpoint to CloudHub.
+When an HTTP or HTTPS receive endpoint is deployed with the private port configuration enabled, the endpoint application is deployed on the public HTTPS port (`8082`), with the traffic routed through the xref:runtime-manager::dedicated-load-balancer-tutorial#shared-load-balancers [shared load balancer]. The value in the URL field is automatically generated when you deploy a message flow that uses this endpoint to CloudHub.
 
 You can view this URL by selecting the receiving endpoint from your deployed message flow or by clicking the endpoint name from the endpoints list. You can share this URL with the partners that send HTTP or HTTPS messages to this endpoint.
 

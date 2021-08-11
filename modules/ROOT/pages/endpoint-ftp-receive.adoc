@@ -1,32 +1,36 @@
 = FTP Receive Endpoint Settings
 
-You can use these settings to set up FTP endpoints in one of the following contexts:
+Your organization's FTP receive endpoint settings determine where to receive or send the following types of data:
 
-* Receive messages directly from partners
+* Receive from partners
 +
-Receive inbound EDI files directly from the trading partners used in inbound message flows
-* Receive messages from partners through 3rd party connections
+Inbound EDI data received by the host from partners or 3rd party connections
 +
-Receive inbound EDI files from the trading partners used in inbound message flows through 3rd party connection endpoints
 * Source at host
 +
-Receive application messages (in JSON or XML format) from your backend applications through outbound message flows
+Outbound JSON or XML data received on the host from backend applications
++
+* Target at host
++
+Inbound XML or JSON data sent to the backend applications from the host
 
-You can create the FTP identifiers for your organization and trading partners in the xref:configure-host.adoc[host] and xref:configure-partner.adoc[partner] settings pages.
+A host, partner, or 3rd party connection can own FTP endpoints.
+
+Create FTP receive endpoints by configuring these settings on the xref:configure-host.adoc[host] and xref:configure-partner.adoc[Partner] pages:
 
 [%header%autowidth.spread]
 |===
 |Name |Description | Required
 | Endpoint Name
-| Automatically-generated name that identifies the endpoint, which you can modify later on
+| Automatically-generated name that identifies the endpoint. You can modify this value later on.
 | Yes
 
 | Owner
-| Host or partner who owns the endpoint
+| Partner, 3rd party connection, or host who owns the endpoint.
 | Yes
 
 | Protocol
-| Protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window. The value in this field cannot be modified.
+| Protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window. You cannot modify this value.
 | Yes
 
 | Description
@@ -50,7 +54,7 @@ You can create the FTP identifiers for your organization and trading partners in
 | Yes, if the server is authenticated.
 
 | Source path
-| Path on the FTP server to which your trading partner sends the inbound files.
+| Path on the FTP server to which the partner or 3rd party connection sends the inbound files.
 | Yes
 
 | Polling Frequency
@@ -60,7 +64,7 @@ You can create the FTP identifiers for your organization and trading partners in
 | Size check wait time
 | Wait time, in seconds, between size checks to determine if a file is ready for processing. The default is `1 second`. This default allows a file write to complete before processing.
 
-(*Needs to be reworded*. Mule performs two size checks by waiting the amount of time specified in the `Size check wait time` field. If both checks return the same value, the file is ready to process.
+Mule performs two size checks by waiting the amount of time specified in this field. If both checks return the same value, the file is ready to process.
 
 To disable this feature, specify a negative number or omit the value.
 

@@ -1,4 +1,4 @@
-= *Not Done* AS2 Send Endpoint Settings
+= AS2 Send Endpoint Settings
 
 Your organization's AS2 send endpoint settings configure the endpoints from which to send outbound EDI messages to partners, either directly or through 3rd party connections.
 
