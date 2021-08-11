@@ -1,13 +1,40 @@
 = Configure and Manage 3rd Party Connections
 
-Anypoint Partner Manager gives you the ability to configure and manage trading partners.
+Anypoint Partner Manager gives you the ability to create and manage third party connections that transmit messages between your organization and its partners.
+
+Use the *Partners* page to create 3rd party connections. From this page, you can:
+
+* xref:create-third-party.adoc[Create a new 3rd party connection]
+* xref:partner-manager-identifiers.adoc[Add the EDI and AS2 identifiers] used by the 3rd party connecction.
+* Add digital xref:Certificates.adoc[certificates] associated with the 3rd party connection.
+* xref:create-endpoint.adoc[Create] and manage source and target endpoints owned by the 3rd party connection.
+* Manage EDI validation settings for xref:x12-receive-read-settings.adoc[X12 receive settings], xref:edifact-receive-settings.adoc[EDIFACT receive settings], xref:x12-send-settings.adoc[X12 send settings], and xref:edifact-send-settings.adoc[EDIFACT send settings]
+* xref:modify-third-party-3rd-party-settings.adoc[Modify 3rd party connection settings]
+* xref:delete-third-party.adoc[Delete a 3rd party connection]
+
+== See Also
+
+* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
+
+
+
+
+
+
+
+
+
+
+
+Anypoint Partner Manager gives you the ability to configure and manage 3rd party connections.
 
 Use the *Partners* page to:
 
-* xref:create-partner.adoc[Create a new partner]
-* xref:EDIFACT-receive-read-settings.adoc[Create Read Settings for Inbound EDIFACT Messages]
-* xref:edifact-send-settings.adoc[Create Send Settings for Outbound EDIFACT Messages]
+* xref:create-partner.adoc[Create a 3rd party connection]
+* xref:EDIFACT-receive-read-settings.adoc[Create read Settings for inbound EDIFACT messages]
+* xref:edifact-send-settings.adoc[Create send settings for outbound EDIFACT messages]
 * xref:x12-receive-read-settings.adoc[Create Read Settings for Inbound X12 Messages]
-* xref:x12-send-settings.adoc[Create Send Settings for Outbound X12 Messages]
-* xref:modify-partner-settings.adoc[Modify a partner's settings]
-* xref:delete-partner.adoc[Delete a partner]
+* xref:x12-send-settings.adoc[Create send settings for outbound X12 messages]
+* xref:modify-third-party-settings.adoc[Modify a third party connection's settings]
+* xref:delete-third-party-connection.adoc[Delete a third party connection]
