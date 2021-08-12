@@ -49,7 +49,7 @@ The message type is added to the message flow.
 
 . Expand the *Source at <host>* section.
 . From the *<host> reference ID* drop-down list, select your organization’s internal reference ID (such as business unit name) as it would appear in the data element of the source JSON or XML payload from your backend systems. +
-The reference ID is added to the message flow
+The reference ID is added to the message flow.
 
 == Import the Translation Map
 
