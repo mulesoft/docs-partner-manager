@@ -1,6 +1,6 @@
 = Configure Send Settings for Outbound EDIFACT Messages
 
-Partner Manager enables you to configure the EDIFACT envelope parameters, delimiters, validation rules, character encoding, and control numbers to apply when sending an outbound EDIFACT transmission from the host to a trading partner.
+Partner Manager enables you to configure the EDIFACT envelope parameters, delimiters, validation rules, character encoding, and control numbers to apply when sending an outbound EDIFACT transmission from the host to a partner.
 
 To configure a partner's EDIFACT send settings:
 

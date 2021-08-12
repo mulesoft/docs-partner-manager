@@ -2,7 +2,7 @@
 
 Your organization's AS2 send endpoint settings configure the target endpoint in an outbound message flow to which translated B2B/EDI messages are send to partners either directly or via third party connections.
 
-Both the host and partners can own AS2 receive endpoint. Use a host-owned AS2 send endpoint for an outbound message flow that uses a 3rd party connection.
+A host or partner can own AS2 send endpoints. Use a host-owned AS2 send endpoint for an outbound message flow that uses a 3rd party connection.
 
 Create AS2 endpoints by configuring these settings on the host or partners pages:
 

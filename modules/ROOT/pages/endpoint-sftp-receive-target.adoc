@@ -10,6 +10,8 @@ Source endpoint in an inbound message flow that receives B2B/EDI messages from p
 +
 Source endpoint in an outbound message flow that receives application JSON and XML messages from the backend systems
 
+A host, partner, or 3rd party connection can own FTP send endpoints.
+
 You can create the STFP identifiers for your organization and for your trading partners in the profile pages xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner].
 
 [%header%autowidth.spread]

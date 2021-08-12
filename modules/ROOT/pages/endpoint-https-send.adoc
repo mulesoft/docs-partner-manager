@@ -10,7 +10,7 @@ Target endpoint in an outbound message flow to which translated B2B/EDI messages
 +
 Target endpoint in an inbound message flow to which translated application JSON and XML messages are sent to the backend systems
 
-Hosts and partners can own HTTP and HTTPS send endpoints.
+A host or partner can own HTTP and HTTPS send endpoints.
 
 [%header%autowidth.spread]
 |===

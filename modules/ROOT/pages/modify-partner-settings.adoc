@@ -6,7 +6,7 @@ To modify a partner's settings:
 
 . In Partner Manager, select *Partners* in the navigation menu.
 . Click the partner.
-. Perform any of the following actions:
+. Change any of the following settings:
 +
 [%header%autowidth.spread]
 |===
