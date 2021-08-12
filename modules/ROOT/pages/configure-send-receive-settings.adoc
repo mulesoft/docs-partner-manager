@@ -1,0 +1,21 @@
+== Configure Send and Receive Settings for Partners and 3rd Party Connections
+
+When you create a partner or 3rd party connection, you must configure send settings, receive settings, or both for that entity.
+
+* Send settings include the X12 or EDIFACT envelope parameters, delimiters, validation rules, character encoding, and control numbers to apply when sending an outbound message to the partner or 3rd party connection.
+
+* Receive settings include the acknowledgements and validation rules to apply when processing an inbound X12 or EDIFACT message from the partner or 3rd party connection.
+
+For more information, see the following topics:
+
+* xref:edifact-send-settings.html[Configure Send Settings for Outbound EDIFACT messages]
+* xref:edifact-receive-read-settings.html[Configure Receive Settings for Inbound EDIFACT messages]
+* xref:x12-send-settings.html[Configure Send Settings for Outbound X12 messages]
+* xref:x12-receive-read-settings.adoc[Configure Receive Settings for Inbound X12 messages]
+
+== See Also
+
+* xref:create-partner.adoc.html[Create a New Partner]
+* xref:modify-partner-settings.adoc[Modify a Partner's Settings]
+* xref:create-third-party.adoc[Create a New 3rd Party Connection]
+* xref:modify-third-party-settings.adoc.[Modify a 3rd Party Connection's Settings]
