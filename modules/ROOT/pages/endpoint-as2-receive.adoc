@@ -4,7 +4,7 @@ Your organization's AS2 receive endpoint settings configure the source endpoint 
 
 Only a host can own AS2 receive endpoints. Use a host-owned AS2 receive endpoint for an inbound message flow that uses a 3rd party connection.
 
-Create AS2 receive endpoints by configuring these settings on the host or Partners page:
+Create AS2 receive endpoints by configuring these settings on the Host page:
 
 [%header%autowidth.spread]
 |===

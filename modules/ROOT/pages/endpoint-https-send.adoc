@@ -12,6 +12,8 @@ Target endpoint in an inbound message flow to which translated application JSON 
 
 A host or partner can own HTTP and HTTPS send endpoints.
 
+Create HTTP and HTTPS receive endpoints by configuring these settings on the host or Partner page:
+
 [%header%autowidth.spread]
 |===
 |Name |Description |Required

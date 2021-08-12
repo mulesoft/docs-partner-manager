@@ -1,8 +1,10 @@
 = Configure and Manage 3rd Party Connections
 
-Anypoint Partner Manager gives you the ability to create and manage third party connections that transmit messages between your organization and its partners.
+If your trading partners use 3rd party service providers such as VANs or 3PLs (3rd party logistics providers) who manage the B2B connectivity with your organization on behalf of your partners, you can create a 3rd party connection to manage configurations such as the endpoints, identifiers, and certificates of the 3rd party provider.
 
-Use the *Partners* page to create 3rd party connections. From this page, you can:
+You can select the endpoints and identifiers created under a 3rd party connection profile in message flows created for your partners.
+
+Use the *Partners* page to create and manage 3rd party connections. From this page, you can:
 
 * xref:create-third-party.adoc[Create a new 3rd party connection]
 * xref:partner-manager-identifiers.adoc[Add the EDI and AS2 identifiers] used by the 3rd party connection.

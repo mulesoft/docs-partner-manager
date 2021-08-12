@@ -38,7 +38,6 @@ For information about using the Message Flow wizard to create new endpoints, see
 The configuration of Partner Manager endpoints depends on the protocol used to send and receive messages.
 
 Partner Manager supports the following endpoint protocols:
-*Vijay, should Backend be labeled Host instead?.
 
 The following table describes the endpoint types, along with their supported protocols and owners:
 

@@ -1,9 +1,8 @@
-= Configure and Manage Partners
+= Configure and Manage Partners and 3rd Party Connections
 
-Anypoint Partner Manager gives you the ability to create and manage trading partners and third party connections that transmit messages between your organization and its partners.
+Anypoint Partner Manager gives you the ability to create and manage both trading partners and third party connections, which transmit messages between your organization and its partners.
 
 Use the *Partners* page to create partners and 3rd party connections. From this page, you can:
-
 
 * xref:create-partner.adoc[Create a new partner]
 * xref:partner-manager-identifiers.adoc[Add the EDI and AS2 identifiers] used by your partner.

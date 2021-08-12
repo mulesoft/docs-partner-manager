@@ -12,7 +12,7 @@ Source endpoint in an outbound message flow that receives application JSON and X
 
 A host, partner, or 3rd party connection can own FTP send endpoints.
 
-You can create the STFP identifiers for your organization and for your trading partners in the profile pages xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner].
+Create SFTP receive endpoints by configuring these settings on the host or Partner page:
 
 [%header%autowidth.spread]
 |===
