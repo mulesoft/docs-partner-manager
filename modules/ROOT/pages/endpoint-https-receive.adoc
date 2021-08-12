@@ -22,7 +22,7 @@ Create HTTP and HTTPS receive endpoints by configuring these settings on the hos
 | Yes
 
 | Protocol
-| Protocol selected in the *Protocol* field. You cannot modify this value.
+| Protocol selected in the *Protocol* field of the *New endpoint*. You cannot modify this value.
 | Yes
 
 | Description

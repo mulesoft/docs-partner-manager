@@ -26,7 +26,7 @@ Create SFTP receive endpoints by configuring these settings on the host or Partn
 | Yes
 
 | Protocol
-| The protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window. The value in this field cannot be modified.
+| The protocol selected in the *Protocol* field of the *New endpoint*. The value in this field cannot be modified.
 | Yes
 
 | Description

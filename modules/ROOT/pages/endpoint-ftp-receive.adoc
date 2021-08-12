@@ -25,7 +25,7 @@ Create FTP receive endpoints by configuring these settings on the Host or Partne
 | Yes
 
 | Protocol
-| Protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window. You cannot modify this value.
+| Protocol selected in the *Protocol* field of the *New endpoint*. You cannot modify this value.
 | Yes
 
 | Description
