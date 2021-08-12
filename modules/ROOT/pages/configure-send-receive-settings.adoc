@@ -1,6 +1,6 @@
 == Configure Send and Receive Settings for Partners and 3rd Party Connections
 
-When you create a partner or 3rd party connection, you must configure send settings, receive settings, or both for that entity.
+When you create a partner or 3rd party connection, you can configure send settings, receive settings, or both for that entity.
 
 * Send settings include the X12 or EDIFACT envelope parameters, delimiters, validation rules, character encoding, and control numbers to apply when sending an outbound message to the partner or 3rd party connection.
 

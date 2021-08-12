@@ -1,4 +1,4 @@
-= Delete a Third Party Connection
+= Delete a 3rd Party Connection
 
 If you are no longer using a 3rd party connection, you can delete it from Partner Manager.
 
