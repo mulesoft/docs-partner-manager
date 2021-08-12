@@ -8,7 +8,7 @@ Source endpoint in an outbound message flow that receives application JSON and X
 
 Only a host can own HTTP and HTTPS receive endpoints.
 
-Create HTTP and HTTPS receive endpoints by configuring these settings on the Host pages:
+Create HTTP and HTTPS receive endpoints by configuring these settings on the host page:
 
 [%header%autowidth.spread]
 |===

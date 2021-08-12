@@ -4,7 +4,7 @@ AS2 send endpoint settings configure the target endpoint in an outbound message 
 
 A partner or 3rd party can own AS2 send endpoints. Use a 3rd party-owned AS2 send endpoint for an outbound message flow for partners that use a 3rd party connection.
 
-Create AS2 endpoints by configuring these settings on the Host or Partner pages:
+Create AS2 endpoints by configuring these settings on the partner or 3rd party connection pages:
 
 [%header%autowidth.spread]
 |===
@@ -47,7 +47,7 @@ Create AS2 endpoints by configuring these settings on the Host or Partner pages:
 |Yes
 
 |Maximum retry attempts
-|Maximum number of reconnection attempts to make. If you don't want Partner Manager to retry aftern initial connection failure, set this value to `0`.
+|Maximum number of reconnection attempts to make. If you don't want Partner Manager to retry after an initial connection failure, set this value to `0`.
 |Yes
 
 |<Host> AS2 identifier
