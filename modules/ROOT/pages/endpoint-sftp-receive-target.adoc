@@ -1,6 +1,6 @@
 = SFTP Receive Endpoint Settings
 
-Your organization's SFTP receive endpoint settings determine where to receive messages in the following contexts:
+SFTP receive endpoint settings determine where to receive messages in the following contexts:
 
 * Receive from partners
 +

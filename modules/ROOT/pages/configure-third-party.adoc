@@ -10,13 +10,13 @@ Use the *Partners* page to create and manage 3rd party connections. From this pa
 * xref:partner-manager-identifiers.adoc[Add the EDI and AS2 identifiers] used by the 3rd party connection.
 * Add digital xref:Certificates.adoc[certificates] associated with the 3rd party connection.
 * xref:create-endpoint.adoc[Create] and manage source and target endpoints owned by the 3rd party connection.
-* Manage EDI validation settings for xref:x12-receive-read-settings.adoc[X12 receive settings], xref:edifact-receive-settings.adoc[EDIFACT receive settings], xref:x12-send-settings.adoc[X12 send settings], and xref:edifact-send-settings.adoc[EDIFACT send settings]
-* xref:modify-third-party-3rd-party-settings.adoc[Modify 3rd party connection settings]
+* Manage EDI validation settings for xref:x12-receive-read-settings.adoc[X12 receive settings], xref:edifact-receive-read-settings.adoc[EDIFACT receive settings], xref:x12-send-settings.adoc[X12 send settings], and xref:edifact-send-settings.adoc[EDIFACT send settings]
+* xref:modify-third-party-settings.adoc[Modify 3rd party connection settings]
 * xref:delete-third-party.adoc[Delete a 3rd party connection]
 
 == See Also
 
 * xref:create-endpoint.adoc[Create and Configure Endpoints]
-* xref:create-inbound-message.adoc[Create and Configure an Inbound Message Flow]
-* xref:create-outbound-message.adoc[Create and Configure an Outbound Message Flow]
+* xref:create-inbound-message-flow.adoc[Create and Configure an Inbound Message Flow]
+* xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow]
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]

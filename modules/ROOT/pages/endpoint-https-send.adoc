@@ -1,16 +1,16 @@
 = HTTP and HTTPS Send Endpoint Settings
 
-Your organization's HTTP and HTTPS send endpoint settings configure where to send messages in the following contexts:
+HTTP and HTTPS send endpoint settings configure where to send messages in the following contexts:
 
 * Send to partners
 +
-Target endpoint in an outbound message flow to which translated B2B/EDI messages are sent to the partners
+Target endpoint in an outbound message flow to which translated B2B/EDI messages are sent to the partners either directly or via a 3rd party connection
 +
 * Target at host
 +
 Target endpoint in an inbound message flow to which translated application JSON and XML messages are sent to the backend systems
 
-A host or partner can own HTTP and HTTPS send endpoints.
+A host, partner, or 3rd party connection can own HTTP and HTTPS send endpoints.
 
 Create HTTP and HTTPS receive endpoints by configuring these settings on the host or Partner page:
 
@@ -18,7 +18,7 @@ Create HTTP and HTTPS receive endpoints by configuring these settings on the hos
 |===
 |Name |Description |Required
 | Owner
-| Partner or host who owns the endpoint
+| Partner, 3rd party connection, or host who owns the endpoint
 | Yes
 
 |Protocol

@@ -1,6 +1,6 @@
 = FTP Send Endpoint Settings
 
-Your organization's FTP send endpoint settings configure where to send messages in the following contexts:
+FTP send endpoint settings configure where to send messages in the following contexts:
 
 * Send to partners
 +

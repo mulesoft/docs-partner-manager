@@ -1,10 +1,10 @@
 = SFTP Send Endpoint Settings
 
-Your organization's SFTP send endpoint settings configure where to send messages in the following contexts:
+SFTP send endpoint settings configure where to send messages in the following contexts:
 
 * Send to partners
 +
-Target endpoint in an outbound message flow to which translated B2B/EDI messages are sent to the partners
+Target endpoint in an outbound message flow to which translated B2B/EDI messages are sent to partners either directly or via a 3rd party connection
 +
 * Target at host
 +

@@ -1,8 +1,8 @@
 = AS2 Send Endpoint Settings
 
-Your organization's AS2 send endpoint settings configure the target endpoint in an outbound message flow to which translated B2B/EDI messages are send to partners either directly or via 3rd party connections.
+AS2 send endpoint settings configure the target endpoint in an outbound message flow to which translated B2B/EDI messages are send to partners either directly or via 3rd party connections.
 
-A host or partner can own AS2 send endpoints. Use a host-owned AS2 send endpoint for an outbound message flow that uses a 3rd party connection.
+A partner or 3rd party can own AS2 send endpoints. Use a 3rd party-owned AS2 send endpoint for an outbound message flow for partners that use a 3rd party connection.
 
 Create AS2 endpoints by configuring these settings on the Host or Partner pages:
 
@@ -11,7 +11,7 @@ Create AS2 endpoints by configuring these settings on the Host or Partner pages:
 |Setting |Description |Required
 
 |Owner
-|Partner or host that owns the endpoint.
+|Partner or 3rd party connection that owns the endpoint.
 |Yes
 
 |Usage
@@ -35,7 +35,7 @@ Create AS2 endpoints by configuring these settings on the Host or Partner pages:
 | No
 
 |Partner AS2 URL
-|Your partner’s AS2 URL to which outbound EDI transmissions are sent.
+|Your partner’s or 3rd party connection's AS2 URL to which outbound EDI transmissions are sent.
 |Yes
 
 |Connection timeout
@@ -47,7 +47,7 @@ Create AS2 endpoints by configuring these settings on the Host or Partner pages:
 |Yes
 
 |Maximum retry attempts
-|Maximum number of reconnection attempts to make.
+|Maximum number of reconnection attempts to make. If you don't want Partner Manager to retry aftern initial connection failure, set this value to `0`.
 |Yes
 
 |<Host> AS2 identifier
@@ -55,7 +55,7 @@ Create AS2 endpoints by configuring these settings on the Host or Partner pages:
 |Yes
 
 |Partner AS2 identifier
-|Your partner’s AS2 identifier.
+|Your partner’s or 3rd party connection's AS2 identifier.
 |Yes
 
 |Respond to email address
@@ -67,7 +67,7 @@ Create AS2 endpoints by configuring these settings on the Host or Partner pages:
 |Yes
 
 |Filename pattern
-|xref:file-name-pattern.adoc[File name pattern] required by your partner or backend application.
+|xref:file-name-pattern.adoc[File name pattern] required by your partner.
 |Yes
 
 |Request receipt

@@ -1,17 +1,14 @@
 = HTTP and HTTPS Receive Endpoint Settings
 
-Your organization's HTTP and HTTPS receive endpoint settings configure where to receive messages in the following contexts:
+HTTP and HTTPS receive endpoint settings configure where to receive messages in the following context:
 
-* Receive from partners
-+
-Source endpoint in an inbound message flow that receives B2B/EDI messages from partners either directly or via 3rd party connections
 * Source at host
 +
 Source endpoint in an outbound message flow that receives application JSON and XML messages from the backend systems
 
-A host, partner, or 3rd party connection can own HTTP and HTTPS receive endpoints.
+Only a host can own HTTP and HTTPS receive endpoints.
 
-Create HTTP and HTTPS receive endpoints by configuring these settings on the host or Partner page:
+Create HTTP and HTTPS receive endpoints by configuring these settings on the Host pages:
 
 [%header%autowidth.spread]
 |===
@@ -21,11 +18,11 @@ Create HTTP and HTTPS receive endpoints by configuring these settings on the hos
 |Yes
 
 | Owner
-| Partner, 3rd party connection, or host that owns the endpoint.
+| Host that owns the endpoint.
 | Yes
 
 | Protocol
-| Protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window. You cannot modify this value.
+| Protocol selected in the *Protocol* field. You cannot modify this value.
 | Yes
 
 | Description

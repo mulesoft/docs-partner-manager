@@ -27,7 +27,7 @@ After meeting the prerequisites to create a 3rd party connection:
 | *Type*
 | Identifier type
 | *Identifier Value*
-| Value that uniquely identifies the connection
+| Value that uniquely identifies the connection. This is an optional field. If the 3rd party connection uses AS2, you can configure the AS2 identifier.
 |===
 +
 . Click *Create 3rd party connection*.
@@ -61,4 +61,4 @@ Once you have created a 3rd-party connection and configured 3rd-party-specific e
 
 * xref:message-flows.adoc[Set Up Message Flows]
 * xref:modify-third-party-settings.adoc[Modify 3rd Party Connection Settings]
-* xref:delete-third-party-settings.adoc[Delete a 3rd Party Connection]
+* xref:delete-third-party.adoc[Delete a 3rd Party Connection]
