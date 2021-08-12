@@ -37,7 +37,7 @@ To specify the receiving endpoint:
 . In the message flow, expand the *Receiving from <partner>* section and click *Select endpoint*.
 . In the *Receiving endpoint* section, click *Select*.
 . In the *Select an endpoint: Receive from <partner>* window, do either of the following:
-* Select an existing receiving endpoint and click  *Select*.
+* Select an existing receiving endpoint and click *Select*.
 * Click *New* to create a new endpoint, as described in xref:<<create-endpoint.adoc, Create and Configure Endpoints>>.
 +
 The endpoint is added to the message flow, and a message appears indicating that the endpoint is missing an identifier.
