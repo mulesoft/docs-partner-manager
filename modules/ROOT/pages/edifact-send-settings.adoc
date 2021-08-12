@@ -46,7 +46,7 @@ Use the following settings to configure the general validation rules for outboun
 [[global-control-numbers]]
 == Global Control Numbers
 
-Partner Manager applies a global control number at the partner level on the EDIFACT interchanges generated from outbound message flows. These control numbers are sequenced across all message types sent to a trading parter, including functional acknowledgments.
+Partner Manager applies a global control number at the partner level on the EDIFACT interchanges generated from outbound message flows. These control numbers are sequenced across all message types sent to a trading partner, including functional acknowledgments.
 
 The control number starts with a default value of `1` and increases sequentially each time your organization sends outbound transmissions. To change the initial value to maintain sequencing and avoid duplication:
 
