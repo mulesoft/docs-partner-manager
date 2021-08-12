@@ -1,21 +1,23 @@
-= Configure X12 Send (Outbound) Settings
+= Configure Send Settings for Outbound X12 Messages
 
-Partner Manager enables you to configure the X12 envelope parameters, delimiters, validation rules, character encoding, and control numbers to apply when sending an outbound X12 transmission to a trading partner.
+Partner Manager enables you to configure the X12 envelope parameters, delimiters, validation rules, character encoding, and control numbers to apply when sending an outbound X12 transmission to a partner.
 
-== Configure the Send Settings
+To configure a partner's X12 send settings:
 
 . In the navigation menu, select *Partners*.
 . Select the partner for whom you want to configure the settings.
 . In the *Validation and acknowledgment settings* section's *Send to <partner-name>* column, click *X12*.
 . In the menu on the left, select the setting to configure:
-* <<general-settings,General>>
-* <<authorization-settings,Authorization>>
-* <<ta1-ack-settings,TA1 Acknowledgment>>
+* <<general-settings,General settings>>
+* <<authorization-settings,Authorization settings>>
+* <<ta1-ack-settings,TA1 Acknowledgment settings>>
 * <<global-control-numbers,Global control numbers>>
-* <<character-set,Character set & separators>>
+* <<character-set,Character set and separators>>
 . Click *Save*.
 
-The values you configure in the partner's settings page are used by default for all X12 messages going to that trading partner. You can override the settings you configure at the partner level, with the exception of TA1 and control numbers, or at the message flow level by selecting the *Custom* option while creating an outbound message flow.
+The values you configure in the partner's settings page are used by default for all X12 messages going to that partner.
+
+You can override the settings you configure at the partner level, with the exception of TA1 and control numbers, or at the message flow level by selecting the *Custom* option while creating an outbound message flow.
 
 [NOTE]
 It can take up to five minutes for your configuration changes to sync with Mule.
@@ -23,7 +25,7 @@ It can take up to five minutes for your configuration changes to sync with Mule.
 [[general-settings]]
 == General Settings
 
-Use the following settings to configure the transaction usage, the responsible standards agency, and to enforce length limits and conditional relationship validations:
+Use the following settings to configure the transaction usage, specify the responsible standards agency, and enforce length limits and conditional relationship validations:
 
 [%header%autowidth.spread]
 |===
@@ -97,11 +99,11 @@ a|When the option to expect a TA1 is selected, click *Select* to specify the *Re
 [[global-control-numbers]]
 == Global Control Numbers
 
-Partner Manager applies a global control number at the partner level on the X12 interchanges and functional groups generated from outbound message flows. These control numbers are sequenced across all message types (including functional acknowledgments) that are sent to a trading partner.
+Partner Manager applies a global control number at the partner level on the X12 interchanges and functional groups generated from outbound message flows. These control numbers are sequenced across all message types (including functional acknowledgments) that are sent to a partner.
 
 The control number starts with a default value of `1`, and is sequentially increased as your organization begins sending outbound transmissions.
 
-If you need to set the control number sequence value to a different number to maintain sequencing and avoid duplication:
+To set the control number sequence value to a different number to maintain sequencing and avoid duplication:
 
 . Click *Change* and enter the desired control number.
 . Click *Save*.
@@ -112,7 +114,7 @@ It can take up to five minutes to apply the change at runtime.
 [[character-set]]
 == Character Set and Separators
 
-These settings enable you to set the character encoding and delimiters to use on the generated X12 payload:
+Use the following settings to set the character encoding and delimiters for the generated X12 payload:
 
 [%header%autowidth.spread]
 |===
@@ -121,22 +123,8 @@ These settings enable you to set the character encoding and delimiters to use on
 |Character set
 a|Characters allowed in string data.
 
-Possible values include:
-
-* *Basic*
-* *Extended*
-* *Unrestricted* | `Extended`
-
 |Character encoding
 a|Character encoding for messages.
-
-Possible values include:
-
-* *PLATFORM*
-* *ASCII*
-* *ISO8859_1*
-* *IBM1047*
-* *UTF8* | `UTF8`
 
 |Segment terminator
 a|Segment terminator character.
@@ -154,18 +142,10 @@ a|Component element separator character.
 a|Line ending to add between segments. This enables you to add line endings between segments to improve the readability of the output message text.
 
 Possible values include:
-
-* *NONE* +
-X12 payload generated will be a single line, with segments separated by the segment terminator character
-* *CR* +
-Carriage Return
-* *CRLF* +
-Carriage Return & Line Feed
-* *LF* +
-Line Feed
-|`CRLF`
 |===
 
 == See Also
 
 * xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow]
+* xref:create-partner.adoc[Create a New Partner]
+* xref:modify-partner-settings.adoc[Modify a Partner's Settings]

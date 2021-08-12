@@ -1,51 +1,53 @@
 = AS2 Send Endpoint Settings
 
-Use these to set up AS2 endpoint settings to send outbound EDI files to your partners.
+AS2 send endpoint settings configure the target endpoint in an outbound message flow to which translated B2B/EDI messages are send to partners either directly or via 3rd party connections.
 
-Create the AS2 identifiers for your organization and your partners in the respective host and partner profile pages.
+A partner or 3rd party can own AS2 send endpoints. Use a 3rd party-owned AS2 send endpoint for an outbound message flow for partners that use a 3rd party connection.
+
+Create AS2 endpoints by configuring these settings on the partner or 3rd party connection pages:
 
 [%header%autowidth.spread]
 |===
 |Setting |Description |Required
 
 |Owner
-|The partner or host that owns the endpoint.
+|Partner or 3rd party connection that owns the endpoint.
 |Yes
 
 |Usage
-|How the endpoint is used. For receive endpoints, the value in this field is `Send to partners`. The value in this field is automatically generated based on the type of endpoint created.
+|`Send to partners`
 |No
 
 |Protocol
-|The protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window.
+|Protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window.
 |Yes
 
 |Partner
-|The partner to whom the transaction is sent.
+|Partner to whom the transaction is sent
 |Yes
 
 |Endpoint Name
-|The name used to identify the endpoint. The value in the *Endpoint Name* field is generated automatically but can be modified manually.
+|Automatically-generated name that identifies the endpoint. You can modify this value later on.
 | Yes
 
 |Description
-|The user-defined field for describing the purpose and use of the endpoint.
+|User-supplied description of the endpoint's purpose and use.
 | No
 
 |Partner AS2 URL
-|Your trading partner’s AS2 URL to which outbound EDI transmissions are sent.
+|Your partner’s or 3rd party connection's AS2 URL to which outbound EDI transmissions are sent.
 |Yes
 
 |Connection timeout
-|The timeout for establishing a connection to the remote service. The value in this field is set to `30 Seconds` by default.
+|Timeout for establishing a connection to the remote service. The default is `30 Seconds`.
 |Yes
 
 |Retry interval
-|The frequency of reconnection attempts when unable to connect to the remote AS2 service. The value in this field is set to `30 Seconds` by default.
+|Frequency of reconnection attempts when unable to connect to the remote AS2 service. The default is `30 Seconds`.
 |Yes
 
 |Maximum retry attempts
-|The maximum number of reconnection attempts to make.
+|Maximum number of reconnection attempts to make. If you don't want Partner Manager to retry after an initial connection failure, set this value to `0`.
 |Yes
 
 |<Host> AS2 identifier
@@ -53,30 +55,23 @@ Create the AS2 identifiers for your organization and your partners in the respec
 |Yes
 
 |Partner AS2 identifier
-|Your trading partner’s AS2 identifier.
+|Your partner’s or 3rd party connection's AS2 identifier.
 |Yes
 
 |Respond to email address
-|The email address used as HTTP 'From' header when sending.
+|Email address to use as the HTTP 'From' header when sending.
 |Yes
 
 |Message subject
-|The user-defined field for MIME Subject header.
+|User-defined field for the MIME Subject header.
 |Yes
 
 |Filename pattern
-|xref:file-name-pattern.adoc[File name pattern] as required by your partner or backend application.
+|xref:file-name-pattern.adoc[File name pattern] required by your partner.
 |Yes
 
 |Request receipt
-a|Specify if you want the partner to return an MDN receipt, confirming the receipt of the message.
-
-Allowed values include:
-
-* NONE
-* UNSIGNED
-* SIGNED_OPTIONAL
-* SIGNED_REQUIRED
+a|Whether you want the partner to return an MDN receipt, which confirms the receipt of the message.
 
 |Yes
 
@@ -85,19 +80,19 @@ Allowed values include:
 |Yes
 
 |Signature algorithm
-|The xref:as2-endpoints-algorithms.adoc[algorithm] to use when setting the message integrity check value.
+|xref:as2-endpoints-algorithms.adoc[Algorithm] to use when setting the message integrity check value.
 |Yes
 
 |MDN signature algorithm
-|The request for a partner to respond with a signed MDN using this xref:as2-endpoints-algorithms.adoc[algorithm] for calculating MIC.
+|Request for a partner to respond with a signed MDN using this xref:as2-endpoints-algorithms.adoc[algorithm] for calculating MIC.
 |Yes
 
 |Encryption algorithm
-|The xref:as2-endpoints-algorithms.adoc[algorithm] to use when encrypting the message to be sent.
+|xref:as2-endpoints-algorithms.adoc[Algorithm] to use when encrypting the message to send.
 |Yes
 
 |MDN response
-|The AS2 messages sent from Partner Manager always request the receiver to send a Synchronous MDN receipt back. The value in this field is set to `Sync` by default.
+|The AS2 messages sent from Partner Manager always request the receiver to send a Synchronous MDN receipt back. The default is `Sync`.
 | Yes
 |===
 

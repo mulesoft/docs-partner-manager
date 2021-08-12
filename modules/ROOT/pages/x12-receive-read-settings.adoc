@@ -1,148 +1,157 @@
-= X12 Receive (Inbound) Settings
+= Configure Receive Settings for Inbound X12 Messages
 
-Partner Manager enables you to configure the X12 acknowledgments, validation rules, character encoding, and control numbers to apply when receiving an inbound X12 transmission.
+Partner Manager enables you to configure the X12 acknowledgments, validation rules, character encoding, and control numbers to apply when receiving inbound X12 messages from the selected partner.
 
-== Configure the Receive Settings
+To configure X12 receive settings:
 
 . In the navigation menu, select *Partners*.
-. Select the partner for whom you want to configure the settings.
-. In the *Validation and acknowledgment settings* section's *Send to <partner-name>* column, click *X12*.
-. In the menu on the left, select the setting to configure:
-* <<ack-settings,Acknowledgments>>
-* <<validation-settings,Validation>>
-* <<control-numbers,Control Numbers>>
-* <<character-set,Character sets>>
+. Select the partner to associate with the settings.
+. In the *Validation and acknowledgment settings* section's *Receive from <partner-name>* column, click *X12*.
+. Select a link to configure:
+* <<ack-settings,Acknowledgment settings>>
+* <<validation-settings,Validation settings>>
+* <<control-numbers,Control numbers>>
+* <<character-set,Character set and separators>>
 . Click *Save*.
 
 [NOTE]
-It can take up to five minutes or so for your configuration changes to sync with Mule.
+It can take up to approximately five minutes for your configuration changes to sync with Mule.
 
 [[ack-settings]]
 == Acknowledgment Settings
 
-Use the following settings to configure acknowledgment settings:
+Use the following settings to configure the acknowledgments to send in response to inbound X12 messages:
 
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default
 
 |Send TA1 for each transmission from <recipient>.
-a|Provides a Technical Acknowledgment (TA1) to the Interchange sender that reports the status of the processing of an interchange header and trailer by the address receiver.
+a|Provides a Technical Acknowledgment (TA1) to the Interchange sender that reports the status of the processing of an interchange header and trailer by the address receiver:
 
-When the ISA and IEA of the received X12 message are valid, a positive TA1 ACK is sent, regardless of what the status of the other content is.
-If the ISA and IEA of the received X12 message is not valid, a TA1 ACK with an error code is sent.
+* If the ISA and IEA of a received X12 message are valid, the host sends a positive TA1 ACK, regardless of the status of the other content.
+* If the ISA and IEA of a received X12 message are not valid, the host sends a TA1 ACK with an error code.
 
 The TA1 ACK is sent inside an ISA or IEA envelope. The ISA and IEA are no different than any other interchange.
 |Disabled
 
 |Send 997 functional acknowledgment when messages fail to route to a message flow
-a|Provides a functional acknowledgment (the receipt and syntactical acceptability of a message) with the exchange. Functional acknowledgment settings are configured for each message flow, and only apply when there is a failure to route the message to one of the message flows.
+a|Sends a functional acknowledgment (the receipt and syntactical acceptability of a message) when there is a failure to route the message to one of the message flows.
+
+
 |Disabled
 |===
 
 === X12 997 Functional Acknowledgment
 
-The X12 997 functional acknowledgment reports the status of a received interchange. It reports all the errors encountered while processing the received document.
-
+The X12 997 functional acknowledgment reports the status of a received interchange. It reports all of the errors encountered while processing the received document.
 As with all X12 transaction sets, the 997 functional acknowledgment is sent inside a GS or GE envelope.
 
-The 997 functional acknowledgment is used to:
+The 997 functional acknowledgment does the following:
 
-* Acknowledge the receipt of an interchange or functional group.
-* Accept or reject one or more functional groups or transactions.
-* Verify and report compliance with the standard.
+* Acknowledges the receipt of an interchange or functional group
+* Accepts or rejects one or more functional groups or transactions
+* Verifies and reports compliance with the standard
 
-If an interchange contains multiple groups, then a 997 acknowledgment is returned for each group.
+If an interchange contains multiple groups, a 997 acknowledgment is returned for each group.
 
-If a group contains multiple transaction sets, then the acknowledgment for that group contains multiple AK2 loops, that is, one for each transaction set. This applies only if the AK2 loops are generated for accepted transaction sets.
+If a group contains multiple transaction sets, then the acknowledgment for that group contains one loop for each transaction set. This applies only if AK2 loops are generated for accepted transaction sets.
 
 [[validation-settings]]
 == Validation Settings
 
-Selecting the checkbox (enabling) for any of these options means that all the X12 documents meet this condition criteria and receive a 997 failure message:
+Use these settings to ensure that all X12 messages received from a partner meet validation rules. Parter Manager logs all validation errors and reports them in the CONTRL acknowledgments.
 
 [%header%autowidth.spread]
 |===
-|Setting |Description |Default
+|Setting a|Description |Default
 
-|Fail document when value length outside allowed range
-|If selected, a transaction with values that are too long or too short is rejected. If unselected, the values are used and the transaction is not rejected. In either case, the error is logged and reported in the 997 acknowledgments.
+|Fail when value length outside allowed range
+a| * If selected, Partner Manager rejects transactions with data element values that are too long or too short against the definition in the EDI schema used.
+* If unselected, Partner Manager uses the values.
+| Enabled
+
+|Fail when invalid character in value
+a| * If selected, Partner Manager rejects transactions with invalid characters.
+* If unselected, the characters are either passed through or substituted.
+
 |Enabled
 
-|Fail document when invalid character in value
-|If selected, a transaction with invalid characters is rejected. If unselected, the characters are either passed through or substituted and the transaction is not rejected. In either case, the error is reported in the 997 acknowledgments.
+|Fail if value is repeated too many times
+a|* If selected, Partner Manager rejects transactions with values that are repeated too many or too few times.
+* If unselected, Partner Manager accepts the values.
+|Enabled
+
+|Fail if unknown segments are used
+a|* If selected, the Partner Manager rejects transactions that contain unknown segments.
+* If unselected, Partner Manager ignores unused segments.
 |Disabled
 
-|Fail document if value is repeated too many times
-|If selected, a transaction with values that are repeated too many or too few times are rejected. If unselected, the values are accepted and the transaction is not rejected. In either case, the error is reported in the 997 acknowledgments.
+|Fail when segments are out of order
+a|* If selected, Partner Manager rejects transactions that have out-of-order segments.
+* If unselected, the segments are reordered.
+| Enabled
+
+|Fail when too many repeats of segment
+| If selected, Partner Manager rejects transactions with segments repeated too many times.
 |Enabled
 
-|Fail document if unknown segments are used
-|If selected, a transaction containing any unknown segments is rejected. If unselected, unknown segments are ignored and the transaction is not rejected. In either case, the error is reported in the 997 acknowledgments.
-|Enabled
+|Fail when unused segments are included
+a|* If selected, Partner Manager rejects transactions containing segments marked as unused in the schema.
+* If unselected, Partner Manager ignores unused segments.
+| Disabled
 
-|Fail document when segments are out of order
-|If selected, a transaction with segments that are out of order is rejected. If unselected, the segment can be reordered the transaction is not rejected. In either case, the error is reported in the 997 or 999 acknowledgments.
-|Enabled
-
-|Fail document when too many repeats of a segment
-|A transaction with a segment repeated too many times is rejected. The error is reported in the 997 or 999 acknowledgments.
-|Enabled
-
-|Fail document when unused segments are included
-|If selected, a transaction containing segments marked as unused in the schema is rejected. If unselected, the transaction is not rejected and the unused segments are ignored. In either case, the error is reported in the 997 or 999 acknowledgments.
-|Enabled
+|Enforce conditional relationship validations a|  * If selected, any missing conditional data elements cause the generation of the X12 transaction to fail.
+* If unselected, Partner Manager does not enforce relationship validations.
+| Disabled
 |===
 
 [[control-numbers]]
 === Control Numbers
 
-Use these settings to apply validations related to your partners or your use of control numbers within the X12 message:
+Use these settings to apply validations related to the use of control numbers within inbound X12 messages:
 
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default
 
 |Requires unique interchange control number (ISA13)
-|If selected, Partner Manager records the interchange numbers previously processed and rejects any duplicate interchange numbers from the same partner (as determined by the interchange sender and receiver identification). If unselected, it enables processing of the received interchange to continue.
-|Disabled
+a| If selected, the host records the interchange numbers previously processed and rejects duplicate interchange numbers from the same partner (as determined by the interchange sender and receiver identification).
+|Enabled
 
 |Requires unique group control number (GS06)
-|If selected, Partner Manager enforces globally unique Group Control Numbers (GS06) for received functional groups. This configuration requires group numbers to be unique across all interchanges received from the same partner and application (as determined by the interchange sender and receiver identification, combined with the functional group sender and receiver application codes).
+a| If selected, the host enforces globally unique Group Control Numbers (GS06) for received functional groups.
+
+This configuration requires group numbers to be unique across all interchanges received from the same partner and application, as determined by the interchange sender and receiver identification, combined with the functional group sender and receiver application codes.
 | Disabled
 
-|Requires unique transaction set control number (ST02)
-|If selected, Partner Manager enforces globally unique Transaction Set Control Numbers (ST02) for received transaction sets. This configuration requires transaction set numbers to be unique across all functional groups received from the same partner and application (as determined by the interchange sender and receiver identification, combined with the functional group sender and receiver application codes).
+|Require unique transaction set control number (ST02)
+a| If selected, the host enforces globally unique Transaction Set Control Numbers (ST02) for received transaction sets.
+
+This configuration requires transaction set numbers to be unique across all functional groups received from the same partner and application, as determined by the interchange sender and receiver identification, combined with the functional group sender and receiver application codes.
 |Disabled
 |===
 
-[[character-sets]]
-=== Character Sets
+[[character-set]]
+=== Character Set and Encoding
 
-Use these settings to apply selected character set and encoding options pertaining to your partners and your X12 message:
+Use these settings to apply character set and encoding options for received X12 message:
 
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default
 
 |Character set
-a|This option is required and defines the characters allowed in string data. When set, invalid characters are replaced by the substitution character. If no substitution character is set or enabled for receive messages in the parser options, they are rejected as errors.
-Either way, the invalid characters are logged and are reported in the 997 functional acknowledgments for the receive messages.
-
-Possible values include:
-
-* `Basic`
-* `Extended`
-* `Unrestricted`
-| `Extended`
+a|Defines the characters allowed in string data. When set, invalid characters are replaced by the substitution character. If no substitution character is enabled for receive messages in the parser options, Partner Manager rejects the messages.
+Either way, the invalid characters are logged and are reported in the 997 functional acknowledgments for the receive messages. | `EXTENDED`
 
 |Character encoding
-a|Indicates the character encoding for messages. This character encoding is used for both send and receive messages.
-
-Possible values include:
-
-* `ASCII`
-* `ISO8859_1`
-* `UTF-8`
-|Disabled
+a|Indicates the character encoding for messages.
+| `ISO8859_1`
 |===
+
+== See Also
+
+* xref:create-inbound-message-flow.adoc[Create and Configure an Inbound Message Flow]
+* xref:create-partner.adoc[Create a New Partner]
+* xref:modify-partner-settings.adoc[Modify a Partner's Settings]

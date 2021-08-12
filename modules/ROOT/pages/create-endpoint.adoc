@@ -1,45 +1,37 @@
 = Create and Configure Endpoints
 
-You can create endpoints in the host or partner page or by using the Message Flow wizard.
+You can create new endpoints from the *Host* or *Partner* page, or by using the Message Flow wizard.
 
-== Create and Configure Endpoints from the Partner Page
+== Create Endpoints from the Partners Page
 
-Create and configure new send or receive endpoints using the partner page:
+You can use the *Partners* page to create new send and receive endpoints owned by partners or 3rd party connections:
 
 . In the navigation menu, select *Partners*.
-. Select the partner for which to create and configure the endpoint.
-. In the *Endpoints* section, click *New*. +
-The *New Endpoint* window appears.
-. In the *New Endpoint* window, in the *Usage* field, select *Receive from Partners* or *Send to partners*. +
-The *Protocol* field appears.
+. Select the partner or 3rd party connection for which to create the endpoint.
+. In the *Endpoints* section, click *New*.
+. In the *New Endpoint* window *Usage* field, select *Receive from partners* or *Send to partners*.
 . In the *Protocol* field, select the protocol to use for the endpoint.
 . <<configure-endpoint,Configure the endpoint>> according to the type of endpoint you are creating and the protocol you selected.
 . Click *Save*.
 
-Ownership of the endpoints (receive or send) is automatically assigned based on the partner from which you are creating the endpoint.
+Ownership of the endpoints (receive or send) is automatically assigned based on the partner or 3rd party connection from which you are creating the endpoint.
 
-== Create and Configure Endpoints from the Host Page
+== Create Endpoints from the Host Page
+
+You can use the *Host* page to create new send and receive endpoints owned by the host:
 
 . In the navigation menu, select the host.
-. In the *Endpoints* section, click *New*. +
-The *New Endpoint* window appears.
-. In the *New Endpoint* window, in the *Usage* field, select one of the following endpoint types:
-+
---
-* *Receive from partners*
-* *Target at <host-name>*
-* *Source at <host-name>*
-* *Send to partners*
-
-The *Protocol* field appears.
---
+. In the *Endpoints* section, click *New*.
+. In the *New Endpoint* window *Usage* field, select the endpoint type:
 . In the *Protocol* field, select the protocol to use for the endpoint.
 . <<configure-endpoint,Configure the endpoint>> according to the type of endpoint you are creating and the protocol you selected.
 . Click *Save*.
 
-== Create and Configure Endpoints Using the Message Flow Wizard
+== Create Endpoints Using the Message Flow Wizard
 
-When creating endpoint types using the Message Flow wizard, the ownership of the endpoint is automatically assigned to the host or trading partner from which the endpoint was created. Using the Message Flow wizard, you can xref:configure-message-flows.adoc[Create and Configure an Inbound Message Flow] or xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow].
+You can use the Message Flow Wizard to create send and receive endpoints owned by hosts, partners, or 3rd party connections.
+
+For information about using the Message Flow wizard to create new endpoints, see xref:configure-message-flows.adoc[Create and Configure an Inbound Message Flow] and xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow].
 
 == Supported Endpoint Protocols
 
@@ -47,14 +39,17 @@ The configuration of Partner Manager endpoints depends on the protocol used to s
 
 Partner Manager supports the following endpoint protocols:
 
+The following table describes the endpoint types, along with their supported protocols and owners:
+
 [%header%autowidth.spread]
 |===
-|Protocol | Trading Partners | Backend
-| AS2 | Receive, Send | N/A
-| FTP | Receive, Send | Receive, Send
-| HTTP/HTTPS | Send | Receive, Send
-|SFTP | Receive, Send | Receive, Send
-
+|Endpoint Type | Protocol | Can be owned by
+.1+| Source at host .2+.^| FTP, HTTP, HTTPS, SFTP .2+| Host
+.1+| Target at host
+.2+.^| Receive from partners .1+| AS2 .1+| Host
+.1+| FTP, SFTP .1+| Host, partner, 3rd party connection
+.2+.^| Send to partners .1+| AS2 | Partner, 3rd party connection
+.1+| FTP, HTTP, HTTPS, SFTP .1+| Host, partner, 3rd party connection
 |===
 
 == Endpoint Runtime Services

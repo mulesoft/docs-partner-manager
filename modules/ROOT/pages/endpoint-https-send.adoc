@@ -1,48 +1,52 @@
 = HTTP and HTTPS Send Endpoint Settings
 
-The HTTP and the secure HTTPS protocol send settings are used with endpoints for sending transmissions to your partner and endpoints that are targets at your organization.
+HTTP and HTTPS send endpoint settings configure where to send messages in the following contexts:
 
-You can use the HTTP and HTTPS endpoint to:
+* Send to partners
++
+Target endpoint in an outbound message flow to which translated B2B/EDI messages are sent to the partners either directly or via a 3rd party connection
++
+* Target at host
++
+Target endpoint in an inbound message flow to which translated application JSON and XML messages are sent to the backend systems
 
-* Send to partners +
-Send outbound EDI files to your trading partners in outbound message flows.
-* Target at host +
-Send application messages (JSON or XML) to your backend applications in inbound message flows.
+A host, partner, or 3rd party connection can own HTTP and HTTPS send endpoints.
+
+Create HTTP and HTTPS send endpoints by configuring these settings on the host, partner, or 3rd party connection page:
 
 [%header%autowidth.spread]
 |===
 |Name |Description |Required
 | Owner
-| The trading partner or host that owns the endpoint.
+| Partner, 3rd party connection, or host who owns the endpoint
 | Yes
 
 |Protocol
-| The protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window. You can select *HTTP* or *HTTPS*. The value in this field is set to *HTTPS* by default.
+| `HTTP` or `HTTPS`. The default is *HTTPS*.
 |Yes
 
 |Endpoint Name
-|The name used to identify the endpoint. The *Endpoint Name* field is generated automatically, but can be modified manually.
+|Automatically-generated name that identifiers the endpoint, which you can modify manually later on
 |Yes
 
 |Description
-|The user-defined field for describing the purpose and use of the endpoint.
+|User-supplied description of the endpoint's purpose and use
 |No
 
 |URL
-|The target HTTP or HTTPs service to which to send translated EDI, JSON, or XML messages. The URL must be accessible from the runtime environment that processes your B2B integrations.
+|Target HTTP or HTTPs service to which to send translated EDI, JSON, or XML messages. The URL must be accessible from the runtime environment that processes your B2B integrations.
 Enter a well-formed URL (including the path) that specifies where to send the request, for example:
 `+https://www.mulesoft.com/sendRequest?name=something+`
 |Yes
 
 |Connection Idle Timeout (milliseconds)
-|The connection idle timeout period in milliseconds. The value in this field is set to `30000` by default.
+|Connection idle timeout period in milliseconds. The default is `30000`.
 |Yes
 
 |Response Timeout (milliseconds)
-|The maximum time, in milliseconds, that the request element blocks the execution of the flow that is waiting for the HTTP response.
+|Maximum time, in milliseconds, for which the request element blocks the execution of the flow that is waiting for the HTTP response
 |No
 |===
-
 
 == Authentication Settings
 
@@ -52,13 +56,13 @@ Depending on how you set up your authentication policy, refer to the appropriate
 |===
 |Authentication Type |Description
 |None
-|No authentication.
+|No authentication
 
 |API Key
 a| * HTTP Header Name +
 The HTTP header parameter associated with the *API Key* value. +
 * API Key +
-The value for the access key you set.
+The value for the access key you set
 
 |Basic
 a|Specifies a simple authentication policy that protects the API by requiring a username and password when calling apps to make a request.

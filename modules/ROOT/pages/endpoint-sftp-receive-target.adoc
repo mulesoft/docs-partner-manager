@@ -1,13 +1,18 @@
 = SFTP Receive Endpoint Settings
 
-You can use these settings to set up SFTP endpoints in one of the following contexts:
+SFTP receive endpoint settings determine where to receive messages in the following contexts:
 
-* Receive from partners +
-Receive inbound EDI files from your trading partners used in inbound message flows
-* Source at host +
-Receive application messages (in JSON or XML format) from your backend applications used in outbound message flows
+* Receive from partners
++
+Source endpoint in an inbound message flow that receives B2B/EDI messages from partners either directly or via 3rd party connections
++
+* Source at host
++
+Source endpoint in an outbound message flow that receives application JSON and XML messages from the backend systems
 
-You can create the STFP identifiers for your organization and for your trading partners in the profile pages xref:configure-host.adoc[host] and xref:configure-partner.adoc[trading partner].
+A host, partner, or 3rd party connection can own FTP send endpoints.
+
+Create SFTP receive endpoints by configuring these settings on the host or Partner page:
 
 [%header%autowidth.spread]
 |===
@@ -21,7 +26,7 @@ You can create the STFP identifiers for your organization and for your trading p
 | Yes
 
 | Protocol
-| The protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window. The value in this field cannot be modified.
+| The protocol selected in the *Protocol* field of the *New endpoint*. The value in this field cannot be modified.
 | Yes
 
 | Description

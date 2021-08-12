@@ -1,6 +1,8 @@
 = Create and Configure an Outbound Message Flow
 
-You can create and configure an outbound message flow to receive application messages from your backend systems, validate and transform these messages, and then send the translated EDI message to your trading partners.
+You can create and configure an outbound message flow to receive application messages from your backend systems, validate and transform these messages, and then send the translated EDI message to your trading partners either directly, or through 3rd party connections.
+
+To send messages to a trading partner through a 3rd party connection, select an endpoint owned by that connection.
 
 == Create an Outbound Message Flow
 
@@ -22,9 +24,7 @@ The endpoint is added to the message flow, and a message appears indicating that
 ... Click *New* next to the search box.
 ... From the *Owner* drop-down list, select the endpoint's owner.
 ... From the *Protocol* drop-down, select the protocol and configure it according to the protocol you select:
-* xref:endpoint-https-send.adoc[HTTP or HTTPS]
-* xref:endpoint-ftp-send.adoc[FTP]
-* xref:endpoint-sftp-send.adoc[SFTP]
+
 . Click *Save*. +
 The endpoint is added to the message flow.
 
@@ -93,6 +93,27 @@ By default, Partner Manager uses the X12 send or EDIFACT send settings that are 
 +
 To apply custom validation settings and delimiters for the message flow you are setting up, select *Custom X12 settings* or *Custom EDIFACT settings* and provide custom configuration values.
 . In the *<protocol> Identifiers* section, select the sender and receiver identifiers that are configured under the host and trading partner profiles to use them on the X12 ISA and GS segments or the EDIFACT UNB segments.
+
+== Configure the Target Endpoint
+
+. Expand the *Target at <host>* section.
+. In the *Send to <partner> section*, click *Select*.
+. In the *Select an endpoint: Send to <partner>* window:
+.. To use an existing endpoint, select the endpoint from the list and click *Select*.
++
+You can select any previously configured Send to partner endpoints owned by the host, the trading partner for whom the message flow is configured, or a 3rd party connection.
++
+.. To create a new endpoint:
+... Click *New* next to the search box.
+... From the *Owner* drop-down,
+... From the *Protocol* drop-down, select the protocol and configure it according to the protocol you select:
+* xref:endpoint-as2-send.adoc[AS2]
+* xref:endpoint-https-send.adoc[HTTP or HTTPS]
+* xref:endpoint-ftp-send.adoc[FTP]
+* xref:endpoint-sftp-send.adoc[SFTP]
+... Click *Save*.
+
+If you selected AS2 as the send to partner endpoint protocol, you must import the AS2 certificate of the partner or 3rd party connection that owns the endpoint, if a certificate already does not exist in the partner or 3rd party connection’s profile.
 
 == Verify the Message Flow is Complete
 
