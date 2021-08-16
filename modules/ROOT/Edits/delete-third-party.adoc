@@ -1,0 +1,28 @@
+= Delete a 3rd Party Connection
+
+If you are no longer using a 3rd party connection, you can delete it from Partner Manager.
+
+When you delete a 3rd party connection, it is removed from the *Partners* page. Also, all of the connection's data is deleted, except for information about connection-related activities that occurred before the deletion.
+
+You cannot delete 3rd party connections if you have configured or deployed message flows for your partners that reference the 3rd party identifier or endpoints.
+
+== Prerequisites for On-Premises Installations
+
+To delete a 3rd party connection in an on-premises installation, ensure that your on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager named `B2BserverGroup` are active and running.
+
+To obtain these statuses, contact your B2B System Administrator. You can also check the status of the host servers in Anypoint Platform Runtime Manager.
+
+== Steps
+
+To delete a 3rd party connection:
+
+. In Anypoint Partner Manager, select *Partners* in the navigation menu.
+. Select the 3rd party connection to delete and click *Delete*.
+. Confirm the deletion.
+
+After you delete a 3rd party connection, you can reuse the connection name.
+
+== See Also
+
+* xref:create-third-party.adoc[Create a New 3rd Party Connection]
+* xref:modify-third-party-settings.adoc[Modify 3rd Party Connection Settings]

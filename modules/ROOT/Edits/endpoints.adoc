@@ -1,0 +1,21 @@
+= Endpoints
+
+Endpoints define the transport protocol configurations necessary to receive or send messages with external trading partners or internal backend applications.
+
+Partner Manager uses endpoints to receive transmissions from partners and messages from backend application, define transport protocols, and specify message or message acknowledgment destinations.
+
+== Endpoint Ownership
+
+You can assign the host, partner, or 3rd party connection as the owner of endpoints to control the use of endpoints within inbound and outbound message flows.
+
+When creating partner-facing endpoints directly from the partner, or 3rd party connecction, the ownership of the endpoint is automatically assigned to the entity from which the endpoint was created.
+
+In a message flow, availability depends on the endpoint assignment:
+
+* Any partner can select an endpoint assigned to the host.
+* If an endpoint is assigned to a specific partner or 3rd party connection, than that endpoint is available only to the partner for which the endpoint is assigned.
+
+== See Also
+
+* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:delete-endpoints.adoc[Delete Endpoints]

@@ -1,0 +1,100 @@
+= Configure Receive Settings for Inbound EDIFACT messages
+
+Partner Manager receive settings include the EDIFACT acknowledgments and validation rules to apply when processing an inbound EDIFACT message from the specified partner.
+
+To configure EDIFACT receive settings:
+
+. In the navigation menu, select *Partners*.
+. Select the partner to which these settings apply.
+. In the *Validation and acknowledgment settings* section's *Receive from <partner-name>* column, click *EDIFACT*.
+. Select a link to configure:
+* <<ack-settings,Acknowledgment settings>>
+* <<validation-settings,Validation settings>>
+* <<control-numbers,Control Numbers>>
+. Click *Save*.
+
+[NOTE]
+It can take up to five minutes or so for your configuration changes to sync with Mule.
+
+[[ack-settings]]
+== Acknowledgment Settings
+
+Optionally configure acknowledgment settings for each Inbound EDIFACT message flow. To configure acknowledgement settings:
+
+* Enable the *Send CONTRL functional acknowledgement when messages fail to route to a message flow* setting.
++
+When there is a routing failure, this acknowledgement indicates that the message is rejected.
+
+If you enable one of these options, you must either select the partner endpoint to which to send the acknowledgements or create a new endpoint for this purpose.
+
+== Validation Settings
+
+Select one or more of the following options to ensure that all EDIFACT messages received from the trading partner meet validation rules:
+
+[%header%autowidth.spread]
+|===
+|Setting |Description |Default
+
+|Enforce length limits
+a|
+* If selected, Partner Manager rejects a message with values that are too short or long.
+* If unselected, Partner Manager accepts the message.
+|Enabled
+|Enforce value repeats
+a|
+* If selected, Partner Manager rejects a message with values that are repeated too many or too few times.
+* If unselected, Partner Manager accepts the message.
+|Enabled
+|Enforce valid characters
+a| * If selected, Partner Manager rejects a message that contains invalid characters.
+* If unselected, the invalid characters are either ignored or replaced, and Partner Manager accepts the message.
+|Enabled
+| Allow unknown segments
+a|
+* If selected, Partner Manager ignores unknown segments.
+* If unselected, Partner Manager rejects a message that contains unknown segments.
+|Disabled
+|Enforce segment order
+a| * If selected, Partner Manager enables the segment to be reordered.
+* If unselected, Partner Manager rejects a message that contains segments that are out of order.
+|Enabled
+|Allow Unused segments
+a|* If selected, Partner Manager ignores unused segments.
+* If unselected, Partner Manager rejects a message that contains unused segments.
+|Enabled
+|Enforce segment repeats
+a|* If selected, Partner Manager rejects a message that contains segments that repeat too many times.
+* If unselected, Partner Manager accepts the message.
+|Enabled
+|===
+
+If a message does not meet an enabled rule, Partner Manager rejects it.
+
+Parter Manager logs all validation errors and reports them in the CONTRL acknowledgments.
+
+[[control-numbers]]
+== Control Numbers
+
+Use these settings to apply validations related to your partner or to your use of control numbers within the EDIFACT message:
+
+[%header%autowidth.spread]
+|===
+|Setting |Description |Default
+
+|Require unique interchange control number
+a| * If selected, Partner Manager records the interchange numbers previously processed and rejects duplicate interchange numbers from the same partner, as determined by the interchange sender and receiver identification.
+* If unselected, Partner Manager enables processing of the received interchange to continue.
+|Disabled
+
+|Require unique message control number
+a| If selected, Partner Manager enforces globally unique message control numbers (UNH01) for received transaction sets.
+
+This configuration requires message control numbers to be unique across all EDIFACT messages received from the same partner and application, as determined by the interchange sender and receiver identification and application codes.
+| Disabled
+|===
+
+== See Also
+
+* xref:create-inbound-message-flow.adoc[Create and Configure an Inbound Message Flow]
+* xref:create-partner.adoc[Create a New Partner]
+* xref:modify-partner-settings.adoc[Modify a Partner's Settings]

@@ -1,0 +1,68 @@
+= FTP Send Endpoint Settings
+
+FTP send endpoint settings configure where to send messages in the following contexts:
+
+* Send to partners
++
+Target endpoint in an outbound message flow to which translated B2B/EDI messages are sent to the partners
+
+* Target at host
++
+Target endpoint in an inbound message flow to which translated application JSON and XML messages are sent to the backend systems
+
+A host, partner, or 3rd party connection can own FTP send endpoints.
+
+Create FTP send endpoints by configuring these settings on the Host or Partner pages:
+
+[%header%autowidth.spread]
+|===
+|Name |Description | Required
+
+| Owner
+| The trading partner or host that owns the endpoint.
+| Yes
+
+| Protocol
+| The protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window.
+| Yes
+
+|Endpoint Name
+| The name used to identify the endpoint. The value in the *Endpoint Name* field is generated automatically, but can be modified manually.
+| Yes
+
+|Description
+|The user-defined field for describing the purpose and use of the endpoint.
+| No
+
+|Host
+| The FTP server host, such as `ftp.mulesoft.com`, `localhost`, or `192.168.0.1`. The host must be accessible from your Mule environment.
+|Yes
+
+|Port
+|The port number of the FTP server to connect.
+|Yes
+
+|Username
+|The username for the FTP server.
+|Yes
+
+|Password
+|The password for the FTP server.
+|Yes
+
+|Target Path
+|The path on your FTP server to EDI files that were generated from outbound message flows. This is also the path on your FTP server for storing
+translated JSON and XML files generated from inbound message flows.
+|Yes
+
+|Filename pattern
+|The xref:file-name-pattern.adoc[file name pattern] required by your trading partner or backend application.
+|
+|===
+
+For EDI messages that are not time-sensitive, such as invoice and payment remittances, use the Write batch operation to merge multiple individual messages into a single interchange and send to your trading partners.
+
+== See Also
+
+* xref:endpoints.adoc[Endpoints]
+* xref:create-endpoint.adoc[Create and Configure Endpoints]
