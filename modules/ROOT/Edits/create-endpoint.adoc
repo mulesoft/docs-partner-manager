@@ -43,7 +43,7 @@ The following table describes the endpoint types, along with their supported pro
 
 [%header%autowidth.spread]
 |===
-|Endpoint Type | Protocol | Can be owned by
+|Endpoint Type | Protocol | Can Be Owned By
 .1+| Source at host .2+.^| FTP, HTTP, HTTPS, SFTP .2+| Host
 .1+| Target at host
 .2+.^| Receive from partners .1+| AS2 .1+| Host
