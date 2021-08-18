@@ -22,7 +22,7 @@ You can use the *Host* page to create new send and receive endpoints owned by th
 
 . In the navigation menu, select the host.
 . In the *Endpoints* section, click *New*.
-. In the *New Endpoint* window *Usage* field, select the endpoint type:
+. In the *New Endpoint* window *Usage* field, select the endpoint type.
 . In the *Protocol* field, select the protocol to use for the endpoint.
 . <<configure-endpoint,Configure the endpoint>> according to the type of endpoint you are creating and the protocol you selected.
 . Click *Save*.
