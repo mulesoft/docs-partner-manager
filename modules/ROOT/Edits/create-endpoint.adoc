@@ -4,7 +4,7 @@ You can create new endpoints from the *Host* or *Partner* page, or by using the 
 
 == Create Endpoints from the Partners Page
 
-You can use the *Partners* page to create new send and receive endpoints owned by partners or 3rd party connections:
+Use the *Partners* page to create new send and receive endpoints owned by partners or 3rd party connections:
 
 . In the navigation menu, select *Partners*.
 . Select the partner or 3rd party connection for which to create the endpoint.
