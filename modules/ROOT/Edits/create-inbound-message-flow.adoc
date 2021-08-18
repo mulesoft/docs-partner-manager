@@ -74,7 +74,7 @@ The acknowledgment is added to the message flow.
 [[import-map]]
 == Import the Translation Map
 
-To create your inbound EDI-to-application message (JSON or XML) map in Anypoint Studio, follow xref:partner-manager-maps.adoc[these instructions].
+To create your inbound EDI-to-application message (JSON or XML) map in Anypoint Studio, follow xref:partner-manager-maps.adoc[these instructions]:
 
 . In the message flow, expand the *Map* section.
 . Click *Import* and then click *Choose file*.
