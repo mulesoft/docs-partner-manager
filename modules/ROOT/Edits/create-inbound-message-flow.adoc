@@ -24,7 +24,7 @@ A new message flow is created.
 [receiving-endpoint]
 == Specify the Receiving Endpoint
 
-Specify the endpoint that will receive the message you are sending. You can do either of the following:
+Use one of the following methods to specify the endpoint to receive the message you are sending:
 
 * Select an existing endpoint owned by the host, target partner, or 3rd party connection.
 +
