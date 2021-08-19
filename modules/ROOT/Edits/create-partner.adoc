@@ -1,6 +1,6 @@
 = Create a New Partner
 
-Create a new partner by using the *Partners* page to specify the partner's name, identifiers, endpoints, validation rules, and other settings.
+Create a new partner by using the *Partners* page to specify partner-specific information such as name, identifiers, endpoints, and validation rules.
 
 == Prerequisites
 
