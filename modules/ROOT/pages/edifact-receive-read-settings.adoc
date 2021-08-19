@@ -19,10 +19,8 @@ It can take up to five minutes or so for your configuration changes to sync with
 [[ack-settings]]
 == Acknowledgment Settings
 
-Optionally configure acknowledgment settings for each Inbound EDIFACT message flow. To configure acknowledgement settings:
+Optionally configure acknowledgment settings for each Inbound EDIFACT message flow by enabling the *Send CONTRL functional acknowledgment when messages fail to route to a message flow* setting.
 
-* Enable the *Send CONTRL functional acknowledgement when messages fail to route to a message flow* setting.
-+
 When there is a routing failure, this acknowledgement indicates that the message is rejected.
 
 If you enable one of these options, either select the partner endpoint to which to send the acknowledgements or create a new endpoint for this purpose.

@@ -4,7 +4,7 @@ SFTP receive endpoint settings determine where to receive messages in the follow
 
 * Receive from partners
 +
-Source endpoint in an inbound message flow that receives B2B/EDI messages from partners either directly or via 3rd party connections
+Source endpoint in an inbound message flow that receives B2B EDI messages from partners either directly or via 3rd party connections
 +
 * Source at host
 +

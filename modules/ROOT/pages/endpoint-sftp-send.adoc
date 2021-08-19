@@ -4,7 +4,7 @@ SFTP send endpoint settings configure where to send messages in the following co
 
 * Send to partners
 +
-Target endpoint in an outbound message flow to which translated B2B/EDI messages are sent to partners either directly or via a 3rd party connection
+Target endpoint in an outbound message flow to which translated B2B EDI messages are sent to partners either directly or via a 3rd party connection
 +
 * Target at host
 +
@@ -31,7 +31,7 @@ Create SFTP send endpoints by configuring these settings on the host or Partner 
 | Yes
 
 |Description
-|User-supplied value that describes the purpose and use of the endpoint.
+|User-supplied value that describes the purpose of the endpoint.
 | No
 
 |Host

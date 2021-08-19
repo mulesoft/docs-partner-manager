@@ -4,7 +4,7 @@ FTP send endpoint settings configure where to send messages in the following con
 
 * Send to partners
 +
-Target endpoint in an outbound message flow to which translated B2B/EDI messages are sent to the partners
+Target endpoint in an outbound message flow to which translated B2B EDI messages are sent to the partners
 
 * Target at host
 +

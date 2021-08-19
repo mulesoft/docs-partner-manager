@@ -53,7 +53,7 @@ Add the following settings for the new 3rd party connection, either now or later
 
 == Next Step
 
-Once you have created a 3rd-party connection and configured 3rd-party-specific endpoints (if needed), you can set up message flows that use the connection.
+After you create a 3rd-party connection and configure 3rd-party-specific endpoints (if needed), you can set up message flows that use the connection.
 
 == See Also
 

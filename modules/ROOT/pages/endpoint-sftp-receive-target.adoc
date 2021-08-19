@@ -4,7 +4,7 @@ SFTP receive endpoint settings determine where to receive messages in the follow
 
 * Receive from partners
 +
-Source endpoint in an inbound message flow that receives B2B/EDI messages from partners either directly or via 3rd party connections
+Source endpoint in an inbound message flow that receives B2B EDI messages from partners either directly or via 3rd party connections
 +
 * Source at host
 +
@@ -30,7 +30,7 @@ Create SFTP receive endpoints by configuring these settings on the host or Partn
 | Yes
 
 | Description
-| User-supplied value that describes the purpose and use of the endpoint.
+| User-supplied value that describes the purpose of the endpoint.
 | No
 
 | Host

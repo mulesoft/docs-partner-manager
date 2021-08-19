@@ -1,11 +1,11 @@
 = Create and Configure an Inbound Message Flow
 :page-aliases: configure-message-flows.adoc
 
-You can create and configure an inbound message flow to receive EDI messages from your trading partners, including messages that go through 3rd party connections.
-
-To receive messages sent from a partner through a 3rd party connection, select the partner as the source or target and an endpoint owned by the 3rd party connection.
+You can create and configure an inbound message flow to receive EDI messages from your partners, including messages that go through 3rd party connections.
 
 When you create an inbound message flow, you can validate and transform the inbound messages and then send the translated message (JSON or XML) to your backend applications.
+
+NOTE: To receive messages sent from a partner through a 3rd party connection, select the partner as the source or target and an endpoint owned by the 3rd party connection.
 
 == Prerequisites
 Before you create your first inbound message flow, you must configure your xref:setup-payload-storage-API.adoc[payload storage API].
@@ -15,9 +15,6 @@ Before you create your first inbound message flow, you must configure your xref:
 . From the Anypoint Partner Manager navigation menu, select *Message Flows*.
 . Click *New message flow > Receive from partner*.
 . Either select an existing partner from the list or select *New* to create a new partner, as described in xref:create-partner.adoc#[Create a partner].
-+
-A new message flow is created.
-+
 . <<receiving-endpoint,Configure the receiving endpoint>>.
 . <<source-message-type,Configure the source message type>>.
 . <<import-map,Import the translation map>>.
