@@ -42,7 +42,7 @@ Create FTP receive endpoints by configuring these settings on the Host or Partne
 
 | Username
 | Username for connecting to the FTP server.
-| Yes, if the server is authenticated.
+| Yes, if the server is authenticated
 
 | Password
 | Password for the FTP server.
