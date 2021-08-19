@@ -26,11 +26,11 @@ Create HTTP and HTTPS send endpoints by configuring these settings on the host, 
 |Yes
 
 |Endpoint Name
-|Automatically generated name that identifiers the endpoint, which you can modify manually later on
+|Automatically generated name used to identify the endpoint, which you can subsequently modify manually.
 |Yes
 
 |Description
-|User-supplied description of the endpoint's purpose and use
+|User-supplied value that describes the purpose the endpoint.
 |No
 
 |URL
@@ -50,7 +50,7 @@ Enter a well-formed URL (including the path) that specifies where to send the re
 
 == Authentication Settings
 
-Depending on how you set up your authentication policy, refer to the appropriate authentication type and descriptions here.
+You can configure the following authentication settings, depending on the authentication type:
 
 [%header%autowidth.spread]
 |===
@@ -68,9 +68,9 @@ The value for the access key you set
 a|Specifies a simple authentication policy that protects the API by requiring a username and password when calling apps to make a request.
 
 * Username +
-The username you set up with this authentication policy.
+The username you created for this authentication policy.
 * Password +
-The password you set up with this authentication policy.
+The password you created for this authentication policy.
 
 |Client Credentials
 a|* Client ID +
@@ -84,7 +84,7 @@ The client secret header.
 
 |OAuth Token
 a|* Token URL +
-The valid authorization URL.
+The authorization URL.
 * Client ID +
 The client ID provided when registering your application.
 * Client Secret +

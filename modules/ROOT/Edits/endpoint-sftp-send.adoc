@@ -19,44 +19,44 @@ Create SFTP send endpoints by configuring these settings on the host or Partner 
 |Name |Description | Required
 
 | Owner
-| The trading partner or host that owns the endpoint.
+| Partner or host that owns the endpoint.
 | Yes
 
 | Protocol
-| The protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window.
+| Protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window.
 | Yes
 
 |Endpoint Name
-| The name used to identify the endpoint. The value in the *Endpoint Name* field is generated automatically, but can be modified manually.
+| Name used to identify the endpoint. The value in the *Endpoint Name* field is generated automatically, but can be modified manually.
 | Yes
 
 |Description
-|The user-defined field for describing the purpose and use of the endpoint.
+|User-supplied value that describes the purpose of the endpoint.
 | No
 
 |Host
-| The SFTP server host, such as `sftp.mulesoft.com`, `localhost`, or `192.168.0.1`. The host must be accessible from your Mule environment.
+| SFTP server host, such as `sftp.mulesoft.com`, `localhost`, or `192.168.0.1`. The host must be accessible from your Mule environment.
 |Yes
 
 |Port
-|The port number of the SFTP server to connect.
+|Port number of the SFTP server to connect.
 |Yes
 
 |Username
-|The username for the SFTP server.
+|Username for the SFTP server.
 |Yes
 
 |Password
-|The password for the SFTP server.
+|Password for the SFTP server.
 |Yes
 
 |Target Path
-|The path on your SFTP server to EDI files that were generated from outbound message flows. This is also the path on your SFTP server for storing
+|Path on your SFTP server to EDI files that were generated from outbound message flows. This is also the path on your SFTP server for storing
 translated JSON and XML files generated from inbound message flows.
 |Yes
 
 |Filename pattern
-|The xref:file-name-pattern.adoc[file name pattern] required by your trading partner or backend application.
+|xref:file-name-pattern.adoc[File name pattern] required by your trading partner or backend application.
 |
 |===
 

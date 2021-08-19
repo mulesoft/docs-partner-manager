@@ -59,7 +59,7 @@ Create AS2 endpoints by configuring these settings on the partner or 3rd party c
 |Yes
 
 |Respond to email address
-|Email address to use as the HTTP 'From' header when sending.
+|Email address to use as the HTTP `From` header when sending.
 |Yes
 
 |Message subject
@@ -92,7 +92,7 @@ a|Whether you want the partner to return an MDN receipt, which confirms the rece
 |Yes
 
 |MDN response
-|The AS2 messages sent from Partner Manager always request the receiver to send a Synchronous MDN receipt back. The default is `Sync`.
+|The AS2 messages sent from Partner Manager always request the receiver to return a Synchronous MDN receipt back. The default is `Sync`.
 | Yes
 |===
 
