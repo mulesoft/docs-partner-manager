@@ -13,7 +13,7 @@ When creating partner-facing endpoints directly from the partner, or 3rd party c
 In a message flow, availability depends on the endpoint assignment:
 
 * Any partner can select an endpoint assigned to the host.
-* If an endpoint is assigned to a specific partner or 3rd party connection, than that endpoint is available only to the partner for which the endpoint is assigned.
+* If an endpoint is assigned to a specific partner or 3rd party connection, then that endpoint is available only to that assigned entity.
 
 == See Also
 
