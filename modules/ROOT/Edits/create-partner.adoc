@@ -4,7 +4,7 @@ Create a new partner by using the *Partners* page to specify partner-specific in
 
 == Prerequisites
 
-Before you create your first partner, xref:setup-payload-storage-API.adoc[make sure that you have configured your payload storage API].
+Before you create your first partner, xref:setup-payload-storage-API.adoc[make sure that you have configured your payload storage API] and that you have the following information:
 
 Obtain the following information:
 
