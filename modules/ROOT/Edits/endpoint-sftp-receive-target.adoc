@@ -58,7 +58,7 @@ Create SFTP receive endpoints by configuring these settings on the host or Partn
 | Yes
 
 | Size check wait time
-| The wait time, in seconds, between size checks to determine if a file is ready for processing. The value in this field is `1 second` by default. This allows a file write to complete before processing.
+| The wait time, in seconds, between size checks to determine if a file is ready for processing. The value in this field is `1 second` by default. This allows a file write to finish before processing.
 
 Mule performs two size checks by waiting the amount of time specified in the `Size check wait time` field. If both checks return the same value, the file is ready to process.
 
