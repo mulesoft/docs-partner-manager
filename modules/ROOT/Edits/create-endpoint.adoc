@@ -11,7 +11,7 @@ Use the *Partners* page to create new send and receive endpoints owned by partne
 . In the *Endpoints* section, click *New*.
 . In the *New Endpoint* window *Usage* field, select *Receive from partners* or *Send to partners*.
 . In the *Protocol* field, select the protocol to use for the endpoint.
-. <<configure-endpoint,Configure the endpoint>> according to the type of endpoint you are creating and the protocol you selected.
+. <<configure-endpoint,Configure the endpoint>> according to type and protocol.
 . Click *Save*.
 
 Ownership of the endpoints (receive or send) is automatically assigned based on the partner or 3rd party connection from which you are creating the endpoint.
