@@ -58,7 +58,7 @@ a|If selected, any data elements with a length outside of the definition in the 
 |Enabled
 
 |Enforce conditional relationship validations
-|If selected, any missing conditional data elements will cause the generation of the X12 transaction to fail.
+|If selected, any missing conditional data elements cause the generation of the X12 transaction to fail.
 |Enabled
 |===
 
@@ -92,7 +92,7 @@ Use the following settings to configure whether a technical acknowledgment is re
 a|If selected, sets the value in ISA14 to 1 on the generated X12 payload, indicating that a Technical acknowledgment (TA1) is required.
 |Disabled
 |Endpoint
-a|When the option to expect a TA1 is selected, click *Select* to specify the *Receive from <partner>* endpoint. The acknowledgment will be received as an inbound transmission.
+a|When the option to expect a TA1 is selected, click *Select* to specify the *Receive from <partner>* endpoint. The acknowledgment is received as an inbound transmission.
 |None
 |===
 

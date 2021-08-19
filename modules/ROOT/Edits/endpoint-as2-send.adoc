@@ -35,7 +35,7 @@ Create AS2 endpoints by configuring these settings on the partner or 3rd party c
 | No
 
 |Partner AS2 URL
-|Your partner’s or 3rd party connection's AS2 URL to which outbound EDI transmissions are sent.
+|The partner or 3rd party connection AS2 URL to which outbound EDI transmissions are sent.
 |Yes
 
 |Connection timeout
