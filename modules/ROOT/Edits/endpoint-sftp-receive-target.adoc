@@ -30,7 +30,7 @@ Create SFTP receive endpoints by configuring these settings on the host or Partn
 | Yes
 
 | Description
-| The user-supplied value for describing the purpose and use of the endpoint.
+| The User-supplied value that describes the purpose and use of the endpoint.
 | No
 
 | Host

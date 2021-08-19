@@ -22,11 +22,11 @@ Create AS2 receive endpoints by configuring these settings on the Host page:
 |Yes
 
 |Endpoint name
-|Automatically-generated name that identifies the endpoint. You can modify this value later on.
+|Automatically generated name used to identify the endpoint, which you can subsequently modify manually.
 |Yes
 
 |Description
-|User-supplied description of the endpoint's purpose and use.
+|User-supplied value for that describes the purpose and use of the endpoint.
 |No
 
 |Private port (when deploying to VPC)

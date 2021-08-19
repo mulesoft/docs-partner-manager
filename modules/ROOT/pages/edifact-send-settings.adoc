@@ -36,7 +36,7 @@ Use the following settings to configure the general validation rules for outboun
 |Enforces valid characters
 |Enabled
 |Enforce length limits
-| Validates data elements against length limits defined in the used EDI schema
+|Validates data elements against length limits defined in the EDI schema used
 |Enabled
 |Expect CONTRL for each transmission sent to <partner>
 |When enabled, sets UNB-09 to `1`, indicating that a technical acknowledgment is expected in the partner's response

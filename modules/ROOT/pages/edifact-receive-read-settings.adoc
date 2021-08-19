@@ -25,7 +25,7 @@ Optionally configure acknowledgment settings for each Inbound EDIFACT message fl
 +
 When there is a routing failure, this acknowledgement indicates that the message is rejected.
 
-If you enable one of these options, you must either select the partner endpoint to which to send the acknowledgements or create a new endpoint for this purpose.
+If you enable one of these options, either select the partner endpoint to which to send the acknowledgements or create a new endpoint for this purpose.
 
 == Validation Settings
 
@@ -38,39 +38,39 @@ Select one or more of the following options to ensure that all EDIFACT messages 
 |Enforce length limits
 a|
 * If selected, Partner Manager rejects a message with values that are too short or long.
-* If unselected, Partner Manager accepts the message.
+* If not selected, Partner Manager accepts the message.
 |Enabled
 |Enforce value repeats
 a|
 * If selected, Partner Manager rejects a message with values that are repeated too many or too few times.
-* If unselected, Partner Manager accepts the message.
+* If not selected, Partner Manager accepts the message.
 |Enabled
 |Enforce valid characters
 a| * If selected, Partner Manager rejects a message that contains invalid characters.
-* If unselected, the invalid characters are either ignored or replaced, and Partner Manager accepts the message.
+* If not selected, the invalid characters are either ignored or replaced, and Partner Manager accepts the message.
 |Enabled
 | Allow unknown segments
 a|
 * If selected, Partner Manager ignores unknown segments.
-* If unselected, Partner Manager rejects a message that contains unknown segments.
+* If not selected, Partner Manager rejects a message that contains unknown segments.
 |Disabled
 |Enforce segment order
 a| * If selected, Partner Manager enables the segment to be reordered.
-* If unselected, Partner Manager rejects a message that contains segments that are out of order.
+* If not selected, Partner Manager rejects a message that contains segments that are out of order.
 |Enabled
 |Allow Unused segments
 a|* If selected, Partner Manager ignores unused segments.
-* If unselected, Partner Manager rejects a message that contains unused segments.
+* If not selected, Partner Manager rejects a message that contains unused segments.
 |Enabled
 |Enforce segment repeats
 a|* If selected, Partner Manager rejects a message that contains segments that repeat too many times.
-* If unselected, Partner Manager accepts the message.
+* If not selected, Partner Manager accepts the message.
 |Enabled
 |===
 
 If a message does not meet an enabled rule, Partner Manager rejects it.
 
-Parter Manager logs all validation errors and reports them in the CONTRL acknowledgments.
+Parter Manager logs all  errors and reports them in the CONTRL acknowledgments.
 
 [[control-numbers]]
 == Control Numbers
@@ -83,7 +83,7 @@ Use these settings to apply validations related to your partner or to your use o
 
 |Require unique interchange control number
 a| * If selected, Partner Manager records the interchange numbers previously processed and rejects duplicate interchange numbers from the same partner, as determined by the interchange sender and receiver identification.
-* If unselected, Partner Manager enables processing of the received interchange to continue.
+* If not selected, Partner Manager enables processing of the received interchange to continue.
 |Disabled
 
 |Require unique message control number

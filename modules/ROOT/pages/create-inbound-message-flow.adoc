@@ -1,14 +1,16 @@
 = Create and Configure an Inbound Message Flow
 :page-aliases: configure-message-flows.adoc
 
-You can create and configure an inbound message flow to receive EDI messages from your trading partners, including messages that go through 3rd party connections. When you create an inbound message flow, you can validate and transform the inbound messages and then send the translated message (JSON or XML) to your backend applications.
+You can create and configure an inbound message flow to receive EDI messages from your trading partners, including messages that go through 3rd party connections.
 
-To receive messages sent from a trading partner through a 3rd party connection, select an endpoint owned by that connection.
+To receive messages sent from a partner through a 3rd party connection, select the partner as the source or target and an endpoint owned by the 3rd party connection.
 
-=== Prerequisites
+When you create an inbound message flow, you can validate and transform the inbound messages and then send the translated message (JSON or XML) to your backend applications.
+
+== Prerequisites
 Before you create your first inbound message flow, you must configure your xref:setup-payload-storage-API.adoc[payload storage API].
 
-=== Steps
+== Steps
 
 . From the Anypoint Partner Manager navigation menu, select *Message Flows*.
 . Click *New message flow > Receive from partner*.
@@ -22,9 +24,9 @@ A new message flow is created.
 . <<verify-message-flow,Verify that the message flow is complete>>.
 
 [receiving-endpoint]
-== Specify the Receiving Endpoint
+== Configure the Receiving Endpoint
 
-Specify the endpoint that will receive the message you are sending. You can do either of the following:
+Configure the endpoint that will receive the message you are sending. You can do either of the following:
 
 * Select an existing endpoint owned by the host, target partner, or 3rd party connection.
 +
@@ -46,9 +48,10 @@ The endpoint is added to the message flow, and a message appears indicating that
 
 If the protocol of the receive endpoint is AS2, select the AS2 Sender from the dropdown menu:
 
-* If your organization will receive the AS2 messages directly from the partner for whom the message flow is created, select the partner’s name (default).
-* If your organization will receive the AS2 messages for the partner via a 3rd party connection, such as a VAN or 3PL, select the name of the 3rd party connection. The AS2 identifier and certificate of the selected 3rd party connection will be used in AS2 message validation.
-* If you selected AS2 as the receive to partner endpoint protocol, you must import the AS2 certificate of the partner or the 3rd party connection sending the AS2 message, if a certificate already does not exist in the partner or 3rd party connection’s profile.
+* Select the partner's name (default) if your organization will receive the AS2 messages directly from the partner for whom the message flow is created.
+* Select the name of the 3rd party connection if your organization will receive the AS2 messages for the partner via a 3rd party connection, such as a VAN or 3PL. The AS2 identifier and certificate of the selected 3rd party connection will be used in AS2 message validation.
+
+If you selected AS2 as the receive to partner endpoint protocol, you must import the AS2 certificate of the partner or the 3rd party connection sending the AS2 message, if a certificate already does not exist in the partner or 3rd party connection’s profile.
 
 [source-message-type]
 == Configure the Source Message Type

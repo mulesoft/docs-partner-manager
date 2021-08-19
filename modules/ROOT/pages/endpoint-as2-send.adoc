@@ -27,11 +27,11 @@ Create AS2 endpoints by configuring these settings on the partner or 3rd party c
 |Yes
 
 |Endpoint Name
-|Automatically-generated name that identifies the endpoint. You can modify this value later on.
+|Automatically generated name used to identify the endpoint, which you can subsequently modify manually.
 | Yes
 
 |Description
-|User-supplied description of the endpoint's purpose and use.
+|User-supplied value that describes the purpose and use of the endpoint.
 | No
 
 |Partner AS2 URL

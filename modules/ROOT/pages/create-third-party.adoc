@@ -4,9 +4,7 @@ Create a new 3rd party connection by using the *Partners* page to specify the co
 
 == Prerequisites
 
-Before you create your first 3rd party connection make sure that you have xref:setup-payload-storage-API.adoc[configured your payload storage API].
-
-Obtain the following information:
+Before you create your first 3rd party connection, make sure that you have xref:setup-payload-storage-API.adoc[configured your payload storage API] and that you obtain the following information:
 
 * The connection name (usually the name of the company)
 * One or more AS2 identifiers for the connection

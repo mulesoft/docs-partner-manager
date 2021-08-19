@@ -68,28 +68,28 @@ Use these settings to ensure that all X12 messages received from a partner meet 
 
 |Fail when value length outside allowed range
 a| * If selected, Partner Manager rejects transactions with data element values that are too long or too short against the definition in the EDI schema used.
-* If unselected, Partner Manager uses the values.
+* If not selected, Partner Manager uses the values.
 | Enabled
 
 |Fail when invalid character in value
 a| * If selected, Partner Manager rejects transactions with invalid characters.
-* If unselected, the characters are either passed through or substituted.
+* If not selected, the characters are either passed through or substituted.
 
 |Enabled
 
 |Fail if value is repeated too many times
 a|* If selected, Partner Manager rejects transactions with values that are repeated too many or too few times.
-* If unselected, Partner Manager accepts the values.
+* If not selected, Partner Manager accepts the values.
 |Enabled
 
 |Fail if unknown segments are used
 a|* If selected, the Partner Manager rejects transactions that contain unknown segments.
-* If unselected, Partner Manager ignores unused segments.
+* If not selected, Partner Manager ignores unused segments.
 |Disabled
 
 |Fail when segments are out of order
 a|* If selected, Partner Manager rejects transactions that have out-of-order segments.
-* If unselected, the segments are reordered.
+* If not selected, the segments are reordered.
 | Enabled
 
 |Fail when too many repeats of segment
@@ -98,11 +98,11 @@ a|* If selected, Partner Manager rejects transactions that have out-of-order seg
 
 |Fail when unused segments are included
 a|* If selected, Partner Manager rejects transactions containing segments marked as unused in the schema.
-* If unselected, Partner Manager ignores unused segments.
+* If not selected, Partner Manager ignores unused segments.
 | Disabled
 
 |Enforce conditional relationship validations a|  * If selected, any missing conditional data elements cause the generation of the X12 transaction to fail.
-* If unselected, Partner Manager does not enforce relationship validations.
+* If not selected, Partner Manager does not enforce relationship validations.
 | Disabled
 |===
 

@@ -26,11 +26,11 @@ Create HTTP and HTTPS send endpoints by configuring these settings on the host, 
 |Yes
 
 |Endpoint Name
-|Automatically-generated name that identifiers the endpoint, which you can modify manually later on
+|Automatically generated name used to identify the endpoint, which you can subsequently modify manually.
 |Yes
 
 |Description
-|User-supplied description of the endpoint's purpose and use
+|User-supplied value that describes the purpose and use of the endpoint.
 |No
 
 |URL
@@ -84,7 +84,7 @@ The client secret header.
 
 |OAuth Token
 a|* Token URL +
-The valid authorization URL.
+The authorization URL.
 * Client ID +
 The client ID provided when registering your application.
 * Client Secret +
