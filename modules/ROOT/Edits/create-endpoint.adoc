@@ -83,7 +83,7 @@ If your deployment target is CloudHub, you can assign static IP addresses to you
 [[configure-endpoint]]
 == Configure Endpoint Protocol and Type-Specific Settings
 
-The values for the endpoint's settings vary according to the protocol-type of the endpoint for which you are configuring the settings:
+The values for the endpoint's settings vary according to the protocol type of the endpoint for which you are configuring the settings:
 
 * xref:endpoint-as2-receive.adoc[AS2 Receive Endpoint Settings]
 * xref:endpoint-as2-send.adoc[AS2 Send Endpoint Settings]
