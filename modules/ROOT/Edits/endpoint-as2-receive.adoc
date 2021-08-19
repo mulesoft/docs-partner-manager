@@ -22,7 +22,7 @@ Create AS2 receive endpoints by configuring these settings on the Host page:
 |Yes
 
 |Endpoint name
-|Automatically-generated name that identifies the endpoint. You can modify this value later on.
+|Automatically generated name that identifies the endpoint. You can modify this value later.
 |Yes
 
 |Description
