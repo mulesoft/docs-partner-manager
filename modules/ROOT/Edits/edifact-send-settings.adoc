@@ -103,7 +103,7 @@ Carriage return and line feed
 Line Feed
 |CRLF
 |Test Indicator
-a| When you select *Test* from the drop-down, sets UNB-11 to `1`, which indicates that this is a test message.
+a| When you select *Test* from the dropdown menu, sets UNB-11 to `1`, which indicates that this is a test message
 |Production
 |===
 
