@@ -65,9 +65,7 @@ After deploying the first message flow using the AS2 receive endpoint configurat
 
 Your organization’s platform administrator can also xref:runtime-manager::lb-whitelists.adoc[add your partner's IP addresses to a list of allowed addresses] in the DLB settings to allow specific IP addresses to access the endpoint.
 
-The external URL that you can share with your partners is `+https://{DLB-domain}/{Input-path}/receive-as2+`.
-
-For example, if the name of your DLB domain is `mythical.lb.anypointdns.net` and the runtime application name is `b2b-inbound-as2-zap3`, then your administrator adds a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC:
+The external URL that you can share with your partners is in the format `+https://{DLB-domain}/{Input-path}/receive-as2+`For example, if the name of your DLB domain is `mythical.lb.anypointdns.net` and the runtime application name is `b2b-inbound-as2-zap3`, then your administrator adds a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC:
 
 image::URL-mapping-rules-http.png[URL mapping rules for AS2 in the DLB settings]
 
