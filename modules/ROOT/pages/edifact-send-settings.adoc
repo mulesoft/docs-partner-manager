@@ -1,6 +1,6 @@
 = Configure Send Settings for Outbound EDIFACT Messages
 
-Partner Manager enables you to configure the EDIFACT envelope parameters, delimiters, validation rules, character encoding, and control numbers to apply when sending an outbound EDIFACT transmission from the host to a partner.
+Partner Manager enables you to configure the EDIFACT envelope parameters, validation rules, control numbers, character encoding, and separators to apply when sending an outbound EDIFACT transmission from the host to a partner.
 
 To configure a partner's EDIFACT send settings:
 
@@ -46,9 +46,9 @@ Use the following settings to configure the general validation rules for outboun
 [[global-control-numbers]]
 == Global Control Numbers
 
-Partner Manager applies a global control number at the partner level on the EDIFACT interchanges generated from outbound message flows. These control numbers are sequenced across all message types sent to a trading partner, including functional acknowledgments.
+Partner Manager applies a global control number at the partner level on the EDIFACT interchanges generated from outbound message flows. These control numbers are sequenced across all message types sent to a trading partner, including functional acknowledgments. The control number starts with a default value of `1` and increases sequentially each time your organization sends outbound transmissions.
 
-The control number starts with a default value of `1` and increases sequentially each time your organization sends outbound transmissions. To change the initial value to maintain sequencing and avoid duplication:
+To change the initial value to maintain sequencing and avoid duplication:
 
 . Click *Change* and enter the desired initial control number.
 . Click *Save*.
@@ -59,7 +59,7 @@ It can take up to five minutes to apply the change at runtime.
 [[character-set]]
 == Character Set and Separators
 
-Use the following settings to set the character encoding and delimiters for the generated EDIFACT payload:
+Use the following settings to set the character encoding and separators for the generated EDIFACT payload:
 
 [%header%autowidth.spread]
 |===
