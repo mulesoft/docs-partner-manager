@@ -44,7 +44,7 @@ This configuration is applicable only to Anypoint VPC deployments from Partner M
 
 == AS2 Receive Endpoint URL
 
-You can deploy an AS2 receive endpoint on a public port, private port, or on-premises.
+You can deploy an AS2 receive endpoint on a public port, on a private port, or on-premises.
 
 === Deploy to CloudHub on a Public Port
 

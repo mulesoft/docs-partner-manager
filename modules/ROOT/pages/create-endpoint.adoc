@@ -35,9 +35,7 @@ For information about using the Message Flow wizard to create new endpoints, see
 
 == Supported Endpoint Protocols
 
-The configuration of Partner Manager endpoints depends on endpoint type and protocol.
-
-The following table describes the endpoint types, along with their supported protocols and owners:
+The configuration of Partner Manager endpoints depends on endpoint type and protocol. The following table describes the endpoint types, along with their supported protocols and owners:
 
 [%header%autowidth.spread]
 |===

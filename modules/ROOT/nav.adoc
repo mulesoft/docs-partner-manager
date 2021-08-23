@@ -11,7 +11,7 @@
   ** xref:create-partner.adoc[Create a New Partner]
   ** xref:edifact-receive-read-settings.adoc[Configure Receive Settings for Inbound EDIFACT Messages]
   ** xref:edifact-send-settings.adoc[Configure Send Settings for Outbound EDIFACT Messages]
-  ** xref:x12-receive-read-settings.adoc[Configure Receive Settings for Inbound X12 Settings]
+  ** xref:x12-receive-read-settings.adoc[Configure Receive Settings for Inbound X12 Messages]
   ** xref:x12-send-settings.adoc[Configure Send Settings for Outbound X12 Messages]
   ** xref:modify-partner-settings.adoc[Modify a Partner's Settings]
   ** xref:partner-manager-delete-partner.adoc[Delete a Partner]

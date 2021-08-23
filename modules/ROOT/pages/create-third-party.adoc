@@ -9,7 +9,7 @@ Before you create your first 3rd party connection, make sure that you have xref:
 * The connection name (usually the name of the company)
 * One or more AS2 identifiers for the connection
 
-== Create the 3rd Party Connection
+== Steps
 
 After meeting the prerequisites to create a 3rd party connection:
 

@@ -115,9 +115,9 @@ You can select any previously configured Send to partner endpoints owned by the 
 
 If you selected AS2 as the send to partner endpoint protocol, you must import the AS2 certificate of the partner or 3rd party connection that owns the endpoint, if a certificate already does not exist in the partner or 3rd party connection’s profile.
 
-== Verify the Message Flow is Complete
+== Verify That the Message Flow Is Complete
 
-Partner Manager dynamically validates the message flow configuration elements for completeness and displays a green checkmark if all the building blocks of the message flow are complete. After you verify the configurations, you are ready to deploy the message flow.
+Partner Manager dynamically validates the message flow configuration elements and confirms by displaying a green checkmark, which indicates that you are ready to deploy the message flow.
 
 == See Also
 
