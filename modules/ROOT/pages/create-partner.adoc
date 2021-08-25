@@ -21,13 +21,13 @@ After meeting the prerequisites to create a partner:
 |===
 | Setting a| Description
 | *Name*
-| Text string that identifies your partner
+| Text string that uniquely identifies your partner
 | *Type*
 | Identifier type
 | *Qualifier*
 | Value that appears if you selected *X12-ISA* or *EDIFACT-UNB* as the type
 | *Identifier Value*
-| Value that uniquely identifies your partner
+| Value that uniquely identifies your partner in the EDI stream
 |===
 +
 . Click *Create partner*.

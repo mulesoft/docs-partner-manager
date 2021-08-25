@@ -21,11 +21,11 @@ After meeting the prerequisites to create a 3rd party connection:
 |===
 | Setting a| Description
 | *Name*
-| Text string that easily identifies the connection
+| Text string that uniquely identifies the connection
 | *Type*
 | Identifier type
 | *Identifier Value*
-| Either a value that uniquely identifies the connection or the AS2 identifier (if the connection uses AS2)
+| Either a value that uniquely identifies the connection within the EDI stream or the AS2 identifier (if the connection uses AS2)
 |===
 +
 . Click *Create 3rd party connection*.
