@@ -1,9 +1,13 @@
 = Create and Configure an Inbound Message Flow
 :page-aliases: configure-message-flows.adoc
 
-Create and configure an inbound message flow to receive EDI messages from your partners, including messages that go through 3rd party connections. When you create an inbound message flow, you can validate and transform the inbound messages and then send the translated message (JSON or XML) to your backend applications.
+Create and configure an inbound message flow to receive EDI messages from your partners, including messages that go through 3rd party connections. When you create an inbound message flow, you can validate and transform the inbound messages and then send the translated messages (JSON or XML) to your backend systems.
 
 To receive messages sent from a partner through a 3rd party connection, select an endpoint owned by that connection.
+
+////
+Lock down terminology - backend systems vs backend applications
+////
 
 === Prerequisites
 
@@ -17,7 +21,7 @@ Before you create your first inbound message flow, you must configure your xref:
 +
 A new message flow is created.
 +
-. <<receiving-endpoint,Configure the receiving endpoint>>.
+. <<receiving-endpoint,Configure the receive endpoint>>.
 . <<source-message-type,Configure the source message type>>.
 . <<import-map,Import the translation map>>.
 . <<configure-target,Configure the target message type>>.
@@ -25,9 +29,15 @@ A new message flow is created.
 . <<verify-message-flow,Verify that the message flow is complete>>.
 
 [receiving-endpoint]
-== Configure the Receiving Endpoint
+== Configure the Receive Endpoint
 
-Configure the endpoint that will receive the Messages that your partners send. You can either select an existing endpoint owned by the host, target partner, or 3rd party connection, or you can create a new endpoint for the message flow. If you select an endpoint owned by a 3rd party connection, the inbound message goes through that connection.
+////
+Need better understanding of what a receive endpoint is
+////
+
+A receive (source) endpoint receives the EDI messages that your partners send, either directly or via a 3rd party connection. To configure a receive endpoint, you can either select an existing endpoint owned by the host, target partner, or 3rd party connection, or you can create a new endpoint. If you select an endpoint owned by a 3rd party connection, the messages go through that connection.
+
+Partner Manager supports the AS2, FTP and SFTP formats for the receive endpoint in an inbound message flow.
 
 To configure the receiving endpoint:
 
@@ -46,9 +56,9 @@ If the protocol of the receive endpoint is AS2, perform these additional steps:
 * To enable your organization to receive the AS2 messages directly from the partner for whom the message flow is created, select the partner’s name (default).
 * To enable your organization to receive the AS2 messages for the partner via a 3rd party connection, such as a VAN or 3PL, select the name of the 3rd party connection.
 +
-The AS2 identifier and certificate of the selected 3rd party connection will be used in AS2 message validation.
+The AS2 identifier and certificate of the selected 3rd party connection are used in AS2 message validation.
 +
-. Import the AS2 certificate of the partner or 3rd party connection sending the AS2 message, if there is no existing certificate in their profiles.
+. Import the AS2 certificate of the partner or 3rd party connection sending the AS2 message, if there is no existing certificate in their profile.
 
 [source-message-type]
 == Configure the Source Message Type
@@ -79,12 +89,15 @@ The acknowledgment is added to the message flow.
 [[import-map]]
 == Import the Translation Map
 
-To create your inbound EDI-to-application message (JSON or XML) map in Anypoint Studio, follow xref:partner-manager-maps.adoc[these instructions].
+A translation map transforms your inbound messages from EDI format (EDIFACT or X12) to your organization's enterprise application format, such as JSON and XML. Create a translation map by using DataWeave. For more information, see the xref:partner-manager-maps.adoc[EDI Translation Maps topic].
+
+To import the translation map:
 
 . In the message flow, expand the *Map* section.
 . Click *Import* and then click *Choose file*.
-. In the *New mapping file* window, navigate to the DataWeave map you want to use and then click *Open*.
-. Click *Upload mapping*. +
+. In the *New mapping file* window, navigate to the DataWeave map you want to use and click *Open*.
+. Click *Upload mapping*.
++
 The translation map is added to the message flow.
 
 [[configure-target]]
@@ -104,7 +117,9 @@ To configure the target message type:
 [[target-endpoint]]
 == Configure the Target Endpoint
 
-Configure the endpoint that will receive the messages that your partners send. You can either select an existing endpoint owned by the host, or you can create a new endpoint for the message flow. Partner Manager supports the FTP, HTTP, HTTPS, and SFTP formats for the target endpoint in an inbound message flow.
+A target endpoint in an inbound message flow receives the translated messages on the backend systems. To configure a target endpoint, you can either select an existing endpoint owned by the host, or you can create a new endpoint.
+
+Partner Manager supports the FTP, HTTP, HTTPS, and SFTP formats for the target endpoint in an inbound message flow.
 
 To configure the target endpoint:
 
