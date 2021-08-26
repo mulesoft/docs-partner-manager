@@ -4,7 +4,7 @@ SFTP receive endpoint settings determine where to receive messages in the follow
 
 * Receive from partners
 +
-Source endpoint in an inbound message flow that receives B2B/EDI messages from partners either directly or via 3rd party connections
+Source endpoint in an inbound message flow that receives B2B EDI messages from partners either directly or via 3rd party connections
 +
 * Source at host
 +
@@ -18,47 +18,47 @@ Create SFTP receive endpoints by configuring these settings on the host or Partn
 |===
 |Name |Description | Required
 | Endpoint Name
-| The automatically generated name used to identify the endpoint, which you can subsequently modify manually.
+| Automatically generated name used to identify the endpoint, which you can subsequently modify manually.
 | Yes
 
 | Owner
-| The trading partner or host that owns the endpoint.
+| Partner or host that owns the endpoint.
 | Yes
 
 | Protocol
-| The protocol selected in the *Protocol* field of the *New endpoint*. The value in this field cannot be modified.
+| Protocol selected in the *Protocol* field of the *New endpoint*. The value in this field cannot be modified.
 | Yes
 
 | Description
-| The user-supplied value for describing the purpose and use of the endpoint.
+| User-supplied value that describes the purpose of the endpoint.
 | No
 
 | Host
-| The SFTP server host, such as `sftp.mulesoft.com`, `localhost`, or `192.168.0.1`. The host must be accessible from your Mule environment.
+| SFTP server host, such as `sftp.mulesoft.com`, `localhost`, or `192.168.0.1`. The host must be accessible from your Mule environment.
 | Yes
 
 | Port
-| The port number of the SFTP server.
+| Port number of the SFTP server.
 | Yes
 
 | Username
-| The username for the SFTP server.
+| Username for the SFTP server.
 | Yes, if the server is authenticated.
 
 | Password
-| The password for the SFTP server.
+| Password for the SFTP server.
 | Yes, if the server is authenticated.
 
 | Source path
-| The path on the SFTP server to which your trading partner sends the inbound files.
+| Path on the SFTP server to which your trading partner sends the inbound files.
 | Yes
 
 | Polling Frequency
-| The frequency in which the server checks the source path for new files. The value in this field is `1 minute` by default.
+| Frequency in which the server checks the source path for new files. The value in this field is `1 minute` by default.
 | Yes
 
 | Size check wait time
-| The wait time, in seconds, between size checks to determine if a file is ready for processing. The value in this field is `1 second` by default. This allows a file write to complete before processing.
+| Wait time, in seconds, between size checks to determine if a file is ready for processing. The value in this field is `1 second` by default. This allows a file write to complete before processing.
 
 Mule performs two size checks by waiting the amount of time specified in the `Size check wait time` field. If both checks return the same value, the file is ready to process.
 

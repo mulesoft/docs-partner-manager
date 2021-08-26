@@ -14,7 +14,7 @@ Create HTTP and HTTPS receive endpoints by configuring these settings on the hos
 |===
 |Name |Description |Required
 |Endpoint Name
-|Automatically-generated name to identify the endpoint. You can modify this value later on.
+|Automatically generated name used to identify the endpoint, which you can subsequently modify manually.
 |Yes
 
 | Owner
@@ -26,7 +26,7 @@ Create HTTP and HTTPS receive endpoints by configuring these settings on the hos
 | Yes
 
 | Description
-| User-supplied value that describes the purpose and use of the endpoint.
+| User-supplied value that describes the purpose of the endpoint.
 | No
 
 |URL
@@ -61,7 +61,7 @@ The backend applications that send JSON or XML payloads to the HTTP receive endp
 
 == HTTP or HTTPS Receive Endpoint URL
 
-You can deploy an HTTP or HTTPS receive endpoint on a public port, private port, or on-premises.
+You can deploy an HTTP or HTTPS receive endpoint on a public port, on a private port, or on-premises.
 
 === Deploy to CloudHub on a Public Port
 
