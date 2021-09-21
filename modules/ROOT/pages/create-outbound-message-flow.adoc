@@ -16,7 +16,7 @@ A new message flow is created.
 +
 . <<source-at-host-endpoint,Configure the source at host endpoint>>.
 . <<source-message-type,Configure the source message type>>.
-. <<reference-ids,Configure reference IDs for message routing (optional)>>.
+. <<reference-ids,Configure reference IDs for the partner and host>>.
 . <<import-map,Import the translation map>>.
 . <<configure-target,Configure the send to message type>>.
 . <<configure-target-endpoint,Configure the target endpoint>>.
@@ -47,11 +47,9 @@ To create the source message type:
 * Click *New* to create a new source message type, as described in <<xref:partner-manager-create-message-type,Create and Configure Message Types>>.
 
 [[reference-ids]]
-=== Configure EDIFACT Reference IDs
+=== Configure Reference IDs for the Partner and Host
 
-The EDIFACT partner ID
-
-Partner Manager uses the EDIFACT partner ID and host reference ID to route outbound messages to the appropriate outbound message flow. For information about about how this routing process works, see xref:partner-manager-identifiers[Sender and Receiver Identifiers] and xref:outbound-message-routing.adoc[Outbound Message Routing].
+Partner Manager uses the partner reference ID and host reference ID to locate the appropriate message flow for routing outbound messages. For information about about how this routing process works, see xref:partner-manager-identifiers[Sender and Receiver Identifiers] and xref:outbound-message-routing.adoc[Outbound Message Routing].
 
 To configure a partner reference ID, either select *All available identifiers* or select a specific partner identifier.
 
@@ -60,21 +58,21 @@ To configure a host reference ID, either select *Ignore* or select your organiza
 [[translation-map]]
 === Import the Translation Map
 
-A translation map in an outbound message flow transforms outbound messages from your organization's enterprise application format, such as JSON and XML, to EDIFACT EDI or X12 EDI. Create a translation map by using DataWeave. For more information, see
+A translation map in an outbound message flow transforms outbound messages from your organization's enterprise application format, such as JSON and XML, to EDIFACT EDI or X12 EDI. Create a translation map by using DataWeave. For more information, see see ref:partner-manager-maps.adoc[EDI Translation Maps].
 
 To import the translation map:
 
-In the message flow, expand the *Map* section.
+. In the message flow, expand the *Map* section.
 . Click *Import < Choose file*.
 . Navigate to the DataWeave map you want to use and click *Open*.
 . Click *Upload mapping*.
-+
+
 The translation map is added to the message flow.
 
 [[send-to-message-type]]
 === Configure the Send To Partner Message Type
 
-The send to partner message type in an outbound message flow defines the structure of the messages that Partner Manager sends to the partner, either directly or via a 3rd party connection. Partner Manager supports the AS2, FTP, and SFTP formats for send to message types in an outbound message flow.
+The send to partner message type in an outbound message flow defines the structure of the messages that Partner Manager sends to the partner, either directly or via a 3rd party connection. Partner Manager supports the AS2, FTP, and SFTP formats for send to message types.
 
 To configure the send to message type:
 
@@ -90,12 +88,12 @@ Optionally, add acknowledgement settings for the outbound message:
 
 . In the *Acknowledgement* section, select *Expect functional acknowledgement* (X12) or *Expect CONTRL functional acknowledgment* (EDIFACT).
 . Do either of the following:
-* Select an existing endpoint from which to receive your partner's acknowledgement transaction.
+* Select an existing endpoint at which to receive your partner's acknowledgement transaction.
 * Click *New* to create a new endpoint.
 . In the *Mark overdue after* field, accept the default value of *24 Hours* or configure when you want the outbound transaction to be marked as overdue for an acknowledgment, according to the SLAs you have with your trading partner.
-+
+
 By default, Partner Manager uses the X12 send or EDIFACT send settings configured for the partner for message validation, delimiters, and character encoding.
-+
+
 To apply custom validation settings and delimiters for the outbound message flow, follow these steps:
 
 . Select *Custom X12 settings* or *Custom EDIFACT settings* and provide custom configuration values.
@@ -110,7 +108,7 @@ To apply custom validation settings and delimiters for the message flow you are 
 
 The send to partner endpoint in an outbound message flow is the target endpoint to which translated messages are sent to partners, either directly or via 3rd party connections. Use a 3rd party-owned send to partner endpoint for partners that use a 3rd party connection.
 
-Partner Manager supports the EDIFACT and X12 protocols for send to partner endpoints in an outbound message flow.
+Partner Manager supports the EDIFACT and X12 protocols for send to partner endpoints.
 
 To create
 
