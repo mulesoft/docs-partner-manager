@@ -5,7 +5,7 @@ Create an inbound message flow to receive EDI messages from a partner, including
 
 Partner Manager routes inbound EDI messages based on matching identifiers configured for the partner.
 
-=== Prerequisites
+=== Before You Begin
 
 Before you create your first inbound message flow, you must configure your xref:setup-payload-storage-API.adoc[payload storage API].
 
@@ -81,7 +81,7 @@ The acknowledgment is added to the message flow.
 [[import-map]]
 === Import the Translation Map
 
-A translation map transforms your inbound messages from the EDIFACT EDI or X12 EDI format to your organization's enterprise application format, such as JSON and XML. Create a translation map by using DataWeave. For more information, see ref:partner-manager-maps.adoc[EDI Translation Maps].
+A translation map in an inbound message flow transforms your inbound messages from the EDIFACT EDI or X12 EDI format to your organization's enterprise application format, such as JSON and XML. Create a translation map by using DataWeave. For more information, see ref:partner-manager-maps.adoc[EDI Translation Maps].
 
 To import the translation map:
 
