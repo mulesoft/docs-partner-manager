@@ -1,0 +1,35 @@
+== Inbound Message Flows
+
+An inbound message flow receives and translates application messages from your partner and then forwards them to your backend systems.
+
+The following diagram shows the configuration of an inbound message flow. The diagram also shows how Partner Manager’s message processing framework orchestrates the end-to-end routing and the transformation of your inbound business transactions from your partner to your organization's backend systems:
+
+image::pm-inbound-message-flow.png[Inbound message flow]
+
+The following table describes the inbound message flow components:
+
+|===
+|Component |Description |Supported Formats or Protocols
+
+|Receiving endpoint | The endpoint where the host receives transmissions from the trading partner. a|
+* AS2
+* FTP
+* SFTP
+
+|Source message type |The message type of the input payload. a|
+* X12
+* EDIFACT
+
+|Transform |The DataWeave map used to transform EDI into XML or JSON formats. a| N/A
+
+|Target message type |The format into which the DataWeave map transforms received messages. a|
+* JSON
+* XML
+
+|Target endpoint | The endpoint to which the translated JSON or XML payload needs to be sent. This is typically a process API.
+ a|
+* FTP
+* HTTP
+* HTTPS
+* SFTP
+|===
