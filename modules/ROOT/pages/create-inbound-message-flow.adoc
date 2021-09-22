@@ -7,7 +7,7 @@ Partner Manager routes inbound EDI messages based on matching identifiers config
 
 === Before You Begin
 
-Before you create your first inbound message flow, you must configure your xref:setup-payload-storage-API.adoc[payload storage API].
+Before you create your first inbound message flow (inbound or outbound), you must configure your xref:setup-payload-storage-API.adoc[payload storage API].
 
 === Steps
 
@@ -81,7 +81,7 @@ The acknowledgment is added to the message flow.
 [[import-map]]
 === Import the Translation Map
 
-A translation map in an inbound message flow transforms your inbound messages from the EDIFACT EDI or X12 EDI format to your organization's enterprise application format, such as JSON and XML. Create a translation map by using DataWeave. For more information, see ref:partner-manager-maps.adoc[EDI Translation Maps].
+A translation map in an inbound message flow transforms your inbound messages from the EDIFACT EDI or X12 EDI format to your organization's enterprise application format, such as JSON and XML. Create a translation map by using DataWeave. For more information, see xref:partner-manager-maps.adoc[EDI Translation Maps].
 
 To import the translation map:
 
@@ -95,7 +95,7 @@ The translation map is added to the message flow.
 [[configure-target]]
 === Configure the Target Message Type
 
-The target message type in an inbound flow defines the structure of the messages that Partner Manager sends to the backend system.
+The target message type in an inbound message flow defines the structure of the messages that Partner Manager sends to the backend system.
 
 To configure the target message type:
 
@@ -109,9 +109,7 @@ To configure the target message type:
 [[target-endpoint]]
 === Configure the Target Endpoint
 
-The target endpoint in an inbound message flow receives the translated messages on the backend systems. To configure a target endpoint, you can either select an existing endpoint owned by the host, or you can create a new endpoint.
-
-Partner Manager supports the FTP, HTTP, HTTPS, and SFTP formats for the target endpoint in an inbound message flow.
+The target endpoint in an inbound message flow receives the translated messages on the backend systems. Partner Manager supports the FTP, HTTP, HTTPS, and SFTP formats for the target endpoint in an inbound message flow.
 
 To configure the target endpoint:
 
@@ -132,7 +130,7 @@ Partner Manager dynamically validates the message flow configuration elements fo
 == See Also
 
 * xref:inbound-message-flows.adoc[Inbound Message Flows]
-* xref:<<xref:create-endpoint.adoc,Create and Configure Endpoints>>
-* xref:partner-manager-create-message-type,Create and Configure Message Types
+* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:partner-manager-create-message-type[Create and Configure Message Types]
 * xref:deploy-message-flows.adoc[Deploy Message Flows]
 * xref:manage-message-flows.adoc[Manage Message Flows]
