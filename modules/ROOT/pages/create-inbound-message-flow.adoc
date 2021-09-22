@@ -56,7 +56,7 @@ If you selected AS2 as the receive to partner endpoint protocol, you must import
 . In the message flow, expand the *Source message* section and click *Select*.
 . In the *Select message type* window:
 .. To use an existing message type, select the message type from the list and then click *Select*.
-.. To create a new message type, click *New* next to the search box, configure the X12 or EDIFACT xref:partner-manager-create-message-type.adoc[message type], and click *Save*.
+.. To create a new message type, click *New* next to the search box, configure the xref:partner-manager-create-message-type.adoc[message type], and click *Save*.
 The message type and its validation settings are added to the message flow.
 . If your partner expects your organization to return functional acknowledgements:
 .. In the *Acknowledgement* section, select the check box next to *Send 997 functional acknowledgment (X12)* or *Send CONTRL functional acknowledgement (EDIFACT)* .
@@ -99,9 +99,12 @@ The message type is selected for your backend system to use to map the EDI trans
 ... Click *New* next to the search box.
 ... From the *Owner* drop-down, select the endpoint's owner.
 ... From the *Protocol* drop-down, select the protocol and configure it according to the protocol you select:
-* xref:endpoint-https-send.adoc[HTTP or HTTPS]
 * xref:endpoint-ftp-send.adoc[FTP]
+* xref:endpoint-https-send.adoc[HTTP or HTTPS]
+* xref:endpoint-json-send.adoc[JSON]
 * xref:endpoint-sftp-send.adoc[SFTP]
+* xref:endpoint-xml-send.adoc[XML]
+
 +
 ... Click *Save*. +
 The endpoint to which to send the translated message (JSON or XML) for further processing in your backend system is added to the message flow. Partner Manager routes inbound EDI transactions based on matching identifiers configured at the partner level.

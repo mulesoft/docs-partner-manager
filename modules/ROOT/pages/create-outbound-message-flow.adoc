@@ -82,7 +82,9 @@ The message type and its validation settings are added to the message flow.
 ... In the *Protocol* field, select the protocol and configure it accordingly:
 * xref:endpoint-as2-receive.adoc[AS2]
 * xref:endpoint-ftp-receive.adoc[FTP]
+* xref:endpoint-json-receive.adoc[JSON]
 * xref:endpoint-sftp-receive-target.adoc[SFTP]
+* xref:endpoint-xml-receive.adoc[XML]
 ... Click *Save*.
 .. In the *Mark overdue after* field, accept the default value of *24 Hours* or configure values based on when you want the outbound transaction to be designated as overdue for an acknowledgment, according to the SLAs you have with your trading partner.
 +
@@ -109,8 +111,10 @@ You can select any previously configured Send to partner endpoints owned by the 
 ... From the *Protocol* drop-down, select the protocol and configure it according to the protocol you select:
 * xref:endpoint-as2-send.adoc[AS2]
 * xref:endpoint-https-send.adoc[HTTP or HTTPS]
+* xref:endpoint-json-send.adoc[JSON]
 * xref:endpoint-ftp-send.adoc[FTP]
 * xref:endpoint-sftp-send.adoc[SFTP]
+* xref:endpoint-xml-send.adoc[XML]
 ... Click *Save*.
 
 If you selected AS2 as the send to partner endpoint protocol, you must import the AS2 certificate of the partner or 3rd party connection that owns the endpoint, if a certificate already does not exist in the partner or 3rd party connection’s profile.

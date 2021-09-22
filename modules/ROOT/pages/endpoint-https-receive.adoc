@@ -5,6 +5,12 @@ HTTP and HTTPS receive endpoint settings configure where to receive messages in 
 * Source at host
 +
 Source endpoint in an outbound message flow that receives application JSON and XML messages from the backend systems
++
+////
+* Receive from partners
++
+Source endpoint in an inbound message flow that receives B2B EDI messages from partners either directly or via 3rd party connections
+////
 
 Only a host can own HTTP and HTTPS receive endpoints.
 

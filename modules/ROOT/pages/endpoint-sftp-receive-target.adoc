@@ -10,7 +10,7 @@ Source endpoint in an inbound message flow that receives B2B EDI messages from p
 +
 Source endpoint in an outbound message flow that receives application JSON and XML messages from the backend systems
 
-A host, partner, or 3rd party connection can own FTP send endpoints.
+A host, partner, or 3rd party connection can own SFTP receive endpoints.
 
 Create SFTP receive endpoints by configuring these settings on the host or Partner page:
 
