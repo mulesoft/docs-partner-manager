@@ -24,7 +24,7 @@ A new message flow is created.
 . <<configure-target-endpoint,Configure the target endpoint>>.
 . <<verify-message-flow,Verify that the message flow is complete>>.
 
-[receiving-endpoint]
+[[receiving-endpoint]]
 === Configure the Receiving Endpoint
 
 The receiving (source) endpoint in an inbound message flow receives the EDI messages that your partners send, either directly or via 3rd party connections. To configure a receiving endpoint, you can either select an existing endpoint owned by the host, partner, or 3rd party connection, or you can create a new endpoint.
@@ -52,7 +52,7 @@ The AS2 identifier and certificate of the selected 3rd party connection are used
 +
 . If there is no valid certificate in the associated profile, import one from the partner or from the 3rd party connection sending the AS2 message.
 
-[source-message-type]
+[[source-message-type]]
 === Configure the Source Message Type
 
 The source message type in an inbound message flow defines the structure of the messages that Partner Manager receives from a partner or 3rd party connection. Partner Manager supports the EDIFACT and X12 formats for source message types in an inbound message flow.
@@ -62,7 +62,7 @@ To configure the source message type:
 . In the message flow, expand the *Source message* section and click *Select*.
 . In the *Select message type* window, do either of the following:
 * Select an existing message type and click *Select*.
-* Click *New* to create a new target at host message type, as described in <<xref:partner-manager-create-message-type,Create and Configure Message Types>>.
+* Click *New* to create a new receive from partners type, as described in <<xref:partner-manager-create-message-type.adoc,Create and Configure Message Types>>. *Vijay, is receive from partners correct in the last sentence?.*
 
 +
 The message type and its validation settings are added to the message flow.
@@ -73,7 +73,7 @@ If your partner expects your organization to return functional acknowledgements,
 . Click *Select*.
 . In the *Select an endpoint: Send acknowledgement to <partner>* window, do either of the following:
 * Select the endpoint to receive the acknowledgment messages from your partner and click *Select*.
-* Click *New* to create a new send to endpoint.
+* Click *New* to create a new send to endpoint, as described in <<xref:create-endpoint.adoc,Create and Configure Endpoints>>.
 
 +
 The acknowledgment is added to the message flow.
@@ -102,14 +102,14 @@ To configure the target message type:
 . In the message flow, expand the *Target at <host>* section.
 . In the *Message Type* section, click *Select*.
 . In the *Select message type* window, do either of the following:
-* Select an existing receiving message type and click *Select*.
+* Select an existing receiving message type and click *Select*. *Vijay, what message type should this be?*
 * Click *New* to create a new message type.
 . Click *Save*.
 
 [[target-endpoint]]
 === Configure the Target Endpoint
 
-The target endpoint in an inbound message flow receives the translated messages on the backend systems. Partner Manager supports the FTP, HTTP, HTTPS, and SFTP formats for the target endpoint in an inbound message flow.
+The target endpoint in an inbound message flow receives the translated messages on the backend systems. Partner Manager supports the FTP, HTTP, HTTPS, and SFTP formats for the target endpoint.
 
 To configure the target endpoint:
 
@@ -117,7 +117,7 @@ To configure the target endpoint:
 . In the *Target at <host>* section, expand the *Endpoint* section and click *Select*.
 . In the *Select an endpoint: Target to <host>* window, do either of the following:
 * Select an existing receiving endpoint and click *Select*.
-* Click *New* to create a new endpoint.
+* Click *New* to create a new endpoint, as described in <<xref:create-endpoint.adoc,Create and Configure Endpoints>>
 
 +
 Once you select an endpoint, it is added to the message flow.
@@ -125,12 +125,10 @@ Once you select an endpoint, it is added to the message flow.
 [[verify-message-flow]]
 === Verify That the Message Flow Is Complete
 
-Partner Manager dynamically validates the message flow configuration elements for completeness and displays a green checkmark if all of the message flow building blocks are complete. After you verify the message flow configuration, you can deploy it.
+Partner Manager dynamically validates the message flow configuration elements for completeness and displays a green checkmark if all of the message flow building blocks are complete. After you verify the message flow configuration, you can deploy and test it.
 
 == See Also
 
 * xref:inbound-message-flows.adoc[Inbound Message Flows]
-* xref:create-endpoint.adoc[Create and Configure Endpoints]
-* xref:partner-manager-create-message-type[Create and Configure Message Types]
-* xref:deploy-message-flows.adoc[Deploy Message Flows]
-* xref:manage-message-flows.adoc[Manage Message Flows]
+* xref:deploy-message-flows.adoc[Deploy and Test a Message Flow]
+* xref:manage-message-flows.adoc[Edit Message Flow Settings]

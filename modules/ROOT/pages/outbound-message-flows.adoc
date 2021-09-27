@@ -19,7 +19,7 @@ image::pm-outbound-message-flow.png[Outbound message flow]
 * JSON
 * XML
 
-|Transform |DataWeave map for the JSON or XML to EDI translation a| N/A
+|Transform |DataWeave map used to transform the JSON or XML formats to EDIFACT EDIT or X12 EDI a| N/A
 
 |Target message type |
 Message type to which to translate the
@@ -28,7 +28,7 @@ a|
 * X12
 
 |Target endpoint |
-Partner endpoint to which to send the translated EDI message.
+Partner endpoint to which to send the translated EDI message
  a|
 * AS2
 * FTP
@@ -39,7 +39,6 @@ Partner endpoint to which to send the translated EDI message.
 
 == See Also
 
-* xref:create-outbound-message-flow.adoc[Create an Inbound Message Flow]
-* xref:outbound-message-routing[Outbound Message Routing]
+* xref:create-outbound-message-flow.adoc[Create an Outbound Message Flow]
 * xref:deploy-message-flows.adoc[Deploy Message Flows]
 * xref:manage-message-flows.adoc[Edit Message Flow Settings]
