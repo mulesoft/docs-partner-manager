@@ -1,4 +1,4 @@
-= Modify a Message Flow's Settings
+= Edit Message Flow Settings
 
 Active message flows between you and your partners don't require much maintenance. However, you might need to:
 
@@ -6,13 +6,13 @@ Active message flows between you and your partners don't require much maintenanc
 * Switch from a sandbox environment and reclaim production-environment resources.
 * Delete the flow when it becomes inactive, as described in xref:delete-message-flows.adoc[Delete a Message Flow].
 
-[[edit-message-flows]]
-== Modify Message Flows
-
-After establishing a successful inbound message flow with your partner, you can edit the identifiers, endpoints, message types, or DataWeave maps in the flow.
-
 [IMPORTANT]
 Before making changes, carefully consider the impact on the message flow.
+
+[[edit-inbound-flow]]
+== Edit the Settings of an Inbound Message Flow
+
+To edit the settings of an inbound message flow:
 
 . In the navigation menu, select *Message Flows*.
 . In the *Message flows* page, select the message flow to edit.
@@ -68,13 +68,10 @@ It can take five minutes or so for your configuration changes to sync with Mule.
 
 After you confirm the successful deployment of your message flow, you can track its processed messages from the *Activity* page.
 
-== Edit Outbound Message Flows
+[[edit-outbound-flow]]
+== Edit the Settings of an Outbound Message Flow
 
-After establishing a successful outbound message flow with your partner, you can edit the identifiers, endpoints, message types, or DataWeave maps in the flow.
-
-[IMPORTANT]
-Before making changes, carefully consider the impact on your existing message flow.
-
+To edit the settings of an outbound message flow:
 
 . In the navigation menu, select *Message Flows*.
 . In the *Message flows* page, select *<Message flow name>*. +
@@ -108,8 +105,6 @@ a|
 * xref:create-endpoint.adoc[Add a new or edit the existing receiving endpoint]
 * xref:Certificates.adoc[View the certificate]
 | yes or no
-
-
 
 
 | Target at <host> a|
