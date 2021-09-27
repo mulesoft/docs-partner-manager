@@ -1,0 +1,25 @@
+== Undeploy a Message Flow
+
+Undeploying a message flow prevents future messages from being processed and enables you to recover resources that are consumed by a message flow that you no longer need. You can undeploy your message flow from either a sandbox or a production environment.
+
+The undeployment process takes about five minutes, during which actions such as `Deploy` and `Delete` are unavailable.
+
+[IMPORTANT]
+During the undeployment process, do not log out of Anypoint Partner Manager or close your browser window.
+
+=== Before You Begin
+
+Before you undeploy a message flow, ensure that your on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager called `B2BserverGroup` are active and running.
+
+=== Steps
+
+. In the navigation menu, select *Message Flows*.
+. Select the message flow to undeploy from the list and click *Undeploy*.
+
+Anypoint Partner Manager checks to see if any of the applications deployed to Mule are orphaned as a result of the undeployment. If so, Partner Manager cleans up the orphaned applications to release the resources they consume.
+
+== See Also
+
+* xref:deploy-message-flows.adoc[Undeploy a Message Flow]
+* xref:configure-message-flows.adoc[Create and Configure an Inbound Message Flow]
+* xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow]

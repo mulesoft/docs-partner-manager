@@ -1,0 +1,23 @@
+== Delete a Message Flow
+
+You can delete a message flow if it no longer serves its purpose, for example, if your relationship with your partner changes. You can delete message flows from a sandbox or production environment.
+
+Deleting a message automatically undeploys the flow. If you delete a message flow before it is deployed, the Mule apps are not affected. [Vijay. What Mule apps is this referring to?*]
+
+[NOTE]
+For on-premises installations, you must xref:deploy-message-flows#undeploy-message-flows[undeploy a message flow] before you can delete it.
+
+To delete a message flow:
+
+. In the navigation menu, select *Message Flows*.
+. Select the message flow to delete and click *Delete* in the upper right of the screen.
+
+Previous transmissions that were created as a result of a message being processed by the message flow you deleted have the following behavior:
+
+* The transmissions continue to stay in the transmission records within the *Activity* page; however, the records indicate that the corresponding message flow used to process the transmission is now deleted.
+* [*???*]These activities are converted into read-only mode, so no links to the message flow work.
+* Only links to the stored payloads (such as the original B2B message, any TA1 acknowledgments, the transformed payload, on so on) continue to work.
+
+== See Also
+
+* xref:undeploy-message-flows.adoc[Undeploy a Message Flow]

@@ -1,59 +1,65 @@
-= Manage Message Flows
+= Modify a Message Flow's Settings
 
-Active message flows between you and your partners don't require much maintenance. You might need to modify your message flow to:
+Active message flows between you and your partners don't require much maintenance. However, you might need to:
 
-* Change flow identifiers, endpoints, or maps
-* Switch from a sandbox environment and reclaiming production-environment resources
-* Delete the flow when it becomes inactive
+* Change flow identifiers, endpoints, or maps.
+* Switch from a sandbox environment and reclaim production-environment resources.
+* Delete the flow when it becomes inactive, as described in xref:delete-message-flows.adoc[Delete a Message Flow].
 
 [[edit-message-flows]]
-== Edit Inbound Message Flows
+== Modify Message Flows
 
 After establishing a successful inbound message flow with your partner, you can edit the identifiers, endpoints, message types, or DataWeave maps in the flow.
 
 [IMPORTANT]
-Before making changes, carefully consider the impact on your existing message flow.
+Before making changes, carefully consider the impact on the message flow.
 
 . In the navigation menu, select *Message Flows*.
-. In the *Message flows* page, select *<Message flow name>*. +
-The selected inbound message flow appears.
-. In the inbound message flow, you can complete the following modifications or actions:
-
+. In the *Message flows* page, select the message flow to edit.
+. Change any of the following Settings:
++
 |===
-| *Subsection* | *Actions* | *Deployment Required?*
+| *Setting* | *Actions* | *Additional Information*
 | Receive from <partner>
 a|
-* xref:create-endpoint.adoc[Add a new or edit the existing endpoint]
-* xref:partner-manager-identifiers.adoc[Add a new or edit the existing identifier]
-| yes or no
+* Add a new endpoint or edit an existing one.
+* Add a new identifier or edit an existing one.
+a|
+* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:partner-manager-identifiers[Sender and Receiver Identifiers]
 
 | Receiving endpoint <endpoint name>
 a|
-* xref:create-endpoint.adoc[Add a new or edit the existing receiving endpoint]
+* Add a new receiving endpoint or edit the existing one.
+* View the certificate associated with the receiving endpoint.
+a|
+
+* xref:create-endpoint.adoc[Create and Configure Endpoints]
 * xref:Certificates.adoc[View the certificate]
-| yes or no
 
 | Source message
 a|
-* xref:partner-manager-create-message-type[Add a new or edit the existing message type]
-* View current validation settings
-* xref:edi-ack-reconciliation.adoc[Indicate whether or not to send a 997 functional acknowledgment and select the endpoint to which to send the acknowledgment]
-| yes or no
+* Add a new message type or edit the existing one.
+* View current validation settings.
+* Indicate whether or not to send a 997 functional acknowledgment, and select the endpoint to which to send the acknowledgment.
+a|
+* xref:partner-manager-create-message-type[Create and Configure Message Types]
+* xref:edi-ack-reconciliation[EDI Acknowledgement Reconciliation]
 
 | Map
 a|
-* View the current DataWeave map
-* xref:partner-manager-maps[Import a new DataWeave map]
-| yes or no
-
+* View the current DataWeave map or import another one.
+a|
+xref:partner-manager-maps[Import a new DataWeave map]
 | Target at <host> a|
-* xref:partner-manager-create-message-type[Add a new or edit the existing target message type]
-* xref:create-endpoint.adoc[Add a new or edit the existing target endpoint]
-| yes or no
-
+* Add a new message type or or edit the existing one.
+* Add a new target endpoint or edit the existing one.
+a|
+* xref:partner-manager-create-message-type[Create and Configure Message Types]
+* xref:create-endpoint.adoc[Create or Configure Endpoints]
 |===
-[start=4]
-. Verify that any modified sections of the flow show a green checkmark next to them and then click *Deploy* to deploy the configurations to Mule.
++
+. Verify that any modified sections of the flow show a green checkmark next to them and then click *Deploy* to deploy the updated message flow to Mule.
 +
 [NOTE]
 It can take five minutes or so for your configuration changes to sync with Mule.
@@ -87,7 +93,7 @@ a|
 | Map
 a|
 * View the current DataWeave map
-* xref:partner-manager-maps[Import a new DataWeave map]
+* xref:partner-manager-maps[Import a new DataWeave Map]
 | yes or no
 
 | Message type
@@ -121,32 +127,6 @@ It can take five minutes or so for your configuration changes to sync with Mule.
 . To test your edited message flow, see xref:deploy-message-flows.adoc[Deploy and Test Message Flows].
 
 After you confirm the successful deployment of your message flow, you can track its processed messages from the *Activity* page.
-
-[[delete-message-flows]]
-== Delete Message Flows
-
-You might want to delete a message flow when it no longer serves its purpose, for example, if your relationship with your partner changes.
-
-You can delete your message flow from either a sandbox or a production environment.
-
-If you delete a message flow before it is deployed, it does not affect the Mule apps.
-
-[NOTE]
-For on-premises installations, you must xref:deploy-message-flows#undeploy-message-flows[undeploy a message flow] before you can delete it.
-
-=== Steps
-
-After the undeployment is successful, you can delete the message flow:
-
-. In the navigation menu, select *Message Flows*.
-. Select the message flow to delete from the list and click *Delete* in the upper right of the screen.
-
-Any previous transmissions that were created as a result of a message being processed by the message flow you deleted have the following behavior:
-
-* The transmissions continue to stay in the transmission records within the *Activity* page; however, the records indicate that the corresponding message flow used to process the transmission is now deleted.
-* These activities are converted into read-only mode, so no links to the message flow work.
-* Only links to the stored payloads (such as the original B2B message, any TA1 acknowledgments, the transformed payload, on so on) continue to work.
-
 
 == See Also
 
