@@ -2,25 +2,25 @@
 
 A message flow is the path along which a message travels from its source, through a DataWeave transformation map, to its target. You set up message flows to send and receive messages between your systems and your trading partners.
 
-Partner Manager message flows consist of objects such as endpoints, message types, identifiers, and mappings. Partner Manager’s message framework orchestrates the processing of your business transactions from source to target using these configuration objects as shown in the following diagram:
+Partner Manager message flows consist of objects such as endpoints, message types, identifiers, and mappings. Partner Manager’s message framework orchestrates the processing of your business transactions from source to target using the configuration objects shown in the following diagram:
 
 image::pm-message-flow.png[Partner Manager message flow configuration objects]
 
 You can create message flows in one of the following contexts:
 
-* <<inbound-message-flow,Inbound>>
+* Inbound
 +
-An inbound message flow receives EDI payloads from your trading partners, translates them into your internal application message format, and sends the translated messages to your backend systems.
-
-For more information, see xref:create-endpoint.adoc[Create and Configure Endpoints]
-* <<outbound-message-flow,Outbound>>[Outbound message flow]
+An inbound message flow receives EDI payloads from your partners, translates them into your internal application message format, and sends the translated messages to your backend systems.
 +
-An outbound message flow receives messages from your backend applications, translates the message to EDI, and sends the EDI transmissions to your partner.
+For more information, see xref:inbound-message-flows.adoc[Inbound Message Flows]
++
+* Outbound
++
+An outbound message flow receives messages from your backend applications, translates the messages to EDI, and sends the EDI messages to your partner.
++
+For more information, see xref:outbound-message-flows.adoc[Outbound Message Flows]
 
 == See Also
 
-* xref:configure-message-flows.adoc[Create an Inbound Message Flow]
-* xref:create-outbound-message-flow.adoc[Create and Configure Outbound Message Flows]
-* xref:outbound-message-routing.adoc[Outbound Message Routing]
-* xref:manage-message-flows.adoc[Manage Message Flows]
-* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
+* xref:create-inbound-message-flow.adoc[Create an Inbound Message Flow]
+* xref:create-outbound-message-flow.adoc[Create an Outbound Message Flow]
