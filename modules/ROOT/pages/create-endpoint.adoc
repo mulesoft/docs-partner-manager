@@ -40,12 +40,13 @@ The configuration of Partner Manager endpoints depends on endpoint type and prot
 [%header%autowidth.spread]
 |===
 |Endpoint Type | Protocol | Can be owned by
-.1+| Source at host .2+.^| FTP, HTTP, HTTPS, SFTP .2+| Host
-.1+| Target at host
-.2+.^| Receive from partners .1+| AS2 .1+| Host
-.1+| FTP, SFTP .1+| Host, partner, 3rd party connection
-.2+.^| Send to partners .1+| AS2 | Partner, 3rd party connection
-.1+| FTP, HTTP, HTTPS, SFTP .1+| Host, partner, 3rd party connection
+| Source at host | FTP, HTTP, HTTPS, SFTP | Host
+| Target at host | FTP, HTTP, HTTPS, sftp | Host
+| Receive from partners | AS2 |Host
+|  | FTP, HTTP, HTTPS, SFTP | Host, partner, 3rd party connection
+| Send to partners| AS2
+| Partner, 3rd party connection
+|  | FTP, HTTP, HTTPS, SFTP | Host, partner, 3rd party connection
 |===
 
 == Endpoint Runtime Services

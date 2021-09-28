@@ -6,11 +6,9 @@ HTTP and HTTPS receive endpoint settings configure where to receive messages in 
 +
 Source endpoint in an outbound message flow that receives application JSON and XML messages from the backend systems
 +
-////
 * Receive from partners
 +
-Source endpoint in an inbound message flow that receives B2B EDI messages from partners either directly or via 3rd party connections
-////
+Source endpoint in an inbound message flow that receives inbound messages (EDIFACT, JSON, X12, or XML) from partners either directly or via 3rd party connections
 
 Only a host can own HTTP and HTTPS receive endpoints.
 
@@ -35,8 +33,13 @@ Create HTTP and HTTPS receive endpoints by configuring these settings on the hos
 | User-supplied value that describes the purpose of the endpoint.
 | No
 
+| Manage with API manager
+| Enable this setting to manage the endpoint with API Manager. If enabled, you must create:
+* A new HTTP API in API Manager in the same environment as the endpoint.
+* An instance ID for the API in the *API Auto-discovery ID* field.
+
 |URL
-a|HTTP or HTTPS address where you receive outbound source messages from backend systems.
+a|HTTP or HTTPS address where you receive outbound source messages from backend systems. Partner Manager automatically generates this ID after the first message flow that uses the endpoint is deployed.
 |Yes
 
 |Response timeout (in milliseconds)

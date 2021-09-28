@@ -74,6 +74,10 @@ The acknowledgment is added to the message flow.
 [[import-map]]
 == Import the Translation Map
 
+If your source message type is EDI X12 or EDIFACT, follow these instruction to create the inbound EDI-to-application message in Anypoint Studio.
+
+If your source message type is JSON or XML:  You can create your JSON/XML to JSON/XML map to convert your partner message format to your internal application format, follow these instructions.
+
 To create your inbound EDI-to-application message (JSON or XML) map in Anypoint Studio, follow xref:partner-manager-maps.adoc[these instructions].
 
 . In the message flow, expand the *Map* section.
@@ -81,6 +85,10 @@ To create your inbound EDI-to-application message (JSON or XML) map in Anypoint 
 . In the *New mapping file* window, navigate to the DataWeave map you want to use and then click *Open*.
 . Click *Upload mapping*. +
 The translation map is added to the message flow.
+
+To create a new translation map,
+
+If the source message type is JSON or XML, follow the instructions in
 
 [[configure-target]]
 == Configure the Target
