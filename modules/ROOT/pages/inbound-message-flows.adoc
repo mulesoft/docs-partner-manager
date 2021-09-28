@@ -1,0 +1,43 @@
+== Inbound Message Flows
+
+An inbound message flow receives application messages from your partner, either directly or through a 3rd party connection, translates the messages to the format used by your backround applications, and forwards the messages to those applications.
+
+The following diagram shows the components of an inbound message flow:
+
+image::pm-inbound-message-flow.png[Inbound message flow]
+
+|===
+|Setting |Description |Supported Formats or Protocols
+
+|Receiving endpoint | Endpoint where the host receives transmissions from the trading partner a|
+* AS2
+* FTP
+* SFTP
+* HTTP
+* HTTPS
+
+|Source message type |Message type of the input payload a|
+* X12
+* EDIFACT
+* JSON
+* XML
+
+|Transform |DataWeave map used to transform the source messsage type to the target message type a| N/A
+
+|Target message type |Format into which the DataWeave map transforms received messages a|
+* JSON
+* XML
+
+|Target endpoint | Endpoint to which the translated message is sent (typically, a process API)
+ a|
+* FTP
+* HTTP
+* HTTPS
+* SFTP
+|===
+
+== See Also
+
+* xref:create-inbound-message-flow.adoc[Create an Inbound Message Flow]
+* xref:deploy-message-flows.adoc[Deploy a Message Flow]
+* xref:manage-message-flows.adoc[Edit a Message Flow]

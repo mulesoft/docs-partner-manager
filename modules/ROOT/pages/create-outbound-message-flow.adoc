@@ -1,0 +1,141 @@
+= Create an Outbound Message Flow
+
+Create an outbound message flow to receive application messages from your backend systems, validate and transform these messages to the EDIFACT EDI or X12 EDI format, and then send the translated EDI messages to your partners either directly, or through 3rd party connections.
+
+== Before You Begin
+
+Before you create your first message flow (inbound or outbound), you must configure your xref:setup-payload-storage-API.adoc[payload storage API].
+
+== Steps
+
+. From the Anypoint Partner Manager navigation menu, select *Message Flows*.
+. Click *New message flow > Send to partner*.
+. Either select an existing partner or select *New* to create a new partner, as described in xref:create-partner.adoc#[Create a partner].
++
+A new message flow is created.
++
+. <<source-at-host-endpoint,Configure the source at host endpoint>>.
+. <<source-message-type,Configure the source at host message type>>.
+. <<reference-ids,Configure reference IDs for the partner and host>>.
+. <<translation-map,Import the translation map>>.
+. <<send-to-partner-message-type,Configure the send to partner message type>>.
+. <<send-to-partner-endpoint,Configure the send to partner endpoint>>.
+. <<verify-message-flow,Verify that the message flow is complete>>.
+
+[[source-at-host-endpoint]]
+=== Configure the Source at Host Endpoint
+
+The source at host endpoint in an outbound message flow receives application messages from the backend systems. Partner Manager supports the FTP, HTTP, HTTPS, and SFTP formats for the source at host endpoint.
+
+To configure the source at host endpoint:
+
+. In the message flow, expand the *Source at <host-name>* section and click *Select*.
+. In the *Select an endpoint: Source at <host-name>* window, do either of the following:
+* Select an existing source at host endpoint and click *Select*.
+* Click *New* to create a new source at host endpoint, as described in <<xref:create-endpoint.adoc,Create and Configure Endpoints>>.
+
+[[source-message-type]]
+=== Configure the Source at Host Message Type
+
+The source at host message type in an outbound message flow defines the structure of the messages that Partner Manager sends to a partner, either directly or through a 3rd party connection. Partner Manager supports the JSON and XML source message types.
+
+To create the source message type:
+
+. In the message flow, expand the *Source message type* section and click *Select*.
+. In the *Source message type* window, do either of the following:
+* Select an existing source message type and click *Select*.
+* Click *New* to create a new source message type, as described in <<xref:partner-manager-create-message-type,Create and Configure Message Types>>.
+
+[[reference-ids]]
+=== Configure Reference IDs for the Partner and Host
+
+Partner Manager uses the partner reference ID and host reference ID to locate the appropriate message flow for routing outbound messages. For information about about how this routing process works, see xref:partner-manager-identifiers[Sender and Receiver Identifiers] and xref:outbound-message-routing.adoc[Outbound Message Routing].
+
+To configure a partner reference ID, either select *All available identifiers* or select a specific partner identifier.
+
+To configure a host reference ID, either select *Ignore* or select your organization's internal reference ID (such as the business unit name) as it appears in the data element of the source JSON or XML message from your backend systems.
+
+[[translation-map]]
+=== Import the Translation Map
+
+A translation map in an outbound message flow transforms outbound messages from your organization's enterprise application format, such as JSON and XML, to EDIFACT EDI or X12 EDI. Create a translation map by using DataWeave. For more information, see see xref:partner-manager-maps.adoc[EDI Translation Maps].
+
+To import the translation map:
+
+. In the message flow, expand the *Map* section.
+. Click *Import < Choose file*.
+. Navigate to the DataWeave map you want to use and click *Open*.
+. Click *Upload mapping*.
+
+The translation map is added to the message flow.
+
+[[send-to-partner-message-type]]
+=== Configure the Send To Partner Message Type
+
+The send to partner message type in an outbound message flow defines the structure of the messages that Partner Manager sends to the partner, either directly or via a 3rd party connection. Partner Manager supports the AS2, FTP, and SFTP formats for send to message types.
+
+Configuring the send to message type also involves configuring acknowledgements (optional for X12 and EDIFACT), creating custom EDIFACT settings (optional), and selecting EDIFACT identifiers to use for routing the outbound messages.
+
+To configure the send to message type:
+
+. Expand the *Message type* section and click *Select*.
+. In the *Select message type* window, do either of the following:
+* Select an existing send to message type and click *Select*.
+* Click *New* to create a new send to message type, as described in <<xref:partner-manager-create-message-type,Create and Configure Message Types>>.
+. Click *Save*.
++
+The message type and its validation settings are added to the message flow.
+. Optionally configure acknowledgement settings for the outbound message.
+. Optionally apply custom validation settings delimiters, and character encoding to the outbound message flow.
+. In the *<protocol> Identifiers* section, select the sender and receiver identifiers to use on the X12 ISA and GS segments or the EDIFACT UNB segments.
++
+These identifiers are configured in the host and partner profiles.
+
+==== Configure Acknowledgment settings
+
+To configure acknowledgement settings for the outbound messages that use this message flow:
+
+. In the *Acknowledgement* section, select *Expect functional acknowledgement* (X12) or *Expect CONTRL functional acknowledgment* (EDIFACT).
+. Do either of the following:
+* Select an existing endpoint at which to receive your partner's acknowledgement transaction.
+* Click *New* to create a new endpoint, as described in <<xref:create-endpoint.adoc,Create and Configure Endpoints>>.
+. In the *Mark overdue after* field, accept the default value of *24 Hours* or configure when you want the outbound transaction to be marked as overdue for an acknowledgement, according to the SLAs you have with your trading partner.
+
+==== Optionally Apply Custom Validation Settings
+
+By default, Partner Manager uses the X12 send or EDIFACT send settings configured for the partner or 3rd party connection for message validation, delimiters, and character encoding.
+
+To apply custom validation settings and delimiters to the outbound message flow, follow these steps:
+
+. In the *EDIFACT Settings* section, select *Custom X12 settings* or *Custom EDIFACT settings* and provide custom configuration values.
+. In the *<message format> Settings* section...
+
+[[send-to-partner-endpoint]]
+=== Configure the Send To Partner Endpoint
+
+The send to partner endpoint in an outbound message flow is the target endpoint to which translated messages are sent to partners, either directly or via 3rd party connections. Use a 3rd party-owned send to partner endpoint for partners that use a 3rd party connection.
+
+Partner Manager supports the EDIFACT and X12 protocols for send to partner endpoints.
+
+To create a send to partner endpoint:
+
+. In the message flow, expand the *Send to <partner>* section and click *Select*.
+. Do either of the following:
+* Select an existing send to endpoint and click *Select*.
++
+You can select any previously configured Send to partner endpoints owned by the host, the trading partner for whom the message flow is configured, or a 3rd party connection.
++
+* Click *New* to create a new send to endpoint, as described in <<xref:create-endpoint.adoc,Create and Configure Endpoints>>.
+
+If you selected AS2 as the protocol and there is no certificate associated with the partner or 3rd party profile, you must import the certificate of the partner or 3rd party connection that owns the endpoint.
+
+=== Verify That the Message Flow is Complete
+
+Partner Manager dynamically validates the message flow configuration elements for completeness and displays a green checkmark if all the building blocks of the message flow are complete. After you verify the configurations, you are ready to deploy the message flow.
+
+== See Also
+
+* xref:outbound-message-flows.adoc[Outbound Message Flows]
+* xref:outbound-message-routing.adoc[Outbound Message Flow Routing]
+* xref:deploy-message-flows.adoc[Deploy and Test a Message Flow]
+* xref:manage-message-flows.adoc[Edit Message Flow Settings]

@@ -19,7 +19,7 @@ You can create message types from the host page  or from the Message Flow wizard
 . In the navigation menu, select *<host-name>*.
 . From the *Message types* section host page , click *New*.
 . In the *Usage* drop-down list, select the message type:
-* <<receive-and-send-to-partners,Receive from partners>>
+* <<receive-and-send-to-partners,Receive from and send to partners>>
 * <<target-at-host,Target at host>>
 * <<source-at-host,Source at host>>
 * <<receive-and-send-to-partners,Send to partners>>
@@ -108,7 +108,6 @@ Partner Manager automatically generates a message type identifier from the schem
 The message identifier value used in the dynamic message routing for outbound B2B transactions.
 See Outbound Message Routing to understand how this routing is performed and how your backend applications should pass the message type identifier when sending application messages to Partner Manager endpoints.
 
-
 Use the following settings to define JSON or XML settings for outbound EDI transactions:
 
 [%header%autowidth.spread]
@@ -139,7 +138,7 @@ The input to the DataWeave map is the payload that follows the schema uploaded i
 * `partnerReferenceId` +
 Required identifier that uniquely identifies the receiving partner.
 * `hostReferenceId` +
-Optional, except when backend systems are sending outbound transactions on behalf of different internal business units that require different mapping or sender identifiers to be set on the EDI data. This field is not used for the receive from partners message type.
+(Applies to source at host message types) Optional, except when backend systems are sending outbound transactions on behalf of different internal business units that require different mapping or sender identifiers to be set on the EDI data. This field is not used for the receive from partners message type.
 * `businessDocumentKey` +
 Optional key reference value, such as `Order Number`or `Invoice Number`.
 

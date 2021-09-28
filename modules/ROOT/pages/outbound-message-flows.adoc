@@ -1,0 +1,46 @@
+== Outbound Message Flows
+
+An outbound message flow receives application messages from the backend,  transforms the messages to the X12 EDI or EDIFACT EDI formats, and then forwards the messages to your partners.
+
+The following diagram shows the components of an outbound message flow:
+
+image::pm-outbound-message-flow.png[Outbound message flow]
+
+|===
+|Setting |Description |Supported Formats or Protocols
+
+|Receiving endpoint |Endpoint where the host receives transmissions from the backend a|
+* FTP
+* HTTP
+* HTTPS
+* SFTP
+
+|Source message type |Message type of the message received from the backend a|
+* JSON
+* XML
+
+|Transform |DataWeave map used to transform the JSON or XML formats to EDIFACT EDIT or X12 EDI a| N/A
+
+|Target message type |
+Message type to which to translate the
+a|
+* EDIFACT
+* X12
+* JSON
+* XML
+
+|Target endpoint |
+Partner endpoint to which to send the translated EDI message
+ a|
+* AS2
+* FTP
+* HTTP
+* HTTPS
+* SFTP
+|===
+
+== See Also
+
+* xref:create-outbound-message-flow.adoc[Create an Outbound Message Flow]
+* xref:deploy-message-flows.adoc[Deploy Message Flows]
+* xref:manage-message-flows.adoc[Edit Message Flow Settings]

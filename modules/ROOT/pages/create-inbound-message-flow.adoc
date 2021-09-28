@@ -1,0 +1,134 @@
+= Create an Inbound Message Flow
+:page-aliases: configure-message-flows.adoc
+
+Create an inbound message flow to receive EDI messages from a partner, including messages that go through 3rd party connections. When you create an inbound message flow, you can validate and transform the inbound messages and then send them to your backend systems.
+
+Partner Manager routes inbound EDI messages based on matching identifiers configured for the partner.
+
+=== Before You Begin
+
+Before you create your first inbound message flow (inbound or outbound), you must configure your xref:setup-payload-storage-API.adoc[payload storage API].
+
+=== Steps
+
+. From the Anypoint Partner Manager navigation menu, select *Message Flows*.
+. Click *New message flow > Receive from partner*.
+. Either select an existing partner from the list or select *New* to create a new partner, as described in xref:create-partner.adoc#[Create a partner].
++
+A new message flow is created.
++
+. <<receiving-endpoint,Configure the receiving endpoint>>.
+. <<source-message-type,Configure the source message type>>.
+. <<import-map,Import the translation map>>.
+. <<configure-target,Configure the target message type>>.
+. <<configure-target-endpoint,Configure the target endpoint>>.
+. <<verify-message-flow,Verify that the message flow is complete>>.
+
+[[receiving-endpoint]]
+=== Configure the Receiving Endpoint
+
+The receiving (source) endpoint in an inbound message flow receives the EDI messages that your partners send, either directly or via 3rd party connections. To configure a receiving endpoint, you can either select an existing endpoint owned by the host, partner, or 3rd party connection, or you can create a new endpoint.
+
+Partner Manager supports the AS2, FTP and SFTP formats for the receiving endpoint in an inbound message flow.
+
+To configure the receiving endpoint:
+
+. In the message flow, expand the *Receiving endpoint...* section and click *Select*.
+. In the *Select an endpoint: Receive from <partner>* window, do either of the following:
+* Select an existing receiving endpoint and click *Select*.
+* Click *New* to create a new receiving endpoint, as described in <<xref:create-endpoint.adoc,Create and Configure Endpoints>>.
++
+If you select an endpoint owned by a 3rd party connection, the messages go through that connection.
++
+Once you select an endpoint, it is added to the message flow.
+
+If the protocol of the receiving endpoint is AS2, perform these additional steps:
+
+. Select the AS2 sender from the dropdown menu and then select either of the following:
+* The partner's name, to enable your organization to receive the AS2 messages directly from the partner for whom the message flow is created.
+* The name of a 3rd party connection, to enable your organization to receive the partner's AS2 messages via a 3rd party connection, such as a VAN or 3PL.
++
+The AS2 identifier and certificate of the selected 3rd party connection are used for validating the AS2 messages.
++
+. If there is no valid certificate in the associated profile, import one from the partner or from the 3rd party connection sending the AS2 message.
+
+[[source-message-type]]
+=== Configure the Source Message Type
+
+The source message type in an inbound message flow defines the structure of the messages that Partner Manager receives from a partner or 3rd party connection. Partner Manager supports the EDIFACT and X12 formats for source message types in an inbound message flow.
+
+To configure the source message type:
+
+. In the message flow, expand the *Source message* section and click *Select*.
+. In the *Select message type* window, do either of the following:
+* Select an existing message type and click *Select*.
+* Click *New* to create a new receive from partners type, as described in <<xref:partner-manager-create-message-type.adoc,Create and Configure Message Types>>. *Vijay, is receive from partners correct in the last sentence?.*
+
++
+The message type and its validation settings are added to the message flow.
+
+If the source message type is X12 or EDIFACT and your partner expects your organization to return functional acknowledgements, perform these additional steps:
+
+. In the *Acknowledgement* section, select the check box next to *Send 997 functional acknowledgment (X12)* or *Send CONTRL functional acknowledgement (EDIFACT)*.
+. Click *Select*.
+. In the *Select an endpoint: Send acknowledgement to <partner>* window, do either of the following:
+* Select the endpoint to receive the acknowledgment messages from your partner and click *Select*.
+* Click *New* to create a new send to endpoint, as described in <<xref:create-endpoint.adoc,Create and Configure Endpoints>>.
+
++
+The acknowledgment is added to the message flow.
+
+[[import-map]]
+=== Import the Translation Map
+
+A translation map in an inbound message flow transforms your inbound messages from the EDIFACT EDI or X12 EDI format to your organization's enterprise application format, such as JSON and XML. Create a translation map by using DataWeave. For more information, see xref:partner-manager-maps.adoc[EDI Translation Maps].
+
+To import the translation map:
+
+. In the message flow, expand the *Map* section.
+. Click *Import < Choose file*.
+. Navigate to the DataWeave map you want to use and click *Open*.
+. Click *Upload mapping*.
++
+The translation map is added to the message flow.
+
+[[configure-target]]
+=== Configure the Target Message Type
+
+The target message type in an inbound message flow defines the structure of the messages that Partner Manager sends to the backend system.
+
+To configure the target message type:
+
+. In the message flow, expand the *Target at <host>* section.
+. In the *Message Type* section, click *Select*.
+. In the *Select message type* window, do either of the following:
+* Select an existing receiving message type and click *Select*. *Vijay, what message type should this be?*
+* Click *New* to create a new message type.
+. Click *Save*.
+
+[[target-endpoint]]
+=== Configure the Target Endpoint
+
+The target endpoint in an inbound message flow receives the translated messages on the backend systems. Partner Manager supports the FTP, HTTP, HTTPS, and SFTP formats for the target endpoint.
+
+To configure the target endpoint:
+
+. In the message flow, expand the *Target at <host>* section.
+. In the *Target at <host>* section, expand the *Endpoint* section and click *Select*.
+. In the *Select an endpoint: Target to <host>* window, do either of the following:
+* Select an existing receiving endpoint and click *Select*.
+* Click *New* to create a new endpoint, as described in <<xref:create-endpoint.adoc,Create and Configure Endpoints>>
+
++
+Once you select an endpoint, it is added to the message flow.
+
+[[verify-message-flow]]
+=== Verify That the Message Flow Is Complete
+
+Partner Manager dynamically validates the message flow configuration elements for completeness and displays a green checkmark if all of the message flow building blocks are complete. After you verify the message flow configuration, you can deploy and test it.
+
+== See Also
+
+* xref:inbound-message-flows.adoc[Inbound Message Flows]
+* xref:deploy-message-flows.adoc[Deploy and Test a Message Flow]
+* xref:manage-message-flows.adoc[Edit Message Flow Settings]

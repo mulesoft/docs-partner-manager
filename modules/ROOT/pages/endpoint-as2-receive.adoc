@@ -48,7 +48,7 @@ Allowed values:
 
 * Signed & Encrypted
 +
-Rejects incoming messages that aren't signed and encrypted.
+Rejects incoming messages that aren't both signed and encrypted.
 * Signed
 +
 Rejects incoming messages that aren't signed.
