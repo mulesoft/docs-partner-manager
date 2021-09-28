@@ -29,13 +29,17 @@ image::pm-inbound-message-flow.png[Inbound message flow]
 |Receiving endpoint | The endpoint where the host receives transmissions from the trading partner. a|
 * AS2
 * FTP
+* HTTPS
+* HTTPS
 * SFTP
 
 |Source message type |The message type of the input payload. a|
-* X12
 * EDIFACT
+* JSON
+* x12
+* XML
 
-|Transform |The DataWeave map used to transform EDI into XML or JSON formats. a| N/A
+|Transform |The DataWeave map used to transform the source message type to the target message type. a| N/A
 
 |Target message type |The format into which the DataWeave map transforms received messages. a|
 * JSON
@@ -77,7 +81,9 @@ image::pm-outbound-message-flow.png[Outbound message flow]
 The message type to which the input payload needs to be translated.
 a|
 * EDIFACT
+* JSON
 * X12
+* XML
 
 |Target endpoint |
 The trading partner endpoint to which the translated EDI payload needs to be sent.
