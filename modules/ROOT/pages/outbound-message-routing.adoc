@@ -1,8 +1,6 @@
 = Outbound Message Routing
 
-The Partner Manager outbound message processing framework enables you to implement receiving endpoints in a variety of ways:
-
-You can:
+The Partner Manager outbound message processing framework enables you to implement receiving endpoints in a variety of ways. You can:
 
 * Use a single endpoint to receive different types of application messages, such as advance shipment notices and invoices, from your backend systems.
 * Use dedicated endpoints for each message type from backend systems.
@@ -10,19 +8,22 @@ You can:
 
 When messages are received by the endpoint, Partner Manager routes the payload to the appropriate message flow based on the message type, partner reference ID, and host reference ID configurations:
 
-* Partner Manager identifies the message type:
+. Identifies the message type using the following criteria:
 ** Relative path for HTTP or HTTPS endpoints
-** File name for SFTP endpoints +
-The file name for SFTP endpoints should follow the following convention: `<message-type>_<endpoint-information>.<file-type>`. For example, if your message type ID is ar-invoice, then the file name is `ar-invoice_20210217_1055_000.json`.
-* Partner Manager validates the payload against the schema supplied during the message type definition.
-* Partner Manager uses the supplied DataWeave map to obtain the partner and host reference IDs and the business key.
-* The partner reference ID and optional host reference ID specify the message flow through which the transaction is processed:
+** Filename for SFTP endpoints, which should follow this convention:
++
+`<message-type>_<endpoint-information>.<file-type>`. For example, if your message type ID is ar-invoice, then the file name is `ar-invoice_20210217_1055_000.json`
++
+* Validates the payload against the schema supplied during the message type definition.
+* Uses the supplied DataWeave map to obtain the partner reference ID, optional host reference IDs, and the business key
++
+The partner reference ID and host reference ID specify the message flow through which the transaction is processed.
 
-image::pm-outbound-message-routing.png[Outbound message routing process]
+image::outbound-message-routing.png[Outbound message routing process]
 
 == See Also
 
-* xref:Outbound-message-flows.adoc[Outbound Message Flows]
-* xref:outbound-message-flows.adoc[Create Outbound Message Fllows]
+* xref:deploy-message-flows.adoc[Deploy Message Flows]
+* xref:manage-message-flows.adoc[Manage Message Flows]
 * xref:activity-tracking.adoc[Activity Tracking]
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
