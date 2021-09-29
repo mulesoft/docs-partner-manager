@@ -34,9 +34,9 @@ Create HTTP and HTTPS receive endpoints by configuring these settings on the hos
 | No
 
 | Manage with API manager
-| Enable this setting to manage the endpoint with API Manager. If enabled, you must create:
-* A new HTTP API in API Manager in the same environment as the endpoint.
-* An instance ID for the API in the *API Auto-discovery ID* field.
+| Enable this setting to manage the endpoint with API Manager. To use this functionality, you must must create an HTTP API in API Manager in the same environment as the endpoint.
++
+* In the *API Auto discovery id* field, enter an instance ID for the API.
 
 |URL
 a|HTTP or HTTPS address where you receive outbound source messages from backend systems. Partner Manager automatically generates this ID after the first message flow that uses the endpoint is deployed.

@@ -44,3 +44,4 @@ Partner endpoint to which to send the translated EDI message
 * xref:create-outbound-message-flow.adoc[Create an Outbound Message Flow]
 * xref:deploy-message-flows.adoc[Deploy Message Flows]
 * xref:manage-message-flows.adoc[Edit Message Flow Settings]
+* xref:outbound-message-routing.adoc[Outbound Message Routing]

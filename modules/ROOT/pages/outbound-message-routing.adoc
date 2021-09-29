@@ -22,7 +22,7 @@ image::pm-outbound-message-routing.png[Outbound message routing process]
 
 == See Also
 
-* xref:deploy-message-flows.adoc[Deploy Message Flows]
-* xref:manage-message-flows.adoc[Manage Message Flows]
+* xref:Outbound-message-flows.adoc[Outbound Message Flows]
+* xref:outbound-message-flows.adoc[Create Outbound Message Fllows]
 * xref:activity-tracking.adoc[Activity Tracking]
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]

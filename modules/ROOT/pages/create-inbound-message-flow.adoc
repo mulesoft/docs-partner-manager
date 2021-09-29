@@ -1,9 +1,10 @@
 = Create an Inbound Message Flow
 :page-aliases: configure-message-flows.adoc
 
-Create an inbound message flow to receive EDI messages from a partner, including messages that go through 3rd party connections. When you create an inbound message flow, you can validate and transform the inbound messages and then send them to your backend systems.
+Create an inbound message flow to receive
+messages from a partner, including messages that go through 3rd party connections. When you create an inbound message flow, you can validate and transform the inbound messages and then send them to your backend systems.
 
-Partner Manager routes inbound EDI messages based on matching identifiers configured for the partner.
+Partner Manager routes inbound messages based on matching identifiers configured for the partner.
 
 === Before You Begin
 
@@ -27,7 +28,7 @@ A new message flow is created.
 [[receiving-endpoint]]
 === Configure the Receiving Endpoint
 
-The receiving (source) endpoint in an inbound message flow receives the EDI messages that your partners send, either directly or via 3rd party connections. To configure a receiving endpoint, you can either select an existing endpoint owned by the host, partner, or 3rd party connection, or you can create a new endpoint.
+The receiving (source) endpoint in an inbound message flow receives the messages that your partners send, either directly or via 3rd party connections. To configure a receiving endpoint, you can either select an existing endpoint owned by the host, partner, or 3rd party connection, or you can create a new endpoint.
 
 Partner Manager supports the AS2, FTP and SFTP formats for the receiving endpoint in an inbound message flow.
 
@@ -81,7 +82,7 @@ The acknowledgment is added to the message flow.
 [[import-map]]
 === Import the Translation Map
 
-A translation map in an inbound message flow transforms your inbound messages from the EDIFACT EDI or X12 EDI format to your organization's enterprise application format, such as JSON and XML. Create a translation map by using DataWeave. For more information, see xref:partner-manager-maps.adoc[EDI Translation Maps].
+A translation map in an inbound message flow transforms your inbound messages from the EDIFACT or X12 format to your organization's enterprise application format, such as JSON and XML. Create a translation map by using DataWeave. For more information, see xref:partner-manager-maps.adoc[EDI Translation Maps].
 
 To import the translation map:
 
@@ -132,3 +133,4 @@ Partner Manager dynamically validates the message flow configuration elements fo
 * xref:inbound-message-flows.adoc[Inbound Message Flows]
 * xref:deploy-message-flows.adoc[Deploy and Test a Message Flow]
 * xref:manage-message-flows.adoc[Edit Message Flow Settings]
+* xref:inbound-message-routing.adoc[Inbound Message Routing]

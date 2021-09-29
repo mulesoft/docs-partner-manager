@@ -1,6 +1,6 @@
 = Create an Outbound Message Flow
 
-Create an outbound message flow to receive application messages from your backend systems, validate and transform these messages to the EDIFACT EDI or X12 EDI format, and then send the translated EDI messages to your partners either directly, or through 3rd party connections.
+Create an outbound message flow to receive application messages from your backend systems, validate and transform these messages to the format your partners expect, and then send them to your partners either directly, or through 3rd party connections.
 
 == Before You Begin
 
@@ -58,7 +58,7 @@ To configure a host reference ID, either select *Ignore* or select your organiza
 [[translation-map]]
 === Import the Translation Map
 
-A translation map in an outbound message flow transforms outbound messages from your organization's enterprise application format, such as JSON and XML, to EDIFACT EDI or X12 EDI. Create a translation map by using DataWeave. For more information, see see xref:partner-manager-maps.adoc[EDI Translation Maps].
+A translation map in an outbound message flow transforms outbound messages from your organization's enterprise application format to the format your partners expect. Create a translation map by using DataWeave. For more information, see see xref:partner-manager-maps.adoc[EDI Translation Maps].
 
 To import the translation map:
 
@@ -74,7 +74,7 @@ The translation map is added to the message flow.
 
 The send to partner message type in an outbound message flow defines the structure of the messages that Partner Manager sends to the partner, either directly or via a 3rd party connection. Partner Manager supports the AS2, FTP, and SFTP formats for send to message types.
 
-Configuring the send to message type also involves configuring acknowledgements (optional for X12 and EDIFACT), creating custom EDIFACT settings (optional), and selecting EDIFACT identifiers to use for routing the outbound messages.
+For the EDIFACT and X12 message types, configuring the send to message type also involves configuring acknowledgements (optional), creating custom EDIFACT settings (optional), and selecting EDIFACT identifiers to use for routing the outbound messages.
 
 To configure the send to message type:
 

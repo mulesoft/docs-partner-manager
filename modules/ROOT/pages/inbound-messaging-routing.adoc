@@ -1,0 +1,29 @@
+== Inbound Message Routing
+
+To ensure successful routing when your partners send messages to the configured source endpoints, ensure that they use the appropriate message ID or file naming pattern, especially for non-EDI messages.
+
+The following table describes the requirements for successful inbound message routing:
+
+|===
+|Protocol | Requirements for Successful Inbound Message Routing
+|HTTP or HTTPS
+a|
+* The message posted to the endpoint has the appropriate Content-Type.
+* If the source message type is X12 or EDIFACT, the message is posted to the base URL.
+* If the source message type is XML or JSON, the message is sent to the endpoint’s {baseURL}/{message-type}.
+|AS2
+a|
+* The message posted to the endpoint has the appropriate AS2 MIME type.
+* If the source message type is XML or JSON, the file name begins with `{message-type-identifier}_`.
+| FTP or SFTP
+a|
+* If configured to support the JSON or XML message format, the filename begins with `{message-type-identifier}_`.
+* If configured to support EDIFACT or X12, the filename can be anything, and routing happens automatically based on the EDI identifiers and message type.
+|===
+
+== See Also
+
+* xref:inbound-message-flows.adoc[Inbound Message Flows]
+* xref:create-inbound-message-flows.adoc[Create Inbound Message Fllows]
+* xref:activity-tracking.adoc[Activity Tracking]
+* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
