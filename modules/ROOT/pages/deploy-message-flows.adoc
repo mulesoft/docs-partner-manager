@@ -1,4 +1,4 @@
-= Deploy, Test, and Undeploy a Message Flow
+= Deploy and Test a Message Flow
 
 Partner Manager dynamically validates the message flow configuration elements as you complete them and displays a green checkmark next to each of the validated elements.
 
@@ -37,31 +37,8 @@ If you not sure about whether you should be able to view a payload, contact your
 . Verify that Partner Manager routed the messages to the target system, delivered the messages to the target endpoint,
  and transformed the messages correctly.
 
-[[undeploy-message-flows]]
-== Undeploy a Message Flow
-
-Undeploying a message flow prevents future messages from being processed, or enables you to recover resources that are consumed by a message flow that you no longer need.
-
-You can undeploy your message flow from either a sandbox or a production environment.
-
-The undeployment process takes about five minutes, during which actions such as `Deploy` and `Delete` are unavailable.
-
-[IMPORTANT]
-During the undeployment process, do not log out of Anypoint Partner Manager or close your browser window.
-
-=== Prerequisites
-
-Before you undeploy a message flow, ensure that your on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager called `B2BserverGroup` are active and running.
-
-=== Steps
-
-. In the navigation menu, select *Message Flows*.
-. Select the message flow to undeploy from the list and click *Undeploy*.
-
-Anypoint Partner Manager checks to see if any of the applications deployed to Mule are orphaned as a result of the undeployment. Orphaned applications are cleaned up to release any resources they were consuming.
-
 == See Also
 
 * xref:undeploy-message-flows.adoc[Undeploy a Message Flow]
-* xref:configure-message-flows.adoc[Create and Configure an Inbound Message Flow]
-* xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow]
+* xref:create-inbound-message-flow.adoc[Create an Inbound Message Flow]
+* xref:create-outbound-message-flow.adoc[Create an Outbound Message Flow]
