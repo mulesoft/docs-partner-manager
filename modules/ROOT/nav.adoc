@@ -48,7 +48,7 @@
  ** xref:outbound-message-flows.adoc[Outbound Message Flows]
  ** xref:create-outbound-message-flow.adoc[Create an Outbound Message Flow]
  ** xref:deploy-message-flows.adoc[Deploy and Test a Message Flow]
- ** xref:manage-message-flows.adoc[Edit Message Flow Settings]
+ ** xref:manage-message-flows.adoc[Modify a Message Flow's Settings]
  ** xref:undeploy-message-flows.adoc[Undeploy a Message Flow]
  ** xref:delete-message-flows.adoc[Delete a Message Flow]
  ** xref:inbound-message-routing.adoc[Inbound Message Routing]

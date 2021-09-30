@@ -132,5 +132,5 @@ Partner Manager dynamically validates the message flow configuration elements fo
 
 * xref:inbound-message-flows.adoc[Inbound Message Flows]
 * xref:deploy-message-flows.adoc[Deploy and Test a Message Flow]
-* xref:manage-message-flows.adoc[Edit Message Flow Settings]
+* xref:manage-message-flows.adoc[Modify a Message Flow's Settings]
 * xref:inbound-message-routing.adoc[Inbound Message Routing]

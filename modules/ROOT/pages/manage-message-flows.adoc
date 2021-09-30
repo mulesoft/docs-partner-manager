@@ -1,4 +1,4 @@
-= Modify Message Flow Settings
+= Modify a Message Flow's Settings
 
 Active message flows between you and your partners don't require much maintenance. However, you might need to:
 
@@ -35,7 +35,7 @@ a|
 
 * xref:create-endpoint.adoc[Create and Configure Endpoints]
 * xref:partner-manager-identifiers[Sender and Receiver Identifiers]
-* xref:Certificates.adoc[View the certificate]
+* xref:Certificates.adoc[Certificate Settings]
 
 | Source message
 a|
@@ -48,7 +48,7 @@ a|
 
 | Map
 | View the associated DataWeave map or import another one.
-|xref:partner-manager-maps[Import a new DataWeave map]
+|xref:partner-manager-maps[Import a DataWeave map]
 
 | Target at <host>
 a| * Select a different target at host message type.
@@ -83,12 +83,12 @@ a| * Select a different source at host endpoint.
 * Select a different source at host message type.
 * Select different Reference IDs to use for outbound routing.
 a| * xref:create-endpoint.adoc[Create and Configure Endpoints]
-* xref:partner-manager-create-message-type[Create and Configure Message Types]
+* xref:partner-manager-create-message-type.adoc[Create and Configure Message Types]
 * xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
 
 | Map
 | View the associated DataWeave map or import another one.
-| xref:partner-manager-maps[Import a new DataWeave map].
+| xref:partner-manager-maps.adoc[Import a DataWeave map]
 
 | Message type
 a| * Select a different send to partners message type.
@@ -97,11 +97,14 @@ a| * Select a different send to partners message type.
 * Select different identifiers for the host and partner.
 *Vijay, is this definition correct?*
 a| * xref:partner-manager-create-message-type[Create and Configure Message Types]
+* xref:edi-ack-reconciliation.adoc[EDI Acknowledgment Reconciliation]
 * xref:partner-manager-identifiers[Sender and Receiver Identifiers]
 
 |Send to <partner>
-| Select a different send to partner endpoint.
-|xref:create-endpoint.adoc[Create and Configure Endpoints]
+a| * Select a different send to partner endpoint.
+* (AS2 endpoint) View the AS2  associated with the endpoint.
+a| * xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:Certificates.adoc[Certificate Settings]
 |===
 +
 . Verify that any modified sections of the flow show a green checkmark next to them and then click *Deploy* to deploy the configurations to Mule.
