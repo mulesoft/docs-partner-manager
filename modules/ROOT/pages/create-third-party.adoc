@@ -36,7 +36,7 @@ Add the following settings for the new 3rd party connection, either now or later
 
 [%header%autowidth.spread]
 |===
-|Settings |To access this setting... a|Additional Information
+|Settings |To access this setting a|Additional Information
 |Information about the connection, such as the address, website, and contact details for the 3rd party company.
 | Click *Edit* in the *About* section.
 |

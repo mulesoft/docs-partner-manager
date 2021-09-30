@@ -108,7 +108,7 @@ By default, Partner Manager uses the X12 send or EDIFACT send settings configure
 To apply custom validation settings and delimiters to the outbound message flow, follow these steps:
 
 . In the *EDIFACT Settings* section, select *Custom X12 settings* or *Custom EDIFACT settings* and provide custom configuration values.
-. In the *<message format> Settings* section...
+. In the *<message format> Settings* section
 
 [[send-to-partner-endpoint]]
 === Configure the Send To Partner Endpoint

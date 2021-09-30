@@ -34,7 +34,7 @@ Partner Manager supports the AS2, FTP and SFTP formats for the receiving endpoin
 
 To configure the receiving endpoint:
 
-. In the message flow, expand the *Receiving endpoint...* section and click *Select*.
+. In the message flow, expand the *Receiving endpoint* section and click *Select*.
 . In the *Select an endpoint: Receive from <partner>* window, do either of the following:
 * Select an existing receiving endpoint and click *Select*.
 * Click *New* to create a new receiving endpoint, as described in <<xref:create-endpoint.adoc,Create and Configure Endpoints>>.
