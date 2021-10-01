@@ -1,6 +1,6 @@
 = Create and Configure Message Types
 
-Message types define the schematic structure of the transactions received or sent by Partner Manager.
+Message types define the structure of the transactions received or sent by Anypoint Partner Manager.
 
 A message type in Partner Manager can be used in one of the following ways:
 
@@ -9,9 +9,9 @@ A message type in Partner Manager can be used in one of the following ways:
 * Source at host
 * Send to partners
 
-Message types are always managed in the host page, regardless of whether they are used for a single partner or for multiple trading partners. Additionally, message types are reusable across message flows for different trading partners.
+Message types are always managed in the host page, regardless of whether they are used for a single partner or for multiple trading partners. Additionally, message types are reusable across message flows for different partners.
 
-You can create message types from the host page or from the Message Flow wizard. When you create message types during message flow configuration, Partner Manager automatically designates the usage for the message type.
+You can create message types from the host page or from the Message Flow wizard.
 
 [[create-message-type]]
 == Create a Message Type
@@ -24,14 +24,14 @@ You can create message types from the host page or from the Message Flow wizard.
 * <<source-at-host,Source at host>>
 * <<receive-and-send-to-partners,Send to partners>>
 +
-If you create a message type from the message flow, Partner Manager automatically determines the *Usage* value, which is automatically assigned to the host or trading partner from which the message type was created.
+If you create a message type from a message flow, Partner Manager automatically determines the *Usage* value, which is automatically assigned to the host or trading partner from which the message type was created.
 . Click *Save*. +
 The message type appears in the *Message types* section on the host page .
 
 [[receive-and-send-to-partners]]
 == Receive From and Send To Partners
 
-Inbound and outbound transactions between your organization and your trading partners typically follow EDI, JSON, or XML standards.
+Inbound and outbound transactions between your organization and your trading partners typically follow JSON, EDIFACT, X12, or XML standards.
 
 === EDIFACT
 
@@ -57,6 +57,20 @@ When using the customized EDI schema, you can assign a custom name to the messag
 |None| Yes
 |===
 
+=== JSON or XML Message Type
+
+Use the following settings to define JSON or XML as the protocol for the receive from partners or send to partners message type:
+
+[%header%autowidth.spread]
+|===
+|Setting |Description |Default | Required
+|Format | The format of the message. Allowed values are `JSON` or `XML`. | |Yes
+|Schema | The imported JSON or XSD schema file for the message type. | |Yes
+|Message type identifier | (Receive from Partners) The message identifier value used in the dynamic message routing of inbound B2B transactions. Partner Manager automatically generates a message type identifier from the schema file name. You can modify this value. | |Yes
+|Reference identifiers and business key mappings | (Receive from Partners)
+The uploaded DataWeave script with mapping to extract the reference identifiers and business key mappings from the payload received from the backend application for dynamic routing into the appropriate message flow. | |Yes
+|===
+
 === X12 Message Type
 
 Use the following settings to define X12 as the protocol for the receive from partners or send to partners message type:
@@ -80,21 +94,6 @@ When using the customized EDI schema, you can assign a custom name to the messag
 |===
 
 You can find an https://www.mulesoft.com/exchange/works.integration/b2b-x12-custom-schema-example[example] of how to customize EDI schema in Anypoint Exchange.
-
-=== JSON or XML Message Type
-
-Use the following settings to define JSON or XML as the protocol for the receive from partners or send to partners message type:
-
-[%header%autowidth.spread]
-|===
-|Setting |Description |Default | Required
-|Format | The format of the message. Allowed values are `JSON` or `XML`. | |Yes
-|Schema | The imported JSON or XSD schema file for the message type. | |Yes
-|Message type identifier |The message identifier value used in the dynamic message routing of inbound B2B transactions. Partner Manager automatically generates a message type identifier from the schema file name. You can modify this value. | |Yes
-
-|Reference identifiers and business key mappings |
-The uploaded DataWeave script with mapping to extract the reference identifiers and business key mappings from the payload received from the backend application for dynamic routing into the appropriate message flow. | |Yes
-|===
 
 [[target-at-host]]
 == Target at Host

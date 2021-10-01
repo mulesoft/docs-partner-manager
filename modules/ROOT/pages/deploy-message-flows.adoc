@@ -1,6 +1,6 @@
 = Deploy and Test a Message Flow
 
-Partner Manager dynamically validates the message flow configuration elements as you complete them and displays a green checkmark next to each of the validated elements.
+Anypoint Partner Manager dynamically validates the message flow configuration elements as you complete them and displays a green checkmark next to each of the validated elements.
 
 After Partner Manager validates the message flow configuration elements, you can deploy and test the message flow. It is best to deploy the message flow in a sandbox environment. After you verify that the message flow is successful, you can undeploy it from the sandbox and redeploy it to your production environment.
 
@@ -23,7 +23,7 @@ After you deploy the message flow, send test messages to verify that:
 * The DataWeave map works.
 * Your backend applications receive the transformed messages.
 
-Test your message flow in your Anypoint Partner Manager sandbox environment by sending a test file to the receiving endpoint:
+Test your message flow in your Partner Manager sandbox environment by sending a test file to the receiving endpoint:
 
 . In the navigation menu, select *Activity* and select the transmission to test.
 . Scan for an exclamation point (!) in any of the boxes next to the displayed flow stages.

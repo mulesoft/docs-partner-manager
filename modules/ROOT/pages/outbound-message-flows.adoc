@@ -1,6 +1,6 @@
 == Outbound Message Flows
 
-An outbound message flow receives application messages from the backend,  transforms the messages to the X12 EDI or EDIFACT EDI formats, and then forwards the messages to your partners.
+An outbound message flow receives application messages from the backend,  transforms the messages to the X12 or EDIFACT formats, and then forwards the messages to your partners.
 
 The following diagram shows the components of an outbound message flow:
 
@@ -19,7 +19,7 @@ image::pm-outbound-message-flow.png[Outbound message flow]
 * JSON
 * XML
 
-|Transform |DataWeave map used to transform the JSON or XML formats to EDIFACT EDIT or X12 EDI a| N/A
+|Transform |DataWeave map used to transform the JSON or XML formats to EDIFACT or X12 a| N/A
 
 |Target message type |
 Message type to which to translate the

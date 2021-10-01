@@ -11,7 +11,7 @@ Source endpoint in an outbound message flow that receives application JSON and X
 
 A host, partner, and 3rd party connection can own FTP receive endpoints.
 
-Create FTP receive endpoints by configuring these settings on the Host or Partner pages:
+Create FTP receive endpoints by configuring these settings on the Host or Partner pages. You can also create these endpoints when you configure an outbound message flow.
 
 [%header%autowidth.spread]
 |===

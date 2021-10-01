@@ -12,7 +12,7 @@ Target endpoint in an inbound message flow to which translated application JSON 
 
 A host, partner, or 3rd party connection can own FTP send endpoints.
 
-Create SFTP send endpoints by configuring these settings on the host or Partner page:
+Create SFTP send endpoints by configuring these settings on the host or partner page. You can also create these endpoints when you configure an outbound message flow.
 
 [%header%autowidth.spread]
 |===

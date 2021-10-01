@@ -18,7 +18,7 @@ a|
 | FTP or SFTP
 a|
 * If configured to support the JSON or XML message format, the filename begins with `{message-type-identifier}_`.
-* If configured to support EDIFACT or X12, the filename can be anything, and routing happens automatically based on the EDI identifiers and message type.
+* If configured to support EDIFACT or X12, the file can have any name because routing happens automatically based on the EDI identifiers and message type.
 |===
 
 == See Also

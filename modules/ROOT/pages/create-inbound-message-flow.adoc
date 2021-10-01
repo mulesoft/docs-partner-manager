@@ -4,7 +4,7 @@
 Create an inbound message flow to receive
 messages from a partner, including messages that go through 3rd party connections. When you create an inbound message flow, you can validate and transform the inbound messages and then send them to your backend systems.
 
-Partner Manager routes inbound messages based on matching identifiers configured for the partner.
+Anypoint Partner Manager routes inbound messages based on matching identifiers configured for the partner.
 
 === Before You Begin
 
@@ -12,7 +12,7 @@ Before you create your first inbound message flow (inbound or outbound), you mus
 
 === Steps
 
-. From the Anypoint Partner Manager navigation menu, select *Message Flows*.
+. From the Partner Manager navigation menu, select *Message Flows*.
 . Click *New message flow > Receive from partner*.
 . Either select an existing partner from the list or select *New* to create a new partner, as described in xref:create-partner.adoc#[Create a partner].
 +
