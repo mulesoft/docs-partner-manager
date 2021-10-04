@@ -9,7 +9,7 @@ image::pm-inbound-message-flow.png[Inbound message flow]
 |===
 |Setting |Description |Supported Formats or Protocols
 
-|Receiving endpoint | Endpoint where the host receives transmissions from the trading partner a|
+|Receiving endpoint | Endpoint at which a host receives transmissions from a trading partner a|
 * AS2
 * FTP
 * SFTP

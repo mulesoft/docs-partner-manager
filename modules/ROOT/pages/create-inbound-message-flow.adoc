@@ -7,7 +7,13 @@ Anypoint Partner Manager routes inbound messages based on matching identifiers c
 
 Before you create your first message flow, configure your xref:setup-payload-storage-API.adoc[payload storage API].
 
+<<<<<<< HEAD
 To create an inbound message flow:
+=======
+Before you create your first message flow (inbound or outbound), configure your xref:setup-payload-storage-API.adoc[payload storage API].
+
+=== Steps
+>>>>>>> 1a8556cdc0e4368f3c23776903aa396a832a8008
 
 . From the Partner Manager navigation menu, select *Message Flows*.
 . Click *New message flow > Receive from partner*.
@@ -27,7 +33,11 @@ A new message flow is created.
 
 The receiving endpoint in an inbound message flow receives the messages that your partners send, either directly or via 3rd party connections. To configure a receiving endpoint, you can either select an existing endpoint owned by the host, partner, or 3rd party connection, or you can create a new endpoint.
 
+<<<<<<< HEAD
 Partner Manager supports the AS2, FTP, HTTP, HTTPS, and SFTP formats for the receiving endpoint in an inbound message flow.
+=======
+Partner Manager supports the AS2, FTP, and SFTP formats for the receiving endpoint in an inbound message flow.
+>>>>>>> 1a8556cdc0e4368f3c23776903aa396a832a8008
 
 To configure the receiving endpoint:
 
@@ -44,7 +54,11 @@ If the protocol of the receiving endpoint is AS2, perform these additional steps
 
 . Select the AS2 sender from the dropdown menu and then select either of the following:
 * The partner's name, to enable your organization to receive the AS2 messages directly from the partner for whom the message flow is created
+<<<<<<< HEAD
 * The name of a 3rd party connection, to enable your organization to receive the partner's AS2 messages via a 3rd party connection, such as a VAN or 3PL
+=======
+* The name of a 3rd party connection, to enable your organization to receive the partner's AS2 messages via a 3rd party connection, such as a VAN or 3PL.
+>>>>>>> 1a8556cdc0e4368f3c23776903aa396a832a8008
 +
 The AS2 identifier and certificate of the selected 3rd party connection are used for validating the AS2 messages.
 +
@@ -79,12 +93,12 @@ The acknowledgment is added to the message flow.
 [[import-map]]
 == Import the Translation Map
 
-A translation map in an inbound message flow transforms your inbound messages from the EDIFACT or X12 format to your organization's enterprise application format, such as JSON and XML. Create a translation map by using DataWeave. For more information, see xref:partner-manager-maps.adoc[EDI Translation Maps].
+A translation map in an inbound message flow that transforms your inbound messages from the EDIFACT or X12 format to your organization's enterprise application format, such as JSON and XML. Create a translation map by using DataWeave. For more information, see xref:partner-manager-maps.adoc[EDI Translation Maps].
 
 To import the translation map:
 
 . In the message flow, expand the *Map* section.
-. Click *Import < Choose file*.
+. Click *Import > Choose file*.
 . Navigate to the DataWeave map you want to use and click *Open*.
 . Click *Upload mapping*.
 +
@@ -106,7 +120,11 @@ To configure the target message type:
 [[target-endpoint]]
 == Configure the Target Endpoint
 
+<<<<<<< HEAD
 The target endpoint in an inbound message flow receives the transformed messages on the backend systems. Partner Manager supports the FTP, HTTP, HTTPS, and SFTP formats for the target endpoint in an inbound message flow.
+=======
+The target endpoint in an inbound message flow that receives the translated messages on the backend systems. Partner Manager supports the FTP, HTTP, HTTPS, and SFTP formats for the target endpoint.
+>>>>>>> 1a8556cdc0e4368f3c23776903aa396a832a8008
 
 To configure the target endpoint:
 
