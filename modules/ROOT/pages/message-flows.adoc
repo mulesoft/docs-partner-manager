@@ -22,5 +22,5 @@ For more information, see xref:outbound-message-flows.adoc[Outbound Message Flow
 
 == See Also
 
-* xref:create-inbound-message-flow.adoc[Create an Inbound Message Flow]
-* xref:create-outbound-message-flow.adoc[Create an Outbound Message Flow]
+* xref:create-inbound-message-flow.adoc[Create Inbound Message Flows]
+* xref:create-outbound-message-flow.adoc[Create Outbound Message Flows]

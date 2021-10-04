@@ -1,4 +1,4 @@
-== UnDeploy Inbound Message Flows
+== Undeploy Inbound Message Flows
 
 Undeploying a message flow prevents future messages from being processed and enables you to recover resources that are consumed by a message flow that you no longer need.
 
@@ -25,5 +25,5 @@ Partner Manager checks to see if any of the applications deployed to Mule are or
 == See Also
 
 * xref:deploy-message-flows.adoc[Deploy Inbound Message Flows]
-* xref:create-inbound-message-flow.adoc[Create an Inbound Message Flow]
-* xref:create-outbound-message-flow.adoc[Create an Outbound Message Flow]
+* xref:create-inbound-message-flow.adoc[Create Inbound Message Flows]
+* xref:create-outbound-message-flow.adoc[Create Outbound Message Flows]

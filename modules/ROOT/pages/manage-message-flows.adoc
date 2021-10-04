@@ -1,4 +1,4 @@
-= Modify a Message Flow's Settings
+= Modify Message Flow Settings
 
 Active message flows between you and your partners don't require much maintenance. However, you might need to:
 
