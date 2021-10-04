@@ -25,4 +25,4 @@ a|
 
 * xref:inbound-message-flows.adoc[Inbound Message Flows]
 * xref:create-inbound-message-flow.adoc[Create Inbound Message Fllows]
-* xref:activity-tracking.adoc[Activity Tracking]
+* xref:activity-tracking.adoc[Track Transmission Activity]
