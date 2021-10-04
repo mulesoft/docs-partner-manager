@@ -12,14 +12,17 @@ When messages are received by the endpoint, Partner Manager routes the payload t
 ** Relative path for HTTP or HTTPS endpoints
 ** Filename for SFTP endpoints, which should follow this convention:
 +
-`<message-type>_<endpoint-information>.<file-type>`. For example, if your message type ID is ar-invoice, then the file name is `ar-invoice_20210217_1055_000.json`
+`<message-type>_<endpoint-information>.<file-type>`.
++
+For example, if your message type ID is ar-invoice, then the file name is `ar-invoice_20210217_1055_000.json`
+
 +
 * Validates the payload against the schema supplied during the message type definition.
 * Uses the supplied DataWeave map to obtain the partner reference ID, optional host reference IDs, and the business key
 +
 The partner reference ID and host reference ID specify the message flow through which the transaction is processed.
 
-image::outbound-message-routing.png[Outbound message routing process]
+image::pm-outbound-message-routing.png[Outbound message routing process]
 
 == See Also
 

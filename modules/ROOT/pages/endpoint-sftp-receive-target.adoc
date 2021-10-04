@@ -64,6 +64,9 @@ Mule performs two size checks by waiting the amount of time specified in the `Si
 
 To disable this feature, specify a negative number or omit the value.
 
+| Supported Format Types
+|Indicates whether the endpoint supports EDI messages (EDIFACT, X12) or non-EDI messages (JSON, XML).
+
 | Yes
 
 | Archival Path

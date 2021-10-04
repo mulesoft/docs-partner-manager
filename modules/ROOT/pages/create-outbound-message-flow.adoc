@@ -101,9 +101,9 @@ To configure acknowledgement settings for the outbound messages that use this me
 * Click *New* to create a new endpoint, as described in <<xref:create-endpoint.adoc,Create and Configure Endpoints>>.
 . In the *Mark overdue after* field, accept the default value of *24 Hours* or configure when you want the outbound transaction to be marked as overdue for an acknowledgement, according to the SLAs you have with your trading partner.
 
-==== Optionally Apply Custom Validation Settings
+==== Optionally Apply Custom Validation Settings to EDIFACT and X12 Endpoints
 
-By default, Partner Manager uses the X12 send or EDIFACT send settings configured for the partner or 3rd party connection for message validation, delimiters, and character encoding.
+By default, Partner Manager uses the EDIFACT or X12 send settings configured for the partner or 3rd party connection for message validation, delimiters, and character encoding.
 
 To apply custom validation settings and delimiters to the outbound message flow, follow these steps:
 
@@ -123,7 +123,7 @@ To create a send to partner endpoint:
 . Do either of the following:
 * Select an existing send to endpoint and click *Select*.
 +
-You can select any previously configured Send to partner endpoints owned by the host, the trading partner for whom the message flow is configured, or a 3rd party connection.
+You can select any previously configured Send to partner endpoints owned by the host, the partner for whom the message flow is configured, or a 3rd party connection.
 +
 * Click *New* to create a new send to endpoint, as described in <<xref:create-endpoint.adoc,Create and Configure Endpoints>>.
 
