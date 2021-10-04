@@ -4,11 +4,11 @@ SFTP send endpoint settings configure where to send messages in the following co
 
 * Send to partners
 +
-Target endpoint in an outbound message flow to which translated B2B EDI messages are sent to partners either directly or via a 3rd party connection
+Target endpoint in an outbound message flow to which transformed B2B EDI messages are sent to partners either directly or via a 3rd party connection
 +
 * Target at host
 +
-Target endpoint in an inbound message flow to which translated application JSON and XML messages are sent to the backend systems
+Target endpoint in an inbound message flow to which transformed application JSON and XML messages are sent to the backend systems
 
 A host, partner, or 3rd party connection can own FTP send endpoints.
 
@@ -52,7 +52,7 @@ Create SFTP send endpoints by configuring these settings on the host or partner 
 
 |Target Path
 |Path on your SFTP server to EDI files that were generated from outbound message flows. This is also the path on your SFTP server for storing
-translated JSON and XML files generated from inbound message flows.
+transformed JSON and XML files generated from inbound message flows.
 |Yes
 
 |Filename pattern

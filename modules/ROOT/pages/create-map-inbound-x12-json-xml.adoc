@@ -58,7 +58,7 @@ Follow these steps to test the translation map locally in Anypoint Studio:
 
 . In *Package Explorer*, right-click on the template project, and select *Run > Run as Mule application*.
 . Use a REST client to post an EDI message payload to the URL `+http://localhost:8081/x12/in+`. +
-The application returns the translated JSON or XML.
+The application returns the transformed JSON or XML.
 . After you verify that the map works correctly, copy the DataWeave map from `src/main/resources/x12/IN-X12-version-transaction-to-applicationmessage.dwl` and rename it to something meaningful, such as `IN-X12-4010-850-to-SAP-purchaseorder.dwl`.
 
 Later, when you Create and Configure Inbound Message Flows, you can import the `dwl` file to the *Map* section of inbound message flow.

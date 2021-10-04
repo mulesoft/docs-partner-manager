@@ -1,8 +1,7 @@
 = Create Inbound Message Flows
 :page-aliases: configure-message-flows.adoc
 
-Create inbound message flows to receive
-messages from partners, including messages that go through 3rd party connections. When you create an inbound message flow, you can validate and transform the inbound messages and then send them to your backend systems.
+Create inbound message flows to receive messages from partners, including messages that go through 3rd party connections. When you create an inbound message flow, you can validate and transform the inbound messages and then send them to your backend systems.
 
 Anypoint Partner Manager routes inbound messages based on matching identifiers configured for the partner.
 
@@ -26,7 +25,7 @@ A new message flow is created.
 [[receiving-endpoint]]
 == Configure the Receiving Endpoint
 
-The receiving (source) endpoint in an inbound message flow receives the messages that your partners send, either directly or via 3rd party connections. To configure a receiving endpoint, you can either select an existing endpoint owned by the host, partner, or 3rd party connection, or you can create a new endpoint.
+The receiving endpoint in an inbound message flow receives the messages that your partners send, either directly or via 3rd party connections. To configure a receiving endpoint, you can either select an existing endpoint owned by the host, partner, or 3rd party connection, or you can create a new endpoint.
 
 Partner Manager supports the AS2, FTP, HTTP, HTTPS, and SFTP formats for the receiving endpoint in an inbound message flow.
 
@@ -39,13 +38,13 @@ To configure the receiving endpoint:
 +
 If you select an endpoint owned by a 3rd party connection, the messages go through that connection.
 +
-Once you select an endpoint, it is added to the message flow.
+After you select an endpoint, it is added to the message flow.
 
 If the protocol of the receiving endpoint is AS2, perform these additional steps:
 
 . Select the AS2 sender from the dropdown menu and then select either of the following:
-* The partner's name, to enable your organization to receive the AS2 messages directly from the partner for whom the message flow is created.
-* The name of a 3rd party connection, to enable your organization to receive the partner's AS2 messages via a 3rd party connection, such as a VAN or 3PL.
+* The partner's name, to enable your organization to receive the AS2 messages directly from the partner for whom the message flow is created
+* The name of a 3rd party connection, to enable your organization to receive the partner's AS2 messages via a 3rd party connection, such as a VAN or 3PL
 +
 The AS2 identifier and certificate of the selected 3rd party connection are used for validating the AS2 messages.
 +
@@ -107,7 +106,7 @@ To configure the target message type:
 [[target-endpoint]]
 == Configure the Target Endpoint
 
-The target endpoint in an inbound message flow receives the translated messages on the backend systems. Partner Manager supports the FTP, HTTP, HTTPS, and SFTP formats for the target endpoint in an inbound message flow.
+The target endpoint in an inbound message flow receives the transformed messages on the backend systems. Partner Manager supports the FTP, HTTP, HTTPS, and SFTP formats for the target endpoint in an inbound message flow.
 
 To configure the target endpoint:
 
@@ -118,7 +117,7 @@ To configure the target endpoint:
 * Click *New* to create a new endpoint, as described in <<xref:create-endpoint.adoc,Create and Configure Endpoints>>
 
 +
-Once you select an endpoint, it is added to the message flow.
+After you select an endpoint, it is added to the message flow.
 
 [[verify-message-flow]]
 == Verify That the Message Flow Is Complete

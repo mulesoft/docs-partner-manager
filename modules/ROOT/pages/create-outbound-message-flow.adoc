@@ -111,7 +111,7 @@ To apply custom validation settings and delimiters to the outbound message flow,
 [[send-to-partner-endpoint]]
 == Configure the Send To Partner Endpoint
 
-The send to partner endpoint is the target endpoint to which translated messages are sent to partners, either directly or via 3rd party connections. Use a 3rd party-owned send to partner endpoint for partners that use a 3rd party connection.
+The send to partner endpoint is the target endpoint to which transformed messages are sent to partners, either directly or via 3rd party connections. Use a 3rd party-owned send to partner endpoint for partners that use a 3rd party connection.
 
 Partner Manager supports the EDIFACT and X12 protocols for send to partner endpoints.
 

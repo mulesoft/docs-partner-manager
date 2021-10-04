@@ -22,7 +22,7 @@ image::pm-outbound-message-flow.png[Outbound message flow]
 |Transform |DataWeave map used to transform the JSON or XML formats to EDIFACT or X12 a| N/A
 
 |Target message type |
-Message type to which to translate the
+Message type to which to transform the
 a|
 * EDIFACT
 * X12
@@ -30,7 +30,7 @@ a|
 * XML
 
 |Target endpoint |
-Partner endpoint to which to send the translated EDI message
+Partner endpoint to which to send the transformed EDI message
  a|
 * AS2
 * FTP

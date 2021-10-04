@@ -10,16 +10,16 @@ You can create message flows in one of the following contexts:
 
 * <<inbound-message-flow,Inbound>>
 +
-An inbound message flow receives EDI payloads from your trading partners, translates them into your internal application message format, and sends the translated messages to your backend systems.
+An inbound message flow receives EDI payloads from your trading partners, transforms them into your internal application message format, and sends the transformed messages to your backend systems.
 
 * <<outbound-message-flow,Outbound>>[Outbound message flow]
 +
-An outbound message flow receives application messages from your backend systems, translates the message to EDI, and sends the EDI transmissions to your trading partner.
+An outbound message flow receives application messages from your backend systems, transforms the message to EDI, and sends the EDI transmissions to your trading partner.
 
 [[inbound-message-flow]]
 == Inbound Message Flows
 
-Create an inbound message flow to receive and translate application messages from your partner and forward them to your backend systems:
+Create an inbound message flow to receive and transform application messages from your partner and forward them to your backend systems:
 
 image::pm-inbound-message-flow.png[Inbound message flow]
 
@@ -45,7 +45,7 @@ image::pm-inbound-message-flow.png[Inbound message flow]
 * JSON
 * XML
 
-|Target endpoint | The endpoint to which the translated JSON or XML payload needs to be sent. This is typically a process API.
+|Target endpoint | The endpoint to which the transformed JSON or XML payload needs to be sent. This is typically a process API.
  a|
 * FTP
 * HTTP
@@ -56,7 +56,7 @@ image::pm-inbound-message-flow.png[Inbound message flow]
 [[outbound-message-flow]]
 == Outbound Message Flows
 
-Create an outbound message flow to receive and transform application messages from your backend systems and then forward the translated EDI messages to your partners.
+Create an outbound message flow to receive and transform application messages from your backend systems and then forward the transformed EDI messages to your partners.
 
 The following diagram shows the configurations of an outbound message flow. The diagram also shows how Partner Manager’s message processing framework orchestrates the end-to-end routing and the transformation of your outbound business transactions from your organization’s backend systems to your trading partners:
 
@@ -78,7 +78,7 @@ image::pm-outbound-message-flow.png[Outbound message flow]
 |Transform |The DataWeave map for JSON or XML to EDI translation. a| N/A
 
 |Target message type |
-The message type to which the input payload needs to be translated.
+The message type to which the input payload needs to be transformed.
 a|
 * EDIFACT
 * JSON
@@ -86,7 +86,7 @@ a|
 * XML
 
 |Target endpoint |
-The trading partner endpoint to which the translated EDI payload needs to be sent.
+The trading partner endpoint to which the transformed EDI payload needs to be sent.
  a|
 * AS2
 * FTP

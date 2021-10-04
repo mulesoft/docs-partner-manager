@@ -98,7 +98,7 @@ You can find an https://www.mulesoft.com/exchange/works.integration/b2b-x12-cust
 [[target-at-host]]
 == Target at Host
 
-The target at host application message structure (JSON or XML) defines the way in which inbound EDI transactions are translated and sent to your backend applications.
+The target at host application message structure (JSON or XML) defines the way in which inbound EDI transactions are transformed and sent to your backend applications.
 
 Use the following settings to define JSON or XML settings for inbound EDI transactions:
 
@@ -116,7 +116,7 @@ Use the following settings to define JSON or XML settings for inbound EDI transa
 [[source-at-host]]
 == Source at Host
 
-The source at host application message structure (JSON or XML) defines the way in which your backend applications translate outbound EDI transactions and send them to your partners.
+The source at host application message structure (JSON or XML) defines the way in which your backend applications transform outbound EDI transactions and send them to your partners.
 
 Partner Manager automatically generates a message type identifier from the schema file name. This value can be modified.
 The message identifier value used in the dynamic message routing for outbound B2B transactions.

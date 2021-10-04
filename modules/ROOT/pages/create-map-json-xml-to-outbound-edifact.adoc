@@ -71,7 +71,7 @@ Follow these steps to test the map locally in Anypoint Studio:
 . In *Package Explorer*, right-click on the project, and click *Run > Run as Mule application*.
 . Use a REST client to post a JSON or an XML payload to `+http://localhost:8081/edifact/outbound+`
 +
-The application returns the translated EDIFACT transaction.
+The application returns the transformed EDIFACT transaction.
 +
 . After you verify that the map works correctly, copy the DataWeave (dwl) file, and import it to the Map section of your outbound EDIFACT message flow.
 
