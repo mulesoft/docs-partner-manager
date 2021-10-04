@@ -78,4 +78,4 @@ The application returns the translated application message (JSON or XML) accordi
 
 == See Also
 
-* xref:configure-message-flows.adoc[Create and Configure an Inbound Message Flow]
+* xref:configure-message-flows.adoc[Create and Configure Inbound Message Flows]

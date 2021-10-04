@@ -61,8 +61,8 @@ Follow these steps to test the translation map locally in Anypoint Studio:
 The application returns the translated JSON or XML.
 . After you verify that the map works correctly, copy the DataWeave map from `src/main/resources/x12/IN-X12-version-transaction-to-applicationmessage.dwl` and rename it to something meaningful, such as `IN-X12-4010-850-to-SAP-purchaseorder.dwl`.
 
-Later, when you create and configure an inbound message flow, you can import the `dwl` file to the *Map* section of inbound message flow.
+Later, when you Create and Configure Inbound Message Flows, you can import the `dwl` file to the *Map* section of inbound message flow.
 
 == See Also
 
-* xref:configure-message-flows.adoc[Create and Configure an Inbound Message Flow]
+* xref:configure-message-flows.adoc[Create and Configure Inbound Message Flows]

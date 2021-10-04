@@ -181,5 +181,5 @@ Generated output:
 
 == See Also
 
-* xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow]
-* xref:configure-message-flows.adoc[Create and Configure an Inbound Message Flow]
+* xref:create-outbound-message-flow.adoc[Create and Configure Outbound Message Flows]
+* xref:configure-message-flows.adoc[Create and Configure Inbound Message Flows]

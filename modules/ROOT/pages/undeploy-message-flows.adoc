@@ -1,4 +1,4 @@
-== Undeploy a Message Flow
+== UnDeploy Inbound Message Flows
 
 Undeploying a message flow prevents future messages from being processed and enables you to recover resources that are consumed by a message flow that you no longer need.
 
@@ -9,7 +9,7 @@ During the undeployment process, do not log out of Anypoint Partner Manager or c
 
 === Prerequisites
 
-Before you undeploy a message flow, ensure that your on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager called `B2BserverGroup` are active and running.
+Before you unDeploy Inbound Message Flows, ensure that your on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager called `B2BserverGroup` are active and running.
 
 *Vijay, is ensuring that B2BserverGroup in Runtime Manager something just for on-premises instances?*
 
@@ -24,6 +24,6 @@ Partner Manager checks to see if any of the applications deployed to Mule are or
 
 == See Also
 
-* xref:deploy-message-flows.adoc[Deploy a Message Flow]
+* xref:deploy-message-flows.adoc[Deploy Inbound Message Flows]
 * xref:create-inbound-message-flow.adoc[Create an Inbound Message Flow]
 * xref:create-outbound-message-flow.adoc[Create an Outbound Message Flow]

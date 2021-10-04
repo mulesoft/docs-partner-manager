@@ -4,7 +4,7 @@ Active message flows between you and your partners don't require much maintenanc
 
 * Change flow identifiers, endpoints, or maps.
 * Switch from a sandbox environment and reclaim production-environment resources.
-* Delete the flow when it becomes inactive, as described in xref:delete-message-flows.adoc[Delete a Message Flow].
+* Delete the flow when it becomes inactive, as described in xref:delete-message-flows.adoc[Delete Message Flows].
 
 [IMPORTANT]
 Before making changes, carefully consider the impact on the message flow.
@@ -23,7 +23,7 @@ To modify the settings of an inbound message flow:
 
 | Receive from <partner>
 | Select different identifiers for the partner.
-*Vijay, is this definition correct?*
+*Vijay, do the identifiers apply to all protocols or just to EDIFACT and X12?*
 | xref:partner-manager-identiers.adoc[Partner Manager Identifiers]
 
 | Receiving endpoint <endpoint name>

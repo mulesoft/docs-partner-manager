@@ -110,7 +110,7 @@ a| When you select *Test* from the drop-down, sets UNB-11 to `1`, which indicate
 
 == See Also
 
-* xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow]
+* xref:create-outbound-message-flow.adoc[Create and Configure Outbound Message Flows]
 * xref:create-partner.adoc[Create a New Partner]
 * xref:modify-partner-settings.adoc[Modify a Partner's Settings]
 ////

@@ -16,6 +16,6 @@ After you create a 3rd party connection, you can select the endpoints and identi
 == See Also
 
 * xref:create-endpoint.adoc[Create and Configure Endpoints]
-* xref:create-inbound-message-flow.adoc[Create and Configure an Inbound Message Flow]
-* xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow]
+* xref:create-inbound-message-flow.adoc[Create and Configure Inbound Message Flows]
+* xref:create-outbound-message-flow.adoc[Create and Configure Outbound Message Flows]
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]

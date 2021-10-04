@@ -64,7 +64,7 @@ Parter Manager logs all  errors and reports them in the CONTRL acknowledgments.
 
 == See Also
 
-* xref:create-inbound-message-flow.adoc[Create and Configure an Inbound Message Flow]
+* xref:create-inbound-message-flow.adoc[Create and Configure Inbound Message Flows]
 * xref:create-partner.adoc[Create a New Partner]
 * xref:modify-partner-settings.adoc[Modify a Partner's Settings]
 ////
