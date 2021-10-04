@@ -11,7 +11,7 @@ To create an inbound message flow:
 
 . From the Partner Manager navigation menu, select *Message Flows*.
 . Click *New message flow > Receive from partner*.
-. Either select an existing partner from the list or select *New* to create a new partner, as described in xref:create-partner.adoc#[Create a partner].
+. Either select an existing partner from the list or select *New* to create a new partner, as described in xref:create-partner.adoc#[Create a Partner].
 +
 A new message flow is created.
 +
