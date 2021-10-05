@@ -1,6 +1,6 @@
 == Outbound Message Flows
 
-An outbound message flow receives application messages from the backend,  transforms the messages to the X12 or EDIFACT formats, and then forwards the messages to your partners.
+An outbound message flow receives application messages from the backend, transforms the messages to the X12 or EDIFACT formats, and then forwards the messages to your partners.
 
 The following diagram shows the components of an outbound message flow:
 

@@ -9,16 +9,13 @@ To create an outbound message flow:
 . From the Anypoint Partner Manager navigation menu, select *Message Flows*.
 . Click *New message flow > Send to partner*.
 . Either select an existing partner or select *New* to create a new partner, as described in xref:create-partner.adoc#[Create a partner].
-+
-A new message flow is created.
-+
-. <<source-at-host-endpoint,Configure the receiving endpoint>>.
-. <<source-message-type,Configure the source message type>>.
-. <<reference-ids,Configure reference IDs for the partner and host>>.
-. <<translation-map,Import the translation map>>.
-. <<send-to-partner-message-type,Configure the target message type>>.
-. <<send-to-partner-endpoint,Configure the target endpoint>>.
-. <<verify-message-flow,Verify that the message flow is complete>>.
+. Configure the receiving endpoint.
+. Configure the source message type.
+. Configure reference IDs for the partner and host.
+. Import the translation map.
+. Configure the target message type.
+. Configure the target endpoint.
+. Verify that the message flow is complete.
 
 [[source-at-host-endpoint]]
 == Configure the Source Endpoint
@@ -47,7 +44,7 @@ To create the source message type:
 [[reference-ids]]
 == Configure Reference IDs for the Partner and Host
 
-Partner Manager uses the partner reference ID and host reference ID to locate the appropriate message flow for routing outbound messages. For information about about how this routing process works, see xref:partner-manager-identifiers[Sender and Receiver Identifiers] and xref:outbound-message-routing.adoc[Outbound Message Routing].
+Partner Manager uses the partner reference ID and host reference ID to locate the appropriate message flow for routing outbound messages. For information about about how this routing process works, see xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers] and xref:outbound-message-routing.adoc[Outbound Message Routing].
 
 To configure a partner reference ID, either select *All available identifiers* or select a specific partner identifier.
 
@@ -79,7 +76,7 @@ To configure the target message type:
 . Expand the *Message type* section and click *Select*.
 . In the *Select message type* window, do either of the following:
 * Select an existing send to message type and click *Select*.
-* Click *New* to create a new send to message type, as described in xref:partner-manager-create-message-type,[Create and Configure Message Types].
+* Click *New* to create a new send to message type, as described in xref:partner-manager-create-message-type.adoc,[Create and Configure Message Types].
 . Click *Save*.
 +
 The message type and its validation settings are added to the message flow.
@@ -106,7 +103,9 @@ By default, Partner Manager uses the EDIFACT or X12 send settings configured for
 To apply custom validation settings and delimiters to the outbound message flow, follow these steps:
 
 . In the *EDIFACT Settings* section, select *Custom X12 settings* or *Custom EDIFACT settings* and provide custom configuration values.
-. In the *<message format> Settings* section
+. In the *<protocol> Identifiers* section, select the sender and receiver identifiers to use on the X12 ISA and GS segments or the EDIFACT UNB segments.
++
+These identifiers are configured in the host and partner profiles.
 
 [[send-to-partner-endpoint]]
 == Configure the Send To Partner Endpoint

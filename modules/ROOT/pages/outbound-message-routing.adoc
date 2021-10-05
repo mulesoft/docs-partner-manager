@@ -18,7 +18,7 @@ For example, if your message type ID is ar-invoice, then the file name is `ar-in
 
 +
 . Validates the payload against the schema supplied during the message type definition.
-. Uses the supplied DataWeave map to obtain the partner reference ID, optional host reference IDs, and the business key
+. Uses the supplied DataWeave map to obtain the partner reference ID, optional host reference IDs, and the business key.
 +
 The partner reference ID and host reference ID specify the message flow through which the transaction is processed.
 

@@ -12,15 +12,12 @@ To create an inbound message flow:
 . From the Partner Manager navigation menu, select *Message Flows*.
 . Click *New message flow > Receive from partner*.
 . Either select an existing partner from the list or select *New* to create a new partner, as described in xref:create-partner.adoc[Create a Partner].
-+
-A new message flow is created.
-+
-. <<receiving-endpoint,Configure the receiving endpoint>>.
-. <<source-message-type,Configure the source message type>>.
-. <<import-map,Import the translation map>>.
-. <<configure-target,Configure the target message type>>.
-. <<configure-target-endpoint,Configure the target endpoint>>.
-. <<verify-message-flow,Verify that the message flow is complete>>.
+. Configure the receiving endpoint.
+. Configure the source message type.
+. Import the translation map.
+. Configure the target message type.
+. Configure the target endpoint.
+. Verify that the message flow is complete.
 
 [[receiving-endpoint]]
 == Configure the Receiving Endpoint
