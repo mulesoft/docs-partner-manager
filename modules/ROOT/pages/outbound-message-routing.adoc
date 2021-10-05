@@ -17,8 +17,8 @@ When messages are received by the endpoint, Partner Manager routes the payload t
 For example, if your message type ID is ar-invoice, then the file name is `ar-invoice_20210217_1055_000.json`
 
 +
-* Validates the payload against the schema supplied during the message type definition.
-* Uses the supplied DataWeave map to obtain the partner reference ID, optional host reference IDs, and the business key
+. Validates the payload against the schema supplied during the message type definition.
+. Uses the supplied DataWeave map to obtain the partner reference ID, optional host reference IDs, and the business key
 +
 The partner reference ID and host reference ID specify the message flow through which the transaction is processed.
 
@@ -26,6 +26,6 @@ image::pm-outbound-message-routing.png[Outbound message routing process]
 
 == See Also
 
-* xref:deploy-message-flows.adoc[Deploy Message Flows]
-* xref:manage-message-flows.adoc[Manage Message Flows]
+* xref:deploy-message-flows.adoc[Deploy and Test Message Flows]
+* xref:manage-message-flows.adoc[Modify Message Flow Settings]
 * xref:activity-tracking.adoc[Track Transmission Activity]

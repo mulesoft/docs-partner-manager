@@ -39,6 +39,6 @@ image::pm-inbound-message-flow.png[Inbound message flow]
 == See Also
 
 * xref:create-inbound-message-flow.adoc[Create Inbound Message Flows]
-* xref:deploy-message-flows.adoc[Deploy Inbound Message Flows]
+* xref:deploy-message-flows.adoc[Deploy and Test Message Flows]
 * xref:manage-message-flows.adoc[Modify Message Flow Settings]
 * xref:inbound-message-routing.adoc[Inbound Message Routing]

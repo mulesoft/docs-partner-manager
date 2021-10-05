@@ -34,7 +34,7 @@ image::pm-high-level-arch.png[Partner Manager high-level architecture]
 
 |image:pm-arch-diagram-5.png[]
 |Send Endpoint Services
-|Services to deliver transformed inbound application messages to internal applications such as ERP, billing, Order Management via transport protocols like HTTP(S)/SFTP; or outbound B2B EDI payloads to your trading partners via AS2/HTTP(s)/SFTP
+|Services to deliver transformed inbound application messages to internal applications such as ERP, billing, Order Management via transport protocols like HTTP, HTTPS, or SFTP; or outbound B2B EDI payloads to your trading partners via AS2, HTTP, HTTPS, or SFTP
 
 |image:pm-arch-diagram-6.png[]
 |Payload Storage API

@@ -24,4 +24,4 @@ When your message flows are deployed to your hosted runtimes, your runtime appli
 
 == See Also
 
-* xref:deploy-message-flows.adoc[Deploy, Test, and Undeploy Message Flows]
+* xref:deploy-message-flows.adoc[Deploy and test Message Flows]

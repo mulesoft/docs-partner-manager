@@ -74,7 +74,7 @@ You can deploy an HTTP or HTTPS receive endpoint on a public port, on a private 
 
 === Deploy to CloudHub on a Public Port
 
-When an HTTP or HTTPS receive endpoint is deployed with the private port configuration enabled, the endpoint application is deployed on the public HTTPS port (`8082`), with the traffic routed through the xref:runtime-manager::dedicated-load-balancer-tutorial#shared-load-balancers [shared load balancer]. The value in the URL field is automatically generated when you Deploy Inbound Message Flows that uses this endpoint to CloudHub.
+When an HTTP or HTTPS receive endpoint is deployed with the private port configuration enabled, the endpoint application is deployed on the public HTTPS port (`8082`), with the traffic routed through the xref:runtime-manager::dedicated-load-balancer-tutorial#shared-load-balancers [shared load balancer]. The value in the URL field is automatically generated when you deploy a message flow that uses this endpoint to CloudHub.
 
 You can view this URL by selecting the receiving endpoint from your deployed message flow or by clicking the endpoint name from the endpoints list. You can share this URL with the partners that send HTTP or HTTPS messages to this endpoint.
 
@@ -102,7 +102,7 @@ image::URL-mapping-rules-http.png[URL mapping rules for HTTPS in the DLB setting
 Using the following values, depending on your environment:
 
 * The external HTTPS receive endpoint URL is `+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/+`.
-* Your backend applications send the application JSON/XML messages for your outbound message flows from `+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/{message-type}+`.
+* Your backend applications send the application JSON and XML messages for your outbound message flows from `+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/{message-type}+`.
 * If `enterprise-ob-po-ack` is the message type, your backend systems post the HTTPS requests to the URL
 `+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/enterprise-ob-po-ack+`.
 

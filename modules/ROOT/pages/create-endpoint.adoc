@@ -40,13 +40,13 @@ The configuration of Partner Manager endpoints depends on endpoint type and prot
 [%header%autowidth.spread]
 |===
 |Endpoint Type | Protocol | Can be owned by
-| Source at host | FTP, HTTP(S), SFTP | Host
-| Target at host | FTP, HTTP(S), SFTP | Host
+| Source at host | FTP, HTTP, HTTPS, SFTP | Host
+| Target at host | FTP, HTTP, HTTPS, SFTP | Host
 | Receive from partners | AS2 |Host
-|  | FTP, HTTP(S), SFTP | Host, partner, 3rd party connection
+|  | FTP, HTTP, HTTPS, SFTP | Host, partner, 3rd party connection
 | Send to partners| AS2
 | Partner, 3rd party connection
-|  | FTP, HTTP(S), SFTP | Host, partner, 3rd party connection
+|  | FTP, HTTP, HTTPS, SFTP | Host, partner, 3rd party connection
 |===
 
 == Endpoint Runtime Services
@@ -57,7 +57,7 @@ Partner Manager’s deployment orchestration service inspects the message flow a
 
 The number and type of endpoint services deployed to your runtime depends on the transport protocols used to exchange data with your trading partners and backend systems.
 
-Each unique AS2 and HTTP(S) receive endpoint configurations result in the deployment of their own runtime applications. You can view the Runtime application name corresponding to a given configuration in Partner Manager, from the endpoint detail page.
+Each unique AS2, HTTP, and HTTPS receive endpoint configurations result in the deployment of their own runtime applications. You can view the Runtime application name corresponding to a given configuration in Partner Manager, from the endpoint detail page.
 
 The endpoints for the transport protocols are always managed within a single generic endpoint service for the protocol and direction:
 
