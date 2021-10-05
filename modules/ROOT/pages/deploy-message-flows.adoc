@@ -4,11 +4,11 @@ Anypoint Partner Manager dynamically validates the message flow configuration el
 
 After Partner Manager validates the message flow configuration elements, you can deploy and test the message flow. It is best to deploy the message flow in a sandbox environment. After you verify that the message flow is successful, you can undeploy it from the sandbox and redeploy it to your production environment.
 
-== Deploy Inbound Message Flows
+== Deploy Message Flows
 
 To minimize the impact of the service interruption caused by deploying a message flow, perform message flow deployments outside of your regular business hours. This issue does not exist on CloudHub because CloudHub provides a zero-downtime update of the AS2 endpoint application. [*Vijay, is this applicable only for AS2 endpoints - send or receive?*]
 
-To Deploy Inbound Message Flows, click the *Deploy* button.
+To deploy a message flow, click the *Deploy* button.
 
 The message flow is deployed to Mule runtime engine, and you can do the following:
 
@@ -39,6 +39,6 @@ If you not sure about whether you should be able to view a payload, contact your
 
 == See Also
 
-* xref:undeploy-message-flows.adoc[UnDeploy Inbound Message Flows]
+* xref:undeploy-message-flows.adoc[Undeploy Message Flows]
 * xref:create-inbound-message-flow.adoc[Create Inbound Message Flows]
 * xref:create-outbound-message-flow.adoc[Create Outbound Message Flows]

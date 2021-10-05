@@ -11,7 +11,7 @@ To create an inbound message flow:
 
 . From the Partner Manager navigation menu, select *Message Flows*.
 . Click *New message flow > Receive from partner*.
-. Either select an existing partner from the list or select *New* to create a new partner, as described in xref:create-partner.adoc#[Create a Partner].
+. Either select an existing partner from the list or select *New* to create a new partner, as described in xref:create-partner.adoc[Create a Partner].
 +
 A new message flow is created.
 +
@@ -34,7 +34,7 @@ To configure the receiving endpoint:
 . In the message flow, expand the *Receiving endpoint* section and click *Select*.
 . In the *Select an endpoint: Receive from <partner>* window, do either of the following:
 * Select an existing receiving endpoint and click *Select*.
-* Click *New* to create a new receiving endpoint, as described in <<xref:create-endpoint.adoc,Create and Configure Endpoints>>.
+* Click *New* to create a new receiving endpoint, as described in xref:create-endpoint.adoc[Create and Configure Endpoints].
 +
 If you select an endpoint owned by a 3rd party connection, the messages go through that connection.
 +
@@ -60,7 +60,7 @@ To configure the source message type:
 . In the message flow, expand the *Source message* section and click *Select*.
 . In the *Select message type* window, do either of the following:
 * Select an existing message type and click *Select*.
-* Click *New* to create a new receive from partners type, as described in <<xref:partner-manager-create-message-type.adoc,Create and Configure Message Types>>.
+* Click *New* to create a new receive from partners type, as described in xref:partner-manager-create-message-type.adoc[Create and Configure Message Types].
 
 +
 The message type and its validation settings are added to the message flow.
@@ -71,7 +71,7 @@ If the source message type is X12 or EDIFACT and your partner expects your organ
 . Click *Select*.
 . In the *Select an endpoint: Send acknowledgement to <partner>* window, do either of the following:
 * Select the endpoint to receive the acknowledgment messages from your partner and click *Select*.
-* Click *New* to create a new send to endpoint, as described in <<xref:create-endpoint.adoc,Create and Configure Endpoints>>.
+* Click *New* to create a new send to endpoint, as described in xref:create-endpoint.adoc[Create and Configure Endpoints].
 
 +
 The acknowledgment is added to the message flow.
@@ -114,7 +114,7 @@ To configure the target endpoint:
 . In the *Target at <host>* section, expand the *Endpoint* section and click *Select*.
 . In the *Select an endpoint: Target to <host>* window, do either of the following:
 * Select an existing target at host endpoint and click *Select*.
-* Click *New* to create a new endpoint, as described in <<xref:create-endpoint.adoc,Create and Configure Endpoints>>
+* Click *New* to create a new endpoint, as described in xref:create-endpoint.adoc[Create and Configure Endpoints].
 
 +
 After you select an endpoint, it is added to the message flow.

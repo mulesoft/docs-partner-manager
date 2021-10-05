@@ -30,7 +30,7 @@ To configure the source endpoint:
 . In the message flow, expand the *Source at <host-name>* section and click *Select*.
 . In the *Select an endpoint: Source at <host-name>* window, do either of the following:
 * Select an existing source at host endpoint and click *Select*.
-* Click *New* to create a new source at host endpoint, as described in <<xref:create-endpoint.adoc,Create and Configure Endpoints>>.
+* Click *New* to create a new source at host endpoint, as described in xref:create-endpoint.adoc[Create and Configure Endpoints].
 
 [[source-message-type]]
 == Configure the Source Message Type
@@ -42,7 +42,7 @@ To create the source message type:
 . In the message flow, expand the *Source message type* section and click *Select*.
 . In the *Source message type* window, do either of the following:
 * Select an existing source message type and click *Select*.
-* Click *New* to create a new source message type, as described in <<xref:partner-manager-create-message-type,Create and Configure Message Types>>.
+* Click *New* to create a new source message type, as described in xref:partner-manager-create-message-type[Create and Configure Message Types].
 
 [[reference-ids]]
 == Configure Reference IDs for the Partner and Host
@@ -79,7 +79,7 @@ To configure the target message type:
 . Expand the *Message type* section and click *Select*.
 . In the *Select message type* window, do either of the following:
 * Select an existing send to message type and click *Select*.
-* Click *New* to create a new send to message type, as described in <<xref:partner-manager-create-message-type,Create and Configure Message Types>>.
+* Click *New* to create a new send to message type, as described in xref:partner-manager-create-message-type,[Create and Configure Message Types].
 . Click *Save*.
 +
 The message type and its validation settings are added to the message flow.
@@ -96,7 +96,7 @@ To configure acknowledgement settings for the outbound messages that use this me
 . In the *Acknowledgement* section, select *Expect functional acknowledgement* (X12) or *Expect CONTRL functional acknowledgment* (EDIFACT).
 . Do either of the following:
 * Select an existing endpoint at which to receive your partner's acknowledgement transaction.
-* Click *New* to create a new endpoint, as described in <<xref:create-endpoint.adoc,Create and Configure Endpoints>>.
+* Click *New* to create a new endpoint, as described in xref:create-endpoint.adoc[Create and Configure Endpoints].
 . In the *Mark overdue after* field, accept the default value of *24 Hours* or configure when you want the outbound transaction to be marked as overdue for an acknowledgement, according to the SLAs you have with your trading partner.
 
 === Optionally Apply Custom Validation Settings to EDIFACT and X12 Endpoints
@@ -123,7 +123,7 @@ To create a send to partner endpoint:
 +
 You can select any previously configured Send to partner endpoints owned by the host, the partner for whom the message flow is configured, or a 3rd party connection.
 +
-* Click *New* to create a new send to endpoint, as described in <<xref:create-endpoint.adoc,Create and Configure Endpoints>>.
+* Click *New* to create a new send to endpoint, as described in xref:create-endpoint.adoc[Create and Configure Endpoints].
 
 If you selected AS2 as the protocol and there is no certificate associated with the partner or 3rd party profile, you must import the certificate of the partner or 3rd party connection that owns the endpoint.
 
@@ -134,6 +134,6 @@ Partner Manager dynamically validates the message flow configuration elements fo
 == See Also
 
 * xref:outbound-message-flows.adoc[Outbound Message Flows]
-* xref:outbound-message-routing.adoc[Outbound Message Flow Routing]
+* xref:outbound-message-routing.adoc[Outbound Message Routing]
 * xref:deploy-message-flows.adoc[Deploy and Test Message Flows]
 * xref:manage-message-flows.adoc[Modify Message Flow Settings]
