@@ -129,7 +129,7 @@ If you selected AS2 as the protocol and there is no certificate associated with 
 
 == Verify That the Message Flow is Complete
 
-Partner Manager dynamically validates the message flow configuration elements for completeness and displays a green checkmark if all the building blocks of the message flow are complete. After you verify the configurations, you are ready to deploy the message flow.
+Partner Manager dynamically validates the message flow configuration elements for completeness and displays a green checkmark if all the components of the message flow are complete. After you verify the configurations, you are ready to deploy the message flow.
 
 == See Also
 

@@ -57,7 +57,7 @@ Partner Manager’s deployment orchestration service inspects the message flow a
 
 The number and type of endpoint services deployed to your runtime depends on the transport protocols used to exchange data with your trading partners and backend systems.
 
-Each unique AS2, HTTP, and HTTPS receive endpoint configurations result in the deployment of their own runtime applications. You can view the Runtime application name corresponding to a given configuration in Partner Manager, from the endpoint detail page.
+Each unique AS2, HTTP, and HTTPS receive endpoint configuration results in the deployment of its own runtime application. You can view the runtime application name corresponding to a given configuration in Partner Manager, from the endpoint detail page.
 
 The endpoints for the transport protocols are always managed within a single generic endpoint service for the protocol and direction:
 

@@ -24,7 +24,7 @@ To modify the settings of an inbound message flow:
 | Receive from <partner>
 | Select different identifiers for the partner.
 *Vijay, do the identifiers apply to all protocols or just to EDIFACT and X12?*
-| xref:partner-manager-identiers.adoc[Partner Manager Identifiers]
+| xref:partner-manager-identifiers.adoc[Partner Manager Identifiers]
 
 | Receiving endpoint <endpoint name>
 a|
