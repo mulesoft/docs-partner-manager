@@ -10,11 +10,11 @@ When messages are received by the endpoint, Partner Manager routes the payload t
 
 . Identifies the message type using the following criteria:
 ** Relative path for HTTP or HTTPS endpoints
-** Filename for SFTP endpoints, which should follow this convention:
+** Filename for SFTP endpoints, which follow this convention:
 +
 `<message-type>_<endpoint-information>.<file-type>`.
 +
-For example, if your message type ID is ar-invoice, then the file name is `ar-invoice_20210217_1055_000.json`
+For example, if your message type ID is ar-invoice, then the file name is `ar-invoice_20210217_1055_000.json`.
 
 +
 . Validates the payload against the schema supplied during the message type definition.

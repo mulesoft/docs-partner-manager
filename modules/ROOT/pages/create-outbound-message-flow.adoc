@@ -61,7 +61,7 @@ A translation map in an outbound message flow transforms outbound messages from 
 To import the translation map:
 
 . In the message flow, expand the *Map* section.
-. Click *Import < Choose file*.
+. Click *Import > Choose file*.
 . Navigate to the DataWeave map you want to use and click *Open*.
 . Click *Upload mapping*.
 
@@ -89,7 +89,7 @@ The message type and its validation settings are added to the message flow.
 +
 These identifiers are configured in the host and partner profiles.
 
-=== Configure Acknowledgment settings
+=== Configure Acknowledgment Settings
 
 To configure acknowledgement settings for the outbound messages that use this message flow:
 
@@ -127,7 +127,7 @@ You can select any previously configured Send to partner endpoints owned by the 
 
 If you selected AS2 as the protocol and there is no certificate associated with the partner or 3rd party profile, you must import the certificate of the partner or 3rd party connection that owns the endpoint.
 
-== Verify That the Message Flow is Complete
+== Verify That the Message Flow Is Complete
 
 Partner Manager dynamically validates the message flow configuration elements for completeness and displays a green checkmark if all the components of the message flow are complete. After you verify the configurations, you are ready to deploy the message flow.
 
