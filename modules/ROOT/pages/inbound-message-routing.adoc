@@ -1,6 +1,6 @@
-== Inbound Message Routing
+= Inbound Message Routing
 
-To ensure successful routing when your partners send messages to the configured source endpoints, ensure that they use the appropriate message ID or file naming pattern, especially for non-EDI messages.
+Successful routing of your partners send messages to the configured source endpoints requires that those messages use the appropriate message ID or file-naming pattern, especially for non-EDI messages.
 
 The following table describes the requirements for successful inbound message routing:
 
@@ -8,7 +8,7 @@ The following table describes the requirements for successful inbound message ro
 |Protocol | Requirements for Successful Inbound Message Routing
 |HTTP or HTTPS
 a|
-* The message posted to the endpoint has the appropriate Content-Type.
+* The message posted to the endpoint has the appropriate content type.
 * If the source message type is X12 or EDIFACT, the message is posted to the base URL.
 * If the source message type is XML or JSON, the message is sent to the endpoint’s `{baseURL}/{message-type}`.
 |AS2

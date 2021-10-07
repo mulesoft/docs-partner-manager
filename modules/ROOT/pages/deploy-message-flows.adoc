@@ -10,7 +10,7 @@ To minimize the impact of the service interruption caused by deploying a message
 
 To deploy a message flow, click the *Deploy* button.
 
-The message flow is deployed to Mule runtime engine, and you can do the following:
+The message flow is deployed to Mule runtime engine, enabling you to:
 
 * Start receiving messages from your partner
 * Use the *Activity* page to track the processed messages.
@@ -25,10 +25,8 @@ After you deploy the message flow, send test messages to verify that:
 
 Test your message flow in your Partner Manager sandbox environment by sending a test file to the receiving endpoint:
 
-. In the navigation menu, select *Activity* and select the transmission to test.
-. Scan for an exclamation point (!) in any of the boxes next to the displayed flow stages.
-+
-Exclamation points indicate that there is an issue with the transmission. Address any issues you find.
+. In the navigation menu, select *Activity* and the transmission to test.
+. Scan for an exclamation point (!) in any of the boxes next to the displayed flow stages and address any issues.
 . If the system was set up to view payloads, review the received payload by clicking *View payload* next to the *Received transmission* section.
 +
 If you not sure about whether you should be able to view a payload, contact your B2B System Administrator.
