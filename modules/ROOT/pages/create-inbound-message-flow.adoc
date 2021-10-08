@@ -41,11 +41,11 @@ If the protocol of the receiving endpoint is AS2, perform these additional steps
 
 . Select the AS2 sender from the dropdown menu and then select either of the following:
 * The partner's name, to enable your organization to receive the AS2 messages directly from the partner for whom the message flow is created
-* The name of a third party connection, to enable your organization to receive the partner's AS2 messages via a third party connection, such as a VAN or 3PL
+* The name of a third-party connection, to enable your organization to receive the partner's AS2 messages via a third-party connection, such as a VAN or 3PL
 +
-The AS2 identifier and certificate of the selected third party connection are used for validating the AS2 messages.
+The AS2 identifier and certificate of the selected third party-connection are used for validating the AS2 messages.
 +
-. If there is no valid certificate in the associated profile, import one from the partner or from the third party connection sending the AS2 message.
+. If there is no valid certificate in the associated profile, import one from the partner or from the third-party connection sending the AS2 message.
 
 [[source-message-type]]
 == Configure the Source Message Type

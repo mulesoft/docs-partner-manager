@@ -1,6 +1,6 @@
 = Outbound Message Routing
 
-The Anypoint Partner Manager outbound message processing framework enables you to implement receiving endpoints in a variety of ways. You can:
+The Anypoint Partner Manager outbound message routing framework enables you to implement receiving endpoints in a variety of ways. You can:
 
 * Use a single endpoint to receive different types of application messages, such as advance shipment notices and invoices, from your backend systems.
 * Use dedicated endpoints for each message type from backend systems.

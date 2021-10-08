@@ -1,4 +1,4 @@
-= Partner Manager Message Flows
+= Configuring and Managing Message Flows
 
 A message flow is the path along which a message travels from its source, through a DataWeave transformation map, to its target. You set up message flows to send and receive messages between your systems and your trading partners.
 

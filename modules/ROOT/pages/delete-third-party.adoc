@@ -4,13 +4,7 @@ If you are no longer using a third party connection, you can delete it from Part
 
 When you delete a third party connection, it is removed from the *Partners* page. Also, all of the connection's data is deleted, except for information about connection-related activities that occurred before the deletion.
 
-== Prerequisites for Deleting a Third Party Connection in an On-Premises Environment
-
-To delete a third party connection in an on-premises environment, ensure that your on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager named `B2BserverGroup` are active and running.
-
-To obtain these statuses, contact your B2B System Administrator. You can also check the status of the host servers in Anypoint Platform Runtime Manager.
-
-== Steps
+Before you delete a third party connection in an on-premises deployment, ensure that the on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager named `B2BserverGroup` are active and running. To obtain these statuses, contact your B2B System Administrator. You can check the status of the host servers in Anypoint Platform Runtime Manager.
 
 To delete a third party connection:
 

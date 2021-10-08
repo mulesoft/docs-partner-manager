@@ -55,7 +55,7 @@ Create FTP send endpoints by configuring these settings on the Host or Partner p
 transformed JSON and XML files generated from inbound message flows.
 |Yes
 
-|Filename pattern
+|File name pattern
 |xref:file-name-pattern.adoc[File name pattern] required by your trading partner or backend application.
 |
 |===

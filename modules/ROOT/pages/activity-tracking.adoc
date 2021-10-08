@@ -6,7 +6,7 @@ Anypoint Partner Manager enables you to monitor trading partner transmission act
 
 With activity tracking, you can:
 
-* Search for message metadata (such as partner name, message type, filename, control number, endpoint, or date received).
+* Search for message metadata (such as partner name, message type, file name, control number, endpoint, or date received).
 * View and download the original payload related to the transmission to help you troubleshoot or keep records.
 * Review errors and acknowledgment payloads.
 
@@ -22,7 +22,7 @@ Use the search box to find the transmission based on criteria such as:
 +
 * Trading partner name
 * Message type
-* Filename
+* File name
 * Control number
 * Endpoint
 * Received date of the file +

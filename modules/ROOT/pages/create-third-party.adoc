@@ -2,16 +2,12 @@
 
 Create a new third party connection by using the *Partners* page to specify the connection's name, identifiers, connection-specific endpoints (if needed), and other settings.
 
-== Prerequisites
-
 Before you create your first third party connection, make sure that you have xref:setup-payload-storage-API.adoc[configured your payload storage API] and that you obtain the following information:
 
 * The connection name (usually the name of the company)
 * One or more AS2 identifiers for the connection
 
-== Steps
-
-After meeting the prerequisites to create a third party connection:
+To create a third party connection:
 
 . In Partner Manager, select *Partners* in the navigation menu.
 . Click *Create partner > 3rd party connection*.

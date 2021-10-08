@@ -62,12 +62,10 @@ To import the translation map:
 . Navigate to the DataWeave map you want to use and click *Open*.
 . Click *Upload mapping*.
 
-The translation map is added to the message flow.
-
 [[send-to-partner-message-type]]
 == Configure the Target Message Type
 
-The target message type in an outbound message flow defines the structure of the messages that Partner Manager sends to the partner, either directly or via a third party connection. Partner Manager supports the AS2, FTP, and SFTP formats for send to message types.
+The target message type in an outbound message flow defines the structure of the messages that Partner Manager sends to the partner, either directly or via a third party connection. Partner Manager supports the AS2, FTP, and SFTP formats for target message types.
 
 For the EDIFACT and X12 message types, configuring the target message type also involves configuring acknowledgements (optional), creating custom EDIFACT settings (optional), and selecting EDIFACT identifiers to use for routing the outbound messages.
 
@@ -124,7 +122,7 @@ You can select any previously configured Send to partner endpoints owned by the 
 +
 * Click *New* to create a new send to endpoint, as described in xref:create-endpoint.adoc[Create and Configure Endpoints].
 
-If you selected AS2 as the protocol and there is no certificate associated with the partner or third party profile, you must import the certificate of the partner or third party connection that owns the endpoint.
+If you selected AS2 as the protocol and there is no certificate associated with the partner or third party profile, import the certificate of the partner or third-party connection that owns the endpoint.
 
 == Verify That the Message Flow Is Complete
 

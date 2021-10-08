@@ -44,7 +44,7 @@ a|
 * (EDIFACT or X12 message type) Indicate whether or not to send a 997 functional acknowledgment, and select the endpoint to which to send the acknowledgment.
 a|
 * xref:partner-manager-create-message-type.adoc[Create and Configure Message Types]
-* xref:edi-ack-.adoc[EDI Acknowledgement Reconciliation]
+* xref:edi-ack-reconciliation.adoc[EDI Acknowledgement Reconciliation]
 
 | Map
 | View the associated DataWeave map or import another one.

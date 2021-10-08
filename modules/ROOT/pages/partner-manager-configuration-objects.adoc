@@ -1,4 +1,4 @@
-= Partner Manager Configuration Objects
+= Message Flow Components
 
 A message flow in Partner manager comprises configuration objects that execute end-to-end B2B message processing:
 

@@ -14,7 +14,7 @@ a|
 |AS2
 a|
 * The message posted to the endpoint has the appropriate AS2 MIME type.
-* If the source message type is XML or JSON, the file name begins with `{message-type-identifier}_`.
+* If the source message type is XML or JSON, the filename begins with `{message-type-identifier}_`.
 | FTP or SFTP
 a|
 * If configured to support the JSON or XML message format, the filename begins with `{message-type-identifier}_`.

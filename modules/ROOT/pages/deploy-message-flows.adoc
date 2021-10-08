@@ -13,7 +13,7 @@ To deploy a message flow, click the *Deploy* button.
 The message flow is deployed to Mule runtime engine, enabling you to:
 
 * Start receiving messages from your partner
-* Use the *Activity* page to track the processed messages.
+* Use the *Activity* page to track the processed messages
 
 == Test a Deployed Message Flow
 
