@@ -62,7 +62,7 @@ a| * xref:partner-manager-create-message-type.adoc[Create and Configure Message 
 [NOTE]
 It can take five minutes or so for your configuration changes to sync with Mule.
 +
-. To test your modified message flow, see xref:deploy-message-flows.adoc[Deploy and Test Message Flows].
+. To test your modified message flow, see xref:deploy-message-flows.adoc[Deploying and Testing Message Flows].
 
 After you confirm the successful deployment of your message flow, you can track its processed messages from the *Activity* page.
 
@@ -112,11 +112,11 @@ a| * xref:create-endpoint.adoc[Create and Configure Endpoints]
 [NOTE]
 It can take five minutes or so for your configuration changes to sync with Mule.
 +
-. To test your modified message flow, see xref:deploy-message-flows.adoc[Deploy and Test Message Flows].
+. To test your modified message flow, see xref:deploy-message-flows.adoc[Deploying and Testing Message Flows].
 
 After you confirm the successful deployment of your message flow, you can track its processed messages from the *Activity* page.
 
 == See Also
 
-* xref:deploy-message-flows.adoc[Deploy and Undeploy Message Flows]
+* xref:deploy-message-flows.adoc[Deploying and Undeploying Message Flows]
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]

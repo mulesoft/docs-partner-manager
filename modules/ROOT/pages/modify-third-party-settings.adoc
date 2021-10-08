@@ -49,5 +49,5 @@ Click the endpoint's link and click *Delete*.
 
 == See Also
 
-* xref:create-third-party.adoc[Create a New Third Party Connection]
-* xref:delete-third-party.adoc[Delete a Third Party Connection]
+* xref:create-third-party.adoc[Creating Third Party Connections]
+* xref:delete-third-party.adoc[Deleting Third Party Connections]

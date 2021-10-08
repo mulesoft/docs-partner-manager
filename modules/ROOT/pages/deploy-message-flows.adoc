@@ -37,6 +37,6 @@ If you not sure about whether you should be able to view a payload, contact your
 
 == See Also
 
-* xref:undeploy-message-flows.adoc[Undeploy Message Flows]
-* xref:create-inbound-message-flow.adoc[creating Inbound Message Flows]
+* xref:undeploy-message-flows.adoc[Undeploying Message Flows]
+* xref:create-inbound-message-flow.adoc[Creating Inbound Message Flows]
 * xref:create-outbound-message-flow.adoc[Creating Outbound Message Flows]

@@ -1,4 +1,4 @@
-= Configuring and Managing third Party Connections
+= Configuring and Managing Third Party Connections
 
 If your trading partners use third party service providers such as VANs or 3PLs (third party logistics providers) who manage the B2B connectivity with your organization on behalf of your partners, you can create a third party connection to manage configurations such as the endpoints, identifiers, and certificates of the third party provider.
 
@@ -16,6 +16,6 @@ After you create a third party connection, you can select the endpoints and iden
 == See Also
 
 * xref:create-endpoint.adoc[Create and Configure Endpoints]
-* xref:create-inbound-message-flow.adoc[Create and Configure Inbound Message Flows]
-* xref:create-outbound-message-flow.adoc[Create and Configure Outbound Message Flows]
+* xref:create-inbound-message-flow.adoc[Creating and Configuring Inbound Message Flows]
+* xref:create-outbound-message-flow.adoc[Creating and Configuring Outbound Message Flows]
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]

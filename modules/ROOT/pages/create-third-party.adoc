@@ -53,10 +53,10 @@ Add the following settings for the new third party connection, either now or lat
 
 == Next Step
 
-After you create a 3rd-party connection and configure 3rd-party-specific endpoints (if needed), you can set up message flows that use the connection.
+After you create a third connection and configure third-party-specific endpoints (if needed), you can set up message flows that use the connection.
 
 == See Also
 
-* xref:message-flows.adoc[Set Up Message Flows]
-* xref:modify-third-party-settings.adoc[Modify Third Party Connection Settings]
+* xref:message-flows.adoc[Partner Manager Message Flows]
+* xref:modify-third-party-settings.adoc[Modifying Third Party Connection Settings]
 * xref:delete-third-party.adoc[Deleting Third Party Connections]

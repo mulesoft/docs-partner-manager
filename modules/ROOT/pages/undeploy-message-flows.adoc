@@ -22,6 +22,6 @@ Partner Manager checks to see if any of the applications deployed to Mule are or
 
 == See Also
 
-* xref:deploy-message-flows.adoc[Deploy and Test Message Flows]
+* xref:deploy-message-flows.adoc[Deploying and Testing Message Flows]
 * xref:create-inbound-message-flow.adoc[Creating Inbound Message Flows]
 * xref:create-outbound-message-flow.adoc[Creating Outbound Message Flows]
