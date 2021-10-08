@@ -4,13 +4,13 @@ SFTP receive endpoint settings determine where to receive messages in the follow
 
 * Receive from partners
 +
-Source endpoint in an inbound message flow that receives B2B EDI messages from partners either directly or via 3rd party connections
+Source endpoint in an inbound message flow that receives B2B EDI messages from partners either directly or via third party connections
 +
 * Source at host
 +
 Source endpoint in an outbound message flow that receives application JSON and XML messages from the backend systems
 
-A host, partner, or 3rd party connection can own SFTP receive endpoints.
+A host, partner, or third party connection can own SFTP receive endpoints.
 
 Create SFTP receive endpoints by configuring these settings on the host or Partner page:
 

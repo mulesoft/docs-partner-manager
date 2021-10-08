@@ -1,6 +1,6 @@
 == Inbound Message Flows
 
-An inbound message flow receives application messages from your partner, either directly or through a 3rd party connection; transforms the messages to the format used by your backend applications; and forwards the messages to those applications.
+An inbound message flow receives application messages from your partner, either directly or through a third party connection; transforms the messages to the format used by your backend applications; and forwards the messages to those applications.
 
 The following diagram shows the components of an inbound message flow:
 

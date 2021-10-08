@@ -4,21 +4,21 @@ HTTP and HTTPS send endpoint settings configure where to send messages in the fo
 
 * Send to partners
 +
-Target endpoint in an outbound message flow to which transformed B2B EDI messages are sent to the partners either directly or via a 3rd party connection
+Target endpoint in an outbound message flow to which transformed B2B EDI messages are sent to the partners either directly or via a third party connection
 +
 * Target at host
 +
 Target endpoint in an inbound message flow to which transformed application JSON and XML messages are sent to the backend systems
 
-A host, partner, or 3rd party connection can own HTTP and HTTPS send endpoints.
+A host, partner, or third party connection can own HTTP and HTTPS send endpoints.
 
-Create HTTP and HTTPS send endpoints by configuring these settings on the host, partner, or 3rd party connection page. You can also create these endpoints when you configure an outbound message flow.
+Create HTTP and HTTPS send endpoints by configuring these settings on the host, partner, or third party connection page. You can also create these endpoints when you configure an outbound message flow.
 
 [%header%autowidth.spread]
 |===
 |Name |Description |Required
 | Owner
-| Partner, 3rd party connection, or host who owns the endpoint
+| Partner, third party connection, or host who owns the endpoint
 | Yes
 
 |Protocol
