@@ -1,4 +1,4 @@
-= Create Inbound Message Flows
+= Creating Inbound Message Flows
 :page-aliases: configure-message-flows.adoc
 
 Create inbound message flows to receive messages from partners, including messages that go through 3rd party connections. When you create an inbound message flow, you can validate and transform the inbound messages and then send them to your backend systems.

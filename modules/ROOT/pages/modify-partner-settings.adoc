@@ -1,4 +1,4 @@
-= Modify a Partner's Settings
+= Modifying Partner Settings
 
 You can modify a partner's settings including contact details, identifiers, digital certificates, acknowledgements, control numbers, and more.
 
@@ -58,5 +58,5 @@ a|
 
 == See Also
 
-* xref:create-partner.adoc[Create a New Partner]
-* xref:partner-manager-delete-partner.adoc[Delete a Partner]
+* xref:create-partner.adoc[Creating Partners]
+* xref:partner-manager-delete-partner.adoc[Deleting Partners]

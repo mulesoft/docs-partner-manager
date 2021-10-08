@@ -1,4 +1,4 @@
-= Delete a Partner
+= Deleting Partners
 
 If you are no longer trading with a partner, you can delete the partner.
 
@@ -22,4 +22,4 @@ After you delete a partner, you can reuse the partner name.
 
 == See Also
 
-* xref:configure-partner.adoc[Create a New Partner]
+* xref:configure-partner.adoc[Creating Partners]

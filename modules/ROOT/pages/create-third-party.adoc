@@ -1,4 +1,4 @@
-= Create a New 3rd Party Connection
+= Creating 3rd Party Connections
 
 Create a new 3rd party connection by using the *Partners* page to specify the connection's name, identifiers, connection-specific endpoints (if needed), and other settings.
 
@@ -59,4 +59,4 @@ After you create a 3rd-party connection and configure 3rd-party-specific endpoin
 
 * xref:message-flows.adoc[Set Up Message Flows]
 * xref:modify-third-party-settings.adoc[Modify 3rd Party Connection Settings]
-* xref:delete-third-party.adoc[Delete a 3rd Party Connection]
+* xref:delete-third-party.adoc[Deleting 3rd Party Connections]

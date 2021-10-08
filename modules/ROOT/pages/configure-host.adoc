@@ -1,4 +1,4 @@
-= Configure and Manage the Host Profile
+= Configuring and Managing a Host Profile
 
 Your Anypoint Platform organization or your business group is referred to as the _host_ in Anypoint Partner Manager. In Anypoint Platform, your host name is the same as your Anypoint Platform business group name.
 

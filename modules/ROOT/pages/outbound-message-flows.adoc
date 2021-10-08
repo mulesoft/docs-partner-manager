@@ -41,7 +41,7 @@ Partner endpoint to which to send the transformed EDI message
 
 == See Also
 
-* xref:create-outbound-message-flow.adoc[Create Outbound Message Flows]
-* xref:deploy-message-flows.adoc[Deploy and Test Message Flows]
-* xref:manage-message-flows.adoc[Modify Message Flow Settings]
+* xref:create-outbound-message-flow.adoc[Creating Outbound Message Flows]
+* xref:deploy-message-flows.adoc[Deploying and Testing Message Flows]
+* xref:manage-message-flows.adoc[Modifying Message Flow Settings]
 * xref:outbound-message-routing.adoc[Outbound Message Routing]

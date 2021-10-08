@@ -1,4 +1,4 @@
-= Deploy and Test Message Flows
+= Deploying and Testing Message Flows
 
 Anypoint Partner Manager dynamically validates the message flow configuration elements as you complete them and displays a green checkmark next to each of the validated elements.
 
@@ -38,5 +38,5 @@ If you not sure about whether you should be able to view a payload, contact your
 == See Also
 
 * xref:undeploy-message-flows.adoc[Undeploy Message Flows]
-* xref:create-inbound-message-flow.adoc[Create Inbound Message Flows]
-* xref:create-outbound-message-flow.adoc[Create Outbound Message Flows]
+* xref:create-inbound-message-flow.adoc[creating Inbound Message Flows]
+* xref:create-outbound-message-flow.adoc[Creating Outbound Message Flows]

@@ -20,5 +20,5 @@ After you delete a 3rd party connection, you can reuse the connection name.
 
 == See Also
 
-* xref:create-third-party.adoc[Create a New 3rd Party Connection]
-* xref:modify-third-party-settings.adoc[Modify 3rd Party Connection Settings]
+* xref:create-third-party.adoc[Creating 3rd Party Connections]
+* xref:modify-third-party-settings.adoc[Modifying 3rd Party Connection Settings]

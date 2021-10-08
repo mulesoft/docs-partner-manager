@@ -1,4 +1,4 @@
-= Configure Send Settings for Outbound EDIFACT Messages
+= Configuring Send Settings for Outbound EDIFACT Messages
 
 Partner Manager enables you to configure the EDIFACT envelope parameters, validation rules, control numbers, character encoding, and separators to apply when sending an outbound EDIFACT transmission from the host to a partner.
 
@@ -109,6 +109,6 @@ a| When you select *Test* from the drop-down, sets UNB-11 to `1`, which indicate
 
 == See Also
 
-* xref:create-outbound-message-flow.adoc[Create and Configure Outbound Message Flows]
-* xref:create-partner.adoc[Create a New Partner]
-* xref:modify-partner-settings.adoc[Modify a Partner's Settings]
+* xref:create-outbound-message-flow.adoc[Creating and Configuring Outbound Message Flows]
+* xref:create-partner.adoc[Creating Partners]
+* xref:modify-partner-settings.adoc[Modify Partner Settings]

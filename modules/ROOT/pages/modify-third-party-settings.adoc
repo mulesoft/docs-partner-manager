@@ -1,4 +1,4 @@
-= Modify a 3rd Party Connection's Settings
+= Modifying 3rd Party Connection Settings
 
 You can modify 3rd party connection settings including contact details, identifiers, digital certificates, and more.
 

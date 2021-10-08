@@ -1,10 +1,10 @@
-= Modify Message Flow Settings
+= Modifying Message Flow Settings
 
 Active message flows between you and your partners don't require much maintenance. However, you might need to:
 
 * Change flow identifiers, endpoints, or maps.
 * Switch from a sandbox environment and reclaim production-environment resources.
-* Delete the flow when it becomes inactive, as described in xref:delete-message-flows.adoc[Delete Message Flows].
+* Delete the flow when it becomes inactive, as described in xref:delete-message-flows.adoc[Deleting Message Flows].
 
 [IMPORTANT]
 Before making changes, carefully consider the impact on the message flow.

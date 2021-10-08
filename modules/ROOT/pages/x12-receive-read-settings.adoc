@@ -1,4 +1,4 @@
-= Configure Receive Settings for Inbound X12 Messages
+= Configuring Receive Settings for Inbound X12 Messages
 
 Partner Manager enables you to configure the X12 acknowledgments, validation rules, character encoding, and control numbers to apply when receiving inbound X12 messages from the selected partner.
 
@@ -152,6 +152,6 @@ a|Indicates the character encoding for messages.
 
 == See Also
 
-* xref:create-inbound-message-flow.adoc[Create and Configure Inbound Message Flows]
-* xref:create-partner.adoc[Create a New Partner]
-* xref:modify-partner-settings.adoc[Modify a Partner's Settings]
+* xref:create-inbound-message-flow.adoc[Creating and Configuring Inbound Message Flows]
+* xref:create-partner.adoc[Creating Partners]
+* xref:modify-partner-settings.adoc[Modifying Partner Settings]

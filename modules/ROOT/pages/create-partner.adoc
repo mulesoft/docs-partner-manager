@@ -1,4 +1,4 @@
-= Create a New Partner
+= Creating Partners
 
 Create a new partner by using the *Partners* page to specify partner-specific information such as name, identifiers, endpoints, and validation rules.
 
@@ -67,5 +67,5 @@ After you create a partner and configure partner-level endpoints (if needed), yo
 == See Also
 
 * xref:message-flows.adoc[Set Up Message Flows]
-* xref:modify-partner-settings.adoc[Modify a Partner's Settings]
-* xref:partner-manager-delete-partner.adoc[Delete a Partner]
+* xref:modify-partner-settings.adoc[Modifying Partner Settings]
+* xref:partner-manager-delete-partner.adoc[Deleting Partners]

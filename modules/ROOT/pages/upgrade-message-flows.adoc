@@ -1,4 +1,4 @@
-= Upgrade Message Flow Runtime Templates
+= Upgrading Message Flow Runtime Templates
 
 Partner Manager uses prebuilt templates to convert your B2B message flow configurations into runtime applications. As these templates are updated, you can upgrade your message flows to use them to take advantage of new capabilities that enable better integration with your trading partner's ecosystem.
 

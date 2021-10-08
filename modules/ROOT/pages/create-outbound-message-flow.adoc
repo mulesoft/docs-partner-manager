@@ -1,4 +1,4 @@
-= Create Outbound Message Flows
+= Creating Outbound Message Flows
 
 Create outbound message flows to receive application messages from your backend systems, validate and transform these messages to the format your partners expect, and then send them to your partners either directly, or through 3rd party connections.
 
