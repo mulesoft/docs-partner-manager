@@ -41,7 +41,7 @@ a| Host that owns the endpoint:
 a|
 * When enabled, the HTTP receive endpoint runtime application deploys to the private port 8092 in your Anypoint VPC.
 +
-You can manage the access control to the endpoint by using the Anypoint VPC and dedicated load balancer settings.
+You can manage the access control to the endpoint via the Anypoint VPC and dedicated load balancer settings.
 * When disabled, the HTTP receive endpoint application deploys to the public port 8082 by default.
 +
 You can access the endpoint URL directly over the internet.
@@ -53,7 +53,7 @@ a| Enable this setting to manage the endpoint with API Manager. To use this func
 * Create an HTTP API in API Manager in the same environment as the endpoint.
 * Enter an instance ID for the API in the *API Auto discovery id* field.
 
-Note: Using this feature requires API Manager entitlement.
+Note: Using this feature requires an API Manager license.
 
 |URL
 a|HTTP or HTTPS address where you receive outbound source messages from backend systems. Partner Manager automatically generates this ID after the first message flow that uses the endpoint is deployed.

@@ -1,52 +1,45 @@
 = Inbound Message Routing
 
-Successful routing of your partners send messages to the configured source endpoints requires that those messages use the appropriate message ID or file-naming pattern, especially for non-EDI messages.
+Depending on the endpoint type and protocol, the successful routing of your partners send messages to the configured source endpoints uses the message type ID, file-naming pattern, and content type.
 
-== Inbound Messages that Use an HTTP Receive from Partners Endpoint
+== Messages that Use an HTTP Receive from Partners Endpoint
 
-The following table describes the requirements for successful inbound message routing:
+To successfully route inbound messages that use an HTTP receive from partners endpoint, your partner does the following:
 
-* For Non-EDI messages (JSON or XML) the message type ID is in the relative path in the HTTP request.
-
-For example, if the base URL of your HTTP receive from partners endpoint is `https://b2b-inbound-http-abcd.us-e2.cloudhub.io:443/receive1/` and the expected message type ID for the inbound message is `custom-po`, your partner should post the message to the `https://b2b-inbound-http-2jyw.us-e2.cloudhub.io:443/receive1/custom-po` URL.
-* EDI messages (EDIFACT or X12), are posted directly to the base URL.
-* The Content-Type in the incoming HTTP request is set as follows:
-** JSON - `application/json`
-** XML - `application/xml`
-** EDIFACT - `application/EDIFACT`, or `text/plain`
-** X12 - `application/EDI-X12`, or `text/plain`
-
-== Inbound Messages that Use an AS2 Receive from Partners Endpoint
-
-* The filename begins with `{message-type-id}_`.
+* For non-EDI messages (JSON or XML), your partner includes the message type ID in the relative path of the HTTP request.
 +
-For example, if the message type is named `custom-po`, the file name begins with `custom-po_`.
+For example, if the base URL of the HTTP receive from partners endpoint is `https://b2b-inbound-http-abcd.us-e2.cloudhub.io:443/receive1/`, and the expected message type ID for the inbound message is `custom-po`, your partner should post the message to the `https://b2b-inbound-http-2jyw.us-e2.cloudhub.io:443/receive1/custom-po` URL.
 +
-* The AS2 MIME-Type in the incoming AS2 message is set as follows:
-** JSON - `application/json`
-** XML - `application/xml`
-** EDIFACT - `application/EDIFACT`, or `text/plain`
-** X12 - `application/EDI-X12`, or `text/plain`
-
-== Inbound Non-EDI Messages that Use the FTP or SFTP Protocol
-
-* The filename begins with `{message-type-id}_`. For example, if the message type is named `custom-po`, the file name begins with `custom-po_`.
+* For EDI messages (EDIFACT or X12), your partner posts them to the base URL.
 +
+* Your partner sets the Content-Type in the incoming HTTP request as follows, depending on the message format:
+** JSON: `application/json`
+** XML: `application/xml`
+** EDIFACT: `application/EDIFACT`, or `text/plain`
+** X12: `application/EDI-X12`, or `text/plain`
 
+== Messages that Use an AS2 Receive from Partners Endpoint
 
+To successfully route inbound messages that use an AS2 receive from partners endpoint, your partner does the following:
 
-* The message posted to the endpoint has the appropriate content type.
-* If the source message type is X12 or EDIFACT, the message is posted to the base URL.
-* If the source message type is XML or JSON, the message is sent to the endpoint’s `{baseURL}/{message-type}`.
-|AS2
-a|
-* The message posted to the endpoint has the appropriate AS2 MIME type.
-* If the source message type is XML or JSON, the filename begins with `{message-type-identifier}_`.
-| FTP or SFTP
-a|
-* If configured to support the JSON or XML message format, the filename begins with `{message-type-identifier}_`.
-* If configured to support EDIFACT or X12, the file can have any name because routing happens automatically based on the EDI identifiers and message type.
-|===
+* Uses a filename that begins with `{message-type-id}_`.
++
+For example, if the message type is named `custom-po`, the file name should begin with `custom-po_`.
++
+* Sets the AS2 MIME-Type in the inbound AS2 message as follows, depending on the message type:
+
+** JSON: `application/json`
+** XML: `application/xml`
+** EDIFACT: `application/EDIFACT`, or `text/plain`
+** X12: `application/EDI-X12`, or `text/plain`
+
+== Non-EDI Messages that Use the FTP or SFTP Protocol
+
+To successfully route inbound non-EDI (JSON or XML) messages that use the FTP or SFTP protocol, your partner uses a filename that begins with `{message-type-id}_`. For example, if the message type is named `custom-po`, the file name should begin with `custom-po_`.
+
+== EDI Messages that Use the FTP or SFTP Protocols
+
+To successfully route inbound EDI (EDIFACT or X12) messages that use the FTP or SFTP protocols, your partner uses the correct EDI identifiers in the payload content.
 
 == See Also
 
