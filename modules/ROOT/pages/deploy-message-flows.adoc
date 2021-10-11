@@ -6,7 +6,7 @@ After Partner Manager validates the message flow configuration elements, you can
 
 == Deploy Message Flows
 
-To minimize the impact of the service interruption caused by deploying a message flow, perform message flow deployments outside of your regular business hours. This issue does not exist on CloudHub because CloudHub provides a zero-downtime update of the AS2 endpoint application. [*Vijay, is this applicable only for AS2 endpoints - send or receive?*]
+To minimize the impact of the service interruption caused by deploying a message flow, perform message flow deployments outside of your regular business hours. This issue does not exist on CloudHub because CloudHub provides a zero-downtime update of the AS2 endpoint application.
 
 To deploy a message flow, click the *Deploy* button.
 
