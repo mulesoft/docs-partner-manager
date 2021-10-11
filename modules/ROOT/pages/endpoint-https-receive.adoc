@@ -10,7 +10,7 @@ Source endpoint in an outbound message flow that receives application JSON and X
 +
 Source endpoint in an inbound message flow that receives inbound messages (EDIFACT, JSON, X12, or XML) from partners either directly or via third party connections
 
-Only a host can own HTTP and HTTPS receive endpoints.
+IMPORTANT: Each HTTP and HTTPS receive endpoint configuration gets deployed as an individual Mule application in the runtime. Consider reusing existing HTTP and HTTPS receive endpoint configurations across a partner's message flows.
 
 Create HTTP and HTTPS receive endpoints by configuring these settings on the host page:
 
@@ -22,7 +22,11 @@ Create HTTP and HTTPS receive endpoints by configuring these settings on the hos
 |Yes
 
 | Owner
-| Host that owns the endpoint.
+a| Host that owns the endpoint:
+
+* Only the host can own source at host HTTP receive endpoints.
+* The host, partner, or third-party connection can own receive from partner HTTP receive endpoints.
+
 | Yes
 
 | Protocol
@@ -33,10 +37,23 @@ Create HTTP and HTTPS receive endpoints by configuring these settings on the hos
 | User-supplied value that describes the purpose of the endpoint.
 | No
 
-| Manage with API manager
-| Enable this setting to manage the endpoint with API Manager. To use this functionality, you must must create an HTTP API in API Manager in the same environment as the endpoint.
+| Private port (when deploying to VPC)
+a|
+* When enabled, the HTTP receive endpoint runtime application deploys to the private port 8092 in your Anypoint VPC.
 +
-* In the *API Auto discovery id* field, enter an instance ID for the API.
+You can manage the access control to the endpoint by using the Anypoint VPC and dedicated load balancer settings.
+* When disabled, the HTTP receive endpoint application deploys to the public port 8082 by default.
++
+You can access the endpoint URL directly over the internet.
+| No
+
+| Manage with API manager
+a| Enable this setting to manage the endpoint with API Manager. To use this functionality, you must must do the following:
+
+* Create an HTTP API in API Manager in the same environment as the endpoint.
+* Enter an instance ID for the API in the *API Auto discovery id* field.
+
+Note: Using this feature requires API Manager entitlement.
 
 |URL
 a|HTTP or HTTPS address where you receive outbound source messages from backend systems. Partner Manager automatically generates this ID after the first message flow that uses the endpoint is deployed.
@@ -47,7 +64,7 @@ a|HTTP or HTTPS address where you receive outbound source messages from backend 
 |Yes
 
 |Authentication type
-a|Type of authentication method used to protect the HTTP receive service.
+a|Type of authentication method used to protect the HTTP receive service. This field is disabled when you manage the endpoint with API Manager.
 
 |Yes
 

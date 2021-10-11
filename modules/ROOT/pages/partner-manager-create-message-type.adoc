@@ -147,12 +147,12 @@ See xref:outbound-message-routing.adoc[Outbound Message Routing] to understand h
 [[reference-ids-example]]
 == Reference Identifiers and Business Key Mapping Example
 
-The input to the DataWeave map is the payload that follows the schema uploaded in the message type definition. The output must contain the following fields:
+The input to the DataWeave map is the payload that follows the schema uploaded in the definition for the source at host and receive from partner message types. The output must contain the following fields:
 
 * `partnerReferenceId` +
 Required identifier that uniquely identifies the receiving partner.
 * `hostReferenceId` +
-(Applies to source at host message types) Optional, except when backend systems are sending outbound transactions on behalf of different internal business units that require different mapping or sender identifiers to be set on the EDI data. This field is not used for the receive from partners message type.
+(Applies to source at host message types) Optional, except when backend systems are sending outbound transactions on behalf of different internal business units that require different mapping or sender identifiers to be set on the EDI data.
 * `businessDocumentKey` +
 Optional key reference value, such as `Order Number`or `Invoice Number`.
 

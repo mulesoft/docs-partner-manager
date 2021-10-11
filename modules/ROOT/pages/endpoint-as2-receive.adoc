@@ -28,7 +28,7 @@ Create AS2 receive endpoints by configuring these settings on the Host page:
 
 |Private port (when deploying to VPC)
 a|
-* When enabled, the AS2 receive endpoint application deploys to the private port `8092` in Mule in your xref:runtime-manager::virtual-private-cloud.adoc[Anypoint VPC]. You can manage the access control to the endpoint via the Anypoint VPC and dedicated load balancer settings.
+* When enabled, the AS2 receive endpoint application deploys to the private port `8092` in your xref:runtime-manager::virtual-private-cloud.adoc[Anypoint VPC]. You can manage the access control to the endpoint via the Anypoint VPC and dedicated load balancer settings.
 * When disabled, the AS2 receive endpoint application deploys to the public port `8082` by default. You can access the endpoint URL directly over the internet.
 +
 This configuration applies only to Anypoint VPC deployments from Partner Manager.

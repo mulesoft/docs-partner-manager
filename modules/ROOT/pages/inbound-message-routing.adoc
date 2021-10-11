@@ -2,12 +2,39 @@
 
 Successful routing of your partners send messages to the configured source endpoints requires that those messages use the appropriate message ID or file-naming pattern, especially for non-EDI messages.
 
+== Inbound Messages that Use an HTTP Receive from Partners Endpoint
+
 The following table describes the requirements for successful inbound message routing:
 
-|===
-|Protocol | Requirements for Successful Inbound Message Routing
-|HTTP or HTTPS
-a|
+* For Non-EDI messages (JSON or XML) the message type ID is in the relative path in the HTTP request.
+
+For example, if the base URL of your HTTP receive from partners endpoint is `https://b2b-inbound-http-abcd.us-e2.cloudhub.io:443/receive1/` and the expected message type ID for the inbound message is `custom-po`, your partner should post the message to the `https://b2b-inbound-http-2jyw.us-e2.cloudhub.io:443/receive1/custom-po` URL.
+* EDI messages (EDIFACT or X12), are posted directly to the base URL.
+* The Content-Type in the incoming HTTP request is set as follows:
+** JSON - `application/json`
+** XML - `application/xml`
+** EDIFACT - `application/EDIFACT`, or `text/plain`
+** X12 - `application/EDI-X12`, or `text/plain`
+
+== Inbound Messages that Use an AS2 Receive from Partners Endpoint
+
+* The filename begins with `{message-type-id}_`.
++
+For example, if the message type is named `custom-po`, the file name begins with `custom-po_`.
++
+* The AS2 MIME-Type in the incoming AS2 message is set as follows:
+** JSON - `application/json`
+** XML - `application/xml`
+** EDIFACT - `application/EDIFACT`, or `text/plain`
+** X12 - `application/EDI-X12`, or `text/plain`
+
+== Inbound Non-EDI Messages that Use the FTP or SFTP Protocol
+
+* The filename begins with `{message-type-id}_`. For example, if the message type is named `custom-po`, the file name begins with `custom-po_`.
++
+
+
+
 * The message posted to the endpoint has the appropriate content type.
 * If the source message type is X12 or EDIFACT, the message is posted to the base URL.
 * If the source message type is XML or JSON, the message is sent to the endpoint’s `{baseURL}/{message-type}`.
