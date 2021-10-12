@@ -1,7 +1,7 @@
 = Creating Inbound Message Flows
 :page-aliases: configure-message-flows.adoc
 
-Create inbound message flows to receive messages from partners, including messages that go through third party connections. When you create an inbound message flow, you can validate and transform the inbound messages and then send them to your backend systems.
+Create inbound message flows to receive messages from partners, including messages that go through third party connections. When you create an inbound message flow, you can validate and transform the inbound messages and then send them to your backend applications.
 
 Anypoint Partner Manager routes inbound messages based on matching identifiers configured for the partner.
 
@@ -90,7 +90,7 @@ The translation map is added to the message flow.
 [[configure-target]]
 == Configure the Target Message Type
 
-The target message type in an inbound message flow defines the structure of the messages that Partner Manager sends to the backend system. Partner Manager supports the JSON and XML formats for target message type in an inbound message flow.
+The target message type in an inbound message flow defines the structure of the messages that Partner Manager sends to the backend applications. Partner Manager supports the JSON and XML formats for target message type in an inbound message flow.
 
 To configure the target message type:
 
@@ -103,7 +103,7 @@ To configure the target message type:
 [[target-endpoint]]
 == Configure the Target Endpoint
 
-The target endpoint in an inbound message flow receives the transformed messages on the backend systems. Partner Manager supports the FTP, HTTP, HTTPS, and SFTP formats for the target endpoint in an inbound message flow.
+The target endpoint in an inbound message flow receives the transformed messages on the backend applications. Partner Manager supports the FTP, HTTP, HTTPS, and SFTP formats for the target endpoint in an inbound message flow.
 
 To configure the target endpoint:
 

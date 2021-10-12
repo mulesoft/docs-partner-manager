@@ -4,7 +4,7 @@ HTTP and HTTPS receive endpoint settings configure where to receive messages in 
 
 * Source at host
 +
-Source endpoint in an outbound message flow that receives application JSON and XML messages from the backend systems
+Source endpoint in an outbound message flow that receives application JSON and XML messages from the backend applications
 +
 * Receive from partners
 +
@@ -56,7 +56,7 @@ a| Enable this setting to manage the endpoint with API Manager. To use this func
 Note: Using this feature requires an API Manager license.
 
 |URL
-a|HTTP or HTTPS address where you receive outbound source messages from backend systems. Partner Manager automatically generates this ID after the first message flow that uses the endpoint is deployed.
+a|HTTP or HTTPS address where you receive outbound source messages from backend applications. Partner Manager automatically generates this ID after the first message flow that uses the endpoint is deployed.
 |Yes
 
 |Response timeout (in milliseconds)
@@ -120,12 +120,12 @@ Using the following values, depending on your environment:
 
 * The external HTTPS receive endpoint URL is `+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/+`.
 * Your backend applications send the application JSON and XML messages for your outbound message flows from `+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/{message-type}+`.
-* If `enterprise-ob-po-ack` is the message type, your backend systems post the HTTPS requests to the URL
+* If `enterprise-ob-po-ack` is the message type, your backend applications post the HTTPS requests to the URL
 `+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/enterprise-ob-po-ack+`.
 
 === Deploy to an On-Premises Mule Instance
 
-If you are deploying to an on-premises Mule instance with a firewall and load balancer, work with your hosting or network security team to obtain the externally accessible DNS or name of the host where the Mule instance is running, and replace `{runtime_host}` in the URL with the DNS name of your host. For example, if your DNS host name is `b2b.mycompany.com`, the receiver URL is `+https://b2b.mycompany.com/base-path/+`, and your backend systems post the HTTPS request to `+https://b2b.mycompany.com/base-path/{message-type}+`.
+If you are deploying to an on-premises Mule instance with a firewall and load balancer, work with your hosting or network security team to obtain the externally accessible DNS or name of the host where the Mule instance is running, and replace `{runtime_host}` in the URL with the DNS name of your host. For example, if your DNS host name is `b2b.mycompany.com`, the receiver URL is `+https://b2b.mycompany.com/base-path/+`, and your backend applications post the HTTPS request to `+https://b2b.mycompany.com/base-path/{message-type}+`.
 
 == See Also
 

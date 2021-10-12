@@ -8,7 +8,7 @@ Target endpoint in an outbound message flow to which transformed B2B EDI message
 +
 * Target at host
 +
-Target endpoint in an inbound message flow to which transformed application JSON and XML messages are sent to the backend systems
+Target endpoint in an inbound message flow to which transformed application JSON and XML messages are sent to the backend applications
 
 A host, partner, or 3rd party connection can own FTP send endpoints.
 

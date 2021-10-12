@@ -1,6 +1,6 @@
 = Creating Outbound Message Flows
 
-Create outbound message flows to receive application messages from your backend systems, validate and transform these messages to the format your partners expect, and then send them to your partners either directly, or through third party connections.
+Create outbound message flows to receive messages from your backend applications, validate and transform these messages to the format your partners expect, and then send them to your partners either directly, or through third party connections.
 
 Before you create your first message flow, configure your xref:setup-payload-storage-API.adoc[payload storage API].
 
@@ -20,7 +20,7 @@ To create an outbound message flow:
 [[source-at-host-endpoint]]
 == Configure the Source Endpoint
 
-The source endpoint in an outbound message flow receives application messages from the backend systems. Partner Manager supports the FTP, HTTP, HTTPS, and SFTP formats for the source endpoint.
+The source endpoint in an outbound message flow receives application messages from the backend applications. Partner Manager supports the FTP, HTTP, HTTPS, and SFTP formats for the source endpoint.
 
 To configure the source endpoint:
 
@@ -48,7 +48,7 @@ Partner Manager uses the partner reference ID and host reference ID to locate th
 
 To configure a partner reference ID, either select *All available identifiers* or select a specific partner identifier.
 
-To configure a host reference ID, either select *Ignore* or select your organization's internal reference ID (such as the business unit name) as it appears in the data element of the source JSON or XML message from your backend systems.
+To configure a host reference ID, either select *Ignore* or select your organization's internal reference ID (such as the business unit name) as it appears in the data element of the source JSON or XML message from your backend applications.
 
 [[translation-map]]
 == Import the Translation Map

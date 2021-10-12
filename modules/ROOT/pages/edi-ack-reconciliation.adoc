@@ -12,7 +12,7 @@ When your organization receives the functional acknowledgment (X12 997 or EDIFAC
 
 The following are examples of the actions your operations team might take while troubleshooting acknowledgment issues:
 
-* Retriggering the transaction from the backend system when reviewing rejected transactions due to missing data elements
+* Retriggering the transaction from the backend application when reviewing rejected transactions due to missing data elements
 * Asking your trading partner to confirm the receipt of the outbound transaction when reviewing overdue transactions
 
 == Troubleshoot Rejected or Overdue Acknowledgments

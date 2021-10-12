@@ -91,7 +91,7 @@ Outbound message flows that transform your backend application messages to EDI f
 
 Unlike EDI transactions that have well-defined standards for how sender, receiver, and document type information is presented in the data, the source messages for outbound B2B data exchange originating from your enterprise backend systems typically follow schemas. These schemas are usually defined by your backend application teams according to your organization’s data models.
 
-The receiving trading partner information on the application message from the backend system might not necessarily be the same as the name of the partner in Partner Manager. This is similar to how ISA and GS identifiers on an inbound EDI message might not be the same as the profile name of the partner.
+The receiving trading partner information on the application message from the backend application might not necessarily be the same as the name of the partner in Partner Manager. This is similar to how ISA and GS identifiers on an inbound EDI message might not be the same as the profile name of the partner.
 
 Partner Manager’s outbound message processing framework makes a dynamic lookup to determine the receiving partner based on the content in the application message received from the backend systems.
 
@@ -107,7 +107,7 @@ An outbound payment remittance advice JSON message from your Financials system t
 
 In order for Partner Manager to route these outbound transactions to the appropriate message flows for Mythical Supplier, you must add these values as Partner Reference IDs from the partner’s profile page by <<create-identifier,creating a new identifier>> and selecting the type as *Reference ID*.
 
-If your backend system sends outbound transactions to trading partners on behalf of more than one internal line of business, thus requiring you to set different X12 ISA and X12 GS sender identifiers on the transformed outbound data (depending on which LoB is sending the transaction), you can configure partner reference identifiers on your host profile, with the value in the application message’s payload that uniquely identifies the sending LoB.
+If your backend application sends outbound transactions to trading partners on behalf of more than one internal line of business, thus requiring you to set different X12 ISA and X12 GS sender identifiers on the transformed outbound data (depending on which LoB is sending the transaction), you can configure partner reference identifiers on your host profile, with the value in the application message’s payload that uniquely identifies the sending LoB.
 
 The actual usage of partner reference identifiers and how outbound message routing is determined, is explained in the outbound message documentation.
 
