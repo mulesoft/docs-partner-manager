@@ -33,6 +33,7 @@ a| Host that owns the endpoint:
 | Protocol selected in the *Protocol* field of the *New endpoint*. You cannot modify this value.
 | Yes
 
+
 | Description
 | User-supplied value that describes the purpose of the endpoint.
 | No
@@ -50,8 +51,11 @@ You can access the endpoint URL directly over the internet.
 | Manage with API manager
 a| Enable this setting to manage the endpoint with API Manager. To use this functionality, you must must do the following:
 
-* Create an HTTP API in API Manager in the same environment as the endpoint.
-* Enter an instance ID for the API in the *API Auto discovery id* field.
+. Create an HTTP API in API Manager in the same environment as the endpoint.
++
+When you create this API, select `HTTP API` as the asset type.
++
+. Enter the API instance ID of the new API in the *API Auto discovery id* field.
 
 Note: Using this feature requires an API Manager license.
 
