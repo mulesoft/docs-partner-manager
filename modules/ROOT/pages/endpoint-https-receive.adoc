@@ -49,15 +49,15 @@ You can access the endpoint URL directly over the internet.
 | No
 
 | Manage with API manager
-a| Enable this setting to manage the endpoint with API Manager. To use this functionality, you must must do the following:
+a| Enable this setting to manage the endpoint with API Manager. To use this functionality, you must create an HTTP API in API Manager in the same environment and organization as the endpoint.
 
-. Create an HTTP API in API Manager in the same environment as the endpoint.
-+
-When you create this API, select `HTTP API` as the asset type.
-+
-. Enter the API instance ID of the new API in the *API Auto discovery id* field.
+When you create this API in API Manager:
 
-Note: Using this feature requires an API Manager license.
+* Select `HTTP API` as the asset type.
+* Leave the defaults on the *Endpoint configuration* screen.
+* Copy the API instance ID and paste it into the  *API Auto discovery id* field on the Partner Manager *New endpoint: Receive from Partners* window.
+
+NOTE: Using this feature requires an API Manager license.
 
 |URL
 a|HTTP or HTTPS address where you receive outbound source messages from backend applications. Partner Manager automatically generates this ID after the first message flow that uses the endpoint is deployed.
