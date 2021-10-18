@@ -1,4 +1,4 @@
-third party= Create and Configure Endpoints
+= Create and Configure Endpoints
 
 You can create new endpoints from the *Partners or *Host* page, or by using the Message Flow wizard.
 

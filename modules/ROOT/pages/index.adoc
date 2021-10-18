@@ -1,4 +1,5 @@
 = Anypoint Partner Manager
+page-aliases: docs.mulesoft.com/partner-manager/latest
 
 Anypoint Partner Manager enables you to perform bidirectional Business-to-Business (B2B) message exchanges using APIs and Electronic Data Interchange (EDI) formats, and to conduct business transactions such as buying and selling products with your partners. Transactions are typically transmitted over transports such as HTTPS and SFTP, and exchanges such as AS2. Partner Manager supports X12, JSON, and XML message formats.
 
