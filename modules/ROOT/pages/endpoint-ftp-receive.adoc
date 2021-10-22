@@ -1,76 +1,100 @@
 = FTP Receive Endpoint Settings
 
-FTP receive endpoint settings determine where to receive or send the following types of data:
+FTP receive endpoint settings determine where to receive or send data in the following contexts:
 
 * Receive from partners
 +
-Source endpoint in an inbound message flow that receives B2B EDI messages from partners either directly or via third party connections
+Source endpoint in an inbound message flow that receives B2B messages from partners either directly or via third party connections.
++
+A host, partner, or third party connection can own FTP receive from partners endpoints.
++
 * Source at host
 +
-Source endpoint in an outbound message flow that receives JSON and XML messages from the backend applications
-
-A host, partner, and third party connection can own FTP receive endpoints.
+Source endpoint in an outbound message flow that receives messages from the backend applications.
 
 Create FTP receive endpoints by configuring these settings on the Host or Partner pages. You can also create these endpoints when you configure an outbound message flow.
 
 [%header%autowidth.spread]
 |===
-|Name |Description | Required
+|Name |Description | Default Value |Required
 | Endpoint Name
-| Automatically generated name used to identify the endpoint, which you can subsequently modify manually.
-| Yes
+| Automatically-generated name used to identify the endpoint, which you can modify manually.
+|
+|x
 
 | Owner
 | Partner, third party connection, or host who owns the endpoint.
-| Yes
+|
+|x
 
 | Protocol
-| Protocol selected in the *Protocol* field of the *New endpoint*. You cannot modify this value.
-| Yes
+| Protocol selected in the *Protocol* field of the *New endpoint* window. You cannot modify this value.
+|
+| x
+
+| Endpoint name
+|
+|
+| x
+
 
 | Description
 | User-supplied value that describes the purpose of the endpoint.
-| No
+|
+|
 
 | Host
 | FTP server host, such as `ftp.mulesoft.com`, `localhost`, or `192.168.0.1`. The host must be accessible from your Mule environment.
-| Yes
+|
+| x
 
 | Port
 | Port number of the FTP server.
-| Yes
+|
+| x
 
 | Username
 | Username for connecting to the FTP server.
-| Yes, if the server is authenticated
+|
+| x (if the server is authenticated)
+
 
 | Password
 | Password for the FTP server.
-| Yes, if the server is authenticated
+|
+| x (if the server is authenticated)
 
 | Source path
 | Path on the FTP server to which the partner or third party connection sends the inbound files.
-| Yes
+|
+| x
 
 | Polling Frequency
-| Frequency with which the server checks the source path for new files. The default is `1 minute`.
-| Yes
+| Frequency with which the server checks the source path for new files.
+| 1 minute
+| x
 
 | Size check wait time
-| Wait time, in seconds, between size checks to determine if a file is ready for processing. The default is `1 second`. This default allows a file write to complete before processing.
+| Wait time, in seconds, between size checks to determine if a file is ready for processing. The default of `1 second` enables a file write to complete before processing.
 
 Mule performs two size checks by waiting the amount of time specified in this field. If both checks return the same value, the file is ready to process.
 
 To disable this feature, specify a negative number or omit the value.
+| 1 second
+| x
 
-| Yes
+| File name pattern
+|
+|
+|
 
 | Archival Path
-| FTP server path at which to store a copy of the file obtained from `source path`.
-| No
+| FTP server path at which to store a copy of the file obtained from the source path.
+|
+|
 |===
 
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:create-endpoint.adoc[Creating Endpoints]
