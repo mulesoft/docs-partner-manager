@@ -32,12 +32,6 @@ Create FTP receive endpoints by configuring these settings on the Host or Partne
 |
 | x
 
-| Endpoint name
-|
-|
-| x
-
-
 | Description
 | User-supplied value that describes the purpose of the endpoint.
 |
@@ -63,6 +57,7 @@ Create FTP receive endpoints by configuring these settings on the Host or Partne
 | Password for the FTP server.
 |
 | x (if the server is authenticated)
+// Is FTP authenticated?
 
 | Source path
 | Path on the FTP server to which the partner or third party connection sends the inbound files.
@@ -75,6 +70,7 @@ Create FTP receive endpoints by configuring these settings on the Host or Partne
 | x
 
 | Size check wait time
+// Appears in source at host endpoint only
 | Wait time, in seconds, between size checks to determine if a file is ready for processing. The default of `1 second` enables a file write to complete before processing.
 
 Mule performs two size checks by waiting the amount of time specified in this field. If both checks return the same value, the file is ready to process.
