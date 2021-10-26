@@ -56,14 +56,21 @@ Create FTP receive endpoints by configuring these settings on the Host or Partne
 | Frequency with which the server checks the source path for new files. The default is `1 minute`.
 | Yes
 
+| Supported Format Types
+|Indicates whether the endpoint supports EDI messages (EDIFACT, X12) or non-EDI messages (JSON, XML).
+| Yes
+
 | Size check wait time
 | Wait time, in seconds, between size checks to determine if a file is ready for processing. The default is `1 second`. This default allows a file write to complete before processing.
 
 Mule performs two size checks by waiting the amount of time specified in this field. If both checks return the same value, the file is ready to process.
 
 To disable this feature, specify a negative number or omit the value.
-
 | Yes
+
+| File name pattern
+| xref:file-name-pattern.adoc[File name pattern] required by your partner.
+| No
 
 | Archival Path
 | FTP server path at which to store a copy of the file obtained from `source path`.
