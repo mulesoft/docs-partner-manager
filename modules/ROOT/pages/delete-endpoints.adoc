@@ -1,4 +1,4 @@
-= Delete Endpoints
+= Deleting Endpoints
 
 You can delete endpoints that are not used in message flows from the host or partner page:
 

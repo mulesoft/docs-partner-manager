@@ -1,0 +1,12 @@
+= Deleting Message Types
+
+You can delete message types that are not used in message flows:
+
+. From Anypoint Partner Manager, select the *<host name>* from the navigation menu.
+. Locate the message type that you want to delete.
++
+You can search for message types that don’t have associated message flows by looking for `-` in the *Message Flows* column.
++
+. In the row containing the message type that you want to delete, hover over the messagetype name, select the trash can icon that appears, and click *Delete*.
+
+== See Also

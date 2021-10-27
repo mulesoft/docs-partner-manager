@@ -1,4 +1,4 @@
-= Create and Configure Message Types
+= Creating Message Types
 
 Message types define the structure of the transactions received or sent by Anypoint Partner Manager.
 
@@ -9,7 +9,7 @@ A message type in Partner Manager can be used in one of the following ways:
 * Source at host
 * Send to partners
 
-Message types are always managed in the host page, regardless of whether they are used for a single partner or for multiple trading partners. Additionally, message types are reusable across message flows for different partners.
+Message types are always managed in the host page, regardless of whether they are used for a single partner or for multiple partners. Message types are reusable across message flows for different partners.
 
 You can create message types from the host page or the Message Flow wizard.
 
