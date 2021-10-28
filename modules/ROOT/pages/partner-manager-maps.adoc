@@ -1,4 +1,4 @@
-= EDI Translation Maps
+= Translation Maps
 
 Partner Manager uses DataWeave maps to transform business transactions between EDI message format X12 or EDIFACT and your organization’s enterprise application message formats, such as JSON and XML.
 

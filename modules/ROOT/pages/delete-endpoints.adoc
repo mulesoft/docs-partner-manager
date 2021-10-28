@@ -5,7 +5,7 @@ You can delete endpoints that are not used in message flows from the host or par
 . From Anypoint Partner Manager, select the *<host name>* or *Partners* from the navigation menu.
 . Locate the endpoint that you want to delete.
 +
-Note that you can search for any endpoints that don’t have an associated message flow by looking for `0` in the *Message Flows* column.
+Note that you can search for any endpoints that don’t have an associated message flow by looking for `-` in the *Message Flows* column.
 +
 . In the row containing the endpoint that you want to delete, hover over the endpoint name, select the trash can icon that appears, and click *Delete*.
 . Select the trash can icon and click *Delete*.
