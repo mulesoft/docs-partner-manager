@@ -10,13 +10,13 @@ You can create message flows in one of the following contexts:
 
 * Inbound
 +
-An inbound message flow receives EDI payloads from your partners, transforms them into your internal application message format, and sends the transformed messages to your backend systems.
+An inbound message flow receives messages from your partners, transforms them into your internal application message format, and sends the transformed messages to your backend systems.
 +
 For more information, see xref:inbound-message-flows.adoc[Inbound Message Flows].
 +
 * Outbound
 +
-An outbound message flow receives messages from your backend applications, transforms the messages to EDI, and sends the EDI messages to your partner.
+An outbound message flow receives messages from your backend applications, transforms the messages to your partner's message format, and sends the EDI messages to your partner.
 +
 For more information, see xref:outbound-message-flows.adoc[Outbound Message Flows].
 
