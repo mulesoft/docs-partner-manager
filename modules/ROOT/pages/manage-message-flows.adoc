@@ -47,7 +47,7 @@ a|
 
 | Map
 | View the associated DataWeave map or import another one.
-|xref:partner-manager-maps[EDI Translation Maps]
+|xref:partner-manager-maps[Translation Maps]
 
 | Target at <host>
 a| * Select a different target at host message type.
@@ -94,7 +94,6 @@ a| * Select a different send to partners message type.
 * (EDIFACT or X12 message type) Indicate whether or not to send a 997 functional acknowledgment, and select the endpoint to which to send the acknowledgment.
 * (EDFIACT or X12 message type) View current validation settings.
 * Select different identifiers for the host and partner.
-*Vijay, is this definition correct?*
 a| * xref:partner-manager-create-message-type.adoc[Create and Configure Message Types]
 * xref:edi-ack-reconciliation.adoc[EDI Acknowledgment Reconciliation]
 * xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
