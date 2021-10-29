@@ -1,4 +1,4 @@
-= Configure and Manage Partners
+= Configuring and Managing Partners
 
 Use the *Partners* page to create and manage partners. From this page, you can:
 

@@ -71,11 +71,11 @@ Follow these steps to test the map locally in Anypoint Studio:
 . In *Package Explorer*, right-click on the project, and click *Run > Run as Mule application*.
 . Use a REST client to post a JSON or an XML payload to `+http://localhost:8081/edifact/outbound+`
 +
-The application returns the translated EDIFACT transaction.
+The application returns the transformed EDIFACT transaction.
 +
 . After you verify that the map works correctly, copy the DataWeave (dwl) file, and import it to the Map section of your outbound EDIFACT message flow.
 
 == See Also
 
 * xref:https://anypoint.mulesoft.com/exchange/org.mule.examples/b2b-demo-EDIFACT-transform/[Transform XML to Outbound EDIFACT 850 Purchase Orders Example Project on Exchange]
-* xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow]
+* xref:create-outbound-message-flow.adoc[Create and Configure Outbound Message Flows]

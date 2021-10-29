@@ -4,15 +4,15 @@ FTP send endpoint settings configure where to send messages in the following con
 
 * Send to partners
 +
-Target endpoint in an outbound message flow to which translated B2B EDI messages are sent to the partners
+Target endpoint in an outbound message flow to which transformed B2B messages are sent to the partners
 
 * Target at host
 +
-Target endpoint in an inbound message flow to which translated application JSON and XML messages are sent to the backend systems
+Target endpoint in an inbound message flow to which transformed JSON and XML messages are sent to the backend applications
 
-A host, partner, or 3rd party connection can own FTP send endpoints.
+A host, partner, or third party connection can own FTP send endpoints.
 
-Create FTP send endpoints by configuring these settings on the Host or Partner pages:
+Create FTP send endpoints by configuring these settings on the Host or Partner pages. You can also create these endpoints when you configure an outbound message flow.
 
 [%header%autowidth.spread]
 |===
@@ -52,11 +52,11 @@ Create FTP send endpoints by configuring these settings on the Host or Partner p
 
 |Target Path
 |Path on your FTP server to EDI files that were generated from outbound message flows. This is also the path on your FTP server for storing
-translated JSON and XML files generated from inbound message flows.
+transformed JSON and XML files generated from inbound message flows.
 |Yes
 
-|Filename pattern
-|xref:file-name-pattern.adoc[File name pattern] required by your trading partner or backend application.
+|File name pattern
+|xref:file-name-pattern.adoc[File name pattern] required by your partner or backend application.
 |
 |===
 

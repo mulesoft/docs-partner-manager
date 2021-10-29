@@ -1,24 +1,23 @@
 = AS2 Receive Endpoint Settings
 
-AS2 receive endpoint settings configure the source endpoint in an inbound message flow that receives B2B EDI messages from partners directly or via 3rd party connections. One AS2 endpoint can receive data from multiple partners, 3rd party connections, or both.
+AS2 receive endpoint settings configure the source endpoint in an inbound message flow that receives B2B messages from partners directly or via third party connections. One AS2 endpoint can receive data from multiple partners, third party connections, or both.
 
-Only a host can own AS2 receive endpoints. Use a host-owned AS2 receive endpoint for an inbound message flow that uses a 3rd party connection.
+Only a host can own AS2 receive endpoints. Use a host-owned AS2 receive endpoint for an inbound message flow that uses a third party connection.
+
+NOTE: Each AS2 receive endpoint configuration gets deployed as an individual Mule application in the runtime. Consider reusing existing AS2 receive endpoint configuration across a partner's message flows.
 
 Create AS2 receive endpoints by configuring these settings on the Host page:
 
 [%header%autowidth.spread]
 |===
 | Setting | Description | Required
-|Owner
-|Host that owns the endpoint
-|Yes
-
-|Usage
-|`Receive from partners`
-|No
 
 |Protocol
 |`AS2`
+|Yes
+
+|Owner
+|Host that owns the endpoint
 |Yes
 
 |Endpoint name
@@ -29,13 +28,32 @@ Create AS2 receive endpoints by configuring these settings on the Host page:
 |User-supplied value that describes the purpose of the endpoint.
 |No
 
-|Private port when deploying to Anypoint Virtual Private Cloud (Anypoint VPC).
+|Private port (when deploying to VPC)
 a|
-* When enabled, the AS2 receive endpoint application deploys to the private port `8092` in Mule in your xref:runtime-manager::virtual-private-cloud.adoc[Anypoint VPC]. You can manage the access control to the endpoint via the Anypoint VPC and dedicated load balancer settings.
+* When enabled, the AS2 receive endpoint application deploys to the private port `8092` in your xref:runtime-manager::virtual-private-cloud.adoc[Anypoint VPC]. You can manage the access control to the endpoint via the Anypoint VPC and dedicated load balancer settings.
 * When disabled, the AS2 receive endpoint application deploys to the public port `8082` by default. You can access the endpoint URL directly over the internet.
-
-This configuration is applicable only to Anypoint VPC deployments from Partner Manager.
++
+This configuration applies only to Anypoint VPC deployments from Partner Manager.
 |No
+
+|Enforce security level
+a|Indicates whether Partner Manager rejects incoming AS2 messages aren't signed, encrypted, or both. When Partner Manager rejects a message, it returns a negative Message Disposition Notification (MDN) to the sender.
+
+Allowed values:
+
+* Signed & Encrypted
++
+Rejects incoming messages that aren't both signed and encrypted.
+* Signed
++
+Rejects incoming messages that aren't signed.
+* Encrypted
++
+Rejects incoming messages that aren't encrypted.
+* None
++
+Accepts messages that aren't signed or encrypted.
+| Signed & Encrypted
 
 |<Host> keystore
 |Host xref:create-keystore.adoc[keystore] files in your environment that store your organization's public certificate and private key
@@ -52,7 +70,7 @@ When an AS2 receive endpoint is deployed with the private port configuration ena
 
 You can view this URL by either selecting the receiving endpoint from your deployed message flow or clicking the endpoint name from the endpoints list. You can share this URL with the partners that send AS2 messages to this endpoint.
 
-If your organization uses Anypoint VPC without a dedicated load balancer (DLB), your organization’s platform administrator can configure the necessary xref:runtime-manager::vpc-firewall-rules-concept.adoc[VPC firewall rules] to allow specific partner or 3rd party connection IP addresses to access the endpoint.
+If your organization uses Anypoint VPC without a dedicated load balancer (DLB), your organization’s platform administrator can configure the necessary xref:runtime-manager::vpc-firewall-rules-concept.adoc[VPC firewall rules] to allow specific partner or third party connection IP addresses to access the endpoint.
 
 === Deploy to CloudHub on a Private Port
 

@@ -6,14 +6,14 @@ Partner Manager uses endpoints to receive transmissions from partners and messag
 
 == Endpoint Ownership
 
-You can assign the host, partner, or 3rd party connection as the owner of endpoints to control the use of endpoints within inbound and outbound message flows.
+You can assign the host, partner, or third party connection as the owner of endpoints to control the use of endpoints within inbound and outbound message flows.
 
-When creating partner-facing endpoints directly from the partner, or 3rd party connecction, the ownership of the endpoint is automatically assigned to the entity from which the endpoint was created.
+When creating partner-facing endpoints directly from the partner, or third party connecction, the ownership of the endpoint is automatically assigned to the entity from which the endpoint was created.
 
 In a message flow, availability depends on the endpoint assignment:
 
 * Any partner can select an endpoint assigned to the host.
-* If an endpoint is assigned to a specific partner or 3rd party connection, than that endpoint is available only to the partner for which the endpoint is assigned.
+* If an endpoint is assigned to a specific partner or third party connection, than that endpoint is available only to the partner for which the endpoint is assigned.
 
 == See Also
 

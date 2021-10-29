@@ -1,0 +1,51 @@
+= Inbound Message Routing
+
+Depending on the endpoint type and protocol, the successful routing of your partners send messages to the configured source endpoints uses the message type ID, file-naming pattern, and content type.
+
+== Messages that Use an AS2 Receive from Partners Endpoint
+
+To successfully route inbound messages that use an AS2 receive from partners endpoint, your partner does the following:
+
+* Uses a filename that begins with `{message-type-id}_`.
++
+For example, if the message type is named `custom-po`, the file name should begin with `custom-po_`.
++
+* Sets the AS2 MIME-Type in the inbound AS2 message as follows, depending on the message type:
+
+** JSON: `application/json`
+** XML: `application/xml`
+** EDIFACT: `application/EDIFACT`, or `text/plain`
+** X12: `application/EDI-X12`, or `text/plain`
+
+== Messages that Use an FTP or SFTP Endpoint
+
+To successfully route inbound messages that use an FTP or SFTP endpoint, your partner does the following:
+
+* For EDI messages (Edifact or X12), uses the correct EDI identifiers in the message content.
+* For non-EDI (JSON or XML) messages, uses a filename that begins with `{message-type-id}_` and that has an appropriate file extension:
++
+** `.xml` for XML files
+** `.json` for JSON files
+
++
+For example, if the message type is named `custom-po` and it is formatted as XML, the file name should begin with `custom-po_` and should end with `.xml`.
+
+== Messages that Use an HTTP or HTTPS Receive from Partners Endpoint
+
+To successfully route inbound messages that use an HTTP receive from partners endpoint or an HTTPS receive from partners endpoint, your partner does the following:
+
+* For EDI messages (EDIFACT or X12), posts them to the base URL and sets the Content-Type in the incoming HTTP request as follows, depending on the message format:
+** JSON: `application/json`
+** XML: `application/xml`
+** EDIFACT: `application/EDIFACT`, or `text/plain`
+** X12: `application/EDI-X12`, or `text/plain`
+
+* For non-EDI messages (JSON or XML), includes the message type ID in the relative path of the HTTP request.
++
+For example, if the base URL of the HTTP or HTTPS receive from partners endpoint is `https://b2b-inbound-http-abcd.us-e2.cloudhub.io:443/receive1/`, and the expected message type ID for the inbound message is `custom-po`, your partner should post the message to the `https://b2b-inbound-http-2jyw.us-e2.cloudhub.io:443/receive1/custom-po` URL.
+
+== See Also
+
+* xref:inbound-message-flows.adoc[Inbound Message Flows]
+* xref:create-inbound-message-flow.adoc[Create Inbound Message Fllows]
+* xref:activity-tracking.adoc[Track Transmission Activity]

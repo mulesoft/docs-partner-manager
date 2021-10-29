@@ -1,4 +1,4 @@
-= Configure Send Settings for Outbound X12 Messages
+= Configuring Send Settings for Outbound X12 Messages
 
 Partner Manager enables you to configure the X12 envelope parameters, delimiters, validation rules, character encoding, and control numbers to apply when sending an outbound X12 transmission to a partner.
 
@@ -146,6 +146,6 @@ Possible values include:
 
 == See Also
 
-* xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow]
-* xref:create-partner.adoc[Create a New Partner]
-* xref:modify-partner-settings.adoc[Modify a Partner's Settings]
+* xref:create-outbound-message-flow.adoc[Creating and Configuring Outbound Message Flows]
+* xref:create-partner.adoc[Creating Partners]
+* xref:modify-partner-settings.adoc[Modify Partner Settings]

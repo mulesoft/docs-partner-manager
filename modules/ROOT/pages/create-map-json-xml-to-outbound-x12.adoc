@@ -62,12 +62,12 @@ Follow these steps to test the map locally in Anypoint Studio:
 
 . In *Package Explorer*, right-click on the project, and click *Run > Run as Mule application*.
 . Use a REST client to post a JSON or an XML payload to the URL `+http://localhost:8081/x12/out+`. +
-The application returns the translated X12 transaction.
+The application returns the transformed X12 transaction.
 . Copy the DataWeave map from `src/main/resources/x12/OUT-application-message-to-X12-version-transaction-partner.dwl` and rename it to something meaningful, for example, `OUT-SAP-purchaseorder-XML-to-X12-4010-850-MythicalSupplier.dwl`.
 
-Later, when you create and configure an outbound message flow, you can import the `.dwl` file to the *Map* section of outbound message flow.
+Later, when you create and configure outbound message flows, you can import the `.dwl` file to the *Map* section of outbound message flow.
 
 == See Also
 
 * xref:https://anypoint.mulesoft.com/exchange/org.mule.examples/b2b-demo-x12-transform/[Transform XML to Outbound EDI X12 850 Purchase Orders Example Project on Exchange]
-* xref:create-outbound-message-flow.adoc[Create and Configure an Outbound Message Flow]
+* xref:create-outbound-message-flow.adoc[Create and Configure Outbound Message Flows]

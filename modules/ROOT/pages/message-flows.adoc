@@ -1,98 +1,26 @@
-= Partner Manager Message Flows
+= Configuring and Managing Message Flows
 
 A message flow is the path along which a message travels from its source, through a DataWeave transformation map, to its target. You set up message flows to send and receive messages between your systems and your trading partners.
 
-Partner Manager message flows consist of objects such as endpoints, message types, identifiers, and mappings. Partner Manager’s message framework orchestrates the processing of your business transactions from source to target using these configuration objects as shown in the following diagram:
+Anypoint Partner Manager message flows consist of objects such as endpoints, message types, identifiers, and mappings. Partner Manager’s message framework orchestrates the processing of your business transactions from source to target using the configuration objects shown in the following diagram:
 
 image::pm-message-flow.png[Partner Manager message flow configuration objects]
 
 You can create message flows in one of the following contexts:
 
-* <<inbound-message-flow,Inbound>>
+* Inbound
 +
-An inbound message flow receives EDI payloads from your trading partners, translates them into your internal application message format, and sends the translated messages to your backend systems.
-
-* <<outbound-message-flow,Outbound>>[Outbound message flow]
+An inbound message flow receives messages from your partners, transforms them into your internal application message format, and sends the transformed messages to your backend systems.
 +
-An outbound message flow receives application messages from your backend systems, translates the message to EDI, and sends the EDI transmissions to your trading partner.
-
-[[inbound-message-flow]]
-== Inbound Message Flows
-
-Create an inbound message flow to receive and translate application messages from your partner and forward them to your backend systems:
-
-image::pm-inbound-message-flow.png[Inbound message flow]
-
-|===
-|Setting |Description |Supported Formats or Protocols
-
-|Receiving endpoint | The endpoint where the host receives transmissions from the trading partner. a|
-* AS2
-* FTP
-* SFTP
-
-|Source message type |The message type of the input payload. a|
-* X12
-* EDIFACT
-
-|Transform |The DataWeave map used to transform EDI into XML or JSON formats. a| N/A
-
-|Target message type |The format into which the DataWeave map transforms received messages. a|
-* JSON
-* XML
-
-|Target endpoint | The endpoint to which the translated JSON or XML payload needs to be sent. This is typically a process API.
- a|
-* FTP
-* HTTP
-* HTTPS
-* SFTP
-|===
-
-[[outbound-message-flow]]
-== Outbound Message Flows
-
-Create an outbound message flow to receive and transform application messages from your backend systems and then forward the translated EDI messages to your partners.
-
-The following diagram shows the configurations of an outbound message flow. The diagram also shows how Partner Manager’s message processing framework orchestrates the end-to-end routing and the transformation of your outbound business transactions from your organization’s backend systems to your trading partners:
-
-image::pm-outbound-message-flow.png[Outbound message flow]
-
-|===
-|Setting |Description |Supported Formats or Protocols
-
-|Receiving endpoint |The endpoint where the host receives transmissions from the backend. a|
-* FTP
-* HTTP
-* HTTPS
-* SFTP
-
-|Source message type |The message type of the input payload received from the backend. a|
-* JSON
-* XML
-
-|Transform |The DataWeave map for JSON or XML to EDI translation. a| N/A
-
-|Target message type |
-The message type to which the input payload needs to be translated.
-a|
-* EDIFACT
-* X12
-
-|Target endpoint |
-The trading partner endpoint to which the translated EDI payload needs to be sent.
- a|
-* AS2
-* FTP
-* HTTP
-* HTTPS
-* SFTP
-|===
+For more information, see xref:inbound-message-flows.adoc[Inbound Message Flows].
++
+* Outbound
++
+An outbound message flow receives messages from your backend applications, transforms the messages to your partner's message format, and sends the EDI messages to your partner.
++
+For more information, see xref:outbound-message-flows.adoc[Outbound Message Flows].
 
 == See Also
 
-* xref:configure-message-flows.adoc[Create an Inbound Message Flow]
-* xref:create-outbound-message-flow.adoc[Create and Configure Outbound Message Flows]
-* xref:outbound-message-routing.adoc[Outbound Message Routing]
-* xref:manage-message-flows.adoc[Manage Message Flows]
-* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
+* xref:create-inbound-message-flow.adoc[Creating Inbound Message Flows]
+* xref:create-outbound-message-flow.adoc[Creating Outbound Message Flows]

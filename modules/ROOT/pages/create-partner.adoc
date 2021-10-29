@@ -1,17 +1,13 @@
-= Create a New Partner
+= Creating Partners
 
 Create a new partner by using the *Partners* page to specify partner-specific information such as name, identifiers, endpoints, and validation rules.
-
-== Prerequisites
 
 Before you create your first partner, xref:setup-payload-storage-API.adoc[make sure that you have configured your payload storage API] and that you have the following information:
 
 * The partner's name (usually the name of the company)
 * One or more partner identifiers (such as the AS2 ID, X12-ISA, X12 GS, and so on)
 
-== Steps
-
-After meeting the prerequisites to create a partner:
+To create a partner:
 
 . In Partner Manager, select *Partners* in the navigation menu.
 . Click *Create partner > Partner*.
@@ -67,5 +63,5 @@ After you create a partner and configure partner-level endpoints (if needed), yo
 == See Also
 
 * xref:message-flows.adoc[Set Up Message Flows]
-* xref:modify-partner-settings.adoc[Modify a Partner's Settings]
-* xref:partner-manager-delete-partner.adoc[Delete a Partner]
+* xref:modify-partner-settings.adoc[Modifying Partner Settings]
+* xref:partner-manager-delete-partner.adoc[Deleting Partners]
