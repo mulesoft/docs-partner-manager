@@ -4,7 +4,7 @@ HTTP and HTTPS send endpoint settings configure where to send messages in the fo
 
 * Send to partners
 +
-Target endpoint in an outbound message flow to which transformed B2B EDI messages are sent to the partners either directly or via a third party connection
+Target endpoint in an outbound message flow to which transformed B2B messages are sent to the partners either directly or via a third party connection
 +
 * Target at host
 +

@@ -76,7 +76,7 @@ The acknowledgment is added to the message flow.
 [[import-map]]
 == Import the Translation Map
 
-A translation map in an inbound message flow transforms your inbound messages to your organization's enterprise application format. Create a translation map by using DataWeave. For more information, see xref:partner-manager-maps.adoc[ Translation Maps].
+A translation map in an inbound message flow transforms your inbound message format to your organization's enterprise application format. Create a translation map by using DataWeave. For more information, see xref:partner-manager-maps.adoc[ Translation Maps].
 
 To import the translation map:
 

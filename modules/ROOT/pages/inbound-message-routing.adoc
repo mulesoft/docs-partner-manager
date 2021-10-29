@@ -22,9 +22,13 @@ For example, if the message type is named `custom-po`, the file name should begi
 To successfully route inbound messages that use an FTP or SFTP endpoint, your partner does the following:
 
 * For EDI messages (Edifact or X12), uses the correct EDI identifiers in the message content.
-* For non-EDI (JSON or XML) messages, uses a filename that begins with `{message-type-id}_`.
+* For non-EDI (JSON or XML) messages, uses a filename that begins with `{message-type-id}_`, and that has an appropriate file extension:
 +
-For example, if the message type is named `custom-po`, the file name should begin with `custom-po_`.
+** `.xml` for XML files
+** `.json` for JSON files
+
++
+For example, if the message type is named `custom-po` and it is formatted as XML, the file name should begin with `custom-po_` and should end with `.xml`.
 
 == Messages that Use an HTTP or HTTPS Receive from Partners Endpoint
 

@@ -12,7 +12,7 @@ Source endpoint in an inbound message flow that receives inbound messages (EDIFA
 
 IMPORTANT: Each HTTP and HTTPS receive endpoint configuration gets deployed as an individual Mule application in the runtime. Consider reusing existing HTTP and HTTPS receive endpoint configurations across a partner's message flows.
 
-Create HTTP and HTTPS receive endpoints by configuring these settings on the host page:
+Create HTTP and HTTPS receive endpoints by configuring these settings on partner or third party connection page:
 
 [%header%autowidth.spread]
 |===
@@ -22,7 +22,7 @@ Create HTTP and HTTPS receive endpoints by configuring these settings on the hos
 |Yes
 
 | Owner
-a| Host that owns the endpoint:
+a| Endpoint owner:
 
 * Only the host can own source at host HTTP receive endpoints.
 * The host, partner, or third-party connection can own receive from partner HTTP receive endpoints.
@@ -61,7 +61,7 @@ NOTE: Using this feature requires an API Manager license.
 | No
 
 |URL
-a|HTTP or HTTPS address where you receive outbound source messages from backend applications. Partner Manager automatically generates this ID after the first message flow that uses the endpoint is deployed.
+a|HTTP or HTTPS address where you receive outbound source messages from backend applications or inbound B2B messages from your partners. Partner Manager automatically generates this ID after the first message flow that uses the endpoint is deployed.
 |Yes
 
 |Response timeout (in milliseconds)
