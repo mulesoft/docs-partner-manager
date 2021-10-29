@@ -65,7 +65,7 @@ Follow these steps to test the map locally in Anypoint Studio:
 The application returns the transformed X12 transaction.
 . Copy the DataWeave map from `src/main/resources/x12/OUT-application-message-to-X12-version-transaction-partner.dwl` and rename it to something meaningful, for example, `OUT-SAP-purchaseorder-XML-to-X12-4010-850-MythicalSupplier.dwl`.
 
-Later, when you Create and Configure Outbound Message Flows, you can import the `.dwl` file to the *Map* section of outbound message flow.
+Later, when you create and configure outbound message flows, you can import the `.dwl` file to the *Map* section of outbound message flow.
 
 == See Also
 
