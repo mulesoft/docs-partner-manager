@@ -55,7 +55,7 @@ When you create this API in API Manager:
 
 * Select `HTTP API` as the asset type.
 * Leave the defaults on the *Endpoint configuration* screen.
-* Copy the API instance ID and paste it into the  *API Auto discovery id* field on the Partner Manager *New endpoint: Receive from Partners* window.
+* Copy the API instance ID and paste it into the *API Auto discovery id* field on the Partner Manager *New endpoint: Receive from Partners* window.
 
 NOTE: Using this feature requires an API Manager license.
 | No
