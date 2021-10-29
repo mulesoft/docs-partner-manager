@@ -28,7 +28,7 @@ To modify the settings of an inbound message flow:
 | Receiving endpoint <endpoint name>
 a|
 * Select a different receiving endpoint.
-*  (AS2 endpoint) Select a different AS2 sender.
+* (AS2 endpoint) Select a different AS2 sender.
 * (AS2 endpoint) View the AS2 certificate associated with the endpoint.
 a|
 

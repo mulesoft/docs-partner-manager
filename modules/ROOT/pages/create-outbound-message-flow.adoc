@@ -46,7 +46,7 @@ To create the source message type:
 [[reference-ids]]
 == Configure Reference IDs for the Partner and Host
 
-Partner Manager uses the partner reference ID and host reference ID to locate the appropriate message flow for routing outbound messages. For information about about how this routing process works, see xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers] and xref:outbound-message-routing.adoc[Outbound Message Routing].
+Partner Manager uses the partner reference ID and host reference ID to locate the appropriate message flow for routing outbound messages. For information about how this routing process works, see xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers] and xref:outbound-message-routing.adoc[Outbound Message Routing].
 
 To configure a partner reference ID, either select *All available identifiers* or select a specific partner identifier.
 
@@ -55,7 +55,7 @@ To configure a host reference ID, either select *Ignore* or select your organiza
 [[translation-map]]
 == Import the Translation Map
 
-A translation map in an outbound message flow transforms outbound messages from your organization's enterprise application format to the format your partners expect. Create a translation map by using DataWeave. For more information, see see xref:partner-manager-maps.adoc[Translation Maps].
+A translation map in an outbound message flow transforms outbound messages from your organization's enterprise application format to the format your partners expect. Create a translation map by using DataWeave. For more information, see xref:partner-manager-maps.adoc[Translation Maps].
 
 To import the translation map:
 
