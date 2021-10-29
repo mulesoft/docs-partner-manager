@@ -46,7 +46,7 @@ To create the source message type:
 [[reference-ids]]
 == Configure Reference IDs for the Partner and Host
 
-Partner Manager uses the partner reference ID and host reference ID to locate the appropriate message flow for routing outbound messages. For information about about how this routing process works, see xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers] and xref:outbound-message-routing.adoc[Outbound Message Routing].
+Partner Manager uses the partner reference ID and host reference ID to locate the appropriate message flow for routing outbound messages. For information about how this routing process works, see xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers] and xref:outbound-message-routing.adoc[Outbound Message Routing].
 
 To configure a partner reference ID, either select *All available identifiers* or select a specific partner identifier.
 
