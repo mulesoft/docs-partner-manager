@@ -23,12 +23,14 @@ The following are the supported property placeholders and the dynamic value the 
 |${sss} |Second: for example, `46`
 |${timeInMillis} |Milliseconds: for example, `345`
 |${ICN} |Interchange Control Number
+|${ICN} |Group Control Number
 |${BusKey} |Primary Business Key value: for example, `PO12345`
-|${formatTypeExt} a|File format:
+|${FormatTypeExt} a|File format:
 
-* `JSON`
-* `X12`
-* `XML`
+* `edifact`
+* `json`
+* `x12`
+* `xml`
 |===
 
 == Examples
@@ -36,13 +38,13 @@ The following are the supported property placeholders and the dynamic value the 
 |===
 |File Name Pattern |Generated File Name
 |${DocType}_${ISASender}_${YYYYMMDD}_${HHmmSSsss}_${ICN}.edi |`850_NTORETAIL_20201102_192655521_300001.edi`
-|INVOICE_${SenderGSID}_${ICN}.${formatTypeExt}
+|INVOICE_${SenderGSID}_${ICN}.${FormatTypeExt}
 |`INVOICE_MYTHICALSUPPLIERS_12355343.XML`
 |${uuid}.edi
 |`93de0793-63e1-5a06-aedf-fcd052ed2155.edi`
 |${DocType}-${YYYY}-${MM}-${DD}-${HHmmSSsss}.dat
 |`204-2020-06-24-192655521.dat`
-|${DocType}_${ISASender}_${YYYYMMDD}_${HHmmSSsss}_${ICN}.${formatTypeExt}
+|${DocType}_${ISASender}_${YYYYMMDD}_${HHmmSSsss}_${ICN}.${FormatTypeExt}
 |`850_NTORETAIL_20201102_192655521_300001.JSON`
 |===
 
