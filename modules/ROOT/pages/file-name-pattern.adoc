@@ -35,6 +35,7 @@ The following are the supported property placeholders and the dynamic value the 
 
 == Examples
 
+[%header%autowidth.spread]
 |===
 |File Name Pattern |Generated File Name
 |${DocType}_${ISASender}_${YYYYMMDD}_${HHmmSSsss}_${ICN}.edi |`850_NTORETAIL_20201102_192655521_300001.edi`
