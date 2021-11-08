@@ -1,8 +1,8 @@
 = Upgrading Message Flow Runtime Templates
 
-Partner Manager uses prebuilt templates to convert your B2B message flow configurations into runtime applications. As these templates are updated, you can upgrade your message flows to use them to take advantage of new capabilities that enable better integration with your trading partner's ecosystem.
+Anypoint Partner Manager uses prebuilt templates to convert your B2B message flow configurations into runtime applications. As these templates are updated, you can upgrade your message flows to use them to take advantage of new capabilities that enable better integration with your trading partner's ecosystem.
 
-Runtime templates related to Anypoint Partner Manager 2.5 are upgraded when:
+Runtime templates related to Partner Manager are upgraded when:
 
 * A new feature or functionality is added
 * A component on which your environment is dependent, such as a connector version, is upgraded
