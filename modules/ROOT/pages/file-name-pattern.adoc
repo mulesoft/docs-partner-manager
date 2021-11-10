@@ -23,7 +23,7 @@ The following are the supported property placeholders and the dynamic value the 
 |${sss} |Second: for example, `46`
 |${timeInMillis} |Milliseconds: for example, `345`
 |${ICN} |Interchange Control Number
-|${ICN} |Group Control Number
+|${GCN} |Group Control Number
 |${BusKey} |Primary Business Key value: for example, `PO12345`
 |${FormatTypeExt} a|File format:
 
