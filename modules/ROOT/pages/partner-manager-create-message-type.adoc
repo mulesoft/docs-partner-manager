@@ -162,7 +162,7 @@ This is an example DataWeave map for an XML payload from the backend application
 %dw 2.0
 output application/json
 ns ns0 http://xmlns.mulesoft.com/enterpriseobjects/finance/purchaseorder/
-
+---
 {
 	partnerReferenceId: payload.ns0#PurchaseOrder.ns0#VendorName,
 	hostReferenceId: payload.ns0#PurchaseOrder.ns0#LineOfBusiness,
@@ -174,7 +174,7 @@ Generated output:
 {
 "partnerReferenceId": "MYTHICAL SUPPLIER, LLC",
 "hostReferenceId": "NTO Retail Canada",
-"businessdocumentKey": "INVOICE-005"
+"businessDocumentKey": "INVOICE-005"
 }
 ----
 
