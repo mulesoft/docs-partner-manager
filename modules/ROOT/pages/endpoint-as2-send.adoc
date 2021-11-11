@@ -1,6 +1,6 @@
 = AS2 Send Endpoint Settings
 
-AS2 send endpoint settings configure the target endpoint in an outbound message flow to which transformed B2B EDI messages are send to partners either directly or via third party connections.
+AS2 send endpoint settings configure the target endpoint in an outbound message flow to which transformed B2B EDI messages are sent to partners either directly or via third party connections.
 
 A partner or third party can own AS2 send endpoints. Use a third-party-owned AS2 send endpoint for an outbound message flow for partners that use a third party connection.
 
