@@ -4,7 +4,7 @@ AS2 receive endpoint settings configure the source endpoint in an inbound messag
 
 Only a host can own AS2 receive endpoints. Use a host-owned AS2 receive endpoint for an inbound message flow that uses a third party connection.
 
-NOTE: Each AS2 receive endpoint configuration gets deployed as an individual Mule application in the runtime. Consider reusing existing AS2 receive endpoint configuration across a partner's message flows.
+NOTE: Each AS2 receive endpoint configuration gets deployed as an individual Mule application in the runtime. Consider reusing an existing AS2 receive endpoint configuration across message flows.
 
 Create AS2 receive endpoints by configuring these settings on the Host page:
 
