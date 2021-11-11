@@ -49,7 +49,7 @@ This URL does the following:
 ** Stores payloads when transactions process in the runtime
 ** Retrieves the payload when you click *View Payload* on the *Transaction Activity* page, unless a payload view URL is configured
 +
-* *Payload view URL*: (Optional) A secondary payload storage API URL that you can use to view the payload on the *Activity* page if the payload storage API is restricted to your internal network.
+* *Payload view URL*: (Optional) A secondary payload storage API URL that you can use to view the payload on the *Activity* page if the payload storage API is restricted to your internal network
 +
 . Optionally, if you want to view (or allow your users to view) the raw payloads of the files you receive or send, select *Allow users to download payloads*.
 . Click *Save*.
