@@ -38,7 +38,7 @@ The following are the supported property placeholders and the dynamic value the 
 [%header%autowidth.spread]
 |===
 |File Name Pattern |Generated File Name
-|${DocType}_${ISASender}_${YYYYMMDD}_${HHmmSSsss}_${ICN}.edi |`850_NTORETAIL_20201102_192655521_300001.edi`
+|$\{DocType}_${ISASender}_${YYYYMMDD}_${HHmmSSsss}_${ICN}.edi |`850_NTORETAIL_20201102_192655521_300001.edi`
 |INVOICE_${SenderGSID}_${ICN}.${FormatTypeExt}
 |`INVOICE_MYTHICALSUPPLIERS_12355343.xml`
 |${uuid}.edi
