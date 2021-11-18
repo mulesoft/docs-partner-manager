@@ -32,7 +32,7 @@ To configure the source endpoint:
 [[source-message-type]]
 == Configure the Source Message Type
 
-The source message type in an outbound message flow defines the structure of the messages that Partner Manager receives from the backend applications. Partner Manager translates these messages to a configured Send to Partners message type, and then sends them to your partners, either directly or through a third-party connection.
+The Source at hosting message type in an outbound message flow defines the structure of the messages that Partner Manager receives from the backend applications. Partner Manager translates these messages to a configured Send to Partners message type, and then sends them to your partners, either directly or through a third-party connection.
 
 Partner Manager supports the JSON and XML source message types in outbound message flows.
 
@@ -40,8 +40,8 @@ To create the source message type:
 
 . In the message flow, expand the *Source message type* section and click *Select*.
 . In the *Source message type* window, do either of the following:
-* Select an existing source message type and click *Select*.
-* Click *New* to create a new source message type, as described in xref:partner-manager-create-message-type[Create and Configure Message Types].
+* Select an existing Source at Host message type and click *Select*.
+* Click *New* to create a new Source at Host message type, as described in xref:partner-manager-create-message-type[Create and Configure Message Types].
 
 [[reference-ids]]
 == Configure Reference IDs for the Partner and Host
@@ -103,26 +103,26 @@ By default, Partner Manager uses the EDIFACT or X12 send settings configured for
 To apply custom validation settings and delimiters to the outbound message flow, follow these steps:
 
 . In the *EDIFACT Settings* section, select either *Custom X12 settings* or *Custom EDIFACT settings* and provide custom configuration values.
-. In the *<protocol> Identifiers* section, select the sender and receiver identifiers to use on the X12 ISA and GS segments or the EDIFACT UNB segments.
+. In the *<protocol> Identifiers* section, select the sender and receiver identifiers to use on either the X12 ISA and GS segments or the EDIFACT UNB segments.
 +
 These identifiers are configured in the host and partner profiles.
 
 [[send-to-partner-endpoint]]
-== Configure the Send To Partner Endpoint
+== Configure the Send To Partners Endpoint
 
-The send to partner endpoint is the target endpoint to which transformed messages are sent to partners, either directly or via third-party connections. Use a third-party-owned send to partner endpoint for partners that use a third-party connection.
+The Send to Partners endpoint is the target endpoint to which transformed messages are sent to partners, either directly or via third-party connections. Use a third-party-owned Send to Partners endpoint for partners that use a third-party connection.
 
-Partner Manager supports the EDIFACT and X12 protocols for send to partner endpoints.
+Partner Manager supports the EDIFACT and X12 protocols for Send to Partners endpoints.
 
-To create a send to partner endpoint:
+To create a Send to Partners endpoint:
 
 . In the message flow, expand the *Send to <partner>* section and click *Select*.
 . Do either of the following:
-* Select an existing send to partner endpoint and click *Select*.
+* Select an existing Send to Partners endpoint and click *Select*.
 +
-You can select any previously configured Send to partner endpoints owned by the host, the partner for whom the message flow is configured, or a third-party connection.
+You can select any previously configured Send to Partners endpoints owned by the host, the partner for whom the message flow is configured, or a third-party connection.
 +
-* Click *New* to create a new send to partner endpoint, as described in xref:create-endpoint.adoc[Create and Configure Endpoints].
+* Click *New* to create a new Send to Partners endpoint, as described in xref:create-endpoint.adoc[Create and Configure Endpoints].
 
 If you selected AS2 as the protocol and there is no certificate associated with the partner or third-party profile, import the certificate of the partner or third-party connection that owns the endpoint.
 

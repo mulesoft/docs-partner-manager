@@ -97,6 +97,7 @@ To configure the target message type:
 . In the message flow, expand the *Target at <host>* section.
 . In the *Message Type* section, click *Select*.
 . In the *Select message type* window, do either of the following:
+* Se;ect an existing Target at Host message type and click *Select*.
 * Click *New* to create a new Target at Host message type.
 . Click *Save*.
 
