@@ -1,6 +1,6 @@
 = Creating Outbound Message Flows
 
-Create outbound message flows to receive messages from your backend applications, validate and transform these messages to the format your partners expect, and then send them to your partners either directly, or through third party connections.
+Create outbound message flows to receive messages from your backend applications, validate and transform these messages to the format your partners expect, and then send them to your partners either directly, or through third-party connections.
 
 Before you create your first message flow, configure your xref:setup-payload-storage-API.adoc[payload storage API].
 
@@ -32,7 +32,7 @@ To configure the source endpoint:
 [[source-message-type]]
 == Configure the Source Message Type
 
-The source message type in an outbound message flow defines the structure of the messages that Partner Manager receives from the backend applications. Partner Manager translates these messages to a configured send to partners message type, and then sends them your partners, either directly or through a third party connection. 
+The source message type in an outbound message flow defines the structure of the messages that Partner Manager receives from the backend applications. Partner Manager translates these messages to a configured send to partners message type, and then sends them your partners, either directly or through a third-party connection.
 
 Partner Manager supports the JSON and XML source message types in outbound message flows.
 
@@ -67,7 +67,7 @@ To import the translation map:
 [[send-to-partner-message-type]]
 == Configure the Target Message Type
 
-The target message type in an outbound message flow defines the structure of the messages that Partner Manager sends to the partner, either directly or via a third party connection. Partner Manager supports the JSON, EDIFACT, X12, and XML formats for target message types.
+The target message type in an outbound message flow defines the structure of the messages that Partner Manager sends to the partner, either directly or via a third-party connection. Partner Manager supports the JSON, EDIFACT, X12, and XML formats for target message types.
 
 For the EDIFACT and X12 message types, configuring the target message type also involves configuring acknowledgements (optional), creating custom EDIFACT settings (optional), and selecting EDIFACT identifiers to use for routing the outbound messages.
 
@@ -98,7 +98,7 @@ To configure acknowledgement settings for the outbound messages that use this me
 
 === Optionally Apply Custom Validation Settings to EDIFACT and X12 Endpoints
 
-By default, Partner Manager uses the EDIFACT or X12 send settings configured for the partner or third party connection for message validation, delimiters, and character encoding.
+By default, Partner Manager uses the EDIFACT or X12 send settings configured for the partner or third-party connection for message validation, delimiters, and character encoding.
 
 To apply custom validation settings and delimiters to the outbound message flow, follow these steps:
 
@@ -110,7 +110,7 @@ These identifiers are configured in the host and partner profiles.
 [[send-to-partner-endpoint]]
 == Configure the Send To Partner Endpoint
 
-The send to partner endpoint is the target endpoint to which transformed messages are sent to partners, either directly or via third party connections. Use a third-party-owned send to partner endpoint for partners that use a third party connection.
+The send to partner endpoint is the target endpoint to which transformed messages are sent to partners, either directly or via third-party connections. Use a third-party-owned send to partner endpoint for partners that use a third-party connection.
 
 Partner Manager supports the EDIFACT and X12 protocols for send to partner endpoints.
 
@@ -120,11 +120,11 @@ To create a send to partner endpoint:
 . Do either of the following:
 * Select an existing send to endpoint and click *Select*.
 +
-You can select any previously configured Send to partner endpoints owned by the host, the partner for whom the message flow is configured, or a third party connection.
+You can select any previously configured Send to partner endpoints owned by the host, the partner for whom the message flow is configured, or a third-party connection.
 +
 * Click *New* to create a new send to endpoint, as described in xref:create-endpoint.adoc[Create and Configure Endpoints].
 
-If you selected AS2 as the protocol and there is no certificate associated with the partner or third party profile, import the certificate of the partner or third-party connection that owns the endpoint.
+If you selected AS2 as the protocol and there is no certificate associated with the partner or third-party profile, import the certificate of the partner or third-party connection that owns the endpoint.
 
 == Verify That the Message Flow Is Complete
 

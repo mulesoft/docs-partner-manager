@@ -1,20 +1,20 @@
-= Deleting Third Party Connections
+= Deleting Third-Party Connections
 
-If you are no longer using a third party connection, you can delete it from Partner Manager. However, you cannot delete third party connections if you have configured or deployed message flows for your partners that reference the third party identifier or endpoints.
+If you are no longer using a third-party connection, you can delete it from Partner Manager. However, you cannot delete third-party connections if you have configured or deployed message flows for your partners that reference the third-party identifier or endpoints.
 
-When you delete a third party connection, it is removed from the *Partners* page. Also, all of the connection's data is deleted, except for information about connection-related activities that occurred before the deletion.
+When you delete a third-party connection, it is removed from the *Partners* page. Also, all of the connection's data is deleted, except for information about connection-related activities that occurred before the deletion.
 
-Before you delete a third party connection in an on-premises deployment, ensure that the on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager named `B2BserverGroup` are active and running. To obtain these statuses, contact your B2B System Administrator. You can check the status of the host servers in Anypoint Platform Runtime Manager.
+Before you delete a third-party connection in an on-premises deployment, ensure that the on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager named `B2BserverGroup` are active and running. To obtain these statuses, contact your B2B System Administrator. You can check the status of the host servers in Anypoint Platform Runtime Manager.
 
-To delete a third party connection:
+To delete a third-party connection:
 
 . In Anypoint Partner Manager, select *Partners* in the navigation menu.
-. Select the third party connection to delete and click *Delete*.
+. Select the third-party connection to delete and click *Delete*.
 . Confirm the deletion.
 
-After you delete a third party connection, you can reuse the connection name.
+After you delete a third-party connection, you can reuse the connection name.
 
 == See Also
 
-* xref:create-third-party.adoc[Creating Third Party Connections]
-* xref:modify-third-party-settings.adoc[Modifying Third Party Connection Settings]
+* xref:create-third-party.adoc[Creating Third-Party Connections]
+* xref:modify-third-party-settings.adoc[Modifying Third-Party Connection Settings]
