@@ -2,11 +2,11 @@
 
 Anypoint Partner Manager dynamically validates the message flow configuration elements as you complete them and displays a green checkmark next to each of the validated elements.
 
-After Partner Manager validates the message flow configuration elements, you can deploy and test the message flow. It is best to deploy the message flow in a sandbox environment. After you verify that the message flow is successful, you can undeploy it from the sandbox and redeploy it to your production environment.
+After Partner Manager validates the message flow configuration elements, deploy and test the message flow in a sandbox environment. After you verify that the message flow is successful, you can undeploy it from the sandbox and redeploy it to your production environment.
 
 == Deploy Message Flows
 
-To minimize the impact of the service interruption caused by deploying a message flow, perform message flow deployments outside of your regular business hours. This issue does not exist on CloudHub because CloudHub provides a zero-downtime update of the AS2 endpoint application.
+In non-CloudHub environments, minimize the impact of the service interruption caused by deploying a message flow by deploying outside of your regular business hours. This issue does not exist on CloudHub because CloudHub provides a zero-downtime update of the AS2 endpoint application.
 
 To deploy a message flow, click the *Deploy* button.
 
@@ -27,9 +27,9 @@ Test your message flow in your Partner Manager sandbox environment by sending a 
 
 . In the navigation menu, select *Activity* and the transmission to test.
 . Scan for an exclamation point (!) in any of the boxes next to the displayed flow stages and address any issues.
-. If the system was set up to view payloads, review the received payload by clicking *View payload* next to the *Received transmission* section.
+. If the system is set up to view payloads, review the received payload by clicking *View payload* next to the *Received transmission* section.
 +
-If you not sure about whether you should be able to view a payload, contact your B2B System Administrator.
+If you're not sure about whether you should be able to view a payload, contact your B2B System Administrator.
 . If TA1 and functional acknowledgments (999 or 997) are set, review and confirm that they are present.
 . Verify that the transmission routed the messages to the correct message flow.
 . Verify that Partner Manager routed the messages to the target system, delivered the messages to the target endpoint,

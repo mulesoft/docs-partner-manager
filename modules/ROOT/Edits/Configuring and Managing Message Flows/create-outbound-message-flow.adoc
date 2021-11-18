@@ -26,13 +26,13 @@ To configure the source endpoint:
 
 . In the message flow, expand the *Source at <host-name>* section and click *Select*.
 . In the *Select an endpoint: Source at <host-name>* window, do either of the following:
-* Select an existing source at host endpoint and click *Select*.
-* Click *New* to create a new source at host endpoint, as described in xref:create-endpoint.adoc[Create and Configure Endpoints].
+* Select an existing Source at Host endpoint and click *Select*.
+* Click *New* to create a new Source at Host endpoint, as described in xref:create-endpoint.adoc[Create and Configure Endpoints].
 
 [[source-message-type]]
 == Configure the Source Message Type
 
-The source message type in an outbound message flow defines the structure of the messages that Partner Manager receives from the backend applications. Partner Manager translates these messages to a configured send to partners message type, and then sends them your partners, either directly or through a third-party connection.
+The source message type in an outbound message flow defines the structure of the messages that Partner Manager receives from the backend applications. Partner Manager translates these messages to a configured Send to Partners message type, and then sends them your partners, either directly or through a third-party connection.
 
 Partner Manager supports the JSON and XML source message types in outbound message flows.
 
@@ -75,8 +75,8 @@ To configure the target message type:
 
 . Expand the *Message type* section and click *Select*.
 . In the *Select message type* window, do either of the following:
-* Select an existing send to message type and click *Select*.
-* Click *New* to create a new send to message type, as described in xref:partner-manager-create-message-type.adoc,[Create and Configure Message Types].
+* Select an existing Send to Partners message type and click *Select*.
+* Click *New* to create a new Send to Partners message type, as described in xref:partner-manager-create-message-type.adoc,[Create and Configure Message Types].
 . Click *Save*.
 +
 The message type and its validation settings are added to the message flow.

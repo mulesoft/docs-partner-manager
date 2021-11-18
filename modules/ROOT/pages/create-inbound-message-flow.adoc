@@ -97,7 +97,7 @@ To configure the target message type:
 . In the message flow, expand the *Target at <host>* section.
 . In the *Message Type* section, click *Select*.
 . In the *Select message type* window, do either of the following:
-* Click *New* to create a new target at host message type.
+* Click *New* to create a new Target at Host message type.
 . Click *Save*.
 
 [[target-endpoint]]
@@ -110,7 +110,7 @@ To configure the target endpoint:
 . In the message flow, expand the *Target at <host>* section.
 . In the *Target at <host>* section, expand the *Endpoint* section and click *Select*.
 . In the *Select an endpoint: Target to <host>* window, do either of the following:
-* Select an existing target at host endpoint and click *Select*.
+* Select an existing Target at Host endpoint and click *Select*.
 * Click *New* to create a new endpoint, as described in xref:create-endpoint.adoc[Create and Configure Endpoints].
 
 +

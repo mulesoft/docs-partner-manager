@@ -4,7 +4,7 @@ Depending on the endpoint type and protocol, the successful routing of your part
 
 == Messages that Use an AS2 Receive from Partners Endpoint
 
-To successfully route inbound messages that use an AS2 receive from partners endpoint, your partner does the following:
+To successfully route inbound messages that use an AS2 Receive from Partners endpoint, your partner does the following:
 
 * Uses a filename that begins with `{message-type-id}_`.
 +
@@ -32,7 +32,7 @@ For example, if the message type is named `custom-po` and it is formatted as XML
 
 == Messages that Use an HTTP or HTTPS Receive from Partners Endpoint
 
-To successfully route inbound messages that use an HTTP receive from partners endpoint or an HTTPS receive from partners endpoint, your partner does the following:
+To successfully route inbound messages that use an HTTP Receive from Partners endpoint or an HTTPS Receive from Partners endpoint, your partner does the following:
 
 * For EDI messages (EDIFACT or X12), posts them to the base URL and sets the Content-Type in the incoming HTTP request as follows, depending on the message format:
 ** JSON: `application/json`
@@ -42,7 +42,7 @@ To successfully route inbound messages that use an HTTP receive from partners en
 
 * For non-EDI messages (JSON or XML), includes the message type ID in the relative path of the HTTP request.
 +
-For example, if the base URL of the HTTP or HTTPS receive from partners endpoint is `https://b2b-inbound-http-abcd.us-e2.cloudhub.io:443/receive1/`, and the expected message type ID for the inbound message is `custom-po`, your partner should post the message to the `https://b2b-inbound-http-2jyw.us-e2.cloudhub.io:443/receive1/custom-po` URL.
+For example, if the base URL of the HTTP or HTTPS Receive from Partners endpoint is `https://b2b-inbound-http-abcd.us-e2.cloudhub.io:443/receive1/`, and the expected message type ID for the inbound message is `custom-po`, your partner should post the message to the `https://b2b-inbound-http-2jyw.us-e2.cloudhub.io:443/receive1/custom-po` URL.
 
 == See Also
 

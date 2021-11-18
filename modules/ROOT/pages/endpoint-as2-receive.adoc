@@ -1,8 +1,8 @@
 = AS2 Receive Endpoint Settings
 
-AS2 receive endpoint settings configure the source endpoint in an inbound message flow that receives B2B messages from partners directly or via third party connections. One AS2 endpoint can receive data from multiple partners, third party connections, or both.
+AS2 receive endpoint settings configure the source endpoint in an inbound message flow that receives B2B messages from partners directly or via third-party connections. One AS2 endpoint can receive data from multiple partners, third-party connections, or both.
 
-Only a host can own AS2 receive endpoints. Use a host-owned AS2 receive endpoint for an inbound message flow that uses a third party connection.
+Only a host can own AS2 receive endpoints. Use a host-owned AS2 receive endpoint for an inbound message flow that uses a third-party connection.
 
 NOTE: Each AS2 receive endpoint configuration gets deployed as an individual Mule application in the runtime. Consider reusing an existing AS2 receive endpoint configuration across message flows.
 
@@ -17,7 +17,7 @@ Create AS2 receive endpoints by configuring these settings on the Host page:
 |Yes
 
 |Owner
-|Host that owns the endpoint
+|Host that owns the endpoint.
 |Yes
 
 |Endpoint name
@@ -56,7 +56,7 @@ Accepts messages that aren't signed or encrypted.
 | Signed & Encrypted
 
 |<Host> keystore
-|Host xref:create-keystore.adoc[keystore] files in your environment that store your organization's public certificate and private key
+|Host xref:create-keystore.adoc[keystore] files in your environment that store your organization's public certificate and private key.
 |Yes
 |===
 
@@ -70,7 +70,7 @@ When an AS2 receive endpoint is deployed with the private port configuration ena
 
 You can view this URL by either selecting the receiving endpoint from your deployed message flow or clicking the endpoint name from the endpoints list. You can share this URL with the partners that send AS2 messages to this endpoint.
 
-If your organization uses Anypoint VPC without a dedicated load balancer (DLB), your organization’s platform administrator can configure the necessary xref:runtime-manager::vpc-firewall-rules-concept.adoc[VPC firewall rules] to allow specific partner or third party connection IP addresses to access the endpoint.
+If your organization uses Anypoint VPC without a dedicated load balancer (DLB), your organization’s platform administrator can configure the necessary xref:runtime-manager::vpc-firewall-rules-concept.adoc[VPC firewall rules] to allow specific partner or third-party connection IP addresses to access the endpoint.
 
 === Deploy to CloudHub on a Private Port
 

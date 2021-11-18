@@ -25,8 +25,8 @@ image::pm-outbound-message-flow.png[Outbound message flow]
 Message type to which to transform the input message
 a|
 * EDIFACT
-* X12
 * JSON
+* X12
 * XML
 
 |Target endpoint |

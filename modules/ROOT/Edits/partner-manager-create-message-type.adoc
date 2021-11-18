@@ -35,7 +35,7 @@ Inbound and outbound transactions between your organization and your trading par
 
 === EDIFACT
 
-Use the following settings to define EDIFACT as the protocol for the receive from partners or send to partners message type:
+Use the following settings to define EDIFACT as the protocol for the Receive from Partners or Send to Partners message type:
 
 [%header%autowidth.spread]
 |===
@@ -59,7 +59,7 @@ When using the customized EDI schema, you can assign a custom name to the messag
 
 === JSON or XML
 
-Use the following settings to define JSON or XML as the protocol for the receive from partners or send to partners message type:
+Use the following settings to define JSON or XML as the protocol for the Receive from Partners or Send to Partners message type:
 
 [%header%autowidth.spread]
 |===
@@ -73,7 +73,7 @@ The uploaded DataWeave script with mapping to extract the reference identifiers 
 
 === X12 Message Type
 
-Use the following settings to define X12 as the protocol for the receive from partners or send to partners message type:
+Use the following settings to define X12 as the protocol for the Receive from Partners or Send to Partners message type:
 
 [%header%autowidth.spread]
 |===
@@ -146,12 +146,12 @@ See xref:outbound-message-routing.adoc[Outbound Message Routing] to understand h
 [[reference-ids-example]]
 == Reference Identifiers and Business Key Mapping Example
 
-The input to the DataWeave map is the payload that follows the schema uploaded in the definition for the source at host and receive from partner message types. The output must contain the following fields:
+The input to the DataWeave map is the payload that follows the schema uploaded in the definition for the Source at Host and Receive from Partner message types. The output must contain the following fields:
 
 * `partnerReferenceId` +
 Required identifier that uniquely identifies the receiving partner.
 * `hostReferenceId` +
-(Applies to source at host message types) Optional, except when backend systems are sending outbound transactions on behalf of different internal business units that require different mapping or sender identifiers to be set on the EDI data.
+(Applies to Source at Host message types) Optional, except when backend systems are sending outbound transactions on behalf of different internal business units that require different mapping or sender identifiers to be set on the EDI data.
 * `businessDocumentKey` +
 Optional key reference value, such as `Order Number`or `Invoice Number`.
 

@@ -50,8 +50,8 @@ a|
 |xref:partner-manager-maps[Translation Maps]
 
 | Target at <host>
-a| * Select a different target at host message type.
-* Select a different target at host endpoint.
+a| * Select a different Target at Host message type.
+* Select a different Target at Host endpoint.
 a| * xref:partner-manager-create-message-type.adoc[Create and Configure Message Types]
 * xref:create-endpoint.adoc[Create and Configure Endpoints]
 |===
@@ -78,8 +78,8 @@ To modify the settings of an outbound message flow:
 | *Subsection* | *Actions* | *Additional Information*
 
 |Source at <host>
-a| * Select a different source at host endpoint.
-* Select a different source at host message type.
+a| * Select a different Source at Host endpoint.
+* Select a different Source at Host message type.
 * Select different Reference IDs to use for outbound routing.
 a| * xref:create-endpoint.adoc[Create and Configure Endpoints]
 * xref:partner-manager-create-message-type.adoc[Create and Configure Message Types]
@@ -90,7 +90,7 @@ a| * xref:create-endpoint.adoc[Create and Configure Endpoints]
 | xref:partner-manager-maps.adoc[Import a DataWeave map]
 
 | Message type
-a| * Select a different send to partners message type.
+a| * Select a different Send to Partners message type.
 * (EDIFACT or X12 message type) Indicate whether or not to send a 997 functional acknowledgment, and select the endpoint to which to send the acknowledgment.
 * (EDFIACT or X12 message type) View current validation settings.
 * Select different identifiers for the host and partner.
