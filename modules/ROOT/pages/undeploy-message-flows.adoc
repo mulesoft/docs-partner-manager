@@ -14,7 +14,7 @@ To undeploy a message flow:
 . In the navigation menu, select *Message Flows*.
 . Select the message flow to undeploy from the list and click *Undeploy*.
 
-Partner Manager checks to see if any of the applications deployed to Mule are orphaned as a result of the undeployment. It cleans up orphaned applications to release any resources the applications were consuming.
+Partner Manager checks to see if any of the applications deployed to Mule are orphaned as a result of the undeployment and then cleans up orphaned applications to release any resources the applications were consuming.
 
 == See Also
 

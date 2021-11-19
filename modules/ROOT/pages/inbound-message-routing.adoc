@@ -1,6 +1,6 @@
 = Inbound Message Routing
 
-Depending on the endpoint type and protocol, the successful routing of your partners send messages to the configured source endpoints uses the message type ID, file-naming pattern, and content type.
+Depending on the endpoint type and protocol, the successful routing of your partner's send messages to the configured source endpoints uses the message type ID, file-naming pattern, and content type.
 
 == Messages That Use an AS2 Receive From Partners Endpoint
 
@@ -12,10 +12,10 @@ For example, if the message type is named `custom-po`, the filename should begin
 +
 * Sets the AS2 MIME-Type in the inbound AS2 message as follows, depending on the message type:
 
+** EDIFACT: `application/EDIFACT` or `text/plain`
 ** JSON: `application/json`
+** X12: `application/EDI-X12` or `text/plain`
 ** XML: `application/xml`
-** EDIFACT: `application/EDIFACT`, or `text/plain`
-** X12: `application/EDI-X12`, or `text/plain`
 
 == Messages That Use an FTP or SFTP Endpoint
 
@@ -24,8 +24,9 @@ To successfully route inbound messages that use an FTP or SFTP endpoint, your pa
 * For EDI messages (Edifact or X12), uses the correct EDI identifiers in the message content.
 * For non-EDI (JSON or XML) messages, uses a filename that begins with `{message-type-id}_` and that has an appropriate file extension:
 +
-** `.xml` for XML files
 ** `.json` for JSON files
+** `.xml` for XML files
+
 
 +
 For example, if the message type is named `custom-po` and it is formatted as XML, the filename should begin with `custom-po_` and should end with `.xml`.
@@ -35,10 +36,12 @@ For example, if the message type is named `custom-po` and it is formatted as XML
 To successfully route inbound messages that use an HTTP Receive from Partners endpoint or an HTTPS Receive from Partners endpoint, your partner does the following:
 
 * For EDI messages (EDIFACT or X12), posts them to the base URL and sets the Content-Type value in the incoming HTTP request as follows, depending on the message format:
-** JSON: `application/json`
-** XML: `application/xml`
+
 ** EDIFACT: `application/EDIFACT` or `text/plain`
+** JSON: `application/json`
 ** X12: `application/EDI-X12` or `text/plain`
+** XML: `application/xml`
+
 
 * For non-EDI messages (JSON or XML), includes the message type ID in the relative path of the HTTP request.
 +

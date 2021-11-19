@@ -88,7 +88,7 @@ These identifiers are configured in the host and partner profiles.
 
 === Configure Acknowledgment Settings
 
-To configure acknowledgement settings for the outbound messages that use this message flow:
+To configure acknowledgement settings for the outbound messages that use the message flow:
 
 . In the *Acknowledgement* section, select *Expect functional acknowledgement* (X12) or *Expect CONTRL functional acknowledgment* (EDIFACT).
 . Do either of the following:
