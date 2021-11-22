@@ -2,7 +2,7 @@
 
 Depending on the endpoint type and protocol, the successful routing of your partner's send messages to the configured source endpoints uses the message type ID, file-naming pattern, and content type.
 
-== Messages That Use an AS2 Receive From Partners Endpoint
+== Messages That Use an AS2 Receive from Partners Endpoint
 
 To successfully route inbound messages that use an AS2 Receive from Partners endpoint, your partner does the following:
 
@@ -31,7 +31,7 @@ To successfully route inbound messages that use an FTP or SFTP endpoint, your pa
 +
 For example, if the message type is named `custom-po` and it is formatted as XML, the filename should begin with `custom-po_` and should end with `.xml`.
 
-== Messages That Use an HTTP or HTTPS Receive From Partners Endpoint
+== Messages That Use an HTTP or HTTPS Receive from Partners Endpoint
 
 To successfully route inbound messages that use an HTTP Receive from Partners endpoint or an HTTPS Receive from Partners endpoint, your partner does the following:
 
