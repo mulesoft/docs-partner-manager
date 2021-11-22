@@ -7,7 +7,7 @@ To deploy message flows on-premises, you need to install and set up Mule runtime
 +
 When you create the server group:
 
-* Create `B2BServerGroup` exactly as shown, because the server group name is case-sensitive.
+* Name `B2BServerGroup` exactly as shown, because the server group name is case-sensitive.
 * Configure `B2BServerGroup` with a single Mule runtime server because Partner Manager does not support multiple runtime instances within the group.
 
 +
