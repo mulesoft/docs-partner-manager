@@ -2,7 +2,7 @@
 
 Depending on the endpoint type and protocol, the successful routing of your partner's send messages to the configured source endpoints uses the message type ID, file-naming pattern, and content type.
 
-== Messages That Use an AS2 Receive From Partners Endpoint
+== Messages That Use an AS2 Receive from Partners Endpoint
 
 To successfully route inbound messages that use an AS2 Receive from Partners endpoint, your partner does the following:
 
