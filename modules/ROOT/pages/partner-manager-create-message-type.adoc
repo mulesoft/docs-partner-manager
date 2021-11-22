@@ -5,6 +5,9 @@ Message types define the structure of the transactions received or sent by Anypo
 A message type in Partner Manager can be used in one of the following ways:
 
 * Receive from Partners
++
+
++
 * Target at Host
 * Source at Host
 * Send to Partners
@@ -66,7 +69,7 @@ Use the following settings to define JSON or XML as the protocol for the Receive
 |Setting |Description |Default | Required
 |Format | The format of the message. Allowed values are `JSON` or `XML`. | |Yes
 |Schema | The imported JSON or XSD schema file for the message type. | |Yes
-|Message type identifier | (Receive from Partners message type only) The message identifier value used in the dynamic message routing of inbound B2B transactions. Partner Manager automatically generates a message type identifier from the schema file name. You can modify this value. | |Yes
+|Message type identifier | (Receive from Partners message type only) The message identifier value used in the dynamic message routing of inbound B2B transactions. Partner Manager automatically generates a message type identifier from the schema filename. You can modify this value. | |Yes
 |Reference identifiers and business key mappings | (Receive from Partners message type only)
 The uploaded DataWeave script with mapping to extract the reference identifiers and business key mappings from the payload received from the backend application for dynamic routing into the appropriate message flow. | |Yes
 |===
@@ -110,7 +113,7 @@ Use the following settings to define settings for inbound transactions:
 * *JSON*
 * *XML* |None |Yes
 |Schema |The imported XSD or JSON schema file for the message type. |None |Yes
-|Name |The message type name that Partner Manager automatically generates from the schema file name, which you can later modify. |None |Yes
+|Name |The message type name that Partner Manager automatically generates from the schema filename, which you can later modify. |None |Yes
 |===
 
 [[source-at-host]]
@@ -118,7 +121,7 @@ Use the following settings to define settings for inbound transactions:
 
 The source at host application message structure defines the way in which your backend applications transform outbound transactions and send them to your partners.
 
-Partner Manager automatically generates a message type identifier from the schema file name. This value can be modified.
+Partner Manager automatically generates a message type identifier from the schema filename. This value can be modified.
 The message identifier value used in the dynamic message routing for outbound B2B transactions.
 
 Use the following settings to define JSON or XML settings for outbound EDI transactions:
@@ -131,12 +134,12 @@ Use the following settings to define JSON or XML settings for outbound EDI trans
 * *JSON*
 * *XML* |None |Yes
 |Schema |The imported XSD or JSON schema file for the message type. |None |Yes
-|Message type identifier a| Partner Manager automatically generates this identifier from the schema file name and uses it to dynamically route outbound B2B transactions. You can modify the message type identifier to ensure that it has a meaningful, generic name.
+|Message type identifier a| Partner Manager automatically generates this identifier from the schema filename and uses it to dynamically route outbound B2B transactions. You can modify the message type identifier to ensure that it has a meaningful, generic name.
 
 Your partner must pass this value when sending messages, files, or both to Partner Manager:
 
 * If you receive the payload via an HTTP-based endpoint, the message type identifier is the relative path in the HTTP request.
-* If you receive the payload via AS2 or via file-based endpoint protocols such as SFTP and FTP, the file name begins with `<message-type-id>_`.
+* If you receive the payload via AS2 or via file-based endpoint protocols such as SFTP and FTP, the filename begins with `<message-type-id>_`.
 
 See xref:outbound-message-routing.adoc[Outbound Message Routing] to understand how outbound routing is performed and how your backend applications should pass the message type identifier when sending application messages to Partner Manager endpoints. |None |Yes
 

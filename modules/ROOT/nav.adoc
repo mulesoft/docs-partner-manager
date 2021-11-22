@@ -45,7 +45,7 @@
   *** xref:endpoint-https-send.adoc[HTTP and HTTPS Send Endpoint Settings]
   *** xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
   *** xref:endpoint-sftp-send.adoc[SFTP Send Endpoint Settings]
-  *** xref:file-name-pattern.adoc[File Name Patterns for Send Endpoints]
+  *** xref:file-name-pattern.adoc[Filename Patterns for Send Endpoints]
   *** xref:as2-endpoints-algorithms.adoc[AS2 Signature and Encryption Algorithms]
   *** xref:create-keystore.adoc[Create an AS2 Host Keystore]
   *** xref:delete-endpoints.adoc[Delete an Endpoint]

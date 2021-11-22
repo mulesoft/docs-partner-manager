@@ -1,6 +1,6 @@
 = Modifying Third-Party Connection Settings
 
-You can modify third-party connection settings including contact details, identifiers, digital certificates, and more.
+You can modify third-party connection settings including contact details, identifiers, and digital certificates.
 
 To modify third-party connection settings:
 
