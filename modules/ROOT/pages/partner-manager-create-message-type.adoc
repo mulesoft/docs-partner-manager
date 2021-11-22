@@ -59,7 +59,7 @@ When using the customized EDI schema, you can assign a custom name to the messag
 
 === JSON or XML
 
-Use the following settings to define JSON or XML as the protocol for the Receive From Partners or Send to Partners message type:
+Use the following settings to define JSON or XML as the protocol for the Receive from Partners or Send to Partners message type:
 
 [%header%autowidth.spread]
 |===
