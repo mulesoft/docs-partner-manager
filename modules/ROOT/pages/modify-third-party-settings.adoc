@@ -1,8 +1,8 @@
-= Modifying Third Party Connection Settings
+= Modifying Third-Party Connection Settings
 
-You can modify third party connection settings including contact details, identifiers, digital certificates, and more.
+You can modify third-party connection settings including contact details, identifiers, and digital certificates.
 
-To modify third party connection settings:
+To modify third-party connection settings:
 
 . In Partner Manager, select *Partners* in the navigation menu.
 . Click the connection you want to modify.
@@ -11,7 +11,7 @@ To modify third party connection settings:
 [%header%autowidth.spread]
 |===
 |Settings |Action a|Additional Information
-|Third party company information, including the company's address, website, and contact details a|
+|Third-party company information, including the company's address, website, and contact details a|
 * Modify partner information:
 +
 Click *Edit* in the *About* section, click the contact type, and make the desired modifications.
@@ -30,7 +30,7 @@ Click *New* in the *Identifiers* section and enter the required fields.
 +
 Select the identifier and click *Delete*.
 +
-Because a third party connection must have at least one identifier, you can't delete the last one.
+Because a third-party connection must have at least one identifier, you can't delete the last one.
 +
 | xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
 | The partner's digital certificates, such as X.509 certificates
@@ -49,5 +49,5 @@ Click the endpoint's link and click *Delete*.
 
 == See Also
 
-* xref:create-third-party.adoc[Creating Third Party Connections]
-* xref:delete-third-party.adoc[Deleting Third Party Connections]
+* xref:create-third-party.adoc[Creating Third-Party Connections]
+* xref:delete-third-party.adoc[Deleting Third-Party Connections]

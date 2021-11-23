@@ -14,7 +14,7 @@ When messages are received by the endpoint, Partner Manager routes the payload t
 +
 `<message-type>_<endpoint-information>.<file-type>`.
 +
-For example, if your message type ID is ar-invoice, then the file name is `ar-invoice_20210217_1055_000.json`.
+For example, if your message type ID is ar-invoice, then the filename is `ar-invoice_20210217_1055_000.json`.
 
 +
 . Validates the payload against the schema supplied during the message type definition.

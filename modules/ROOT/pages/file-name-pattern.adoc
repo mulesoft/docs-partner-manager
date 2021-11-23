@@ -1,8 +1,8 @@
-= File Name Patterns for Send Endpoints
+= Filename Patterns for Send Endpoints
 
-Using property placeholders, Partner Manager enables you to configure a template that specifies properties and their order in the the file name patterns for files delivered to SFTP and AS2 send endpoints.
+Using property placeholders, Partner Manager enables you to configure a template that specifies properties and their order in the the filename patterns for files delivered to SFTP and AS2 send endpoints.
 
-When file name pattern fields are configured with property placeholders (specified within `${ }`), Partner Manager dynamically populates the file name with updated information at runtime. Any file name property field that is not specified within the placeholder is static and is not updated at runtime.
+When filename pattern fields are configured with property placeholders (specified within `${ }`), Partner Manager dynamically populates the filename with updated information at runtime. Any filename property field that is not specified within the placeholder is static and is not updated at runtime.
 
 The following are the supported property placeholders and the dynamic value the placeholder is replaced with at runtime. All dates and times must be in UTC format.
 

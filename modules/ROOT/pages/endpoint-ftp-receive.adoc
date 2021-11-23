@@ -4,12 +4,12 @@ FTP receive endpoint settings determine where to receive or send the following t
 
 * Receive from partners
 +
-Source endpoint in an inbound message flow that receives B2B messages from partners either directly or via third party connections
+Source endpoint in an inbound message flow that receives B2B messages from partners either directly or via third-party connections
 * Source at host
 +
 Source endpoint in an outbound message flow that receives JSON and XML messages from the backend applications
 
-A host, partner, and third party connection can own FTP receive endpoints.
+A host, partner, and third-party connection can own FTP receive endpoints.
 
 Create FTP receive endpoints by configuring these settings on the Host or Partner pages. You can also create these endpoints when you configure an outbound message flow.
 
@@ -21,7 +21,7 @@ Create FTP receive endpoints by configuring these settings on the Host or Partne
 | Yes
 
 | Owner
-| Partner, third party connection, or host who owns the endpoint.
+| Partner, third-party connection, or host who owns the endpoint.
 | Yes
 
 | Protocol
@@ -49,7 +49,7 @@ Create FTP receive endpoints by configuring these settings on the Host or Partne
 | Yes, if the server is authenticated
 
 | Source path
-| Path on the FTP server to which the partner or third party connection sends the inbound files.
+| Path on the FTP server to which the partner or third-party connection sends the inbound files.
 | Yes
 
 | Polling Frequency
