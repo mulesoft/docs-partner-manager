@@ -1,4 +1,4 @@
-the message flow= Creating Outbound Message Flows
+= Creating Outbound Message Flows
 
 Create outbound message flows to receive messages from your backend applications, validate and transform these messages to the format your partners expect, and then send them to your partners either directly, or through third-party connections.
 
@@ -18,11 +18,11 @@ To create an outbound message flow:
 . Verify that the message flow is complete.
 
 [[source-at-host-endpoint]]
-== Configure the Source Endpoint
+== Configure the Receiving Endpoint
 
-The source endpoint in an outbound message flow receives application messages from the backend applications. Partner Manager supports the FTP, HTTP, HTTPS, and SFTP formats for the source endpoint.
+The receiving endpoint (Source at Host endpoint) in an outbound message flow receives application messages from the backend applications. Partner Manager supports the FTP, HTTP, HTTPS, and SFTP formats for the receiving endpoint.
 
-To configure the source endpoint:
+To configure the receiving endpoint:
 
 . In the message flow, expand the *Source at <host-name>* section and click *Select*.
 . In the *Select an endpoint: Source at <host-name>* window, do either of the following:
@@ -32,7 +32,7 @@ To configure the source endpoint:
 [[source-message-type]]
 == Configure the Source Message Type
 
-The Source at hosting message type in an outbound message flow defines the structure of the messages that Partner Manager receives from the backend applications. Partner Manager translates these messages to a configured Send to Partners message type, and then sends them to your partners, either directly or through a third-party connection.
+The source message type (Source at Host messsage type) in an outbound message flow defines the structure of the messages that Partner Manager receives from the backend applications. Partner Manager translates these messages to a configured Send to Partners message type, and then sends them to your partners, either directly or through a third-party connection.
 
 Partner Manager supports the JSON and XML source message types in outbound message flows.
 
@@ -67,7 +67,7 @@ To import the translation map:
 [[send-to-partner-message-type]]
 == Configure the Target Message Type
 
-The target message type in an outbound message flow defines the structure of the messages that Partner Manager sends to the partner, either directly or via a third-party connection. Partner Manager supports the JSON, EDIFACT, X12, and XML formats for target message types.
+The target message type (Send to Partners message type) in an outbound message flow defines the structure of the messages that Partner Manager sends to the partner, either directly or via a third-party connection. Partner Manager supports the JSON, EDIFACT, X12, and XML formats for target message types.
 
 For the EDIFACT and X12 message types, configuring the target message type also involves configuring acknowledgements (optional), creating custom EDIFACT settings (optional), and selecting EDIFACT identifiers to use for routing the outbound messages.
 
@@ -108,13 +108,13 @@ To apply custom validation settings and delimiters to the outbound message flow,
 These identifiers are configured in the host and partner profiles.
 
 [[send-to-partner-endpoint]]
-== Configure the Send To Partners Endpoint
+== Configure the Target Endpoint
 
-The Send to Partners endpoint is the target endpoint to which transformed messages are sent to partners, either directly or via third-party connections. Use a third-party-owned Send to Partners endpoint for partners that use a third-party connection.
+The Target endpoint (Send to Partners endpoint) is the target endpoint to which transformed messages are sent to partners, either directly or via third-party connections. Use a third-party-owned Send to Partners endpoint for partners that use a third-party connection.
 
 Partner Manager supports the EDIFACT and X12 protocols for Send to Partners endpoints.
 
-To create a Send to Partners endpoint:
+To configure the target endpoint:
 
 . In the message flow, expand the *Send to <partner>* section and click *Select*.
 . Do either of the following:

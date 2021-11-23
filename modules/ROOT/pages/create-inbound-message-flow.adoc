@@ -22,7 +22,7 @@ To create an inbound message flow:
 [[receiving-endpoint]]
 == Configure the Receiving Endpoint
 
-The receiving endpoint in an inbound message flow receives the messages that your partners send, either directly or via third-party connections. To configure a receiving endpoint, you can either select an existing endpoint owned by the host, partner, or third-party connection, or you can create a new endpoint.
+The receiving endpoint (Receive from Partners endpoint) in an inbound message flow receives the messages that your partners send, either directly or via third-party connections. To configure a receiving endpoint, you can either select an existing endpoint owned by the host, partner, or third-party connection, or you can create a new endpoint.
 
 Partner Manager supports the AS2, FTP, HTTP, HTTPS, and SFTP formats for the receiving endpoint in an inbound message flow.
 
@@ -50,14 +50,14 @@ The AS2 identifier and certificate of the selected third-party connection are us
 [[source-message-type]]
 == Configure the Source Message Type
 
-The source message type in an inbound message flow defines the structure of the messages that Partner Manager receives from a partner or third-party connection. Partner Manager supports the JSON, EDIFACT, X12, and XML formats for source message types in an inbound message flow.
+The source message type (Receive from Partners message type) in an inbound message flow defines the structure of the messages that Partner Manager receives from a partner or third-party connection. Partner Manager supports the JSON, EDIFACT, X12, and XML formats for source message types in an inbound message flow.
 
 To configure the source message type:
 
 . In the message flow, expand the *Source message* section and click *Select*.
 . In the *Select message type* window, do either of the following:
-* Select an existing message type and click *Select*.
-* Click *New* to create a new receive from partners type, as described in xref:partner-manager-create-message-type.adoc[Create and Configure Message Types].
+* Select an existing Receive from Partners message type and click *Select*.
+* Click *New* to create a new Receive from Partners type, as described in xref:partner-manager-create-message-type.adoc[Create and Configure Message Types].
 
 +
 The message type and its validation settings are added to the message flow.
@@ -90,7 +90,7 @@ The translation map is added to the message flow.
 [[configure-target]]
 == Configure the Target Message Type
 
-The target message type in an inbound message flow defines the structure of the messages that Partner Manager sends to the backend applications. Partner Manager supports the JSON and XML formats for the target message type in an inbound message flow.
+The target message type (Target at Host message type) in an inbound message flow defines the structure of the messages that Partner Manager sends to the backend applications. Partner Manager supports the JSON and XML formats for the target message type in an inbound message flow.
 
 To configure the target message type:
 
@@ -104,7 +104,7 @@ To configure the target message type:
 [[target-endpoint]]
 == Configure the Target Endpoint
 
-The target endpoint in an inbound message flow receives the transformed messages on the backend applications. Partner Manager supports the FTP, HTTP, HTTPS, and SFTP formats for the target endpoint in an inbound message flow.
+The target endpoint (Target at Host Endpoint) in an inbound message flow receives the transformed messages on the backend applications. Partner Manager supports the FTP, HTTP, HTTPS, and SFTP formats for the target endpoint in an inbound message flow.
 
 To configure the target endpoint:
 
@@ -112,7 +112,7 @@ To configure the target endpoint:
 . In the *Target at <host>* section, expand the *Endpoint* section and click *Select*.
 . In the *Select an endpoint: Target to <host>* window, do either of the following:
 * Select an existing Target at Host endpoint and click *Select*.
-* Click *New* to create a new endpoint, as described in xref:create-endpoint.adoc[Create and Configure Endpoints].
+* Click *New* to create a new Target at Host endpoint, as described in xref:create-endpoint.adoc[Create and Configure Endpoints].
 
 +
 After you select an endpoint, it is added to the message flow.
