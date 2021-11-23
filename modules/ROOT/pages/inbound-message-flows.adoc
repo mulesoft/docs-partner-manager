@@ -22,7 +22,7 @@ image::pm-inbound-message-flow.png[Inbound message flow]
 * X12
 * XML
 
-|Map |DataWeave map used to transform the source messsage type to the target message type a| N/A
+|Map |DataWeave map used to transform the source message type to the target message type a| N/A
 
 |Target message type |Format into which the DataWeave map transforms received messages a|
 * JSON
