@@ -1,0 +1,26 @@
+= Endpoint Runtime Services
+
+Using dynamic configurations, Partner Manager deploys generic endpoint services that can receive data from or send data to different endpoint configurations. Endpoint configurations of all supported protocols can be reused across various message flows and trading partners.
+
+Partner Manager’s deployment orchestration service inspects the message flow and associated configuration objects and determines which endpoint services to deploy or update based on whether or not any new endpoint configurations are added, updated, or removed.
+
+The number and type of endpoint services deployed to your runtime depends on the transport protocols used to exchange data with your trading partners and backend systems.
+
+Each unique AS2, HTTP, and HTTPS receive endpoint configuration results in the deployment of its own runtime application. You can view the runtime application name corresponding to a given configuration in Partner Manager, from the endpoint detail page.
+
+The endpoints for the transport protocols are always managed within a single generic endpoint service for the protocol and direction:
+
+[%header%autowidth.spread]
+|===
+|Protocol |Direction |Application Name Prefix
+|AS2 |Receive |b2b-inbound-as2-
+|AS2 |Send |b2b-outbound-as2-
+|FTP | Receive | b2b-inbound-ftp-
+|FTP | Send | b2b-outbound-ftp-
+|HTTP or HTTPS |Receive |b2b-inbound-http-
+|HTTP or HTTPS |Send |b2b-outbound-http-
+|SFTP |Receive |b2b-inbound-sftp-
+|SFTP |Send |b2b-outbound-sftp-
+|===
+
+If your deployment target is CloudHub, you can assign static IP addresses to your endpoint applications connecting to external systems from Runtime Manager, if your organization or your trading partners require allowlisting IP addresses. You can share the xref:runtime-manager::managing-applications-on-cloudhub#static-ips[static IP] address assigned to your endpoint application with your trading partners for them to allowlist the IP address, allowing the application to connect with their server.
