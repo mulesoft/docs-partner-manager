@@ -1,10 +1,10 @@
 = AS2 Receive Endpoint Settings
 
-AS2 receive endpoint settings configure the source endpoint in an inbound message flow that receives B2B EDI messages from partners directly or via third-party connections. One AS2 endpoint can receive data from multiple partners, third-party connections, or both.
+The AS2 Receive from Partners endpoint settings configure the source endpoint in an inbound message flow that receives B2B EDI messages from partners directly or via third-party connections. One AS2 endpoint can receive data from multiple partners, third-party connections, or both.
 
 Only a host can own AS2 receive endpoints. Use a host-owned AS2 receive endpoint for an inbound message flow that uses a third-party connection.
 
-Create AS2 receive endpoints by configuring these settings on the Host page:
+Create an AS2 Receive from Partners endpoint by configuring these settings on the *<host>* page:
 
 [%header%autowidth.spread]
 |===
@@ -41,7 +41,7 @@ Allowed values:
 
 * Signed & Encrypted
 +
-Rejects incoming messages that aren't both signed and encrypted.
+(Default) Rejects incoming messages that aren't both signed and encrypted.
 * Signed
 +
 Rejects incoming messages that aren't signed.
@@ -51,12 +51,16 @@ Rejects incoming messages that aren't encrypted.
 * None
 +
 Accepts messages that aren't signed or encrypted.
-| Signed & Encrypted
+|
 
 |<Host> keystore
 |Host xref:create-keystore.adoc[keystore] files in your environment that store your organization's public certificate and private key.
 |Yes
 |===
+
+== Next Step
+
+After you create an AS2 receive endpoint, you can deploy it as described in xref:deploy-endpoints.adoc[Deploy Receive Endpoints].
 
 == See Also
 

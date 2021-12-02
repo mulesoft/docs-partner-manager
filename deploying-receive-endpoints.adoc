@@ -1,0 +1,58 @@
+= Deploying AS2, HTTP, and HTTPS Receive Endpoints
+
+You can deploy AS2 receive, HTTP receive, and HTTPS receive endpoints on a public port, private port, or on-premises.
+
+== Deploy to CloudHub on a Public Port
+
+When an AS2, HTTP, or HTTPS receive endpoint is deployed with the public port configuration enabled, the endpoint application is deployed on the public HTTPS port (`8082`), with the traffic routed through the xref:runtime-manager::dedicated-load-balancer-tutorial#shared-load-balancers [shared load balancer]. The value in the URL field is automatically generated when you deploy a message flow to CloudHub that uses this endpoint.
+
+You can view this URL by either selecting the receiving endpoint from your deployed message flow or clicking the endpoint name from the endpoints list. You can share this URL with the partners that send AS2, HTTP, or HTTP messages to this endpoint.
+
+If your organization uses Anypoint VPC without a dedicated load balancer (DLB), your organization’s platform administrator can configure the necessary xref:runtime-manager::vpc-firewall-rules-concept.adoc[VPC firewall rules] to allow specific partner or third-party connection IP addresses to access the endpoint.
+
+== Deploy to CloudHub on a Private Port
+
+When an AS2, HTTP, or HTTPS receive endpoint is deployed with the private port configuration enabled, the endpoint is deployed to the private HTTPS port `8092`. The internal URL of the endpoint appears on the *Message Flow* or *Endpoint* details page.
+
+You can also set CloudHub to automatically deploy newly-created endpoints to a private port via the xref:cloudhub-deploy-options.adoc[CloudHub deployment settings].
+
+After deploying the first message flow using the endpoint configuration, you can view the runtime application name for the endpoint from the *Endpoint* details page or the *Receive* section of your message flow. To configure xref:runtime-manager::lb-mapping-rules.adoc[URL mapping rules] in the xref:runtime-manager::cloudhub-dedicated-load-balancer.adoc[DLB] to forward the AS2, HTTP, or HTTPS messages received from your partners to the application, provide the application name to your organization’s platform administrator.
+
+Your organization’s platform administrator can also xref:runtime-manager::lb-whitelists.adoc[add your partner's IP addresses to a list of allowed addresses] in the DLB settings to allow specific IP addresses to access the endpoint.
+
+=== External URL to Share for an AS2 Receive Endpoint
+
+The external URL that you can share with your partners for an AS2 receive endpoint is `+https://{DLB-domain}/{Input-path}/receive-as2+`.
+
+For example, if the name of your DLB domain is `mythical.lb.anypointdns.net` and the runtime application name is `b2b-inbound-as2-zap3`, then your administrator adds a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC:
+
+image::URL-mapping-rules-http.png[URL mapping rules for AS2 in the DLB settings]
+
+With these configurations, the external AS2 endpoint URL is `+https://mythical.lb.anypointdns.net/as2/mythical/receive-as2/+`.
+
+=== External URL to share for an HTTP or HTTPS Receive Endpoint
+
+The external URL that you can share with your partners for an HTTP or HTTPS endpoint is `+http://{DLB-domain}/{Input-path}/{base-path}/{message-type}+` or `+https://{DLB-domain}/{Input-path}/{base-path}/{message-type}+`.
+
+For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, the runtime application name is `b2b-inbound-http-ognq`, and the base path you configured in an HTTPS receive endpoint is `send2`, then your administrator adds a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC:
+
+image::URL-mapping-rules-http.png[URL mapping rules for HTTPS in the DLB settings]
+
+Using the following values, depending on your environment:
+
+* The external HTTPS receive endpoint URL is `+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/+`.
+* Your backend applications send the application JSON and XML messages for your outbound message flows from `+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/{message-type}+`.
+* If `enterprise-ob-po-ack` is the message type, your backend applications post the HTTPS requests to the URL
+`+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/enterprise-ob-po-ack+`.
+
+
+== Deploy to an On-Premises Mule Instance
+
+To deploy to an on-premises Mule instance that uses a firewall and load balancer, work with your organization's hosting or network security team to obtain the externally accessible DNS or the name of the instance host. Replace the `{runtime_host}` value in the URL with the specific value for your organization.
+
+== See Also
+
+* xref:create-endpoint.adoc[Creating Endpoints]
+* xref:endpoint-as2-receive.adoc[AS2 Receive Endpoint Settings]
+* xref:endpoints-http-receive.adoc[HTTP Receive Endpoint Settings]
+* xref:endpoint-https-receive.adoc[HTTPS Receive Endpoint Settings]

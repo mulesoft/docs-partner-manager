@@ -1,6 +1,6 @@
 = SFTP Receive Endpoint Settings
 
-SFTP receive endpoint settings determine where to receive messages in the following contexts:
+SFTP receive endpoints determine where to receive data. There are two types of SFTP receive endpoints:
 
 * Receive from partners
 +
@@ -12,7 +12,7 @@ Source endpoint in an outbound message flow that receives JSON and XML messages 
 
 A host, partner, or third party connection can own SFTP receive endpoints.
 
-Create SFTP receive endpoints by configuring these settings on the host or Partner page:
+Create SFTP receive endpoints by configuring these settings on the *<host>* or *Partner* page:
 
 [%header%autowidth.spread]
 |===
@@ -59,9 +59,11 @@ Create SFTP receive endpoints by configuring these settings on the host or Partn
 
 | Size check wait time
 | Wait time, in seconds, between size checks to determine if a file is ready for processing. The value in this field is `1 second` by default. This allows a file write to complete before processing.
-
+{sp} +
+{sp} +
 Mule performs two size checks by waiting the amount of time specified in the `Size check wait time` field. If both checks return the same value, the file is ready to process.
-
+{sp} +
+{sp} +
 To disable this feature, specify a negative number or omit the value.
 
 | Supported Format Types
@@ -73,6 +75,10 @@ To disable this feature, specify a negative number or omit the value.
 | Specify an SFTP server path at which to store a copy of the file that was obtained from `source path`.
 | No
 |===
+
+== Next Step
+
+After you create an SFTP receive endpoint, you can deploy it as described in xref:deploy-endpoints.adoc[Deploy Receive Endpoints].
 
 == See Also
 
