@@ -8,7 +8,7 @@ Source endpoint in an outbound message flow that receives application messages f
 +
 * Receive from Partners
 +
-Source endpoint in an inbound message flow that receives inbound messages from partners either directly or via third party connections
+Source endpoint in an inbound message flow that receives inbound messages from partners either directly or via third-party connections
 
 IMPORTANT: Each HTTP and HTTPS receive endpoint configuration is deployed as an individual Mule application in the runtime. Consider reusing existing HTTP and HTTPS receive endpoint configurations across a partner's message flows.
 
@@ -89,6 +89,10 @@ After selecting *API Key* in the *Authentication type* list, specify the HTTP he
 The backend applications that send payloads to the HTTP receive endpoint must pass the API key in the HTTP request with the configured HTTP header name.
 |Yes
 |===
+
+== Next Step
+
+After you create an HTTP or HTTPS receive endpoint, you can deploy it as described in xref:deploy-endpoints.adoc[Deploy Receive Endpoints].
 
 == See Also
 

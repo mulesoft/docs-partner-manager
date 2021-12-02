@@ -4,17 +4,17 @@ You can create new endpoints from the *Partners* or *Host* page, or by using the
 
 == Create Endpoints from the Partners Page
 
-Use the *Partners* page to create new send and receive endpoints owned by partners or third party connections:
+Use the *Partners* page to create new send and receive endpoints owned by partners or third-party connections:
 
 . In the navigation menu, select *Partners*.
-. Select the partner or third party connection for which to create the endpoint.
+. Select the partner or third-party connection for which to create the endpoint.
 . In the *Endpoints* section, click *New*.
 . In the *New Endpoint* window *Usage* field, select *Receive from partners* or *Send to partners*.
 . In the *Protocol* field, select the protocol to use for the endpoint.
 . <<configure-endpoint,Configure the endpoint>> according to the endpoint type and protocol.
 . Click *Save*.
 
-Ownership of endpoints is automatically assigned based on the partner or third party connection from which you are creating the endpoint.
+Ownership of endpoints is automatically assigned based on the partner or third-party connection from which you are creating the endpoint.
 
 == Create Endpoints from the Host Page
 
@@ -29,7 +29,7 @@ Use the *Host* page to create new send and receive endpoints owned by the host:
 
 == Create Endpoints Using the Message Flow Wizard
 
-You can use the Message Flow Wizard to create send and receive endpoints owned by hosts, partners, or third party connections.
+You can use the Message Flow Wizard to create send and receive endpoints owned by hosts, partners, or third-party connections.
 
 For information about using the Message Flow wizard to create new endpoints, see xref:configure-message-flows.adoc[Create and Configure Inbound Message Flows] and xref:create-outbound-message-flow.adoc[Create and Configure Outbound Message Flows].
 

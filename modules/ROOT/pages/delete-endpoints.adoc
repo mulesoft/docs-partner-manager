@@ -1,6 +1,8 @@
 = Deleting Endpoints
 
-You can delete endpoints that are not used in message flows from the host or partner page:
+You can delete endpoints that are not used in message flows from the +
+.0
+host or partner page:
 
 . From Anypoint Partner Manager, do either of the following:
 * If the host owns the endpoint, select the *<host name>* from the navigation menu.

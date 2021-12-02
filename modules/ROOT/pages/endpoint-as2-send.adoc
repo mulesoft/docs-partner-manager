@@ -1,17 +1,17 @@
 = AS2 Send Endpoint Settings
 
-AS2 send endpoint settings configure the target endpoint in an outbound message flow to which transformed B2B EDI messages are sent to partners either directly or via third party connections.
+The AS2 Send to Partners endpoint settings configure the target endpoint in an outbound message flow to which transformed B2B EDI messages are sent to partners either directly or via third-party connections.
 
-A partner or third party can own AS2 send endpoints. Use a third-party-owned AS2 send endpoint for an outbound message flow for partners that use a third party connection.
+A partner or third-party can own AS2 send endpoints. Use a third-party-owned AS2 send endpoint for an outbound message flow for partners that use a third-party connection.
 
-Create AS2 endpoints by configuring these settings on the partner or third party connection pages:
+Create AS2 endpoints by configuring these settings on the partner or third-party connection pages:
 
 [%header%autowidth.spread]
 |===
 |Setting |Description |Required
 
 |Owner
-|Partner or third party connection that owns the endpoint.
+|Partner or third-party connection that owns the endpoint.
 |Yes
 
 |Usage
@@ -35,7 +35,7 @@ Create AS2 endpoints by configuring these settings on the partner or third party
 | No
 
 |Partner AS2 URL
-|Your partner’s or third party connection's AS2 URL to which outbound EDI transmissions are sent.
+|Your partner’s or third-party connection's AS2 URL to which outbound EDI transmissions are sent.
 |Yes
 
 |Connection timeout
@@ -55,7 +55,7 @@ Create AS2 endpoints by configuring these settings on the partner or third party
 |Yes
 
 |Partner AS2 identifier
-|Your partner’s or third party connection's AS2 identifier.
+|Your partner’s or third-party connection's AS2 identifier.
 |Yes
 
 |Respond to email address
