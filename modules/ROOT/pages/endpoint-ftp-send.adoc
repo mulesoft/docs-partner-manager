@@ -21,7 +21,7 @@ Create FTP send endpoints by configuring these settings on the *<host>* or *Part
 |Name |Description | Required
 
 | Owner
-| Trading partner or host that owns the endpoint.
+| Host, partner or third-party connection that owns the endpoint.
 | Yes
 
 | Protocol

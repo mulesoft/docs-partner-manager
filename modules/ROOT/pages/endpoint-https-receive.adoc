@@ -6,7 +6,7 @@ HTTP and HTTPS receive endpoints configure where to receive B2B messages transmi
 +
 Source endpoint in an inbound message flow that receives inbound B2B messages from partners either directly or via third-party connections
 +
-A host, partner, or third-party connection can own HTTP and HTTPS receive endpoints.
+A host, partner, or third-party connection can own HTTP and HTTPS Receive from Partners endpoints.
 +
 * Source at Host
 +
@@ -32,7 +32,6 @@ a| Host, partner, or third-party connection that owns the endpoint.
 | Protocol
 | Protocol selected in the *Protocol* field of the *New endpoint*. You cannot modify this value.
 | Yes
-
 
 | Description
 | User-supplied value that describes the purpose of the endpoint.

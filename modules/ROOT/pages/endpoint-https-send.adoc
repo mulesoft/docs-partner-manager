@@ -20,7 +20,7 @@ Create HTTP and HTTPS send endpoints by configuring these settings on the host, 
 |===
 |Name |Description |Required
 | Owner
-| Partner, third-party connection, or host who owns the endpoint
+| Host, partner, or third-party connection that owns the endpoint.
 | Yes
 
 |Protocol

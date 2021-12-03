@@ -12,7 +12,7 @@ A host, partner, or third-party connection can own SFTP Send to Partners endpoin
 +
 Target endpoint in an inbound message flow to which transformed JSON and XML messages are sent to the backend applications.
 +
-A host, partner, or 3rd party connection can own FTP send endpoints.
+Only a host can own SFTP Target at Host endpoints.
 
 Create SFTP send endpoints by configuring these settings on the *<host>* or *Partner* pages. You can also create these endpoints when you configure an outbound message flow:
 
@@ -21,7 +21,7 @@ Create SFTP send endpoints by configuring these settings on the *<host>* or *Par
 |Name |Description | Required
 
 | Owner
-| Partner or host that owns the endpoint.
+| Host, partner, or third-party connection that owns the endpoint.
 | Yes
 
 | Protocol

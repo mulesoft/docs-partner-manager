@@ -2,15 +2,17 @@
 
 SFTP receive endpoints configure where to receive B2B messages transmitted over SFTP. There are two types of SFTP receive endpoints:
 
-* Receive from partners
+* Receive from Partners
 +
 Source endpoint in an inbound message flow that receives B2B messages from partners either directly or via third-party connections
 +
-* Source at host
+A host, partner, or third-party connection can own SFTP Receive from Partners endpoints.
++
+* Source at Host
 +
 Source endpoint in an outbound message flow that receives messages from the backend applications
-
-A host, partner, or third-party connection can own SFTP receive endpoints.
++
+Only a host can own SFTP Source at Host endpoints.
 
 Create SFTP receive endpoints by configuring these settings on the *<host>* or *Partner* page:
 

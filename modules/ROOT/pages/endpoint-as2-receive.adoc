@@ -1,8 +1,6 @@
 = AS2 Receive Endpoint Settings
 
-AS2 receive endpont settings configure where to receive B2B data transmitted over AS2. There is one type of AS2 receive endpoint: AS2 Receive from Partners.
-
-The AS2 Receive from Partners endpoint settings configure the source endpoint in an inbound message flow that receives B2B messages from partners either directly or via third-party connections. One AS2 endpoint can receive data from multiple partners, multiple third-party connections, or both.
+Anypoint Partner Manager supports the AS2 Receive from Partners endpoint type, which configures the source endpoint in an inbound message flow that receives B2B messages from partners either directly or via third-party connections. One AS2 endpoint can receive data from multiple partners, multiple third-party connections, or both.
 
 Only a host can own AS2 Receive from Partners endpoints.
 
