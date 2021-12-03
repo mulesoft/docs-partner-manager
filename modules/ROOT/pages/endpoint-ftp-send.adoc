@@ -4,7 +4,7 @@ FTP send endpoint settings configure where to send data. There are two types of 
 
 * Send to Partners
 +
-Target endpoint in an outbound message flow to which transformed B2B EDI messages are sent to partners, either directly or through third-party connections
+Target endpoint in an outbound message flow to which transformed B2B messages are sent to partners, either directly or through third-party connections
 +
 A host, partner, or third-party connection can own FTP Send to Partners endpoints.
 

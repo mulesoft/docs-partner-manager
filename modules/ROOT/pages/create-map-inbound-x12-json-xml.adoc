@@ -65,4 +65,4 @@ Later, when you create and configure inbound message flows, you can import the `
 
 == See Also
 
-* xref:configure-message-flows.adoc[Create and Configure Inbound Message Flows]
+* xref:configure-message-flows.adoc[Create Inbound Message Flows]
