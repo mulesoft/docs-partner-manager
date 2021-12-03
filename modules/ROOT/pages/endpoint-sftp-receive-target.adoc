@@ -1,6 +1,6 @@
 = SFTP Receive Endpoint Settings
 
-SFTP receive endpoints configure where to receive data. There are two types of SFTP receive endpoints:
+SFTP receive endpoints configure where to receive B2B messages transmitted over SFTP. There are two types of SFTP receive endpoints:
 
 * Receive from partners
 +
@@ -8,7 +8,7 @@ Source endpoint in an inbound message flow that receives B2B messages from partn
 +
 * Source at host
 +
-Source endpoint in an outbound message flow that receives JSON and XML messages from the backend applications
+Source endpoint in an outbound message flow that receives messages from the backend applications
 
 A host, partner, or third-party connection can own SFTP receive endpoints.
 
@@ -82,4 +82,4 @@ To disable this feature, specify a negative number or omit the value.
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Create Endpoints]
+* xref:create-endpoint.adoc[Creating Endpoints]

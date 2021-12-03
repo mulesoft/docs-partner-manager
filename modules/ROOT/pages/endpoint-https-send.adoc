@@ -1,6 +1,6 @@
 = HTTP and HTTPS Send Endpoint Settings
 
-HTTP and HTTPS send endpoint settings configure where to send messages. There are two types of HTTP and HTTPS send endpoints:
+HTTP and HTTPS send endpoint settings configure where to send B2B messages transmitted over HTTP or HTTPS, respectively. There are two types of HTTP and HTTPS send endpoints:
 
 * Send to Partners
 +
@@ -10,9 +10,9 @@ A host, partner, or third-party connection can own HTTP and HTTPS Send to Partne
 +
 * Target at Host
 +
-Target endpoint in an inbound message flow to which transformed JSON and XML messages are sent to the backend applications
-
-A host, partner, or third-party connection can own HTTP and HTTPS send endpoints.
+Target endpoint in an inbound message flow to which transformed messages are sent to the backend applications
++
+Only a host can own HTTP and HTTPS Target at Host endpoints.
 
 Create HTTP and HTTPS send endpoints by configuring these settings on the host, partner, or third-party connection page. You can also create these endpoints when you configure an outbound message flow.
 
@@ -96,5 +96,5 @@ The client secret provided when registering your application.
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Create Endpoints]
+* xref:create-endpoint.adoc[Creating Endpoints]
 * xref:Certificates.adoc[Certificates]

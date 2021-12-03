@@ -1,6 +1,8 @@
 = AS2 Receive Endpoint Settings
 
-The AS2 Receive from Partners endpoint settings configure the source endpoint in an inbound message flow that receives B2B messages from partners directly or via third-party connections. One AS2 endpoint can receive data from multiple partners, third-party connections, or both.
+AS2 receive endpont settings configure where to receive B2B data transmitted over AS2. There is one type of AS2 receive endpoint: AS2 Receive from Partners.
+
+The AS2 Receive from Partners endpoint settings configure the source endpoint in an inbound message flow that receives B2B messages from partners either directly or via third-party connections. One AS2 endpoint can receive data from multiple partners, multiple third-party connections, or both.
 
 Only a host can own AS2 Receive from Partners endpoints.
 
@@ -32,12 +34,10 @@ NOTE: Each AS2 receive endpoint configuration gets deployed as an individual Mul
 a|
 * When enabled, the AS2 receive endpoint application deploys to the private port `8092` in your xref:runtime-manager::virtual-private-cloud.adoc[Anypoint VPC]. You can manage the access control to the endpoint via the Anypoint VPC and dedicated load balancer settings.
 * When disabled, the AS2 receive endpoint application deploys to the public port `8082` by default. You can access the endpoint URL directly over the internet.
-+
-This configuration applies only to Anypoint VPC deployments from Partner Manager.
 |No
 
 |Enforce security level
-a|Indicates whether Partner Manager rejects incoming AS2 messages that aren't signed, encrypted, or both. When Partner Manager rejects a message, it returns a negative Message Disposition Notification (MDN) to the sender.
+a|Indicates whether Partner Manager rejects incoming AS2 messages that aren't signed or encrypted. When Partner Manager rejects a message, it returns a negative Message Disposition Notification (MDN) to the sender.
 
 Allowed values:
 
@@ -62,10 +62,10 @@ Accepts messages that aren't signed or encrypted.
 
 == Next Step
 
-After you create an AS2 receive endpoint, you can deploy it as described in xref:deploy-endpoints.adoc[Deploy Receive Endpoints].
+After you create an AS2 receive endpoint, you can deploy it, as described in xref:deploying-receive-endpoints.adoc[Deploying Receive Endpoints].
 
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Create Endpoints]
+* xref:create-endpoint.adoc[Creating Endpoints]
 * xref:as2-endpoints-algorithms.adoc[AS2 Signature and Encryption Algorithms]

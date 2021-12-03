@@ -44,7 +44,7 @@ Click *New* in the *Endpoints* section and enter the required fields.
 * Delete an endpoint
 +
 Click the endpoint's link and click *Delete*.
-| xref:create-endpoint.adoc[Create Endpoints]
+| xref:create-endpoint.adoc[Creating Endpoints]
 | Acknowledgements, validations, control numbers, character sets (X12 only), and separators (X12 send format only).
 a| * Modify
 +

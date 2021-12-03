@@ -1,13 +1,13 @@
 = HTTP and HTTPS Receive Endpoint Settings
 
-HTTP and HTTPS receive endpoints configure where to receive data. There are two type of HTTP and HTTPS endpoints:
+HTTP and HTTPS receive endpoints configure where to receive B2B messages transmitted over HTTP or HTTPS, respectively. There are two type of HTTP and HTTPS endpoints:
 
 * Receive from Partners
 +
 Source endpoint in an inbound message flow that receives inbound B2B messages from partners either directly or via third-party connections
-
++
 A host, partner, or third-party connection can own HTTP and HTTPS receive endpoints.
-
++
 * Source at Host
 +
 Source endpoint in an outbound message flow that receives application messages from the backend applications
@@ -22,15 +22,11 @@ Create HTTP and HTTPS receive endpoints by configuring these settings on the *<h
 |===
 |Name |Description |Required
 |Endpoint Name
-|Automatically generated name used to identify the endpoint, which you can modify manually.
+|Automatically-generated name used to identify the endpoint, which you can modify manually.
 |Yes
 
 | Owner
-a| Host that owns the endpoint:
-
-* Only the host can own HTTP source at Host endpoints.
-* The host, partner, or third-party connection can own HTTP receive from partner endpoints.
-
+a| Host, partner, or third-party connection that owns the endpoint.
 | Yes
 
 | Protocol
@@ -96,9 +92,9 @@ The backend applications that send payloads to the HTTP receive endpoint must pa
 
 == Next Step
 
-After you create an HTTP or HTTPS receive endpoint, you can deploy it as described in xref:deploy-endpoints.adoc[Deploy Receive Endpoints].
+After you create an HTTP or HTTPS receive endpoint, you can deploy it, as described in xref:deploying-receive-endpoints.adoc[Deploying Receive Endpoints].
 
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Create Endpoints]
+* xref:create-endpoint.adoc[Creating Endpoints]

@@ -152,6 +152,6 @@ a|Indicates the character encoding for messages.
 
 == See Also
 
-* xref:create-inbound-message-flow.adoc[Creating and Configuring Inbound Message Flows]
+* xref:create-inbound-message-flow.adoc[Creating Inbound Message Flows]
 * xref:create-partner.adoc[Creating Partners]
 * xref:modify-partner-settings.adoc[Modifying Partner Settings]

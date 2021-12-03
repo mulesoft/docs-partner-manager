@@ -15,7 +15,7 @@ After you create a third-party connection, you can select the endpoints and iden
 
 == See Also
 
-* xref:create-endpoint.adoc[Create Endpoints]
-* xref:create-inbound-message-flow.adoc[Creating and Configuring Inbound Message Flows]
-* xref:create-outbound-message-flow.adoc[Creating and Configuring Outbound Message Flows]
+* xref:create-endpoint.adoc[Creating Endpoints]
+* xref:create-inbound-message-flow.adoc[Creating Inbound Message Flows]
+* xref:create-outbound-message-flow.adoc[Creating Outbound Message Flows]
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]

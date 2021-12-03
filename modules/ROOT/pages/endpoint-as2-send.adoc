@@ -2,7 +2,7 @@
 
 The AS2 Send to Partners endpoint settings configure the target endpoint in an outbound message flow to which transformed B2B messages are sent to partners either directly or via third-party connections.
 
-A partner or third-party can own AS2 send endpoints.
+Either a partner or a third-party can own AS2 send endpoints.
 
 Create AS2 endpoints by configuring these settings on the partner or third-party connection pages:
 
@@ -23,7 +23,7 @@ Create AS2 endpoints by configuring these settings on the partner or third-party
 |Yes
 
 |Partner
-|Partner to whom the transaction is sent
+|Partner to whom the transaction is sent.
 |Yes
 
 |Endpoint Name
@@ -99,4 +99,4 @@ a|Whether you want the partner to return an MDN receipt, which confirms the rece
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Create Endpoints]
+* xref:create-endpoint.adoc[Creating Endpoints]

@@ -1,6 +1,6 @@
 = SFTP Send Endpoint Settings
 
-SFTP send endpoint settings configure where to send data. There are two types of SFTP send endpoints:
+SFTP send endpoint settings configure where to send B2B messages transmitted over SFTP. There are two types of SFTP send endpoints:
 
 * Send to Partners
 +
@@ -62,7 +62,9 @@ transformed JSON and XML files generated from inbound message flows.
 |
 |===
 
+For EDI messages that are not time-sensitive, such as invoice and payment remittances, use the Write batch operation to merge multiple individual messages into a single interchange and send to your trading partners.
+
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Create Endpoints]
+* xref:create-endpoint.adoc[Creating Endpoints]

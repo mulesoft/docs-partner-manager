@@ -13,5 +13,5 @@ Use the *Partners* page to create and manage partners. From this page, you can:
 
 == See Also
 
-* xref:create-endpoint.adoc[Create Endpoints]
+* xref:create-endpoint.adoc[Creating Endpoints]
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]

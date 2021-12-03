@@ -44,7 +44,7 @@ Add the following settings for the new third-party connection, either now or lat
 |
 | The connection-specific endpoints to use for sending and receiving messages through the connection. If you plan to use host-owned endpoints only, you don't need to create connection-specific endpoints.
 | Click *New* in the *Endpoints* section.
-| xref:create-endpoint.adoc[Create Endpoints]
+| xref:create-endpoint.adoc[Creating Endpoints]
 |===
 
 == Next Step
