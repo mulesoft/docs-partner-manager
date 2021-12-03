@@ -46,7 +46,7 @@ Add the following settings for the new partner, either now or later on:
 |
 | Partner-specific endpoints to use for sending and receiving messages to and from your partner, including acknowledgement endpoints. If you plan to use host endpoints only, you don't need to create partner-specific endpoints.
 | Click *New* in the *Endpoints* section.
-| xref:create-endpoint.adoc[Create and Configure Endpoints]
+| xref:create-endpoint.adoc[Create Endpoints]
 | Acknowledgements, validations, and control numbers for each message format that the partner uses. For X12, you can also configure character sets and separators (X12 send format only).
 | Click the links in the *Validation and acknowledgement* settings.
 a|

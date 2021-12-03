@@ -66,4 +66,4 @@ For EDI messages that are not time-sensitive, such as invoice and payment remitt
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:create-endpoint.adoc[Create Endpoints]

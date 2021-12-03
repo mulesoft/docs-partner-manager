@@ -96,5 +96,5 @@ The client secret provided when registering your application.
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:create-endpoint.adoc[Create Endpoints]
 * xref:Certificates.adoc[Certificates]

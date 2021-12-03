@@ -99,4 +99,4 @@ a|Whether you want the partner to return an MDN receipt, which confirms the rece
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:create-endpoint.adoc[Create Endpoints]

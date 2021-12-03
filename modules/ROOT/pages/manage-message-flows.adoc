@@ -32,7 +32,7 @@ a|
 * (AS2 endpoint) View the AS2 certificate associated with the endpoint.
 a|
 
-* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:create-endpoint.adoc[Create Endpoints]
 * xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
 * xref:Certificates.adoc[Certificate Settings]
 
@@ -53,7 +53,7 @@ a|
 a| * Select a different Target at Host message type.
 * Select a different Target at Host endpoint.
 a| * xref:partner-manager-create-message-type.adoc[Create and Configure Message Types]
-* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:create-endpoint.adoc[Create Endpoints]
 |===
 +
 . Verify that any modified sections of the flow show a green checkmark next to them and then click *Deploy* to deploy the updated message flow to Mule.
@@ -81,7 +81,7 @@ To modify the settings of an outbound message flow:
 a| * Select a different Source at Host endpoint.
 * Select a different Source at Host message type.
 * Select different reference IDs to use for outbound routing.
-a| * xref:create-endpoint.adoc[Create and Configure Endpoints]
+a| * xref:create-endpoint.adoc[Create Endpoints]
 * xref:partner-manager-create-message-type.adoc[Create and Configure Message Types]
 * xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
 
@@ -101,7 +101,7 @@ a| * xref:partner-manager-create-message-type.adoc[Create and Configure Message 
 |Send to <partner>
 a| * Select a different send to partner endpoint.
 * (AS2 endpoint) View the AS2  associated with the endpoint.
-a| * xref:create-endpoint.adoc[Create and Configure Endpoints]
+a| * xref:create-endpoint.adoc[Create Endpoints]
 * xref:Certificates.adoc[Certificate Settings]
 |===
 +

@@ -31,7 +31,7 @@ To configure the receiving endpoint:
 . In the message flow, expand the *Receiving endpoint* section and click *Select*.
 . In the *Select an endpoint: Receive from <partner>* window, do either of the following:
 * Select an existing Receive from Partners endpoint and click *Select*.
-* Click *New* to create a new Receive from Partners endpoint, as described in xref:create-endpoint.adoc[Create and Configure Endpoints].
+* Click *New* to create a new Receive from Partners endpoint, as described in xref:create-endpoint.adoc[Create Endpoints].
 +
 If you select an endpoint owned by a third-party connection, the messages go through that connection.
 +
@@ -68,7 +68,7 @@ If the source message type is X12 or EDIFACT and your partner expects your organ
 . Click *Select*.
 . In the *Select an endpoint: Send acknowledgement to <partner>* window, do either of the following:
 * Select the endpoint to receive the acknowledgment messages from your partner and click *Select*.
-* Click *New* to create a new send to endpoint, as described in xref:create-endpoint.adoc[Create and Configure Endpoints].
+* Click *New* to create a new send to endpoint, as described in xref:create-endpoint.adoc[Create Endpoints].
 
 +
 The acknowledgment is added to the message flow.
@@ -112,7 +112,7 @@ To configure the target endpoint:
 . In the *Target at <host>* section, expand the *Endpoint* section and click *Select*.
 . In the *Select an endpoint: Target to <host>* window, do either of the following:
 * Select an existing Target at Host endpoint and click *Select*.
-* Click *New* to create a new Target at Host endpoint, as described in xref:create-endpoint.adoc[Create and Configure Endpoints].
+* Click *New* to create a new Target at Host endpoint, as described in xref:create-endpoint.adoc[Create Endpoints].
 
 +
 After you select an endpoint, it is added to the message flow.

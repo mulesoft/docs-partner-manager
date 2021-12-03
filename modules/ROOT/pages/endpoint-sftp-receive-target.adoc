@@ -79,4 +79,4 @@ To disable this feature, specify a negative number or omit the value.
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:create-endpoint.adoc[Create Endpoints]

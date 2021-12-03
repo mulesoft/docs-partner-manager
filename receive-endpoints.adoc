@@ -1,4 +1,4 @@
-= Settings for Receive Endpoints
+= Receive Endpoints
 
 Anypoint Partner Manager receive endpoints have the following functions:
 
@@ -20,4 +20,4 @@ Partner Manager supports the following formats for receive endpoints:
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:create-endpoint.adoc[Create Endpoints]

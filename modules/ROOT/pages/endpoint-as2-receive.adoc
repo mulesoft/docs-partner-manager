@@ -65,5 +65,5 @@ After you create an AS2 receive endpoint, you can deploy it as described in xref
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:create-endpoint.adoc[Create Endpoints]
 * xref:as2-endpoints-algorithms.adoc[AS2 Signature and Encryption Algorithms]

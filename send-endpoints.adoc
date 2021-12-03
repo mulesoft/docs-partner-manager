@@ -1,4 +1,4 @@
-= Settings for Send Endpoints
+= Send Endpoints
 
 Anypoint Partner Manager send endpoints have the following functions:
 
@@ -20,4 +20,4 @@ Partner Manager supports the following formats for send endpoints:
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:create-endpoint.adoc[Create Endpoints]

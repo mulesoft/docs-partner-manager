@@ -98,4 +98,4 @@ After you create an HTTP or HTTPS receive endpoint, you can deploy it as describ
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:create-endpoint.adoc[Create Endpoints]
