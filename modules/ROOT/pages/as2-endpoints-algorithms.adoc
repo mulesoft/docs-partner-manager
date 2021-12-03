@@ -30,4 +30,4 @@ AS2 endpoints deployed from Partner Manager support the following signature and 
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:create-endpoint.adoc[Creating Endpoints]

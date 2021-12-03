@@ -13,9 +13,26 @@ When creating partner-facing endpoints directly from the partner or third-party 
 In a message flow, availability depends on the endpoint assignment:
 
 * Any partner can select an endpoint assigned to the host.
-* If an endpoint is assigned to a specific partner or third-party connection, than that endpoint is available only to the partner for which the endpoint is assigned.
+* If an endpoint is assigned to a specific partner or third-party connection, than that endpoint is available only to the partner or third-party connection to which the endpoint is assigned.
+
+== Supported Endpoint Protocols
+
+The configuration of Partner Manager endpoints depends on endpoint type and protocol. The following table describes the endpoint types, along with their supported protocols and possible owners:
+
+[%header%autowidth.spread]
+|===
+|Endpoint Type | Protocol | Can be owned by
+| Source at Host | FTP, HTTP, HTTPS, SFTP | Host
+| Target at Host | FTP, HTTP, HTTPS, SFTP | Host
+| Receive from Partners | AS2 |Host
+|  | FTP, HTTP, HTTPS, SFTP | Host, partner, third-party connection
+| Send to Partners| AS2
+| Partner, third-party connection
+|  | FTP, HTTP, HTTPS, SFTP | Host, partner, third-party connection
+|===
 
 == See Also
 
-* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:create-endpoint.adoc[Creating Endpoints]
+* xref:endpoint-runtime-services.adoc[Endpoint Runtime Services]
 * xref:delete-endpoints.adoc[Delete Endpoints]
