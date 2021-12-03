@@ -1,14 +1,15 @@
 = HTTP and HTTPS Receive Endpoint Settings
 
-THTTP and HTTPS receive endpoints determine where to receive data. There are two type of HTTP and HTTPS endpoints:
+HTTP and HTTPS receive endpoints configure where to receive data. There are two type of HTTP and HTTPS endpoints:
+
+* Receive from Partners
++
+Source endpoint in an inbound message flow that receives inbound B2B messages from partners either directly or via third-party connections
 
 * Source at Host
 +
 Source endpoint in an outbound message flow that receives application messages from the backend applications
 +
-* Receive from Partners
-+
-Source endpoint in an inbound message flow that receives inbound messages from partners either directly or via third-party connections
 
 IMPORTANT: Each HTTP and HTTPS receive endpoint configuration is deployed as an individual Mule application in the runtime. Consider reusing existing HTTP and HTTPS receive endpoint configurations across a partner's message flows.
 

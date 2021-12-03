@@ -1,6 +1,6 @@
 = AS2 Signature and Encryption Algorithms
 
-AS2 endpoints deployed from Partner Manager support the following signature and encryption algorithms:
+AS2 endpoints deployed from Anypoint Partner Manager support the following signature and encryption algorithms:
 
 * Signature algorithms
 ** `UNSIGNED (Default)`

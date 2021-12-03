@@ -4,7 +4,7 @@ Using property placeholders, Anypoint Partner Manager enables you to configure a
 
 When file name pattern fields are configured with property placeholders (specified within `${ }`), Partner Manager dynamically populates the file name with updated information at runtime. Any file name property field that is not specified within the placeholder is static and is not updated at runtime.
 
-The following are the supported property placeholders and the dynamic value the placeholder is replaced with at runtime. All dates and times must be in UTC format.
+The following table shows the property placeholders that Partner Manager supports and the dynamic value the placeholder is replaced with at runtime. All dates and times must be in UTC format.
 
 [%header%autowidth.spread]
 |===

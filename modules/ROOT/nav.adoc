@@ -48,7 +48,6 @@
       **** xref:file-name-pattern.adoc[File Name Patterns for Send Endpoints]
       **** xref:endpoint-as2-send.adoc[AS2 Send Endpoint Settings]
       **** xref:endpoint-ftp-send.adoc[FTP Send Endpoint Settings]
-      **** xref:endpoint-http-send.adoc[HTTP Send Endpoint Settings]
       **** xref:endpoint-https-send.adoc[HTTPS Send Endpoint Settings]
       **** xref:endpoint-sftp-send.adoc[SFTP Send Endpoint Settings]
     *** xref:as2-endpoints-algorithms.adoc[AS2 Signature and Encryption Algorithms]
