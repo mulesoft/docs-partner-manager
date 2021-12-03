@@ -6,6 +6,8 @@ Only a host can own AS2 Receive from Partners endpoints.
 
 Create an AS2 Receive from Partners endpoint by configuring these settings on the *<host>* page:
 
+NOTE: Each AS2 receive endpoint configuration gets deployed as an individual Mule application in the runtime. Consider reusing an existing AS2 receive endpoint configuration across message flows.
+
 [%header%autowidth.spread]
 |===
 | Setting | Description | Required
@@ -15,7 +17,7 @@ Create an AS2 Receive from Partners endpoint by configuring these settings on th
 |Yes
 
 |Owner
-|Host that owns the endpoint
+|Host that owns the endpoint.
 |Yes
 
 |Endpoint name

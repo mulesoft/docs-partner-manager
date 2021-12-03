@@ -6,10 +6,13 @@ HTTP and HTTPS receive endpoints configure where to receive data. There are two 
 +
 Source endpoint in an inbound message flow that receives inbound B2B messages from partners either directly or via third-party connections
 
+A host, partner, or third-party connection can own HTTP and HTTPS receive endpoints.
+
 * Source at Host
 +
 Source endpoint in an outbound message flow that receives application messages from the backend applications
 +
+Only a host can own FTP Source at Host endpoints.
 
 IMPORTANT: Each HTTP and HTTPS receive endpoint configuration is deployed as an individual Mule application in the runtime. Consider reusing existing HTTP and HTTPS receive endpoint configurations across a partner's message flows.
 
@@ -62,11 +65,11 @@ NOTE: Using this feature requires an API Manager license.
 | No
 
 |URL
-a|HTTP or HTTPS address where you receive outbound source messages from backend applications. Partner Manager automatically generates this ID after the first message flow that uses the endpoint is deployed.
+a|HTTP or HTTPS address where you receive outbound source messages from backend applications or inbound B2B messages from your partners. Partner Manager automatically generates this ID after the first message flow that uses the endpoint is deployed.
 |Yes
 
 |Response timeout (in milliseconds)
-|Response timeout period in milliseconds. The default is  `15000`.
+|Response timeout period in milliseconds. The default is `15000`.
 |Yes
 
 |Authentication type

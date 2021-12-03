@@ -10,7 +10,7 @@ A host, partner, or third-party connection can own SFTP Send to Partners endpoin
 
 * Target at Host
 +
-Target endpoint in an inbound message flow to which transformed JSON and XML messages are sent to the backend applications
+Target endpoint in an inbound message flow to which transformed JSON and XML messages are sent to the backend applications.
 +
 A host, partner, or 3rd party connection can own FTP send endpoints.
 
