@@ -88,4 +88,3 @@ To disable this feature, specify a negative number or omit the value.
 
 * xref:endpoints.adoc[Endpoints]
 * xref:create-endpoint.adoc[Creating Endpoints]
-* xref:file-name-pattern.adoc[Filename Patterns for Send Endpoints]

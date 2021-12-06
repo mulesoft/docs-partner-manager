@@ -1,12 +1,12 @@
 = Create and Configure Message Types
 
-Message types define the structure of the transactions that Anypoint Partner Manager receives or sends. You can create message types from the host page or the Message Flow wizard.
+Message types define the structure of the transactions that Anypoint Partner Manager receives or sends. You can create message types from the *<host>* page or the Message Flow wizard.
 
 [[create-message-type]]
 == Create a Message Type
 
 . In the navigation menu, select *<host-name>*.
-. From the *Message types* section host page, click *New*.
+. From the *Message types* section, click *New*.
 . In the *Usage* drop-down list, select the message type:
 * <<receive-and-send-to-partners,Receive From and Send to Partners>>
 * <<target-at-host,Target at Host>>

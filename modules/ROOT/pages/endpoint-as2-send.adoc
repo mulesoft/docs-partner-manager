@@ -67,7 +67,7 @@ Create AS2 endpoints by configuring these settings on the partner or third-party
 |Yes
 
 |Filename pattern
-|xref:file-name-pattern.adoc[File name pattern] required by your partner.
+|Filename pattern required by your partner.
 |Yes
 
 |Request receipt
@@ -100,3 +100,4 @@ a|Whether you want the partner to return a Message Disposition Notification (MDN
 
 * xref:endpoints.adoc[Endpoints]
 * xref:create-endpoint.adoc[Creating Endpoints]
+xref:file-name-pattern.adoc[Filename Patterns for Send Endpoints]
