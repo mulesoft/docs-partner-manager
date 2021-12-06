@@ -4,7 +4,7 @@ FTP send endpoint settings configure where to send B2B messages transmitted over
 
 * Send to Partners
 +
-Target endpoint in an outbound message flow to which transformed B2B messages are sent to partners, either directly or through third-party connections
+Target endpoint in an outbound message flow to which transformed B2B messages are sent to partners, either directly or through third-party connections.
 +
 A host, partner, or third-party connection can own FTP Send to Partners endpoints.
 
@@ -25,11 +25,11 @@ Create FTP send endpoints by configuring these settings on the *<host>* or *Part
 | Yes
 
 | Protocol
-| Protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window.
+| Protocol that the endpoint supports.
 | Yes
 
 |Endpoint Name
-| Name used to identify the endpoint. The value in the *Endpoint Name* field is generated automatically, but can be modified manually.
+| Automatically-generated name used to identify the endpoint, which you can modify manually.
 | Yes
 
 |Description
@@ -41,7 +41,7 @@ Create FTP send endpoints by configuring these settings on the *<host>* or *Part
 |Yes
 
 |Port
-|Port number of the FTP server to connect.
+|Port number of the FTP.
 |Yes
 
 |Username
@@ -57,7 +57,7 @@ Create FTP send endpoints by configuring these settings on the *<host>* or *Part
 |Yes
 
 |File name pattern
-|xref:file-name-pattern.adoc[File name pattern] required by your partner or backend application.
+|Filename pattern required by your partner or backend application.
 |
 |===
 
@@ -67,3 +67,4 @@ For EDI messages that are not time-sensitive, such as invoice and payment remitt
 
 * xref:endpoints.adoc[Endpoints]
 * xref:create-endpoint.adoc[Creating Endpoints]
+* xref:file-name-pattern.adoc[Filename Patterns for Send Endpoints]

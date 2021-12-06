@@ -1,6 +1,6 @@
 = SFTP Send Endpoint Settings
 
-SFTP send endpoint settings configure where to send B2B messages transmitted over SFTP. There are two types of SFTP send endpoints:
+SFTP send endpoint settings configure where to send B2B messages transmitted over SFTP. There are two types of SFTP Send endpoints:
 
 * Send to Partners
 +
@@ -25,11 +25,11 @@ Create SFTP send endpoints by configuring these settings on the *<host>* or *Par
 | Yes
 
 | Protocol
-| Protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window.
+| Protocol that the endpoint supports.
 | Yes
 
 |Endpoint Name
-| Name used to identify the endpoint. The value in the *Endpoint Name* field is generated automatically, but can be modified manually.
+| Automatically-generated name used to identify the endpoint, which you can modify manually.
 | Yes
 
 |Description
@@ -41,7 +41,7 @@ Create SFTP send endpoints by configuring these settings on the *<host>* or *Par
 |Yes
 
 |Port
-|Port number of the SFTP server to connect.
+|Port number of the SFTP.
 |Yes
 
 |Username
@@ -58,7 +58,7 @@ transformed JSON and XML files generated from inbound message flows.
 |Yes
 
 |Filename pattern
-|xref:file-name-pattern.adoc[File name pattern] required by your trading partner or backend application.
+|Filename pattern required by your partner or backend application.
 |
 |===
 
@@ -68,3 +68,4 @@ For EDI messages that are not time-sensitive, such as invoice and payment remitt
 
 * xref:endpoints.adoc[Endpoints]
 * xref:create-endpoint.adoc[Creating Endpoints]
+* xref:file-name-pattern.adoc[Filename Patterns for Send Endpoints]

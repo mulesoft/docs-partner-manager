@@ -4,13 +4,13 @@ SFTP receive endpoints configure where to receive B2B messages transmitted over 
 
 * Receive from Partners
 +
-Source endpoint in an inbound message flow that receives B2B messages from partners either directly or via third-party connections
+Source endpoint in an inbound message flow that receives B2B messages from partners either directly or via third-party connections.
 +
 A host, partner, or third-party connection can own SFTP Receive from Partners endpoints.
 +
 * Source at Host
 +
-Source endpoint in an outbound message flow that receives messages from the backend applications
+Source endpoint in an outbound message flow that receives messages from the backend applications.
 +
 Only a host can own SFTP Source at Host endpoints.
 
@@ -28,7 +28,7 @@ Create SFTP receive endpoints by configuring these settings on the *<host>* or *
 | Yes
 
 | Protocol
-| Protocol selected in the *Protocol* field of the *New endpoint*. The value in this field cannot be modified.
+| Protocol that the endpoint supports.
 | Yes
 
 | Description
@@ -52,15 +52,15 @@ Create SFTP receive endpoints by configuring these settings on the *<host>* or *
 | Yes, if the server is authenticated.
 
 | Source path
-| Path on the SFTP server to which your trading partner sends the inbound files.
+| Path on the SFTP server to which your partner sends the inbound files.
 | Yes
 
 | Polling Frequency
-| Frequency in which the server checks the source path for new files. The value in this field is `1 minute` by default.
+| Frequency in which the server checks the source path for new files. The default value is `1 minute`.
 | Yes
 
 | Size check wait time
-| Wait time, in seconds, between size checks to determine if a file is ready for processing. The value in this field is `1 second` by default. This allows a file write to complete before processing.
+| Wait time, in seconds, between size checks to determine if a file is ready for processing. The default value is `1 second`. This allows a file write to complete before processing.
 {sp} +
 {sp} +
 Mule performs two size checks by waiting the amount of time specified in the `Size check wait time` field. If both checks return the same value, the file is ready to process.
@@ -73,7 +73,7 @@ To disable this feature, specify a negative number or omit the value.
 | Yes
 
 | File name pattern
-| xref:file-name-pattern.adoc[File name pattern] required by your partner.
+| Filename pattern required by your partner.
 | No
 
 | Archival Path
@@ -85,3 +85,4 @@ To disable this feature, specify a negative number or omit the value.
 
 * xref:endpoints.adoc[Endpoints]
 * xref:create-endpoint.adoc[Creating Endpoints]
+* xref:file-name-pattern.adoc[File name pattern] r

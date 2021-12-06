@@ -5,20 +5,20 @@ Endpoints define the transport protocol configurations necessary to receive or s
 Anypoint Partner Manager uses endpoints to:
 
 * Receive messages from partners
-* Receove messages from backend applications
+* Receive messages from backend applications
 * Define transport protocols
 * Specify message or message acknowledgment destinations
 
 == Endpoint Ownership
 
-You can assign the host, partner, or third-party connection as the owner of endpoints to control the use of endpoints within inbound and outbound message flows.
+Depending on the endpoint type, you can assign the host, partner, or third-party connection as the endpoint owner to control the use of endpoints within inbound and outbound message flows.
 
 When creating partner-facing endpoints directly from a partner or third-party connection, the ownership of the endpoint is automatically assigned to the entity from which the endpoint was created.
 
-In a message flow, endpoint availability depends on the endpoint assignment:
+In a message flow, endpoint availability depends on the endpoint ownership:
 
-* Any partner can select an endpoint assigned to the host.
-* If an endpoint is assigned to a specific partner or third-party connection, than that endpoint is available only to the partner or third-party connection to which the endpoint is assigned.
+* If an endpoint is owned by the host, any partner or third-party connection can select the endpoint.
+* If an endpoint is owned by a specific partner or third-party connection, than that endpoint is available only to the partner or third-party connection to which the endpoint is assigned.
 
 == Supported Endpoint Protocols
 
@@ -66,5 +66,5 @@ If you deploy to CloudHub, you can assign static IP addresses to the endpoint ap
 == See Also
 
 * xref:create-endpoint.adoc[Creating Endpoints]
-* xref:delete-endpoints.adoc[Delete Endpoints]
-* deploying-receive-endpoints.adoc[Deploying AS2, HTTP, and HTTPS Receive Endpoints]
+* xref:deploying-receive-endpoints.adoc[Deploying AS2, HTTP, and HTTPS Receive Endpoints]
+* xref:delete-endpoints[Deleting Endpoints]

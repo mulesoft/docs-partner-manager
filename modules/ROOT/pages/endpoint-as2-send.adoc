@@ -19,7 +19,7 @@ Create AS2 endpoints by configuring these settings on the partner or third-party
 |No
 
 |Protocol
-|Protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window.
+|Protocol that the endpoint supports.
 |Yes
 
 |Partner
@@ -71,7 +71,7 @@ Create AS2 endpoints by configuring these settings on the partner or third-party
 |Yes
 
 |Request receipt
-a|Whether you want the partner to return an MDN receipt, which confirms the receipt of the message.
+a|Whether you want the partner to return a Message Disposition Notification (MDN) receipt, which confirms the receipt of the message.
 
 |Yes
 
@@ -84,7 +84,7 @@ a|Whether you want the partner to return an MDN receipt, which confirms the rece
 |Yes
 
 |MDN signature algorithm
-|Request for a partner to respond with a signed MDN using this xref:as2-endpoints-algorithms.adoc[algorithm] for calculating MIC.
+|Request for a partner to respond with a signed Message Disposition Notification (MDN) using this xref:as2-endpoints-algorithms.adoc[algorithm] for calculating MIC.
 |Yes
 
 |Encryption algorithm

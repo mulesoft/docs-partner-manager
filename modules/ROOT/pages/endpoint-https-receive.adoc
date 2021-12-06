@@ -4,7 +4,7 @@ HTTP and HTTPS receive endpoints configure where to receive B2B messages transmi
 
 * Receive from Partners
 +
-Source endpoint in an inbound message flow that receives inbound B2B messages from partners either directly or via third-party connections
+Source endpoint in an inbound message flow that receives inbound B2B messages from partners either directly or via third-party connections.
 +
 A host, partner, or third-party connection can own HTTP and HTTPS Receive from Partners endpoints.
 +
@@ -14,7 +14,7 @@ Source endpoint in an outbound message flow that receives application messages f
 +
 Only a host can own FTP Source at Host endpoints.
 
-IMPORTANT: Each HTTP and HTTPS receive endpoint configuration is deployed as an individual Mule application in the runtime. Consider reusing existing HTTP and HTTPS receive endpoint configurations across a partner's message flows.
+IMPORTANT: Each HTTP and HTTPS receive endpoint configuration is deployed as an individual Mule application in the runtime. Consider reusing existing HTTP and HTTPS receive endpoint configurations across messageflows.
 
 Create HTTP and HTTPS receive endpoints by configuring these settings on the *<host>* page:
 
@@ -30,7 +30,7 @@ a| Host, partner, or third-party connection that owns the endpoint.
 | Yes
 
 | Protocol
-| Protocol selected in the *Protocol* field of the *New endpoint*. You cannot modify this value.
+| Protocol that the endpoint supports.
 | Yes
 
 | Description
@@ -91,7 +91,7 @@ The backend applications that send payloads to the HTTP receive endpoint must pa
 
 == Next Step
 
-After you create an HTTP or HTTPS receive endpoint, you can deploy it, as described in xref:deploying-receive-endpoints.adoc[Deploying Receive Endpoints].
+After you create an HTTP or HTTPS receive endpoint, you can deploy it, as described in xref:deploying-receive-endpoints.adoc[[Deploying AS2, HTTP, and HTTPS Receive Endpoints]].
 
 == See Also
 

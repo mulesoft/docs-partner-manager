@@ -4,13 +4,13 @@ HTTP and HTTPS send endpoint settings configure where to send B2B messages trans
 
 * Send to Partners
 +
-Target endpoint in an outbound message flow to which transformed B2B messages are sent to the partners either directly or via a third-party connection
+Target endpoint in an outbound message flow to which transformed B2B messages are sent to the partners either directly or via a third-party connection.
 +
 A host, partner, or third-party connection can own HTTP and HTTPS Send to Partners endpoints.
 +
 * Target at Host
 +
-Target endpoint in an inbound message flow to which transformed messages are sent to the backend applications
+Target endpoint in an inbound message flow to which transformed messages are sent to the backend applications.
 +
 Only a host can own HTTP and HTTPS Target at Host endpoints.
 
@@ -24,7 +24,7 @@ Create HTTP and HTTPS send endpoints by configuring these settings on the host, 
 | Yes
 
 |Protocol
-| `HTTP` or `HTTPS`. The default is *HTTPS*.
+| Protocol that the endpoint supports.
 |Yes
 
 |Endpoint Name
@@ -36,7 +36,7 @@ Create HTTP and HTTPS send endpoints by configuring these settings on the host, 
 |No
 
 |URL
-|Target HTTP or HTTPs service to which to send transformed EDI, JSON, or XML messages. The URL must be accessible from the runtime environment that processes your B2B integrations.
+|Target HTTP or HTTPS service to which to send transformed EDI, JSON, or XML messages. The URL must be accessible from the runtime environment that processes your B2B integrations.
 Enter a well-formed URL (including the path) that specifies where to send the request, for example:
 `+https://www.mulesoft.com/sendRequest?name=something+`
 |Yes
@@ -46,7 +46,7 @@ Enter a well-formed URL (including the path) that specifies where to send the re
 |Yes
 
 |Response Timeout (milliseconds)
-|Maximum time, in milliseconds, for which the request element blocks the execution of the flow that is waiting for the HTTP response
+|Maximum time, in milliseconds, for which the request element blocks the execution of the flow that is waiting for the HTTP response.
 |No
 |===
 
@@ -64,33 +64,33 @@ Depending on how you set up your authentication policy, refer to the appropriate
 a| * HTTP Header Name +
 The HTTP header parameter associated with the *API Key* value. +
 * API Key +
-The value for the access key you set
+The value for the access key you set.
 
 |Basic
 a|Specifies a simple authentication policy that protects the API by requiring a username and password when calling apps to make a request.
 
 * Username +
-The username you created for this authentication policy.
+The username you created for this authentication policy
 * Password +
-The password you created for this authentication policy.
+The password you created for this authentication policy
 
 |Client Credentials
 a|* Client ID +
-The client ID provided when registering your application.
+The client ID provided when registering your application
 * Client Secret +
-The client secret provided when registering your application.
+The client secret provided when registering your application
 * Client Header +
 The client header.
 * Client Secret Header +
-The client secret header.
+The client secret header
 
 |OAuth Token
 a|* Token URL +
 The authorization URL.
 * Client ID +
-The client ID provided when registering your application.
+The client ID provided when registering your application
 * Client Secret +
-The client secret provided when registering your application.
+The client secret provided when registering your application
 |===
 
 == See Also

@@ -2,7 +2,7 @@
 
 Anypoint Partner Manager receive endpoints have the following functions:
 
-* Receive from Partners endpoints act as source endpoints in inbound message flows that receives B2B messages from partners either directly or from third-party connections.
+* Receive from Partners endpoints act as source endpoints in inbound message flows that receives B2B messages from partners either directly or via third-party connections.
 * Source at Host endpoints act as source endpoints in outbound message flows that receive messages from backend applications.
 
 Partner Manager supports the following formats for receive endpoints:

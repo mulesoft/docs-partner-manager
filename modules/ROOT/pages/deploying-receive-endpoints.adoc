@@ -38,7 +38,7 @@ For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, th
 
 image::URL-mapping-rules-http.png[URL mapping rules for HTTPS in the DLB settings]
 
-Using the following values, depending on your environment:
+In this example: *(VIJAY: I removed depending on your environment. Is that OK?)*
 
 * The external HTTP receive endpoint URL is `+http://mythical.lb.anypointdns.net/apm/qa/outbound/send2/+`.
 * Your backend applications send the application JSON and XML messages for your outbound message flows from `+http://mythical.lb.anypointdns.net/apm/qa/outbound/send2/{message-type}+`.
@@ -53,7 +53,7 @@ For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, th
 
 image::URL-mapping-rules-http.png[URL mapping rules for HTTPS in the DLB settings]
 
-Using the following values, depending on your environment:
+In this example:
 
 * The external HTTPS receive endpoint URL is `+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/+`.
 * Your backend applications send the application JSON and XML messages for your outbound message flows from `+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/{message-type}+`.
@@ -69,5 +69,4 @@ To deploy to an on-premises Mule instance that uses a firewall and load balancer
 
 * xref:create-endpoint.adoc[Creating Endpoints]
 * xref:endpoint-as2-receive.adoc[AS2 Receive Endpoint Settings]
-* xref:endpoints-http-receive.adoc[HTTP Receive Endpoint Settings]
-* xref:endpoint-https-receive.adoc[HTTPS Receive Endpoint Settings]
+* xref:endpoint-https-receive.adoc[HTTP and HTTPS Receive Endpoint Settings]

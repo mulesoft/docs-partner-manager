@@ -28,7 +28,7 @@ Create FTP receive endpoints by configuring these settings on the *<host>* or *P
 |x
 
 | Protocol
-| Protocol selected in the *Protocol* field of the *New endpoint* window. You cannot modify this value.
+| Protocol that the endpoint supports.
 | x
 
 | Description
@@ -57,7 +57,7 @@ Create FTP receive endpoints by configuring these settings on the *<host>* or *P
 | x
 
 | Polling Frequency
-| Frequency with which the server checks the source path for new files. The defaul tis `1 minute`.
+| Frequency with which the server checks the source path for new files. The default is `1 minute`.
 | x
 
 | Supported Format type
@@ -76,7 +76,7 @@ To disable this feature, specify a negative number or omit the value.
 | x
 
 | File name pattern
-| xref:file-name-pattern.adoc[File name pattern] required by your partner.
+| Filename pattern required by your partner.
 |
 
 | Archival Path
@@ -88,3 +88,4 @@ To disable this feature, specify a negative number or omit the value.
 
 * xref:endpoints.adoc[Endpoints]
 * xref:create-endpoint.adoc[Creating Endpoints]
+* xref:file-name-pattern.adoc[Filename Patterns for Send Endpoints]

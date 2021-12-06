@@ -4,7 +4,7 @@
 Anypoint Partner Manager send endpoints have the following functions:
 
 * Send to Partners endpoints act as target endpoints in outbound message flows to which transformed messages are sent to partners either directly or via third-party connections.
-* Target at host endpoints act as target endpoints in inbound message flows to which transformed messages are sent to backend applications.
+* Target at Host endpoints act as target endpoints in inbound message flows to which transformed messages are sent to backend applications.
 
 Partner Manager supports the following formats for send endpoints:
 
