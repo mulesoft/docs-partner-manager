@@ -14,25 +14,25 @@ NOTE: Each AS2 receive endpoint configuration gets deployed as an individual Mul
 
 |Protocol
 |Protocol that the endpoint supports.
-|Yes
+|x
 
 |Owner
 |Host that owns the endpoint.
-|Yes
+|x
 
 |Endpoint name
 |Automatically-generated name used to identify the endpoint, which you can modify manually.
-|Yes
+|x
 
 |Description
 |User-supplied value that describes the purpose of the endpoint.
-|No
+|
 
 |Private port (when deploying to VPC)
 a|
 * When enabled, the AS2 receive endpoint application deploys to the private port `8092` in your xref:runtime-manager::virtual-private-cloud.adoc[Anypoint VPC]. You can manage the access control to the endpoint via the Anypoint VPC and dedicated load balancer settings.
 * When disabled, the AS2 receive endpoint application deploys to the public port `8082` by default. You can access the endpoint URL directly over the internet.
-|No
+|
 
 |Enforce security level
 a|Indicates whether Partner Manager rejects incoming AS2 messages that aren't signed or encrypted. When Partner Manager rejects a message, it returns a negative Message Disposition Notification (MDN) to the sender.
@@ -55,7 +55,7 @@ Accepts messages that aren't signed or encrypted.
 
 |<Host> keystore
 |Host keystore files in your environment that store your organization's public certificate and private key.
-|Yes
+|x
 |===
 
 == Next Step

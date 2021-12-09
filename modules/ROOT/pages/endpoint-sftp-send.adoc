@@ -22,40 +22,40 @@ Create SFTP send endpoints by configuring these settings on the *<host>* or *Par
 
 | Owner
 | Host, partner, or third-party connection that owns the endpoint.
-| Yes
+| x
 
 | Protocol
 | Protocol that the endpoint supports.
-| Yes
+| x
 
 |Endpoint Name
 | Automatically-generated name used to identify the endpoint, which you can modify manually.
-| Yes
+| x
 
 |Description
 |User-supplied value that describes the purpose of the endpoint.
-| No
+| 
 
 |Host
 | SFTP server host, such as `sftp.mulesoft.com`, `localhost`, or `192.168.0.1`. The host must be accessible from your Mule environment.
-|Yes
+|x
 
 |Port
 |Port number of the SFTP.
-|Yes
+|x
 
 |Username
 |Username for the SFTP server.
-|Yes
+|x
 
 |Password
 |Password for the SFTP server.
-|Yes
+|x
 
 |Target Path
 |Path on your SFTP server to EDI files that were generated from outbound message flows. This is also the path on your SFTP server for storing
 transformed JSON and XML files generated from inbound message flows.
-|Yes
+|x
 
 |Filename pattern
 |Filename pattern required by your partner or backend application.

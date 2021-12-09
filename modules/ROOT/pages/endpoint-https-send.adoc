@@ -21,33 +21,33 @@ Create HTTP and HTTPS send endpoints by configuring these settings on the host, 
 |Name |Description |Required
 | Owner
 | Host, partner, or third-party connection that owns the endpoint.
-| Yes
+| x
 
 |Protocol
 | Protocol that the endpoint supports.
-|Yes
+|x
 
 |Endpoint Name
 |Automatically generated name used to identify the endpoint, which you can subsequently modify manually.
-|Yes
+|x
 
 |Description
 |User-supplied value that describes the purpose the endpoint.
-|No
+|
 
 |URL
 |Target HTTP or HTTPS service to which to send transformed EDI, JSON, or XML messages. The URL must be accessible from the runtime environment that processes your B2B integrations.
 Enter a well-formed URL (including the path) that specifies where to send the request, for example:
 `+https://www.mulesoft.com/sendRequest?name=something+`
-|Yes
+|x
 
 |Connection Idle Timeout (milliseconds)
 |Connection idle timeout period in milliseconds. The default is `30000`.
-|Yes
+|x
 
 |Response Timeout (milliseconds)
 |Maximum time, in milliseconds, for which the request element blocks the execution of the flow that is waiting for the HTTP response.
-|No
+|
 |===
 
 == Authentication Settings
