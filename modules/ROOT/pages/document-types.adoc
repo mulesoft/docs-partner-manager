@@ -1,16 +1,25 @@
 = Message Types
 
-Message types define the schematic structure of the transactions that are received or sent by Partner Manager.
+Message types define the structure of the messages that Anypoint Partner Manager receives or sends. Partner Manager supports the following message types:
 
-In Partner Manager, a message type can be used in one of the following contexts:
-
-* Receive from partners
+* Receive from Partners
++
+Defines the structure of the EDIFACT, JSON, X12, or XML messages that Partner Manager receives from partners either directly or via third-party connections
++
+Send to Partners
++
+Defines the structure of the EDIFACT, JSON, X12, or XML messages that Partner Manager sends to partners either directly or via third-party connections
++
+* Source at Host
++
+Defines the structure of the JSON or XML messages that Partner Manager receives from the backend applications
++
 * Target at host
-* Source at host
-* Send to partners
++
+Defines the structure of the JSON or XML messages that Partner Manager sends to the backend applications
 
-Message types are always managed in the host profile page, regardless of whether they are used for a single partner or for multiple trading partners. Additionally, message types are reusable across message flows for different trading partners.
+Message types are always managed in the *<host>* page, regardless of whether they are used for a single partner or for multiple partners. Additionally, message types are reusable across message flows for different partners.
 
 == See Also
 
-* xref:partner-manager-create-message-type.adoc[Create and Configure Message Types]
+* xref:partner-manager-create-message-type.adoc[Creating Message Types]

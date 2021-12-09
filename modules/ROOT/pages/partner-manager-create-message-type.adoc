@@ -1,21 +1,36 @@
-= Create and Configure Message Types
+= Creating Message Types
 
 Message types define the structure of the transactions that Anypoint Partner Manager receives or sends. You can create message types from the *<host>* page or the Message Flow wizard.
 
 [[create-message-type]]
 == Create a Message Type
 
+To create a message type from the *<host>* page:
+
 . In the navigation menu, select *<host-name>*.
-. From the *Message types* section, click *New*.
-. In the *Usage* drop-down list, select the message type:
-* <<receive-and-send-to-partners,Receive From and Send to Partners>>
-* <<target-at-host,Target at Host>>
-* <<source-at-host,Source at Host>>
-* <<receive-and-send-to-partners,Send to Partners>>
+. In the *Message Types* section, click *New*.
+. In the *Usage* field, select the message type.
+. In the *Format* field, select the format of the message type.
+. Complete the displayed fields.
+. Click *Save*.
+
+To create a message type from the Message Flow wizard:
+
+. Select *Message type*.
+. In the *Search message type* window, click *New*.
 +
-If you create a message type from a message flow, Partner Manager automatically determines the *Usage* value, which is automatically assigned to the host or trading partner from which the message type was created.
-. Click *Save*. +
+Partner Manager automatically determines the *Usage* value, which is automatically assigned to the host or trading partner from which the message type was created.
++
+. In the *Format* field, select the message type format and complete the displayed fields.
+. Click *Save*.
+
 The message type appears in the *Message types* section on the host page .
+
+
+* <<receive-and-send-to-partners,Receive From partners>>
+*<<receive-and-send-to-partners,Send to partners>>
+* <<target-at-host,Target at host>>
+* <<source-at-host,Source at host>>
 
 [[receive-and-send-to-partners]]
 == Receive From and Send To Partners
