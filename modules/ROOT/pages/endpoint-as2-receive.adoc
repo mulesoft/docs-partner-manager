@@ -36,6 +36,14 @@ a|
 This configuration applies only to Anypoint VPC deployments from Partner Manager.
 |No
 
+| HTTPS
+a| Indicates whether the AS2 endpoint receives data via HTTPS or HTTP:
+
+* If enabled (default), the AS2 endpoint receives data via HTTPS.
+* If disabled, the AS2 endpoint receives data via HTTP.
+
+| Yes
+
 |Enforce security level
 a|Indicates whether Partner Manager rejects incoming AS2 messages aren't signed, encrypted, or both. When Partner Manager rejects a message, it returns a negative Message Disposition Notification (MDN) to the sender.
 
