@@ -1,0 +1,19 @@
+= Target at Host Message Type Settings
+
+Use the following settings for the Target at Host message type:
+
+[%header%autowidth.spread]
+|===
+|Setting |Description |Default | Required
+|Format a|Selected application message structure format. Allowed values are:
+
+* JSON
+* XML | |x
+|Schema |Imported JSON or XML schema file for the message type. ||x
+|Name |Message type name that Partner Manager automatically generates from the schema filename, which you can later modify. ||x
+|===
+
+== See Also
+
+* xref:document-types.adoc[Message Types]
+* xref:partner-manager-create-message-type[Creating Message Types]

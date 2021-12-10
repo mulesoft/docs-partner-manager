@@ -1,0 +1,69 @@
+[[source-at-host]]
+== Source at Host
+
+The source at host application message structure defines the way in which your backend applications transform outbound transactions and send them to your partners.
+
+Partner Manager automatically generates a message type identifier from the schema filename. This value can be modified.
+The message identifier value used in the dynamic message routing for outbound B2B transactions.
+
+Use the following settings to define JSON or XML settings for outbound EDI transactions:
+
+[%header%autowidth.spread]
+|===
+|Setting |Description |Default | Required
+|Format a|The selected application message structure format:
+
+* JSON
+* XML | |x
+|Schema |Imported XSD or JSON schema file for the message type. | |x
+|Message type identifier a| Partner Manager automatically generates this identifier from the schema filename and uses it to dynamically route outbound B2B transactions. You can modify the message type identifier to ensure that it has a meaningful, generic name.
+
+Your partner must pass this value when sending messages, files, or both to Partner Manager:
+
+* If you receive the payload via an HTTP-based endpoint, the message type identifier is the relative path in the HTTP request.
+* If you receive the payload via AS2 or via file-based endpoint protocols such as SFTP and FTP, the filename begins with `<message-type-id>_`.
+
+See xref:outbound-message-routing.adoc[Outbound Message Routing] to understand how outbound routing is performed and how your backend applications should pass the message type identifier when sending application messages to Partner Manager endpoints. | |x
+
+|Reference identifiers and business key mapping |The uploaded DataWeave script with mapping to extract the <<reference-ids-example,reference identifiers>> and business key mappings from the payload received from the backend application for dynamic routing into the appropriate message flow. | |x
+|===
+
+[[reference-ids-example]]
+== Reference Identifiers and Business Key Mapping Example
+
+The input to the DataWeave map is the payload that follows the schema uploaded in the definition for the Source at Host and Receive from Partner message types. The output must contain the following fields:
+
+* `partnerReferenceId` +
+Required identifier that uniquely identifies the receiving partner.
+* `hostReferenceId` +
+(Applies to Source at Host message types) Optional, except when backend systems are sending outbound transactions on behalf of different internal business units that require different mapping or sender identifiers to be set on the EDI data.
+* `businessDocumentKey` +
+Optional key reference value, such as `Order Number` or `Invoice Number`.
+
+The following example shows a DataWeave map for an XML payload from the backend application:
+
+[source,DataWeave,linenums]
+----
+%dw 2.0
+output application/json
+ns ns0 http://xmlns.mulesoft.com/enterpriseobjects/finance/purchaseorder/
+---
+{
+	partnerReferenceId: payload.ns0#PurchaseOrder.ns0#VendorName,
+	hostReferenceId: payload.ns0#PurchaseOrder.ns0#LineOfBusiness,
+	businessDocumentKey: payload.ns0#PurchaseOrder.ns0#PONumber
+}
+
+Generated output:
+
+{
+"partnerReferenceId": "MYTHICAL SUPPLIER, LLC",
+"hostReferenceId": "NTO Retail Canada",
+"businessDocumentKey": "INVOICE-005"
+}
+----
+
+== See Also
+
+* xref:document-types.adoc[Message Types]
+* xref:partner-manager-create-message-type[Creating Message Types]
