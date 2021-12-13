@@ -1,11 +1,11 @@
 = Creating Message Types
 
-Message types define the structure of the messages that Anypoint Partner Manager receives or sends. You can create message types from the *<host>* page or by using the Message Flow wizard.
+Message types define the structure of the messages that Anypoint Partner Manager receives or sends. You can create message types from the *<host>* page or while using the Message Flow wizard.
 
 [[create-message-type]]
 == Create a Message Type from the <host> Page
 
-Use the <host> page to create Receive from Partners, Target at Host, Source at Host, and Send to Partners message types:
+Use the *<host>* page to create Receive from Partners, Target at Host, Source at Host, and Send to Partners message types:
 
 . In the navigation menu, select *<host>*.
 . In the *Message Types* section, click *New*.
@@ -14,27 +14,27 @@ Use the <host> page to create Receive from Partners, Target at Host, Source at H
 . Complete the displayed fields.
 . Click *Save*.
 
-== Create a Message Type While Using the Message Flow Wizard:
+== Create a Message Type While Using the Message Flow Wizard
 
 You can create message types when you use the Message Flow wizard to create a new message flow or update an existing one:
 
 * For an inbound message flow, you can create the Receive from Partners and Target at Host message types.
 * For an outbound message flow, you can create the Source at Host and Send to Partners message type.
 
-For information about creating message types while using the Message Flow wizard, see xref:configure-message-flows.adoc[Create Inbound Message Flows] and xref:create-outbound-message-flow.adoc[Create Outbound Message Flows].
+For information about creating message types while using the Message Flow wizard, see xref:configure-message-flows.adoc[Creating Inbound Message Flows] and xref:create-outbound-message-flow.adoc[Creating Outbound Message Flows].
 
 [[message-type-settings]]
 == Message Type Settings
 
-The values for the message type settings vary according to the message type and protocol, as describe in the following topics:
+The values for the message type settings vary according to the message type and protocol, as described in the following topics:
 
-* <<receive-and-send-to-partners,Receive From Partners Message Type Settings>>
-* <<receive-and-send-to-partners,Send to Partners Message Type Settings>>
-* <<target-at-host,Target at Host Message Type Settings>>
-* <<source-at-host,Source at Host Message Type Setting>>
+* <<message-flow-partners.adoc,Receive From Partners Message Type Settings>>
+* <<message-flow-partners.adoc,Send to Partners Message Type Settings>>
+* <<message-flow-target-at-host.adoc,Target at Host Message Type Settings>>
+* <<message-flow-source-at-host.adoc,Source at Host Message Type Setting>>
 
 == See Also
 
 * xref:document-types[Message Types]
+* xref:create-inbound-message-flow.adoc[Create Inbound Message Flows]
 * xref:create-outbound-message-flow.adoc[Create Outbound Message Flows]
-* xref:configure-message-flows.adoc[Create Inbound Message Flows]

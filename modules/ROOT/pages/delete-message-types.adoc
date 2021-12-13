@@ -18,3 +18,6 @@ To locate endpoints that don’t have associated message flows, look for `-` in 
 
 * xref:document-types[Message Types]
 * xref:partner-manager-create-message-typ.adoc[Creating Message Types]
+* xref:message-type-source-at-host.adoc[Source at Host Message Type Settings]
+* xref:message-type-target-at-host.adoc[Target at Host Message Type Settings]
+* xref:partners.adoc[]

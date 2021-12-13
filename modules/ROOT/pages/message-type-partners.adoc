@@ -1,4 +1,4 @@
-= Receive From Partners Message Type Settings
+= Receive From and Send to Partners Message Type Settings
 
 Inbound and outbound transactions between your organization and your partners typically follow EDIFACT, JSON, X12, or XML standards.
 
