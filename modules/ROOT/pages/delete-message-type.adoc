@@ -1,0 +1,20 @@
+= Deleting Message Types
+
+You can delete message types from the
+*<host>* or *partners* page if the message types are not used in message flows.
+
+To delete a message type from the *<host>* page:
+
+. From Anypoint Partner Manager, do either of the following:
+* If the host owns the endpoint, select the *<host name>* from the navigation menu.
+* If a partner or third-party connection owns the endpoint, select *Partners* from the navigation menu and then select the owning partner or third-party connection.
+. In the *Endpoints* section, locate the endpoint that you want to delete.
++
+To locate endpoints that don’t have associated message flows, look for `-` in the *Message Flows* column.
++
+. In the row containing the endpoint that you want to delete, hover over the endpoint name, select the trash can icon that appears, and click *Delete*.
+
+== See Also
+
+* xref:document-types[Message Types]
+* xref:partner-manager-create-message-typ.adoc[Creating Message Types]

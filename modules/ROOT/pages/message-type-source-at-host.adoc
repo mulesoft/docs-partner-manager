@@ -1,18 +1,21 @@
 [[source-at-host]]
-== Source at Host Message Type Settings
+== Source at Host
 
-The Source at Host message type defines the structure of the messages that Partner Manager receives from your backend applications.
+The source at host application message structure defines the way in which your backend applications transform outbound transactions and send them to your partners.
 
-Use the following settings to define the Source at Host message type:
+Partner Manager automatically generates a message type identifier from the schema filename. This value can be modified.
+The message identifier value used in the dynamic message routing for outbound B2B transactions.
+
+Use the following settings to define JSON or XML settings for outbound EDI transactions:
 
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default | Required
-|Format a|Selected application message structure format. Allowed values are:
+|Format a|Selected application message structure format:
 
 * JSON
 * XML | |x
-|Schema |Imported JSON or XSD schema file for the message type. | |x
+|Schema |Imported XSD or JSON schema file for the message type. | |x
 |Message type identifier a| Identifier generated from the schema filename and used to dynamically route outbound B2B transactions. You can modify the message type identifier to ensure that it has a meaningful, generic name.
 
 Your partner must pass this value when sending messages, files, or both to Partner Manager:
@@ -20,9 +23,9 @@ Your partner must pass this value when sending messages, files, or both to Partn
 * If you receive the payload via an HTTP-based endpoint, the message type identifier is the relative path in the HTTP request.
 * If you receive the payload via AS2 or via file-based endpoint protocols such as SFTP and FTP, the filename begins with `<message-type-id>_`.
 
-To understand how outbound routing is performed and how your backend applications should pass the message type identifier when sending application messages to Partner Manager endpoints, see xref:outbound-message-routing.adoc[Outbound Message Routing].  | |x
+See xref:outbound-message-routing.adoc[Outbound Message Routing] to understand how outbound routing is performed and how your backend applications should pass the message type identifier when sending application messages to Partner Manager endpoints. | |x
 
-|Reference identifiers and business key mapping |The uploaded DataWeave with mapping that extracts <<reference-ids-example,reference identifiers>> and business key mappings from the messages received from the backend application. Partner Manager uses the identifiers and business key mappings to dynamically route messages to the appropriate message flow. | |x
+|Reference identifiers and business key mapping |The uploaded DataWeave with mapping that extracts <<reference-ids-example,reference identifiers>> and business key mappings from the payload received from the backend application. These identifiers and business key mappings are used to dynamically route to the appropriate message flow. | |x
 |===
 
 [[reference-ids-example]]
