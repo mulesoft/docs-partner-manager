@@ -1,10 +1,10 @@
-= Receive From and Send to Partners Message Type Settings
+= Receive from Partners Message Type Settings
 
-Inbound and outbound transactions between your organization and your partners typically follow EDIFACT, JSON, X12, or XML standards.
+The Receive from Partners message type defines the structure of the messages that Partner Manager receives from partners either directly or via third-party connections. This message type supports the EDIFACT, JSON, X12, and XML formats.
 
 == EDIFACT Message Type Settings
 
-Use the following settings to define EDIFACT as the protocol for the Receive from Partners or Send to Partners message type:
+Use the following settings to define EDIFACT as the protocol for the Receive from Partners message type:
 
 [%header%autowidth.spread]
 |===
@@ -30,21 +30,20 @@ When using the customized EDI schema, you can assign a custom name to the messag
 
 == JSON and XML Message Type Settings
 
-Use the following settings to define JSON or XML as the protocol for the Receive From Partners or Send to Partners message type:
+Use the following settings to define JSON or XML as the protocol for the Receive From Partners message type:
 
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default | Required
 |Format | Format of the message. Allowed values are `JSON` or `XML`. | |Yes
 |Schema | Imported JSON or XSD schema file for the message type. | |Yes
-|Message type identifier | (Receive from Partners message type only) Message identifier value used in the dynamic message routing of inbound B2B transactions. Partner Manager automatically generates a modifiable message type identifier from the schema filename.| |Yes
-|Reference identifiers and business key mappings | (Receive from Partners message type only)
-Uploaded DataWeave script with mapping that extracts the reference identifiers and business key mappings from the payload received from the backend application. This mapping allows for dynamic routing to the appropriate message flow. | |Yes
+|Message type identifier | Message identifier value used in the dynamic message routing of inbound B2B transactions. Partner Manager automatically generates a modifiable message type identifier from the schema filename.| |Yes
+|Reference identifiers and business key mappings | Uploaded DataWeave script with mapping that extracts the reference identifiers and business key mappings from the payload received from the backend application. This mapping allows for dynamic routing to the appropriate message flow. | |Yes
 |===
 
 == X12 Message Type Settings
 
-Use the following settings to define X12 as the protocol for the Receive from Partners or Send to Partners message type:
+Use the following settings to define X12 as the protocol for the Receive from Partners message type:
 
 [%header%autowidth.spread]
 |===

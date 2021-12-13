@@ -18,7 +18,7 @@ Defines the structure of the JSON or XML messages that Partner Manager receives 
 +
 Defines the structure of the JSON or XML messages that Partner Manager sends to the backend applications
 
-Message types are always managed in the *<host>* page, regardless of whether they are used for a single partner or for multiple partners. Additionally, message types are reusable across message flows for different partners.
+Message types are reusable across message flows for different partners.
 
 == See Also
 

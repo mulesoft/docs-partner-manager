@@ -1,9 +1,9 @@
 [[source-at-host]]
 == Source at Host Message Type Settings
 
-The source at host message structure defines the way in which your backend applications transform outbound transactions and send them to your partners.
+The Source at Host message type defines the structure of the messages that Partner Manager receives from your backend applications.
 
-Use the following settings to define JSON or XML settings for outbound messages:
+Use the following settings to define the Source at Host message type:
 
 [%header%autowidth.spread]
 |===
@@ -20,9 +20,9 @@ Your partner must pass this value when sending messages, files, or both to Partn
 * If you receive the payload via an HTTP-based endpoint, the message type identifier is the relative path in the HTTP request.
 * If you receive the payload via AS2 or via file-based endpoint protocols such as SFTP and FTP, the filename begins with `<message-type-id>_`.
 
-See xref:outbound-message-routing.adoc[Outbound Message Routing] to understand how outbound routing is performed and how your backend applications should pass the message type identifier when sending application messages to Partner Manager endpoints. | |x
+To understand how outbound routing is performed and how your backend applications should pass the message type identifier when sending application messages to Partner Manager endpoints, see xref:outbound-message-routing.adoc[Outbound Message Routing].  | |x
 
-|Reference identifiers and business key mapping |The uploaded DataWeave with mapping that extracts <<reference-ids-example,reference identifiers>> and business key mappings from the messages received from the backend application. These identifiers and business key mappings are used to dynamically route to the appropriate message flow. | |x
+|Reference identifiers and business key mapping |The uploaded DataWeave with mapping that extracts <<reference-ids-example,reference identifiers>> and business key mappings from the messages received from the backend application. Partner Manager uses the identifiers and business key mappings to dynamically route messages to the appropriate message flow. | |x
 |===
 
 [[reference-ids-example]]

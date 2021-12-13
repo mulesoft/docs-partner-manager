@@ -3,9 +3,9 @@
 You can delete message types from the
 *<host>* page if they are not used in message flows.
 
-To delete a message type from the *<host>* page:
+To delete a message type:
 
-. In the navigation menu, select *<host name>*.
+. In the navigation menu, select *<host>*.
 . In the *Message types* section, locate the message type you want to delete.
 +
 To locate message types that don’t have associated message flows, look for `-` in the *Message Flows* column.

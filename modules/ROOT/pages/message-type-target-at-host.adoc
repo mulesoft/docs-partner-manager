@@ -1,6 +1,6 @@
 = Target at Host Message Type Settings
 
-Use the following settings for the Target at Host message type:
+The Target at Host message type defines the structure of the messages that Partner Manager sends to the backend applications. Use the following settings to create a Target at Host message type:
 
 [%header%autowidth.spread]
 |===
