@@ -1,21 +1,18 @@
 [[source-at-host]]
-== Source at Host
+== Source at Host Message Type Settings
 
-The source at host application message structure defines the way in which your backend applications transform outbound transactions and send them to your partners.
+The source at host message structure defines the way in which your backend applications transform outbound transactions and send them to your partners.
 
-Partner Manager automatically generates a message type identifier from the schema filename. This value can be modified.
-The message identifier value used in the dynamic message routing for outbound B2B transactions.
-
-Use the following settings to define JSON or XML settings for outbound EDI transactions:
+Use the following settings to define JSON or XML settings for outbound messages:
 
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default | Required
-|Format a|Selected application message structure format:
+|Format a|Selected application message structure format. Allowed values are:
 
 * JSON
 * XML | |x
-|Schema |Imported XSD or JSON schema file for the message type. | |x
+|Schema |Imported JSON or XSD schema file for the message type. | |x
 |Message type identifier a| Identifier generated from the schema filename and used to dynamically route outbound B2B transactions. You can modify the message type identifier to ensure that it has a meaningful, generic name.
 
 Your partner must pass this value when sending messages, files, or both to Partner Manager:
@@ -25,7 +22,7 @@ Your partner must pass this value when sending messages, files, or both to Partn
 
 See xref:outbound-message-routing.adoc[Outbound Message Routing] to understand how outbound routing is performed and how your backend applications should pass the message type identifier when sending application messages to Partner Manager endpoints. | |x
 
-|Reference identifiers and business key mapping |The uploaded DataWeave with mapping that extracts <<reference-ids-example,reference identifiers>> and business key mappings from the payload received from the backend application. These identifiers and business key mappings are used to dynamically route to the appropriate message flow. | |x
+|Reference identifiers and business key mapping |The uploaded DataWeave with mapping that extracts <<reference-ids-example,reference identifiers>> and business key mappings from the messages received from the backend application. These identifiers and business key mappings are used to dynamically route to the appropriate message flow. | |x
 |===
 
 [[reference-ids-example]]
