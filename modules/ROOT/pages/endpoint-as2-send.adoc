@@ -104,9 +104,7 @@ Does not require backend applications to authenticate when connecting to this en
 +
 * Basic
 +
-Requires backend applications to use the username and password provided by your partner to connect to this endpoint.
-+
-Enter this information in the *Username* and *Password* fields.
+Requires backend applications to use the username and password provided by your partner to connect to this endpoint. Enter this information in the *Username* and *Password* fields.
 |
 |===
 
