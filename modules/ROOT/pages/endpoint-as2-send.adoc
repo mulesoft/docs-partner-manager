@@ -100,11 +100,13 @@ a| Authentication type used to access the endpoint. Allowed values:
 
 * None
 +
-Does not require authentication when calling apps to make a request.
+Does not require backend applications to authenticate when connecting to this endpoint.
 +
 * Basic
 +
-Requires the specified username and password when calling apps to make a request.
+Requires backend applications to use the username and password provided by your partner to connect to this endpoint.
++
+Enter this information in the *Username* and *Password* fields.
 |
 |===
 
