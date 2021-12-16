@@ -100,11 +100,11 @@ a| Authentication type used to access the endpoint. Allowed values:
 
 * None
 +
-Does not require backend applications to authenticate when connecting to this endpoint.
+No additional authentication is required to send messages to your partner's AS2 endpoint.
 +
 * Basic
 +
-Requires backend applications to use the username and password provided by your partner to connect to this endpoint. Enter this information in the *Username* and *Password* fields.
+Your partner requires you to pass basic authentication credentials (username and password) when sending messages to the AS2 endpoint. Enter this information in the *Username* and *Password* fields.
 |
 |===
 
