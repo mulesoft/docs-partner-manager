@@ -94,6 +94,18 @@ a|Whether you want the partner to return an MDN receipt, which confirms the rece
 |MDN response
 |The AS2 messages sent from Partner Manager always request the receiver to send a Synchronous MDN receipt back. The default is `Sync`.
 | Yes
+
+|Authentication type
+a| Authentication type used to access the endpoint. Allowed values:
+
+* None
++
+No additional authentication is required to send messages to your partner's AS2 endpoint.
++
+* Basic
++
+Your partner requires you to pass basic authentication credentials (username and password) when sending messages to the AS2 endpoint. Enter this information in the *Username* and *Password* fields.
+|
 |===
 
 == See Also
