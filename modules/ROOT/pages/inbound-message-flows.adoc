@@ -9,26 +9,27 @@ image::inbound-flow.png[Inbound message flow]
 |===
 |Setting |Description |Supported Formats or Protocols
 
-|Receiving endpoint | Endpoint at which a host receives transmissions from a trading partner a|
+|<1> Receive from Partners endpoint | Endpoint at which a host receives transmissions from a partner a|
 * AS2
 * FTP
 * HTTP
 * HTTPS
 * SFTP
 
-|Source message type |Message type of the received message payload a|
+|<2> Receive from Partners message type |Message type of the received message payload a|
 * EDIFACT
 * JSON
 * X12
 * XML
 
-|Map |DataWeave map used to transform the source message type to the target message type a| N/A
+|<3> DataWeave Map |DataWeave map used to transform the source message type to the target message type a| N/A
 
-|Target message type |Format into which the DataWeave map transforms received messages a|
+|<4> Target at Host |Format into which the DataWeave map transforms received messages a|
 * JSON
 * XML
 
-|Target endpoint | Endpoint to which the transformed message is sent (typically, a process API)
+|<5> Target at Host 
+endpoint | Endpoint to which the transformed message is sent (typically, a process API)
  a|
 * FTP
 * HTTP
