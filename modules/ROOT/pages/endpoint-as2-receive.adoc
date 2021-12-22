@@ -32,7 +32,23 @@ NOTE: Each AS2 receive endpoint configuration gets deployed as an individual Mul
 a|
 * When enabled, the AS2 receive endpoint application deploys to the private port `8092` in your xref:runtime-manager::virtual-private-cloud.adoc[Anypoint VPC]. You can manage the access control to the endpoint via the Anypoint VPC and dedicated load balancer settings.
 * When disabled, the AS2 receive endpoint application deploys to the public port `8082` by default. You can access the endpoint URL directly over the internet.
+
+{sp}
+{sp}
+This configuration applies only to Anypoint VPC deployments from Partner Manager.
 |
+|
+
+HTTPS
+a|Indicates whether Partner Manager deploys the AS2 receive endpoint as an HTTPS or HTTP listener:
+
+* If enabled (default), Partner Manager deploys the AS2 receive endpoint as an HTTPS listener.
+* If disabled, Partner Manager deploys the AS2 receive endpoint as an HTTP listener.
+
+{sp}
+{sp}
+This field applies only when deploying to CloudHub. When deploying to on-premises Mule runtimes, Partner Manager always deploys the AS2 receive endpoint as an HTTP listener.
+| Yes
 
 |Enforce security level
 a|Indicates whether Partner Manager rejects incoming AS2 messages that aren't signed or encrypted. When Partner Manager rejects a message, it returns a negative Message Disposition Notification (MDN) to the sender.
@@ -51,7 +67,9 @@ Rejects incoming messages that aren't encrypted.
 * None
 +
 Accepts messages that aren't signed or encrypted.
-|
+
+When deploying an AS2 endpoint to CloudHub using the HTTP protocol, you cannot change the default value (`Signed & Encrypted`).
+| Yes
 
 |<Host> keystore
 |Host keystore files in your environment that store your organization's public certificate and private key.
