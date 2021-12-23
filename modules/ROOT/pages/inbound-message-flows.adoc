@@ -4,7 +4,7 @@ An inbound message flow receives application messages from your partner, either 
 
 The following diagram shows the components of an inbound message flow:
 
-image::inbound-flow.png[Inbound message flow]
+image::pm-inbound-message-flow.png[Inbound message flow]
 
 |===
 |Setting |Description |Supported Formats or Protocols
@@ -28,7 +28,7 @@ image::inbound-flow.png[Inbound message flow]
 * JSON
 * XML
 
-|*5* Target at Host 
+|*5* Target at Host
 endpoint | Endpoint to which the transformed message is sent (typically, a process API)
  a|
 * FTP
