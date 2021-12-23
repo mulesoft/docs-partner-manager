@@ -17,7 +17,7 @@ image::pm-inbound-message-flow.png[Inbound message flow]
 * HTTPS
 * SFTP
 
-| image::annotation-1.png  Receive from Partners message type |Message type of the received message payload a|
+|  image::pm-inbound-message-flow.png[Inbound message flow] Receive from Partners message type |Message type of the received message payload a|
 * EDIFACT
 * JSON
 * X12
