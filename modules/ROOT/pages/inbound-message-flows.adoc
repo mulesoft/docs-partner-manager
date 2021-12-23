@@ -7,16 +7,16 @@ The following diagram shows the components of an inbound message flow:
 image::pm-inbound-message-flow.png[Inbound message flow]
 
 |===
-|Setting |Description |Supported Formats or Protocols
+| |Setting |Description |Supported Formats or Protocols
 
-|*1* Receive from Partners endpoint | Endpoint at which a host receives transmissions from a partner a|
+|image::annotation-1.png[First annotation]|Receive from Partners endpoint | Endpoint at which a host receives transmissions from a partner a|
 * AS2
 * FTP
 * HTTP
 * HTTPS
 * SFTP
 
-|*2* Receive from Partners message type |Message type of the received message payload a|
+| | Receive from Partners message type |Message type of the received message payload a|
 * EDIFACT
 * JSON
 * X12
