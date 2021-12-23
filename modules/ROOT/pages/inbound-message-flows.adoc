@@ -9,7 +9,7 @@ image::pm-inbound-message-flow.png[Inbound message flow]
 |===
 | |Setting |Description |Supported Formats or Protocols
 
-|image::annotation-1.png[First annotation]|Receive from Partners endpoint | Endpoint at which a host receives transmissions from a partner a|
+a|image::annotation-1.png[First annotation]|Receive from Partners endpoint | Endpoint at which a host receives transmissions from a partner a|
 * AS2
 * FTP
 * HTTP
