@@ -7,28 +7,29 @@ The following diagram shows the components of an inbound message flow:
 image::pm-inbound-message-flow.png[Inbound message flow]
 
 |===
-| |Setting |Description |Supported Formats or Protocols
+|Setting |Description |Supported Formats or Protocols
 
-a|image::annotation-1.png[Annotation 1]|Receive from Partners endpoint | Endpoint at which a host receives transmissions from a partner a|
+| image::annotation-1.png[Annotation 1] Receive from Partners endpoint
+| Endpoint at which a host receives transmissions from a partner a|
 * AS2
 * FTP
 * HTTP
 * HTTPS
 * SFTP
 
-| a|image::annotation-1.png| Receive from Partners message type |Message type of the received message payload a|
+| image::annotation-1.png  Receive from Partners message type |Message type of the received message payload a|
 * EDIFACT
 * JSON
 * X12
 * XML
 
-|*3* DataWeave Map |DataWeave map used to transform the source message type to the target message type a| N/A
+|*3*  DataWeave Map |DataWeave map used to transform the source message type to the target message type a| N/A
 
-|*4* Target at Host |Format into which the DataWeave map transforms received messages a|
+|*4*  Target at Host |Format into which the DataWeave map transforms received messages a|
 * JSON
 * XML
 
-|*5* Target at Host
+|*5*  Target at Host
 endpoint | Endpoint to which the transformed message is sent (typically, a process API)
  a|
 * FTP
