@@ -9,7 +9,7 @@ image::pm-inbound-message-flow.png[Inbound message flow]
 |===
 |Setting |Description |Supported Formats or Protocols
 
-| image::annotation-1.png  Receive from Partners endpoint
+a| image::annotation-1.png[Annotation 1]  Receive from Partners endpoint
 | Endpoint at which a host receives transmissions from a partner a|
 * AS2
 * FTP
@@ -17,7 +17,7 @@ image::pm-inbound-message-flow.png[Inbound message flow]
 * HTTPS
 * SFTP
 
-|  image::pm-inbound-message-flow.png[Inbound message flow] Receive from Partners message type |Message type of the received message payload a|
+| Receive from Partners message type |Message type of the received message payload a|
 * EDIFACT
 * JSON
 * X12
