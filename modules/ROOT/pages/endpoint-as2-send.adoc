@@ -1,6 +1,11 @@
 = AS2 Send Endpoint Settings
 
-Anypoint Partner Manager supports the AS2 Send to Partners endpoint type, which configures the target endpoint in an outbound message flow to which transformed B2B messages are sent to partners either directly or via third-party connections.
+AS2 send endpoint settings determine where to send B2B messages transmitted over AS2.
+
+An AS2 Send to Partners endpoint can act as:
+
+* A Target endpoint in an outbound message flow to which transformed B2B messages are sent to partners either directly or via third-party connections
+* An acknowledgement endpoint in an inbound message flow
 
 Either a partner or a third-party connection can own AS2 send endpoints.
 
