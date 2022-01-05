@@ -1,4 +1,4 @@
-x= SFTP Receive Endpoint Settings
+= SFTP Receive Endpoint Settings
 
 SFTP receive endpoints configure where to receive B2B messages transmitted over SFTP. There are two types of SFTP receive endpoints:
 
