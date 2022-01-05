@@ -3,7 +3,7 @@
 FTP send endpoint settings configure where to send B2B messages transmitted over FTP. There are two types of FTP send endpoints:
 
 * Send to Partners
-** Target endpoint in an outbound message flow to which transformed B2B messages are sent to partners, either directly or through third-party connections
+** Target endpoint in an outbound message flow through which transformed B2B messages are sent to partners, either directly or through third-party connections
 ** Acknowledgement endpoint in an inbound message flow
 
 +
@@ -11,7 +11,7 @@ A host, partner, or third-party connection can own FTP Send to Partners endpoint
 
 * Target at Host
 +
-Target endpoint in an inbound message flow to which transformed B2B messages are sent to the backend applications
+Target endpoint in an inbound message flow through which transformed B2B messages are sent to the backend applications
 +
 Only a host can own FTP Target at Host endpoints.
 
