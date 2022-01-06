@@ -38,7 +38,7 @@ For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, th
 
 image::URL-mapping-rules-http.png[URL mapping rules for HTTPS in the DLB settings]
 
-In this example: *(VIJAY: I removed depending on your environment. Is that OK?)*
+In this example:
 
 * The external HTTP receive endpoint URL is `+http://mythical.lb.anypointdns.net/apm/qa/outbound/send2/+`.
 * Your backend applications send the application JSON and XML messages for your outbound message flows from `+http://mythical.lb.anypointdns.net/apm/qa/outbound/send2/{message-type}+`.

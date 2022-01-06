@@ -37,7 +37,7 @@ The following table shows the property placeholders that Partner Manager support
 
 [%header%autowidth.spread]
 |===
-|File Name Pattern |Generated File Name
+|Filename Pattern |Generated Filename
 |$\{DocType}_${ISASender}_${YYYYMMDD}_${HHmmSSsss}_${ICN}.edi |`850_NTORETAIL_20201102_192655521_300001.edi`
 |INVOICE_${SenderGSID}_${ICN}.${FormatTypeExt}
 |`INVOICE_MYTHICALSUPPLIERS_12355343.xml`

@@ -20,7 +20,7 @@ Create SFTP receive endpoints by configuring these settings on the *<host>* or *
 |===
 |Name |Description | Required
 | Endpoint Name
-| Automatically generated name used to identify the endpoint, which you can subsequently modify manually.
+| Automatically-generated name used to identify the endpoint, which you can subsequently modify manually.
 | x
 
 | Owner
@@ -56,7 +56,7 @@ Create SFTP receive endpoints by configuring these settings on the *<host>* or *
 | x
 
 | Polling Frequency
-| Frequency in which the server checks the source path for new files. The default value is `1 minute`.
+| Frequency at which the server checks the source path for new files. The default value is `1 minute`.
 | x
 
 | Size check wait time

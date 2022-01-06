@@ -18,7 +18,7 @@ Ownership of endpoints is automatically assigned based on the partner or third-p
 
 == Create Endpoints from the Host Page
 
-Use the *<host* page to create new send and receive endpoints owned by the host:
+Use the *<host>* page to create new send and receive endpoints owned by the host:
 
 . In the navigation menu, select the host.
 . In the *Endpoints* section, click *New*.
