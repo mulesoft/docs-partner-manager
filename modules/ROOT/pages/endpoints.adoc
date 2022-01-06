@@ -26,7 +26,7 @@ The configuration of Partner Manager endpoints depends on the endpoint type and 
 
 [%header%autowidth.spread]
 |===
-|Endpoint Type | Protocol | Can be owned by
+|Endpoint Type | Protocol | Owner
 | Source at Host | FTP, HTTP, HTTPS, SFTP | Host
 | Target at Host | FTP, HTTP, HTTPS, SFTP | Host
 | Receive from Partners | AS2 |Host

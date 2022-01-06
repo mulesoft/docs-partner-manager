@@ -4,7 +4,7 @@ You can deploy AS2 receive, HTTP receive, and HTTPS receive endpoints on a publi
 
 == Deploy to CloudHub on a Public Port
 
-When an AS2, HTTP, or HTTPS receive endpoint is deployed with the public port configuration enabled, the endpoint application is deployed on the public HTTPS port (`8082`), with the traffic routed through the xref:runtime-manager::dedicated-load-balancer-tutorial#shared-load-balancers [shared load balancer]. The value in the URL field is automatically generated when you deploy a message flow to CloudHub that uses this endpoint.
+When an AS2, HTTP, or HTTPS receive endpoint is deployed with the public port configuration enabled, the endpoint application is deployed on the public HTTPS port (`8082`), with the traffic routed through the xref:runtime-manager::dedicated-load-balancer-tutorial#shared-load-balancers[shared load balancer]. The value in the URL field is automatically generated when you deploy a message flow to CloudHub that uses this endpoint.
 
 You can view this URL by either selecting the receiving endpoint from your deployed message flow or clicking the endpoint name from the endpoints list. You can share this URL with the partners that send AS2, HTTP, or HTTP messages to this endpoint.
 
