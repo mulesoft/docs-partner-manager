@@ -30,7 +30,7 @@ image::URL-mapping-rules-http.png[URL mapping rules for AS2 in the DLB settings]
 
 With these configurations, the external AS2 endpoint URL is `+https://mythical.lb.anypointdns.net/as2/mythical/receive-as2/+`.
 
-=== External URL to share for an HTTP Receive Endpoint
+=== External URL to Share for an HTTP Receive Endpoint
 
 The external URL that you can share with your partners for an HTTP endpoint is `+http://{DLB-domain}/{Input-path}/{base-path}/{message-type}+` or `+http://{DLB-domain}/{Input-path}/{base-path}/{message-type}+`.
 
@@ -45,7 +45,7 @@ In this example:
 * If `enterprise-ob-po-ack` is the message type, your backend applications post the HTTP requests to the URL
 `+http://mythical.lb.anypointdns.net/apm/qa/outbound/send2/enterprise-ob-po-ack+`.
 
-=== External URL to share for an HTTPS Receive Endpoint
+=== External URL to Share for an HTTPS Receive Endpoint
 
 The external URL that you can share with your partners for an HTTPS endpoint is `+https://{DLB-domain}/{Input-path}/{base-path}/{message-type}+` or `+https://{DLB-domain}/{Input-path}/{base-path}/{message-type}+`.
 
