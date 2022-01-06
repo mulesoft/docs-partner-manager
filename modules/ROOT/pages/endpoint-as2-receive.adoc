@@ -51,7 +51,7 @@ a|Indicates whether Partner Manager deploys the AS2 receive endpoint as an HTTPS
 
 {sp}
 {sp}
-This field applies only when deploying to CloudHub. When deploying to on-premises Mule runtimes, Partner Manager always deploys the AS2 receive endpoint as an HTTP listener.
+This field applies only when deploying to CloudHub. When deploying to on-premises Mule instances, Partner Manager always deploys the AS2 receive endpoint as an HTTP listener.
 | Yes
 
 |Enforce security level
