@@ -17,21 +17,21 @@ a| <1> Receive from Partners endpoint
 * HTTPS
 * SFTP
 
-| <2> Receive from Partners message type |Message type of the received message payload a|
+a| <2> Receive from Partners message type |Message type of the received message payload a|
 * EDIFACT
 * JSON
 * X12
 * XML
 
-| <3> DataWeave Map |DataWeave map used to transform the source message type to the target message type a| N/A
+a| <3> DataWeave Map |DataWeave map used to transform the source message type to the target message type a| N/A
 
-|<4>* Target at Host |Format into which the DataWeave map transforms received messages a|
+a|<4>* Target at Host |Format into which the DataWeave map transforms received messages a|
 * JSON
 * XML
 
-| <5> Target at Host
+a| <5> Target at Host
 endpoint | Endpoint to which the transformed message is sent (typically, a process API)
- a|
+a|
 * FTP
 * HTTP
 * HTTPS
