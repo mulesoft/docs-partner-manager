@@ -25,7 +25,7 @@ a| <2> Receive from Partners message type |Message type of the received message 
 
 a| <3> DataWeave Map |DataWeave map used to transform the source message type to the target message type a| N/A
 
-a|<4>* Target at Host |Format into which the DataWeave map transforms received messages a|
+a| <4> Target at Host |Format into which the DataWeave map transforms received messages a|
 * JSON
 * XML
 
