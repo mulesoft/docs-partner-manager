@@ -60,7 +60,7 @@ Create FTP receive endpoints by configuring these settings on the *<host>* or *P
 | Frequency with which the server checks the source path for new files. The default is `1 minute`.
 | x
 
-| Supported Format type
+| Supported Format Types
 | Applies only to FTP endpoints owned by partners or third-party connections.
 Indicates whether the endpoint supports EDI messages (EDIFACT, X12) or non-EDI messages (JSON, XML).
 | x

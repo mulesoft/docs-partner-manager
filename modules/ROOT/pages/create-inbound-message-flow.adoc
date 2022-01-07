@@ -68,7 +68,7 @@ If the source message type is X12 or EDIFACT and your partner expects your organ
 . Click *Select*.
 . In the *Select an endpoint: Send acknowledgement to <partner>* window, do either of the following:
 * Select the endpoint to receive the acknowledgment messages from your partner and click *Select*.
-* Click *New* to create a new send to endpoint, as described in xref:create-endpoint.adoc[Creating Endpoints].
+* Click *New* to create a new endpoint, as described in xref:create-endpoint.adoc[Creating Endpoints].
 
 +
 The acknowledgment is added to the message flow.
