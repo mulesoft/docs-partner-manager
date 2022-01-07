@@ -10,8 +10,8 @@ Partner Manager supports the following formats for send endpoints:
 
 * xref:endpoint-as2-send.adoc[AS2 (Send to Partners endpoints only)]
 * xref:endpoint-ftp-send.adoc[FTP]
-* xref:endpoint-https-send[HTTP and HTTPS]
-* xref:endpoint-sftp-send[SFTP]
+* xref:endpoint-https-send.adoc[HTTP and HTTPS]
+* xref:endpoint-sftp-send.adoc[SFTP]
 
 == See Also
 
