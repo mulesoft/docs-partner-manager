@@ -81,7 +81,7 @@ The client ID provided when registering your application
 * Client Secret +
 The client secret provided when registering your application
 * Client Header +
-The client header.
+The client header
 * Client Secret Header +
 The client secret header
 
@@ -98,4 +98,4 @@ The client secret provided when registering your application
 
 * xref:endpoints.adoc[Endpoints]
 * xref:create-endpoint.adoc[Creating Endpoints]
-* xref:Certificates.adoc[Certificates]
+* xref:Certificates.adoc[Certificate Settings]

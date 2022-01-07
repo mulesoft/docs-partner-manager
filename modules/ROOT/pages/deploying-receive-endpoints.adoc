@@ -6,7 +6,7 @@ You can deploy AS2 receive, HTTP receive, and HTTPS receive endpoints on a publi
 
 When an AS2, HTTP, or HTTPS receive endpoint is deployed with the public port configuration enabled, the endpoint application is deployed on the public HTTPS port (`8082`), with the traffic routed through the xref:runtime-manager::dedicated-load-balancer-tutorial#shared-load-balancers[shared load balancer]. The value in the URL field is automatically generated when you deploy a message flow to CloudHub that uses this endpoint.
 
-You can view this URL by either selecting the receiving endpoint from your deployed message flow or clicking the endpoint name from the endpoints list. You can share this URL with the partners that send AS2, HTTP, or HTTP messages to this endpoint.
+You can view this URL by either selecting the receiving endpoint from your deployed message flow or clicking the endpoint name from the endpoints list. You can share this URL with the partners that send AS2, HTTP, or HTTPS messages to this endpoint.
 
 If your organization uses Anypoint VPC without a dedicated load balancer (DLB), your organization’s platform administrator can configure the necessary xref:runtime-manager::vpc-firewall-rules-concept.adoc[VPC firewall rules] to allow specific partner or third-party connection IP addresses to access the endpoint.
 
@@ -49,7 +49,7 @@ In this example:
 
 The external URL that you can share with your partners for an HTTPS endpoint is `+https://{DLB-domain}/{Input-path}/{base-path}/{message-type}+` or `+https://{DLB-domain}/{Input-path}/{base-path}/{message-type}+`.
 
-For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, the runtime application name is `b2b-inbound-http-ognq`, and the base path you configured in an HTTPS receive endpoint is `send2`, then your administrator adds a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC:
+For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, the runtime application name is `b2b-inbound-http-ognq`, and the base path you configured in an HTTP receive endpoint is `send2`, then your administrator adds a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC:
 
 image::URL-mapping-rules-http.png[URL mapping rules for HTTPS in the DLB settings]
 

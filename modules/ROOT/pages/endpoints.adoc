@@ -18,7 +18,7 @@ When creating partner-facing endpoints directly from a partner or third-party co
 In a message flow, endpoint availability depends on the endpoint ownership:
 
 * If an endpoint is owned by the host, any partner or third-party connection can select the endpoint.
-* If an endpoint is owned by a specific partner or third-party connection, than that endpoint is available only to the partner or third-party connection to which the endpoint is assigned.
+* If an endpoint is owned by a specific partner or third-party connection, then that endpoint is available only to the partner or third-party connection to which the endpoint is assigned.
 
 == Supported Endpoint Protocols
 
@@ -67,4 +67,3 @@ If you deploy to CloudHub, you can assign static IP addresses to the endpoint ap
 
 * xref:create-endpoint.adoc[Creating Endpoints]
 * xref:deploying-receive-endpoints.adoc[Deploying AS2, HTTP, and HTTPS Receive Endpoints]
-* xref:delete-endpoints[Deleting Endpoints]

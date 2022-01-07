@@ -12,7 +12,7 @@ A host, partner, or third-party connection can own HTTP and HTTPS Receive from P
 +
 Source endpoint in an outbound message flow that receives application messages from the backend applications
 +
-Only a host can own FTP Source at Host endpoints.
+Only a host can own HTTP or HTTPS Source at Host endpoints.
 
 IMPORTANT: Each HTTP and HTTPS receive endpoint configuration is deployed as an individual Mule application in the runtime. Consider reusing existing HTTP and HTTPS receive endpoint configurations across message flows.
 

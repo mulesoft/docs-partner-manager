@@ -62,8 +62,6 @@ Create FTP send endpoints by configuring these settings on the *<host>* or *Part
 |
 |===
 
-For EDI messages that are not time-sensitive, such as invoice and payment remittances, use the Write batch operation to merge multiple individual messages into a single interchange and send to your partners.
-
 == See Also
 
 * xref:endpoints.adoc[Endpoints]

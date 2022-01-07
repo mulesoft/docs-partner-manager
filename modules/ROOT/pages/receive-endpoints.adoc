@@ -9,8 +9,8 @@ Partner Manager supports the following formats for receive endpoints:
 
 * xref:endpoint-as2-receive.adoc[AS2 (Receive from Partners endpoints only)]
 * xref:endpoint-ftp-receive.adoc[FTP]
-* xref:endpoint-https-receive[HTTP and HTTPS]
-* xref:endpoint-sftp-receive[SFTP]
+* xref:endpoint-https-receive.adoc[HTTP and HTTPS]
+* xref:endpoint-sftp-receive-target.adoc[SFTP]
 
 == See Also
 

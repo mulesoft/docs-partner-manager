@@ -63,8 +63,6 @@ transformed JSON and XML files generated from inbound message flows.
 |
 |===
 
-For EDI messages that are not time-sensitive, such as invoice and payment remittances, use the Write batch operation to merge multiple individual messages into a single interchange and send to your trading partners.
-
 == See Also
 
 * xref:endpoints.adoc[Endpoints]

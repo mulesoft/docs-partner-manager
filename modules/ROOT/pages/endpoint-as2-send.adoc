@@ -117,4 +117,4 @@ Your partner requires you to pass basic authentication credentials (username and
 
 * xref:endpoints.adoc[Endpoints]
 * xref:create-endpoint.adoc[Creating Endpoints]
-xref:file-name-pattern.adoc[Filename Patterns for Send Endpoints]
+* xref:file-name-pattern.adoc[Filename Patterns for Send Endpoints]
