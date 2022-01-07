@@ -14,7 +14,7 @@ If your organization uses Anypoint VPC without a dedicated load balancer (DLB), 
 
 When an AS2, HTTP, or HTTPS receive endpoint is deployed with the private port configuration enabled, the endpoint is deployed to the private HTTPS port `8092`. The internal URL of the endpoint appears on the *Message Flow* or *Endpoint* details page.
 
-You can also set CloudHub to automatically deploy newly-created endpoints to a private port via the xref:cloudhub-deploy-options.adoc[CloudHub deployment settings].
+You can also set CloudHub to automatically deploy newly created endpoints to a private port via the xref:cloudhub-deploy-options.adoc[CloudHub deployment settings].
 
 After deploying the first message flow using the endpoint configuration, you can view the runtime application name for the endpoint from the *Endpoint* details page or the *Receive* section of your message flow. To configure xref:runtime-manager::lb-mapping-rules.adoc[URL mapping rules] in the xref:runtime-manager::cloudhub-dedicated-load-balancer.adoc[DLB] to forward the AS2, HTTP, or HTTPS messages received from your partners to the application, provide the application name to your organization’s platform administrator.
 

@@ -30,7 +30,7 @@ Create FTP send endpoints by configuring these settings on the *<host>* or *Part
 | x
 
 |Endpoint Name
-| Automatically-generated name used to identify the endpoint, which you can modify manually.
+| Automatically generated name used to identify the endpoint, which you can modify manually.
 | x
 
 |Description

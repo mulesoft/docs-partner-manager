@@ -30,7 +30,7 @@ Create SFTP send endpoints by configuring these settings on the *<host>* or *Par
 | x
 
 |Endpoint Name
-| Automatically-generated name used to identify the endpoint, which you can modify manually.
+| Automatically generated name used to identify the endpoint, which you can modify manually.
 | x
 
 |Description

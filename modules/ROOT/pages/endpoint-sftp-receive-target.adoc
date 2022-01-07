@@ -20,7 +20,7 @@ Create SFTP receive endpoints by configuring these settings on the *<host>* or *
 |===
 |Name |Description | Required
 | Endpoint Name
-| Automatically-generated name used to identify the endpoint, which you can subsequently modify manually.
+| Automatically generated name used to identify the endpoint, which you can subsequently modify manually.
 | x
 
 | Owner

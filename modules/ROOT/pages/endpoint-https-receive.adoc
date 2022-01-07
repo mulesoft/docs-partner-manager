@@ -22,7 +22,7 @@ Create HTTP and HTTPS receive endpoints by configuring these settings on the *<h
 |===
 |Name |Description |Required
 |Endpoint Name
-|Automatically-generated name used to identify the endpoint, which you can modify manually.
+|Automatically generated name used to identify the endpoint, which you can modify manually.
 |x
 
 | Owner

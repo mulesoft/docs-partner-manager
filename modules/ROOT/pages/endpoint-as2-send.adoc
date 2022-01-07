@@ -32,7 +32,7 @@ Create AS2 endpoints by configuring these settings on the partner or third-party
 |x
 
 |Endpoint Name
-|Automatically-generated name used to identify the endpoint, which you can subsequently modify manually.
+|Automatically generated name used to identify the endpoint, which you can subsequently modify manually.
 |x
 
 |Description

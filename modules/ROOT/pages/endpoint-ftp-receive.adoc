@@ -20,7 +20,7 @@ Create FTP receive endpoints by configuring these settings on the *<host>* or *P
 |===
 |Name |Description |Required
 | Endpoint Name
-| Automatically-generated name used to identify the endpoint, which you can modify manually.
+| Automatically generated name used to identify the endpoint, which you can modify manually.
 |x
 
 | Owner
@@ -66,7 +66,7 @@ Indicates whether the endpoint supports EDI messages (EDIFACT, X12) or non-EDI m
 | x
 
 | Size check wait time
-| Wait time, in seconds, between size checks to determine if a file is ready for processing. The default of `1 second` enables a file write to complete before processing.
+| Wait time, in seconds, between size checks to determine if a file is ready for processing. The default of `1 second` enables a file write to finish before processing the file.
 {sp} +
 {sp} +
 Mule performs two size checks by waiting the amount of time specified in this field. If both checks return the same value, the file is ready to process.

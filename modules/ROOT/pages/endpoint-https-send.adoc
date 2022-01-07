@@ -29,7 +29,7 @@ Create HTTP and HTTPS send endpoints by configuring these settings on the host, 
 |x
 
 |Endpoint Name
-|Automatically-generated name used to identify the endpoint, which you can subsequently modify manually.
+|Automatically generated name used to identify the endpoint, which you can subsequently modify manually.
 |x
 
 |Description
