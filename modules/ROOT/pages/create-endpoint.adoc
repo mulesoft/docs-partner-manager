@@ -33,7 +33,6 @@ You can use the Message Flow Wizard to create send and receive endpoints owned b
 
 For information about using the Message Flow wizard to create new endpoints, see xref:configure-message-flows.adoc[Create Inbound Message Flows] and xref:create-outbound-message-flow.adoc[Create Outbound Message Flows].
 
-
 [[configure-endpoint]]
 == Protocol-Specific Endpoint Settings
 

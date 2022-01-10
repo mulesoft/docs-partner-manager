@@ -54,7 +54,7 @@ This field applies only when deploying to CloudHub. When deploying to on-premise
 | Yes
 
 |Enforce security level
-a|Indicates whether Partner Manager rejects incoming AS2 messages that aren't signed or encrypted. When Partner Manager rejects a message, it returns a negative Message Disposition Notification (MDN) to the sender.
+a|Indicates whether Partner Manager rejects incoming AS2 messages that aren't signed, encrypted, or both. When Partner Manager rejects a message, it returns a negative Message Disposition Notification (MDN) to the sender.
 
 Allowed values:
 
