@@ -1,8 +1,13 @@
 = AS2 Send Endpoint Settings
 
-AS2 send endpoint settings configure the target endpoint in an outbound message flow to which transformed B2B messages are send to partners either directly or via third-party connections.
+AS2 send endpoint settings determine where to send B2B messages transmitted over AS2.
 
-A partner or third-party can own AS2 send endpoints. Use a third-party-owned AS2 send endpoint for an outbound message flow for partners that use a third-party connection.
+An AS2 Send to Partners endpoint (the only type of AS2 send endpoint) can act as:
+
+* A target endpoint in an outbound message flow through which transformed B2B messages are sent to partners, either directly or via third-party connections
+* An acknowledgement endpoint in an inbound message flow
+
+Either a partner or a third-party connection can own AS2 send endpoints.
 
 Create AS2 endpoints by configuring these settings on the partner or third-party connection pages:
 
@@ -12,103 +17,105 @@ Create AS2 endpoints by configuring these settings on the partner or third-party
 
 |Owner
 |Partner or third-party connection that owns the endpoint.
-|Yes
+|x
 
 |Usage
 |`Send to partners`
-|No
+|
 
 |Protocol
-|Protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window.
-|Yes
+|Protocol that the endpoint supports.
+|x
 
 |Partner
-|Partner to whom the transaction is sent
-|Yes
+|Partner to whom the transaction is sent.
+|x
 
 |Endpoint Name
 |Automatically generated name used to identify the endpoint, which you can subsequently modify manually.
-| Yes
+|x
 
 |Description
 |User-supplied value that describes the purpose of the endpoint.
-| No
+|
 
 |Partner AS2 URL
 |Your partner’s or third-party connection's AS2 URL to which outbound EDI transmissions are sent.
-|Yes
+|x
 
 |Connection timeout
 |Timeout for establishing a connection to the remote service. The default is `30 Seconds`.
-|Yes
+|x
 
 |Retry interval
 |Frequency of reconnection attempts when unable to connect to the remote AS2 service. The default is `30 Seconds`.
-|Yes
+|x
 
 |Maximum retry attempts
 |Maximum number of reconnection attempts to make. If you don't want Partner Manager to retry after an initial connection failure, set this value to `0`.
-|Yes
+|x
 
 |<Host> AS2 identifier
 |Your organization’s AS2 identifier.
-|Yes
+|x
 
 |Partner AS2 identifier
 |Your partner’s or third-party connection's AS2 identifier.
-|Yes
+|x
 
 |Respond to email address
 |Email address to use as the HTTP 'From' header when sending.
-|Yes
+|x
 
 |Message subject
 |User-defined field for the MIME Subject header.
-|Yes
+|x
 
 |Filename pattern
-|xref:file-name-pattern.adoc[File name pattern] required by your partner.
-|Yes
+|Filename pattern required by your partner.
+|x
 
 |Request receipt
-a|Whether you want the partner to return an MDN receipt, which confirms the receipt of the message.
-
-|Yes
+a|Whether you want the partner to return a Message Disposition Notification (MDN) receipt, which confirms the receipt of the message.
+|x
 
 |<Host> keystore
 |The host xref:create-keystore.adoc[keystore] files in your environment that house your organization's public certificate and private key.
-|Yes
+|x
 
 |Signature algorithm
 |xref:as2-endpoints-algorithms.adoc[Algorithm] to use when setting the message integrity check value.
-|Yes
+|x
 
 |MDN signature algorithm
-|Request for a partner to respond with a signed MDN using this xref:as2-endpoints-algorithms.adoc[algorithm] for calculating MIC.
-|Yes
+|Request for a partner to respond with a signed Message Disposition Notification (MDN) using this xref:as2-endpoints-algorithms.adoc[algorithm] for calculating MIC.
+|x
 
 |Encryption algorithm
 |xref:as2-endpoints-algorithms.adoc[Algorithm] to use when encrypting the message to send.
-|Yes
+|x
 
 |MDN response
 |The AS2 messages sent from Partner Manager always request the receiver to send a Synchronous MDN receipt back. The default is `Sync`.
-| Yes
+|x
 
 |Authentication type
 a| Authentication type used to access the endpoint. Allowed values:
 
 * None
 +
-No additional authentication is required to send messages to your partner's AS2 endpoint.
+Does not require backend applications to authenticate when connecting to this endpoint.
 +
 * Basic
 +
-Your partner requires you to pass basic authentication credentials (username and password) when sending messages to the AS2 endpoint. Enter this information in the *Username* and *Password* fields.
+Requires backend applications to use the username and password provided by your partner to connect to this endpoint.
++
+Enter this information in the *Username* and *Password* fields.
 |
 |===
 
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:create-endpoint.adoc[Creating Endpoints]
+* xref:file-name-pattern.adoc[Filename Patterns for Send Endpoints]

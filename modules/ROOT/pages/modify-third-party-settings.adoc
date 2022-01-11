@@ -44,7 +44,7 @@ Click *New* in the *Endpoints* section and enter the required fields.
 * Delete a connection-owned endpoint
 +
 Click the endpoint's link and click *Delete*.
-| xref:create-endpoint.adoc[Create and Configure Endpoints]
+| xref:create-endpoint.adoc[Creating Endpoints]
 |===
 
 == See Also

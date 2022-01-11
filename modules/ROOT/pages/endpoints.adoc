@@ -2,20 +2,68 @@
 
 Endpoints define the transport protocol configurations necessary to receive or send messages with external trading partners or internal backend applications.
 
-Partner Manager uses endpoints to receive transmissions from partners and messages from backend application, define transport protocols, and specify message or message acknowledgment destinations.
+Anypoint Partner Manager uses endpoints to:
+
+* Receive messages from partners
+* Receive messages from backend applications
+* Define transport protocols
+* Specify message or message acknowledgment destinations
 
 == Endpoint Ownership
 
-You can assign the host, partner, or third-party connection as the owner of endpoints to control the use of endpoints within inbound and outbound message flows.
+Depending on the endpoint type, you can assign the host, partner, or third-party connection as the endpoint owner to control the use of endpoints within inbound and outbound message flows.
 
-When creating partner-facing endpoints directly from the partner or third-party connection, the ownership of the endpoint is automatically assigned to the entity from which the endpoint was created.
+When creating partner-facing endpoints directly from a partner or third-party connection, the ownership of the endpoint is automatically assigned to the entity from which the endpoint was created.
 
-In a message flow, availability depends on the endpoint assignment:
+In a message flow, endpoint availability depends on the endpoint ownership:
 
-* Any partner can select an endpoint assigned to the host.
-* If an endpoint is assigned to a specific partner or third-party connection, than that endpoint is available only to the partner for which the endpoint is assigned.
+* If an endpoint is owned by the host, any partner or third-party connection can select the endpoint.
+* If an endpoint is owned by a specific partner or third-party connection, then that endpoint is available only to the partner or third-party connection to which the endpoint is assigned.
+
+== Supported Endpoint Protocols
+
+The configuration of Partner Manager endpoints depends on the endpoint type and protocol. The following table describes the endpoint types, along with their supported protocols and possible owners:
+
+[%header%autowidth.spread]
+|===
+|Endpoint Type | Protocol | Owner
+| Source at Host | FTP, HTTP, HTTPS, SFTP | Host
+| Target at Host | FTP, HTTP, HTTPS, SFTP | Host
+| Receive from Partners | AS2 |Host
+|  | FTP, HTTP, HTTPS, SFTP | Host, partner, third-party connection
+| Send to Partners| AS2
+| Partner, third-party connection
+|  | FTP, HTTP, HTTPS, SFTP | Host, partner, third-party connection
+|===
+
+== Endpoint Runtime Services
+
+Using dynamic configurations, Partner Manager deploys generic endpoint services that can receive data from or send data to different endpoint configurations. Endpoint configurations of all supported protocols can be reused across various message flows and trading partners.
+
+Partner Manager’s deployment orchestration service inspects the message flow and associated configuration objects and determines which endpoint services to deploy or update based on whether or not any new endpoint configurations are added, updated, or removed.
+
+The number and type of endpoint services deployed to your runtime depend on the transport protocols used to exchange data with your trading partners and backend systems.
+
+Each unique AS2, HTTP, and HTTPS receive endpoint configuration results in the deployment of its own runtime application. You can view the runtime application name corresponding to a given configuration in Partner Manager, from the endpoint details page.
+
+The endpoints for the transport protocols are always managed within a single generic endpoint service for the protocol and direction. The following table shows the prefix for the endpoint services:
+
+[%header%autowidth.spread]
+|===
+|Protocol |Direction |Application Name Prefix
+|AS2 |Receive |b2b-inbound-as2-
+|AS2 |Send |b2b-outbound-as2-
+|FTP | Receive | b2b-inbound-ftp-
+|FTP | Send | b2b-outbound-ftp-
+|HTTP or HTTPS |Receive |b2b-inbound-http-
+|HTTP or HTTPS |Send |b2b-outbound-http-
+|SFTP |Receive |b2b-inbound-sftp-
+|SFTP |Send |b2b-outbound-sftp-
+|===
+
+If you deploy to CloudHub, you can assign static IP addresses to the endpoint applications that connect to external systems from Runtime Manager, if your organization or your trading partners require allowlisting IP addresses. You can share the xref:runtime-manager::managing-applications-on-cloudhub#static-ips[static IP] address assigned to your endpoint application with your partners for them to allowlist the IP address, allowing the application to connect with their server.
 
 == See Also
 
-* xref:create-endpoint.adoc[Create and Configure Endpoints]
-* xref:delete-endpoints.adoc[Delete Endpoints]
+* xref:create-endpoint.adoc[Creating Endpoints]
+* xref:deploying-receive-endpoints.adoc[Deploying AS2, HTTP, and HTTPS Receive Endpoints]

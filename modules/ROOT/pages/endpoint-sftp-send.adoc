@@ -1,66 +1,70 @@
 = SFTP Send Endpoint Settings
 
-SFTP send endpoint settings configure where to send messages in the following contexts:
+SFTP send endpoint settings configure where to send B2B messages transmitted over SFTP. There are two types of SFTP send endpoints:
 
-* Send to partners
-+
-Target endpoint in an outbound message flow to which transformed B2B EDI messages are sent to partners either directly or via a third-party connection
-+
-* Target at host
-+
-Target endpoint in an inbound message flow to which transformed application JSON and XML messages are sent to the backend applications
+* Send to Partners
+** Target endpoint in an outbound message flow through which transformed B2B messages are sent to partners, either directly or through third-party connections
+** Acknowledgement endpoint in an inbound message flow
 
-A host, partner, or 3rd party connection can own FTP send endpoints.
++
+A host, partner, or third-party connection can own SFTP Send to Partners endpoints.
 
-Create SFTP send endpoints by configuring these settings on the host or partner page. You can also create these endpoints when you configure an outbound message flow.
+* Target at Host
++
+Target endpoint in an inbound message flow through which transformed JSON and XML messages are sent to the backend applications.
++
+Only a host can own SFTP Target at Host endpoints.
+
+Create SFTP send endpoints by configuring these settings on the *<host>* or *Partner* pages. You can also create these endpoints when you configure an outbound message flow:
 
 [%header%autowidth.spread]
 |===
 |Name |Description | Required
 
 | Owner
-| Partner or host that owns the endpoint.
-| Yes
+| Host, partner, or third-party connection that owns the endpoint.
+| x
 
 | Protocol
-| Protocol selected in the *Protocol* field of the *New endpoint: Receive from partners* window.
-| Yes
+| Protocol that the endpoint supports.
+| x
 
 |Endpoint Name
-| Name used to identify the endpoint. The value in the *Endpoint Name* field is generated automatically, but can be modified manually.
-| Yes
+| Automatically generated name used to identify the endpoint, which you can modify manually.
+| x
 
 |Description
 |User-supplied value that describes the purpose of the endpoint.
-| No
+|
 
 |Host
 | SFTP server host, such as `sftp.mulesoft.com`, `localhost`, or `192.168.0.1`. The host must be accessible from your Mule environment.
-|Yes
+|x
 
 |Port
-|Port number of the SFTP server to connect.
-|Yes
+|Port number of the SFTP.
+|x
 
 |Username
 |Username for the SFTP server.
-|Yes
+|x
 
 |Password
 |Password for the SFTP server.
-|Yes
+|x
 
 |Target Path
 |Path on your SFTP server to EDI files that were generated from outbound message flows. This is also the path on your SFTP server for storing
 transformed JSON and XML files generated from inbound message flows.
-|Yes
+|x
 
 |Filename pattern
-|xref:file-name-pattern.adoc[File name pattern] required by your trading partner or backend application.
+|Filename pattern required by your partner or backend application.
 |
 |===
 
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:create-endpoint.adoc[Creating Endpoints]
+* xref:file-name-pattern.adoc[Filename Patterns for Send Endpoints]

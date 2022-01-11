@@ -4,7 +4,7 @@ Using property placeholders, Partner Manager enables you to configure a template
 
 When filename pattern fields are configured with property placeholders (specified within `${ }`), Partner Manager dynamically populates the filename with updated information at runtime. Any filename property field that is not specified within the placeholder is static and is not updated at runtime.
 
-The following are the supported property placeholders and the dynamic value the placeholder is replaced with at runtime. All dates and times must be in UTC format.
+The following table shows the property placeholders that Partner Manager supports and the dynamic value the placeholder is replaced with at runtime. All dates and times must be in UTC format.
 
 [%header%autowidth.spread]
 |===
@@ -37,7 +37,7 @@ The following are the supported property placeholders and the dynamic value the 
 
 [%header%autowidth.spread]
 |===
-|File Name Pattern |Generated File Name
+|Filename Pattern |Generated Filename
 |$\{DocType}_${ISASender}_${YYYYMMDD}_${HHmmSSsss}_${ICN}.edi |`850_NTORETAIL_20201102_192655521_300001.edi`
 |INVOICE_${SenderGSID}_${ICN}.${FormatTypeExt}
 |`INVOICE_MYTHICALSUPPLIERS_12355343.xml`

@@ -1,52 +1,51 @@
 = HTTP and HTTPS Receive Endpoint Settings
 
-HTTP and HTTPS receive endpoint settings configure where to receive messages in the following context:
+HTTP and HTTPS receive endpoints configure where to receive B2B messages transmitted over HTTP or HTTPS, respectively. There are two type of HTTP and HTTPS endpoints:
 
-* Source at host
+* Receive from Partners
 +
-Source endpoint in an outbound message flow that receives application JSON and XML messages from the backend applications
+Source endpoint in an inbound message flow that receives inbound B2B messages from partners either directly or via third-party connections.
 +
-* Receive from partners
+A host, partner, or third-party connection can own HTTP and HTTPS Receive from Partners endpoints.
 +
-Source endpoint in an inbound message flow that receives inbound messages (EDIFACT, JSON, X12, or XML) from partners either directly or via third-party connections
+* Source at Host
++
+Source endpoint in an outbound message flow that receives application messages from the backend applications
++
+Only a host can own HTTP or HTTPS Source at Host endpoints.
 
-IMPORTANT: Each HTTP and HTTPS receive endpoint configuration is deployed as an individual Mule application in the runtime. Consider reusing existing HTTP and HTTPS receive endpoint configurations across a partner's message flows.
+IMPORTANT: Each HTTP and HTTPS receive endpoint configuration is deployed as an individual Mule application in the runtime. Consider reusing existing HTTP and HTTPS receive endpoint configurations across message flows.
 
-Create HTTP and HTTPS receive endpoints by configuring these settings on the partner or third-party connection page:
+Create HTTP and HTTPS receive endpoints by configuring these settings on the *<host>* page:
 
 [%header%autowidth.spread]
 |===
 |Name |Description |Required
 |Endpoint Name
-|Automatically generated name used to identify the endpoint, which you can subsequently modify manually.
-|Yes
+|Automatically generated name used to identify the endpoint, which you can modify manually.
+|x
 
 | Owner
-a| Endpoint owner:
-
-* Only the host can own source at host HTTP receive endpoints.
-* The host, partner, or third-party connection can own receive from partner HTTP receive endpoints.
-
-| Yes
+a| Host, partner, or third-party connection that owns the endpoint.
+| x
 
 | Protocol
-| Protocol selected in the *Protocol* field of the *New endpoint*. You cannot modify this value.
-| Yes
-
+| Protocol that the endpoint supports.
+| x
 
 | Description
 | User-supplied value that describes the purpose of the endpoint.
-| No
+|
 
 | Private port (when deploying to VPC)
 a|
-* When enabled, the HTTP receive endpoint runtime application deploys to the private port 8092 in your Anypoint VPC.
+* When enabled, the HTTP receive endpoint runtime application deploys to the private port `8092` in your Anypoint VPC.
 +
 You can manage the access control to the endpoint via the Anypoint VPC and dedicated load balancer settings.
-* When disabled, the HTTP receive endpoint application deploys to the public port 8082 by default.
+* When disabled, the HTTP receive endpoint application deploys to the public port `8082` by default.
 +
-You can access the endpoint URL directly over the internet.
-| No
+You can access the endpoint URL directly from the internet.
+|
 
 | Manage with API manager
 a| Enable this setting to manage the endpoint with API Manager. To use this functionality, you must create an HTTP API in API Manager in the same environment and organization as the endpoint.
@@ -58,81 +57,43 @@ When you create this API in API Manager:
 * Copy the API instance ID and paste it into the *API Auto discovery id* field in the Partner Manager *New endpoint: Receive from Partners* window.
 
 NOTE: Using this feature requires an API Manager license.
-| No
+|
 
 |URL
 a|HTTP or HTTPS address where you receive outbound source messages from backend applications or inbound B2B messages from your partners. Partner Manager automatically generates this ID after the first message flow that uses the endpoint is deployed.
-|Yes
+|x
 
 |Response timeout (in milliseconds)
 |Response timeout period in milliseconds. The default is `15000`.
-|Yes
+|x
 
 |Authentication type
 a|Type of authentication method used to protect the HTTP receive service. This field is disabled when you manage the endpoint with API Manager.
 
-|Yes
+|x
 
 |Basic authentication
 a|User name and password that protects the HTTP listener.
 
 After saving your new or reconfigured endpoint, you cannot subsequently retrieve or modify the password.
 
-The backend applications that send JSON or XML payloads to the HTTP or HTTPS receive endpoint must pass the credentials in the HTTP request header.
-|Yes
+The backend applications that send payloads to the HTTP or HTTPS receive endpoint must pass the credentials in the HTTP request header.
+|x
 
 |API Key
 a|API key for the HTTP listener.
 
 After selecting *API Key* in the *Authentication type* list, specify the HTTP header name and API key to protect the HTTP listener. After saving your new or reconfigured endpoint, you cannot subsequently retrieve or modify the API key.
 
-The backend applications that send JSON or XML payloads to the HTTP receive endpoint must pass the API key in the HTTP request with the configured HTTP header name.
-|Yes
+The backend applications that send payloads to the HTTP receive endpoint must pass the API key in the HTTP request with the configured HTTP header name.
+|x
 |===
 
-== HTTP or HTTPS Receive Endpoint URL
+== Next Step
 
-You can deploy an HTTP or HTTPS receive endpoint on a public port, on a private port, or on-premises.
-
-=== Deploy to CloudHub on a Public Port
-
-When an HTTP or HTTPS receive endpoint is deployed with the private port configuration enabled, the endpoint application is deployed on the public HTTPS port (`8082`), with the traffic routed through the xref:runtime-manager::dedicated-load-balancer-tutorial#shared-load-balancers [shared load balancer]. The value in the URL field is automatically generated when you deploy a message flow that uses this endpoint to CloudHub.
-
-You can view this URL by selecting the receiving endpoint from your deployed message flow or by clicking the endpoint name from the endpoints list. You can share this URL with the partners that send HTTP or HTTPS messages to this endpoint.
-
-If your organization uses CloudHub VPC without a dedicated load balancer (DLB), your organization’s platform administrator can configure the necessary xref:runtime-manager::vpc-firewall-rules-concept.adoc[VPC firewall rules] to allow specific IP addresses of your
-partners to access the endpoint.
-
-=== Deploy to CloudHub on a Private Port
-
-When an HTTP or HTTPS receive endpoint is deployed with the private port configuration enabled, the endpoint is deployed to the private HTTPS port (8092) and the internal URL of the endpoint appears on the the *Message Flow* or *Endpoint* detail page.
-
-You can also set CloudHub to automatically deploy newly created HTTP, HTTPS, and AS2 endpoints to a private port via the xref:cloudhub-deploy-options.adoc[CloudHub Deployment Settings].
-
-After deploying the first message flow using the HTTP or HTTPS receive endpoint configuration, you can view the runtime application name for the endpoint from the *Endpoint* details page or from the *Receive* section of your message flow. To configure xref:runtime-manager::lb-mapping-rules.adoc[URL mapping rules] in the xref:runtime-manager::cloudhub-dedicated-load-balancer.adoc[DLB] to forward HTTP or HTTPS messages received from your backend applications to outbound B2B message flows, provide the application name to your organization’s platform administrator.
-
-If your backend processes consuming the HTTP or HTTPS receive endpoints are also running inside the same VPC, they can call the internal URL directly.
-
-If your backend processes consuming the endpoint are in a different network, your organization’s platform administrator xref:runtime-manager::lb-whitelists.adoc[add your partner's IP addresses to a list of allowed addresses] in the DLB settings to allow specific IP addresses to access the endpoint.
-
-The external URL that you can share with your partners is `+https://{DLB-domain}/{Input-path}/{base-path}/{message-type}+`.
-
-For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, the runtime application name is `b2b-inbound-http-ognq`, and the base path you configured in the HTTPS receive endpoint is `send2`, then your administrator adds a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC:
-
-image::URL-mapping-rules-http.png[URL mapping rules for HTTPS in the DLB settings]
-
-Using the following values, depending on your environment:
-
-* The external HTTPS receive endpoint URL is `+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/+`.
-* Your backend applications send the application JSON and XML messages for your outbound message flows from `+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/{message-type}+`.
-* If `enterprise-ob-po-ack` is the message type, your backend applications post the HTTPS requests to the URL
-`+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/enterprise-ob-po-ack+`.
-
-=== Deploy to an On-Premises Mule Instance
-
-If you are deploying to an on-premises Mule instance with a firewall and load balancer, work with your hosting or network security team to obtain the externally accessible DNS or name of the host where the Mule instance is running, and replace `{runtime_host}` in the URL with the DNS name of your host. For example, if your DNS host name is `b2b.mycompany.com`, the receiver URL is `+https://b2b.mycompany.com/base-path/+`, and your backend applications post the HTTPS request to `+https://b2b.mycompany.com/base-path/{message-type}+`.
+After you create an HTTP or HTTPS receive endpoint, you can deploy it, as described in xref:deploying-receive-endpoints.adoc[Deploying AS2, HTTP, and HTTPS Receive Endpoints].
 
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:create-endpoint.adoc[Creating Endpoints]

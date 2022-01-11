@@ -78,4 +78,4 @@ The application returns the transformed EDIFACT transaction.
 == See Also
 
 * xref:https://anypoint.mulesoft.com/exchange/org.mule.examples/b2b-demo-EDIFACT-transform/[Transform XML to Outbound EDIFACT 850 Purchase Orders Example Project on Exchange]
-* xref:create-outbound-message-flow.adoc[Create and Configure Outbound Message Flows]
+* xref:create-outbound-message-flow.adoc[Create Outbound Message Flows]

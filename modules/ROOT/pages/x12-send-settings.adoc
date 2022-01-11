@@ -146,6 +146,6 @@ Possible values include:
 
 == See Also
 
-* xref:create-outbound-message-flow.adoc[Creating and Configuring Outbound Message Flows]
+* xref:create-outbound-message-flow.adoc[Creating Outbound Message Flows]
 * xref:create-partner.adoc[Creating Partners]
 * xref:modify-partner-settings.adoc[Modify Partner Settings]

@@ -78,4 +78,4 @@ The application returns the transformed application message (JSON or XML) accord
 
 == See Also
 
-* xref:configure-message-flows.adoc[Create and Configure Inbound Message Flows]
+* xref:configure-message-flows.adoc[Create Inbound Message Flows]

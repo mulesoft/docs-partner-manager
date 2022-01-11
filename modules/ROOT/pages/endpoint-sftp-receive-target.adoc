@@ -1,84 +1,88 @@
 = SFTP Receive Endpoint Settings
 
-SFTP receive endpoint settings determine where to receive messages in the following contexts:
+SFTP receive endpoints configure where to receive B2B messages transmitted over SFTP. There are two types of SFTP receive endpoints:
 
-* Receive from partners
+* Receive from Partners
 +
-Source endpoint in an inbound message flow that receives B2B EDI messages from partners either directly or via third-party connections
+Source endpoint in an inbound message flow that receives B2B messages from partners either directly or via third-party connections.
 +
-* Source at host
+A host, partner, or third-party connection can own SFTP Receive from Partners endpoints.
 +
-Source endpoint in an outbound message flow that receives JSON and XML messages from the backend applications
+* Source at Host
++
+Source endpoint in an outbound message flow that receives messages from the backend applications.
++
+Only a host can own SFTP Source at Host endpoints.
 
-A host, partner, or third-party connection can own SFTP receive endpoints.
-
-Create SFTP receive endpoints by configuring these settings on the host or Partner page:
+Create SFTP receive endpoints by configuring these settings on the *<host>* or *Partner* page:
 
 [%header%autowidth.spread]
 |===
 |Name |Description | Required
 | Endpoint Name
 | Automatically generated name used to identify the endpoint, which you can subsequently modify manually.
-| Yes
+| x
 
 | Owner
 | Partner or host that owns the endpoint.
-| Yes
+| x
 
 | Protocol
-| Protocol selected in the *Protocol* field of the *New endpoint*. The value in this field cannot be modified.
-| Yes
+| Protocol that the endpoint supports.
+| x
 
 | Description
 | User-supplied value that describes the purpose of the endpoint.
-| No
+|
 
 | Host
 | SFTP server host, such as `sftp.mulesoft.com`, `localhost`, or `192.168.0.1`. The host must be accessible from your Mule environment.
-| Yes
+| x
 
 | Port
 | Port number of the SFTP server.
-| Yes
+| x
 
 | Username
 | Username for the SFTP server.
-| Yes, if the server is authenticated.
+| x (if the server is authenticated)
 
 | Password
 | Password for the SFTP server.
-| Yes, if the server is authenticated.
+| x (if the server is authenticated)
 
 | Source path
-| Path on the SFTP server to which your trading partner sends the inbound files.
-| Yes
+| Path on the SFTP server to which your partner sends the inbound files.
+| x
 
 | Polling Frequency
-| Frequency in which the server checks the source path for new files. The value in this field is `1 minute` by default.
-| Yes
+| Frequency at which the server checks the source path for new files. The default value is `1 minute`.
+| x
 
 | Size check wait time
-| Wait time, in seconds, between size checks to determine if a file is ready for processing. The value in this field is `1 second` by default. This allows a file write to complete before processing.
-
+| Wait time, in seconds, between size checks to determine if a file is ready for processing. The default value is `1 second`. This allows a file write to complete before processing.
+{sp} +
+{sp} +
 Mule performs two size checks by waiting the amount of time specified in the `Size check wait time` field. If both checks return the same value, the file is ready to process.
-
+{sp} +
+{sp} +
 To disable this feature, specify a negative number or omit the value.
-| Yes
+|x
 
 | Supported Format Types
-|Indicates whether the endpoint supports EDI messages (EDIFACT, X12) or non-EDI messages (JSON, XML).
-| Yes
+| Indicates whether the endpoint supports EDI messages (EDIFACT, X12) or non-EDI messages (JSON, XML).
+|x
 
 | File name pattern
-| xref:file-name-pattern.adoc[File name pattern] required by your partner.
-| No
+| Filename pattern required by your partner.
+|
 
 | Archival Path
 | Specify an SFTP server path at which to store a copy of the file that was obtained from `source path`.
-| No
+|
 |===
 
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:create-endpoint.adoc[Creating Endpoints]

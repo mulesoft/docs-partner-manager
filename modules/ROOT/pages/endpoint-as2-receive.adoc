@@ -1,40 +1,57 @@
 = AS2 Receive Endpoint Settings
 
-AS2 receive endpoint settings configure the source endpoint in an inbound message flow that receives B2B messages from partners directly or via third-party connections. One AS2 endpoint can receive data from multiple partners, third-party connections, or both.
+AS2 receive endpoint settings determine where to receive B2B messages received over AS2.
 
-Only a host can own AS2 receive endpoints. Use a host-owned AS2 receive endpoint for an inbound message flow that uses a third-party connection.
+An AS2 Receive from Partners endpoint (the only type of AS2 receive endpoint) acts as the source endpoint in an inbound message flow that receives B2B messages from partners either directly or via third-party connections.
+One AS2 endpoint can receive data from multiple partners, multiple third-party connections, or both.
 
-NOTE: Each AS2 receive endpoint configuration gets deployed as an individual Mule application in the runtime. Consider reusing an existing AS2 receive endpoint configuration across message flows.
+Only a host can own AS2 Receive from Partners endpoints.
 
-Create AS2 receive endpoints by configuring these settings on the Host page:
+IMPORTANT: Each AS2 receive endpoint configuration gets deployed as an individual Mule application in the runtime. Consider reusing an existing AS2 receive endpoint configuration across message flows.
+
+Create an AS2 Receive from Partners endpoint by configuring these settings on the *<host>* page:
 
 [%header%autowidth.spread]
 |===
 | Setting | Description | Required
 
 |Protocol
-|`AS2`
-|Yes
+|Protocol that the endpoint supports.
+|x
 
 |Owner
 |Host that owns the endpoint.
-|Yes
+|x
 
 |Endpoint name
-|Automatically generated name used to identify the endpoint, which you can subsequently modify manually.
-|Yes
+|Automatically generated name used to identify the endpoint, which you can modify manually.
+|x
 
 |Description
 |User-supplied value that describes the purpose of the endpoint.
-|No
+|
 
 |Private port (when deploying to VPC)
 a|
 * When enabled, the AS2 receive endpoint application deploys to the private port `8092` in your xref:runtime-manager::virtual-private-cloud.adoc[Anypoint VPC]. You can manage the access control to the endpoint via the Anypoint VPC and dedicated load balancer settings.
 * When disabled, the AS2 receive endpoint application deploys to the public port `8082` by default. You can access the endpoint URL directly over the internet.
-+
+
+{sp}
+{sp}
 This configuration applies only to Anypoint VPC deployments from Partner Manager.
-|No
+|
+|
+
+HTTPS
+a|Indicates whether Partner Manager deploys the AS2 receive endpoint as an HTTPS or HTTP listener:
+
+* If enabled (default), Partner Manager deploys the AS2 receive endpoint as an HTTPS listener.
+* If disabled, Partner Manager deploys the AS2 receive endpoint as an HTTP listener.
+
+{sp}
+{sp}
+This field applies only when deploying to CloudHub. When deploying to on-premises Mule instances, Partner Manager always deploys the AS2 receive endpoint as an HTTP listener.
+| x
 
 | HTTPS
 a| Indicates whether Partner Manager deploys the AS2 receive endpoint as an HTTPS listener service:
@@ -44,7 +61,7 @@ a| Indicates whether Partner Manager deploys the AS2 receive endpoint as an HTTP
 
 This field applies only when deploying to CloudHub. When deploying to on-premises Mule runtimes, Partner Manager always deploys the AS2 receive endpoint as an HTTP listener.
 
-| Yes
+| x
 
 |Enforce security level
 a|Indicates whether Partner Manager rejects incoming AS2 messages that aren't signed, encrypted, or both. When Partner Manager rejects a message, it returns a negative Message Disposition Notification (MDN) to the sender.
@@ -53,7 +70,7 @@ Allowed values:
 
 * Signed & Encrypted (default)
 +
-Rejects incoming messages that aren't both signed and encrypted.
+(Default) Rejects incoming messages that aren't both signed and encrypted.
 * Signed
 +
 Rejects incoming messages that aren't signed.
@@ -65,50 +82,20 @@ Rejects incoming messages that aren't encrypted.
 Accepts messages that aren't signed or encrypted.
 
 When deploying an AS2 endpoint to CloudHub using the HTTP protocol, you cannot change the default value (`Signed & Encrypted`).
-
-| Yes
+| x
 
 |<Host> keystore
-|Host xref:create-keystore.adoc[keystore] files in your environment that store your organization's public certificate and private key.
-|Yes
+|Host keystore files in your environment that store your organization's public certificate and private key.
+|x
 |===
 
-== AS2 Receive Endpoint URL
+== Next Step
 
-You can deploy an AS2 receive endpoint on a public port, on a private port, or on-premises.
-
-=== Deploy to CloudHub on a Public Port
-
-When an AS2 receive endpoint is deployed with the private port configuration enabled, the endpoint application is deployed on the public HTTPS port (`8082`), with the traffic routed through the xref:runtime-manager::dedicated-load-balancer-tutorial#shared-load-balancers [shared load balancer]. The value in the URL field is automatically generated when you deploy a message flow to CloudHub that uses this endpoint.
-
-You can view this URL by either selecting the receiving endpoint from your deployed message flow or clicking the endpoint name from the endpoints list. You can share this URL with the partners that send AS2 messages to this endpoint.
-
-If your organization uses Anypoint VPC without a dedicated load balancer (DLB), your organization’s platform administrator can configure the necessary xref:runtime-manager::vpc-firewall-rules-concept.adoc[VPC firewall rules] to allow specific partner or third-party connection IP addresses to access the endpoint.
-
-=== Deploy to CloudHub on a Private Port
-
-When an AS2 receive endpoint is deployed with the private port configuration enabled, the endpoint is deployed to the private HTTPS port `8092`. The internal URL of the endpoint appears on the *Message Flow* or *Endpoint* detail page.
-
-You can also set CloudHub to automatically deploy newly created HTTP, HTTPS, and AS2 endpoints to a private port via the xref:cloudhub-deploy-options.adoc[CloudHub deployment settings].
-
-After deploying the first message flow using the AS2 receive endpoint configuration, you can view the runtime application name for the endpoint from the *Endpoint* details page or the *Receive* section of your message flow. To configure xref:runtime-manager::lb-mapping-rules.adoc[URL mapping rules] in the xref:runtime-manager::cloudhub-dedicated-load-balancer.adoc[DLB] to forward AS2 messages received from your partners to the application, provide the application name to your organization’s platform administrator.
-
-Your organization’s platform administrator can also xref:runtime-manager::lb-whitelists.adoc[add your partner's IP addresses to a list of allowed addresses] in the DLB settings to allow specific IP addresses to access the endpoint.
-
-The external URL that you can share with your partners is `+https://{DLB-domain}/{Input-path}/receive-as2+`.
-
-For example, if the name of your DLB domain is `mythical.lb.anypointdns.net` and the runtime application name is `b2b-inbound-as2-zap3`, then your administrator adds a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC:
-
-image::URL-mapping-rules-http.png[URL mapping rules for AS2 in the DLB settings]
-
-With these configurations, the external AS2 endpoint URL is `+https://mythical.lb.anypointdns.net/as2/mythical/receive-as2/+`.
-
-=== Deploy to an On-Premises Mule Instance
-
-To deploy to an on-premises Mule instance that uses a firewall and load balancer, work with your organization's hosting or network security team to obtain the externally accessible DNS or the name of the instance host. Replace the `{runtime_host}` value in the URL with the specific value for your organization. For example, if the DNS host name is `b2b.mycompany.com`, then the AS2 receiver URL is `+https://b2b.mycompany.com/receive-as2/+`.
+After you create an AS2 receive endpoint, you can deploy it, as described in xref:deploying-receive-endpoints.adoc[Deploying AS2, HTTP, and HTTPS Receive Endpoints].
 
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Create and Configure Endpoints]
+* xref:create-endpoint.adoc[Creating Endpoints]
 * xref:as2-endpoints-algorithms.adoc[AS2 Signature and Encryption Algorithms]
+* xref:create-keystore.adoc[Creating AS2 Host Keystores]

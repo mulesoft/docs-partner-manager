@@ -55,5 +55,5 @@ For assistance with sizing, contact your MuleSoft account representative.
 == See Also
 
 * xref:message-flows.adoc[Partner Manager Message Flows]
-* xref:configure-message-flows.adoc[Create and Configure Inbound Message Flows]
-* xref:create-outbound-message-flow.adoc[Create and Configure Outbound Message Flows]
+* xref:configure-message-flows.adoc[Create Inbound Message Flows]
+* xref:create-outbound-message-flow.adoc[Create Outbound Message Flows]
