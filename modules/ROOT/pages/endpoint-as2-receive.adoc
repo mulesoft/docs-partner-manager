@@ -53,12 +53,22 @@ a|Indicates whether Partner Manager deploys the AS2 receive endpoint as an HTTPS
 This field applies only when deploying to CloudHub. When deploying to on-premises Mule instances, Partner Manager always deploys the AS2 receive endpoint as an HTTP listener.
 | x
 
+| HTTPS
+a| Indicates whether Partner Manager deploys the AS2 receive endpoint as an HTTPS listener service:
+
+* If enabled (default), Partner Manager deploys the AS2 receive endpoint as an HTTPS listener service.
+* If disabled, Partner Manager deploys the AS2 receive endpoint as an HTTP listener.
+
+This field applies only when deploying to CloudHub. When deploying to on-premises Mule runtimes, Partner Manager always deploys the AS2 receive endpoint as an HTTP listener.
+
+| Yes
+
 |Enforce security level
 a|Indicates whether Partner Manager rejects incoming AS2 messages that aren't signed, encrypted, or both. When Partner Manager rejects a message, it returns a negative Message Disposition Notification (MDN) to the sender.
 
 Allowed values:
 
-* Signed & Encrypted
+* Signed & Encrypted (default)
 +
 (Default) Rejects incoming messages that aren't both signed and encrypted.
 * Signed
