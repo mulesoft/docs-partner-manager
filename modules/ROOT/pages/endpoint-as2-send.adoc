@@ -112,7 +112,6 @@ Requires backend applications to use the username and password provided by your 
 +
 Enter this information in the *Username* and *Password* fields.
 |
-
 |===
 
 == See Also
