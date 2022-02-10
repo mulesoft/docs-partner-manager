@@ -41,12 +41,17 @@ To have CloudHub automatically restart your application when the monitoring syst
 
 Configure the following vCore settings for the sandbox and production environments:
 
-* *Each B2B endpoint (inbound, outbound, and ack)* +
-Each unique trading partner and internal endpoint is deployed to isolated workers, requiring a minimum of *0.1 vCore* each.
-* *B2B DocumentProcessingService* +
-This core component of the Partner Manager workflow requires a minimum of *1 vCore*.
-* *B2B APIReplicationService* +
-Core component of the Partner Manager workflow that requires a minimum of *1 vCore*.
+* *Each B2B endpoint (inbound, outbound, and ack)*
++
+Partner Manager deploys a generic Mule app to the runtime for each endpoint protocol and direction (receive or send) combination. Each runtime app requires a minimum of 0.1 vCore.
++
+* *B2B DocumentProcessingService*
++
+This core component of the Partner Manager workflow requires a minimum of 0.2 vCore.
++
+* *B2B APIReplicationService*
++
+This core component of the Partner Manager workflow requires a minimum of 0.2 vCore.
 
 To have CloudHub automatically deploy newly created HTTP, HTTPS, and AS2 endpoints to a private port, select the *Deploy HTTP/AS2 apps to private port* checkbox.
 
