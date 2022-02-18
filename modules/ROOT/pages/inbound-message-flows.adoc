@@ -6,37 +6,41 @@ The following diagram shows the components of an inbound message flow:
 
 image::pm-inbound-message-flow.png[Inbound message flow]
 
-|===
-|Setting |Description |Supported Formats or Protocols
+<1> *Receive from Partners endpoint*
++
+Endpoint at which a host receives transmissions from a partners. Support protocols are:
 
-a| <1> Receive from Partners endpoint
-| Endpoint at which a host receives transmissions from a partner a|
-* AS2
-* FTP
-* HTTP
-* HTTPS
-* SFTP
+** AS2
+** FTP
+** HTTP
+** HTTPS
+** SFTP
 
-a| <2> Receive from Partners message type |Message type of the received message payload a|
-* EDIFACT
-* JSON
-* X12
-* XML
+<2> *Receive from Partners message type*
++
+Message type of the received message payload. Supported protocols are:
 
-a| <3> DataWeave Map |DataWeave map used to transform the source message type to the target message type a| N/A
+** EDIFACT
+** JSON
+** X12
+** XML
+<3> *Dataweave Map*
++
+DataWeave map used to transform the source message type to the target message type
+<4> *Target at Host message type*
++
+Format into which the DataWeave map transforms received messages. Supported protocols are:
 
-a| <4> Target at Host |Format into which the DataWeave map transforms received messages a|
-* JSON
-* XML
+** JSON
+** XML
+<5> *Target at Host endpoint*
++
+Endpoint to which the transformed message is sent (typically, a process API). Supported protocols are:
 
-a| <5> Target at Host
-endpoint | Endpoint to which the transformed message is sent (typically, a process API)
-a|
-* FTP
-* HTTP
-* HTTPS
-* SFTP
-|===
+** FTP
+** HTTP
+** HTTPS
+** SFTP
 
 == See Also
 
