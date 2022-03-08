@@ -8,16 +8,18 @@ NOTE: The payload storage API must be publicly accessible for users to be able t
 
 == Download and Deploy the Payload Storage API
 
-Before you create your first trading partner and message flow, you must configure your payload storage API within the host organization in Partner Manager.
+Before you create your first partner and message flow, you must configure your payload storage API within the host organization in Partner Manager:
 
 . Access and download the following APIs from Anypoint Exchange:
-+
 * https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-api[Partner Manager Content Storage API]
 +
-* https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-service-s3[Partner Manager Content Storage API - S3 Template] (sample implementation template)
-
-. xref:general::api-led-develop.adoc[Implement the API] to connect with your choice of storage location (for example, a database, Amazon S3, or File System).
-
+RAML specification for the payload storage API, which includes the URI parameters and record ID (contentRecordId) that must be returned from the API implementation's HTTP response header
++
+* https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-service-s3[Partner Manager Content Storage API - S3 Template]
++
+Sample template for creating the payload storage API using Amazon S3
++
+. xref:general::api-led-develop.adoc[Implement the API] to connect with your choice of storage location; for example, a database, Amazon S3, or filesystem.
 . xref:runtime-manager::deployment-strategies.adoc[Deploy the API] on a runtime that can access the storage solution.
 
 . Make a note of the API URL and configuration values:
@@ -29,10 +31,11 @@ Before you create your first trading partner and message flow, you must configur
  ** Basic
  ** Client Credentials
  ** OAuth Token
-* Certificate (.PEM format) and connection types
+* Certificate (`.PEM` format) and connection types
 +
 You’ll need this information when you associate Anypoint Partner Manager with your payload storage API.
 Your payload storage API must be accessible over the internet via HTTPS. Ensure that the appropriate authentication mechanisms are implemented to enable access over HTTPS.
+
 
 == Add the Payload Storage API to the Host Profile
 
