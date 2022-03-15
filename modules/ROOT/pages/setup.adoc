@@ -8,7 +8,7 @@ To set up Partner Manager, you must have:
 
 * An Anypoint Platform user account with the Anypoint Partner Manager entitlement.
 * The Partner Manager Administrator role, which assigns permission levels for all users who need access to B2B message flows in their environments (production or  sandbox).
-* The required Mule vCore capacity to manage your B2B transaction workload needs. 
+* The required Mule vCore capacity to manage your B2B transaction workload needs.
 * Storage for the B2B transmission payloads you send or receive, such as a database, Amazon S3, Azure Blob Storage, and so on.
 * Licenses for the AS2 or X12 connectors used in your B2B message flows.
 * Anypoint Studio 7.4 or later, to create DataWeave maps for EDI data transformation
@@ -28,7 +28,7 @@ Has full permissions
 ** Can create, modify, and delete partners or message flow configurations
 ** Can view host partner configurations
 ** Cannot view transaction activity
-* *Manage Activity* + 
+* *Manage Activity* +
 ** Can view and manage transaction activity
 ** Cannot view or modify either partner or message flow configurations
 * *Manage Host* +
@@ -38,6 +38,15 @@ This also applies to Partner Manager settings that are under Access Management (
 * *View Activity* +
 ** View-only access to transaction activity
 ** Cannot view or modify either partner or message flow configurations
+
+== Change the Payload Storage API Configuration
+
+To change the payload storage API configuration, follow these steps:
+
+. Click *Edit* in the Payload Storage section in the Host partner page.
+. Modify the field values you want to change.
+. Click *Save*.
+. Redeploy an existing or deploy a new message flow to implement the changes.
 
 == See Also
 
