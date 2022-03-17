@@ -50,5 +50,5 @@ For example, if the base URL of the HTTP or HTTPS Receive from Partners endpoint
 == See Also
 
 * xref:inbound-message-flows.adoc[Inbound Message Flows]
-* xref:create-inbound-message-flow.adoc[Create Inbound Message Fllows]
+* xref:create-inbound-message-flow.adoc[Create Inbound Message Flows]
 * xref:activity-tracking.adoc[Track Transmission Activity]
