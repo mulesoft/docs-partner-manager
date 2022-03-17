@@ -47,6 +47,7 @@ None
 | Send Http Reference
 
 | Name of global HTTP request connector configuration for partner organization’s endpoint.
+|===
 
 Valid values::
 String

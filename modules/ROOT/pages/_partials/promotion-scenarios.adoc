@@ -25,7 +25,7 @@ Checkbox
 .2+.^|*P1~E1~* has previously been promoted to *P1~E2~*
 |Selected
 |Either selected or not selected
-|If *P1~E1~* contains any new cerfificates, they will be copied to *P1~E2~*
+|If *P1~E1~* contains any new certificates, they will be copied to *P1~E2~*
 
 |Not Selected
 |Either selected or not selected

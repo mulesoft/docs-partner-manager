@@ -90,7 +90,7 @@ image::transmission-tracking-walk-5.png[]
 |===
 |*Field* |*Value*
 |From-party identifier|`#[xpath3(''/PurchaseOrder/Address/Name'')`]
-|To-party identifier|`My Organisation`
+|To-party identifier|`My Organization`
 |Content Reference (Set only if you have configured the File Storage type on the Partner Manager Connector config)|`#[payload]`
 |Filename|`#[flowVars.originalFilename]`
 |Format Type|`XML`
