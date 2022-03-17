@@ -46,7 +46,7 @@ To change the payload storage API configuration, follow these steps:
 . Click *Edit* in the Payload Storage section in the Host partner page.
 . Modify the field values you want to change.
 . Click *Save*.
-. Redeploy an existing or deploy a new message flow to implement the changes.
+. Redeploy an existing message flow or deploy a new message flow to implement the changes.
 
 == See Also
 
