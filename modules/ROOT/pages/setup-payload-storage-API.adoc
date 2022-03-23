@@ -2,7 +2,7 @@
 
 Anypoint Partner Manager enables you to configure your own storage solution (for example, a database, Amazon S3, or Azure Blob Storage) to store transmission content.
 
-To use your own storage solution, you must implement an API that provides Anypoint Partner Manager with a standardized way to connect to your storage.
+To use your own storage solution, you must implement an API that provides Partner Manager with a standardized way to connect to your storage.
 
 NOTE: The payload storage API must be publicly accessible for users to be able to view payload from Partner Manager’s Activity page.
 
@@ -36,7 +36,6 @@ Sample template for creating the payload storage API using Amazon S3
 You’ll need this information when you associate Anypoint Partner Manager with your payload storage API.
 Your payload storage API must be accessible over the internet via HTTPS. Ensure that the appropriate authentication mechanisms are implemented to enable access over HTTPS.
 
-
 == Add the Payload Storage API to the Host Profile
 
 . In Anypoint Platform, open Anypoint Partner Manager.
@@ -56,6 +55,15 @@ This URL does the following:
 +
 . Optionally, if you want to view (or allow your users to view) the raw payloads of the files you receive or send, select *Allow users to download payloads*.
 . Click *Save*.
+
+== Change the Payload Storage API Configuration
+
+To change the payload storage API configuration:
+
+. In the *Payload storage* section of the *Host* page, click *Edit*.
+. Modify the field values that require changing.
+. Click *Save*.
+. To have the changes take effect, either redeploy an existing message flow or deploy a new message flow.
 
 == See Also
 
