@@ -20,8 +20,9 @@ The following table shows the property placeholders that Partner Manager support
 |${DD} |Date: for example, `14`
 |${HH} |Hour: for example, `15`
 |${mm} |Minute: for example, `25`
-|${sss} |Second: for example, `46`
-|${timeInMillis} |Milliseconds: for example, `345`
+|${SS} |Seconds: for example, `46`
+|${sss} |Milliseconds: for example, `345`
+|${timeInMillis} |Current time in milliseconds: for example, `1648805073834`
 |${ICN} |Interchange Control Number
 |${GCN} |Group Control Number
 |${BusKey} |Primary Business Key value: for example, `PO12345`
