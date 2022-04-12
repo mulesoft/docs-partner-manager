@@ -41,6 +41,9 @@ Use the following settings to configure the general validation rules for outboun
 |Expect CONTRL for each transmission sent to <partner>
 |When enabled, sets UNB-09 to `1`, indicating that a technical acknowledgment is expected in the partner's response
 |Disabled
+|Enforce code set validations
+|If selected, enforces X12 code set validations, as defined in the X12 schemas.
+|Disabled
 |===
 
 [[global-control-numbers]]

@@ -1,78 +1,42 @@
 = Track Transmission Activity
 
-B2B transactions often communicate sensitive contractual obligations between companies. You can use Anypoint Partner Manager to track transmissions and to store both transmission content and metadata.
-
-Anypoint Partner Manager enables you to monitor trading partner transmission activity. _Activity_ is the complete set of end-to-end events related to transmission metadata in processing a transmission. Use transmission metadata to troubleshoot issues.
-
-With activity tracking, you can:
-
-* Search for message metadata (such as partner name, message type, filename, control number, endpoint, or date received).
-* View and download the original payload related to the transmission to help you troubleshoot or keep records.
-* Review errors and acknowledgment payloads.
+B2B transactions often communicate sensitive contractual obligations between companies. You can use Anypoint Partner Manager to monitor transmissions, view message contents, and store both transmission content and metadata.
 
 == Track Message Flow Activity
 
 Select a message flow to view its transmission details and view and download the payload:
 
-. Open Anypoint Partner Manager.
 . In the navigation menu, select *Activity*.
-. Locate the message flow whose activity you want to track.
+. Search for the message flow.
 +
-Use the search box to find the transmission based on criteria such as:
+When you search for a message flow, you can filter the results based on the following criteria:
+
+* Message type: `Sent to partners` or `Received from partners`
+* Date sent or received
 +
-* Trading partner name
+You can filter for up to one week's worth of message at a time.
++
+* Acknowledgement status: `Overdue` or `Rejected`
+* Messaging processing status: `Delivered`, `Failed`, `Processing`, or `Received`
+* Partner name
+* Partner message type, such as `X12 - 850`
+* Host message type, such as `JSON host-purchase-order`
+. Select the transmission that matches your search criteria to review the summary information, which includes the following:
+
+* Transmission status (a green checkmark for success and a red exclamation point for failure)
+* Transmission ID
+* Date and time when the file was received or sent
+* Control number associated with the file (if available)
 * Message type
-* File name
-* Control number
-* Endpoint
-* Received date of the file +
-. You can then use the filters to find transmissions based on:
-* *Type* +
-Type of message transmission:
-** *Both directions*
-** *Sent to partners*
-** *Received from partners*
-* *From Date* +
-Filter for transmissions sent or received after this date.
-* *To Date* +
-Filter for transmissions sent or received up to and including this date.
-* *Ack Status* +
-Filter for transmissions based on their acknowledgment status:
-** *All*
-** *Overdue*
-** *Rejected* +
-* *Message Processing Status* +
-Filter for transmissions based on their message processing status:
-** *All*
-** *Delivered*
-** *Failed*
-** *Processing*
-** *Received*
-* *Partner name* +
-Filter for transmissions based on your partner's name. Only five partners appear in the *Partner name* list; however, you can enter characters in the search box to access partners that do not appear in the list.
-* *Partner message type* +
-Filter for transmissions based on the message type, such as `X12 - 850`. +
-* *Host message type* +
-Filter for transmissions based on the host message type, such as `JSON host-purchase-order`.
-. Select the transmission that matches your search criteria and review the summary information:
-+
-* The success or failure status of the transmission (indicated by either a checkmark for success or a circle with an exclamation point for failure)
-* The name of the received file
-* The control number associated with the file (if available)
-* The receiving endpoint
-* The received date and time of the file
-* The types of messages received (depending on the configured message flows)
-* The number of messages received in the file
-* Transmission flow +
-The *Transmission Flow* section of the summary information shows:
-* Success or failure of the transmission
+* Receiving or send endpoint
+* Name of the transmitted file
+
 * Acknowledgment status +
 If the configured outbound message flow expects an acknowledgment from the trading partner or if the configured inbound message flow returns an acknowledgment to the trading partner, then you can view the acknowledgment (997 and TA1) payloads in the transmission detail.
 +
 If you have not received an acknowledgment from your trading partner or if your trading partner sent a rejection acknowledgment, then you can review the acknowledgment status of outbound transactions.
 * Transformation and routing information
 +
-An exclamation point (!) appearing next to any of the rectangle boxes in the *Transmission Flow* section indicates an issue with the transmission.
 . Click *View Payload* to view and download the originally received payload.
 +
 You can examine the received payload to troubleshoot issues and find the issue location within the message flow.

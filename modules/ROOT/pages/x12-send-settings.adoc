@@ -58,8 +58,12 @@ a|If selected, any data elements with a length outside of the definition in the 
 |Enabled
 
 |Enforce conditional relationship validations
-|If selected, any missing conditional data elements will cause the generation of the X12 transaction to fail.
+|If selected, any missing conditional data elements cause the generation of the X12 transaction to fail.
 |Enabled
+
+|Enforce code set validations
+|If selected, Partner Manager enforces X12 code set validations, as defined in the X12 schemas.
+|Disabled
 |===
 
 [[authorization-settings]]
