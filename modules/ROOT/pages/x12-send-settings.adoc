@@ -12,7 +12,7 @@ To configure a partner's X12 send settings:
 * <<authorization-settings,Authorization settings>>
 * <<ta1-ack-settings,TA1 Acknowledgment settings>>
 * <<global-control-numbers,Global control numbers>>
-* <<character-set,Character set and separators>>
+* <<character-set,Character set & separators>>
 . Click *Save*.
 
 The values you configure in the partner's settings page are used by default for all X12 messages going to that partner.
@@ -116,7 +116,7 @@ To set the control number sequence value to a different number to maintain seque
 It can take up to five minutes to apply the change at runtime.
 
 [[character-set]]
-== Character Set and Separators
+== Character Set & Separators
 
 Use the following settings to set the character encoding and delimiters for the generated X12 payload:
 
@@ -125,10 +125,12 @@ Use the following settings to set the character encoding and delimiters for the 
 |Setting |Description | Default Value
 
 |Character set
-a|Characters allowed in string data.
+a|Set of characters allowed in string data.
+|EXTENDED
 
 |Character encoding
 a|Character encoding for messages.
+|UTF8
 
 |Segment terminator
 a|Segment terminator character.
@@ -143,9 +145,13 @@ a|Component element separator character.
 | `>`
 
 |Line ending between segments
-a|Line ending to add between segments. This enables you to add line endings between segments to improve the readability of the output message text.
+a|Character to use for line endings between segments to improve the readability of the output message text.
+|CRLF
 
-Possible values include:
+|Use segment line ending in last line
+|If `Yes`, Partner Manager applies the segment line ending character to the last segment in the payload.
+|No
+
 |===
 
 == See Also
