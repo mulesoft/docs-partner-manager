@@ -14,18 +14,18 @@ When you search for a message flow, you can filter the results based on the foll
 * Message type: `Sent to partners` or `Received from partners`
 * Date sent or received
 +
-You can filter for up to one week's worth of messages at a time.
+You can retrieve up to one week's worth of messages at a time.
 +
 * Acknowledgement status: `Overdue` or `Rejected`
 * Messaging processing status: `Delivered`, `Failed`, `Processing`, or `Received`
 * Partner name
 * Partner message type, such as `X12 - 850`
 * Host message type, such as `JSON host-purchase-order`
-. Select the transmission to review the summary information and message flow.
+. Select the transmission to review the summary information for the transmission and its message flow.
 
-== View Details for an Inbound Message
+== View Details for an Inbound Transmission
 
-The summary information for an inbound transmission includes the following:
+The *Summary* section for an inbound transmission includes the following information:
 
 * Transmission status (a green checkmark for success and a red exclamation point for failure)
 * Transmission ID
@@ -36,13 +36,37 @@ The summary information for an inbound transmission includes the following:
 * Message type
 * Number of received messages in the file
 
-Do any of the following to xxx the message contents:
+Take any of the following actions to view and download additional information about the inbound transmission:
 
-To view the message contents, click *View Payload* and optionally specify a wrap character in the *Wrap at* field.
+|===
+|Action |Steps
 
-To download the message contents as an EDI file, click *View Payload* and then click *Download*.
+|View and download the payload received from the partner
+a|
+. In the *Transmission Flow* section, click *View Payload*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+| View and download the MDN sent to the partner
+a|
+. In the *Transmission Flow* section, click *View MDN*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+| View and download the CNTRL sent to the partner
+a|
+. In the *Transmission Flow* section, click *View CONTRL*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+| View and download the payload sent to the backend
+a|
+. In the message flow diagram, expand the *Source* section.
+. Click *View Payload*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+|===
 
+To view the message flow for the transmission, click the link in the *Processed message through message flows* field. From there, you can view information about the receiving endpoint, DataWeave map, and target message type (at the backend) in the inbound message flow.
 
+*Vijay*: what things can the user do here that are directly related to analyzing the incoming message? Since this takes a user to the Message Flow page, there are many other things user can do that won't get documented in this topic. Is what I have above correct?
 
 == View Details for an Outbound Transmission
 
@@ -56,8 +80,45 @@ The summary information for an outbound transmission includes the following:
 * Date and time when the file was received
 * Name of the transmitted file
 
+Take any of the following actions to view and download additional information about the outbound transmission:
 
+|===
+|Action |Steps
 
+|View information about the endpoint where the host received the transmission from the backend | In the *Summary* section, click the link in the *Endpoint* field.
+|View and download the transmission metadata
+a|
+. In the *Summary* section, click the link in the *File* field.
+. Specify a wrap character, if needed.
+. Click *Download*.
+| View and download the payload received from the backend
+a|
+. In the message flow diagram, expand the *Source* section.
+. Click *View Payload*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+| View and download the payload sent to the partner
+a|
+. In the message flow diagram, expand the *Sent to* section.
+. Click *View payload*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+| View and download the MDN sent to the partner
+a|
+. In the message flow diagram, expand the *Sent to* section.
+. Click *View payload*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+|View the CONTRL message sent to the partner, if it exists
+a|
+. In the message flow diagram, expand the *Sent to* section.
+. . Click Click *View payload*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+
+|===
+
+From the message flow diagram, you can also view information about the source endpoint, DataWeave map, and message type.
 
 == See Also
 
