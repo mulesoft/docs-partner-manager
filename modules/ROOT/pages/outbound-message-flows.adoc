@@ -1,4 +1,4 @@
-== Outbound Message Flows
+= Outbound Message Flows
 
 An outbound message flow receives application messages from the backend, transforms the messages to the format your partner supports, and then forwards the messages to your partner.
 
