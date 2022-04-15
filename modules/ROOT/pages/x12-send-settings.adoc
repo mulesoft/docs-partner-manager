@@ -145,7 +145,23 @@ a|Component element separator character.
 | `>`
 
 |Line ending between segments
-a|Character to use for line endings between segments to improve the readability of the output message text.
+a|Character to use for line endings between segments to improve the readability of the output message text. Possible values include:
+
+* NONE
++
+Generates the EDIFACT payload as a single line with segments separated by this character
++
+* CR
++
+Carriage return
++
+* CRLF
++
+Carriage return and line feed
++
+* LF
++
+Line Feed
 |CRLF
 
 |Use segment line ending in last line

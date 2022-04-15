@@ -86,8 +86,24 @@ a|Character encoding used for messages.
 |Character that acts as an escape for characters used as separators.
 |?
 |Segment line ending
-|If `Yes`, Partner Manager applies the segment line ending character to the last segment in the payload.
-|No
+a|Character used for line endings between segments to improve the readability of the output message text. Possible values include:
+
+* NONE
++
+Generates the EDIFACT payload as a single line with segments separated by this character
++
+* CR
++
+Carriage return
++
+* CRLF
++
+Carriage return and line feed
++
+* LF
++
+Line Feed
+|CRLF
 |Test Indicator
 a|  Indicates if the EDIFACT transaction set is for testing or production.
 |Production *Vijay, is this still true? There is no default that shows up.*
