@@ -42,7 +42,7 @@ Use the following settings to configure the general validation rules for outboun
 |When enabled, sets UNB-09 to `1`, indicating that a technical acknowledgment is expected in the partner's response
 |Disabled
 |Enforce code set validations
-|If selected, enforces EDIFACT code set validations, as defined in the EDIFACT schemas.
+|If selected, Partner Manager enforces EDIFACT code set validations, as defined in the EDIFACT schemas.
 |Disabled
 |===
 
@@ -80,33 +80,17 @@ a|Character encoding used for messages.
 |Repetition separator character
 |*
 |Segment terminator
-|Character used to terminate segments.
+|Segment terminator character.
 |'
 |Release character
-|Release character
+|Character that acts as an escape for characters used as separators.
 |?
-|Line ending between segments
-a|
-Character used for line endings between segments to improve the readability of the output message text. Possible values include:
-
-* NONE
-+
-Generates the EDIFACT payload as a single line with segments separated by this character
-+
-* CR
-+
-Carriage return
-+
-* CRLF
-+
-Carriage return and line feed
-+
-* LF
-+
-Line Feed
+|Segment line ending
+|If `Yes`, Partner Manager applies the segment line ending character to the last segment in the payload.
+|No
 |Test Indicator
-a| Indicates whether this is a test or production message. *???*When you select *Test* from the drop-down, sets UNB-11 to `1`, which indicates that this is a test message.
-|Production *Still true???*
+a|  Indicates if the EDIFACT transaction set is for testing or production.
+|Production *Vijay, is this still true? There is no default that shows up.*
 |Use segment line ending in last line
 |If `Yes`, Partner Manager applies the segment line ending character to the last segment in the payload.
 |No

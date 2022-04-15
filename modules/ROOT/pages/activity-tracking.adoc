@@ -2,38 +2,38 @@
 
 B2B transactions often communicate sensitive contractual obligations between companies. You can use Anypoint Partner Manager to monitor transmissions, view message contents, and store both transmission content and metadata.
 
-== Locate a Message Flow
+== Locate a Transmission
 
-Select a message flow to view its transmission details and view and download the message contents:
+Select a transmission to view its details and view and download the message contents:
 
 . In the navigation menu, select *Activity*.
-. Search for the message flow.
+. Search for the transmission.
 +
-When you search for a message flow, you can filter the results based on the following criteria:
+When you search for the transission, you can filter the results based on the following criteria:
 
-* Message type: `Sent to partners` or `Received from partners`
+* Message type, such as `my-po-ack:ORD-9892330`
 * Date sent or received
 +
 You can retrieve up to one week's worth of messages at a time.
 +
-* Acknowledgement status: `Overdue` or `Rejected`
-* Messaging processing status: `Delivered`, `Failed`, `Processing`, or `Received`
+* Acknowledgement status, such as `Overdue`
+* Messaging processing status, such as `Received`
 * Partner name
 * Partner message type, such as `X12 - 850`
 * Host message type, such as `JSON host-purchase-order`
-. Select the transmission to review the summary information for the transmission and its message flow.
+. Select the transmission to review summary information about the transmission and its message flow.
 
 == View Details for an Inbound Transmission
 
 The *Summary* section for an inbound transmission includes the following information:
 
-* Transmission status (a green checkmark for success and a red exclamation point for failure)
+* Transmission status (a green checkmark for success or a red exclamation point for failure)
 * Transmission ID
 * Name of the transmitted file
 * Control number associated with the transmitted file, if available
-* Name of the receiving endpoint
+* Name of the receiving (Receive from Partners) endpoint
 * Date and time when the file was received
-* Message type
+* Message type, such as `mythical-po-ack-ORD-9892330`
 * Number of received messages in the file
 
 Take any of the following actions to view and download additional information about the inbound transmission:
@@ -41,17 +41,17 @@ Take any of the following actions to view and download additional information ab
 |===
 |Action |Steps
 
-|View and download the payload received from the partner
+|View and download the payload received from the partner (*Vijay, is this correct? How do users see the metadata for an inbound message?*)
 a|
 . In the *Transmission Flow* section, click *View Payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-| View and download the MDN sent to the partner
+| View and download the MDN message sent to the partner
 a|
 . In the *Transmission Flow* section, click *View MDN*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-| View and download the CNTRL sent to the partner
+| View and download the CONTRL message sent to the partner
 a|
 . In the *Transmission Flow* section, click *View CONTRL*.
 . Specify a wrap character, if needed.
@@ -62,22 +62,23 @@ a|
 . Click *View Payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
+|View the message flow diagram for the transmitted message
+|Click the link in the *Processed message through message flows* field.
+{sp} +
+{sp}+
+From there, you can expand the message flow sections to view additional information, including information about the receiving (Receive from Partners) endpoint, DataWeave map, target message type, and target (Target at Host) endpoint in the message flow.
 |===
-
-To view the message flow for the transmission, click the link in the *Processed message through message flows* field. From there, you can view information about the receiving endpoint, DataWeave map, and target message type (at the backend) in the inbound message flow.
-
-*Vijay*: what things can the user do here that are directly related to analyzing the incoming message? Since this takes a user to the Message Flow page, there are many other things user can do that won't get documented in this topic. Is what I have above correct?
 
 == View Details for an Outbound Transmission
 
 The summary information for an outbound transmission includes the following:
 
-* Transmission status (a green checkmark for success and a red exclamation point for failure)
+* Transmission status (a green checkmark for success or a red exclamation point for failure)
 * Transmission ID
 * Date and time when the file was sent
 * Control number associated with the transmitted file
-* Message type
-* Date and time when the file was received
+* Message type, such as `mythical-po-ack-json: ORD-9892330`
+* Name of the sending (Send to Partners) endpoint
 * Name of the transmitted file
 
 Take any of the following actions to view and download additional information about the outbound transmission:
@@ -85,7 +86,7 @@ Take any of the following actions to view and download additional information ab
 |===
 |Action |Steps
 
-|View information about the endpoint where the host received the transmission from the backend | In the *Summary* section, click the link in the *Endpoint* field.
+|View information about the sending (Send to Partner) endpoint | In the *Summary* section, click the link in the *Endpoint* field.
 |View and download the transmission metadata
 a|
 . In the *Summary* section, click the link in the *File* field.
@@ -100,27 +101,29 @@ a|
 | View and download the payload sent to the partner
 a|
 . In the message flow diagram, expand the *Sent to* section.
-. Click *View payload*.
+. In the *Sent transmission* field, click *View payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-| View and download the MDN sent to the partner
+| View and download the MDN received from the partner
 a|
 . In the message flow diagram, expand the *Sent to* section.
-. Click *View payload*.
+. In the *Received MDN* field, click *View payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-|View the CONTRL message sent to the partner, if it exists
+|View the CONTRL message received from the partner, if it exists
 a|
 . In the message flow diagram, expand the *Sent to* section.
-. . Click Click *View payload*.
+. In the ??? field *Click *View payload*. (*Vijay, what is the name of this field? I only see the Waiting for CONTRL status here so I can't tell.*)
 . Specify a wrap character, if needed.
 . Click *Download*.
 
 |===
 
-From the message flow diagram, you can also view information about the source endpoint, DataWeave map, and message type.
+From the message flow diagram, you can view additional information, including information about the source (Source at Host) endpoint, DataWeave map, and message type.
 
 == See Also
 
+* xref:inbound-message-flows[Inbound Message Flows]
+* xref:outbound-message-flows[Outbound Message Flows]
 * xref:edi-ack-reconciliation.adoc[EDI Acknowledgment Reconciliation]
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
