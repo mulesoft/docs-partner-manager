@@ -42,28 +42,28 @@ Take any of the following actions to view and download additional information ab
 |===
 |Action |Steps
 
-|View and download the payload received from the partner
+|View and download the payload received from the partner.
 a|
 . In the *Transmission Flow* section, click *View Payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-| View and download the MDN message sent to the partner for inbound AS2 transactions
+| View and download the MDN message sent to the partner for inbound AS2 transactions.
 a|
 . In the *Transmission Flow* section, click *View MDN*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-| View and download the CONTRL message sent to the partner
+| View and download the EDIFACT CONTRL or X12 997 acknowledgement message sent to the partner.
 a|
 . In the *Transmission Flow* section, click *View CONTRL*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-| View and download the payload sent to the backend
+| View and download the payload sent to the backend.
 a|
 . In the message flow diagram, expand the *Source* section.
 . Click *View Payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-|View the message flow diagram for the transmitted message
+|View the message flow diagram for the transmitted message.
 |Click the link in the *Processed message through message flows* field.
 {sp} +
 {sp}+
@@ -87,31 +87,31 @@ Take any of the following actions to view and download additional information ab
 |===
 |Action |Steps
 
-|View information about the sending (Send to Partner) endpoint | In the *Summary* section, click the link in the *Endpoint* field.
-|View and download the transmission metadata
+|View information about the sending (Send to Partner) endpoint. | In the *Summary* section, click the link in the *Endpoint* field.
+|View and download the transmission metadata.
 a|
 . In the *Summary* section, click the link in the *File* field.
 . Specify a wrap character, if needed.
 . Click *Download*.
-| View and download the payload received from the backend
+| View and download the payload received from the backend.
 a|
 . In the message flow diagram, expand the *Source* section.
 . Click *View Payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-| View and download the payload sent to the partner
+| View and download the payload sent to the partner.
 a|
 . In the message flow diagram, expand the *Sent to* section.
 . In the *Sent transmission* field, click *View payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-| View and download the MDN received from the partner in response to outbound AS2 transmissions
+| View and download the MDN received from the partner in response to outbound AS2 transmissions.
 a|
 . In the message flow diagram, expand the *Sent to* section.
 . In the *Received MDN* field, click *View payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-|View the CONTRL message received from the partner, if it exists
+|View the CONTRL message received from the partner, if it exists.
 a|
 . In the message flow diagram, expand the *Sent to* section.
 . In the *Sent transmission* field, click *View payload*.
