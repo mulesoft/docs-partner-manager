@@ -104,6 +104,11 @@ a|* If selected, Partner Manager rejects transactions containing segments marked
 |Enforce conditional relationship validations a|  * If selected, any missing conditional data elements cause the generation of the X12 transaction to fail.
 * If not selected, Partner Manager does not enforce relationship validations.
 | Disabled
+
+|Enforce code set validations a|  * If selected, Partner Manager enforces X12 code set validations, as defined in the X12 schemas.
+| Disabled
+
+
 |===
 
 [[control-numbers]]

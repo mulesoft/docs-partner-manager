@@ -1,87 +1,130 @@
-= Track Transmission Activity
+= Tracking Transmission Activity
 
-B2B transactions often communicate sensitive contractual obligations between companies. You can use Anypoint Partner Manager to track transmissions and to store both transmission content and metadata.
+B2B transactions often communicate sensitive contractual obligations between companies. You can use Anypoint Partner Manager to monitor transmissions, view message contents, and store both transmission content and metadata.
 
-Anypoint Partner Manager enables you to monitor trading partner transmission activity. _Activity_ is the complete set of end-to-end events related to transmission metadata in processing a transmission. Use transmission metadata to troubleshoot issues.
+== Locate a Transmission
 
-With activity tracking, you can:
+Select a transmission to view its details and view and download the message contents:
 
-* Search for message metadata (such as partner name, message type, filename, control number, endpoint, or date received).
-* View and download the original payload related to the transmission to help you troubleshoot or keep records.
-* Review errors and acknowledgment payloads.
-
-== Track Message Flow Activity
-
-Select a message flow to view its transmission details and view and download the payload:
-
-. Open Anypoint Partner Manager.
 . In the navigation menu, select *Activity*.
-. Locate the message flow whose activity you want to track.
+. In the *Messages* field, select *Transmissions*.
+. Search for the transmission.
 +
-Use the search box to find the transmission based on criteria such as:
-+
-* Trading partner name
-* Message type
-* File name
-* Control number
-* Endpoint
-* Received date of the file +
-. You can then use the filters to find transmissions based on:
-* *Type* +
-Type of message transmission:
-** *Both directions*
-** *Sent to partners*
-** *Received from partners*
-* *From Date* +
-Filter for transmissions sent or received after this date.
-* *To Date* +
-Filter for transmissions sent or received up to and including this date.
-* *Ack Status* +
-Filter for transmissions based on their acknowledgment status:
-** *All*
-** *Overdue*
-** *Rejected* +
-* *Message Processing Status* +
-Filter for transmissions based on their message processing status:
-** *All*
-** *Delivered*
-** *Failed*
-** *Processing*
-** *Received*
-* *Partner name* +
-Filter for transmissions based on your partner's name. Only five partners appear in the *Partner name* list; however, you can enter characters in the search box to access partners that do not appear in the list.
-* *Partner message type* +
-Filter for transmissions based on the message type, such as `X12 - 850`. +
-* *Host message type* +
-Filter for transmissions based on the host message type, such as `JSON host-purchase-order`.
-. Select the transmission that matches your search criteria and review the summary information:
-+
-* The success or failure status of the transmission (indicated by either a checkmark for success or a circle with an exclamation point for failure)
-* The name of the received file
-* The control number associated with the file (if available)
-* The receiving endpoint
-* The received date and time of the file
-* The types of messages received (depending on the configured message flows)
-* The number of messages received in the file
-* Transmission flow +
-The *Transmission Flow* section of the summary information shows:
-* Success or failure of the transmission
-* Acknowledgment status +
-If the configured outbound message flow expects an acknowledgment from the trading partner or if the configured inbound message flow returns an acknowledgment to the trading partner, then you can view the acknowledgment (997 and TA1) payloads in the transmission detail.
-+
-If you have not received an acknowledgment from your trading partner or if your trading partner sent a rejection acknowledgment, then you can review the acknowledgment status of outbound transactions.
-* Transformation and routing information
-+
-An exclamation point (!) appearing next to any of the rectangle boxes in the *Transmission Flow* section indicates an issue with the transmission.
-. Click *View Payload* to view and download the originally received payload.
-+
-You can examine the received payload to troubleshoot issues and find the issue location within the message flow.
-+
-* For outbound transmissions, you can view the source message payload received from your backend systems and the EDI message sent to your trading partner.
-* For inbound transmissions, you can view the received EDI message payload from your trading partner.
+When you search for a transmission, you can filter the results based on the following criteria:
 
+* Direction type
+* Date sent or received
++
+You can retrieve up to one week's worth of transmissions.
++
+* Acknowledgement status, such as `Overdue`
+* Message processing status, such as `Received`
+* Partner name
+* Partner message type, such as `X12 - 850`
+* Host message type, such as `JSON host-purchase-order`
+. Select the transmission to review summary information about the transmission and its message flow.
+
+== View Details for an Inbound Transmission
+
+The *Summary* section for an inbound transmission includes the following information:
+
+* Transmission status (a green checkmark for success or a red exclamation point for failure)
+* Transmission ID
+* Name of the transmitted file
+* Control number associated with the transmitted file, if available
+* Name of the receiving (Receive from Partners) endpoint
+* Date and time when the file was received
+* Message type, such as `mythical-po-ack`
+* Number of received messages in the file
+
+Take any of the following actions to view and download additional information about the inbound transmission:
+
+|===
+|Action |Steps
+
+|View and download the payload received from the partner.
+a|
+. In the *Transmission Flow* section, click *View Payload*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+| View and download the MDN message sent to the partner for inbound AS2 transactions.
+a|
+. In the *Transmission Flow* section, click *View MDN*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+| View and download the EDIFACT CONTRL or X12 997 acknowledgement message sent to the partner.
+a|
+. In the *Transmission Flow* section, click *View CONTRL*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+| View and download the payload sent to the backend.
+a|
+. In the message flow diagram, expand the *Source* section.
+. Click *View Payload*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+|View the message flow diagram for the transmitted message.
+|Click the link in the *Processed message through message flows* field.
+{sp} +
+{sp}+
+From there, you can expand the message flow sections to view additional information, including information about the receiving (Receive from Partners) endpoint, DataWeave map, target message type, and target (Target at Host) endpoint in the message flow.
+|===
+
+== View Details for an Outbound Transmission
+
+The summary information for an outbound transmission includes the following:
+
+* Transmission status (a green checkmark for success or a red exclamation point for failure)
+* Transmission ID
+* Date and time when the file was sent
+* Control number associated with the transmitted file
+* Message type, such as `mythical-po-ack-json: ORD-9892330`
+* Name of the sending (Send to Partners) endpoint
+* Name of the transmitted file
+
+Take any of the following actions to view and download additional information about the outbound transmission:
+
+|===
+|Action |Steps
+
+|View information about the sending (Send to Partner) endpoint. | In the *Summary* section, click the link in the *Endpoint* field.
+|View and download the transmission metadata.
+a|
+. In the *Summary* section, click the link in the *File* field.
+. Specify a wrap character, if needed.
+. Click *Download*.
+| View and download the payload received from the backend.
+a|
+. In the message flow diagram, expand the *Source* section.
+. Click *View Payload*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+| View and download the payload sent to the partner.
+a|
+. In the message flow diagram, expand the *Sent to* section.
+. In the *Sent transmission* field, click *View payload*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+| View and download the MDN received from the partner in response to outbound AS2 transmissions.
+a|
+. In the message flow diagram, expand the *Sent to* section.
+. In the *Received MDN* field, click *View payload*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+|View the EDIFACT CONTRL or X12 997 acknowledgement message received from the partner, if it exists.
+a|
+. In the message flow diagram, expand the *Sent to* section.
+. In the *Sent transmission* field, click *View payload*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+
+|===
+
+From the message flow diagram, you can view additional information, including information about the source (Source at Host) endpoint, DataWeave map, and message type.
 
 == See Also
 
+* xref:inbound-message-flows[Inbound Message Flows]
+* xref:outbound-message-flows[Outbound Message Flows]
 * xref:edi-ack-reconciliation.adoc[EDI Acknowledgment Reconciliation]
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
