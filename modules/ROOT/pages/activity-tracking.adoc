@@ -111,7 +111,7 @@ a|
 . In the *Received MDN* field, click *View payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-|View the CONTRL message received from the partner, if it exists.
+|View the EDIFACT CONTRL or X12 997 acknowledgement message received from the partner, if it exists.
 a|
 . In the message flow diagram, expand the *Sent to* section.
 . In the *Sent transmission* field, click *View payload*.
