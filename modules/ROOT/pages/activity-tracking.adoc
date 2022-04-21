@@ -7,17 +7,18 @@ B2B transactions often communicate sensitive contractual obligations between com
 Select a transmission to view its details and view and download the message contents:
 
 . In the navigation menu, select *Activity*.
+. In the *Messages* field, select *Transmissions*.
 . Search for the transmission.
 +
-When you search for the transission, you can filter the results based on the following criteria:
+When you search for a transmission, you can filter the results based on the following criteria:
 
-* Message type, such as `my-po-ack:ORD-9892330`
+* Direction type
 * Date sent or received
 +
-You can retrieve up to one week's worth of messages at a time.
+You can retrieve up to one week's worth of transmissions.
 +
 * Acknowledgement status, such as `Overdue`
-* Messaging processing status, such as `Received`
+* Message processing status, such as `Received`
 * Partner name
 * Partner message type, such as `X12 - 850`
 * Host message type, such as `JSON host-purchase-order`
@@ -33,7 +34,7 @@ The *Summary* section for an inbound transmission includes the following informa
 * Control number associated with the transmitted file, if available
 * Name of the receiving (Receive from Partners) endpoint
 * Date and time when the file was received
-* Message type, such as `mythical-po-ack-ORD-9892330`
+* Message type, such as `mythical-po-ack`
 * Number of received messages in the file
 
 Take any of the following actions to view and download additional information about the inbound transmission:
@@ -41,12 +42,12 @@ Take any of the following actions to view and download additional information ab
 |===
 |Action |Steps
 
-|View and download the payload received from the partner (*Vijay, is this correct? How do users see the metadata for an inbound message?*)
+|View and download the payload received from the partner
 a|
 . In the *Transmission Flow* section, click *View Payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-| View and download the MDN message sent to the partner
+| View and download the MDN message sent to the partner for inbound AS2 transactions
 a|
 . In the *Transmission Flow* section, click *View MDN*.
 . Specify a wrap character, if needed.
@@ -104,7 +105,7 @@ a|
 . In the *Sent transmission* field, click *View payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-| View and download the MDN received from the partner
+| View and download the MDN received from the partner in response to outbound AS2 transmissions
 a|
 . In the message flow diagram, expand the *Sent to* section.
 . In the *Received MDN* field, click *View payload*.
@@ -113,7 +114,7 @@ a|
 |View the CONTRL message received from the partner, if it exists
 a|
 . In the message flow diagram, expand the *Sent to* section.
-. In the ??? field *Click *View payload*. (*Vijay, what is the name of this field? I only see the Waiting for CONTRL status here so I can't tell.*)
+. In the *Sent transmission* field, click *View payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
 
