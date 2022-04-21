@@ -105,7 +105,7 @@ Carriage return and line feed
 Line Feed
 |CRLF
 |Test Indicator
-a|Indicates if the EDIFACT transaction set is for testing or production. *Vijay, is this still true? There is no default that shows up.*
+a|Indicates if the EDIFACT transaction set is for testing or production. 
 |No
 |Use segment line ending in last Line
 |If `Yes`, Partner Manager applies the segment line ending character to the last segment in the payload.
