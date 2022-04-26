@@ -1,0 +1,133 @@
+= Tracking Individual Message Activity
+
+B2B transactions often communicate sensitive contractual obligations between companies. You can use Anypoint Partner Manager to monitor transmissions, view message contents, and store both transmission content and metadata.
+
+== Locate a Message
+
+Select a message to view its details and view and download its contents:
+
+. In the navigation menu, select *Activity*.
+. In the *Messages* field, leave the default, *Messages*.
+. Search for the transmission.
++
+When you search for a message, you can filter the results based on the following criteria:
+
+* Message direction
+* Date range within which the message was sent
++
+You can retrieve up to one week's worth of messages.
++
+* Acknowledgement status, such as `Overdue`
+* Message processing status, such as `Received`
+* Partner name
+* Partner message type, such as `X12 - 850`
+* Host message type, such as `JSON host-purchase-order`
++
+Partner Manager returns a list of messages that meet your search criteria along with related information.
++
+. Select a message to review additional information and to view its message flow.
+
+== View Details for an Inbound Message
+
+The details for an inbound message include the following information:
+
+* Transmission status (a green checkmark for success or a red exclamation point for failure)
+* Date and time when the message was received from the source endpoint
+* Functional acknowledgement, if it exists
+* Information about the message source, including the partner message type, endpoint name, filename, and protocol
+* Identifiers and control number associated with the message
+* Information about the message target, including the target message type, protocol, and endpoint name
+
+Take any of the following actions to view and download additional information about the inbound message:
+
+|===
+|Action |Steps
+
+|View and download the payload received from the partner.
+a|
+. Click the link in the *Transmission details* field to access *Transmission Flow* section.
+. In the *Received transmission* field, click *Payload*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+| View and download the MDN message sent to the partner in response to inbound AS2 transmissions.
+a|
+. Click the link in the *Transmission details* field to access the *Transmission FLow* section.
+. In the *sent MDN* field, click *View MDN*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+| View and download the EDIFACT CONTRL or X12 997
+acknowledgement message sent to the partner.
+a|
+. Click the link in the *Transmission details* field to access the *Transmission FLow* section.
+|View the message flow diagram for the transmitted message.
+|Click the link in the *Processed message through message flows* field.
+{sp} +
+{sp}+
+From there, you can expand the message flow sections to view additional information, including information about the receiving (Receive from Partners) endpoint, DataWeave map, target message type, and target (Target at Host) endpoint in the message flow.
+|===
+
+== View Details for an Outbound Message
+
+The details for an outbound message include the following information:
+
+* Date and time when the file was received from the backend
+* Functional acknowledgement, if it exists
+* Name of the transmitted file
+* Information about the message source, including the source message type, source endpoint name, and source protocol
+* Identifiers and control numbers associated with the message
+* Information about the message target, including the partner message type, date and time when the message was sent to the partner, target filename, and target endpoint name
+
+Take any of the following actions to view and download additional information about the outbound message:
+
+|===
+|Action |Steps
+
+|View information about the source (Source at Host) endpoint. | In the *Source* section, click the link in the *Source Endpoint* field.
+|View and download the transmission metadata.
+a|
+. In the *Summary* section, click the link in the *Transmission details* field.
+. Click the link in the *File* field.
+. Specify a wrap character, if needed.
+. Click *Download*.
+*Vijay, I am not sure if this is to view the transmission metadata or the transmission message contents. I also don't know if this is different from clicking View payload in the Transmission section of the message flow diagram. I am not seeing a message with this data in QAX.*
+| View and download the payload received from the backend.
+a|
+. In the message flow diagram, expand the *Source* section.
+. Click *View Payload*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+| View and download the DataWeave map that transformed the transmission.
+a|
+. In the message flow diagram, expand the *Map* section.
+. Click the link in this section.
+. Specify a wrap character, if needed.
+. Click *Download*.
+| View and download the payload sent to the partner.
+a|
+. In the message flow diagram, expand the *Sent to* section.
+. In the *Sent transmission* field, click *View payload*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+| View and download the MDN received from the partner in response to outbound AS2 transmissions.
+a|
+. In the message flow diagram, expand the *Sent to* section.
+. In the *Received MDN* field, click *View payload*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+|View the EDIFACT CONTRL or X12 997 acknowledgement message received from the partner, if it exists.
+a|
+. In the message flow diagram, expand the *Sent to* section.
+. In the *Sent transmission* field, click *View payload*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+
+|===
+
+From the message flow diagram, you can also view additional information, including information about the message type, identifiers,
+
+== See Also
+
+* xref:inbound-message-flows[Inbound Message Flows]
+* xref:outbound-message-flows[Outbound Message Flows]
+* xref:edi-ack-reconciliation.adoc[EDI Acknowledgment Reconciliation]
+* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]

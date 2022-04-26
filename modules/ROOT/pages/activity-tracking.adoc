@@ -51,7 +51,7 @@ a|
 . In the *Received transmission* field, click *View Payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-| View and download the MDN message sent to the partner for inbound AS2 transactions.
+| View and download the MDN message sent to the partner in response to inbound AS2 messages.
 a|
 . In the *sent MDN* field, click *View MDN*.
 . Specify a wrap character, if needed.
@@ -90,6 +90,12 @@ a|
 . In the *Summary* section, click the link in the *File* field.
 . Specify a wrap character, if needed.
 . Click *Download*.
+| View and download the DataWeave map that transformed the transmission.
+a|
+. In the message flow diagram, expand the *Map* section.
+. Click the link in this secction.
+. Specify a wrap character, if needed.
+. Click *Download*.
 | View and download the payload received from the backend.
 a|
 . In the message flow diagram, expand the *Source* section.
@@ -117,7 +123,7 @@ a|
 
 |===
 
-From the message flow diagram, you can view additional information, including information about the source (Source at Host) endpoint, DataWeave map, and message type.
+From the message flow diagram, you can also view additional information, including information about the source (Source at Host) endpoint, DataWeave map, and message type.
 
 == See Also
 
