@@ -1,6 +1,6 @@
-= Tracking Individual Message Activity
+= Tracking Individual Messages
 
-B2B transactions often communicate sensitive contractual obligations between companies. You can use Anypoint Partner Manager to monitor transmissions, view message contents, and store both transmission content and metadata.
+You can use Anypoint Partner Manager to monitor transmitted messages, view their contents, and store both the message contents and transmission metadata.
 
 == Locate a Message
 
@@ -127,7 +127,7 @@ From the message flow diagram, you can also view additional information, includi
 
 == See Also
 
-* xref:inbound-message-flows[Inbound Message Flows]
-* xref:outbound-message-flows[Outbound Message Flows]
+* xref:inbound-message-flows.asciidoc[Inbound Message Flows]
+* xref:outbound-message-flows.adoc[Outbound Message Flows]
 * xref:edi-ack-reconciliation.adoc[EDI Acknowledgment Reconciliation]
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
