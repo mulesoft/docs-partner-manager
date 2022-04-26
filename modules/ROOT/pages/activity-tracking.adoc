@@ -2,7 +2,7 @@
 
 In Anypoint Partner Manager, one transmission can consist of one or more messages. You can use Partner Manager to monitor transmissions, view their contents, and store both transmission contents and metadata.
 
-To track individual messages, see *xref:activity-message-tracking.adoc[Tracking Individual Messages]
+To track individual messages, see xref:activity-message-tracking.adoc[Tracking Individual Messages].
 
 == Locate a Transmission
 
@@ -58,7 +58,7 @@ a|
 . In the *sent MDN* field, click *View MDN*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-| View and download the EDIFACT CONTRL or X12 997 acknowledgement message sent to the partner.
+| View and download the EDIFACT CONTRL or X12 997 acknowledgement message sent to the partner, if one exists
 a|
 . In the *Processed message through message flows* field, click *View CONTRL*.
 . Specify a wrap character, if needed.
@@ -67,7 +67,7 @@ a|
 |Click the link in the *Processed message through message flows* field.
 {sp} +
 {sp}+
-From there, you can expand the message flow sections to view additional information, including information about the receiving (Receive from Partners) endpoint, DataWeave map, target message type, and target (Target at Host) endpoint in the message flow.
+From the message flow diagram, you can expand the message flow sections to view additional information, including information about the receiving (Receive from Partners) endpoint, DataWeave map, target message type, and target (Target at Host) endpoint.
 |===
 
 == View Details for an Outbound Transmission
@@ -116,7 +116,7 @@ a|
 . In the *Received MDN* field, click *View payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-|View the EDIFACT CONTRL or X12 997 acknowledgement message received from the partner, if it exists.
+|View the EDIFACT CONTRL or X12 997 acknowledgement message received from the partner, if one exists.
 a|
 . In the message flow diagram, expand the *Sent to* section.
 . In the *Sent transmission* field, click *View payload*.

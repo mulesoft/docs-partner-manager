@@ -33,7 +33,7 @@ The details for an inbound message include the following information:
 
 * Transmission status (a green checkmark for success or a red exclamation point for failure)
 * Date and time when the message was received from the source endpoint
-* Functional acknowledgement, if it exists
+* Functional acknowledgement, if one exists
 * Information about the message source, including the partner message type, endpoint name, filename, and protocol
 * Identifiers and control number associated with the message
 * Information about the message target, including the target message type, protocol, and endpoint name
@@ -51,14 +51,17 @@ a|
 . Click *Download*.
 | View and download the MDN message sent to the partner in response to inbound AS2 transmissions.
 a|
-. Click the link in the *Transmission details* field to access the *Transmission FLow* section.
+. Click the link in the *Transmission details* field to access the *Transmission Flow* section.
 . In the *sent MDN* field, click *View MDN*.
 . Specify a wrap character, if needed.
 . Click *Download*.
 | View and download the EDIFACT CONTRL or X12 997
-acknowledgement message sent to the partner.
+acknowledgement message sent to the partner, if one exists.
 a|
-. Click the link in the *Transmission details* field to access the *Transmission FLow* section.
+. Click the link in the *Transmission details* field to access the *Transmission Flow* section.
+. In the xxx field, click xx.
+. Specify a wrap character, if needed.
+. Click *Download*.
 |View the message flow diagram for the transmitted message.
 |Click the link in the *Processed message through message flows* field.
 {sp} +
@@ -71,7 +74,7 @@ From there, you can expand the message flow sections to view additional informat
 The details for an outbound message include the following information:
 
 * Date and time when the file was received from the backend
-* Functional acknowledgement, if it exists
+* Functional acknowledgement, if one exists
 * Name of the transmitted file
 * Information about the message source, including the source message type, source endpoint name, and source protocol
 * Identifiers and control numbers associated with the message
@@ -114,7 +117,7 @@ a|
 . In the *Received MDN* field, click *View payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-|View the EDIFACT CONTRL or X12 997 acknowledgement message received from the partner, if it exists.
+|View the EDIFACT CONTRL or X12 997 acknowledgement message received from the partner, if one exists.
 a|
 . In the message flow diagram, expand the *Sent to* section.
 . In the *Sent transmission* field, click *View payload*.
