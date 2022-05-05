@@ -9,10 +9,10 @@ To track individual messages, see xref:activity-message-tracking.adoc[Tracking I
 Select a transmission to view its details and view and download the message contents:
 
 . In the navigation menu, select *Activity*.
-. In the *Messages* field, select *Transmissions*.
+. Select *Transmissions*.
 . Search for the transmission.
-+
-When you search for a transmission, you can filter the results based on the following criteria:
+. Optionally filter the search results based on the following criteria:
+
 
 * Transmission direction
 * Date range within which the transmission was sent
@@ -24,6 +24,7 @@ You can retrieve up to one week's worth of transmissions.
 * Partner name
 * Partner message type, such as `X12 - 850`
 * Host message type, such as `JSON host-purchase-order`
+
 +
 Partner Manager returns a list of transactions that meet your search criteria along with related information.
 +

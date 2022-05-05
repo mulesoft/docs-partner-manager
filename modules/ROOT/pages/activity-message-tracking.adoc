@@ -2,15 +2,16 @@
 
 You can use Anypoint Partner Manager to monitor transmitted messages, view their contents, and store both the message contents and transmission metadata.
 
+To track tranmissions, see xref:activity-tracking.adoc[Tracking Transmissions].
+
 == Locate a Message
 
 Select a message to view its details and view and download its contents:
 
 . In the navigation menu, select *Activity*.
-. In the *Messages* field, leave the default, *Messages*.
+. Leave the default, *Messages*.
 . Search for the transmission.
-+
-When you search for a message, you can filter the results based on the following criteria:
+. Optionally filter the search results based on the following criteria:
 
 * Message direction
 * Date range within which the message was sent
@@ -22,10 +23,11 @@ You can retrieve up to one week's worth of messages.
 * Partner name
 * Partner message type, such as `X12 - 850`
 * Host message type, such as `JSON host-purchase-order`
+
 +
 Partner Manager returns a list of messages that meet your search criteria along with related information.
 +
-. Select a message to review additional information and to view its message flow.
+. Select a message to review additional information about the message and to view its message flow.
 
 == View Details for an Inbound Message
 
@@ -43,10 +45,13 @@ Take any of the following actions to view and download additional information ab
 |===
 |Action |Steps
 
+|View information about the source (Receive from Partner) endpoint.
+a|In the *Source* section, click the link in the *Source endpoint* field.
+|View information about the target (Target at Host) endpoint.
+a|In the *Target* section, click the link in the *Target endpoint* field.
 |View and download the payload received from the partner.
 a|
-. Click the link in the *Transmission details* field to access *Transmission Flow* section.
-. In the *Received transmission* field, click *Payload*.
+. In the *Source* section, click the link in the *Source file* field.
 . Specify a wrap character, if needed.
 . Click *Download*.
 | View and download the MDN message sent to the partner in response to inbound AS2 transmissions.
@@ -55,18 +60,18 @@ a|
 . In the *sent MDN* field, click *View MDN*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-| View and download the EDIFACT CONTRL or X12 997
+| View and download the EDIFACT CONTRL message or X12 997
 acknowledgement message sent to the partner, if one exists.
 a|
 . Click the link in the *Transmission details* field to access the *Transmission Flow* section.
-. In the xxx field, click xx.
+. In the *Processed message through message flows* field, click *View Control*.
 . Specify a wrap character, if needed.
 . Click *Download*.
 |View the message flow diagram for the transmitted message.
 |Click the link in the *Processed message through message flows* field.
 {sp} +
 {sp}+
-From there, you can expand the message flow sections to view additional information, including information about the receiving (Receive from Partners) endpoint, DataWeave map, target message type, and target (Target at Host) endpoint in the message flow.
+Expand the message flow diagram sections to view additional information, including information about the receiving (Receive from Partners) endpoint, source message, DataWeave map, target message type, and target (Target at Host) endpoint.
 |===
 
 == View Details for an Outbound Message
@@ -85,48 +90,52 @@ Take any of the following actions to view and download additional information ab
 |===
 |Action |Steps
 
-|View information about the source (Source at Host) endpoint. | In the *Source* section, click the link in the *Source Endpoint* field.
 |View and download the transmission metadata.
 a|
 . In the *Summary* section, click the link in the *Transmission details* field.
 . Click the link in the *File* field.
 . Specify a wrap character, if needed.
 . Click *Download*.
-*Vijay, I am not sure if this is to view the transmission metadata or the transmission message contents. I also don't know if this is different from clicking View payload in the Transmission section of the message flow diagram. I am not seeing a message with this data in QAX.*
+|View information about the source (Source at Host) endpoint.
+| In the *Source* section, click the link in the *Source endpoint* field.
+| View information about the target (Send to Partners) endpoint.
+| In the *Target* section, click the link in the *Target endpoint* field.
 | View and download the payload received from the backend.
 a|
-. In the message flow diagram, expand the *Source* section.
-. Click *View Payload*.
-. Specify a wrap character, if needed.
-. Click *Download*.
-| View and download the DataWeave map that transformed the transmission.
-a|
-. In the message flow diagram, expand the *Map* section.
-. Click the link in this section.
+. In the *Source* section, click the link in the *Source file* field.
 . Specify a wrap character, if needed.
 . Click *Download*.
 | View and download the payload sent to the partner.
 a|
-. In the message flow diagram, expand the *Sent to* section.
-. In the *Sent transmission* field, click *View payload*.
+. In the *Target* section, click the link in the *Target file* field.
 . Specify a wrap character, if needed.
 . Click *Download*.
 | View and download the MDN received from the partner in response to outbound AS2 transmissions.
 a|
+. In the *Summary* section, click the link in the *Transmission details* field to access the message flow diagram.
 . In the message flow diagram, expand the *Sent to* section.
 . In the *Received MDN* field, click *View payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
 |View the EDIFACT CONTRL or X12 997 acknowledgement message received from the partner, if one exists.
 a|
+. In the *Summary* section, click the link in the *Transmission details* field to access the message flow diagram.
 . In the message flow diagram, expand the *Sent to* section.
 . In the *Sent transmission* field, click *View payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
+| View and download the DataWeave map that transformed the transmission.
+a|
+. In the *Summary* section, click the link in the *Transmission details* field to access the message flow diagram.
+. Click the the *Map* section to expand it.
+. Click the link in this section.
+. Click *Download*.
 
 |===
 
+////
 From the message flow diagram, you can also view additional information, including information about the message type, identifiers,
+////
 
 == See Also
 
