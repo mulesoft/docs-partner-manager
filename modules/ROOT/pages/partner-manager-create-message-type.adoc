@@ -1,6 +1,24 @@
 = Create and Configure Message Types
 
-Message types define the structure of the transactions that Anypoint Partner Manager receives or sends. You can create message types from the *<host>* page or the Message Flow wizard.
+Message types define the structure of the transactions that Anypoint Partner Manager receives or sends. You can define the following kinds of message types:
+
+* Receive from Partners
++
+Defines the structure of the transactions that partners or third-party connections send to the host
++
+* Target at Host
++
+Defines the structure of the transactions that the backend sends to the host
++
+* Source at Host
++
+Defines the structure of the transactions that the host sends to partners or third-party connections
++
+* Send to Partners
++
+Defines the structure of the transactions that the host sends to partners or third-party connections
+
+You can create up to five custom message attributes for Receive from Partners and Source at Host message types. This functionality enables you to track additional values in the inbound payload. To enable this functionality, you must add definitions for these attributes in the DataWeave map for the message flow.
 
 [[create-message-type]]
 == Create a Message Type

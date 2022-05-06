@@ -1,0 +1,26 @@
+= Creating Custom Message Attributes
+
+You can create up to five custom message attributes for Receive from Partners and Source at Host message types. This functionality enables you to track additional values, such as shipment ID and SCAC code, in the inbound payload. To enable this functionality, you must reference these attributes in the imported DataWeave map.
+
+== Create a Custom Message Attribute
+
+Use the *<host>* page to create a custom message attribute:
+
+. In the navigation menu, select *<host-name>*.
+. From the *Custom message attributes* section, click *New*.
+. Enter the alias and label for the attribute.
+. Optionally, select the checkbox to make the attribute searchable.
++
+If you make the attribute searchable, you can use the attribute value as search criteria when monitoring messages on the *Activity* page.
++
+. Click *Save*.
+
+== Example
+
+For example, suppose you create the Shipment ID and SCAC custom attributes. The DataWeave map can reference these attributes as follows:
+
+< show example of the map>
+
+If the value for shipment ID is `xxx` and SCAC is 'y' in the EDI payload, the imported DataWeave map and EDI payload in the inbound message flow look like this :
+
+<show example of EDI payload and DataWeave output>.

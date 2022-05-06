@@ -23,6 +23,7 @@ You can retrieve up to one week's worth of messages.
 * Partner name
 * Partner message type, such as `X12 - 850`
 * Host message type, such as `JSON host-purchase-order`
+* Message attribute
 
 +
 Partner Manager returns a list of messages that meet your search criteria along with related information.
@@ -54,6 +55,12 @@ a|
 . In the *Source* section, click the link in the *Source file* field.
 . Specify a wrap character, if needed.
 . Click *Download*.
+| View and download the payload sent to the backend.
+a|
+. In the *Target* section, click the link in the *Target file* field.
+. Specify a wrap character, if needed.
+. Click *Download*.
+
 | View and download the MDN message sent to the partner in response to inbound AS2 transmissions.
 a|
 . Click the link in the *Transmission details* field to access the *Transmission Flow* section.

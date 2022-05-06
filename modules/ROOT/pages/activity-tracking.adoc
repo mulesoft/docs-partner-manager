@@ -24,6 +24,7 @@ You can retrieve up to one week's worth of transmissions.
 * Partner name
 * Partner message type, such as `X12 - 850`
 * Host message type, such as `JSON host-purchase-order`
+* Message attribute
 
 +
 Partner Manager returns a list of transactions that meet your search criteria along with related information.
