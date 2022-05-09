@@ -1,25 +1,8 @@
 = Creating Message Types
 
-Message types define the structure of the transactions that Anypoint Partner Manager receives or sends. You can define the following kinds of message types:
+You can create new message types from the *<host>* page or by using the Message Flow wizard.
 
-* Receive from Partners
-+
-Defines the structure of the transactions that partners or third-party connections send to the host
-+
-* Target at Host
-+
-Defines the structure of the transactions that the backend sends to the host
-+
-* Source at Host
-+
-Defines the structure of the transactions that the host sends to partners or third-party connections
-+
-* Send to Partners
-+
-Defines the structure of the transactions that the host sends to partners or third-party connections
-
-[[create-message-type]]
-== Create a Message Type
+To create a message type from the *<host>* page:
 
 . In the navigation menu, select *<host-name>*.
 . From the *Message types* section, click *New*.
@@ -28,8 +11,6 @@ Defines the structure of the transactions that the host sends to partners or thi
 * <<target-at-host,Target at Host>>
 * <<source-at-host,Source at Host>>
 
-+
-If you create a message type from a message flow, Partner Manager automatically determines the *Usage* value, which is automatically assigned to the host or trading partner from which the message type was created.
 +
 . To add custom message attributes to a Receive from Partners message type:
 
@@ -46,75 +27,15 @@ These values must be unique for the environment.
 +
 The message type appears in the *Message types* section on the host page.
 
-[[receive-and-send-to-partners]]
-== Receive From and Send To Partners Message Types
+To create a message type from the Message Flow Wizard, see xref:create-inbound-message-flow.adoc[Create Inbound Message Flows] and xref:create-outbound-message-flow.adoc[Create Outbound Message Flows].
 
-Inbound and outbound transactions between your organization and your trading partners typically follow JSON, EDIFACT, X12, or XML standards.
+== Message Type Settings
 
-=== EDIFACT
+The values for message type settings vary according to the kind of message type and the protocol. For information, see:
 
-Use the following settings to define EDIFACT as the protocol for the Receive from Partners or Send to Partners message type:
-
-[%header%autowidth.spread]
-|===
-|Setting |Description |Default | Required
-|Format | The format of the message.| |Yes
-|Version | List of valid versions: `D00A`, `D00B,` `D01A`, `D01B`, `D01C`, `D02A`, `D02B`, `D03A`, `D03B`, `D04A`, `D04B`, `D05A`, `D05B`, `D06A`, `D06B`, `D07A`, `D07B`, `D08A`, `D08B`, `D09A`, `D09B`, `D10A`, `D10B`, `D11A`, `D11B`, `D12A`, `D12B`, `D13A`, `D13B`, `D14A`, `D14B`, `D15A`, `D15B`, `D93A`, `D95B`, `D96A`, `D97A`, `D98A`, `D98B`, `D99A`, `D99B`
- | None |Yes
-|Message type |
-The EDIFACT message type, such as `ORDERS`, `DESADV`, or `INVOIC`.
- | None | Yes
-| Custom Attributes | (Receive from Partners message type only) If you plan to create custom attributes for the message type, click *Choose file* to select a DataWeave map that defines the custom message attributes.
-|None | No
-|Schema a|The EDI schema for the message type. Options include:
-
-* *Use standard EDIFACT-<version>* +
-This setting applies the standard EDIFACT schema for the version and message type configured.
-* *Customize* +
-This setting enables you to import a customized xref:connectors::x12-edi/x12-edi-schema-language-reference.adoc[EDI schema language] file, if your requirement is to make adjustments to the standard EDIFACT schema.
-+
-When using the customized EDI schema, you can assign a custom name to the message type definition, for example, `EDIFACT-d97a-ORDERS-<PartnerName>`.
-| Use standard EDIFACT <version>| Yes
-|===
-
-=== JSON or XML
-
-Use the following settings to define JSON or XML as the protocol for the Receive From Partners or Send to Partners message type:
-
-[%header%autowidth.spread]
-|===
-|Setting |Description |Default | Required
-|Format | The format of the message. Allowed values are `JSON` or `XML`. | |Yes
-|Schema | The imported JSON or XSD schema file for the message type. | |Yes
-|Message type identifier | (Receive from Partners message type only) The message identifier value used in the dynamic message routing of inbound B2B transactions. Partner Manager automatically generates a message type identifier from the schema filename. You can modify this value. | |Yes
-|Reference identifiers and business key mappings | (Receive from Partners message type only)
-The uploaded DataWeave script with mapping to extract the reference identifiers and business key mappings from the payload received from the backend application for dynamic routing into the appropriate message flow. | |Yes
-|===
-
-=== X12 Message Type
-
-Use the following settings to define X12 as the protocol for the Receive from Partners or Send to Partners message type:
-
-[%header%autowidth.spread]
-|===
-|Setting |Description |Default | Required
-|Format | The format of the message. |`X12`|Yes
-|Version | List of valid versions: `3010`, `3020`, `3030`, `3040`, `3050`, `3060`, `3070`, `4010`, `4020`, `4030`, `4040`, `4050`, `4060`, `5010`, `5020`, `5030`, `5040`, `5050`, `6020`, `6030`, `6040`, `6050`, `7010`, `7020`, `7030`, `7040`, `7050`
- | None |Yes
-|Message type |The X12 transaction set number, such as `850` for *Purchase Order* or `214` for *Shipment Status*. |None | Yes
-|Custom attributes | (Receive from Partners message type only) If you plan to create custom attributes for the message type, click *Choose file* to select a DataWeave map that defines the custom message attributes. | None | No
-|Schema a|The EDI schema for the message type. Options include:
-
-* *Use standard X12-<version>* +
-This setting applies the standard X12 schema for the version and message type configured.
-* *Customize* +
-This setting enables you to import a customized xref:connectors::x12-edi/x12-edi-schema-language-reference.adoc[EDI schema language] file, if your requirement is to make adjustments to the standard X12 schema.
-+
-When using the customized EDI schema, you can assign a custom name to the message type definition, for example, `X12-7050-204-PartnerName`.
-| Use standard X12-<version> |Yes
-|===
-
-You can find an https://www.mulesoft.com/exchange/works.integration/b2b-x12-custom-schema-example[example] of how to customize EDI schema in Anypoint Exchange.
+* xref:message-type-receive-from-partners.adoc[Receive from Partners and Send to Partners Message Type Settings]
+* xref:message-type-source-at-host.adoc[Source at Host Message Type Settings]
+* Target at Host Message Type Settings
 
 [[target-at-host]]
 == Target at Host
@@ -135,34 +56,6 @@ Use the following settings to define settings for inbound transactions:
 |===
 
 [[source-at-host]]
-== Source at Host
-
-The source at host application message structure defines the way in which your backend applications transform outbound transactions and send them to your partners.
-
-Partner Manager automatically generates a message type identifier from the schema filename. This value can be modified.
-The message identifier value used in the dynamic message routing for outbound B2B transactions.
-
-Use the following settings to define JSON or XML settings for outbound EDI transactions:
-
-[%header%autowidth.spread]
-|===
-|Setting |Description |Default | Required
-|Format a|The selected application message structure format:
-
-* *JSON*
-* *XML* |None |Yes
-|Schema |The imported XSD or JSON schema file for the message type. |None |Yes
-|Message type identifier a| Partner Manager automatically generates this identifier from the schema filename and uses it to dynamically route outbound B2B transactions. You can modify the message type identifier to ensure that it has a meaningful, generic name.
-
-Your partner must pass this value when sending messages, files, or both to Partner Manager:
-
-* If you receive the payload via an HTTP-based endpoint, the message type identifier is the relative path in the HTTP request.
-* If you receive the payload via AS2 or via file-based endpoint protocols such as SFTP and FTP, the filename begins with `<message-type-id>_`.
-
-See xref:outbound-message-routing.adoc[Outbound Message Routing] to understand how outbound routing is performed and how your backend applications should pass the message type identifier when sending application messages to Partner Manager endpoints. |None |Yes
-
-|Reference identifiers and business key mapping |The uploaded DataWeave script with mapping to extract the <<reference-ids-example,reference identifiers>> and business key mappings from the payload received from the backend application for dynamic routing into the appropriate message flow. |None |Yes
-|===
 
 [[reference-ids-example]]
 == Reference Identifiers and Business Key Mapping Example
