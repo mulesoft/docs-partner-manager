@@ -2,17 +2,23 @@
 
 You can create new message types from the *<host>* page or by using the Message Flow wizard.
 
+== Create a Message Flow from the Host Page
+
 To create a message type from the *<host>* page:
 
 . In the navigation menu, select *<host-name>*.
 . From the *Message types* section, click *New*.
-. In the *Usage* drop-down list, select the message type:
-* <<receive-and-send-to-partners,Receive From and Send to Partners>>
-* <<target-at-host,Target at Host>>
-* <<source-at-host,Source at Host>>
+. In the *Usage* drop-down list, select the message usage.
+. Add values to the remaining settings.
++
+For setting descriptions, see the topic corresponds to the message type usage:
+
+* <<receive-and-send-to-partners,Receive From and Send to Partners Message Type Settings>>
+* <<target-at-host,Target at Host Message Settings>>
+* <<source-at-host,Source at Host Message Settings>>
 
 +
-. To add custom message attributes to a Receive from Partners message type:
+. Optionally add up to five custom message attributes to a Receive from Partners message type:
 
 .. When you complete the fields on the *New Message type* window, in the *Custom attributes* field, select a DataWeave map that defines the custom attributes.
 .. Click *New Message Attribute*.
@@ -22,40 +28,14 @@ These values must be unique for the environment.
 +
 .. To make the attribute searchable on the Activity window, select the *Is searchable* checkbox.
 +
-. Repeat these steps for each new attribute you want to define. You can define up to five custom message attributes for a message type.
+.. Repeat these steps for each new attribute you want to define.
 . Click *Save*.
 +
 The message type appears in the *Message types* section on the host page.
 
+== Create a Message Flow from the Message Flow Wizard
+
 To create a message type from the Message Flow Wizard, see xref:create-inbound-message-flow.adoc[Create Inbound Message Flows] and xref:create-outbound-message-flow.adoc[Create Outbound Message Flows].
-
-== Message Type Settings
-
-The values for message type settings vary according to the kind of message type and the protocol. For information, see:
-
-* xref:message-type-receive-from-partners.adoc[Receive from Partners and Send to Partners Message Type Settings]
-* xref:message-type-source-at-host.adoc[Source at Host Message Type Settings]
-* Target at Host Message Type Settings
-
-[[target-at-host]]
-== Target at Host
-
-The target at host application message structure defines the way in which inbound transactions are transformed and sent to your backend applications.
-
-Use the following settings to define settings for inbound transactions:
-
-[%header%autowidth.spread]
-|===
-|Setting |Description |Default | Required
-|Format a|The selected application message structure format:
-
-* *JSON*
-* *XML* |None |Yes
-|Schema |The imported XSD or JSON schema file for the message type. |None |Yes
-|Name |The message type name that Partner Manager automatically generates from the schema filename, which you can later modify. |None |Yes
-|===
-
-[[source-at-host]]
 
 [[reference-ids-example]]
 == Reference Identifiers and Business Key Mapping Example
