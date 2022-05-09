@@ -41,7 +41,7 @@ To create the source message type:
 . In the message flow, expand the *Source message type* section and click *Select*.
 . In the *Source message type* window, do either of the following:
 * Select an existing Source at Host message type and click *Select*.
-* Click *New* to create a new Source at Host message type, as described in xref:partner-manager-create-message-type[Create and Configure Message Types].
+* Click *New* to create a new Source at Host message type, as described in xref:partner-manager-create-message-type[Creating Message Types].
 
 [[reference-ids]]
 == Configure Reference IDs for the Partner and Host
@@ -76,7 +76,7 @@ To configure the target message type:
 . Expand the *Message type* section and click *Select*.
 . In the *Select message type* window, do either of the following:
 * Select an existing Send to Partners message type and click *Select*.
-* Click *New* to create a new Send to Partners message type, as described in xref:partner-manager-create-message-type.adoc,[Create and Configure Message Types].
+* Click *New* to create a new Send to Partners message type, as described in xref:partner-manager-create-message-type.adoc,[Creating Message Types].
 . Click *Save*.
 +
 The message type and its validation settings are added to the message flow.

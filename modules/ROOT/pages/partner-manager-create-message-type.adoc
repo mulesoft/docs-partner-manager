@@ -1,4 +1,4 @@
-= Create and Configure Message Types
+= Creating Message Types
 
 Message types define the structure of the transactions that Anypoint Partner Manager receives or sends. You can define the following kinds of message types:
 
@@ -47,7 +47,7 @@ These values must be unique for the environment.
 The message type appears in the *Message types* section on the host page.
 
 [[receive-and-send-to-partners]]
-== Receive From and Send To Partners
+== Receive From and Send To Partners Message Types
 
 Inbound and outbound transactions between your organization and your trading partners typically follow JSON, EDIFACT, X12, or XML standards.
 
@@ -201,5 +201,6 @@ Generated output:
 
 == See Also
 
-* xref:create-outbound-message-flow.adoc[Create Outbound Message Flows]
-* xref:configure-message-flows.adoc[Create Inbound Message Flows]
+* xref:delete-message-types.adoc[Deleting Message Types]
+* xref:create-outbound-message-flow.adoc[Creating Outbound Message Flows]
+* xref:configure-message-flows.adoc[Creating Inbound Message Flows]

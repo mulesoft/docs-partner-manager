@@ -13,4 +13,4 @@ Message types are always managed in the host profile page, regardless of whether
 
 == See Also
 
-* xref:partner-manager-create-message-type.adoc[Create and Configure Message Types]
+* xref:partner-manager-create-message-type.adoc[Creating Message Types]

@@ -53,5 +53,5 @@ If you select Partners, select the partner to which you want to add the certific
 == See Also
 
 * xref:configure-host.adoc[Configure and Manage a Host Profile]
-* xref:configure-partner.adoc[Create, Configure, and Update Trading Partners]
+* xref:configure-partner.adoc[Configuring and Managing Partners]
 * xref:create-keystore.adoc[Create AS2 Host Keystore]

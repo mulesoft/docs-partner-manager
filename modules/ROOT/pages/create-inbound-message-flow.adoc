@@ -57,7 +57,7 @@ To configure the source message type:
 . In the message flow, expand the *Source message* section and click *Select*.
 . In the *Select message type* window, do either of the following:
 * Select an existing Receive from Partners message type and click *Select*.
-* Click *New* to create a new Receive from Partners message type, as described in xref:partner-manager-create-message-type.adoc[Create and Configure Message Types].
+* Click *New* to create a new Receive from Partners message type, as described in xref:partner-manager-create-message-type.adoc[Creating Message Types].
 
 +
 The message type and its validation settings are added to the message flow.
