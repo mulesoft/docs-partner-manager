@@ -14,7 +14,7 @@ Use the following settings to define JSON or XML settings for outbound EDI trans
 
 * *JSON*
 * *XML* |None |Yes
-|Schema |The imported XSD or JSON schema file for the message type. |None |Yes
+|Schema |mported XSD or JSON schema file for the message type. |None |Yes
 |Message type identifier a| Partner Manager automatically generates this identifier from the schema filename and uses it to dynamically route outbound B2B transactions. You can modify the message type identifier to ensure that it has a meaningful, generic name.
 
 Your partner must pass this value when sending messages, files, or both to Partner Manager:

@@ -13,7 +13,8 @@ To create a message type from the *<host>* page:
 +
 For setting descriptions, see the topic that corresponds to the message type usage:
 
-* message-type-receive-from-partners.adoc[Receive From and Send to Partners Message Type Settings]
+* xref:message-type-receive-from-partners.adoc[Receive from Partners Message Type Settings]
+* xref:message-type-send-to-partners.adoc[Send to Partners Message Type Settings]
 * xref:message-type-target-at-host.adoc[Target at Host Message Type Settings]
 * xref:message-type-source-at-host.adoc[Source at Host Message Type Settings]
 
