@@ -31,3 +31,4 @@ See xref:outbound-message-routing.adoc[Outbound Message Routing] to understand h
 
 * xref:document-types.adoc[Message Types]
 * xref:partner-manager-create-message-type.adoc[Creating Message Types]
+* xref:delete-message-types.adoc[Deleting Message Types]

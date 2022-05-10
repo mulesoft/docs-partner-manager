@@ -11,6 +11,6 @@ To locate message types that don’t have associated message flows, look for `-`
 
 == See Also
 
-* xref:partner-manager-create-message-types.adoc[Creating Message Types]
+* xref:partner-manager-create-message-type.adoc[Creating Message Types]
 * xref:create-outbound-message-flow.adoc[Creating Outbound Message Flows]
 * xref:configure-message-flows.adoc[Creating Inbound Message Flows]

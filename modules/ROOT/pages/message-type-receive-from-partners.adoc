@@ -1,28 +1,31 @@
-= Receive From Partners and Send to Partners Message Type Settings
+= Receive from Partners Message Type Settings
 
-Inbound and outbound transactions between your organization and your partners typically follow JSON, EDIFACT, X12, or XML standards.
+The Receive from Partners message type defines the way in which Anypoint Partner Manager transforms the inbound transactions sent from your partner to your organization.
+
+These transactions between typically follow JSON, EDIFACT, X12, or XML standards.
 
 == EDIFACT
 
-Use the following settings to define EDIFACT as the protocol for the Receive from Partners or Send to Partners message type:
+Use the following settings to define EDIFACT as the protocol for the Receive from Partners message type:
 
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default | Required
-|Format | The format of the message.| |Yes
+|Format | Format of the message.| |Yes
 |Version | List of valid versions: `D00A`, `D00B,` `D01A`, `D01B`, `D01C`, `D02A`, `D02B`, `D03A`, `D03B`, `D04A`, `D04B`, `D05A`, `D05B`, `D06A`, `D06B`, `D07A`, `D07B`, `D08A`, `D08B`, `D09A`, `D09B`, `D10A`, `D10B`, `D11A`, `D11B`, `D12A`, `D12B`, `D13A`, `D13B`, `D14A`, `D14B`, `D15A`, `D15B`, `D93A`, `D95B`, `D96A`, `D97A`, `D98A`, `D98B`, `D99A`, `D99B`
- | None |Yes
+ |  |Yes
 |Message type |
-The EDIFACT message type, such as `ORDERS`, `DESADV`, or `INVOIC`.
- | None | Yes
-| Custom Attributes | (Receive from Partners message type only) If you plan to create custom attributes for the message type, click *Choose file* to select a DataWeave map that defines the custom message attributes.
-|None | No
-|Schema a|The EDI schema for the message type. Options include:
+EDIFACT message type, such as `ORDERS`, `DESADV`, or `INVOIC`.
+ |  | Yes
+| Custom Attributes | Enables you to select a DataWeave map that defines the custom message attributes.
+| | No
+|Reference identifiers and business key mappings | Uploaded DataWeave script with a mapping that extracts the reference identifiers and business key mappings from the payload received from the partner. The extracted values are used for dynamic routing into the appropriate message flow. | |Yes
+|Schema a|EDI schema for the message type. Options include:
 
 * *Use standard EDIFACT-<version>* +
-This setting applies the standard EDIFACT schema for the version and message type configured.
+Applies the standard EDIFACT schema for the version and message type configured.
 * *Customize* +
-This setting enables you to import a customized xref:connectors::x12-edi/x12-edi-schema-language-reference.adoc[EDI schema language] file, if your requirement is to make adjustments to the standard EDIFACT schema.
+Enables you to import a customized xref:connectors::x12-edi/x12-edi-schema-language-reference.adoc[EDI schema language] file, if your need to make adjustments to the standard EDIFACT schema.
 +
 When using the customized EDI schema, you can assign a custom name to the message type definition, for example, `EDIFACT-d97a-ORDERS-<PartnerName>`.
 | Use standard EDIFACT <version>| Yes
@@ -30,44 +33,45 @@ When using the customized EDI schema, you can assign a custom name to the messag
 
 == JSON or XML
 
-Use the following settings to define JSON or XML as the protocol for the Receive From Partners or Send to Partners message type:
+Use the following settings to define JSON or XML as the protocol for the Receive from Partners message type:
 
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default | Required
-|Format | The format of the message. Allowed values are `JSON` or `XML`. | |Yes
-|Schema | The imported JSON or XSD schema file for the message type. | |Yes
-|Message type identifier | (Receive from Partners message type only) The message identifier value used in the dynamic message routing of inbound B2B transactions. Partner Manager automatically generates a message type identifier from the schema filename. You can modify this value. | |Yes
-|Reference identifiers and business key mappings | (Receive from Partners message type only)
-The uploaded DataWeave script with mapping to extract the reference identifiers and business key mappings from the payload received from the backend application for dynamic routing into the appropriate message flow. | |Yes
+|Format | Format of the message. Allowed values are `JSON` or `XML`. | |Yes
+|Schema | Imported JSON or XSD schema file for the message type. | |Yes
+|Message type identifier | Message identifier value used in the dynamic message routing of inbound B2B transactions. Partner Manager automatically generates a message type identifier from the schema filename. You can modify this value. | |Yes
+|Reference identifiers and business key mappings | Uploaded DataWeave script with a mapping that extracts the reference identifiers and business key mappings from the payload received from the partner. The extracted values are used for dynamic routing into the appropriate message flow. | |Yes
 |===
 
 == X12
 
-Use the following settings to define X12 as the protocol for the Receive from Partners or Send to Partners message type:
+Use the following settings to define X12 as the protocol for the Receive from Partners message type:
 
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default | Required
-|Format | The format of the message. |`X12`|Yes
+|Format | Format of the message. |`X12`|Yes
 |Version | List of valid versions: `3010`, `3020`, `3030`, `3040`, `3050`, `3060`, `3070`, `4010`, `4020`, `4030`, `4040`, `4050`, `4060`, `5010`, `5020`, `5030`, `5040`, `5050`, `6020`, `6030`, `6040`, `6050`, `7010`, `7020`, `7030`, `7040`, `7050`
- | None |Yes
-|Message type |The X12 transaction set number, such as `850` for *Purchase Order* or `214` for *Shipment Status*. |None | Yes
-|Custom attributes | (Receive from Partners message type only) If you plan to create custom attributes for the message type, click *Choose file* to select a DataWeave map that defines the custom message attributes. | None | No
-|Schema a|The EDI schema for the message type. Options include:
+ | |Yes
+|Message type |X12 transaction set number, such as `850` for *Purchase Order* or `214` for *Shipment Status*. |None | Yes
+|Custom attributes | Enables you to select a DataWeave map that defines the custom message attributes. | | No
+|Reference identifiers and business key mappings | Uploaded DataWeave script with a mapping that extracts the reference identifiers and business key mappings from the payload received from the partner. The extracted values are used for dynamic routing into the appropriate message flow. | |Yes
+|Schema a|EDI schema for the message type. Options include:
 
 * *Use standard X12-<version>* +
-This setting applies the standard X12 schema for the version and message type configured.
+Applies the standard X12 schema for the version and message type configured.
 * *Customize* +
-This setting enables you to import a customized xref:connectors::x12-edi/x12-edi-schema-language-reference.adoc[EDI schema language] file, if your requirement is to make adjustments to the standard X12 schema.
+Enables you to import a customized xref:connectors::x12-edi/x12-edi-schema-language-reference.adoc[EDI schema language] file, if you need to make adjustments to the standard X12 schema.
 +
 When using the customized EDI schema, you can assign a custom name to the message type definition, for example, `X12-7050-204-PartnerName`.
 | Use standard X12-<version> |Yes
 |===
 
-You can find an https://www.mulesoft.com/exchange/works.integration/b2b-x12-custom-schema-example[example] of how to customize EDI schema in Anypoint Exchange.
+For an example that shows how to customize an X12 schema, see https://www.mulesoft.com/exchange/works.integration/b2b-x12-custom-schema-example[Customize EDI X12 Schema for B2B Integrations] in Anypoint Exchange.
 
 == See Also
 
 * xref:document-types.adoc[Message Types]
 * xref:partner-manager-create-message-type.adoc[Creating Message Types]
+* xref:delete-message-types.adoc[Deleting Message Types]

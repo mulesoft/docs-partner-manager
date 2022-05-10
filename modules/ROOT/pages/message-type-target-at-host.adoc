@@ -1,6 +1,6 @@
 == Target at Host Message Type
 
-The target at host message structure defines the way in which inbound transactions are transformed and sent to your backend applications.
+The target at host message type defines the way in which inbound transactions are transformed and sent to your backend applications.
 
 Use the following settings to define settings for inbound transactions:
 
@@ -9,8 +9,8 @@ Use the following settings to define settings for inbound transactions:
 |Setting |Description |Default | Required
 |Format a|The selected application message structure format:
 
-* *JSON*
-* *XML* |None |Yes
+* JSON
+* XML |None |Yes
 |Schema |The imported XSD or JSON schema file for the message type. |None |Yes
 |Name |The message type name that Partner Manager automatically generates from the schema filename, which you can later modify. |None |Yes
 |===
@@ -19,3 +19,4 @@ Use the following settings to define settings for inbound transactions:
 
 * xref:document-types.adoc[Message Types]
 * xref:partner-manager-create-message-type.adoc[Creating Message Types]
+* xref:delete-message-types.adoc[Deleting Message Types]

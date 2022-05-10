@@ -2,7 +2,7 @@
 
 You can create new message types from the *<host>* page or by using the Message Flow wizard.
 
-== Create a Message Flow from the Host Page
+== Create a Message Type from the Host Page
 
 To create a message type from the *<host>* page:
 
@@ -11,11 +11,11 @@ To create a message type from the *<host>* page:
 . In the *Usage* drop-down list, select the message usage.
 . Add values to the remaining settings.
 +
-For setting descriptions, see the topic corresponds to the message type usage:
+For setting descriptions, see the topic that corresponds to the message type usage:
 
-* <<receive-and-send-to-partners,Receive From and Send to Partners Message Type Settings>>
-* <<target-at-host,Target at Host Message Settings>>
-* <<source-at-host,Source at Host Message Settings>>
+* message-type-receive-from-partners.adoc[Receive From and Send to Partners Message Type Settings]
+* xref:message-type-target-at-host.adoc[Target at Host Message Type Settings]
+* xref:message-type-source-at-host.adoc[Source at Host Message Type Settings]
 
 +
 . Optionally add up to five custom message attributes to a Receive from Partners message type:
@@ -33,44 +33,13 @@ These values must be unique for the environment.
 +
 The message type appears in the *Message types* section on the host page.
 
-== Create a Message Flow from the Message Flow Wizard
+== Create a Message Type from the Message Flow Wizard
 
 To create a message type from the Message Flow Wizard, see xref:create-inbound-message-flow.adoc[Create Inbound Message Flows] and xref:create-outbound-message-flow.adoc[Create Outbound Message Flows].
 
 [[reference-ids-example]]
 == Reference Identifiers and Business Key Mapping Example
 
-The input to the DataWeave map is the payload that follows the schema uploaded in the definition for the Source at Host and Receive from Partner message types. The output must contain the following fields:
-
-* `partnerReferenceId` +
-Required identifier that uniquely identifies the receiving partner.
-* `hostReferenceId` +
-(Applies to Source at Host message types) Optional, except when backend systems are sending outbound transactions on behalf of different internal business units that require different mapping or sender identifiers to be set on the EDI data.
-* `businessDocumentKey` +
-Optional key reference value, such as `Order Number`or `Invoice Number`.
-
-This is an example DataWeave map for an XML payload from the backend application:
-
-[source,DataWeave,linenums]
-----
-%dw 2.0
-output application/json
-ns ns0 http://xmlns.mulesoft.com/enterpriseobjects/finance/purchaseorder/
----
-{
-	partnerReferenceId: payload.ns0#PurchaseOrder.ns0#VendorName,
-	hostReferenceId: payload.ns0#PurchaseOrder.ns0#LineOfBusiness,
-	businessDocumentKey: payload.ns0#PurchaseOrder.ns0#PONumber
-}
-
-Generated output:
-
-{
-"partnerReferenceId": "MYTHICAL SUPPLIER, LLC",
-"hostReferenceId": "NTO Retail Canada",
-"businessDocumentKey": "INVOICE-005"
-}
-----
 
 == See Also
 
