@@ -19,7 +19,7 @@ EDIFACT message type, such as `ORDERS`, `DESADV`, or `INVOIC`.
  |  | Yes
 | Custom Attributes | Enables you to select a DataWeave map that defines the custom message attributes.
 | | No
-|Reference identifiers and business key mappings | Uploaded DataWeave script with a mapping that extracts the reference identifiers and business key mappings from the payload received from the partner. The extracted values are used for dynamic routing into the appropriate message flow. | |Yes
+|Reference identifiers and attributes mapping | Uploaded DataWeave map that extracts the reference identifiers and and custom attributes from the payload received from the partner. The extracted reference identifier values are used for dynamic routing into the appropriate message flow. | |Yes
 |Schema a|EDI schema for the message type. Options include:
 
 * *Use standard EDIFACT-<version>* +
