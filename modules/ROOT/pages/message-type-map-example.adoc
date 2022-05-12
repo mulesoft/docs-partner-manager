@@ -1,33 +1,19 @@
-= DataWeave Map Example
+= Map Examples for Identifiers and Custom attributes
 
-The input to the DataWeave map is the payload that follows the schema uploaded in the definition for the Source at Host and Receive from Partner message types. The output must contain the following fields:
+The input to the DataWeave map is the payload that follows the schema uploaded in the definition for the Source at Host and Receive from Partner message types.
 
-* `partnerReferenceId` +
+The output to the map contains the following fields:
+
+* `partnerReferenceId`
++
 Required identifier that uniquely identifies the receiving partner.
-* `hostReferenceId` +
-(Applies to Source at Host message types) Optional, except when backend systems are sending outbound transactions on behalf of different internal business units that require different mapping or sender identifiers to be set on the EDI data.
-* `businessDocumentKey` +
-Optional key reference value, such as `Order Number`or `Invoice Number`.
-
-This is an example DataWeave map for an XML payload from the backend application:
-
-[source,DataWeave,linenums]
-----
-%dw 2.0
-output application/json
-ns ns0 http://xmlns.mulesoft.com/enterpriseobjects/finance/purchaseorder/
----
-{
-	partnerReferenceId: payload.ns0#PurchaseOrder.ns0#VendorName,
-	hostReferenceId: payload.ns0#PurchaseOrder.ns0#LineOfBusiness,
-	businessDocumentKey: payload.ns0#PurchaseOrder.ns0#PONumber
-}
-
-Generated output:
-
-{
-"partnerReferenceId": "MYTHICAL SUPPLIER, LLC",
-"hostReferenceId": "NTO Retail Canada",
-"businessDocumentKey": "INVOICE-005"
-}
-----
++
+* `hostReferenceId`
++
+Optional, except when backend systems are sending outbound transactions on behalf of different internal business units that require different mapping or sender identifiers to be set on the EDI data.
++
+* `businessDocumentKey`
++
+Optional key reference value, such as Order Number` or `Invoice Number`.
++
+*

@@ -19,7 +19,7 @@ For setting descriptions, see the topic that corresponds to the message type usa
 * xref:message-type-source-at-host.adoc[Source at Host Message Type Settings]
 
 +
-. Optionally add up to five custom message attributes to a Receive from Partners message type:
+. Optionally add up to five custom message attributes to a Receive from Partners or Source at Host message type:
 
 .. When you complete the fields on the *New Message type* window, in the *Custom attributes* field, select a DataWeave map that defines the custom attributes.
 .. Click *New Message Attribute*.
@@ -37,9 +37,6 @@ The message type appears in the *Message types* section on the host page.
 == Create a Message Type from the Message Flow Wizard
 
 To create a message type from the Message Flow Wizard, see xref:create-inbound-message-flow.adoc[Create Inbound Message Flows] and xref:create-outbound-message-flow.adoc[Create Outbound Message Flows].
-
-[[reference-ids-example]]
-== Reference Identifiers and Business Key Mapping Example
 
 
 == See Also
