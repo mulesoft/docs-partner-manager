@@ -41,7 +41,7 @@ Use the following settings to define JSON or XML as the protocol for the Receive
 |Format | Format of the message. Allowed values are `JSON` or `XML`. | |Yes
 |Schema | Imported JSON or XSD schema file for the message type. | |Yes
 |Message type identifier | Message identifier value used in the dynamic message routing of inbound B2B transactions. Partner Manager automatically generates a message type identifier from the schema filename. You can modify this value. | |Yes
-|Reference identifiers and business key mappings | Uploaded DataWeave script with a mapping that extracts the reference identifiers and business key mappings from the payload received from the partner. The extracted values are used for dynamic routing into the appropriate message flow. | |Yes
+|Reference identifiers and attributes mapping| Uploaded DataWeave script with a mapping that extracts the reference identifiers, business key mappings, and custom attributes from the payload received from the partner. The extracted values are used for dynamic routing into the appropriate message flow. | |Yes
 |===
 
 == X12

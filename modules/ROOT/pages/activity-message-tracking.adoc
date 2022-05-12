@@ -23,22 +23,25 @@ You can retrieve up to one week's worth of messages.
 * Partner name
 * Partner message type, such as `X12 - 850`
 * Host message type, such as `JSON host-purchase-order`
-* Message attribute
+* Message attribute, if the message type associated with the message has custom attributes
 
 +
-Partner Manager returns a list of messages that meet your search criteria along with related information.
+Partner Manager returns a list of messages that meet your search criteria along with related information such as *xxx*.
 +
 . Select a message to review additional information about the message and to view its message flow.
 
-== View Details for an Inbound Message
+== View Additional Details for an Inbound Message
 
-The details for an inbound message include the following information:
+The additional details for an inbound message include the following information:
 
-* Transmission status (a green checkmark for success or a red exclamation point for failure)
-* Date and time when the message was received from the source endpoint
-* Functional acknowledgement, if one exists
+* Functional acknowledgement name, if one exists
+//// * Date and time when the source endpoint received the message was received from the source endpoint
+////
 * Information about the message source, including the partner message type, endpoint name, filename, and protocol
 * Identifiers and control number associated with the message
+////
+* Data and time when the target endoint received the message or when the message errored.
+////
 * Information about the message target, including the target message type, protocol, and endpoint name
 
 Take any of the following actions to view and download additional information about the inbound message:
@@ -64,14 +67,14 @@ a|
 | View and download the MDN message sent to the partner in response to inbound AS2 transmissions.
 a|
 . Click the link in the *Transmission details* field to access the *Transmission Flow* section.
-. In the *sent MDN* field, click *View MDN*.
+. In the *Sent MDN* field, click *View MDN*.
 . Specify a wrap character, if needed.
 . Click *Download*.
 | View and download the EDIFACT CONTRL message or X12 997
 acknowledgement message sent to the partner, if one exists.
 a|
 . Click the link in the *Transmission details* field to access the *Transmission Flow* section.
-. In the *Processed message through message flows* field, click *View Control*.
+. In the *Processed message through message flows* section, click *View Control* or *View 997*.
 . Specify a wrap character, if needed.
 . Click *Download*.
 |View the message flow diagram for the transmitted message.
@@ -97,7 +100,7 @@ Take any of the following actions to view and download additional information ab
 |===
 |Action |Steps
 
-|View and download the transmission metadata.
+|View and download the payload transmitted to the partner.
 a|
 . In the *Summary* section, click the link in the *Transmission details* field.
 . Click the link in the *File* field.
@@ -105,13 +108,13 @@ a|
 . Click *Download*.
 |View information about the source (Source at Host) endpoint.
 | In the *Source* section, click the link in the *Source endpoint* field.
-| View information about the target (Send to Partners) endpoint.
-| In the *Target* section, click the link in the *Target endpoint* field.
 | View and download the payload received from the backend.
 a|
 . In the *Source* section, click the link in the *Source file* field.
 . Specify a wrap character, if needed.
 . Click *Download*.
+| View information about the target (Send to Partners) endpoint.
+| In the *Target* section, click the link in the *Target endpoint* field.
 | View and download the payload sent to the partner.
 a|
 . In the *Target* section, click the link in the *Target file* field.

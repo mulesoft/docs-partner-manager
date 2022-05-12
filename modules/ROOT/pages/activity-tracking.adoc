@@ -1,4 +1,5 @@
 = Tracking Transmissions
+*Add info about viewing info about transmission errors and message validation errors*
 
 In Anypoint Partner Manager, one transmission can consist of one or more messages. You can use Partner Manager to monitor transmissions, view their contents, and store both transmission contents and metadata.
 
@@ -24,21 +25,21 @@ You can retrieve up to one week's worth of transmissions.
 * Partner name
 * Partner message type, such as `X12 - 850`
 * Host message type, such as `JSON host-purchase-order`
-* Message attribute
+// * Message attribute
 
 +
-Partner Manager returns a list of transactions that meet your search criteria along with related information.
+Partner Manager returns a list of transmissions that meet your search criteria along with related information.
 +
 . Select a transmission to review additional information about the transmission and to view its message flow.
 
 == View Details for an Inbound Transmission
 
-The details for an inbound transmission include the following information:
+The additional details for an inbound transmission include the following information:
 
-* Transmission status (a green checkmark for success or a red exclamation point for failure)
+// * Transmission status (a green checkmark for success or a red exclamation point for failure)
 * Transmission ID
 +
-* Name of the transmitted file
+// * Name of the transmitted file (Not for inbound*)
 * Control number associated with the transmitted file, if available
 * Name of the receiving (Receive from Partners) endpoint
 * Date and time when the transmission was received
@@ -50,22 +51,22 @@ Take any of the following actions to view and download additional information ab
 |===
 |Action |Steps
 
-|View and download the payload received from the partner.
+|View and download the transmission payload received from the partner.
 a|
 . In the *Received transmission* field, click *View Payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-| View and download the MDN message sent to the partner in response to inbound AS2 messages.
+| View and download the MDN message sent to the partner in response to an inbound AS2 transmission.
 a|
 . In the *sent MDN* field, click *View MDN*.
 . Specify a wrap character, if needed.
 . Click *Download*.
 | View and download the EDIFACT CONTRL or X12 997 acknowledgement message sent to the partner, if one exists
 a|
-. In the *Processed message through message flows* field, click *View CONTRL*.
+. In the *Processed message through message flows* field, click *View CONTRL* or *View 997*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-|View the message flow diagram for the transmitted message.
+|View the message flow diagram for the transmission.
 |Click the link in the *Processed message through message flows* field.
 {sp} +
 {sp}+
@@ -76,9 +77,10 @@ From the message flow diagram, you can expand the message flow sections to view 
 
 The details for an outbound transmission include the following information:
 
-* Transmission status (a green checkmark for success or a red exclamation point for failure
+// * Transmission status (a green checkmark for success or a red exclamation point for failure
 * Transmission ID
 * Date and time when the file was sent
+* Control number associated with the transmitted file, if one exists
 * Message type, such as `mythical-po-ack-json: ORD-9892330`
 * Name of the sending (Send to Partners) endpoint
 * Name of the transmitted file
@@ -89,15 +91,9 @@ Take any of the following actions to view and download additional information ab
 |Action |Steps
 
 |View information about the sending (Send to Partner) endpoint. | In the *Summary* section, click the link in the *Endpoint* field.
-|View and download the transmission metadata.
+|View and download the transmission payload.
 a|
 . In the *Summary* section, click the link in the *File* field.
-. Specify a wrap character, if needed.
-. Click *Download*.
-| View and download the DataWeave map that transformed the transmission.
-a|
-. In the message flow diagram, expand the *Map* section.
-. Click the link in this secction.
 . Specify a wrap character, if needed.
 . Click *Download*.
 | View and download the payload received from the backend.
@@ -106,6 +102,19 @@ a|
 . Click *View Payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
+| View information about the source (Source at Host) endpoint
+a| . In the message flow diagram, expand the *Source* section.
+. Click the link in the *Received payload* section.
+| View and download the DataWeave map that transformed the transmission.
+a|
+. In the message flow diagram, expand the *Map* section.
+. Click the link in this secction.
+. Specify a wrap character, if needed.
+. Click *Download*.
+|View information about the message type, including its name, type, identifiers, and control numbers
+a|
+In the message flow diagram, expand the *Message Type* section.
+
 | View and download the payload sent to the partner.
 a|
 . In the message flow diagram, expand the *Sent to* section.
@@ -124,10 +133,7 @@ a|
 . In the *Sent transmission* field, click *View payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-
 |===
-
-From the message flow diagram, you can also view additional information, including information about the source (Source at Host) endpoint, DataWeave map, and message type.
 
 == See Also
 
