@@ -39,6 +39,8 @@ The message type appears in the *Message types* section on the host page.
 To create a message type from the Message Flow Wizard, see xref:create-inbound-message-flow.adoc[Create Inbound Message Flows] and xref:create-outbound-message-flow.adoc[Create Outbound Message Flows].
 
 
+
+
 == See Also
 
 * xref:delete-message-types.adoc[Deleting Message Types]
