@@ -1,0 +1,15 @@
+= Modifying Message Type Settings
+
+You can modify the settings of Receive from Partners message types that use the X12 or EDIFACT protocol.
+
+* Select a different map file for the reference identifiers, business key, and custom attributes mapping.
+* Select a different schema file, if the Schema field is set to *Customize*.
+* Add
+
+. In the navigation menu, select <*host-name*>.
+. Locate the message type you want to modify.
+.
+
+Click the partner.
+
+Change any of the following settings:

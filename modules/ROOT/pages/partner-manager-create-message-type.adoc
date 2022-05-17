@@ -38,6 +38,71 @@ The message type appears in the *Message types* section on the host page.
 
 To create a message type from the Message Flow Wizard, see xref:create-inbound-message-flow.adoc[Create Inbound Message Flows] and xref:create-outbound-message-flow.adoc[Create Outbound Message Flows].
 
+== Create a Reference Map for a Message Type
+
+When you create a new message type, you must associate it with a DataWeave map if you want to track specific payload values:
+
+* The input of the map is the payload that follows the schema uploaded in the definition for the message type.
+* The output of the map contains the following fields:
+
+* `partnerReferenceId`
++
+Required identifier that uniquely identifies the receiving partner.
++
+* `hostReferenceId`
++
+Required if the backend app sends outbound transactions on behalf of different internal business units that require different mapping or sender identifiers on the EDI data.
++
+* `businessDocumentKey`
++
+Optional key reference value, such as the order number or invoice number.
++
+* Custom attributes, if the associated message type has custom attributes defined.
+
+For example, the following map transforms the XML payload from a backend application. In this example:
+
+* `partnerReferenceId` is set to the payload's `ReceiverID` value,`MYTHICAL`.
+* `SenderID` is set to the payload's `LineOfBusiness` value, `NTORetail`.
+* `BusinessDocumentKey` is set to the payload's `BusinessKey` value, `ORD-002-000`.
+* The `PO Number` custom attribute is set to the payload's `purchaseOrder` value, `ORD-002-000`.
+* The `Invoice Number` custom attribute is set to the payload's `invoiceNumber` value, `INV3423872`.
+
+----
+%dw 2.0
+output application/json
+---
+{partnerReferenceId: payload.B2BMessage.Header.ReceiverID,
+hostReferenceId: payload.B2BMessage.Header.SenderID,
+businessDocumentKey: payload.B2BMessage.Header.BusinessKey,
+"attributes":[
+  {label: "PO Number",
+  values: payload.B2BMessage.purchaseOrder},
+  {label: "Invoice Number",
+  values: payload.B2BMessage.invoiceNumber}
+  ]
+}
+----
+
+Generated output:
+
+----
+{
+"partnerReferenceId": "Mythical",
+"hostReferenceId": "NTORetail",
+"businessDocumentKey": "ORD-002-000",
+"attributes":[
+  {
+	"label": "Purchase Order",
+  "values": "ORD-002-000"
+	},
+	{
+	"label":"Invoice Number"
+	"values": INV3423872"
+	}
+]
+}
+----
+
 
 
 
