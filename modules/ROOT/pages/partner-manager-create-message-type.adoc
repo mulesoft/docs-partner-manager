@@ -19,17 +19,19 @@ For setting descriptions, see the topic that corresponds to the message type usa
 * xref:message-type-source-at-host.adoc[Source at Host Message Type Settings]
 
 +
-. Optionally add up to five custom message attributes to a Receive from Partners or Source at Host message type:
+. Optionally add custom message attributes to a Receive from Partners or Source at Host message type. You can add up to five custom message attributes per each message type.
 
-.. When you complete the fields on the *New Message type* window, in the *Custom attributes* field, select a DataWeave map that defines the custom attributes.
-.. Click *New Message Attribute*.
-.. Enter the attribute alias and label.
+To add custom message attributes to a message type:
+
+. After completing the fields on the *New Message type* window, in the *Custom attributes* field, select a DataWeave map that defines the custom attributes.
+. Click *New Message Attribute*.
+. Enter the attribute alias and label.
 +
-These values must be unique for the environment.
+The alias is used in the reference map that is associated with the message type. The label is used in the message view of the transactions. Both the alias and the label must be unique across the host.
 +
-.. To make the attribute searchable on the Activity window, select the *Is searchable* checkbox.
+. To make the attribute searchable on the Activity window, select the *Is searchable* checkbox.
 +
-.. Repeat these steps for each new attribute you want to define.
+. Repeat these steps for each new attribute you want to define.
 . Click *Save*.
 +
 The message type appears in the *Message types* section on the host page.
@@ -40,71 +42,160 @@ To create a message type from the Message Flow Wizard, see xref:create-inbound-m
 
 == Create a Reference Map for a Message Type
 
-When you create a new message type, you must associate it with a DataWeave map if you want to track specific payload values:
+When you create a new message type, you must associate it with a DataWeave map if you want to track the values of custom messaging attributes in the payload:
 
 * The input of the map is the payload that follows the schema uploaded in the definition for the message type.
 * The output of the map contains the following fields:
 
-** `partnerReferenceId`
-+
-Required identifier that uniquely identifies the receiving partner.
-+
-** `hostReferenceId`
-+
-Required if the backend app sends outbound transactions on behalf of different internal business units that require different mapping or sender identifiers on the EDI data.
-+
-** `businessDocumentKey`
-+
-Optional key reference value, such as the order number or invoice number.
-+
-** Custom attributes, if the associated message type has custom attributes defined.
+|===
+| *Field* | *Description* | *Required*
+| partnerReferenceId
+| Identifier that uniquely identifies the partner
+a| Yes, for:
 
-For example, the following map transforms the XML payload from a backend application. In this example:
+* All Source at Host message types
+* Receive from Partners message types with JSON or XML format
+| hostReferenceId
+| Identifier that uniquely identifies the host
+a| No. This field is optional for:
 
-* `partnerReferenceId` is set to the payload's `ReceiverID` value:`MYTHICAL`.
-* `SenderID` is set to the payload's `LineOfBusiness` value: `NTORetail`.
-* `BusinessDocumentKey` is set to the payload's `BusinessKey` value: `ORD-002-000`.
-* The `PO Number` custom attribute is set to the payload's `purchaseOrder` value: `ORD-002-000`.
-* The `Invoice Number` custom attribute is set to the payload's `invoiceNumber` value, `INV3423872`.
+* All Source at Host message types
+* Receive from partners message types with JSON or XML format
+| BusinessDocumentKey
+|Key reference value, such as `Order Number` or `Invoice number`
+| No
+| Custom attributes
+| Array of attributes to extract from the payload.
+{sp}+
+{sp}+
+Use an array even if there is only one custom attribute to extract. This enables support for transactions with one-to-many relationships, such as a transactions in which one shipment notice includes multiple purchase order numbers.
+| No
+|===
+
+=== Example Map for a Receive from Partners Message Type
+
+The following map transforms a partner's inbound X12 payload. It contains the business document key and two custom attributes:
+
+* The `businessDocumentKey` is set to `payload.TransactionSets.v004010."856".Heading."020_BSN".BSN02[0] default ""`, which has a value of: `020201229153948475`.
+* The `shipmentId` attribute is set to `payload.TransactionSets.v004010."856".Heading."020_BSN".BSN02`, which has a value of `020201229153948475`.
+* The `purchaseOrderNumber` attribute is set to `flatten(flatten(poNumbers).values)`, which has this array of values:
+
+---
+ "value": [
+        "6821IIZE",
+        "982YZ456",
+        "765ZZ764"
+      ]
+---
+
+The input to the map looks like this:
 
 ----
 %dw 2.0
 output application/json
 ---
-{partnerReferenceId: payload.B2BMessage.Header.ReceiverID,
-hostReferenceId: payload.B2BMessage.Header.SenderID,
-businessDocumentKey: payload.B2BMessage.Header.BusinessKey,
-"attributes":[
-  {label: "PO Number",
-  values: payload.B2BMessage.purchaseOrder},
-  {label: "Invoice Number",
-  values: payload.B2BMessage.invoiceNumber}
-  ]
-}
+.
+.
+.
+{
+	businessDocumentKey: payload.TransactionSets.v004010."856".Heading."020_BSN".BSN02[0],
+	customAttributes: [
+		{
+			alias: "shipmentId",
+			value: payload.TransactionSets.v004010."856".Heading."020_BSN".BSN02
+		},
+		{
+			alias: "purchaseOrderNumber",
+			value: flatten(flatten(poNumbers).values)
 ----
 
-Generated output:
+The generated output of the map looks like this:
 
 ----
 {
-"partnerReferenceId": "Mythical",
-"hostReferenceId": "NTORetail",
-"businessDocumentKey": "ORD-002-000",
-"attributes":[
-  {
-	"label": "Purchase Order",
-  "values": "ORD-002-000"
-	},
-	{
-	"label":"Invoice Number"
-	"values": "INV3423872"
-	}
-]
+  "businessDocumentKey": "020201229153948475",
+  "customAttributes": [
+      "alias": "shipmentId",
+      "value": [
+        "020201229153948475"
+      ]
+    },
+    {
+      "alias": "purchaseOrderNumber",
+      "value": [
+        "6821IIZE",
+        "982YZ456",
+        "765ZZ764"
+      ]
+----
+
+=== Example Map for a Source at Host Message Type
+
+The following map transforms the outbound JSON or XML payload from the backend. It contains the partner reference ID, host reference Id, business document key and three custom attributes:
+
+* The `partnerReferenceId` is set to `payload.Header.CustomerName`, which has a value of `ALPHA-CAN`.
+The `hostReferenceId` is set to `payload.Invoice.Header.LineOfBusiness`, which has a value of `Mythical-MG`.
+* The `businessDocumentKey` is set to `payload.Invoice.Header.InvoiceNumber`, which has a value of: `INV97750061`.
+* The `invoiceNumber` attribute is set to `payload.Invoice.Header.InvoiceNumber`, which has a value of `INV97750061`.
+* The `purchaseOrderNumber` attribute is set to `payload.Invoice.Header.PurchaseOrderNumber`, which has a value of `ORD3893988`.
+* The `invoiceAmount` attribute is set to `payload.Invoice.Header.TotalInvoiceAmt`, which has a value of `$ 3756.24`.
+
+The input to the map looks like this:
+
+----
+%dw 2.0
+output application/json
+---
+{
+	partnerReferenceId: payload.Invoice.Header.CustomerName,
+	hostReferenceId: payload.Invoice.Header.LineOfBusiness default "MYTHICAL",
+	businessDocumentKey: payload.Invoice.Header.InvoiceNumber,
+	customAttributes: [
+		{
+			alias: "invoiceNumber",
+			value: [payload.Invoice.Header.InvoiceNumber default "UNKNOWN"]
+		},
+		{
+			alias: "purchaseOrderNumber",
+			value: [payload.Invoice.Header.PurchaseOrderNumber default "UNKNOWN"]
+		},
+		{
+			alias: "invoiceAmount",
+			value: [ "\$ " ++ payload.Invoice.Header.TotalInvoiceAmt default "UNKNOWN"]
+		}
+	]
 }
 ----
 
+The generated output of the map looks like this:
 
-
+----
+{
+  "partnerReferenceId": "ALPHA-CAN",
+  "hostReferenceId": "Mythical-MG",
+  "businessDocumentKey": "INV97750061",
+  "customAttributes": [
+    {
+      "alias": "invoiceNumber",
+      "value": [
+        "INV97750061"
+      ]
+    },
+    {
+      "alias": "purchaseOrderNumber",
+      "value": [
+        "ORD3893988"
+      ]
+    },
+    {
+      "alias": "invoiceAmount",
+      "value": [
+        "$ 3756.24"
+      ]
+    }
+  ]
+}
+----
 
 == See Also
 
