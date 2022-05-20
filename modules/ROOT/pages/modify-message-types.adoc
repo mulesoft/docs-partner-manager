@@ -2,36 +2,38 @@
 
 You can modify a message type's settings, but what you can modify depends on the message type's usage and protocol.
 
-
-Source at Host json
-schema file
-reference map uploaded with the message type definition
-Add message attribute
-*If you change the reference map can you change the attributes to match it? What if it dosen't include the defined custom attributes? Can you delete a custom attribute?
-
-Source at Host xml
-
-Receive from Partners XML
-custom-po-xml.xsd
-schema, reference map, but no attributes. Why is the map needed?
-
-
-
-Receive from Partners EDIFACT
-Reference map
-Add new message attributes
-
-Receive from Partners X12
-
-
-
-
-You can do the following to modify the settings of Receive from Partners message types that use the X12 or EDIFACT protocol:
-
-* Select a different reference map file to map the  reference identifiers, business key, and custom attributes.
-* Select a different schema file, if the Schema field is set to *Customize*.
-* Add
+To modify a message type's settings:
 
 . In the navigation menu, select <*host-name*>.
 . Locate the message type you want to modify.
 . Change any of the following settings:
+
+== Receive from Partners Message Types
+
+You can do the following to modify the settings of Receive from Partners message types:
+
+[%header%autowidth.spread]
+|===
+|Format | What You Can Modify
+| EDIFACT or X12
+a|
+* Select a different reference map file to map the reference identifiers, business key, and custom attributes.
+* Select a different schema file, if the *Schema* field is set to *Customize*.
+* Add new custom message attributes.
+| JSON or XML
+a|
+* Select a different schema file.
+* Select Select a different reference map file to map the reference identifiers, business key, and custom attributes.
+|===
+
+== Source at Host Message Types
+
+You can do the following to modify the settings of Source at Host message types:
+
+* Select a different schema file.
+* Select a different reference map file to map the reference identifiers, business key, and custom attributes.
+* Add new custom message attributes.
+
+== Target at Host Message Type
+
+* Select a different schema file, if the *Schema* field is set to *Customize*.
