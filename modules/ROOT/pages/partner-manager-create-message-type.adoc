@@ -54,13 +54,13 @@ When you create a new message type, you must associate it with a DataWeave map i
 a| Yes, for:
 
 * All Source at Host message types
-* Receive from Partners message types with JSON or XML format
+* Receive from Partners message types formatted with JSON or XML
 | hostReferenceId
 | Identifier that uniquely identifies the host
 a| No. This field is optional for:
 
 * All Source at Host message types
-* Receive from partners message types with JSON or XML format
+* Receive from partners message types formatted with JSON or XML
 | BusinessDocumentKey
 |Key reference value, such as `Order Number` or `Invoice number`
 | No
@@ -68,25 +68,25 @@ a| No. This field is optional for:
 | Array of attributes to extract from the payload.
 {sp}+
 {sp}+
-Use an array even if there is only one custom attribute to extract. This enables support for transactions with one-to-many relationships, such as a transactions in which one shipment notice includes multiple purchase order numbers.
+Use an array even if there is only one custom attribute to extract. This enables support for transactions with one-to-many relationships, such as transactions in which one shipment notice includes multiple purchase order numbers.
 | No
 |===
 
 === Example Map for a Receive from Partners Message Type
 
-The following map transforms a partner's inbound X12 payload. It contains the business document key and two custom attributes:
+The following map transforms a partner's inbound X12 payload. It contains a business document key and two custom attributes:
 
-* The `businessDocumentKey` is set to `payload.TransactionSets.v004010."856".Heading."020_BSN".BSN02[0] default ""`, which has a value of: `020201229153948475`.
+* The `businessDocumentKey` is set to `payload.TransactionSets.v004010."856".Heading."020_BSN".BSN02[0]`, which has a value of: `020201229153948475`.
 * The `shipmentId` attribute is set to `payload.TransactionSets.v004010."856".Heading."020_BSN".BSN02`, which has a value of `020201229153948475`.
 * The `purchaseOrderNumber` attribute is set to `flatten(flatten(poNumbers).values)`, which has this array of values:
 
----
+----
  "value": [
         "6821IIZE",
         "982YZ456",
         "765ZZ764"
       ]
----
+----
 
 The input to the map looks like this:
 
@@ -134,8 +134,8 @@ The generated output of the map looks like this:
 The following map transforms the outbound JSON or XML payload from the backend. It contains the partner reference ID, host reference Id, business document key and three custom attributes:
 
 * The `partnerReferenceId` is set to `payload.Header.CustomerName`, which has a value of `ALPHA-CAN`.
-The `hostReferenceId` is set to `payload.Invoice.Header.LineOfBusiness`, which has a value of `Mythical-MG`.
-* The `businessDocumentKey` is set to `payload.Invoice.Header.InvoiceNumber`, which has a value of: `INV97750061`.
+* The `hostReferenceId` is set to `payload.Invoice.Header.LineOfBusiness`, which has a value of `Mythical-MG`.
+* The `businessDocumentKey` is set to `payload.Invoice.Header.InvoiceNumber`, which has a value of `INV97750061`.
 * The `invoiceNumber` attribute is set to `payload.Invoice.Header.InvoiceNumber`, which has a value of `INV97750061`.
 * The `purchaseOrderNumber` attribute is set to `payload.Invoice.Header.PurchaseOrderNumber`, which has a value of `ORD3893988`.
 * The `invoiceAmount` attribute is set to `payload.Invoice.Header.TotalInvoiceAmt`, which has a value of `$ 3756.24`.

@@ -9,6 +9,7 @@ Use the following settings to define EDIFACT as the protocol for the Send to Par
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default | Required
+|Usage | Kind of message type | | Yes
 |Format | Format of the message.| |Yes
 |Version | List of valid versions: `D00A`, `D00B,` `D01A`, `D01B`, `D01C`, `D02A`, `D02B`, `D03A`, `D03B`, `D04A`, `D04B`, `D05A`, `D05B`, `D06A`, `D06B`, `D07A`, `D07B`, `D08A`, `D08B`, `D09A`, `D09B`, `D10A`, `D10B`, `D11A`, `D11B`, `D12A`, `D12B`, `D13A`, `D13B`, `D14A`, `D14B`, `D15A`, `D15B`, `D93A`, `D95B`, `D96A`, `D97A`, `D98A`, `D98B`, `D99A`, `D99B`
  |  |Yes
@@ -33,8 +34,9 @@ Use the following settings to define JSON or XML as the protocol for the Send to
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default | Required
-|Format | Format of the message. Allowed values are `JSON` or `XML`. | |Yes
+|Format | Format of the message.  | |Yes
 |Schema | Imported JSON or XSD schema file for the message type. | |Yes
+|Name | | | Yes
 |===
 
 == X12
@@ -44,6 +46,7 @@ Use the following settings to define X12 as the protocol for the Send to Partner
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default | Required
+|Usage | Kind of message type | |Yes
 |Format | Format of the message. |`X12`|Yes
 |Version | List of valid versions: `3010`, `3020`, `3030`, `3040`, `3050`, `3060`, `3070`, `4010`, `4020`, `4030`, `4040`, `4050`, `4060`, `5010`, `5020`, `5030`, `5040`, `5050`, `6020`, `6030`, `6040`, `6050`, `7010`, `7020`, `7030`, `7040`, `7050`
  |  |Yes
