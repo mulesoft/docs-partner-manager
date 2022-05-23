@@ -1,0 +1,164 @@
+= Create a Reference Map for a Message Type
+
+When you create a new message type, you can associate it with a DataWeave reference map. This is mandatory for Receive from Partners message types formatted with JSON or XML and for all Source at Host message types.
+
+* The input of the map is the payload that follows the schema uploaded in the definition for the message type.
+* The output of the map contains the following fields:
+
+|===
+| *Field* | *Description* | *Required*
+| partnerReferenceId
+| Identifier that uniquely identifies the partner
+a| Yes, for:
+
+* Receive from Partners message types formatted with JSON or XML
+* All Source at Host message types
+| hostReferenceId
+| Identifier that uniquely identifies the host
+a| No. This field is optional for:
+
+* Receive from partners message types formatted with JSON or XML
+* All Source at Host message types
+| BusinessDocumentKey
+|Key reference value, such as `Order Number` or `Invoice number`
+| No
+| customAttributes
+| Array of attributes to extract from the payload.
+{sp}+
+{sp}+
+Use an array even if there is only one custom attribute to extract. This enables support for transactions with one-to-many relationships, such as transactions in which one shipment notice includes multiple purchase order numbers.
+a| No. This field is optional for:
+
+* All Receive from Partners message types
+* Source at Host message types formatted with JSON or XML
+|===
+
+== Example Map for a Receive from Partners Message Type
+
+The following map transforms a partner's inbound X12 payload. It contains a business document key and two custom attributes:
+
+* The `businessDocumentKey` is set to `payload.TransactionSets.v004010."856".Heading."020_BSN".BSN02[0]`, which has a value of: `020201229153948475`.
+* The `shipmentId` attribute is set to `payload.TransactionSets.v004010."856".Heading."020_BSN".BSN02`, which has a value of `020201229153948475`.
+* The `purchaseOrderNumber` attribute is set to `flatten(flatten(poNumbers).values)`, which has this array of values:
+
+----
+ "value": [
+        "6821IIZE",
+        "982YZ456",
+        "765ZZ764"
+      ]
+----
+
+The input to the map looks like this:
+
+----
+%dw 2.0
+output application/json
+---
+.
+.
+.
+{
+	businessDocumentKey: payload.TransactionSets.v004010."856".Heading."020_BSN".BSN02[0],
+	customAttributes: [
+		{
+			alias: "shipmentId",
+			value: payload.TransactionSets.v004010."856".Heading."020_BSN".BSN02
+		},
+		{
+			alias: "purchaseOrderNumber",
+			value: flatten(flatten(poNumbers).values)
+----
+
+The generated output of the map looks like this:
+
+----
+{
+  "businessDocumentKey": "020201229153948475",
+  "customAttributes": [
+      "alias": "shipmentId",
+      "value": [
+        "020201229153948475"
+      ]
+    },
+    {
+      "alias": "purchaseOrderNumber",
+      "value": [
+        "6821IIZE",
+        "982YZ456",
+        "765ZZ764"
+      ]
+----
+
+== Example Map for a Source at Host Message Type
+
+The following map transforms the outbound JSON or XML payload from the backend. It contains the partner reference ID, host reference Id, business document key and three custom attributes:
+
+* The `partnerReferenceId` is set to `payload.Header.CustomerName`, which has a value of `ALPHA-CAN`.
+* The `hostReferenceId` is set to `payload.Invoice.Header.LineOfBusiness`, which has a value of `Mythical-MG`.
+* The `businessDocumentKey` is set to `payload.Invoice.Header.InvoiceNumber`, which has a value of `INV97750061`.
+* The `invoiceNumber` attribute is set to `payload.Invoice.Header.InvoiceNumber`, which has a value of `INV97750061`.
+* The `purchaseOrderNumber` attribute is set to `payload.Invoice.Header.PurchaseOrderNumber`, which has a value of `ORD3893988`.
+* The `invoiceAmount` attribute is set to `payload.Invoice.Header.TotalInvoiceAmt`, which has a value of `$ 3756.24`.
+
+The input to the map looks like this:
+
+----
+%dw 2.0
+output application/json
+---
+{
+	partnerReferenceId: payload.Invoice.Header.CustomerName,
+	hostReferenceId: payload.Invoice.Header.LineOfBusiness default "MYTHICAL",
+	businessDocumentKey: payload.Invoice.Header.InvoiceNumber,
+	customAttributes: [
+		{
+			alias: "invoiceNumber",
+			value: [payload.Invoice.Header.InvoiceNumber default "UNKNOWN"]
+		},
+		{
+			alias: "purchaseOrderNumber",
+			value: [payload.Invoice.Header.PurchaseOrderNumber default "UNKNOWN"]
+		},
+		{
+			alias: "invoiceAmount",
+			value: [ "\$ " ++ payload.Invoice.Header.TotalInvoiceAmt default "UNKNOWN"]
+		}
+	]
+}
+----
+
+The generated output of the map looks like this:
+
+----
+{
+  "partnerReferenceId": "ALPHA-CAN",
+  "hostReferenceId": "Mythical-MG",
+  "businessDocumentKey": "INV97750061",
+  "customAttributes": [
+    {
+      "alias": "invoiceNumber",
+      "value": [
+        "INV97750061"
+      ]
+    },
+    {
+      "alias": "purchaseOrderNumber",
+      "value": [
+        "ORD3893988"
+      ]
+    },
+    {
+      "alias": "invoiceAmount",
+      "value": [
+        "$ 3756.24"
+      ]
+    }
+  ]
+}
+----
+== See Also
+
+* xref:partner-manager-create-message-type.adoc[Creating a Message Type]
+* xref:partner-manager-modify-message-type.adoc[Modifying Message Type Settings]
+* xref:use-custom-attributes.adoc[Using Custom Message Attributes with Message Types]
