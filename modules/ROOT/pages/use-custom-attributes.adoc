@@ -1,38 +1,41 @@
-== Using Custom Message Attributes with a Message Type
+= Using Custom Message Attributes with Message Types
 
-You can associate up to five custom message attributes with a Receive from Partners or Source at Host message type.  Using these attributes enables you to have visibility into the full lifecycle of your B2B workflow.
+You can associate up to five custom message attributes with a Receive from Partners or Source at Host message type. Using these attributes enables you to have visibility into the full lifecycle of your B2B workflow.
 
-For example, you can define attributes such as PO number, Sales Order number, Invoice number, and Shipment Id. When you associate these attributes with a message type in a message flow, Partner Manager extracts this data from the inbound or outbound payload and displays it in the message view of the *Activity* window. From there, you can search for an attribute value, such as a specific PO Number, to view every message that has the attribute value.
+For example, you can define attributes such as PO number, Sales Order number, Invoice number, and Shipment id. When you associate these attributes with a message type in a message flow, Partner Manager extracts this data from the inbound or outbound payload and displays it in the message view of the *Activity* window. From there, you can search for an attribute value, such as a specific PO Number, so you can view every message that has the specified attribute value.
 
 == Create a Custom Message Attribute
 
-Use the <*host*> page to create new custom message attributes:
+Use the *<host>* page to create new custom message attributes:
 
-. In the navigation menu, select *<host-name>*.
+. In the navigation menu, select *<host>*.
 . From the *Custom message attributes* section, click *New*.
 . Enter the attribute alias and label.
 +
 The alias is used in the reference map that is associated with the message type. The label is used in the message view of the transactions. Both the alias and the label must be unique across the host.
 +
-. To make the attribute searchable on the Activity window, select the *Is searchable* checkbox.
+. To make the attribute searchable on the *Activity* window, select the *Is searchable* checkbox.
 +
 . Repeat these steps for each new attribute you want to define.
 . Click *Save*.
 
 == Associate a Custom Message Attribute with a Message Type
 
-To associate a custom message attribute with a message type, include definitions for those attributes in the reference map for the message type.
+To associate a custom message attribute with a message type, include definitions for those attributes in the reference map for the message type. For more information, see create-reference-map.adoc[Creating a Reference Map for a Message Type].
 
-== Dissociate a Custom Message Attribute with a Message Type
+== Dissociate a Custom Message Attribute from a Message Type
 
-To dissociate a custom message attribute from a message type, remove it from the referene map for the message type.
+To dissociate a custom message attribute from a message type, remove it from the reference map for the message type.
 
 == Delete a Custom Message Attribute
 
 You can delete custom attributes that are not used in reference maps:
 
-. In the navigation menu, select <*host-name*>.
+. In the navigation menu, select the *<host-name>*.
 . In the *Custom message attributes* section, locate the attribute you want to delete.
 . In the row containing the attribute you want to delete, hover over the attribute label, select the trash can that appears, and click *Delete*.
 
 == See Also
+
+* xref:partner-manager-create-message-types.adoc[Creating Message Types]
+* xref:partner-manager-modify-message-types.adoc[Modifying Message Type Settings]

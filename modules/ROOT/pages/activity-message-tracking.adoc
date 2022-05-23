@@ -13,6 +13,7 @@ Select a message to view its details and view and download its contents:
 . Search for the transmission.
 . Optionally filter the search results based on the following criteria:
 
+* Partner name
 * Message direction
 * Date range within which the message was sent
 +
@@ -20,13 +21,12 @@ You can retrieve up to one week's worth of messages.
 +
 * Acknowledgement status, such as `Overdue`
 * Message processing status, such as `Received`
-* Partner name
 * Partner message type, such as `X12 - 850`
 * Host message type, such as `JSON host-purchase-order`
 * Message attribute, if the message type associated with the message has custom attributes
 
 +
-Partner Manager returns a list of messages that meet your search criteria along with related information such as *xxx*.
+Partner Manager returns a list of messages that meet your search criteria along with related information such as the date the transmission was received, message status, message type, partner, document ID, business key, and acknowledgement status.
 +
 . Select a message to review additional information about the message and to view its message flow.
 
@@ -34,15 +34,13 @@ Partner Manager returns a list of messages that meet your search criteria along 
 
 The additional details for an inbound message include the following information:
 
+* Message ID
+* Transmission ID
+* Message flow name
 * Functional acknowledgement name, if one exists
-//// * Date and time when the source endpoint received the message was received from the source endpoint
-////
-* Information about the message source, including the partner message type, endpoint name, filename, and protocol
+* Information about the message source, including the date and time when the message was received from the source, partner message type, endpoint name, filename, and target protocol
 * Identifiers and control number associated with the message
-////
-* Data and time when the target endoint received the message or when the message errored.
-////
-* Information about the message target, including the target message type, protocol, and endpoint name
+* Information about the message target, including the date and time when the message was delivered, host message type, target endpoint, protocol, and target filename
 
 Take any of the following actions to view and download additional information about the inbound message:
 

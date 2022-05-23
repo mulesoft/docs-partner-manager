@@ -9,7 +9,7 @@ When you create a new message type, you can associate it with a DataWeave refere
 | *Field* | *Description* | *Required*
 | partnerReferenceId
 | Identifier that uniquely identifies the partner
-a| Yes, for:
+a| Yes. This field is required for:
 
 * Receive from Partners message types formatted with JSON or XML
 * All Source at Host message types

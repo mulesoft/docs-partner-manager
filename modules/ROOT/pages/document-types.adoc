@@ -18,9 +18,10 @@ Defines the structure of the transactions that the host sends to partners or thi
 +
 Defines the structure of the transactions that the host sends to partners or third-party connections
 
-Message types are always managed in the host profile page, regardless of whether they are used for a single partner or for multiple trading partners. Additionally, message types are reusable across message flows for different trading partners.
+Message types are always managed in the host profile page, regardless of whether they are used for a single partner or for multiple partners. Additionally, message types are reusable across message flows for different trading partners.
 
 == See Also
 
 * xref:partner-manager-create-message-type.adoc[Creating Message Types]
-* xref:delete-message-types.adoc[Deleting Message Types]
+* xref:modify-message-types.yml[Modifying Message Types]
+* xref:delete-message-types.adoc[Deleting Message Type Settings]

@@ -18,7 +18,9 @@ For setting descriptions, see the topic that corresponds to the message type usa
 * xref:message-type-target-at-host.adoc[Target at Host Message Type Settings]
 * xref:message-type-source-at-host.adoc[Source at Host Message Type Settings]
 
+////
 After creating a Receive from Partners or Source at Host message type, you can optionally add up to five custom message attributes to that message type. For information, see xxx.
+////
 
 == Create a Message Type from the Message Flow Wizard
 
@@ -26,6 +28,7 @@ To create a message type from the Message Flow Wizard, see xref:create-inbound-m
 
 == See Also
 
+* xref:modify-message-type-settings.adoc[Modifying Message Type Settings]
 * xref:delete-message-types.adoc[Deleting Message Types]
 * xref:create-outbound-message-flow.adoc[Creating Outbound Message Flows]
 * xref:configure-message-flows.adoc[Creating Inbound Message Flows]

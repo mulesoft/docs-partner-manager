@@ -1,10 +1,8 @@
 = Modifying Message Types
 
-You can modify a message type's settings, but what you can modify depends on the message type's usage and protocol.
+You can modify a message type's settings, but what you can modify depends on the message type's usage and protocol:
 
-To modify a message type's settings:
-
-. In the navigation menu, select <*host-name*>.
+. In the navigation menu, select the <*host-name*> page.
 . Locate the message type you want to modify.
 . Change any of the following settings in the *Edit message type* window:
 +
@@ -46,3 +44,4 @@ a|
 == See Also
 
 * xref:partner-manager-create-message-type.adoc[Creating Message Types]
+* xref:delete-message-type-settings[Deleting Message Type Settings]
