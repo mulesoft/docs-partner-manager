@@ -36,7 +36,7 @@
    *** xref:delete-identifiers.adoc[Delete Identifiers]
  ** xref:document-types.adoc[Message Types]
   *** xref:partner-manager-create-message-type.adoc[Creating Message Types]
-  *** xref:modify-message-types.adoc[Modifying Message Types]
+  *** xref:modify-message-type-settings.adoc[Modifying Message Types]
   *** xref:partner-manager-delete-message-types.adoc[Deleting Message Types]
   *** xref:message-type-receive-from-partners.adoc[Receive from Partners Message Type Settings]
   *** xref:message-type-send-to-partners.adoc[Send to Partners Message Type Settings]
