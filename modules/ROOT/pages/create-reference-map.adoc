@@ -160,5 +160,5 @@ The generated output of the map looks like this:
 == See Also
 
 * xref:partner-manager-create-message-type.adoc[Creating a Message Type]
-* xref:partner-manager-modify-message-type.adoc[Modifying Message Type Settings]
+* xref:modify-message-type-settings.adoc[Modifying Message Type Settings]
 * xref:use-custom-attributes.adoc[Using Custom Message Attributes with Message Types]

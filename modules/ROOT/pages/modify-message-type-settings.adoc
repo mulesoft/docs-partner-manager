@@ -2,7 +2,7 @@
 
 You can modify a message type's settings, but what you can modify depends on the message type's usage and protocol:
 
-. In the navigation menu, select the <*host-name*> page.
+. In the navigation menu, select the *<host-name>* page.
 . Locate the message type you want to modify.
 . Change any of the following settings in the *Edit message type* window:
 +
@@ -12,8 +12,8 @@ You can modify a message type's settings, but what you can modify depends on the
 | Receive from Partners
 | EDIFACT or X12
 a|
-* Select a different reference map file to map the reference identifiers, business key, and custom attributes.
 * Select a different schema file, if the *Schema* field is set to *Customize*.
+* Select a different reference map file to map the reference identifiers, business key, and custom attributes.
 * Add new custom message attributes.
 |
 | JSON or XML
@@ -26,8 +26,8 @@ a|
 | Source at Host
 | EDIFACT or X12
 a|
-* Select a different reference map file to map the reference identifiers, business key, and custom attributes.
 * Select a different schema file, if the *Schema* field is set to *Customize*.
+* Select a different reference map file to map the reference identifiers, business key, and custom attributes.
 * Add new custom message attributes.
 |
 | JSON or XML
@@ -44,4 +44,5 @@ a|
 == See Also
 
 * xref:partner-manager-create-message-type.adoc[Creating Message Types]
+* xref:create-reference-map.adoc[Creating Reference Maps for Message Types]
 * xref:delete-message-type-settings[Deleting Message Type Settings]

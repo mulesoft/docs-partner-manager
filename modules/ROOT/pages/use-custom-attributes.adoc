@@ -37,5 +37,5 @@ You can delete custom attributes that are not used in reference maps:
 
 == See Also
 
-* xref:partner-manager-create-message-types.adoc[Creating Message Types]
-* xref:partner-manager-modify-message-types.adoc[Modifying Message Type Settings]
+* xref:partner-manager-create-message-type.adoc[Creating Message Types]
+* xref:modify-message-type-settings.adoc[Modifying Message Type Settings]

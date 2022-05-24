@@ -1,8 +1,6 @@
 = Receive from Partners Message Type Settings
 
-The Receive from Partners message type defines the way in which Anypoint Partner Manager transforms the inbound transactions sent from your partner to your organization.
-
-These transactions typically follow JSON, EDIFACT, X12, or XML standards.
+The Receive from Partners message type defines the way in which Anypoint Partner Manager transforms the inbound transactions sent from your partner to your organization. These transactions typically follow JSON, EDIFACT, X12, or XML standards.
 
 == EDIFACT
 
@@ -27,8 +25,7 @@ The extracted reference identifier values are used for dynamic routing into the 
 Applies the standard EDIFACT schema for the configured format and version.
 * *Customize* +
 Enables you to import a customized xref:connectors::x12-edi/x12-edi-schema-language-reference.adoc[EDI schema language] file, if your need to make adjustments to the standard EDIFACT schema.
-{sp} +
-{sp} +
++
 When using the customized EDI schema, you can assign a custom name to the message type definition, for example, `EDIFACT-d97a-ORDERS-<PartnerName>`.
 | Use standard EDIFACT <version>| Yes
 |===
@@ -82,4 +79,5 @@ For an example that shows how to customize an X12 schema, see https://www.muleso
 
 * xref:document-types.adoc[Message Types]
 * xref:partner-manager-create-message-type.adoc[Creating Message Types]
+* xref:using-custom-attributes.adoc[Using Custom Attributes with Message Types]
 * xref:delete-message-types.adoc[Deleting Message Types]
