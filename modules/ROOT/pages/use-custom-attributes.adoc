@@ -2,7 +2,7 @@
 
 You can associate up to five custom message attributes with a Receive from Partners or Source at Host message type. Using these attributes enables you to have visibility into the full lifecycle of your B2B workflow.
 
-For example, you can define attributes such as PO number, Sales Order number, Invoice number, and Shipment id. When you associate these attributes with a message type in a message flow, Partner Manager extracts this data from the inbound or outbound payload and displays it in the message view of the *Activity* window. From there, you can search for an attribute value, such as a specific PO Number, so you can view every message that has the specified attribute value.
+For example, you can define attributes for a message's PO number, Sales order number, Invoice number, and Shipment ID. When you associate these attributes with a message type in a message flow, Partner Manager extracts this data from the inbound or outbound payload and displays it in the message view of the *Activity* window. From there, you can search for an attribute value, such as a specific PO Number, so you can view every message that has the specified attribute value.
 
 == Create a Custom Message Attribute
 
@@ -21,11 +21,11 @@ The alias is used in the reference map that is associated with the message type.
 
 == Associate a Custom Message Attribute with a Message Type
 
-To associate a custom message attribute with a message type, include definitions for those attributes in the reference map for the message type. For more information, see create-reference-map.adoc[Creating a Reference Map for a Message Type].
+To associate a custom message attribute with a message type, include definitions for those attributes in the message type's reference map. For more information, see xref:create-reference-map.adoc[Creating Reference Maps for Message Types].
 
 == Dissociate a Custom Message Attribute from a Message Type
 
-To dissociate a custom message attribute from a message type, remove it from the reference map for the message type.
+To dissociate a custom message attribute from a message type, remove it from the message type's reference map.
 
 == Delete a Custom Message Attribute
 

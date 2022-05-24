@@ -1,4 +1,4 @@
-= Create a Map For XML or JSON to Outbound X12
+= Create a Translation Map For XML or JSON to Outbound X12
 
 Create a template project in Anypoint Studio to import a template that creates a DataWeave map to transform application formats such as XML and JSON to outbound EDI X12 transactions, then test the map locally.
 

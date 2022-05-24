@@ -1,4 +1,4 @@
-= Create a Reference Map for a Message Type
+= Creating Reference Maps for Message Types
 
 When you create a new message type, you can associate it with a DataWeave reference map. This is mandatory for Receive from Partners message types formatted with JSON or XML and for all Source at Host message types.
 
