@@ -1,18 +1,16 @@
 == Target at Host Message Type
 
-The target at host message type defines the way in which inbound transactions are transformed and sent to your backend applications.
+The Target at Host message type defines the way in which Anypoint Partner Manager transforms inbound transactions sent from your organization to your backend applications.
 
-Use the following settings to define settings for inbound transactions:
+Use the following settings to define JSON or XML settings for the Target at Host message type:
 
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default | Required
-|Format a|The selected application message structure format:
-
-* JSON
-* XML |None |Yes
-|Schema |The imported XSD or JSON schema file for the message type. |None |Yes
-|Name |The message type name that Partner Manager automatically generates from the schema filename, which you can later modify. |None |Yes
+|Format a|Format of the message. Allowed value is `JSON` or `XML`.
+||Yes
+|Schema |Imported JSON or XSD schema file for the message type. | |Yes
+|Name |Message type name that Partner Manager automatically generates from the schema filename. You can modify this name. | |Yes
 |===
 
 == See Also

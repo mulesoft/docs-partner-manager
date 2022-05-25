@@ -9,22 +9,23 @@ Use the following settings to define EDIFACT as the protocol for the Send to Par
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default | Required
-|Usage | Message usage. Allowed value is `Send to Partner`. | | Yes
+|Usage | Message usage. Allowed value is `Send to partners`. | | Yes
 |Format | Format of the message. Allowed value is `EDIFACT`.| |Yes
-|Version | List of valid versions: `D00A`, `D00B,` `D01A`, `D01B`, `D01C`, `D02A`, `D02B`, `D03A`, `D03B`, `D04A`, `D04B`, `D05A`, `D05B`, `D06A`, `D06B`, `D07A`, `D07B`, `D08A`, `D08B`, `D09A`, `D09B`, `D10A`, `D10B`, `D11A`, `D11B`, `D12A`, `D12B`, `D13A`, `D13B`, `D14A`, `D14B`, `D15A`, `D15B`, `D93A`, `D95B`, `D96A`, `D97A`, `D98A`, `D98B`, `D99A`, `D99B`
+|Version | EDIFACT version, such as `d03b` or `d12a`.
  |  |Yes
 |Message type |
 EDIFACT message type, such as `ORDERS`, `DESADV`, or `INVOIC`.
  | | Yes
 |Schema a|EDI schema for the message type. Options include:
 
-* *Use standard EDIFACT-<version>* +
+* *Use standard EDIFACT-<version>-<message-type>* +
 Applies the standard EDIFACT schema for the version and message type configured.
 * *Customize* +
-Enables you to import a customized xref:connectors::x12-edi/x12-edi-schema-language-reference.adoc[EDI schema language] file, if you need to make adjustments to the standard EDIFACT schema.
+Enables you to import a customized xref:connectors::x12-edi/x12-edi-schema-language-reference.adoc[EDI schema language] file if you need to make adjustments to the standard EDIFACT schema.
 +
-When using the customized EDI schema, you can assign a custom name to the message type definition, for example, `EDIFACT-d97a-ORDERS-<PartnerName>`.
+When using a customized EDI schema, you can assign a custom name to the message type definition, for example, `EDIFACT-d97a-ORDERS-<PartnerName>`.
 | Use standard EDIFACT- <version>| Yes
+|Name | | Yes
 |===
 
 == JSON or XML
@@ -34,7 +35,7 @@ Use the following settings to define JSON or XML as the protocol for the Send to
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default | Required
-|Usage | Message usage. Allowed value is `Send to Partner`. | | Yes
+|Usage | Message usage. Allowed value is `Send to partners`. | | Yes
 |Format | Format of the message. Allowed value is `JSON` or `XML`. | |Yes
 |Schema | Imported JSON or XSD schema file for the message type. | |Yes
 |Name | Name of the new message type |Yes
@@ -47,21 +48,21 @@ Use the following settings to define X12 as the protocol for the Send to Partner
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default | Required
-|Usage | Message usage. Allowed value is `Send to Partner`.| |Yes
+|Usage | Message usage. Allowed value is `Send to partners`.| |Yes
 |Format | Format of the message. Allowed value is `X12`. ||Yes
-|Version | List of valid versions: `3010`, `3020`, `3030`, `3040`, `3050`, `3060`, `3070`, `4010`, `4020`, `4030`, `4040`, `4050`, `4060`, `5010`, `5020`, `5030`, `5040`, `5050`, `6020`, `6030`, `6040`, `6050`, `7010`, `7020`, `7030`, `7040`, `7050`
+|Version | X12 version, such as `3010` or `5040`.
  |  |Yes
-|Message type |X12 transaction set number, such as `850` for *Purchase Order* or `214` for *Shipment Status*. | | Yes
+|Message type |X12 transaction set number, such as `850` for a purchase order or `214` for the shipment status. | | Yes
 |Schema a|EDI schema for the message type. Options include:
 
-* *Use standard X12-<version>* +
+* *Use standard X12-<version>-<message-type>* +
 Applies the standard X12 schema for the version and message type configured.
 * *Customize* +
-Enables you to import a customized xref:connectors::x12-edi/x12-edi-schema-language-reference.adoc[EDI schema language] file, if you need to make adjustments to the standard X12 schema.
+Enables you to import a customized xref:connectors::x12-edi/x12-edi-schema-language-reference.adoc[EDI schema language] file if you need to make adjustments to the standard X12 schema.
 +
 When using the customized EDI schema, you can assign a custom name to the message type definition, for example, `X12-7050-204-PartnerName`.
 | Use standard X12-<version> |Yes
-| Name of the new message type | |Yes
+| Message type name that Partner Manager automatically generates from the schema filename. You can modify this name.  | |Yes
 |===
 
 For an example that shows how to customize an X12 schema, see https://www.mulesoft.com/exchange/works.integration/b2b-x12-custom-schema-example[Customize EDI X12 Schema for B2B Integrations] in Anypoint Exchange.
