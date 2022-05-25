@@ -1,6 +1,6 @@
 = Source at Host Message Type
 
-The Source at Host message type defines the way in which your backend applications transform outbound transactions and send them to your partners.
+The Source at Host message type defines the way in which your backend applications transform outbound transactions and send them to your organization.
 
 Use the following settings to define JSON or XML settings for the Source at Host message type:
 
@@ -19,7 +19,7 @@ Your partner must pass this value when sending messages, files, or both to Partn
 
 See xref:outbound-message-routing.adoc[Outbound Message Routing] to understand how outbound routing is performed and how your backend applications should pass the message type identifier when sending application messages to Partner Manager endpoints. | |Yes
 
-|Reference identifiers and attributes mapping |Uploaded DataWeave map that extracts the reference identifiers, business key, and messaging attributes from the payload received from the backend application.
+|Reference identifiers and attributes mapping |Uploaded DataWeave map that extracts the reference identifiers, business key, and message attributes from the payload received from the backend application.
 {sp} +
 {sp} +
 The extracted values for the reference identifiers and business key are used for dynamic routing into the appropriate message flow. |None |Yes
@@ -29,5 +29,5 @@ The extracted values for the reference identifiers and business key are used for
 
 * xref:document-types.adoc[Message Types]
 * xref:partner-manager-create-message-type.adoc[Creating Message Types]
-* xref:using-custom-attributes.adoc[Using Custom Attributes with Message Types]
+* xref:using-custom-attributes.adoc[Using Custom Message Attributes with Message Types]
 * xref:delete-message-types.adoc[Deleting Message Types]

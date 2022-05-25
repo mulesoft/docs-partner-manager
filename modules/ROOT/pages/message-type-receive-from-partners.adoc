@@ -15,10 +15,11 @@ Use the following settings to define EDIFACT as the protocol for the Receive fro
 |Message type |
 EDIFACT message type, such as `ORDERS`, `DESADV`, or `INVOIC`.
  |  | Yes
-|Reference identifiers and attributes mapping | Uploaded DataWeave map that extracts the reference identifiers and message attributes from the payload received from the partner.
+|Reference identifiers and attributes mapping | Uploaded DataWeave map that extracts the reference identifiers and message attributes from the payload received from the partner:
 {sp} +
 {sp} +
-The extracted values for the reference identifiers are used for dynamic routing into the appropriate message flow. | |No
+The extracted values for the reference identifiers are used for dynamic routing into the appropriate message flow.
+| |No
 |Schema a|EDI schema for the message type. Options include:
 
 * *Use standard EDIFACT-<version>-<message-type>* +
@@ -79,5 +80,5 @@ For an example that shows how to customize an X12 schema, see https://www.muleso
 
 * xref:document-types.adoc[Message Types]
 * xref:partner-manager-create-message-type.adoc[Creating Message Types]
-* xref:using-custom-attributes.adoc[Using Custom Attributes with Message Types]
+* xref:use-custom-attributes.adoc[Using Custom Message Attributes]
 * xref:delete-message-types.adoc[Deleting Message Types]

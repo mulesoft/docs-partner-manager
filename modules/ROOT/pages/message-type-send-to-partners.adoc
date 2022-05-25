@@ -25,7 +25,7 @@ Enables you to import a customized xref:connectors::x12-edi/x12-edi-schema-langu
 +
 When using a customized EDI schema, you can assign a custom name to the message type definition, for example, `EDIFACT-d97a-ORDERS-<PartnerName>`.
 | Use standard EDIFACT- <version>| Yes
-|Name | | Yes
+|Name |Message type name that Partner Manager automatically generates from the schema filename. You can modify this name. | Yes
 |===
 
 == JSON or XML
