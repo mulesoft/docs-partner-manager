@@ -419,7 +419,7 @@ Defaults are specified in these fields:
 
 You can set the following options if needed:
 
-* *Fail when value length outside allowed range* - Fail when the receive value lengthis outside the allowed range. If `true`, a transmission with this error is rejected; if `false`, the value is used anyway and the transmission is not rejected. In either case, the error is logged and reported in the returned error list.
+* *Fail when value length outside allowed range* - Fail when the receive value length is outside the allowed range. If `true`, a transmission with this error is rejected; if `false`, the value is used anyway and the transmission is not rejected. In either case, the error is logged and reported in the returned error list.
 * *Fail when unknown segment in transmission* - Fail when an unknown segment is present in a transmission. If `true`, a transmission with this error is rejected; if `false`, the segment is ignored and the transmission is not rejected. In either case the error is logged and reported in the returned error list.
 * *Fail when unused segment included in transmission* - Fail when a segment marked as Unused is included in a transmission. If `true`, a transmission with this error is rejected; if `false`, the transmission is not rejected and the unused segment is ignored. In either case the error is logged and reported in the returned error list.
 * *Fail when segment out of order in transmission* - Fail when a segment is out of order in a transmission. If `true`, a transmission with this error is rejected; if `false` and the segment can be reordered the transmission is not rejected. In either case the error is logged and reported in the returned error list.

@@ -72,7 +72,7 @@ The *Add Lookup Table Field* box appears; enter a name for a field you want to a
 +
 The *Add Lookup Table Field* box closes.
 +
-The <<img-lookup-table>> displays the key or keys you have addded.
+The <<img-lookup-table>> displays the key or keys you have added.
 The new field name appears in the *Name* column of the table.
 +
 To add another field, repeat this step.
@@ -96,7 +96,7 @@ Any fields added for this table appear.
 +
 The *Add Lookup Table Key* box closes.
 +
-The <<img-lookup-table>> displays the key or keys you have addded.
+The <<img-lookup-table>> displays the key or keys you have added.
 
 == Working with Lookup Table Data
 
