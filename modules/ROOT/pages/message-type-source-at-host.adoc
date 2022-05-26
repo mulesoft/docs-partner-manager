@@ -19,15 +19,15 @@ Your partner must pass this value when sending messages, files, or both to Partn
 
 See xref:outbound-message-routing.adoc[Outbound Message Routing] to understand how outbound routing is performed and how your backend applications should pass the message type identifier when sending application messages to Partner Manager endpoints. | |Yes
 
-|Reference identifiers and attributes mapping |Uploaded DataWeave map that extracts the reference identifiers, business key, and message attributes from the payload received from the backend application.
-{sp} +
-{sp} +
-The extracted values for the reference identifiers and business key are used for dynamic routing into the appropriate message flow. |None |Yes
+|Reference identifiers and attributes mapping a|Uploaded DataWeave map that extracts the reference identifiers, business key, and message attributes from the payload received from the backend application:
+
+* The extracted reference identifier values are used for dynamic routing into the appropriate message flow.
+* The extracted custom attributes enable you to have visibility into the lifecycle of your B2B workflow. For more information, see xref:use-custom-attributes.adoc[Using Custom Messaging Attributes with Message Types]
+ |None |Yes
 |===
 
 == See Also
 
 * xref:document-types.adoc[Message Types]
 * xref:partner-manager-create-message-type.adoc[Creating Message Types]
-* xref:using-custom-attributes.adoc[Using Custom Message Attributes with Message Types]
 * xref:delete-message-types.adoc[Deleting Message Types]

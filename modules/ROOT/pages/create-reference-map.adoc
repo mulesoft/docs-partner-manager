@@ -35,60 +35,47 @@ a| No. This field is optional for:
 
 == Example Map for a Receive from Partners Message Type
 
-The following map transforms a partner's inbound X12 payload. It contains a business document key and two custom attributes:
+The following map transforms a partner's inbound X12 payload. It contains a partner reference ID, host Reference ID, business document key, and two custom message attributes:
 
-* The `businessDocumentKey` is set to `payload.TransactionSets.v004010."856".Heading."020_BSN".BSN02[0]`, which has a value of: `020201229153948475`.
-* The `shipmentId` attribute is set to `payload.TransactionSets.v004010."856".Heading."020_BSN".BSN02`, which has a value of `020201229153948475`.
-* The `purchaseOrderNumber` attribute is set to `flatten(flatten(poNumbers).values)`, which has this array of values:
-
-----
- "value": [
-        "6821IIZE",
-        "982YZ456",
-        "765ZZ764"
-      ]
-----
+* The partner reference ID is set to `payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#Buyer`.
+* The host reference ID is set to  `payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#Seller.`
+* The `businessDocumentKey` is set to `payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#PurchaseOrderNumber`.
+* The `purchaseOrderNumber` message attribute is set to `payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#PurchaseOrderNumber`.
+* The `buyerEmail` message attribute is set to `payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#BuyerEmailID`.
 
 The input to the map looks like this:
 
 ----
 %dw 2.0
 output application/json
+
 ---
-.
-.
-.
+%dw 2.0
+output application/json
+ns ns0 http://xmlns.mulesoft.com/enterpriseobjects/b2b/
+---
 {
-	businessDocumentKey: payload.TransactionSets.v004010."856".Heading."020_BSN".BSN02[0],
+	partnerReferenceId: payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#Buyer,
+	hostReferenceId: payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#Seller,
+	businessDocumentKey: payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#PurchaseOrderNumber,
 	customAttributes: [
 		{
-			alias: "shipmentId",
-			value: payload.TransactionSets.v004010."856".Heading."020_BSN".BSN02
+			alias: "purchaseOrderNumber",
+			value: [payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#PurchaseOrderNumber]
 		},
 		{
-			alias: "purchaseOrderNumber",
-			value: flatten(flatten(poNumbers).values)
+			alias: "buyerEmail",
+			value: [payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#BuyerEmailID]
+		}
+	]
+}
 ----
 
 The generated output of the map looks like this:
 
 ----
 {
-  "businessDocumentKey": "020201229153948475",
-  "customAttributes": [
-      "alias": "shipmentId",
-      "value": [
-        "020201229153948475"
-      ]
-    },
-    {
-      "alias": "purchaseOrderNumber",
-      "value": [
-        "6821IIZE",
-        "982YZ456",
-        "765ZZ764"
-      ]
-----
+
 
 == Example Map for a Source at Host Message Type
 
