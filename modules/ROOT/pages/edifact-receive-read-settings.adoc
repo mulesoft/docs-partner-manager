@@ -64,11 +64,14 @@ a|* If selected, Partner Manager ignores unused segments.
 a|* If selected, Partner Manager rejects a message that contains segments that repeat too many times.
 * If not selected, Partner Manager accepts the message.
 |Enabled
+|Enforce code set validations
+a|* If selected, Partner Manager enforces EDIFACT code set validations, as defined in the EDIFACT schemas.
+* If not selected, Partner Manager accepts the message.
 |===
 
 If a message does not meet an enabled rule, Partner Manager rejects it.
 
-Parter Manager logs all  errors and reports them in the CONTRL acknowledgments.
+Parter Manager logs all errors and reports them in the CONTRL acknowledgments.
 
 [[control-numbers]]
 == Control Numbers

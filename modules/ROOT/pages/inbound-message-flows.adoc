@@ -1,4 +1,4 @@
-== Inbound Message Flows
+= Inbound Message Flows
 
 An inbound message flow receives application messages from your partner, either directly or through a third-party connection; transforms the messages to the format used by your backend applications; and forwards the messages to those applications.
 

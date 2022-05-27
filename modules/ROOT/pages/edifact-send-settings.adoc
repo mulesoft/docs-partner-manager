@@ -10,7 +10,7 @@ To configure a partner's EDIFACT send settings:
 . In the menu on the left, select the setting to configure:
 * <<general-settings,General settings>>
 * <<global-control-numbers,Global control numbers>>
-* <<character-set,Character set and separators>>
+* <<character-set,Character set & delimiters>>
 . Click *Save*.
 
 The values you configure in the partner's settings page are used by default for all EDIFACT messages sent to that trading partner. You can override the settings you configure at the message flow level by selecting the custom option while creating an outbound message flow.
@@ -41,6 +41,9 @@ Use the following settings to configure the general validation rules for outboun
 |Expect CONTRL for each transmission sent to <partner>
 |When enabled, sets UNB-09 to `1`, indicating that a technical acknowledgment is expected in the partner's response
 |Disabled
+|Enforce code set validations
+|If selected, Partner Manager enforces EDIFACT code set validations, as defined in the EDIFACT schemas.
+|Disabled
 |===
 
 [[global-control-numbers]]
@@ -57,7 +60,7 @@ To change the initial value to maintain sequencing and avoid duplication:
 It can take up to five minutes to apply the change at runtime.
 
 [[character-set]]
-== Character Set and Separators
+== Character set and delimiters
 
 Use the following settings to set the character encoding and separators for the generated EDIFACT payload:
 
@@ -65,26 +68,25 @@ Use the following settings to set the character encoding and separators for the 
 |===
 |Setting |Description |Default
 |Character encoding
-a|Character encoding for messages
+a|Character encoding used for messages.
 |ASCII_B
 |Data element separator
-|Data element separator character
+|Character used to separate data elements.
 |+
 |Component separator
-|Component element separator characters
+|Character used to separate components.
 |:
 |Repetition separator
 |Repetition separator character
 |*
 |Segment terminator
-|Segment terminator character
+|Segment terminator character.
 |'
 |Release character
-|Release character
+|Character that acts as an escape for characters used as separators.
 |?
-|Line ending between segments
-a|
-Character that adds line endings between segments to improve the readability of the output message text. Possible values include:
+|Segment line ending
+a|Character to use for line endings between segments to improve the readability of the output message text. Possible values include:
 
 * NONE
 +
@@ -103,8 +105,11 @@ Carriage return and line feed
 Line Feed
 |CRLF
 |Test Indicator
-a| When you select *Test* from the drop-down, sets UNB-11 to `1`, which indicates that this is a test message.
-|Production
+a|Indicates if the EDIFACT transaction set is for testing or production. 
+|No
+|Use segment line ending in last Line
+|If `Yes`, Partner Manager applies the segment line ending character to the last segment in the payload.
+|No
 |===
 
 == See Also
