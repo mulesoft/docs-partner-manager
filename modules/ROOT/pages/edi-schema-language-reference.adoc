@@ -103,7 +103,7 @@ Group definitions are shown in expanded form, with key-value pairs on separate l
 * M for Mandatory
 * O for Optional
 * U for Unused
-|count |mMximum repetition count value, which may be a number or the special value `>1` meaning any number of repeats (optional, count value of 1 is used if not specified)
+|count |Maximum repetition count value, which may be a number or the special value `>1` meaning any number of repeats (optional, count value of 1 is used if not specified)
 |items |List of segments (and potentially nested groups) making up the group
 |===
 
