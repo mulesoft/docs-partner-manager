@@ -220,7 +220,7 @@ From the list, click *AS2*.
 +
 From the list, click *Send*.
 +
-The <<img-endpoint-add>> expands to enable configuraton of additional settings.
+The <<img-endpoint-add>> expands to enable configuration of additional settings.
 
 
 . Select *Default for AcmeHomeSupply*.
