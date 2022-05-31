@@ -35,33 +35,27 @@ a| No. This field is optional for:
 
 == Example Map for a Receive from Partners Message Type
 
-The following map transforms a partner's inbound X12 payload. It contains a partner reference ID, host Reference ID, business document key, and two custom message attributes:
+The following map transforms a partner's inbound X12 payload. It contains a business document key and two custom message attributes:
 
-* The partner reference ID is set to `payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#Buyer`.
-* The host reference ID is set to  `payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#Seller.`
-* The `businessDocumentKey` is set to `payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#PurchaseOrderNumber`.
-* The `purchaseOrderNumber` message attribute is set to `payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#PurchaseOrderNumber`.
-* The `buyerEmail` message attribute is set to `payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#BuyerEmailID`.
+* The value of the business document key is `payload.TransactionSets.v004010."855".Heading."020_BAK".BAK03[0]`.
+* The value of the `purchaseOrderNumber` custom message attribute is `payload.TransactionSets.v004010."855".Heading."020_BAK".BAK03[0]`.
+* The value of the `vendorSalesOrderNumber` custom message attribute is `payload.TransactionSets.v004010."855".Heading."020_BAK".BAK08[0]`.
 
 The input to the map looks like this:
 
 ----
 %dw 2.0
 output application/json
-ns ns0 http://xmlns.mulesoft.com/enterpriseobjects/b2b/
----
 {
-	partnerReferenceId: payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#Buyer,
-	hostReferenceId: payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#Seller,
-	businessDocumentKey: payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#PurchaseOrderNumber,
+	businessDocumentKey: payload.TransactionSets.v004010."855".Heading."020_BAK".BAK03[0] default "",
 	customAttributes: [
 		{
 			alias: "purchaseOrderNumber",
-			value: [payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#PurchaseOrderNumber]
+			value: [payload.TransactionSets.v004010."855".Heading."020_BAK".BAK03[0]]
 		},
 		{
-			alias: "buyerEmail",
-			value: [payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#BuyerEmailID]
+			alias: "vendorSalesOrderNumber",
+			value: [payload.TransactionSets.v004010."855".Heading."020_BAK".BAK08[0]]
 		}
 	]
 }
@@ -71,18 +65,35 @@ The generated output of the map looks like this:
 
 ----
 {
+  "businessDocumentKey": "ORDER-70010",
+  "customAttributes": [
+    {
+      "alias": "purchaseOrderNumber",
+      "value": [
+        "ORDER-70010"
+      ]
+    },
+    {
+      "alias": "vendorSalesOrderNumber",
+      "value": [
+        "SO-5100803142"
+      ]
+    }
+  ]
+}
+----
 
 
 == Example Map for a Source at Host Message Type
 
-The following map transforms the outbound JSON or XML payload from the backend. It contains the partner reference ID, host reference Id, business document key and three custom attributes:
+The following map transforms the outbound JSON or XML payload from the backend. It contains the partner reference ID, host reference Id, business document key, and three custom attributes:
 
-* The `partnerReferenceId` is set to `payload.Header.CustomerName`, which has a value of `ALPHA-CAN`.
-* The `hostReferenceId` is set to `payload.Invoice.Header.LineOfBusiness`, which has a value of `Mythical-MG`.
-* The `businessDocumentKey` is set to `payload.Invoice.Header.InvoiceNumber`, which has a value of `INV97750061`.
-* The `invoiceNumber` attribute is set to `payload.Invoice.Header.InvoiceNumber`, which has a value of `INV97750061`.
-* The `purchaseOrderNumber` attribute is set to `payload.Invoice.Header.PurchaseOrderNumber`, which has a value of `ORD3893988`.
-* The `invoiceAmount` attribute is set to `payload.Invoice.Header.TotalInvoiceAmt`, which has a value of `$ 3756.24`.
+* The value of the partner reference ID is `payload.Header.CustomerName`.
+* The value of the host reference ID is `payload.Invoice.Header.LineOfBusiness`.
+* The value of the business document key is `payload.Invoice.Header.InvoiceNumber`.
+* The value of the `invoiceNumber` custom attribute is `payload.Invoice.Header.InvoiceNumber`.
+* The value of the `purchaseOrderNumber` custom message attribute is `payload.Invoice.Header.PurchaseOrderNumber`
+* The value of the `invoiceAmount` custom message attribute is  `payload.Invoice.Header.TotalInvoiceAmt`.
 
 The input to the map looks like this:
 
@@ -98,16 +109,16 @@ output application/json
 		{
 			alias: "invoiceNumber",
 			value: [payload.Invoice.Header.InvoiceNumber default "UNKNOWN"]
-		},
-		{
+	},
+	{
 			alias: "purchaseOrderNumber",
 			value: [payload.Invoice.Header.PurchaseOrderNumber default "UNKNOWN"]
-		},
-		{
+	},
+	{
 			alias: "invoiceAmount",
 			value: [ "\$ " ++ payload.Invoice.Header.TotalInvoiceAmt default "UNKNOWN"]
-		}
-	]
+	}
+]
 }
 ----
 
