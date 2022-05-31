@@ -71,5 +71,4 @@ For an example that shows how to customize an X12 schema, see https://www.muleso
 
 * xref:document-types.adoc[Message Types]
 * xref:partner-manager-create-message-type.adoc[Creating Message Types]
-* xref:using-custom-attributes.adoc[Using Custom Attributes with Message Types]
 * xref:delete-message-types.adoc[Deleting Message Types]

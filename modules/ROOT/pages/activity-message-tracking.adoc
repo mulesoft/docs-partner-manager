@@ -1,8 +1,22 @@
 = Tracking Individual Messages
 
-You can use Anypoint Partner Manager to monitor transmitted messages, view their contents, and store both the message contents and transmission metadata.
+The message view in Anypoint Partner Manager provides visibility into individual transactions within a transmission. Use the message view to monitor the messages exchanged between partner and suppliers, view the message payload, and see how individual messages are processed and routed.
 
-To track tranmissions, see xref:activity-tracking.adoc[Tracking Transmissions].
+The message view has one record for each transaction. For example, if an incoming transmission contains 30 transactions, the message view has 30 corresponding records.
+
+A message record contains the following information:
+
+* Business key and other custom attributes that are included in the message type definition
+* Pre-translated and post-translated payloads
+
+Message view records are not created when:
+
+* An inbound transaction fails during validation, resulting in a complete rejection of the transaction.
+* An inbound transaction fails due to AS2 security issues.
+* An outbound transaction fails when translating the source payload to a different format.
+* An outbound transaction fails when writing X12 or EDIFACT data.
+
+To track tranmissions instead of individual messages, see xref:activity-tracking.adoc[Tracking Transmissions].
 
 == Locate a Message
 
@@ -28,7 +42,7 @@ You can retrieve up to one week's worth of messages.
 +
 Partner Manager returns a list of messages that meet your search criteria along with related information such as the date the transmission was received, message status, message type, partner, document ID, business key, and acknowledgement status.
 +
-. Select a message to review additional information about the message and to view its message flow.
+. Click on a message to review additional information about the message and to view its message flow.
 
 == View Additional Details for an Inbound Message
 

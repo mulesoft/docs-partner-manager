@@ -48,10 +48,6 @@ The input to the map looks like this:
 ----
 %dw 2.0
 output application/json
-
----
-%dw 2.0
-output application/json
 ns ns0 http://xmlns.mulesoft.com/enterpriseobjects/b2b/
 ---
 {
@@ -144,6 +140,7 @@ The generated output of the map looks like this:
   ]
 }
 ----
+
 == See Also
 
 * xref:partner-manager-create-message-type.adoc[Creating a Message Type]
