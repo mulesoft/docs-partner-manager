@@ -26,11 +26,11 @@ a| No. This field is optional for:
 | Array of attributes to extract from the payload.
 {sp}+
 {sp}+
-Use an array even if there is only one custom attribute to extract. This enables support for transactions with one-to-many relationships, such as transactions in which one shipment notice includes multiple purchase order numbers.
+Use an array, even if there is only one custom attribute to extract. This enables support for transactions with one-to-many relationships, such as transactions in which one shipment notice includes multiple purchase order numbers.
 a| No. This field is optional for:
 
 * All Receive from Partners message types
-* Source at Host message types formatted with JSON or XML
+* All Source at Host message types
 |===
 
 == Example Map for a Receive from Partners Message Type
@@ -51,11 +51,11 @@ output application/json
 	customAttributes: [
 		{
 			alias: "purchaseOrderNumber",
-			value: [payload.TransactionSets.v004010."855".Heading."020_BAK".BAK03[0]]
+			values: [payload.TransactionSets.v004010."855".Heading."020_BAK".BAK03[0]]
 		},
 		{
 			alias: "vendorSalesOrderNumber",
-			value: [payload.TransactionSets.v004010."855".Heading."020_BAK".BAK08[0]]
+			values: [payload.TransactionSets.v004010."855".Heading."020_BAK".BAK08[0]]
 		}
 	]
 }
@@ -69,13 +69,13 @@ The generated output of the map looks like this:
   "customAttributes": [
     {
       "alias": "purchaseOrderNumber",
-      "value": [
+      "values": [
         "ORDER-70010"
       ]
     },
     {
       "alias": "vendorSalesOrderNumber",
-      "value": [
+      "values": [
         "SO-5100803142"
       ]
     }
@@ -92,7 +92,7 @@ The following map transforms the outbound JSON or XML payload from the backend. 
 * The value of the host reference ID is `payload.Invoice.Header.LineOfBusiness`.
 * The value of the business document key is `payload.Invoice.Header.InvoiceNumber`.
 * The value of the `invoiceNumber` custom attribute is `payload.Invoice.Header.InvoiceNumber`.
-* The value of the `purchaseOrderNumber` custom message attribute is `payload.Invoice.Header.PurchaseOrderNumber`
+* The value of the `purchaseOrderNumber` custom message attribute is `payload.Invoice.Header.PurchaseOrderNumber`.
 * The value of the `invoiceAmount` custom message attribute is  `payload.Invoice.Header.TotalInvoiceAmt`.
 
 The input to the map looks like this:
@@ -108,15 +108,15 @@ output application/json
 	customAttributes: [
 		{
 			alias: "invoiceNumber",
-			value: [payload.Invoice.Header.InvoiceNumber default "UNKNOWN"]
+			values: [payload.Invoice.Header.InvoiceNumber default "UNKNOWN"]
 	},
 	{
 			alias: "purchaseOrderNumber",
-			value: [payload.Invoice.Header.PurchaseOrderNumber default "UNKNOWN"]
+			values: [payload.Invoice.Header.PurchaseOrderNumber default "UNKNOWN"]
 	},
 	{
 			alias: "invoiceAmount",
-			value: [ "\$ " ++ payload.Invoice.Header.TotalInvoiceAmt default "UNKNOWN"]
+			values: [ "\$ " ++ payload.Invoice.Header.TotalInvoiceAmt default "UNKNOWN"]
 	}
 ]
 }
@@ -132,25 +132,29 @@ The generated output of the map looks like this:
   "customAttributes": [
     {
       "alias": "invoiceNumber",
-      "value": [
+      "values": [
         "INV97750061"
       ]
     },
     {
       "alias": "purchaseOrderNumber",
-      "value": [
+      "values": [
         "ORD3893988"
       ]
     },
     {
       "alias": "invoiceAmount",
-      "value": [
+      "values": [
         "$ 3756.24"
       ]
     }
   ]
 }
 ----
+
+== Exchange Example of Using Custom Attributes
+
+To see a comprehensive example that uses custom attributes when implementing an end to end B2B order to cash, see https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/.
 
 == See Also
 
