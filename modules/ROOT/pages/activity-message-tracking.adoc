@@ -24,7 +24,7 @@ Select a message to view its details and view and download its contents:
 
 . In the navigation menu, select *Activity*.
 . Leave the default, *Messages*.
-. Search for the transmission.
+. Search for the message.
 . Optionally filter the search results based on the following criteria:
 
 * Partner name
@@ -40,7 +40,7 @@ You can retrieve up to one week's worth of messages.
 * Message attribute, if the message type associated with the message has custom attributes
 
 +
-Partner Manager returns a list of messages that meet your search criteria along with related information such as the date the transmission was received, message status, message type, partner, document ID, business key, and acknowledgement status.
+Partner Manager returns a list of messages that meet your search criteria along with related information such as the date the message was received, message status, message type, partner, document ID, business key, and acknowledgement status.
 +
 . Click on a message to review additional information about the message and to view its message flow.
 

@@ -1,9 +1,9 @@
 = Creating Reference Maps for Message Types
 
-When you create a new message type, you can associate it with a DataWeave reference map. This is mandatory for Receive from Partners message types formatted with JSON or XML and for all Source at Host message types.
+When you create a new message type, you can associate it with a DataWeave reference map. This is mandatory for Receive from Partners message types formatted with JSON or XML and for all Source at Host message types. Reference maps for all Receive from Partners and Source at Host message types can include custom message attributes that get extracted from the message payloads at runtime. The extracted attributes are visible in the payload and are available for searching and tracking.
 
-* The input of the map is the payload that follows the schema uploaded in the definition for the message type.
-* The output of the map contains the following fields:
+* The input of a reference map is the payload that follows the schema uploaded in the definition for the message type.
+* The output of a reference map contains the following fields:
 
 |===
 | *Field* | *Description* | *Required*
@@ -19,14 +19,26 @@ a| No. This field is optional for:
 
 * Receive from partners message types formatted with JSON or XML
 * All Source at Host message types
-| BusinessDocumentKey
+| businessDocumentKey
 |Key reference value, such as `Order Number` or `Invoice number`
 | No
 | customAttributes
-| Array of attributes to extract from the payload.
+a| Array of custom message attributes to extract from the payload.
 {sp}+
 {sp}+
-Use an array, even if there is only one custom attribute to extract. This enables support for transactions with one-to-many relationships, such as transactions in which one shipment notice includes multiple purchase order numbers.
+When specifying a custom message attribute, configure the following fields in the reference map:
+
+** alias
++
+Alias that uniquely identifies a pre-configured custom message attribute configuration. The aliases in the reference map must match the message type's attribute definitions. If the map contains aliases that don't exist, creating or updating the message type will fail.
++
+** values
++
+An array of values, such as order numbers or invoice numbers.
+{sp}+
+{sp}+
+Use an array of strings, even if there is only one attribute to extract. This enables support for transactions with one-to-many relationships, such as transactions in which one shipment notice includes multiple purchase order numbers.
+
 a| No. This field is optional for:
 
 * All Receive from Partners message types
