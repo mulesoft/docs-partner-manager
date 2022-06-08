@@ -2,9 +2,9 @@
 
 In Anypoint Partner Manager, one transmission can consist of one or more messages. Use the transmission view to monitor transmissions exchanged between partners and to view the transmission contents. At a high level, a transmission record contains the following information:
 
-* Data payloads received from partners or sent to partners via a configured protocol such as AS2, HTTP, SFTP or FTP.
+* Data payloads received from partners or sent to partners via a configured protocol such as AS2, HTTP, SFTP or FTP
 * Message disposition notifications (MDNs), if the payload is exchanged with partners via AS2 protocol
-functional acknowledgements.
+functional acknowledgements
 
 To track individual messages, see xref:activity-message-tracking.adoc[Tracking Individual Messages].
 
@@ -15,7 +15,7 @@ Select a transmission to view its details and view and download the message cont
 . In the navigation menu, select *Activity*.
 . Select *Transmissions*.
 . Search for the transmission.
-. Optionally filter the search results based on the following criteria:
+. Optionally, filter the search results based on the following criteria:
 
 * Partner name
 * Message direction
@@ -30,7 +30,7 @@ You can retrieve up to one week's worth of messages.
 +
 Partner Manager returns a list of transmissions that meet your search criteria along with related information, such as the date the transmission was received, number of messages in the transmission, message type, control number, and acknowledgement status.
 +
-* Click on a transmission to review additional information about the transmission and to view its message flow.
+. Click on a transmission to review additional information about the transmission and to view its message flow.
 
 == View Details for an Inbound Transmission
 
