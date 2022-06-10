@@ -17,7 +17,7 @@ Your partner must pass this value when sending messages, files, or both to Partn
 * If you receive the payload via an HTTP-based endpoint, the message type identifier is the relative path in the HTTP request.
 * If you receive the payload via AS2 or via file-based endpoint protocols such as SFTP and FTP, the filename begins with `<message-type-id>_`.
 
-See xref:outbound-message-routing.adoc[Outbound Message Routing] to understand how outbound routing is performed and how your backend applications should pass the message type identifier when sending application messages to Partner Manager endpoints. | |Yes
+See xref:outbound-message-routing.adoc[Outbound Message Routing] to understand how outbound routing is performed and how your backend applications pass the message type identifier when sending application messages to Partner Manager endpoints. | |Yes
 
 |Reference identifiers and attributes mapping a|Uploaded DataWeave map that extracts the reference identifiers, business key, and custom message attributes from the payload received from the backend application:
 

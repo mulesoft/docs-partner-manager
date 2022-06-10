@@ -9,13 +9,13 @@ You can modify a message type's settings, but what you can modify depends on the
 [%header%autowidth.spread]
 |===
 | Message Type |Format | What You Can Modify
-| Receive from Partners
+.2+| Receive from Partners
 | EDIFACT or X12
 a|
 * Select a different schema file, if the *Schema* field is set to *Customize*.
 * Select a different reference map file to map the reference identifiers, business key, and custom attributes.
 * Add new custom message attributes.
-|
+
 | JSON or XML
 a|
 * Select a different schema file.
@@ -23,13 +23,12 @@ a|
 | Send to Partners
 | Any
 | Select a different schema file, if the *Schema* field is set to *Customize*.
-| Source at Host
+.2+| Source at Host
 | EDIFACT or X12
 a|
 * Select a different schema file, if the *Schema* field is set to *Customize*.
 * Select a different reference map file to map the reference identifiers, business key, and custom attributes.
 * Add new custom message attributes.
-|
 | JSON or XML
 a|
 * Select a different schema file.
@@ -45,4 +44,4 @@ a|
 
 * xref:partner-manager-create-message-type.adoc[Creating Message Types]
 * xref:create-reference-map.adoc[Creating Reference Maps for Message Types]
-* xref:delete-message-type-settings[Deleting Message Type Settings]
+* xref:delete-message-type-settings.adoc[Deleting Message Type Settings]

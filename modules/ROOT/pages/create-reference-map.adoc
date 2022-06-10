@@ -47,7 +47,7 @@ a| No. This field is optional for:
 
 == Example Map for a Receive from Partners Message Type
 
-The following map transforms a partner's inbound X12 payload. It contains a business document key and two custom message attributes:
+The following map transforms a partner's inbound X12 payload. The map contains a business document key and two custom message attributes:
 
 * The value of the business document key is `payload.TransactionSets.v004010."855".Heading."020_BAK".BAK03[0]`.
 * The value of the `purchaseOrderNumber` custom message attribute is `payload.TransactionSets.v004010."855".Heading."020_BAK".BAK03[0]`.
@@ -98,7 +98,7 @@ The generated output of the map looks like this:
 
 == Example Map for a Source at Host Message Type
 
-The following map transforms the outbound JSON or XML payload from the backend. It contains the partner reference ID, host reference Id, business document key, and three custom attributes:
+The following map transforms the outbound JSON or XML payload from the backend. The map contains the partner reference ID, host reference Id, business document key, and three custom attributes:
 
 * The value of the partner reference ID is `payload.Header.CustomerName`.
 * The value of the host reference ID is `payload.Invoice.Header.LineOfBusiness`.
