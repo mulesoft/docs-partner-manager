@@ -155,10 +155,6 @@ a|
 
 |===
 
-////
-From the message flow diagram, you can also view additional information, including information about the message type, identifiers,
-////
-
 == See Also
 
 * xref:inbound-message-flows.adoc[Inbound Message Flows]
