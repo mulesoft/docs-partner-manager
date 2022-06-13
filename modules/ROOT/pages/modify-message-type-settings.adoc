@@ -44,4 +44,4 @@ a|
 
 * xref:partner-manager-create-message-type.adoc[Creating Message Types]
 * xref:create-reference-map.adoc[Creating Reference Maps for Message Types]
-* xref:delete-message-type-settings.adoc[Deleting Message Type Settings]
+* xref:delete-message-types.adoc[Deleting Message Types]
