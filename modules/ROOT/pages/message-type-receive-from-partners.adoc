@@ -25,7 +25,7 @@ EDIFACT message type, such as `ORDERS`, `DESADV`, or `INVOIC`.
 * *Use standard EDIFACT-<version>* +
 Applies the standard EDIFACT schema for the configured format and version.
 * *Customize* +
-Enables you to import a customized xref:connectors::x12-edi/x12-edi-schema-language-reference.adoc[EDI schema language] file, if your need to make adjustments to the standard EDIFACT schema.
+Enables you to import a customized xref:connectors::x12-edi/x12-edi-schema-language-reference.adoc[EDI schema language] file, if you need to make adjustments to the standard EDIFACT schema.
 +
 When using the customized EDI schema, you can assign a custom name to the message type definition, for example, `EDIFACT-d97a-ORDERS-<PartnerName>`.
 | Use standard EDIFACT <version>| Yes

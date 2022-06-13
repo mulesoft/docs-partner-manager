@@ -26,7 +26,7 @@ The external URL that you can share with your partners for an AS2 receive endpoi
 
 For example, if the name of your DLB domain is `mythical.lb.anypointdns.net` and the runtime application name is `b2b-inbound-as2-zap3`, then your administrator adds a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC:
 
-image::URL-mapping-rules-http.png[URL mapping rules for AS2 in the DLB settings]
+image::URL-mapping-rules-https.png[URL mapping rules for AS2 in the DLB settings]
 
 With these configurations, the external AS2 endpoint URL is `+https://mythical.lb.anypointdns.net/as2/mythical/receive-as2/+`.
 
