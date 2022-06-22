@@ -26,4 +26,4 @@ When EDIFACT messages received from your trading partners do not contain a UNA s
 
 == See Also
 
-* xref:configure-partner.adoc[Create, Configure, and Update Trading Partners]
+* xref:configure-partner.adoc[Creating and Managing Partners]

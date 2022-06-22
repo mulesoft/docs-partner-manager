@@ -9,9 +9,9 @@ Use Anypoint Connector for X12 or Anypoint Connector for EDIFACT with DataWeave 
 
 == See Also
 
-* xref:create-map-inbound-edifact-json-xml.adoc[Create a Map For Inbound EDIFACT to JSON or XML]
-* xref:create-map-inbound-edifact-json-xml.adoc[Create a Map For Inbound EDIFACT to JSON or XML]
-* xref:create-map-inbound-x12-json-xml.adoc[Create a Map For Inbound X12 to JSON or XML]
-* xref:create-map-json-xml-to-outbound-x12.adoc[Create a Map For XML or JSON to Outbound EDI X12]
+* xref:create-map-inbound-edifact-json-xml.adoc[Creating a Translation Map For Inbound EDIFACT to JSON or XML]
+* xref:create-map-inbound-edifact-json-xml.adoc[Creating a Translation Map For Inbound EDIFACT to JSON or XML]
+* xref:create-map-inbound-x12-json-xml.adoc[Creating a Translation Map For Inbound X12 to JSON or XML]
+* xref:create-map-json-xml-to-outbound-x12.adoc[Creating a Translation Map For XML or JSON to Outbound EDI X12]
 * xref:configure-message-flows.adoc[Create Inbound Message Flows]
-* xref:create-outbound-message-flow.adoc[Create Outbound Message Flows]
+* xref:create-outbound-message-flow.adoc[Creating Outbound Message Flows]

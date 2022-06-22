@@ -1,4 +1,4 @@
-= Delete Identifiers
+= Deleting Identifiers
 
 You can delete identifiers such as X12 ISA, X12 GS, AS2, and DUNS.
 

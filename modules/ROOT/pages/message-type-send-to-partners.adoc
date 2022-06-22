@@ -1,0 +1,74 @@
+= Send to Partners Message Type Settings
+
+The Send to Partners message type defines the way in which Anypoint Partner Manager transforms the outbound transactions sent from your organization to your partner. These transactions typically follow EDIFACT, JSON, X12, or XML standards.
+
+== EDIFACT
+
+Use the following settings to define EDIFACT as the protocol for the Send to Partners message type:
+
+[%header%autowidth.spread]
+|===
+|Setting |Description |Default | Required
+|Usage | Message usage. Allowed value is `Send to partners`. | | Yes
+|Format | Format of the message. Allowed value is `EDIFACT`.| |Yes
+|Version | EDIFACT version, such as `d03b` or `d12a`.
+ |  |Yes
+|Message type |
+EDIFACT message type, such as `ORDERS`, `DESADV`, or `INVOIC`.
+ | | Yes
+|Schema a|EDI schema for the message type. Options include:
+
+* *Use standard EDIFACT-<version>-<message-type>* +
+Applies the standard EDIFACT schema for the version and message type configured.
+* *Customize* +
+Enables you to import a customized xref:connectors::x12-edi/x12-edi-schema-language-reference.adoc[EDI schema language] file if you need to make adjustments to the standard EDIFACT schema.
++
+When using a customized EDI schema, you can assign a custom name to the message type definition, for example, `EDIFACT-d97a-ORDERS-<PartnerName>`.
+| Use standard EDIFACT- <version>| Yes
+|Name |Message type name that Partner Manager automatically generates from the schema filename. You can modify this name. | Yes
+|===
+
+== JSON or XML
+
+Use the following settings to define JSON or XML as the protocol for the Send to Partners message type:
+
+[%header%autowidth.spread]
+|===
+|Setting |Description |Default | Required
+|Usage | Message usage. Allowed value is `Send to partners`. | | Yes
+|Format | Format of the message. Allowed value is `JSON` or `XML`. | |Yes
+|Schema | Imported JSON or XSD schema file for the message type. | |Yes
+|Name | Name of the new message type |Yes
+|===
+
+== X12
+
+Use the following settings to define X12 as the protocol for the Send to Partners message type:
+
+[%header%autowidth.spread]
+|===
+|Setting |Description |Default | Required
+|Usage | Message usage. Allowed value is `Send to partners`.| |Yes
+|Format | Format of the message. Allowed value is `X12`. ||Yes
+|Version | X12 version, such as `3010` or `5040`.
+ |  |Yes
+|Message type |X12 transaction set number, such as `850` for a purchase order or `214` for the shipment status. | | Yes
+|Schema a|EDI schema for the message type. Options include:
+
+* *Use standard X12-<version>-<message-type>* +
+Applies the standard X12 schema for the version and message type configured.
+* *Customize* +
+Enables you to import a customized xref:connectors::x12-edi/x12-edi-schema-language-reference.adoc[EDI schema language] file if you need to make adjustments to the standard X12 schema.
++
+When using the customized EDI schema, you can assign a custom name to the message type definition, for example, `X12-7050-204-PartnerName`.
+| Use standard X12-<version> |Yes
+| Message type name that Partner Manager automatically generates from the schema filename. You can modify this name.  | |Yes
+|===
+
+For an example that shows how to customize an X12 schema, see https://www.mulesoft.com/exchange/works.integration/b2b-x12-custom-schema-example[Customize EDI X12 Schema for B2B Integrations] in Anypoint Exchange.
+
+== See Also
+
+* xref:document-types.adoc[Message Types]
+* xref:partner-manager-create-message-type.adoc[Creating Message Types]
+* xref:delete-message-types.adoc[Deleting Message Types]

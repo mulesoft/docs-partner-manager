@@ -1,4 +1,4 @@
-= Create a Map For Inbound EDIFACT to JSON or XML
+= Creating a Translation Map For Inbound EDIFACT to JSON or XML
 
 Use the MuleSoft template named `Template to create inbound and outbound EDIFACT message transformation` to help you map EDI EDIFACT transactions to an application message format, such as JSON or XML.
 
