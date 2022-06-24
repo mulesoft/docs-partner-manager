@@ -39,10 +39,10 @@ a|
 | Source message
 a|
 * Select a different receive from partners message type.
-* (EDFIACT or X12 message type) View current validation settings.
+* (EDIFACT or X12 message type) View current validation settings.
 * (EDIFACT or X12 message type) Indicate whether or not to send a 997 functional acknowledgment, and select the endpoint to which to send the acknowledgment.
 a|
-* xref:partner-manager-create-message-type.adoc[Create and Configure Message Types]
+* xref:partner-manager-create-message-type.adoc[Creating Message Types]
 * xref:edi-ack-reconciliation.adoc[EDI Acknowledgement Reconciliation]
 
 | Map
@@ -52,7 +52,7 @@ a|
 | Target at <host>
 a| * Select a different Target at Host message type.
 * Select a different Target at Host endpoint.
-a| * xref:partner-manager-create-message-type.adoc[Create and Configure Message Types]
+a| * xref:partner-manager-create-message-type.adoc[Creating Message Types]
 * xref:create-endpoint.adoc[Creating Endpoints]
 |===
 +
@@ -82,7 +82,7 @@ a| * Select a different Source at Host endpoint.
 * Select a different Source at Host message type.
 * Select different reference IDs to use for outbound routing.
 a| * xref:create-endpoint.adoc[Creating Endpoints]
-* xref:partner-manager-create-message-type.adoc[Create and Configure Message Types]
+* xref:partner-manager-create-message-type.adoc[Creating Message Types]
 * xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
 
 | Map
@@ -92,9 +92,9 @@ a| * xref:create-endpoint.adoc[Creating Endpoints]
 | Message type
 a| * Select a different Send to Partners message type.
 * (EDIFACT or X12 message type) Indicate whether or not to send a 997 functional acknowledgment, and select the endpoint to which to send the acknowledgment.
-* (EDFIACT or X12 message type) View current validation settings.
+* (EDIFACT or X12 message type) View current validation settings.
 * Select different identifiers for the host and partner.
-a| * xref:partner-manager-create-message-type.adoc[Create and Configure Message Types]
+a| * xref:partner-manager-create-message-type.adoc[Creating Message Types]
 * xref:edi-ack-reconciliation.adoc[EDI Acknowledgment Reconciliation]
 * xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
 

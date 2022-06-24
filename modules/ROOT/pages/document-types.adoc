@@ -1,16 +1,29 @@
 = Message Types
 
-Message types define the schematic structure of the transactions that are received or sent by Partner Manager.
+Message types define the structure of the transactions that Anypoint Partner Manager receives or sends. You can define the following kinds of message types:
 
-In Partner Manager, a message type can be used in one of the following contexts:
+* Receive from Partners
++
+Defines the structure of the transactions that partners or third-party connections send to the host through inbound message flows
++
+* Target at Host
++
+Defines the structure of the transactions that the host sends to the backend through inbound message flows
++
+* Source at Host
++
+Defines the structure of the transactions that the backend sends to the host through outbound message flows
++
+* Send to Partners
++
+Defines the structure of the transactions that the host sends to partners or third-party connections through outbound message flows
 
-* Receive from partners
-* Target at host
-* Source at host
-* Send to partners
-
-Message types are always managed in the host profile page, regardless of whether they are used for a single partner or for multiple trading partners. Additionally, message types are reusable across message flows for different trading partners.
+Message types are always managed on the *<host*> page, regardless of whether they are used for a single partner or for multiple partners. Additionally, message types are reusable across message flows for different partners.
 
 == See Also
 
-* xref:partner-manager-create-message-type.adoc[Create and Configure Message Types]
+* xref:partner-manager-create-message-type.adoc[Creating Message Types]
+* xref:message-type-receive-from-partners.adoc[Receive from Partners Message Type]
+* xref:message-type-target-at-host.adoc[Target at Host Message Type]
+* xref:message-type-source-at-host.adoc[Source at Host Message Type]
+* xref:message-type-send-to-partners.adoc[Send to Partners Message Type]

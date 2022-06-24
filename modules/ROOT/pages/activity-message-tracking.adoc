@@ -1,0 +1,163 @@
+= Tracking Individual Messages
+
+The message view in Anypoint Partner Manager provides visibility into individual transactions within a transmission. Use the message view to monitor the messages exchanged between partner and suppliers, view the message payload, and see how individual messages are processed and routed.
+
+The message view has one record for each transaction. For example, if an incoming transmission contains 30 transactions, the message view has 30 corresponding records.
+
+A message record contains the following information:
+
+* Business key and other custom attributes that are included in the message type definition
+* Pre-translated and post-translated payloads
+
+Partner Manager does not create message view records when:
+
+* An inbound transaction fails during validation, resulting in a complete rejection of the transaction.
+* An inbound transaction fails due to AS2 security issues.
+* An outbound transaction fails when translating the source payload to a different format.
+* An outbound transaction fails when writing X12 or EDIFACT data.
+
+To track tranmissions instead of individual messages, see xref:activity-tracking.adoc[Tracking Transmissions].
+
+== Locate a Message
+
+Select a message to view its details and view and download its contents:
+
+. In the navigation menu, select *Activity*.
+. Leave the default, *Messages*.
+. Search for the message.
+. Optionally, filter the search results based on the following criteria:
+
+* Partner name
+* Message direction
+* Date range within which the message was sent
++
+You can retrieve up to one week's worth of messages.
++
+* Acknowledgement status, such as `Overdue`
+* Message processing status, such as `Received`
+* Partner message type, such as `X12 - 850`
+* Host message type, such as `JSON host-purchase-order`
+* Message attribute, if the message type associated with the message has custom attributes
+
++
+Partner Manager returns a list of messages that meet your search criteria along with related information such as the date the message was received, message status, message type, partner, document ID, business key, and acknowledgement status.
++
+. Click on a message to review additional information about the message and to view its message flow.
+
+== View Additional Details for an Inbound Message
+
+The additional details for an inbound message include the following information:
+
+* Message ID
+* Transmission ID
+* Message flow name
+* Functional acknowledgement name, if one exists
+* Information about the message source, including the date and time when the message was received from the source, partner message type, endpoint name, filename, and target protocol
+* Identifiers and control number associated with the message
+* Information about the message target, including the date and time when the message was delivered, host message type, target endpoint, protocol, and target filename
+
+Take any of the following actions to view and download additional information about the inbound message:
+
+|===
+|Action |Steps
+
+|View information about the source (Receive from Partner) endpoint.
+a|In the *Source* section, click the link in the *Source endpoint* field.
+|View information about the target (Target at Host) endpoint.
+a|In the *Target* section, click the link in the *Target endpoint* field.
+|View and download the payload received from the partner.
+a|
+. In the *Source* section, click the link in the *Source file* field.
+. Specify a wrap character, if needed.
+. Click *Download*.
+| View and download the payload sent to the backend.
+a|
+. In the *Target* section, click the link in the *Target file* field.
+. Specify a wrap character, if needed.
+. Click *Download*.
+
+| View and download the MDN message sent to the partner in response to inbound AS2 transmissions.
+a|
+. Click the link in the *Transmission details* field to access the *Transmission Flow* section.
+. In the *Sent MDN* field, click *View MDN*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+| View and download the EDIFACT CONTRL message or X12 997
+acknowledgement message sent to the partner, if one exists.
+a|
+. Click the link in the *Transmission details* field to access the *Transmission Flow* section.
+. In the *Processed message through message flows* section, click *View Control* or *View 997*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+|View the message flow diagram for the transmitted message.
+|Click the link in the *Processed message through message flows* field.
+{sp} +
+{sp}+
+Expand the message flow diagram sections to view additional information, including information about the receiving (Receive from Partners) endpoint, source message, DataWeave map, target message type, and target (Target at Host) endpoint.
+|===
+
+== View Details for an Outbound Message
+
+The details for an outbound message include the following information:
+
+* Date and time when the file was received from the backend
+* Functional acknowledgement, if one exists
+* Name of the transmitted file
+* Information about the message source, including the source message type, source endpoint name, and source protocol
+* Identifiers and control numbers associated with the message
+* Information about the message target, including the partner message type, date and time when the message was sent to the partner, target filename, and target endpoint name
+
+Take any of the following actions to view and download additional information about the outbound message:
+
+|===
+|Action |Steps
+
+|View and download the payload transmitted to the partner.
+a|
+. In the *Summary* section, click the link in the *Transmission details* field.
+. Click the link in the *File* field.
+. Specify a wrap character, if needed.
+. Click *Download*.
+|View information about the source (Source at Host) endpoint.
+| In the *Source* section, click the link in the *Source endpoint* field.
+| View and download the payload received from the backend.
+a|
+. In the *Source* section, click the link in the *Source file* field.
+. Specify a wrap character, if needed.
+. Click *Download*.
+| View information about the target (Send to Partners) endpoint.
+| In the *Target* section, click the link in the *Target endpoint* field.
+| View and download the payload sent to the partner.
+a|
+. In the *Target* section, click the link in the *Target file* field.
+. Specify a wrap character, if needed.
+. Click *Download*.
+| View and download the MDN received from the partner in response to outbound AS2 transmissions.
+a|
+. In the *Summary* section, click the link in the *Transmission details* field to access the message flow diagram.
+. In the message flow diagram, expand the *Sent to* section.
+. In the *Received MDN* field, click *View payload*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+|View the EDIFACT CONTRL or X12 997 acknowledgement message received from the partner, if one exists.
+a|
+. In the *Summary* section, click the link in the *Transmission details* field to access the message flow diagram.
+. In the message flow diagram, expand the *Sent to* section.
+. In the *Sent transmission* field, click *View payload*.
+. Specify a wrap character, if needed.
+. Click *Download*.
+| View and download the DataWeave map that transformed the transmission.
+a|
+. In the *Summary* section, click the link in the *Transmission details* field to access the message flow diagram.
+. Click the the *Map* section to expand it.
+. Click the link in this section.
+. Click *Download*.
+
+|===
+
+== See Also
+
+* xref:inbound-message-flows.adoc[Inbound Message Flows]
+* xref:outbound-message-flows.adoc[Outbound Message Flows]
+* xref:edi-ack-reconciliation.adoc[EDI Acknowledgment Reconciliation]
+* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
