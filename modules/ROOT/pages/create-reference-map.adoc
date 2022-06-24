@@ -2,8 +2,9 @@
 
 When you create a new message type, you can associate it with a DataWeave reference map. This is mandatory for Receive from Partners message types formatted with JSON or XML and for all Source at Host message types. Reference maps for all Receive from Partners and Source at Host message types can include custom message attributes that get extracted from the message payloads at runtime. The extracted attributes are visible in the payload and are available for searching and tracking.
 
-* The input of a reference map is the payload that follows the schema uploaded in the definition for the message type.
-* The output of a reference map contains the following fields:
+The input of a reference map is the payload that follows the schema uploaded in the definition for the message type.
+
+The output of a reference map contains the following fields and must validate against the apm-reference-attributes-schema.json or pm-reference-attributes-schema.xml schema, which come with Anypont Partner Manager:
 
 |===
 | *Field* | *Description* | *Required*
@@ -23,7 +24,7 @@ a| No. This field is optional for:
 |Key reference value, such as `Order Number` or `Invoice number`
 | No
 | customAttributes
-a| Array of custom message attributes to extract from the payload.
+a| Array of custom message attributes to extract from the payload. You can specify up to 100 custom message attributes in a given environment and can make up to 25 of them searchable.
 {sp}+
 {sp}+
 When specifying a custom message attribute, configure the following fields in the reference map:
@@ -44,6 +45,71 @@ a| No. This field is optional for:
 * All Receive from Partners message types
 * All Source at Host message types
 |===
+
+== Schemas that Validate the Reference Map Output
+
+Depending on the output format, the reference map output must comply with one of the following schemas:
+
+* apm-reference-attributes-schema.json
++
+"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Root",
+	"type": "object",
+
+	"properties": {
+		"partnerReferenceId": {
+			"type": "string",
+			"default": "",
+			"pattern": "^.*$"
+		},
+		"hostReferenceId": {
+			"type": ["string", "null"],
+			"default": "",
+			"pattern": "^.*$"
+		},
+		"businessDocumentKey": {
+			"type": ["string", "null"],
+			"default": "",
+			"pattern": "^.*$"
+		},
+		"customAttributes": {
+			"type": "array",
+			"default": [],
+			"items":{
+				"type": "object",
+				"required": [
+					"alias",
+					"values"
+				],
+				"properties": {
+					"alias": {
+						"type": "string",
+						"default": "",
+						"pattern": "^.*$"
+					},
+					"values": {
+						"type": "array",
+						"default": [],
+						"items":{
+							"type": "string",
+							"default": "",
+							"pattern": "^.*$"
+						}
+					}
+				}
+			}
+
+		}
+	}
+}
+
+* The apm-reference-attributes-schema.xml
+
+
+
+
+
 
 == Example Map for a Receive from Partners Message Type
 
@@ -164,9 +230,15 @@ The generated output of the map looks like this:
 }
 ----
 
-== Exchange Example of Using Custom Attributes
+== Exchange Examples of DataWeave Maps
 
-To see a comprehensive example that uses custom attributes when implementing an end to end B2B order to cash, see https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/.
+For examples of DataWeave maps on Exchange that include custom message attributes, see:
+
+* https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/[Implementing an end to end B2B order to cash workflow from the perspective of a seller]
++
+
++
+* https://www.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-procure-to-pay-mappings/minor/1.0/[Implementing end to end B2B procure to pay workflow from the perspective of a seller]
 
 == See Also
 
