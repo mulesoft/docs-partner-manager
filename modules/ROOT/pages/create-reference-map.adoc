@@ -4,7 +4,7 @@ When you create a new message type, you can associate it with a DataWeave refere
 
 The input of a reference map is the payload that follows the schema uploaded in the definition for the message type.
 
-The output of a reference map contains the following fields and must validate against the apm-reference-attributes-schema.json or pm-reference-attributes-schema.xml schema, which come with Anypont Partner Manager:
+The output of a reference map contains the following fields and must validate against the `apm-reference-attributes-schema.json` schema, which comes with Anypont Partner Manager:
 
 |===
 | *Field* | *Description* | *Required*
@@ -38,7 +38,7 @@ Alias that uniquely identifies a pre-configured custom message attribute configu
 An array of values, such as order numbers or invoice numbers.
 {sp}+
 {sp}+
-Use an array of strings, even if there is only one attribute to extract. This enables support for transactions with one-to-many relationships, such as transactions in which one shipment notice includes multiple purchase order numbers.
+Use an array of strings, even if there is only one attribute to extract. Using an array enables support for transactions with one-to-many relationships, such as transactions in which one shipment notice includes multiple purchase order numbers.
 
 a| No. This field is optional for:
 
@@ -46,9 +46,9 @@ a| No. This field is optional for:
 * All Source at Host message types
 |===
 
-== Schemas that Validate the Reference Map Output
+== Schema that Validates the Reference Map Output
 
-Depending on the output format, the reference map output must comply with one of the following schemas:
+The reference map output must comply with this schema:
 
 * apm-reference-attributes-schema.json
 +
@@ -103,13 +103,6 @@ Depending on the output format, the reference map output must comply with one of
 		}
 	}
 }
-
-* The apm-reference-attributes-schema.xml
-
-
-
-
-
 
 == Example Map for a Receive from Partners Message Type
 
