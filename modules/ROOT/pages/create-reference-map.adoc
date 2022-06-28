@@ -4,7 +4,7 @@ When you create a new message type, you can associate it with a DataWeave refere
 
 The input of a reference map is the payload that follows the schema uploaded in the definition for the message type.
 
-The output of a reference map must validate against the `apm-reference-attributes-schema.json` schema, which comes with Anypoint Partner Manager. The output contains the following fields:
+The output of a reference map contains the following fields:
 
 |===
 | *Field* | *Description* | *Required*
@@ -45,6 +45,74 @@ a| No. This field is optional for:
 * All Receive from Partners message types
 * All Source at Host message types
 |===
+
+In addition, the output of a reference map must conform to this validation schema:
+
+----
+%dw 2.0
+output application/json
+---
+
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Root",
+	"type": "object",
+
+	"properties": {
+		"partnerReferenceId": {
+			"type": "string",
+			"default": "",
+			"pattern": "^.*$"
+		},
+		"hostReferenceId": {
+			"type": ["string", "null"],
+			"default": "",
+			"pattern": "^.*$"
+		},
+		"businessDocumentKey": {
+			"type": ["string", "null"],
+			"default": "",
+			"pattern": "^.*$"
+		},
+		"customAttributes": {
+			"type": "array",
+			"default": [],
+			"items":{
+				"type": "object",
+				"required": [
+					"alias",
+					"values"
+				],
+				"properties": {
+					"alias": {
+						"type": "string",
+						"default": "",
+						"pattern": "^.*$"
+					},
+					"values": {
+						"type": "array",
+						"default": [],
+						"items":{
+							"type": "string",
+							"default": "",
+							"pattern": "^.*$"
+						}
+					}
+				}
+			}
+
+		}
+	}
+}
+----
+
+If the output of a reference map does not conform to the validation schema, the custom message attributes won't appear in the Partner Manager GUI. To ensure that the output of a reference map conforms to the validation schema, you can add a *Validate schema* operation in an Anypoint Connector for X12 EDI (X12 Connector) app, as shown in these Exchange examples:
+
+* https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/[Implementing an end to end B2B order to cash workflow from the perspective of a seller]
++
+* https://www.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-procure-to-pay-mappings/minor/1.0/[Implementing end to end B2B procure to pay workflow from the perspective of a seller]
+
 
 == Example Map for a Receive from Partners Message Type
 
@@ -95,7 +163,6 @@ The generated output of the map looks like this:
   ]
 }
 ----
-
 
 == Example Map for a Source at Host Message Type
 
