@@ -175,8 +175,6 @@ For examples of DataWeave maps on Exchange that include custom message attribute
 +
 * https://www.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-procure-to-pay-mappings/minor/1.0/[Implementing end to end B2B procure to pay workflow from the perspective of a seller]
 
-These maps also transform data, as described in xref:partner-manager-maps.adoc[Translation Maps].
-
 == See Also
 
 * xref:partner-manager-create-message-type.adoc[Creating a Message Type]
