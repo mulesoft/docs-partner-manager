@@ -7,11 +7,12 @@ Use Anypoint Connector for X12 or Anypoint Connector for EDIFACT with DataWeave 
 . Create EDI translation maps in Anypoint Studio.
 . Import the maps to Partner Manager when you configure inbound and outbound message flows.
 
-For examples of translation maps on Exchange see:
+For examples of DataWeave maps on Exchange that transform data, see:
 
 * https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/[Implementing an end to end B2B order to cash workflow from the perspective of a seller]
 * https://www.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-procure-to-pay-mappings/minor/1.0/[Implementing end to end B2B procure to pay workflow from the perspective of a seller]
 
+These maps also include custom message attributes, which are described in xref:create-reference-maps[Creating Reference Maps for Message Types].
 
 == See Also
 

@@ -4,7 +4,7 @@ When you create a new message type, you can associate it with a DataWeave refere
 
 The input of a reference map is the payload that follows the schema uploaded in the definition for the message type.
 
-The output of a reference map contains the following fields and must validate against the `apm-reference-attributes-schema.json` schema, which comes with Anypont Partner Manager:
+The output of a reference map must validate against the `apm-reference-attributes-schema.json` schema, which comes with Anypoint Partner Manager. The output contains the following fields:
 
 |===
 | *Field* | *Description* | *Required*
@@ -45,64 +45,6 @@ a| No. This field is optional for:
 * All Receive from Partners message types
 * All Source at Host message types
 |===
-
-== Schema that Validates the Reference Map Output
-
-The reference map output must comply with this schema:
-
-* apm-reference-attributes-schema.json
-+
-"definitions": {},
-	"$schema": "http://json-schema.org/draft-07/schema#",
-	"title": "Root",
-	"type": "object",
-
-	"properties": {
-		"partnerReferenceId": {
-			"type": "string",
-			"default": "",
-			"pattern": "^.*$"
-		},
-		"hostReferenceId": {
-			"type": ["string", "null"],
-			"default": "",
-			"pattern": "^.*$"
-		},
-		"businessDocumentKey": {
-			"type": ["string", "null"],
-			"default": "",
-			"pattern": "^.*$"
-		},
-		"customAttributes": {
-			"type": "array",
-			"default": [],
-			"items":{
-				"type": "object",
-				"required": [
-					"alias",
-					"values"
-				],
-				"properties": {
-					"alias": {
-						"type": "string",
-						"default": "",
-						"pattern": "^.*$"
-					},
-					"values": {
-						"type": "array",
-						"default": [],
-						"items":{
-							"type": "string",
-							"default": "",
-							"pattern": "^.*$"
-						}
-					}
-				}
-			}
-
-		}
-	}
-}
 
 == Example Map for a Receive from Partners Message Type
 
@@ -232,6 +174,8 @@ For examples of DataWeave maps on Exchange that include custom message attribute
 
 +
 * https://www.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-procure-to-pay-mappings/minor/1.0/[Implementing end to end B2B procure to pay workflow from the perspective of a seller]
+
+These maps also transform data, as described in xref:partner-manager-maps[Translation Maps].
 
 == See Also
 
