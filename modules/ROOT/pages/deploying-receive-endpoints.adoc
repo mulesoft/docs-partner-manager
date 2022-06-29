@@ -26,15 +26,17 @@ The external URL that you can share with your partners for an AS2 receive endpoi
 
 For example, if the name of your DLB domain is `mythical.lb.anypointdns.net` and the runtime application name is `b2b-inbound-as2-zap3`, then your administrator adds a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC:
 
-image::URL-mapping-rules-AS2.png[URL mapping rules for AS2 in the DLB settings]
+image::url-mapping-rules-as2.png[URL mapping rules for AS2 in the DLB settings]
 
 With these configurations, the external AS2 endpoint URL is `+https://mythical.lb.anypointdns.net/as2/mythical/receive-as2/+`.
 
-=== External URL to Share for an HTTP Receive Endpoint
+=== External URL to Share for an HTTPS Receive Endpoint
 
-The external URL that you can share with your partners for an HTTP endpoint is `+http://{DLB-domain}/{Input-path}/{base-path}/{message-type}+` or `+http://{DLB-domain}/{Input-path}/{base-path}/{message-type}+`.
+The external URL that you can share with your partners for an HTTPS endpoint is `+https://{DLB-domain}/{Input-path}/{base-path}/{message-type}+` or `+http://{DLB-domain}/{Input-path}/{base-path}/{message-type}+`.
 
-For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, the runtime application name is `b2b-inbound-http-ognq`, and the base path you configured in an HTTP receive endpoint is `send2`, then your administrator adds a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC.
+For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, the runtime application name is `b2b-inbound-http-ognq`, and the base path you configured in an HTTP receive endpoint is `send2`, then your administrator adds a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC:
+
+image::url-mapping-rules-https.png[URL mapping rules for HTTPS in the DLB settings]
 
 === External URL to Share for an HTTPS Receive Endpoint
 

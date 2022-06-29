@@ -107,7 +107,7 @@ output application/json
 }
 ----
 
-If the output of a reference map does not conform to the validation schema, the custom message attributes won't appear in the Partner Manager GUI. To ensure that the output of a reference map conforms to the validation schema, you can add a *Validate schema* operation in an Anypoint Connector for X12 EDI (X12 Connector) app, as shown in these Exchange examples:
+If the output of a reference map does not conform to the validation schema, the custom message attributes won't appear in the Partner Manager GUI. To ensure that the output of a reference map conforms to the validation schema, you can add an Anypoint Connector for X12 EDI (X12 Connector) *Validate schema* operation to your MuleSoft app, as shown in these Exchange examples:
 
 * https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/[Implementing an end to end B2B order to cash workflow from the perspective of a seller]
 +
