@@ -109,10 +109,9 @@ output application/json
 
 If the output of a reference map does not conform to the validation schema, the custom message attributes won't appear in the Partner Manager GUI. To ensure that the output of a reference map conforms to the validation schema, you can add an Anypoint Connector for X12 EDI (X12 Connector) *Validate schema* operation to your MuleSoft app, as shown in these Exchange examples:
 
-* https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/[Implementing an end to end B2B order to cash workflow from the perspective of a seller]
+* https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/[B2B/EDI: Order to Cash - Mapping Examples]
 +
-* https://www.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-procure-to-pay-mappings/minor/1.0/[Implementing end to end B2B procure to pay workflow from the perspective of a seller]
-
+* https://www.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-procure-to-pay-mappings/[B2B/EDI: Procure to Pay Mapping Examples]
 
 == Example Map for a Receive from Partners Message Type
 
@@ -236,11 +235,8 @@ The generated output of the map looks like this:
 
 For examples of DataWeave maps on Exchange that include custom message attributes, see:
 
-* https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/[Implementing an end to end B2B order to cash workflow from the perspective of a seller]
-+
-
-+
-* https://www.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-procure-to-pay-mappings/minor/1.0/[Implementing end to end B2B procure to pay workflow from the perspective of a seller]
+* https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/[B2B/EDI: Order to Cash - Mapping Examples]
+* https://www.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-procure-to-pay-mappings/[B2B/EDI: Procure to Pay Mapping Examples]
 
 == See Also
 
