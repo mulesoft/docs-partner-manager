@@ -2,8 +2,9 @@
 
 When you create a new message type, you can associate it with a DataWeave reference map. This is mandatory for Receive from Partners message types formatted with JSON or XML and for all Source at Host message types. Reference maps for all Receive from Partners and Source at Host message types can include custom message attributes that get extracted from the message payloads at runtime. The extracted attributes are visible in the payload and are available for searching and tracking.
 
-* The input of a reference map is the payload that follows the schema uploaded in the definition for the message type.
-* The output of a reference map contains the following fields:
+The input of a reference map is the payload that follows the schema uploaded in the definition for the message type.
+
+The output of a reference map contains the following fields:
 
 |===
 | *Field* | *Description* | *Required*
@@ -23,7 +24,7 @@ a| No. This field is optional for:
 |Key reference value, such as `Order Number` or `Invoice number`
 | No
 | customAttributes
-a| Array of custom message attributes to extract from the payload.
+a| Array of custom message attributes to extract from the payload. You can specify up to 100 custom message attributes in a given environment and can make up to 25 of them searchable.
 {sp}+
 {sp}+
 When specifying a custom message attribute, configure the following fields in the reference map:
@@ -37,13 +38,80 @@ Alias that uniquely identifies a pre-configured custom message attribute configu
 An array of values, such as order numbers or invoice numbers.
 {sp}+
 {sp}+
-Use an array of strings, even if there is only one attribute to extract. This enables support for transactions with one-to-many relationships, such as transactions in which one shipment notice includes multiple purchase order numbers.
+Use an array of strings, even if there is only one attribute to extract. Using an array enables support for transactions with one-to-many relationships, such as transactions in which one shipment notice includes multiple purchase order numbers.
 
 a| No. This field is optional for:
 
 * All Receive from Partners message types
 * All Source at Host message types
 |===
+
+In addition, the output of a reference map must conform to this validation schema:
+
+----
+%dw 2.0
+output application/json
+---
+
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Root",
+	"type": "object",
+
+	"properties": {
+		"partnerReferenceId": {
+			"type": "string",
+			"default": "",
+			"pattern": "^.*$"
+		},
+		"hostReferenceId": {
+			"type": ["string", "null"],
+			"default": "",
+			"pattern": "^.*$"
+		},
+		"businessDocumentKey": {
+			"type": ["string", "null"],
+			"default": "",
+			"pattern": "^.*$"
+		},
+		"customAttributes": {
+			"type": "array",
+			"default": [],
+			"items":{
+				"type": "object",
+				"required": [
+					"alias",
+					"values"
+				],
+				"properties": {
+					"alias": {
+						"type": "string",
+						"default": "",
+						"pattern": "^.*$"
+					},
+					"values": {
+						"type": "array",
+						"default": [],
+						"items":{
+							"type": "string",
+							"default": "",
+							"pattern": "^.*$"
+						}
+					}
+				}
+			}
+
+		}
+	}
+}
+----
+
+If the output of a reference map does not conform to the validation schema, the custom message attributes won't appear in the Partner Manager GUI. To ensure that the output of a reference map conforms to the validation schema, you can add an Anypoint Connector for X12 EDI (X12 Connector) *Validate schema* operation to your MuleSoft app, as shown in these Exchange examples:
+
+* https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/[B2B/EDI: Order to Cash - Mapping Examples]
++
+* https://www.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-procure-to-pay-mappings/[B2B/EDI: Procure to Pay Mapping Examples]
 
 == Example Map for a Receive from Partners Message Type
 
@@ -94,7 +162,6 @@ The generated output of the map looks like this:
   ]
 }
 ----
-
 
 == Example Map for a Source at Host Message Type
 
@@ -164,9 +231,12 @@ The generated output of the map looks like this:
 }
 ----
 
-== Exchange Example of Using Custom Attributes
+== Exchange Examples of DataWeave Maps
 
-To see a comprehensive example that uses custom attributes when implementing an end to end B2B order to cash, see https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/.
+For examples of DataWeave maps on Exchange that include custom message attributes, see:
+
+* https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/[B2B/EDI: Order to Cash - Mapping Examples]
+* https://www.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-procure-to-pay-mappings/[B2B/EDI: Procure to Pay Mapping Examples]
 
 == See Also
 
