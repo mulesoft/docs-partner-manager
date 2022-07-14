@@ -1,0 +1,12 @@
+= Update the Partner AS2 Certificate
+
+When your partner updates their AS2 certificate, they typically provide the new certificate and the time when it must be activated.
+
+To update the partner AS2 certificate:
+
+. Access the Partner page.
+. In the *Certificates* section, click *New*.
+. Select the certificate and click *Upload certificate*.
+. In the *AS2* column for the certificate entry, click *Assign*.
+
+Partner Manager updates the outbound and inbound AS2 applications in the runtime. The update can take up to 10 minutes to complete.

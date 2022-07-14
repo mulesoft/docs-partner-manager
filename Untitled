@@ -1,0 +1,23 @@
+= Update the AS2 Host Keystore
+
+When your host AS2 keystore is about to expire, follow these steps to update the keystore with a new certificate and private key pair:
+
+. Depending on your organization’s policies, create a self-signed certificate and key pair, or obtain a new AS2 certificate from your certificate authority.
+. Define a date on which you plan to switch to the new certificate.
+. Share the new public certificate with your AS2 partners to give them sufficient lead time to plan the certificate switch on their side.
+
+When it is time to switch to the new keystore:
+
+. From the *<host>* page, click the keystore you want to update and then click *Edit*.
+. Import the new certificate and private key.
+. Enter the key passphrase.
+. Click *Update keystore*.
+. After the keystore updates, open one message flow that references the AS2 endpoint and redeploy the flow.
++
+Partner Manager updates the outbound and inbound AS2 applications in the runtime. The update can take up to 10 minutes to complete.
+
+NOTE: If you have more than one AS2 receive endpoint that uses the keystore, redeploy one message flow that references each AS2 receive endpoint. (Can you have a message flow that references multiple AS2 receive endpoints?)
+
+== See Also
+
+*
