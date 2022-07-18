@@ -1,24 +1,8 @@
 = Certificate Settings
 
+*Vijay, can you help with this introductory material*? We may want to introduct keystores here as well - I am not sure.*
+
 All certificates in Anypoint Partner Manager are securely stored in the Anypoint Platform secrets manager, which uses secure vault technology to store and to control access to private keys, passwords, certificates, and other secrets.
-
-Based on your organization's needs, configure your certificate to include the following information:
-
-* *Authority*: The certificate provider
-* *Serial Number*: The serial number from the certificate
-* *Status*: The status of the certificate.
-+
-The circle icon in the *Status* field on the certificate shows the user the status of the certificate:
-+
-** Green: The certificate is active.
-** Red: The certificate is inactive.
-+
-* *Start Date*: The date from which the certificate is valid
-* *Expires*: The date after which the certificate is no longer valid
-* *Endpoints*: The number of endpoints using the certificate
-* *Message Flows*: The number of message flows using the certificate
-
-== Certificate Types and Connection Settings
 
 In Partner Manager, you can:
 
@@ -28,30 +12,8 @@ If an endpoint is currently using a CA-signed certificate, you do not need to up
 You can upload a new certificate (in `<certifcate name>.PEM` format) or view all the certificates available for use with this endpoint setup.
 * Enable an insecure connection for local testing that doesn’t perform certificate validation by selecting *Allow insecure connection*.
 
-== Add Certificates
-
-You can add certificates from the host or partner page.
-
-. In the Partner Manager home page, select either *<host name>* or *Partners*. +
-If you select *Partners*, select from the list displayed the partner to which you want to add the certificate.
-. In the *Certificates* section, click *New*.
-. In the *Certificate* field of the *New certificate for <host name>* or the *New certificate for Partners* window, click *Choose file* to upload a certificate.
-. Click *Upload Certificate*. +
-The new certificate is added to the host or the trading partner.
-
-== Delete Certificates
-
-You can delete certificates that are not deployed or associated with endpoints; however, you cannot delete a certificate if it is the only certificate that is uploaded.
-
-To delete a certificate:
-
-. In the Partner Manager home page, select *<host name>* or *Partners*. +
-If you select Partners, select the partner to which you want to add the certificate from the list.
-. In the *Certificates* section, click the certificate to delete.
-. In the dialog box, click *Delete*.
 
 == See Also
 
-* xref:configure-host.adoc[Configure and Manage a Host Profile]
-* xref:configure-partner.adoc[Configuring and Managing Partners]
-* xref:create-keystore.adoc[Create AS2 Host Keystore]
+* xref:manage-as2-host-keystores.adoc[Managing AS2 Host Keystores]
+* xref:manage-as2-partner-certificates.adoc[Managing AS2 Partner Certificates]
