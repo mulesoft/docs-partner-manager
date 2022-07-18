@@ -1,5 +1,6 @@
 == Managing AS2 Partner Certificates
 
+If you create an AS2 Receive from Partners or Send to Partners endpoint, you must assign an AS2 certificate to the associated partner. The AS2 certificate verifies the signature of inbound AS2 messages and encrypts outbound AS2 messages.
 
 == Add an AS2 Partner Certificate
 
@@ -30,7 +31,7 @@ Partner Manager updates the inbound and outbound AS2 applications in the runtime
 
 == Delete an AS2 Partner Certificate
 
-You can delete AS2 partner certificates that have not been assigned.
+You can delete AS2 partner certificates that have not been assigned to partners.
 
 To delete an AS2 partner certificate:
 
@@ -40,3 +41,7 @@ To delete an AS2 partner certificate:
 . Click the trash can icon that appears.
 
 == See Also
+
+* xref:Certificates.adoc[Certificate Settings]
+* xref:endpoint-as2-receive.adoc[AS2 Receive Settings]
+* xref:endpoint-as2-send.adoc[AS2 Send Settings]
