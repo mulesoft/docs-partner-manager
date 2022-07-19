@@ -1,4 +1,4 @@
-= Configuring EDIFACT Global Receive Settings
+= Configuring Global EDIFACT Receive Settings
 
 When EDIFACT messages received from your trading partners do not contain a UNA segment, Partner Manager uses the delimiters specified on the *Global EDIFACT settings: Receive from partners* window to parse the received EDIFACT payloads. These settings are defined under the host organization’s profile:
 
@@ -10,6 +10,7 @@ When EDIFACT messages received from your trading partners do not contain a UNA s
 |Repetition separator | Repetition separator character | *
 | Segment terminator | Segment terminator character | '
 | Release character | Release character | ?
+|===
 
 == See Also
 

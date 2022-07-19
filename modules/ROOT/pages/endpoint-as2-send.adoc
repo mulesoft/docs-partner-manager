@@ -80,7 +80,15 @@ a|Whether you want the partner to return a Message Disposition Notification (MDN
 |x
 
 |<Host> keystore
-|The host xref:create-keystore.adoc[keystore] files in your environment that house your organization's public certificate and private key.
+a|Host keystore file that stores your organization's public certificate and private key. To create a new keystore when creating an endpoint:
+
+--
+. Click *New*.
+. Complete the fields on the *New keystore for <host> window*.
+. Click *Upload Keystore*.
+--
+
+For more information about host keystores, see xref:manage-as2-host-keystores.adoc[Managing AS2 Host Keystores].
 |x
 
 |Signature algorithm
