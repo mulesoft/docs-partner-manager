@@ -10,12 +10,12 @@ Use the following settings to define JSON or XML settings for the Source at Host
 |Format a|Application message structure format. Allowed value is `JSON` or `XML`.
  | |Yes
 |Schema |Imported JSON or XSD schema file for the message type.| |Yes
-|Message type identifier a| Message identifier value used in the dynamic message routing of outbound B2B transactions. Partner Manager automatically generates this identifier from the schema filename. You can modify this value.
+|Message type identifier a| Message type identifier value used in the dynamic message routing of outbound B2B transactions. Partner Manager automatically generates this identifier from the schema filename. You can modify this value.
 
-Your partner must pass this value when sending messages, files, or both to Partner Manager:
+The backend application must pass the message type identifier when sending outbound messages:
 
 * If you receive the payload via an HTTP-based endpoint, the message type identifier is the relative path in the HTTP request.
-* If you receive the payload via AS2 or via file-based endpoint protocols such as SFTP and FTP, the filename begins with `<message-type-id>_`.
+* If you receive the payload via a file-based endpoint protocol such as SFTP or FTP, the message type identifier is prefixed to the filename (`<message-type-id>_<filename>`).
 
 See xref:outbound-message-routing.adoc[Outbound Message Routing] to understand how outbound routing is performed and how your backend applications pass the message type identifier when sending application messages to Partner Manager endpoints. | |Yes
 
