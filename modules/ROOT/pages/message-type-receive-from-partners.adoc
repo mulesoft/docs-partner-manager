@@ -41,7 +41,7 @@ Use the following settings to define JSON or XML as the protocol for the Receive
 |Usage | Message usage. Allowed value is `Receive from partners`. | | Yes
 |Format | Format of the message. Allowed value is `JSON` or `XML`. | |Yes
 |Schema | Imported JSON or XSD schema file for the message type. | |Yes
-|Message type identifier a| Message identifier value used in the dynamic message routing of inbound B2B transactions. Partner Manager automatically generates a message type identifier from the schema filename. You can modify this value.
+|Message type identifier a| Message type identifier value used in the dynamic message routing of inbound B2B transactions. Partner Manager automatically generates a message type identifier from the schema filename. You can modify this value.
 {sp} +
 {sp} +
 The partner must pass the message type identifier when sending inbound messages:
