@@ -4,9 +4,9 @@ You can deploy AS2 receive, HTTP receive, and HTTPS receive endpoints on a publi
 
 == Deploy to CloudHub on a Public Port
 
-When an AS2, HTTP, or HTTPS receive endpoint is deployed with the public port configuration enabled, the endpoint application is deployed on the public HTTPS port (`8082`), with the traffic routed through the xref:runtime-manager::dedicated-load-balancer-tutorial#shared-load-balancers[shared load balancer]. The value in the URL field is automatically generated when you deploy a message flow to CloudHub that uses this endpoint.
+When an AS2, HTTP, or HTTPS receive endpoint is deployed with the public port configuration enabled, the endpoint application is deployed on the public HTTPS port (`8082`), with the traffic routed through the xref:runtime-manager::dedicated-load-balancer-tutorial.adoc#shared-load-balancers[shared load balancer]. The value in the URL field is automatically generated when you deploy a message flow to CloudHub that uses this endpoint.
 
-You can view the runtime application name, internal URL, and external URL for a deployed endpoint from the *Endpoint* details page or the *Receive* section of your message flow. For example:
+You can view the runtime application name, internal URL, and external URL for a deployed endpoint from the *Endpoint* details page, which you can access from... : For example:
 
 image::pm-receive-endpoint-url.png[Example of a runtime application name, internal URL, and external URL]
 
@@ -21,7 +21,7 @@ To deploy an AS2, HTTP, or HTTPS receive endpoint with the private port configur
 * Deploy a message flow that includes the receive endpoint.
 * Set CloudHub to automatically deploy newly created endpoints to a private port, as described in xref:cloudhub-deploy-options.adoc[CloudHub deployment settings].
 
-Endpoints with the private port configuration enabled are deployed to the private HTTPS port `8092`. You can view the runtime application name, internal URL, and external URL for a deployed endpoint from the *Endpoint* details page or the *Receive* section of your message flow. 
+Endpoints with the private port configuration enabled are deployed to the private HTTPS port `8092`. You can view the runtime application name, internal URL, and external URL for a deployed endpoint from the *Endpoint* details page or the *Receive* section of your message flow.
 
 Once an endpoint is deployed, follow these steps:
 
