@@ -4,7 +4,7 @@ You can deploy AS2 receive, HTTP receive, and HTTPS receive endpoints on a publi
 
 == Deploy to CloudHub on a Public Port
 
-When an AS2, HTTP, or HTTPS receive endpoint is deployed with the public port configuration enabled, the endpoint application is deployed on the public HTTPS port (`8082`), with the traffic routed through the xref:runtime-manager::dedicated-load-balancer-tutorial.adoc#shared-load-balancers.adoc[shared load balancer]. The value in the URL field is automatically generated when you deploy a message flow to CloudHub that uses this endpoint.
+When an AS2, HTTP, or HTTPS receive endpoint is deployed with the public port configuration enabled, the endpoint application is deployed on the public HTTPS port (`8082`), with the traffic routed through the xref:runtime-manager::dedicated-load-balancer-tutorial.adoc[shared load balancer]. The value in the URL field is automatically generated when you deploy a message flow to CloudHub that uses this endpoint.
 
 You can view the runtime application name and external URL for a deployed endpoint from the endpoint details page. For example:
 
@@ -40,7 +40,7 @@ For example, if the name of your DLB domain is `mythical.lb.anypointdns.net` and
 
 image::url-mapping-rules-as2.png[URL mapping rules for AS2 in the DLB settings]
 
-With this configuration the external AS2 endpoint URL is `+https://mythical.lb.anypointdns.net/as2/mythical/receive-as2/+`.
+With this configuration, the external AS2 endpoint URL is `+https://mythical.lb.anypointdns.net/as2/mythical/receive-as2/+`.
 
 === External URL and Mapping Rule for an HTTPS Receive Endpoint
 
