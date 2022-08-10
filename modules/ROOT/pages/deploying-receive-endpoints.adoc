@@ -1,55 +1,69 @@
 = Deploying AS2, HTTP, and HTTPS Receive Endpoints
 
-You can deploy AS2 receive, HTTP receive, and HTTPS receive endpoints on a public or private port, or on-premises.
+You can deploy AS2 receive, HTTP receive, and HTTPS receive endpoints on a public port, private port, or on-premises.
 
 == Deploy to CloudHub on a Public Port
 
-When an AS2, HTTP, or HTTPS receive endpoint is deployed with the public port configuration enabled, the endpoint application is deployed on the public HTTPS port (`8082`), with the traffic routed through the xref:runtime-manager::dedicated-load-balancer-tutorial#shared-load-balancers[shared load balancer]. The value in the URL field is automatically generated when you deploy a message flow to CloudHub that uses this endpoint.
+When an AS2, HTTP, or HTTPS receive endpoint is deployed with the public port configuration enabled, the endpoint application is deployed on the public HTTPS port (`8082`), with the traffic routed through the xref:runtime-manager::dedicated-load-balancer-tutorial.adoc[shared load balancer]. The value in the URL field is automatically generated when you deploy a message flow to CloudHub that uses this endpoint.
 
-You can view this URL by either selecting the receive endpoint from your deployed message flow or clicking the endpoint name from the endpoints list. You can share this URL with the partners that send AS2, HTTP, or HTTPS messages to this endpoint.
+You can view the runtime application name and external URL for a deployed endpoint from the endpoint details page. For example:
+
+image::pm-receive-endpoint-url.png[Example of a runtime application name and external URL]
+
+You can share the external URL with the partners that send AS2, HTTP, or HTTPS messages to this endpoint.
 
 If your organization uses Anypoint VPC without a dedicated load balancer (DLB), your organization’s platform administrator can configure the necessary xref:runtime-manager::vpc-firewall-rules-concept.adoc[VPC firewall rules] to allow specific partner or third-party connection IP addresses to access the endpoint.
 
 == Deploy to CloudHub on a Private Port
 
-When an AS2, HTTP, or HTTPS receive endpoint is deployed with the private port configuration enabled, the endpoint is deployed to the private HTTPS port `8092`. The internal URL of the endpoint appears on the *Message Flow* or *Endpoint* details page.
+To deploy an AS2, HTTP, or HTTPS receive endpoint with the private port configuration enabled, do either of the following:
 
-You can also set CloudHub to automatically deploy newly created endpoints to a private port via the xref:cloudhub-deploy-options.adoc[CloudHub deployment settings].
+* Deploy a message flow that includes the receive endpoint.
+* Set CloudHub to automatically deploy newly created endpoints to a private port, as described in xref:cloudhub-deploy-options.adoc[CloudHub deployment settings].
 
-After deploying the first message flow using the endpoint configuration, you can view the runtime application name for the endpoint from the *Endpoint* details page or the *Receive* section of your message flow. To configure xref:runtime-manager::lb-mapping-rules.adoc[URL mapping rules] in the xref:runtime-manager::cloudhub-dedicated-load-balancer.adoc[DLB] to forward the AS2, HTTP, or HTTPS messages received from your partners to the application, provide the application name to your organization’s platform administrator.
+Endpoints with the private port configuration enabled are deployed to the private HTTPS port `8092`. You can view the runtime application name, internal URL, and external URL for a deployed endpoint from the endpoint details page, which you can access from the host page (AS2 endpoints) or partner page (HTTP or HTTPS endpoints), or from a message flow.
 
-Your organization’s platform administrator can also xref:runtime-manager::lb-whitelists.adoc[add your partner's IP addresses to a list of allowed addresses] in the DLB settings to allow specific IP addresses to access the endpoint.
+Once an endpoint is deployed, follow these steps:
 
-=== External URL to Share for an AS2 Receive Endpoint
+. Configure URL mapping rules to forward the messages received from your partners to an application, as described in the following sections and in xref:runtime-manager::lb-mapping-rules.adoc[Dedicated Load Balancer Mapping Rules].
+. Have your organization's platform administrator add your partner's IP addresses to a list of allowed addresses in the DLB setting, as described in xref:runtime-manager::lb-allowlists.adoc[Dedicated Load Balancer Allowlists].
 
-The external URL that you can share with your partners for an AS2 receive endpoint is `+https://{DLB-domain}/{Input-path}/receive-as2+`.
+== External URLs and Mapping Rules for Deployed Receive Endpoints
 
-For example, if the name of your DLB domain is `mythical.lb.anypointdns.net` and the runtime application name is `b2b-inbound-as2-zap3`, then your administrator adds a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC:
+The external URLS for receive endpoints deployed to public or private ports vary depending on the endpoint type, DLB domain, and input start_paths. You can share external URLs with your partners.
+
+=== External URL and Mapping Rules for an AS2 Receive Endpoint
+
+The external URL for an AS2 receive endpoint is `+https://{DLB-domain}/{Input-path}/receive-as2+`.
+
+For example, if the name of your DLB domain is `mythical.lb.anypointdns.net` and the runtime application name is `b2b-inbound-as2-zap3`, then your administrator can add a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC:
 
 image::url-mapping-rules-as2.png[URL mapping rules for AS2 in the DLB settings]
 
-With these configurations, the external AS2 endpoint URL is `+https://mythical.lb.anypointdns.net/as2/mythical/receive-as2/+`.
+With this configuration, the external AS2 endpoint URL is `+https://mythical.lb.anypointdns.net/as2/mythical/receive-as2/+`.
 
-=== External URL to Share for an HTTPS Receive Endpoint
+=== External URL and Mapping Rule for an HTTPS Receive Endpoint
 
-The external URL that you can share with your partners for an HTTPS endpoint is `+https://{DLB-domain}/{Input-path}/{base-path}/{message-type}+` or `+https://{DLB-domain}/{Input-path}/{base-path}/{message-type}+`.
+The external URL for an HTTPS endpoint is `+https://{DLB-domain}/{Input-path}/{base-path}/{message-type}+`.
 
-For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, the runtime application name is `b2b-inbound-http-ognq`, and the base path you configured in an HTTPS receive endpoint is `send2`, then your administrator adds a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC:
+For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, the base path you configured for the endpoint is `send2`, and the runtime application name is `b2b-inbound-http-ognq`, then your administrator can add a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC. For example:
 
 image::url-mapping-rules-https.png[URL mapping rules for HTTPS in the DLB settings]
 
-=== External URL to Share for an HTTP Receive Endpoint
+=== External URL and Mapping Rules for an HTTP Receive Endpoint
 
-The external URL that you can share with your partners for an HTTP endpoint is `+http://{DLB-domain}/{Input-path}/{base-path}/{message-type}+` or `+http://{DLB-domain}/{Input-path}/{base-path}/{message-type}+`.
+The external URL for an HTTP Receive from Partners or Source at Host endpoint is `+http://{DLB-domain}/{Input-path}/{base-path}/{message-type}+`, where the partner supplies the values for `{DLB-domain}` and `{Input-path}`, the value for `{base-path}` is obtained from the endpoint configuration, and the value for `{message-type}` is obtained from the configuration of the associated message flow.
 
-For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, the runtime application name is `b2b-inbound-http-ognq`, and the base path you configured in an HTTP receive endpoint is `send2`, then your administrator adds a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC:
+Suppose you configure an HTTP Receive from Partners endpoint to use in an inbound message flow. In this example, the name of your DLB domain is `mythical.lb.anypointdns.net`, the input path is `apm/inbound`, the base path of the endpoint is `receive`, the message type for the message flow is `pacific-purchase-order`, and the runtime application name is `b2b-inbound-http-ognq`.
 
-In this example:
+Given these example values:
 
-* The external HTTP receive endpoint URL is `+http://mythical.lb.anypointdns.net/apm/qa/outbound/send2/+`.
-* Your backend applications send the application JSON and XML messages for your outbound message flows from `+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/{message-type}+`.
-* If `enterprise-ob-po-ack` is the message type, your backend applications post the HTTP requests to the URL
-`+https://mythical.lb.anypointdns.net/apm/qa/outbound/send2/enterprise-ob-po-ack+`.
+* The external URL for the endpoint is `+http://mythical.lb.anypointdns.net/apm/inbound/receive/+`.
+* Your partner sends the application JSON and XML messages to your inbound message flow at `+https://mythical.lb.anypointdns.net/apm/inbound/receive/pacific-purchase-order+`.
+
+Your administrator can add a URL mapping rule in the DLB settings like the following to forward incoming requests to the runtime application within your VPC:
+
+image::url-mapping-rules-http.png[URL mapping rule for the HTTP endpoint in this example]
 
 == Deploy to an On-Premises Mule Instance
 

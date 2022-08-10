@@ -36,7 +36,7 @@ wrapper.java.maxmemory=4606
 ----
 +
 . xref:mule-runtime::installing-an-enterprise-license.adoc[Install an Enterprise License].
-. Add the server in Runtime Manager based on the instructions in xref:runtime-manager::servers-create#create-a-server[Add Servers to Runtime Manager].
+. Add the server in Runtime Manager based on the instructions in xref:runtime-manager::servers-create.adoc[Add Servers to Runtime Manager].
 . Start Mule and verify it is active within Anypoint Runtime Manager.
 . Add the servers you created to the `B2BServerGroup` server group you created earlier. +
 See xref:runtime-manager::server-group-add.adoc[Add Servers to a Group].
