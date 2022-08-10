@@ -83,9 +83,16 @@ Accepts messages that aren't signed or encrypted.
 
 When deploying an AS2 endpoint to CloudHub using the HTTP protocol, you cannot change the default value (`Signed & Encrypted`).
 | x
-
 |<Host> keystore
-|Host keystore files in your environment that store your organization's public certificate and private key.
+a|Host keystore file that stores your organization's public certificate and private key. To create a new keystore when creating an endpoint:
+
+--
+. Click *New*.
+. Complete the fields on the *New keystore for <host> window*.
+. Click *Upload Keystore*.
+--
+
+For more information about host keystores, see xref:manage-as2-host-keystores.adoc[Managing AS2 Host Keystores].
 |x
 |===
 
@@ -98,4 +105,3 @@ After you create an AS2 receive endpoint, you can deploy it, as described in xre
 * xref:endpoints.adoc[Endpoints]
 * xref:create-endpoint.adoc[Creating Endpoints]
 * xref:as2-endpoints-algorithms.adoc[AS2 Signature and Encryption Algorithms]
-* xref:create-keystore.adoc[Creating AS2 Host Keystores]
