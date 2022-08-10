@@ -40,7 +40,7 @@ For example, if the name of your DLB domain is `mythical.lb.anypointdns.net` and
 
 image::url-mapping-rules-as2.png[URL mapping rules for AS2 in the DLB settings]
 
-With this configuration the external AS2 endpoint URL is `+https://mythical.lb.anypointdns.net/as2/mythical/receive-as2/+`.
+With this configuration, the external AS2 endpoint URL is `+https://mythical.lb.anypointdns.net/as2/mythical/receive-as2/+`.
 
 === External URL and Mapping Rule for an HTTPS Receive Endpoint
 
