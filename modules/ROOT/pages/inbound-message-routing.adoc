@@ -6,16 +6,20 @@ Depending on the endpoint type and protocol, the successful routing of your part
 
 To successfully route inbound messages that use an AS2 Receive from Partners endpoint, your partner does the following:
 
-* Uses a filename that begins with `{message-type-id}_`.
+* For non-EDI files (JSON or XML), uses a filename that begins with `{message-type-id}_`.
 +
 For example, if the message type is named `custom-po`, the filename should begin with `custom-po_`.
 +
-* Sets the AS2 MIME-Type in the inbound AS2 message as follows, depending on the message type:
+For EDI files, the filename has no restrictions.
++
+* For all files, sets the AS2 MIME-Type in the inbound AS2 message as follows, depending on the message type:
 
 ** EDIFACT: `application/EDIFACT` or `text/plain`
 ** JSON: `application/json`
 ** X12: `application/EDI-X12` or `text/plain`
 ** XML: `application/xml`
+
+
 
 == Messages That Use an FTP or SFTP Endpoint
 
