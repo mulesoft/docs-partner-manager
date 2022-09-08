@@ -1,0 +1,47 @@
+== Modifying Endpoints
+
+You can modify some endpont settings, but what you can modify depends on the endpoint usage and protocol:
+
+. In the navigation menu, select 
+. Click *Edit*.
+
+
+== HTTP and HTTPS Send Endpoints
+
+You can modify the following fields for an HTTP or HTTPS Send to Partners or Target at Host endpoint:
+
+* *Endpoint name*
+* *Description*
+* *URL*
+* *Response timeout (in milleseconds)*
+* *Authentication type* and related fields
++
+For an HTTPS endpoint, if you change this value from *None* to another authentication type, you must redeploy the endpoint to have the credentials take effect.
++
+* *Certificate*
+
+== HTTP and HTTPS Receive Endpoints
+
+You can modify the following fields for an HTTP or HTTPS Receive from Partners or Source at Host endpoint:
+
+* *Endpoint name*
+* *Description*
+* *Manage with API Manager*, if the *Private port (when deploying to VPC)* field is enabled
+* *API Auto discovery id*, if the *Manage with API Manger* field is enabled
+* *Connection idle timeout (in milleseconds)*
+* *Authentication type* and related fields
+
+== AS2 Send to Partners Endpoints
+
+You can modify the following fields for an AS2 Send to Partners endpoint:
+
+* *Endpoint name*
+* *Description*
+* *Host AS2 identifier*
+* *Partner AS2 identifier*
+* *Partner AS2 URL*
+* *Authentication type* and related fields
+* *Connection timeout*
+* *Retry interval*
+* *Maximum retry attempts*
+* *Respond to email address*
