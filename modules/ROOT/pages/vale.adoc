@@ -1,0 +1,16 @@
+= Vale Test File
+
+This is a test for the Oxford comma a, b and c.
+Now, I am using the pronoun he.
+Tesing incorrect spelling.
+Mulesoft does this.
+AnyPoint does that.
+i.e. does this.
+I live below the grid.
+Do this, ergo, not that.
+I will do that.
+Now, we are done.
+image::partner-manager-inbound-map-1.png[]
+image::partner-manager-inbound-map-1.png[Define Metadata link]
+image::partner-manager-inbound-map-1.png
+image::partner-manager-inbound-map-1.png[Define Metadata, link, and add commas]
