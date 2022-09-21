@@ -1,0 +1,4 @@
+{
+  "feed": "https://github.com/mulesoft/dev-docs-writing-style/releases.atom",
+  "vale_version": ">=2.15.2"
+}

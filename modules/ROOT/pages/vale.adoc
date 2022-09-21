@@ -1,0 +1,17 @@
+== Vale Test file
+
+This is a test of the Oxford comma a, b and c.
+Now, I am using the pronoun he.
+Tesing incorrect spelling.
+Mulesoft does this.
+AnyPoint does that.
+i.e.does this.
+I live below the grid.
+He does that.
+Do this, ergo, not that.
+I will do that.
+Now we are done.
+image::pm-high-level-arch.png[]
+image::pm-high-level-arch.png[
+image::pm-high-level-arch.png[correct alt text]
+image::pm-high-level-arch.png[alt text, wth, commas]

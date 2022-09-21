@@ -1,0 +1,12 @@
+# Copyright (c) 2022, salesforce.com, inc.
+# All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause
+# For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+
+extends: existence
+message: "Add a comma after the next-to-last item in this sequence
+link: https://docs.microsoft.com/en-us/style-guide/punctuation/commas
+scope: sentence
+level: error
+tokens:
+  - '(?:[^,]+,){1,}\s\w+\sand'

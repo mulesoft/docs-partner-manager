@@ -1,0 +1,20 @@
+# Copyright (c) 2022, salesforce.com, inc.
+# All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause
+# For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+extends: existence
+message: "'%s' is not accessible."
+link: https://confluence.internal.salesforce.com/pages/viewpage.action?spaceKey=MTDT&title=MuleSoft+CX+Writing+Style+Reference#MuleSoftCXWritingStyleReference-%22above,%22%22below%22
+level: warning
+ignorecase: true
+tokens:
+  - above
+  - below
+  - left
+  - right
+# extends: existence
+# message: " `%s` has no alt text."
+# level: error
+# ignorecase: true
+# tokens:
+#  - 'image::[\w-_\.]+\[[\s]*\]'

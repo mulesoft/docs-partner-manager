@@ -1,0 +1,17 @@
+# Copyright (c) 2022, salesforce.com, inc.
+# All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause
+# For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+extends: existence
+message: "'%s' is passive. Try to use active voice."
+ignorecase: true
+level: suggestion
+raw:
+  - \b(am|are|were|being|is|been|was|be)\b\s*
+
+extends: existence
+message: "'%s' is future tense. Try to use the present tense."
+ignorecase: true
+level: suggestion
+raw:
+ - \b(will)\b\s*
