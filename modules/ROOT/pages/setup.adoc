@@ -15,7 +15,7 @@ To set up Partner Manager, you must have:
 
 If you require assistance, contact your account representative.
 
-== Parter Manager Permissions
+== Partner Manager Permissions
 
 For each sandbox and production environment, assign the following permissions to your Partner Manager users:
 

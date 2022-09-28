@@ -1,47 +1,118 @@
 == Modifying Endpoints
 
-You can modify some endpont settings, but what you can modify depends on the endpoint usage and protocol:
+Although endpoint settings don't often require changes, you might need to modify them under certain circumstances, for example:
 
-. In the navigation menu, select 
+* Customers move their data center, so you must change the IP address or host name.
+* Customers update their credentials, so you must change the user credentials in the endpoint configuration.
+* Customers change their file naming conventions and response timeout requirements, so you must change these configurations for the endpoint.
+* The downstream API that receives translated inbound data moves from one region to another, so you must change the endpoint URL.
+
+To modify an endpoint:
+
+. Access the endpoint you want to modify from the endpoint owner's page (either the *<host>* or *<partner>* page).
 . Click *Edit*.
+. Modify the desired settings. What you can modify depends on the endpoint protocol and usage, as described in the following sections:
+* <<as2-receive>>
+* <<as2-send>>
+* <<ftp-receive>>
+* <<ftp-send>>
+* <<https-receive>>
+* <<https-send>>
+. Click *Deploy* to deploy all message flows that include the modified endpoint.
 
+[[as2-receive]]
+== AS2 Receive Endpoints
 
-== HTTP and HTTPS Send Endpoints
+You can modify the following fields for an AS2 Receive from Partners endpoint:
 
-You can modify the following fields for an HTTP or HTTPS Send to Partners or Target at Host endpoint:
+* Endpoint name
+* Description
+* Enforce security level and related fields
 
-* *Endpoint name*
-* *Description*
-* *URL*
-* *Response timeout (in milleseconds)*
-* *Authentication type* and related fields
-+
-For an HTTPS endpoint, if you change this value from *None* to another authentication type, you must redeploy the endpoint to have the credentials take effect.
-+
-* *Certificate*
+[[as2-send]]
+== AS2 Send Endpoints
 
+You can modify the following fields for an AS2 Send to Partners endpoint:
+
+* Endpoint name
+* Description
+* Host AS2 identifier
+
+* Partner AS2 identifier
+* Partner AS2 URL
+* Authentication type* and related fields
+* Connection timeout
+* Retry interval
+* Maximum retry attempts
+* Respond to email address
+* Message subject
+* Filename pattern
+* Host AS2 keystore
+* Encryption algorithm
+* Signature algorithm
+* Request receipt
+* MDN signature algorithm
+
+[[ftp-receive]]
+== FTP and SFTP Receive Endpoints
+
+You can modify the following fields for an FTP and SFTP Receive from Partners or Source at Host endpoint:
+
+* Endpoint name*
+* Description*
+* Host*
+* Port*
+* Username*
+* Password*
+* Source path*
+* Polling frequency*
+* Size check wait time*
+* File name pattern*
+* Archival path*
+
+[[ftp-send]]
+== FTP and SFTP Send Endpoints
+
+You can modify the following fields for an FTP and SFTP Send to Partners or Target at Host endpoint:
+
+* Endpoint name
+* Description
+* Host
+* Port
+* Username
+* Password
+* Target path
+* File name pattern
+
+[[https-receive]]
 == HTTP and HTTPS Receive Endpoints
 
 You can modify the following fields for an HTTP or HTTPS Receive from Partners or Source at Host endpoint:
 
-* *Endpoint name*
-* *Description*
-* *Manage with API Manager*, if the *Private port (when deploying to VPC)* field is enabled
-* *API Auto discovery id*, if the *Manage with API Manger* field is enabled
-* *Connection idle timeout (in milleseconds)*
-* *Authentication type* and related fields
+* Endpoint name
+* Description
+* Manage with API Manager, if the *Private port (when deploying to VPC)* field is enabled
+* API Auto discovery id*, if the *Manage with API Manger* field is enabled
+* Connection idle timeout (in milliseconds)
+* Authentication type and related fields
 
-== AS2 Send to Partners Endpoints
+[[https-send]]
+== HTTP and HTTPS Send Endpoints
 
-You can modify the following fields for an AS2 Send to Partners endpoint:
+You can modify the following fields for an HTTP or HTTPS Send to Partners or Target at Host endpoint:
 
-* *Endpoint name*
-* *Description*
-* *Host AS2 identifier*
-* *Partner AS2 identifier*
-* *Partner AS2 URL*
-* *Authentication type* and related fields
-* *Connection timeout*
-* *Retry interval*
-* *Maximum retry attempts*
-* *Respond to email address*
+* Endpoint name
+* Description
+* URL
+* Response timeout (in milliseconds)
+* Authentication type and related fields
++
+For an HTTPS endpoint, if you change this value from `None` to another authentication type, you must redeploy the endpoint to have the credentials take effect.
++
+* Certificate (for HTTPS endpoints)
+
+== See Also
+
+* xref:endpoints.adoc[Endpoints]
+* xref:create-endpoints.adoc[Creating Endpoints]
+* xref:deleting-endpoints.adoc[Deleting Endpoints]

@@ -106,7 +106,7 @@ a| . In the message flow diagram, expand the *Source* section.
 | View and download the DataWeave map that transformed the transmission.
 a|
 . In the message flow diagram, expand the *Map* section.
-. Click the link in this secction.
+. Click the link in this section.
 . Specify a wrap character, if needed.
 . Click *Download*.
 |View information about the message type, including its name, type, identifiers, and control numbers
