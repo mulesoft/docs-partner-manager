@@ -431,7 +431,7 @@ In order to identify your APM environment and its API Key to Anypoint Studio:
 
 === Identify or Create an API Key
 
-In order to create a Mule project, you must enter an xref:glossary.adoc#secta[API Key] and an .
+In order to create a Mule project, you must enter an xref:glossary.adoc#secta[API Key].
 
 If you have an existing API Key, use it. If you do not know the API Key, consult your organization's MuleSoft administrator.
 

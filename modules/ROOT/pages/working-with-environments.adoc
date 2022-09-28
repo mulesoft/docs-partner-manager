@@ -13,9 +13,6 @@ include::partial$promotion-scenarios.adoc[leveloffset=+1]
 
 image::promoteidsoffcertson.png["rough draft graphic,cert promotion scenario"]
 
-////
-</New Text
-
 
 
 
@@ -56,7 +53,6 @@ Only users with the appropriate role or permissions will be able to promote part
 . Select the "target environment", this is the environment into which the partners will be promoted. Hit "Next" to go to the next step. Alternatively, you can hit "Back" to change the selected target environment, if needed.
 . Select whether the partners being promoted will keep their identifiers when matching existing or previously imported partners on the target environment.
 . Select whether the partners being imported will keep their AS2 certificates or use the certificates from the matching existing, or previously promoted partners on the target environment. Hit import to start the process.
-////
 
 == Promotion Scenarios
 Promotion of partners is a more complex procedure than import.
