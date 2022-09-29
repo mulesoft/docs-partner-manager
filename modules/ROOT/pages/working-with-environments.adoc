@@ -13,9 +13,6 @@ include::partial$promotion-scenarios.adoc[leveloffset=+1]
 
 image::promoteidsoffcertson.png["rough draft graphic,cert promotion scenario"]
 
-////
-</New Text
-
 
 
 
@@ -100,3 +97,4 @@ Please note that in this scenario, should the target environment P2 have _any_ o
 * Suppose there's a partner P1 on the source environment E1. Suppose P1 has a set of identifiers (types and values) for AS2, EDI X12 and EDIFACT.
 * And suppose there is a partner P2 on some target environment E2. Suppose P2 has, for whatever reason, the exact same set of identifiers as P1 on E1
 * Promoting P1 from E1 to E2, while selecting "Keep Existing Identifiers", will try to "copy" P1 into E2. This will cause that a set of identifiers be created in E2. However, having the same identifier values more than once is illegal, so promotion will fail. The "Promotion" window will display a message informing about this situation.
+////

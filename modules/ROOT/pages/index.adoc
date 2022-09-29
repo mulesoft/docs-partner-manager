@@ -48,9 +48,9 @@ This page assumes that you are familiar with:
 * Mule
 * xref:3.8@mule-runtime::anypoint-connectors.adoc[Anypoint Connectors]
 * The Anypoint Studio interface (for information about the interface, see
-xref:6@studio::index.adoc[Anypoint Studio Essentials]).
+xref:6.x@studio::index.adoc[Anypoint Studio Essentials]).
 To increase your familiarity with Studio, consider completing one or more
-xref:6@studio::basic-studio-tutorial.adoc[Anypoint Studio Tutorials].
+xref:6.x@studio::basic-studio-tutorial.adoc[Anypoint Studio Tutorials].
 * xref:3.8@mule-runtime::mule-concepts.adoc#flows[Mule Flows]
 * xref:3.8@mule-runtime::global-elements.adoc[Mule Global Elements]
 
