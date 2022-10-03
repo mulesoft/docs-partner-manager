@@ -3,6 +3,3 @@ title: Partner Manager
 version: "1.0"
 nav:
 - modules/ROOT/nav.adoc
-asciidoc:
-  attributes:
-    endOfLife: true
