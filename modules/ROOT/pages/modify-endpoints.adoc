@@ -2,14 +2,14 @@
 
 Although endpoint settings don't often require changes, you might need to modify them under certain circumstances, for example:
 
-* Customers move their data center, so you must change the IP address or host name.
-* Customers update their credentials, so you must change the user credentials in the endpoint configuration.
-* Customers change their file naming conventions and response timeout requirements, so you must change these configurations for the endpoint.
-* The downstream API that receives translated inbound data moves from one region to another, so you must change the endpoint URL.
+* Customers moved their data center, so you must change the IP address or host name.
+* Customers updated their credentials, so you must change the user credentials in the endpoint configuration.
+* Customers changed their file naming conventions and response timeout requirements, so you must change these configurations for the endpoint.
+* The downstream API that receives translated inbound data moved from one region to another, so you must change the endpoint URL.
 
 To modify an endpoint:
 
-. Access the endpoint you want to modify from the endpoint owner's page (either the *<host>* or *<partner>* page).
+. Access the endpoint you want to modify from the endpoint owner's page (either the *<host>* or *<partner>* page, depending on the endpoint).
 . Click *Edit*.
 . Modify the desired settings. What you can modify depends on the endpoint protocol and usage, as described in the following sections:
 * <<as2-receive>>
@@ -18,98 +18,123 @@ To modify an endpoint:
 * <<ftp-send>>
 * <<https-receive>>
 * <<https-send>>
-. Click *Deploy* to deploy all message flows that include the modified endpoint.
+. Click *Deploy* to redeploy the endpoint if required by the modified fields. This redeploys all message flows that include the modified endpoint.
 
 [[as2-receive]]
 == AS2 Receive Endpoints
 
 You can modify the following fields for an AS2 Receive from Partners endpoint:
 
-* Endpoint name
-* Description
-* Enforce security level and related fields
+[%header%autowidth.spread]
+|===
+|Field |Requires an Endpoint Redeployment?
+|Endpoint name |Yes
+|Description |Yes
+|Enforce security level and related fields | No
+|===
+
 
 [[as2-send]]
 == AS2 Send Endpoints
 
 You can modify the following fields for an AS2 Send to Partners endpoint:
 
-* Endpoint name
-* Description
-* Host AS2 identifier
-
-* Partner AS2 identifier
-* Partner AS2 URL
-* Authentication type* and related fields
-* Connection timeout
-* Retry interval
-* Maximum retry attempts
-* Respond to email address
-* Message subject
-* Filename pattern
-* Host AS2 keystore
-* Encryption algorithm
-* Signature algorithm
-* Request receipt
-* MDN signature algorithm
+[%header%autowidth.spread]
+|===
+|Field |Requires an Endpoint Redeployment?
+|Authentication type and related fields |No
+|Connection timeout | No
+|Description | No
+|Encryyption algorithm | No
+|Endpoint name | No
+|File name pattern | No
+|Host AS2 identifier | No
+|Host AS2 keystore | Yes
+|Maximum retry attempts | No
+|MDN signature algorithm | No
+|Message subject | No
+|Partner AS2 identifier | No
+|Partner AS2 URL | No
+|Request receipt | No
+|Respond to email address | No
+|Retry interval | No
+|Signature algorithm | No
+|===
 
 [[ftp-receive]]
 == FTP and SFTP Receive Endpoints
 
 You can modify the following fields for an FTP and SFTP Receive from Partners or Source at Host endpoint:
 
-* Endpoint name*
-* Description*
-* Host*
-* Port*
-* Username*
-* Password*
-* Source path*
-* Polling frequency*
-* Size check wait time*
-* File name pattern*
-* Archival path*
+[%header%autowidth.spread]
+|===
+|Field |Requires an Endpoint Redeployment?
+|Archival path |Yes
+|Endpoint name |No
+|Desription | No
+|File name pattern |Yes
+|Host |Yes
+|Password |Yes
+|Polling frequency |Yes
+|Port | Yes
+|Size check wait time |Yes
+|Source path |Yes
+|Username | Yes
+|===
 
 [[ftp-send]]
 == FTP and SFTP Send Endpoints
 
 You can modify the following fields for an FTP and SFTP Send to Partners or Target at Host endpoint:
 
-* Endpoint name
-* Description
-* Host
-* Port
-* Username
-* Password
-* Target path
-* File name pattern
+[%header%autowidth.spread]
+|===
+|Field |Requires an Endpoint Redeployment?
+|Description |No
+|Endpoint name |No
+|File name pattern |No
+|Host |No
+|Password |No
+|Port |No
+|Target path |No
+|Username |Yes
+|===
 
 [[https-receive]]
 == HTTP and HTTPS Receive Endpoints
 
 You can modify the following fields for an HTTP or HTTPS Receive from Partners or Source at Host endpoint:
 
-* Endpoint name
-* Description
-* Manage with API Manager, if the *Private port (when deploying to VPC)* field is enabled
-* API Auto discovery id*, if the *Manage with API Manger* field is enabled
-* Connection idle timeout (in milliseconds)
-* Authentication type and related fields
+[%header%autowidth.spread]
+|===
+|Field |Requires an Endpoint Redeployment?
+|API Auto discovery id, if the *Manage with API Manger* field is enabled | Yes
+|Authentication type and related fields | Yes
+|Base path ??? |
+|Connection idle timeout (in milleseconds) | Yes
+|Description | Yes
+|Endpoint name | Yes
+|Manage with API Manager and API ID
+If the *Private port (when deploying to VPC)* field is enabled | Yes
+|===
+
 
 [[https-send]]
 == HTTP and HTTPS Send Endpoints
 
 You can modify the following fields for an HTTP or HTTPS Send to Partners or Target at Host endpoint:
 
-* Endpoint name
-* Description
-* URL
-* Response timeout (in milliseconds)
-* Authentication type and related fields
+[%header%autowidth.spread]
+|===
+|Field |Requires an Endpoint Redeployment?
+|Authentication type and related fields
 +
-For an HTTPS endpoint, if you change this value from `None` to another authentication type, you must redeploy the endpoint to have the credentials take effect.
-+
-* Certificate (for HTTPS endpoints)
+For an HTTPS endpoint, if you change this value from `None` to another authentication type, you must redeploy the endpoint to have the credentials take effect. |
+|Certificate (HTTP endpoints only) |
+|Description |
+|Endpoint name |
+|Response timeout (in milliseconds) |
+|===
 
 == See Also
 
