@@ -45,16 +45,17 @@ You can modify the following fields for an AS2 Send to Partners endpoint:
 |Authentication type and related fields |No
 |Connection timeout | No
 |Description | No
-|Encryyption algorithm | No
+|Encryption algorithm | No
 |Endpoint name | No
-|File name pattern | No
-|Host AS2 identifier | No
-|Host AS2 keystore | Yes
+|Filename pattern | No
+
+|<host> AS2 identifier | No
+|<host> keystore | Yes
 |Maximum retry attempts | No
 |MDN signature algorithm | No
 |Message subject | No
-|Partner AS2 identifier | No
-|Partner AS2 URL | No
+|<partner> AS2 identifier | No
+|<partner> AS2 URL | No
 |Request receipt | No
 |Respond to email address | No
 |Retry interval | No
