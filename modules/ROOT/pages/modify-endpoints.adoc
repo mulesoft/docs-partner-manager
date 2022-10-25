@@ -2,10 +2,10 @@
 
 Although endpoint settings don't often require changes, you might need to modify them under certain circumstances, for example:
 
-* Customers moved their data center, so you must change the IP address or host name.
-* Customers updated their credentials, so you must change the user credentials in the endpoint configuration.
-* Customers changed their file naming conventions and response timeout requirements, so you must change these configurations for the endpoint.
-* The downstream API that receives translated inbound data moved from one region to another, so you must change the endpoint URL.
+* Customers move their data center, so you must change the IP address or host name.
+* Customers update their credentials, so you must change the user credentials in the endpoint configuration.
+* Customers change their file naming conventions and response timeout requirements, so you must change these configurations for the endpoint.
+* The downstream API that receives translated inbound data moves from one region to another, so you must change the endpoint URL.
 
 To modify an endpoint:
 
@@ -18,7 +18,9 @@ To modify an endpoint:
 * <<ftp-send>>
 * <<https-receive>>
 * <<https-send>>
-. Click *Deploy* to redeploy the endpoint if required by the modified fields. This redeploys all message flows that include the modified endpoint.
+. Click *Deploy* to redeploy the endpoint and any message flows that use the endpoint.
++
+If required, Partner Manager also automatically deploys the Mule runtime applications that Partner Manager uses when you click *Deploy*. The deployment of Mule runtime applications can take at least five minutes to complete, depending on how many runtime applications are involved. 
 
 [[as2-receive]]
 == AS2 Receive Endpoints
@@ -27,7 +29,7 @@ You can modify the following fields for an AS2 Receive from Partners endpoint:
 
 [%header%autowidth.spread]
 |===
-|Field |Requires an Endpoint Redeployment?
+|Field |Requires the Deployment of Runtime Applications
 |Endpoint name |Yes
 |Description |Yes
 |Enforce security level and related fields | No
