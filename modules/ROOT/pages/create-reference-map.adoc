@@ -16,11 +16,11 @@ a| Yes. This field is required for:
 * All Source at Host message types
 | hostReferenceId
 | Identifier that uniquely identifies the host
-a| No. This field is optional for:
+a| It depends. This field is:
 
-* Receive from partners message types formatted with JSON or XML
-* All Source at Host message types
-| businessDocumentKey
+* Required for Receive from Partners message types formatted with JSON or XML. 
+* Optional for Source at Host message types.
+| businessDocumentKey.
 |Key reference value, such as `Order Number` or `Invoice number`
 | No
 | customAttributes
