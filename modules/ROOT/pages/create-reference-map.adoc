@@ -18,8 +18,8 @@ a| Yes. This field is required for:
 | Identifier that uniquely identifies the host
 a| It depends. This field is:
 
-* Required for Receive from Partners message types formatted with JSON or XML. 
-* Optional for Source at Host message types.
+* Required for Receive from Partners message types formatted with JSON or XML
+* Optional for Source at Host message types
 | businessDocumentKey.
 |Key reference value, such as `Order Number` or `Invoice number`
 | No
