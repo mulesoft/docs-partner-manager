@@ -1,6 +1,6 @@
 = Creating Reference Maps for Message Types
 
-When you create a new Receive from Partners or Source at Host message type, you can associate it with a DataWeave reference map. This is mandatory for Receive from Partners message types formatted with JSON or XML and for all Source at Host message types. Reference maps can include custom message attributes that get extracted from the message payloads at runtime. The extracted attributes are visible in the payload and are available for searching and tracking.
+When you create a new Source at Host message type or a Receive from Partners message type formatted with JSON or XML, you must associate the message type with a DataWeave reference map. This is optional for Receive from Partners message types formatted EDFIACT or X12. Reference maps can include custom message attributes that get extracted from the message payloads at runtime. The extracted attributes are visible in the payload and are available for searching and tracking.
 
 The input of a reference map is the payload that follows the schema uploaded in the definition for the message type.
 
@@ -12,8 +12,8 @@ The output of a reference map contains the following fields:
 | Identifier that uniquely identifies the partner
 a| Required for:
 
-* Receive from Partners message types formatted with JSON or XML
 * All Source at Host message types
+* Receive from Partners message types formatted with JSON or XML
 
 You can hardcode this value as a static value, depending on your data processing and routing needs.
 | hostReferenceId
@@ -22,7 +22,7 @@ a|
 * Required for:
 ** Receive from Partners message types formatted with JSON or XML
 * Optional for:
-** Receive from Partners message types formatted with EDIFACT or X12 EDI
+** Receive from Partners message types formatted with EDIFACT or X12
 ** All Source at Host message types
 
 You can hardcode this value as a static value, depending on your data processing and routing needs.
