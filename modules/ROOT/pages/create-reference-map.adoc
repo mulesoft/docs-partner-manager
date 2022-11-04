@@ -1,28 +1,34 @@
 = Creating Reference Maps for Message Types
 
-When you create a new message type, you can associate it with a DataWeave reference map. This is mandatory for Receive from Partners message types formatted with JSON or XML and for all Source at Host message types. Reference maps for all Receive from Partners and Source at Host message types can include custom message attributes that get extracted from the message payloads at runtime. The extracted attributes are visible in the payload and are available for searching and tracking.
+When you create a new Receive from Partners or Source at Host message type, you can associate it with a DataWeave reference map. This is mandatory for Receive from Partners message types formatted with JSON or XML and for all Source at Host message types. Reference maps can include custom message attributes that get extracted from the message payloads at runtime. The extracted attributes are visible in the payload and are available for searching and tracking.
 
 The input of a reference map is the payload that follows the schema uploaded in the definition for the message type.
 
 The output of a reference map contains the following fields:
 
 |===
-| *Field* | *Description* | *Required*
+| *Field* | *Description* | *Required or Optional*
 | partnerReferenceId
 | Identifier that uniquely identifies the partner
-a| Yes. This field is required for:
+a| Required for:
 
 * Receive from Partners message types formatted with JSON or XML
 * All Source at Host message types
+
+You can hardcode this value as a static value, depending on your data processing and routing needs.
 | hostReferenceId
 | Identifier that uniquely identifies the host
-a| It depends. This field is:
+a| 
+* Required for:
+** Receive from Partners message types formatted with JSON or XML
+* Optional for:
+** Receive from Partners message types formatted with EDIFACT or X12 EDI
+** All Source at Host message types
 
-* Required for Receive from Partners message types formatted with JSON or XML
-* Optional for Source at Host message types
+You can hardcode this value as a static value, depending on your data processing and routing needs.
 | businessDocumentKey.
 |Key reference value, such as `Order Number` or `Invoice number`
-| No
+| Optional
 | customAttributes
 a| Array of custom message attributes to extract from the payload. You can specify up to 100 custom message attributes in a given environment and can make up to 25 of them searchable.
 {sp}+
@@ -40,13 +46,10 @@ An array of values, such as order numbers or invoice numbers.
 {sp}+
 Use an array of strings, even if there is only one attribute to extract. Using an array enables support for transactions with one-to-many relationships, such as transactions in which one shipment notice includes multiple purchase order numbers.
 
-a| No. This field is optional for:
-
-* All Receive from Partners message types
-* All Source at Host message types
+a| Optional
 |===
 
-In addition, the output of a reference map must conform to this validation schema:
+The output of a reference map must conform to this validation schema:
 
 ----
 %dw 2.0
