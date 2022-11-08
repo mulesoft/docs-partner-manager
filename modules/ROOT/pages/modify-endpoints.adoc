@@ -16,7 +16,9 @@ To modify an endpoint:
 * <<as2-send>>
 * <<ftp-receive>>
 * <<ftp-send>>
+* <<http-receive>>
 * <<https-receive>>
+* <<http-send>>
 * <<https-send>>
 . Click *Save* to save your changes.
 . On the confirmation window that opens, select the *I understand the effects of these actions* checkbox and then click *Confirm*.
@@ -40,7 +42,7 @@ You can modify the following fields for an AS2 Receive from Partners endpoint:
 |Field |Requires the Deployment of Runtime Applications
 |Endpoint name |Yes
 |Description |Yes
-|Enforce security level and related fields | No
+|Enforce security level and associated fields | No
 |===
 
 
@@ -52,7 +54,7 @@ You can modify the following fields for an AS2 Send to Partners endpoint:
 [%header%autowidth.spread]
 |===
 |Field |Requires the Deployment of Runtime Applications
-|Authentication type and related fields |No
+|Authentication type and associated fields |No
 |Connection timeout | No
 |Description | No
 |Encryption algorithm | No
@@ -111,40 +113,70 @@ You can modify the following fields for an FTP and SFTP Send to Partners or Targ
 |Username |Yes
 |===
 
-[[https-receive]]
-== HTTP and HTTPS Receive Endpoints
+[[http-receive]]
+== HTTP Receive Endpoints
 
-You can modify the following fields for an HTTP or HTTPS Receive from Partners or Source at Host endpoint:
+You can modify the following fields for an HTTP Receive from Partners or Source at Host endpoint:
 
 [%header%autowidth.spread]
 |===
 |Field |Requires the Deployment of Runtime Applications
-|API Auto discovery id, if the *Manage with API Manger* field is enabled | Yes
-|Authentication type and related fields | Yes
-|Base path ??? |
 |Connection idle timeout (in milleseconds) | Yes
 |Description | Yes
 |Endpoint name | Yes
-|Manage with API Manager and API ID
-If the *Private port (when deploying to VPC)* field is enabled | Yes
+|Manage with API Manager and API Auto discovery id | Yes, if the *Private port (when deploying to VPC)* field is enabled
 |===
 
+[[https-receive]]
+== HTTPS Receive Endpoints
 
-[[https-send]]
-== HTTP and HTTPS Send Endpoints
-
-You can modify the following fields for an HTTP or HTTPS Send to Partners or Target at Host endpoint:
+You can modify the following fields for an HTTPS Receive from Partners or Source at Host endpoint:
 
 [%header%autowidth.spread]
 |===
 |Field |Requires the Deployment of Runtime Applications
-|Authentication type and related fields
-+
-For an HTTPS endpoint, if you change this value from `None` to another authentication type, you must redeploy the endpoint to have the credentials take effect. |
-|Certificate (HTTP endpoints only) |
-|Description |
-|Endpoint name |
-|Response timeout (in milliseconds) |
+|Authentication type and associated fields | Yes
+|Connection idle timeout (in milleseconds) | Yes
+|Credentials | Yes
+|Description | Yes
+|Endpoint name | Yes
+|Manage with API Manager and API Auto discovery id | Yes, if the *Private port (when deploying to VPC)* field is enabled
+|===
+
+[[http-send]]
+== HTTP Send Endpoints
+
+You can modify the following fields for an HTTP Send to Partners or Target at Host endpoint:
+
+[%header%autowidth.spread]
+|===
+|Field |Requires the Deployment of Runtime Applications
+|Authentication type and associated fields a| 
+* No, for the Authentication type field
+* Yes, for fields associated with the authentication type
+|Endpoint name | No
+|Description | No
+|URL | No
+|Response timeout (in milliseconds) | No
+|===
+
+[[https-send]]
+== HTTPS Send Endpoints
+
+You can modify the following fields for an HTTPS Send to Partners or Target at Host endpoint:
+
+[%header%autowidth.spread]
+|===
+|Field |Requires the Deployment of Runtime Applications
+|Authentication type and associated fields
+ a| 
+ * No, for the Authentication type field
+ * Yes for fields associated with the authentication type
+|Certificate | Yes
+|Description | No
+|Endpoint name | No
+|Response timeout (in milliseconds) | No
+|URL | No
 |===
 
 == See Also
