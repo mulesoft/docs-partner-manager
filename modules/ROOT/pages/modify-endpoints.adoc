@@ -127,22 +127,6 @@ You can modify the following fields for an HTTP Receive from Partners or Source 
 |Manage with API Manager and API Auto discovery id | Yes, if the *Private port (when deploying to VPC)* field is enabled
 |===
 
-[[https-receive]]
-== HTTPS Receive Endpoints
-
-You can modify the following fields for an HTTPS Receive from Partners or Source at Host endpoint:
-
-[%header%autowidth.spread]
-|===
-|Field |Requires the Deployment of Runtime Applications
-|Authentication type and associated fields | Yes
-|Connection idle timeout (in milleseconds) | Yes
-|Credentials | Yes
-|Description | Yes
-|Endpoint name | Yes
-|Manage with API Manager and API Auto discovery id | Yes, if the *Private port (when deploying to VPC)* field is enabled
-|===
-
 [[http-send]]
 == HTTP Send Endpoints
 
@@ -158,6 +142,22 @@ You can modify the following fields for an HTTP Send to Partners or Target at Ho
 |Description | No
 |URL | No
 |Response timeout (in milliseconds) | No
+|===
+
+[[https-receive]]
+== HTTPS Receive Endpoints
+
+You can modify the following fields for an HTTPS Receive from Partners or Source at Host endpoint:
+
+[%header%autowidth.spread]
+|===
+|Field |Requires the Deployment of Runtime Applications
+|Authentication type and associated fields | Yes
+|Connection idle timeout (in milleseconds) | Yes
+|Credentials | Yes
+|Description | Yes
+|Endpoint name | Yes
+|Manage with API Manager and API Auto discovery id | Yes, if the *Private port (when deploying to VPC)* field is enabled
 |===
 
 [[https-send]]
