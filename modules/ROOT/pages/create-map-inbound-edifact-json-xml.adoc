@@ -55,7 +55,7 @@ image::pm-inbound-map-1.png[Define Metadata link]
 . From the *Type* field in the *Select metadata type* window, select `JSON` or `XML`.
 . In the *Schema* field, browse to the location of the schema file you imported in step 1, select the schema file, and click *Open*.
 +
-The new EDIFACT message structure displays in the *Input* pane, and your application message structure displays in the *Output* pane:
+The new EDIFACT message structure displays in the Transform Message grapichal view input pane, and your application message structure displays in the output pane of this view:
 +
 image::pm-inbound-map-2.png[Message structures]
 +

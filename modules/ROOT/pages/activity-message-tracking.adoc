@@ -105,7 +105,7 @@ The details for an outbound message include the following information:
 * Name of the transmitted file
 * Information about the message source, including the source message type, source endpoint name, and source protocol
 * Identifiers and control numbers associated with the message
-* Information about the message target, including the partner message type, date and time when the message was sent to the partner, target filename, and target endpoint name
+* Information about the message target, including the partner message type, date, and time when the message was sent to the partner, target filename, and target endpoint name
 
 Take any of the following actions to view and download additional information about the outbound message:
 

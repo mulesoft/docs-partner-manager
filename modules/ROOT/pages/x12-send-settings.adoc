@@ -7,7 +7,7 @@ To configure a partner's X12 send settings:
 . In the navigation menu, select *Partners*.
 . Select the partner for whom you want to configure the settings.
 . In the *Validation and acknowledgment settings* section's *Send to <partner-name>* column, click *X12*.
-. In the menu on the left, select the setting to configure:
+. In the menu, select the setting to configure:
 * <<general-settings,General settings>>
 * <<authorization-settings,Authorization settings>>
 * <<ta1-ack-settings,TA1 Acknowledgment settings>>

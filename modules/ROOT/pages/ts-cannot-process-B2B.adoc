@@ -63,7 +63,7 @@ Verify that your message flow configuration is compatible with that of your part
 
 ** Verify that you have configured an appropriate target, such as both the message type of the target and the associated endpoint configuration.
 
-. If all of these look good, then ensure that the last deployment for this flow was successful by viewing the latest deployment history on the right side of the flow.
+. If all of these look good, then ensure that the last deployment for this flow was successful by viewing the latest deployment history next to the flow.
 
 . If you observe a Failed status, try to deploy the message flow to ensure all your configurations have persisted on the Mule apps.
 
