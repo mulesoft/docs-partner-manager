@@ -7,7 +7,7 @@ To configure a partner's EDIFACT send settings:
 . In the navigation menu, select *Partners*.
 . Select the partner for whom to configure the send settings.
 . In the *Validation and acknowledgment settings* section's *Send to <partner-name>* column, click *EDIFACT*.
-. In the menu on the left, select the setting to configure:
+. Select the setting to configure:
 * <<general-settings,General settings>>
 * <<global-control-numbers,Global control numbers>>
 * <<character-set,Character set & delimiters>>
