@@ -7,7 +7,7 @@ Deleting a message flow automatically undeploys the flow.
 [NOTE]
 For on-premises installations, you must xref:deploy-message-flows#undeploy-message-flows[undeploy a message flow] before you can delete it.
 
-To delete message flows:
+To delete a message flow:
 
 . In the navigation menu, select *Message Flows*.
 . Select the message flow to delete and click *Delete* in the upper right of the screen.

@@ -7,7 +7,7 @@ To configure a partner's EDIFACT send settings:
 . In the navigation menu, select *Partners*.
 . Select the partner for whom to configure the send settings.
 . In the *Validation and acknowledgment settings* section's *Send to <partner-name>* column, click *EDIFACT*.
-. In the menu on the left, select the setting to configure:
+. Select the setting to configure:
 * <<general-settings,General settings>>
 * <<global-control-numbers,Global control numbers>>
 * <<character-set,Character set & delimiters>>
@@ -60,7 +60,7 @@ To change the initial value to maintain sequencing and avoid duplication:
 It can take up to five minutes to apply the change at runtime.
 
 [[character-set]]
-== Character set and delimiters
+== Character Set and Delimiters
 
 Use the following settings to set the character encoding and separators for the generated EDIFACT payload:
 
