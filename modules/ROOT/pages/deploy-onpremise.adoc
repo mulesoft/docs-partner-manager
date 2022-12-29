@@ -1,7 +1,13 @@
-= Deploy Message Flows On-Premises
+= On-Premises Deployment
+
+Deploying message flows on-premises involves installing and configuring Mule runtime engine (Mule) on-premises, registering Mule in the appropriate environment in Anypoint Runtime Manager, and creating a server group for the servers that you create.
+
+To deploy to an on-premises Mule instance that uses a firewall and load balancer, work with your organization’s hosting or network security team to obtain the externally accessible DNS or name of the instance host. Replace the `{runtime_host}` value in the URL with the specific value for your organization.
+
+Each Partner Manager runtime application is deployed as an HTTP listener that listens on ports starting from port 10090. Leave ports 10090 through to 10100 open from a network standpoint before you deploy message flows on-premises.
 
 
-To deploy message flows on-premises, you need to install and set up Mule runtime engine (Mule) on-premises and register it in Anypoint Runtime Manager in the appropriate environment, then create a server group to which to add the servers you create.
+To set up the on-premises environment:
 
 . In the appropriate environment within your Anypoint Platform account, create a server group in the Runtime agent and name it `B2BServerGroup`. All Mule B2B-processing apps are deployed to this server group.
 +
@@ -34,7 +40,7 @@ wrapper.java.initmemory=4606
 # Maximum Java Heap Size (in MB)
 wrapper.java.maxmemory=4606
 ----
-+
+
 . xref:mule-runtime::installing-an-enterprise-license.adoc[Install an Enterprise License].
 . Add the server in Runtime Manager based on the instructions in xref:runtime-manager::servers-create.adoc[Add Servers to Runtime Manager].
 . Start Mule and verify it is active within Anypoint Runtime Manager.
