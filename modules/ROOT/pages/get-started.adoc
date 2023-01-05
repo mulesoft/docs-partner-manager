@@ -1,0 +1,52 @@
+= Getting Started with Partner Manager
+
+== Before You Begin
+
+
+
+
+
+For more information about setting permisions, see xxx.
+ 
+== Use Partner Manager
+
+=== 1: Assign Permissions to Partner Manager Users
+
+For each sandbox and production environment, Use Anypoint Access Management to assign permissions to each Partner Manager user. 
+
+For information, see .
+
+=== 2: Set Up the Partner Manager Environment
+
+You can deploy Partner Manager to CloudHub or you can use Partner Manager on-premises:
+
+* To deploy Partner Manager to CloudHub, use Anypoint Access Management to specify CloudHub deployment options for the sandbox and production environments, as described in xxx.
+* To use Partner Manager on-premises, install and set up Mule runtime engine (Mule) on-premises, register it in Anypoint Runtime Manager in the appropriate environment, and then create a server group to which to add the servers you create.
+
+For information, see Deploy Message Flows On-Premises.
+
+=== 3: Set Up the Payload Storage API
+
+=== 4: Configure a Host Profile
+
+Use the <host> page in Partner Manager to configure a host profile for your Anypoint Platform organization or business group. A <host>  profile consists of 
++
+For information, see Configuring and Managing a Host Profile.
+
+=== 4: Configure Partners
++
+Create a partner profile for each of your trading partners. A partner profile consists of partner-specific settings such as the partner's name, identifiers (such as the AS2 ID, X12-ISA, X12 GS, and so on), digital certificates (such as X.509 certificates), endpoints to use for sending and receiving messages to and from your partner.  and acknowledgements, validations, and control numbers for each message format that the partner uses.
++
+If you plan to use host endpoints only, you don’t need to create partner-specific endpoints.
++
+For more information, see Creating Partners.
+
+=== 5: Configure Third-Party Connections
+
+If your trading partners use third-party service providers such as VANs or 3PLs (third-party logistics providers) who manage the B2B connectivity with your organization on behalf of your partners, then create configurations for these connections.
++
+See Configuring and Managing Third-Party Connections.
+
+=== 6: Configure Message Flows
++
+
