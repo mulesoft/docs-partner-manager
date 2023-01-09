@@ -1,14 +1,7 @@
 = Getting Started with Partner Manager
 
-== Before You Begin
 
 
-
-
-
-For more information about setting permisions, see xxx.
- 
-== Use Partner Manager
 
 . <<assign-permissions,Assign permissions to Partner Manager users>>.
 . <<set-up-env,Set up the Partner Manager environment>>.
@@ -18,12 +11,12 @@ For more information about setting permisions, see xxx.
 . <<configure-third-party,Optionally configure third party connections>>.
 . <<configure-message-flows,Configure message flows>>.
 . <<deploy-test-message-flows,Deploy and test the configured message flows>>.
-, 
+. <<monitor-transmissions,Monitor transmissions and indivual messages>>.
 
 [[assign-permissions]]
 === Assign Permissions to Partner Manager Users
 
-For each sandbox and production environment, use Anypoint Access Management to assign permissions to each Partner Manager user. 
+For each sandbox and production environment, use Anypoint Access Management to assign permissions to each Partner Manager user. You can assign the following permissions
 
 For information, see xref:access-management::permissions-by-product.adoc[] .
 
@@ -97,8 +90,10 @@ Deploy and teset the message flows in a sandbox environment. After you verify th
 
 For more information, see xref:deploy-message-flows.adoc[]
 
-[[transmissions-individual-messages]]
-=== Track Transmissions and Individual Messages
+[[monitor-transmissions]]
+=== Monitor Transactions and Individual Messages
 
-Track the activity of transmissions and individual messages by seraching for transactions based on crieria such as partner name, message direction, send and receive dates, message processing status, partner message type, and host message type. You can also search for transactions based on custom message attributes that you define using DataWeave 
+Is there info that we should incorporate (or references) on using Anypoint Monitoring for PM???
+
+Track the activity of transmissions and individual messages by searching for transactions based on crieria such as partner name, message direction, send and receive dates, message processing status, partner message type, and host message type. You can also search for transactions based on custom message attributes that you define using DataWeave 
 

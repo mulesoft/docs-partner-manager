@@ -17,14 +17,25 @@ Members of your organization can use Partner Manager to perform a variety of fun
 * Managing the activity of the business transactions with your trading partners
 * Optimizing backend services and performance
 
-== Prerequisites for Using Partner Manager
+== Before You Begin Using Partner Manager
 
-To use Partner Manager, you must be familiar with:
+Before you begin using Partner Manager, you must have:
 
-* EDI message formats
-* How to create DataWeave maps to perform data transformations
+* An Anypoint Platform user account with the Anypoint Partner Manager entitlement
+* The Partner Manager Administrator role, which assigns permission levels for to all users who need access to B2B message flows in their environments (production or  sandbox)
+* The required Mule vCore capacity to manage your B2B transaction workload needs
+* Storage for the B2B transmission payloads you send or receive, such as a database, Amazon S3, Azure Blob Storage, and so on   ``
+* Licenses for the AS2, EDIFACT, or X12 connectors used in your B2B message flows
+* Anypoint Studio 7.4 or later
 
-To get started, ask your Anypoint Platform administrator to follow the setup instructions.
+Also, you must be familiar with EDI message formats and creating DataWeave maps to use for performing data transformations.
+
+Should we still say this???
+If you require assistance, contact your account representative
+To get started, ask your Anypoint Platorm administrator to follow the setup instructions.
+
+== Next Steps
+
 
 == See Also
 
