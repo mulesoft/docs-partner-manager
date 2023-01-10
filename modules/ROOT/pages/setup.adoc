@@ -1,20 +1,5 @@
 = Partner Manager Setup Requirements
 
-Before you can deploy message flows from Anypoint Partner Manager, you must set up and configure it for use by your teammates who configure, deploy, and monitor B2B trading partner profiles and message flows.
-
-== Parter Manager Permissions
-
-
-
-== Change the Payload Storage API Configuration
-
-To change the payload storage API configuration, follow these steps:
-
-. Click *Edit* in the Payload Storage section in the Host partner page.
-. Modify the field values you want to change.
-. Click *Save*.
-. Redeploy an existing message flow or deploy a new message flow to implement the changes.
-
 == See Also
 
 * xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]

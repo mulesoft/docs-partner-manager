@@ -1,7 +1,6 @@
 = Getting Started with Partner Manager
 
-
-
+Partner Manager offers a simplified, configuration-driven B2B integration solution to manage B2B trading partner ecosystems. To use Partner Manager, follow these steps:
 
 . <<assign-permissions,Assign permissions to Partner Manager users>>.
 . <<set-up-env,Set up the Partner Manager environment>>.
@@ -12,16 +11,45 @@
 . <<configure-message-flows,Configure message flows>>.
 . <<deploy-test-message-flows,Deploy and test the configured message flows>>.
 . <<monitor-transmissions,Monitor transmissions and indivual messages>>.
+. <<edi-ack-reconciliation.adoc#troubleshoot-rejected-acks,Troubleshoot rejected or overdue acknowledgements.>>
 
 [[assign-permissions]]
-=== Assign Permissions to Partner Manager Users
+== Assign Permissions to Partner Manager Users
 
-For each sandbox and production environment, use Anypoint Access Management to assign permissions to each Partner Manager user. You can assign the following permissions
+For each sandbox and production environment, use Anypoint Access Management to assign permissions to each Partner Manager user. You can assign the following permissions:
 
-For information, see xref:access-management::permissions-by-product.adoc[] .
+*  *Partner Manager Administrator* 
++
+** Has full permissions
+* *View Host, Partners, and Message Flows* 
++
+** Has view-only access to the host, partner, and message flow configurations
+** Cannot view transaction activity
+* *Manage Partners and Message Flows* 
++
+** Can create, modify, and delete partners or message flow configurations
+** Can view host partner configurations
+** Cannot view and manage transaction activity
+* *Manage Activity* 
++
+** Can view and manage transaction activity
+** Cannot view or modify either partner or message flow configurations
+* *Manage Host* 
++
+** Can create, modify, and delete host configurations
+** Cannot view or modify trading partner configurations or activity 
+
++
+This access also applies when the user has the Anypoint Platform Org Admin role.
+* *View Activity* 
++
+** Has view-only access to transaction activity
+** Cannot view or modify either partner or message flow configurations
+
+For more information, see xref:access-management::permissions-by-product.adoc[] .
 
 [[set-up-env]]
-=== Set Up the Partner Manager Environment
+== Set Up the Partner Manager Environment
 
 You can deploy Partner Manager to CloudHub or you can use Partner Manager on-premises:
 
@@ -38,62 +66,81 @@ For more information, see xref:cloudhub-deploy-options.adoc[].
 For more information, see xref:deploy-onpremise.adoc[].
 
 [[payload-storage-api]]
-=== 3: Set Up the Payload Storage API
+== Set Up the Payload Storage API
 
 Is this optional or mandatory??? If optional, when wouldn't you do this???
 Should this be part of the host setup section or should this be done before you start to configure the host profile???
 
-Partner Manager requires that you deploy a payload storage API that it will use for storing transmission information. You can connect this API to your choice of a storage location, such as a database, Amazon S3, or a file system.
+Partner Manager requires that you deploy a payload storage API for storing transmission information. You can connect this API to your choice of a storage location, such as a database, Amazon S3, or a file system.
 
 For more information, see xref:setup-payload-storage-API.adoc[].
 
 [[configure-host-profile]]
-=== Configure a Host Profile
+== Configure a Host Profile
 
 Use the <host> page in Partner Manager to configure a host profile for your Anypoint Platform organization or business group. A <host>  profile consists of the EDI and AS2 identfiers used by your organization, associated digital certificates, Source at Host and Target at Host endpoints, message types, Payload Storage API details, and global settings for EDIFACT receive messages.
 
 For more information, see xref:configure-host.adoc[].
 
 [[configure-partners]]
-=== Configure Profiles for Each of your Trading Partners
+== Configure a Partner Profile for Each of your Trading Partners
 
-Create a partner profile for each of your trading partners. A partner profile consists of partner-specific settings such as the partner's name, identifiers (such as the AS2 ID, X12-ISA, X12 GS, and so on), digital certificates (such as X.509 certificates), and endpoints to use for sending and receiving messages to and from your partner. It also consists of the acknowledgements, validations, and control numbers for each message format that the partner uses.
+A partner profile consists of partner-specific settings such as the partner's name, identifiers (such as the AS2 ID, X12-ISA, X12 GS, and so on), digital certificates (such as X.509 certificates), and endpoints to use for sending and receiving messages to and from your partner. It also consists of the acknowledgements, validations, and control numbers for each message format that the partner uses.
 
-If you plan to use host endpoints only, you don’t need to create partner-specific endpoints.
+Configure a partner profile for each of your trading partners. If you plan to use host endpoints only, you don’t need to create partner-specific endpoints.
 
-For more information, see xref:configure-partner.xml[].
+For more information, see xref:configure-partner.adoc[].
 
 [[configure-third-party]]
-=== Configure Third-Party Connections
+== Configure Third-Party Connections
 
 If your trading partners use third-party service providers such as VANs or 3PLs (third-party logistics providers) who manage the B2B connectivity with your organization on behalf of your partners, then create configurations for these connections.
 
-Creating third-party connections is similar to configuring partner profiles, except that acknowledgements, validations, and control numbers associated with message formats are configured at the partner level only.
+Creating third-party connections is similar to configuring partner profiles, except that the acknowledgements, validations, and control numbers associated with message formats are configured at the partner level only.
 
 For more information, see xref:configure-third-party.adoc[].
 
 [[configure-message-flows]]
-=== Configure Message Flows
+== Configure Message Flows
 
-Message flows contain the following configuration objects, which execute end-to-end B2B message processing: partner identifiers, receive and send endponts, source and target message types, and DataWeave transformation maps.
+Message flows contain the following components, which execute end-to-end B2B message processing: 
+
+* Partner identifiers
+* Receive and send endponts
+* Source and target message types
+* DataWeave transformation maps
 
 Create inbound message flows to receive messages from your partners, transform the messages into your internal application format, and send the transformed message to your backend system.
 
 Create outbound message flows to receive messages from your backend applications, transform the messages to your partner’s message format, and send the messages to your partner.
 
-For more information, see xref:message-flows.adoc[] and xref:message-flow-components.adoc[]. 
+For more information, see xref:message-flows.adoc[] and xref:partner-manager-configuration-objects.adoc[]. 
 
 [[deploy-test-message-flows]]
-=== Deploy and Test the Configured Message Flows
+== Deploy and Test the Configured Message Flows
 
-Deploy and teset the message flows in a sandbox environment. After you verify that the message flow is successful, you can undeploy it from the sandbox and redeploy it to your production environment.
+Deploy and test the message flows in a sandbox environment. After you verify that the message flow is successful, you can undeploy it from the sandbox and redeploy it to your production environment.
 
-For more information, see xref:deploy-message-flows.adoc[]
+For more information, see xref:deploy-message-flows.adoc[] and xref:undeploy-message-flows.adoc[].
 
 [[monitor-transmissions]]
-=== Monitor Transactions and Individual Messages
+== Monitor Transmissions and Individual Messages
 
-Is there info that we should incorporate (or references) on using Anypoint Monitoring for PM???
+Is there info that we should incorporate (or references) on using Anypoint Monitoring for PM (maybe refer to an Anypoint Monitoring topic)???
 
-Track the activity of transmissions and individual messages by searching for transactions based on crieria such as partner name, message direction, send and receive dates, message processing status, partner message type, and host message type. You can also search for transactions based on custom message attributes that you define using DataWeave 
+Monitor transmission activity by searching for transactions based on crieria such as the partner's name, message direction, send and receive dates, messaging processing status, and partner and host message type. You can also search for transactions based on any custom message attributes that you defined for the message type using DataWeave. 
 
+Monitor individual message activity by searching for messages based on criteria such as the partner name, message direction, date range within which the message was sent acknowledgement status, messaging process status, and partner and host message types. You can also search for individual messages based on any custom message attribute that you defined for the message type using DataWeave.
+
+For more information, see xref:activity-tracking.adoc[], xref:use-custom-attributes.adoc[], and xref:activity-message-tracking.adoc[].
+
+[[troubleshoot-acks]]
+== Troubleshoot Rejected or Overdue Acknowledgements
+
+When you monitor transmissions, you can search by acknowledgement status (*Ack Status* field) to find  outbound tranmissions that have either received an X12 997 or EDIFACT CONTRL rejection or that are overdue for the functional acknowledgment. Then, you can review the X12 997 or EDIFACT CONTRL payload received from your partners and add a comment to indicate the action taken.
+
+For more information, see <<edi-ack-reconciliation.adoc[]>>>.
+
+== See Also
+
+* xref:index.adoc[]

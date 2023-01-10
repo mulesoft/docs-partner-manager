@@ -1,5 +1,6 @@
 .xref:index.adoc[Anypoint Partner Manager]
 * xref:index.adoc[Partner Manager Overview]
+* xref:get-started.adoc[Getting Started with Partner Manager]
 * xref:partner-manager-architecture.adoc[Partner Manager Architecture]
 * xref:setup.adoc[Setup and Installation]
   ** xref:cloudhub-deploy-options.adoc[CloudHub Deployment]
