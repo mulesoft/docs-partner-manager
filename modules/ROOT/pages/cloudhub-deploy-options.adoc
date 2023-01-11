@@ -1,6 +1,6 @@
-= CloudHub Deployment Settings
+= Deploy Partner Manager to CloudHub
 
-If you are deploying Partner Manager applications to CloudHub, use the *Partner Manager Settings* page in access management to specify CloudHub deployment options for the sandbox and production environments, including the Mule runtime engine (Mule) version, CloudHub region, Anypoint MQ region, and so on.
+To deploy Partner Manager to CloudHub, use the *Partner Manager Settings* page in Anypoint Access Management to specify CloudHub deployment options for the sandbox and production environments, including the Mule runtime engine (Mule) version, CloudHub region, Anypoint MQ region, and so on.
 
 == Access Partner Manager Settings
 

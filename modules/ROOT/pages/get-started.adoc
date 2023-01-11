@@ -11,7 +11,7 @@ Partner Manager offers a simplified, configuration-driven B2B integration soluti
 . <<configure-message-flows,Configure message flows>>.
 . <<deploy-test-message-flows,Deploy and test the configured message flows>>.
 . <<monitor-transmissions,Monitor transmissions and indivual messages>>.
-. <<edi-ack-reconciliation.adoc#troubleshoot-rejected-acks,Troubleshoot rejected or overdue acknowledgements.>>
+. <<troubleshoot-acks,Troubleshoot rejected or overdue acknowledgements>>.
 
 [[assign-permissions]]
 == Assign Permissions to Partner Manager Users
@@ -37,7 +37,7 @@ For each sandbox and production environment, use Anypoint Access Management to a
 * *Manage Host* 
 +
 ** Can create, modify, and delete host configurations
-** Cannot view or modify trading partner configurations or activity 
+** Cannot view or modify trading partner configurations or transaction activity 
 
 +
 This access also applies when the user has the Anypoint Platform Org Admin role.
@@ -108,7 +108,7 @@ Message flows contain the following components, which execute end-to-end B2B mes
 * Partner identifiers
 * Receive and send endponts
 * Source and target message types
-* DataWeave transformation maps
+* DataWeave translation maps
 
 Create inbound message flows to receive messages from your partners, transform the messages into your internal application format, and send the transformed message to your backend system.
 
@@ -119,9 +119,9 @@ For more information, see xref:message-flows.adoc[] and xref:partner-manager-con
 [[deploy-test-message-flows]]
 == Deploy and Test the Configured Message Flows
 
-Deploy and test the message flows in a sandbox environment. After you verify that the message flow is successful, you can undeploy it from the sandbox and redeploy it to your production environment.
+Deploy and test the message flows in a sandbox environment. After you verify that a message flow is successful, you can undeploy it from the sandbox and redeploy it to your production environment.
 
-For more information, see xref:deploy-message-flows.adoc[] and xref:undeploy-message-flows.adoc[].
+For more information, see xref:deploy-message-flows.adoc[] and xref:undeploy-message-flows.adoc[Undeploying Message Flows].
 
 [[monitor-transmissions]]
 == Monitor Transmissions and Individual Messages
@@ -137,10 +137,11 @@ For more information, see xref:activity-tracking.adoc[], xref:use-custom-attribu
 [[troubleshoot-acks]]
 == Troubleshoot Rejected or Overdue Acknowledgements
 
-When you monitor transmissions, you can search by acknowledgement status (*Ack Status* field) to find  outbound tranmissions that have either received an X12 997 or EDIFACT CONTRL rejection or that are overdue for the functional acknowledgment. Then, you can review the X12 997 or EDIFACT CONTRL payload received from your partners and add a comment to indicate the action taken.
+When you monitor transmissions, you can search by acknowledgement status (*Ack Status* field) to find  outbound tranmissions that either received an X12 997 or EDIFACT CONTRL rejection or that are overdue for the functional acknowledgment. Then, you can review the X12 997 or EDIFACT CONTRL payload received from your partners and add a comment to indicate the action taken.
 
-For more information, see <<edi-ack-reconciliation.adoc[]>>>.
+For more information, see xref:edi-ack-reconciliation.adoc[].
 
 == See Also
 
 * xref:index.adoc[]
+* xref:setup.adoc[Anypoint Partner Manager Setup]
