@@ -10,7 +10,7 @@ Partner Manager offers a simplified, configuration-driven B2B integration soluti
 . <<configure-third-party,Optionally configure third party connections>>.
 . <<configure-message-flows,Configure message flows>>.
 . <<deploy-test-message-flows,Deploy and test the configured message flows>>.
-. <<monitor-transmissions,Monitor transmissions and indivual messages>>.
+. <<monitor-transmissions,Monitor transmissions and individual messages>>.
 . <<troubleshoot-acks,Troubleshoot rejected or overdue acknowledgements>>.
 
 [[assign-permissions]]
@@ -143,5 +143,5 @@ For more information, see xref:edi-ack-reconciliation.adoc[].
 
 == See Also
 
-* xref:index.adoc[]
-* xref:setup.adoc[Anypoint Partner Manager Setup]
+* xref:index.adoc[Partner Manager Overview]
+* xref:setup.adoc[]

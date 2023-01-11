@@ -1,6 +1,11 @@
-= Partner Manager Setup Requirements
+= Setting Up the Partner Manager Environment
+
+Setting up the Partner Manager environment involves either deploying Partner Manager applications to CloudHub or using Partner Manager applications on-premises. In addition, you must configure a payload storage API and xxx.
 
 == See Also
 
-* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
-* xref:setup-payload-storage-API.adoc[Set up the Payload Storage API for Partner Manager]
+* xref:cloudhub-deploy-options.adoc[]
+* xref:deploy-on-premises.adoc[]
+* xref:setup-payload-storage-api.adoc[]
+* xref:Certificates.adoc[]
+
