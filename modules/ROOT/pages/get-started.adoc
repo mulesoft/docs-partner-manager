@@ -4,7 +4,7 @@ Partner Manager offers a simplified, configuration-driven B2B integration soluti
 
 . <<assign-permissions,Assign permissions to Partner Manager users>>.
 . <<set-up-env,Set up the Partner Manager environment>>.
-. <<payload-storage-API,Set up the Payload Storage API>>.
+. <<payload-storage-api,Set up the Payload Storage API>>.
 . <<configure-host-profile,Configure a host profile>>.
 . <<configure-partners,Configure a profile for each of your trading partners>>.
 . <<configure-third-party,Optionally configure third party connections>>.
@@ -40,7 +40,7 @@ For each sandbox and production environment, use Anypoint Access Management to a
 ** Cannot view or modify trading partner configurations or transaction activity 
 
 +
-This access also applies when the user has the Anypoint Platform Org Admin role.
+This access applies even if the user has the Anypoint Platform Org Admin role.
 * *View Activity* 
 +
 ** Has view-only access to transaction activity
@@ -68,9 +68,6 @@ For more information, see xref:deploy-onpremise.adoc[].
 [[payload-storage-api]]
 == Set Up the Payload Storage API
 
-Is this optional or mandatory??? If optional, when wouldn't you do this???
-Should this be part of the host setup section or should this be done before you start to configure the host profile???
-
 Partner Manager requires that you deploy a payload storage API for storing transmission information. You can connect this API to your choice of a storage location, such as a database, Amazon S3, or a file system.
 
 For more information, see xref:setup-payload-storage-API.adoc[].
@@ -78,7 +75,7 @@ For more information, see xref:setup-payload-storage-API.adoc[].
 [[configure-host-profile]]
 == Configure a Host Profile
 
-Use the <host> page in Partner Manager to configure a host profile for your Anypoint Platform organization or business group. A <host>  profile consists of the EDI and AS2 identfiers used by your organization, associated digital certificates, Source at Host and Target at Host endpoints, message types, Payload Storage API details, and global settings for EDIFACT receive messages.
+Use the <*host*> page in Partner Manager to configure a host profile for your Anypoint Platform organization or business group. A host  profile consists of the EDI and AS2 identfiers used by your organization, associated digital certificates, Source at Host and Target at Host endpoints, message types, Payload Storage API details, and global settings for EDIFACT receive messages.
 
 For more information, see xref:configure-host.adoc[].
 
@@ -125,8 +122,6 @@ For more information, see xref:deploy-message-flows.adoc[] and xref:undeploy-mes
 
 [[monitor-transmissions]]
 == Monitor Transmissions and Individual Messages
-
-Is there info that we should incorporate (or references) on using Anypoint Monitoring for PM (maybe refer to an Anypoint Monitoring topic)???
 
 Monitor transmission activity by searching for transactions based on crieria such as the partner's name, message direction, send and receive dates, messaging processing status, and partner and host message type. You can also search for transactions based on any custom message attributes that you defined for the message type using DataWeave. 
 

@@ -58,6 +58,6 @@ Runtime applications deployed to the server group (B2BServerGroup) contain confi
 image::pm-onprem-deployment.png[Deploying Partner Manager on-premises]
 
 == See Also
-* xref:deploy-onpremise.adoc[Deploy Message Flows On-Premises]
-* xref:cloudhub-deploy-options.adoc[CloudHub Deployment Settings]
-* xref:message-flows.adoc[Partner Manager Message Flows]
+* xref:deploy-onpremise.adoc[]
+* xref:cloudhub-deploy-options.adoc[]
+* xref:message-flows.adoc[]

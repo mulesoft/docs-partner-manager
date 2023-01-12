@@ -1,11 +1,13 @@
 = Setting Up the Partner Manager Environment
 
-Setting up the Partner Manager environment involves either deploying Partner Manager applications to CloudHub or using Partner Manager applications on-premises. In addition, you must configure a payload storage API and xxx.
+Setting up the Partner Manager environment involves either deploying Partner Manager to CloudHub or deploying Partner Manager on-premises. In addition, you must configure a payload storage API that provides Partner Manager with a standardized way to connect to your solution for storing transmission content.
+
+Partner Manager uses certificates to establish secure connections with endpoints. You can use a CA-signed certificates or upload your own self-signed certificates for this purpose.
 
 == See Also
 
 * xref:cloudhub-deploy-options.adoc[]
-* xref:deploy-on-premises.adoc[]
-* xref:setup-payload-storage-api.adoc[]
+* xref:deploy-onpremise.adoc[]
+* xref:setup-payload-storage-API.adoc[]
 * xref:Certificates.adoc[]
 

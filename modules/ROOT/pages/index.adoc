@@ -28,7 +28,7 @@ Before you begin using Partner Manager, you must have:
 * Licenses for the AS2, EDIFACT, or X12 connectors used in your B2B message flows
 * Anypoint Studio 7.4 or later
 
-Also, you must be familiar with EDI message formats and creating DataWeave maps to use for performing data transformations.
+Also, you must be familiar with EDI message formats and should know how to create DataWeave maps to use for performing data transformations.
 
 == Partner Manager Concepts
 
@@ -36,22 +36,26 @@ To use Partner Manager, you must understand the following concepts:
 
 ===== host
 
-Your Anypoint platform or business group. A Partner Manager implementation has a single host for which you define a 
+Your Anypoint platform or business group. A Partner Manager implementation has a single host for which you define a host profile.
 
 ===== partners
 The trading partners with whom you send and receive B2B transmissions. You define a partner profile for each partner in your B2B ecosystem.
 
+===== payload storage API
+
+An API that provides Partner Manager with a standardized way to connect to your solution for storing transmission content.
+
 ===== message flows
 The paths along which a B2B message travels from its source, through a DataWeave translation map, to its target. There are two types of message flows:
-+
+
 * Inbound message flows
 +
 Inbound message flows receive messages from partners, including messages that go through third-party connections. When you create an inbound message flow, you can validate and transform the inbound messages and then send them to your backend applications.
-+
 * Outbound message flows
 +
 Outbound message flows receive messages from your backend applications, validate and transform these messages to the format your partners expect, and then send them to your partners either directly, or through third-party connections.
 +
+
 Message flows consist of <<endpoints,endpoints>>, <<message-types,message types>>, <<identifiers,sender and receiver identifiers>>, and <<translation-maps,translation maps>> (optional).
 
 [[endpoints]]
@@ -116,14 +120,14 @@ User-defined attributes that you can associate with a Receive from Partners or S
 
 DataWeave maps that transform business transactions between your partner’s message formats and your organization’s enterprise application message formats. You create the maps in Anypoint Studio and import them into Partner Manager when you configure message flows.
 
-==== templates
+===== templates
 
 Prebuilt templates that convert your B2B message flow configurations into runtime applications. When MuleSoft upgrades a template, you can upgrade your message flows to use them to take advantage of new capabilities that enable better integration with your trading partner’s ecosystem.
 
 == Next Step
 
-Continue to xref:get-started.adoc[Getting Started with Partner Manager].
+Continue to xref:get-started.adoc[].
 
 == See Also
 
-* xref:setup.adoc[Anypoint Partner Manager Setup]
+* xref:setup.adoc[]
