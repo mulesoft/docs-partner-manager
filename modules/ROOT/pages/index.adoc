@@ -130,4 +130,5 @@ Continue to xref:get-started.adoc[].
 
 == See Also
 
+* xref:partner-manager-architecture.adoc[]
 * xref:setup.adoc[]

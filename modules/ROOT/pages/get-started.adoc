@@ -139,4 +139,5 @@ For more information, see xref:edi-ack-reconciliation.adoc[].
 == See Also
 
 * xref:index.adoc[Partner Manager Overview]
+* xref:partner-manager-architecture.adoc[]
 * xref:setup.adoc[]
