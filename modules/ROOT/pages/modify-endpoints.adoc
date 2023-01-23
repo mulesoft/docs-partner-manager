@@ -30,7 +30,7 @@ Partner Manager displays a *Deploy* button next to the modified endpoint.
 +
 Partner Manager redeploys the endpoint and all message flows that use the endpoint.
 +
-If required, Partner Manager also automatically deploys the Mule runtime applications that Partner Manager uses. The deployment of Mule runtime applications can take at five minutes or longer to complete, depending on how many runtime applications are affected. 
+If required, Partner Manager also automatically deploys the Mule runtime applications that Partner Manager uses. The deployment of Mule runtime applications can take up to five minutes or longer to complete, depending on how many runtime applications are affected. 
 
 [[as2-receive]]
 == AS2 Receive Endpoints
@@ -124,7 +124,7 @@ You can modify the following fields for an HTTP Receive from Partners or Source 
 |Connection idle timeout (in milleseconds) | Yes
 |Description | Yes
 |Endpoint name | Yes
-|Manage with API Manager and API Auto discovery id | Yes, if the *Private port (when deploying to VPC)* field is enabled
+|Manage with API Manager and API Auto discovery ID | Yes 
 |===
 
 [[http-send]]
@@ -135,9 +135,7 @@ You can modify the following fields for an HTTP Send to Partners or Target at Ho
 [%header%autowidth.spread]
 |===
 |Field |Requires the Deployment of Runtime Applications
-|Authentication type and associated fields a| 
-* No, for the Authentication type field
-* Yes, for fields associated with the authentication type
+|Authentication type and associated fields a| Yes
 |Endpoint name | No
 |Description | No
 |URL | No
@@ -157,7 +155,7 @@ You can modify the following fields for an HTTPS Receive from Partners or Source
 |Credentials | Yes
 |Description | Yes
 |Endpoint name | Yes
-|Manage with API Manager and API Auto discovery id | Yes
+|Manage with API Manager and API Auto discovery ID | Yes
 |===
 
 [[https-send]]
