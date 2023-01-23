@@ -9,7 +9,7 @@ Although endpoint settings don't often require changes, you might need to modify
 
 To modify an endpoint:
 
-. Access the endpoint you want to modify from the endpoint owner's page (either the *<host>* or *<partner>* page, depending on the endpoint).
+. Access the endpoint you want to modify from the endpoint owner's page (the *<host>*, *<partner>*, or third-party page, depending on the endpoint).
 . Click *Edit*.
 . Modify the desired settings. What you can modify depends on the endpoint protocol and usage, as described in the following sections:
 * <<as2-receive>>
@@ -157,7 +157,7 @@ You can modify the following fields for an HTTPS Receive from Partners or Source
 |Credentials | Yes
 |Description | Yes
 |Endpoint name | Yes
-|Manage with API Manager and API Auto discovery id | Yes, if the *Private port (when deploying to VPC)* field is enabled
+|Manage with API Manager and API Auto discovery id | Yes
 |===
 
 [[https-send]]
@@ -169,9 +169,7 @@ You can modify the following fields for an HTTPS Send to Partners or Target at H
 |===
 |Field |Requires the Deployment of Runtime Applications
 |Authentication type and associated fields
- a| 
- * No, for the Authentication type field
- * Yes for fields associated with the authentication type
+ a| Yes 
 |Certificate | Yes
 |Description | No
 |Endpoint name | No
