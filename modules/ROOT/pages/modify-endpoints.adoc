@@ -151,7 +151,7 @@ You can modify the following fields for an HTTPS Receive from Partners or Source
 |===
 |Field |Redeploys the Runtime Application for the Endpoint
 |Authentication type and associated fields | Yes
-|Connection idle timeout (in milleseconds) | Yes
+|Connection idle timeout (in milliseconds) | Yes
 |Credentials | Yes
 |Description | Yes
 |Endpoint name | Yes
