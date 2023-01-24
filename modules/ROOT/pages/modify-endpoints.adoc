@@ -121,7 +121,7 @@ You can modify the following fields for an HTTP Receive from Partners or Source 
 [%header%autowidth.spread]
 |===
 |Field |Redeploys the Runtime Application for the Endpoint
-|Connection idle timeout (in milleseconds) | Yes
+|Connection idle timeout (in milliseconds) | Yes
 |Description | Yes
 |Endpoint name | Yes
 |Manage with API Manager and API Auto discovery ID | Yes 
