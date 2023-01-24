@@ -1,6 +1,6 @@
 = Creating Endpoints
 
-You can create new endpoints from the *Partners* or *<host>* page, or by using the Message Flow wizard.
+You can create new endpoints from the *Partners*, *<host>*, or third-party page, or by using the Message Flow wizard.
 
 == Create Endpoints from the Partners Page
 

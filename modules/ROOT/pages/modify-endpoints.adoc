@@ -17,8 +17,8 @@ To modify an endpoint:
 * <<ftp-receive>>
 * <<ftp-send>>
 * <<http-receive>>
-* <<https-receive>>
 * <<http-send>>
+* <<https-receive>>
 * <<https-send>>
 . Click *Save* to save your changes.
 . On the confirmation window that opens, select the *I understand the effects of these actions* checkbox and then click *Confirm*.
@@ -83,7 +83,7 @@ You can modify the following fields for an FTP and SFTP Receive from Partners or
 |===
 |Field |Redeploys the Runtime Application for the Endpoint
 |Archival path |Yes
-|Endpoint name |No
+|Endpoint name |Yes
 |Desription | No
 |File name pattern |Yes
 |Host |Yes
@@ -107,7 +107,7 @@ You can modify the following fields for an FTP and SFTP Send to Partners or Targ
 |Endpoint name |No
 |File name pattern |No
 |Host |No
-|Password |No
+|Password |Yes
 |Port |No
 |Target path |No
 |Username |Yes
