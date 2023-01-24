@@ -1,4 +1,4 @@
-= Deleting Message types
+= Deleting Message Types
 
 You can delete message types from the *<host>* page if they are not used in message flows:
 

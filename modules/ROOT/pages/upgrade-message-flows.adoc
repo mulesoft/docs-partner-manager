@@ -10,7 +10,7 @@ Runtime templates related to Partner Manager are upgraded when:
 * Functional and performance defects are resolved in the template
 * Flow optimizations are implemented
 
-When new runtime templates are available, the *Upgrade deployments* button in the top right corner of the *Message Flow* page is enabled.
+When new runtime templates are available, the *Upgrade deployments* button next to the search bar in the *Message Flow* page is enabled.
 
 Before upgrading your production environment, upgrade your nonproduction environments to test the changes on some of your message flows.
 

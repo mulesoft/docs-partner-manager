@@ -7,7 +7,7 @@ If you are deploying Partner Manager applications to CloudHub, use the *Partner 
 To access the deployment settings for your organization:
 
 . In Anypoint Platform, navigate to *Access Management*.
-. From the menu on the left, select *Settings > Partner Manager*. +
+. From Access Management navigation menu, select *Settings > Partner Manager*. +
 On the *Partner Manager Settings* page, you can configure the following settings:
 
 === Mule Version Setting

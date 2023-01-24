@@ -33,7 +33,7 @@ image::partner-manager-outbound-map-1.png[Define Metadata link]
 
 == Set the Target X12 Message Type
 
-The template has the X12 configuration for the below X12 transaction set:
+The template has the X12 configuration for the following X12 transaction set:
 
 * Version +
 `4010`
@@ -52,7 +52,7 @@ image::xml-to-outbound-x12-edit-schema.png[X12 EDI Config dialog]
 +
 . Change the schema value to the version and transaction set you want to map from, for example, set the value to `/x12/004010/204.esl`, if you want to map to a 4010-204 Load tender transaction.
 +
-The application message structure (JSON or XML) shows on the input pane on the left, and the X12 transaction set structure shows on the output pane on the right.
+The application message structure (JSON or XML) displays in the input pane of the Transform Message graphical view, and the X12 transaction set structure displays in the output pane of this view.
 . Click *Finish*, then click *OK*. +
 You can now begin mapping from the input to the output.
 
