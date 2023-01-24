@@ -39,7 +39,7 @@ You can modify the following fields for an AS2 Receive from Partners endpoint:
 
 [%header%autowidth.spread]
 |===
-|Field |Requires the Deployment of Runtime Applications
+|Field |Redeploys the Runtime Application for the Endpoint
 |Endpoint name |Yes
 |Description |Yes
 |Enforce security level and associated fields | No
@@ -53,7 +53,7 @@ You can modify the following fields for an AS2 Send to Partners endpoint:
 
 [%header%autowidth.spread]
 |===
-|Field |Requires the Deployment of Runtime Applications
+|Field |Redeploys the Runtime Application for the Endpoint
 |Authentication type and associated fields |No
 |Connection timeout | No
 |Description | No
@@ -81,7 +81,7 @@ You can modify the following fields for an FTP and SFTP Receive from Partners or
 
 [%header%autowidth.spread]
 |===
-|Field |Requires the Deployment of Runtime Applications
+|Field |Redeploys the Runtime Application for the Endpoint
 |Archival path |Yes
 |Endpoint name |No
 |Desription | No
@@ -102,7 +102,7 @@ You can modify the following fields for an FTP and SFTP Send to Partners or Targ
 
 [%header%autowidth.spread]
 |===
-|Field |Requires the Deployment of Runtime Applications
+|Field |Redeploys the Runtime Application for the Endpoint
 |Description |No
 |Endpoint name |No
 |File name pattern |No
@@ -120,7 +120,7 @@ You can modify the following fields for an HTTP Receive from Partners or Source 
 
 [%header%autowidth.spread]
 |===
-|Field |Requires the Deployment of Runtime Applications
+|Field |Redeploys the Runtime Application for the Endpoint
 |Connection idle timeout (in milleseconds) | Yes
 |Description | Yes
 |Endpoint name | Yes
@@ -134,7 +134,7 @@ You can modify the following fields for an HTTP Send to Partners or Target at Ho
 
 [%header%autowidth.spread]
 |===
-|Field |Requires the Deployment of Runtime Applications
+|Field |Redeploys the Runtime Application for the Endpoint
 |Authentication type and associated fields a| Yes
 |Endpoint name | No
 |Description | No
@@ -149,7 +149,7 @@ You can modify the following fields for an HTTPS Receive from Partners or Source
 
 [%header%autowidth.spread]
 |===
-|Field |Requires the Deployment of Runtime Applications
+|Field |Redeploys the Runtime Application for the Endpoint
 |Authentication type and associated fields | Yes
 |Connection idle timeout (in milleseconds) | Yes
 |Credentials | Yes
@@ -165,7 +165,7 @@ You can modify the following fields for an HTTPS Send to Partners or Target at H
 
 [%header%autowidth.spread]
 |===
-|Field |Requires the Deployment of Runtime Applications
+|Field |Redeploys the Runtime Application for the Endpoint
 |Authentication type and associated fields
  a| Yes 
 |Certificate | Yes

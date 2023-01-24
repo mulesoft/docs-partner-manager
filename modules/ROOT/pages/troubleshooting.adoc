@@ -11,5 +11,5 @@ Because Anypoint Partner Manager is used with other technologies,
 troubleshooting an issue with Partner Manager often involves troubleshooting these other technologies as well.
 
 Look for solutions in the documentation about connectivity and related errors,
-or use documentation page's navigation pane to locate troubleshooting information specific to either
+or use the documentation page's navigation pane to locate troubleshooting information specific to either
 Anypoint Partner Manager or its related technologies.
