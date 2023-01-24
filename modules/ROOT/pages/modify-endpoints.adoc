@@ -178,5 +178,5 @@ You can modify the following fields for an HTTPS Send to Partners or Target at H
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
-* xref:create-endpoints.adoc[Creating Endpoints]
+* xref:create-endpoint.adoc[Creating Endpoints]
 * xref:deleting-endpoints.adoc[Deleting Endpoints]
