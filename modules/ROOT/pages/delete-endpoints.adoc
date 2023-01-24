@@ -16,6 +16,6 @@ To locate endpoints that don’t have associated message flows, look for `-` in 
 
 * xref:endpoints.adoc[Endpoints]
 * xref:create-endpoint.adoc[Creating Endpoints]
-* xref:modify-endpoints[Modifying Endpoints]
+* xref:modify-endpoints.adoc[Modifying Endpoints]
 * xref:create-outbound-message-flow.adoc[Creating Outbound Message Flows]
 * xref:configure-message-flows.adoc[Creating Inbound Message Flows]
