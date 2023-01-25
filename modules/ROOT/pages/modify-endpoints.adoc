@@ -1,4 +1,4 @@
-== Modifying Endpoints
+= Modifying Endpoints
 
 Although endpoint settings don't often require changes, you might need to modify them under certain circumstances. For example:
 
