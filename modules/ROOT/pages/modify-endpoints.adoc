@@ -1,0 +1,182 @@
+= Modifying Endpoints
+
+Although endpoint settings don't often require changes, you might need to modify them under certain circumstances. For example:
+
+* Customers move their data center, so you must change the IP address or host name.
+* Customers update their credentials, so you must change the user credentials in the endpoint configuration.
+* Customers change their file naming conventions and response timeout requirements, so you must change these configurations for the endpoint.
+* The downstream API that receives translated inbound data moves from one region to another, so you must change the endpoint URL.
+
+To modify an endpoint:
+
+. Access the endpoint you want to modify from the endpoint owner's page (the *<host>*, *<partner>*, or third-party page, depending on the endpoint).
+. Click *Edit*.
+. Modify the desired settings. What you can modify depends on the endpoint protocol and usage, as described in the following sections:
+* <<as2-receive>>
+* <<as2-send>>
+* <<ftp-receive>>
+* <<ftp-send>>
+* <<http-receive>>
+* <<http-send>>
+* <<https-receive>>
+* <<https-send>>
+. Click *Save* to save your changes.
+. On the confirmation window that opens, select the *I understand the effects of these actions* checkbox and then click *Confirm*.
++
+Partner Manager displays a *Deploy* button next to the modified endpoint.
++
+. Click *Deploy* to keep the endpoint changes.
+. On the confirmation window that opens, select the *I understand the effects of these actions* checkbox and then click *Confirm*.
++
+Partner Manager redeploys the endpoint and all message flows that use the endpoint.
++
+If required, Partner Manager also automatically deploys the Mule runtime applications that Partner Manager uses. The deployment of Mule runtime applications can take up to five minutes or longer to complete, depending on how many runtime applications are affected. 
+
+[[as2-receive]]
+== AS2 Receive Endpoints
+
+You can modify the following fields for an AS2 Receive from Partners endpoint:
+
+[%header%autowidth.spread]
+|===
+|Field |Redeploys the Runtime Application for the Endpoint
+|Endpoint name |Yes
+|Description |Yes
+|Enforce security level and associated fields | No
+|===
+
+
+[[as2-send]]
+== AS2 Send Endpoints
+
+You can modify the following fields for an AS2 Send to Partners endpoint:
+
+[%header%autowidth.spread]
+|===
+|Field |Redeploys the Runtime Application for the Endpoint
+|Authentication type and associated fields |No
+|Connection timeout | No
+|Description | No
+|Encryption algorithm | No
+|Endpoint name | No
+|Filename pattern | No
+
+|<host> AS2 identifier | No
+|<host> keystore | Yes
+|Maximum retry attempts | No
+|MDN signature algorithm | No
+|Message subject | No
+|<partner> AS2 identifier | No
+|<partner> AS2 URL | No
+|Request receipt | No
+|Respond to email address | No
+|Retry interval | No
+|Signature algorithm | No
+|===
+
+[[ftp-receive]]
+== FTP and SFTP Receive Endpoints
+
+You can modify the following fields for an FTP and SFTP Receive from Partners or Source at Host endpoint:
+
+[%header%autowidth.spread]
+|===
+|Field |Redeploys the Runtime Application for the Endpoint
+|Archival path |Yes
+|Endpoint name |Yes
+|Desription | No
+|File name pattern |Yes
+|Host |Yes
+|Password |Yes
+|Polling frequency |Yes
+|Port | Yes
+|Size check wait time |Yes
+|Source path |Yes
+|Username | Yes
+|===
+
+[[ftp-send]]
+== FTP and SFTP Send Endpoints
+
+You can modify the following fields for an FTP and SFTP Send to Partners or Target at Host endpoint:
+
+[%header%autowidth.spread]
+|===
+|Field |Redeploys the Runtime Application for the Endpoint
+|Description |No
+|Endpoint name |No
+|File name pattern |No
+|Host |No
+|Password |Yes
+|Port |No
+|Target path |No
+|Username |Yes
+|===
+
+[[http-receive]]
+== HTTP Receive Endpoints
+
+You can modify the following fields for an HTTP Receive from Partners or Source at Host endpoint:
+
+[%header%autowidth.spread]
+|===
+|Field |Redeploys the Runtime Application for the Endpoint
+|Connection idle timeout (in milliseconds) | Yes
+|Description | Yes
+|Endpoint name | Yes
+|Manage with API Manager and API Auto discovery ID | Yes 
+|===
+
+[[http-send]]
+== HTTP Send Endpoints
+
+You can modify the following fields for an HTTP Send to Partners or Target at Host endpoint:
+
+[%header%autowidth.spread]
+|===
+|Field |Redeploys the Runtime Application for the Endpoint
+|Authentication type and associated fields a| Yes
+|Endpoint name | No
+|Description | No
+|URL | No
+|Response timeout (in milliseconds) | No
+|===
+
+[[https-receive]]
+== HTTPS Receive Endpoints
+
+You can modify the following fields for an HTTPS Receive from Partners or Source at Host endpoint:
+
+[%header%autowidth.spread]
+|===
+|Field |Redeploys the Runtime Application for the Endpoint
+|Authentication type and associated fields | Yes
+|Connection idle timeout (in milliseconds) | Yes
+|Credentials | Yes
+|Description | Yes
+|Endpoint name | Yes
+|Manage with API Manager and API Auto discovery ID | Yes
+|===
+
+[[https-send]]
+== HTTPS Send Endpoints
+
+You can modify the following fields for an HTTPS Send to Partners or Target at Host endpoint:
+
+[%header%autowidth.spread]
+|===
+|Field |Redeploys the Runtime Application for the Endpoint
+|Authentication type and associated fields
+ a| Yes 
+|Certificate | Yes
+|Description | No
+|Endpoint name | No
+|Response timeout (in milliseconds) | No
+|URL | No
+|===
+
+== See Also
+
+* xref:endpoints.adoc[Endpoints]
+* xref:create-endpoint.adoc[Creating Endpoints]
+* xref:delete-endpoints.adoc[Deleting Endpoints]

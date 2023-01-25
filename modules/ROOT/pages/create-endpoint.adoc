@@ -1,6 +1,6 @@
 = Creating Endpoints
 
-You can create new endpoints from the *Partners* or *Host* page, or by using the Message Flow wizard.
+You can create new endpoints from the *Partners*, *<host>*, or third-party page, or by using the Message Flow wizard.
 
 == Create Endpoints from the Partners Page
 
@@ -47,10 +47,9 @@ The values for the endpoint's settings vary according to the endpoint type and p
 * xref:endpoint-sftp-receive-target.adoc[SFTP Receive Endpoint Settings]
 * xref:endpoint-sftp-send.adoc[SFTP Send Endpoint Settings]
 
-
-
 == See Also
 
 * xref:endpoints.adoc[Endpoints]
 * xref:deploying-receive-endpoints.adoc[Deploying Receive Endpoints]
+* xref:modify-endpoints.adoc[Modifying Endpoints]
 * xref:delete-endpoints.adoc[Deleting Endpoints]

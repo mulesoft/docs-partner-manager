@@ -16,7 +16,7 @@ Partner Manager does not create message view records when:
 * An outbound transaction fails when translating the source payload to a different format.
 * An outbound transaction fails when writing X12 or EDIFACT data.
 
-To track tranmissions instead of individual messages, see xref:activity-tracking.adoc[Tracking Transmissions].
+To track transmissions instead of individual messages, see xref:activity-tracking.adoc[Tracking Transmissions].
 
 == Locate a Message
 
