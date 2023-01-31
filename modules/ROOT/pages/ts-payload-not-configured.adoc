@@ -19,4 +19,4 @@ If your payload storage is configured, verify that it is active:
 
 . Review your payload storage configuration and status.
 
-. If your payload storage is not configured, configure it according to https://docs.mulesoft.com/partner-manager/2.x/setup-payload-storage-API.adoc[Set up the Payload Storage API].
+. If your payload storage is not configured, configure it as described in xref:setup-payload-storage-API.adoc[Download and Deploy a Payload Storage API].
