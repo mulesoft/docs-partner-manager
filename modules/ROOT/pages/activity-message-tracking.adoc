@@ -33,11 +33,13 @@ Select a message to view its details and view and download its contents:
 +
 You can retrieve up to one week's worth of messages.
 +
-* Acknowledgement status, such as `Overdue`
 * Message processing status, such as `Received`
+* Acknowledgement status, such as `Overdue`
 * Partner message type, such as `X12 - 850`
 * Host message type, such as `JSON host-purchase-order`
 * Message attribute, if the message type associated with the message has custom attributes
+* Message value
+* Transmission or message ID
 
 +
 Partner Manager returns a list of messages that meet your search criteria along with related information such as the date the message was received, message status, message type, partner, document ID, business key, and acknowledgement status.

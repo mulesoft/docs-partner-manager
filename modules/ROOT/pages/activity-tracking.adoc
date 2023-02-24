@@ -27,10 +27,13 @@ You can retrieve up to one week's worth of messages.
 * Message processing status, such as `Received`
 * Partner message type, such as `X12 - 850`
 * Host message type, such as `JSON host-purchase-order`
+* Transmission ID
 +
 Partner Manager returns a list of transmissions that meet your search criteria along with related information, such as the date the transmission was received, number of messages in the transmission, message type, control number, and acknowledgement status.
 +
-. Click on a transmission to review additional information about the transmission and to view its message flow.
+. Do either of the following:
+** Click on a transmission to review additional information about the transmission and to view its message flow.
+** Click on the *messages* link to access the message view, where you can see information about the messages in the transaction, as described in xref:activity-message-tracking.adoc[Activity Message Tracking].
 
 == View Details for an Inbound Transmission
 
@@ -75,13 +78,14 @@ From the message flow diagram, you can expand the message flow sections to view 
 
 The details for an outbound transmission include the following information:
 
-// * Transmission status (a green checkmark for success or a red exclamation point for failure
+* Transmission status (a green checkmark for success or a red exclamation point for failure)
 * Transmission ID
 * Date and time when the file was sent
 * Control number associated with the transmitted file, if one exists
 * Message type, such as `mythical-po-ack-json: ORD-9892330`
 * Name of the sending (Send to Partners) endpoint
 * Name of the transmitted file
+* Number of messages in the transmission
 
 Take any of the following actions to view and download additional information about the outbound transmission:
 
