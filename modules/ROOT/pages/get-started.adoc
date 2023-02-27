@@ -82,9 +82,15 @@ For more information, see xref:configure-host.adoc[].
 [[configure-partners]]
 == Configure a Partner Profile for Each of Your Trading Partners
 
-A partner profile consists of partner-specific settings such as the partner's name, identifiers (such as the AS2 ID, X12-ISA, X12 GS, and so on), digital certificates (such as X.509 certificates), and endpoints to use for sending and receiving messages to and from your partner. It also consists of the acknowledgements, validations, and control numbers for each message format that the partner uses.
+A partner profile consists of partner-specific settings such as:
 
-Configure a partner profile for each of your trading partners. If you plan to use host endpoints only, you don’t need to create partner-specific endpoints.
+ * The partner's name
+ * Identifiers (such as the AS2 ID, X12-ISA, X12 GS, and so on)
+ * Digital certificates (such as X.509 certificates) 
+ * Endpoints to use for sending and receiving messages to and from your partner 
+ * The acknowledgements, validations, and control numbers for each message format that the partner uses
+
+Configure a partner profile for each of your trading partners. If you plan to use only host endpoints, you don’t need to create partner-specific endpoints.
 
 For more information, see xref:configure-partner.adoc[].
 
@@ -93,7 +99,7 @@ For more information, see xref:configure-partner.adoc[].
 
 If your trading partners use third-party service providers such as VANs or 3PLs (third-party logistics providers) who manage the B2B connectivity with your organization on behalf of your partners, then create configurations for these connections.
 
-Creating third-party connections is similar to configuring partner profiles, except that the acknowledgements, validations, and control numbers associated with message formats are configured at the partner level only.
+Creating third-party connections is similar to configuring partner profiles, except that the acknowledgements, validations, and control numbers associated with message formats are configured only at the partner level.
 
 For more information, see xref:configure-third-party.adoc[].
 
@@ -123,9 +129,26 @@ For more information, see xref:deploy-message-flows.adoc[] and xref:undeploy-mes
 [[monitor-transmissions]]
 == Monitor Transmissions and Individual Messages
 
-Monitor transmission activity by searching for transactions based on crieria such as the partner's name, message direction, send and receive dates, messaging processing status, and partner and host message type. You can also search for transactions based on any custom message attributes that you defined for the message type using DataWeave. 
+Monitor transmission activity by searching for transactions based on crieria such as the:
 
-Monitor individual message activity by searching for messages based on criteria such as the partner name, message direction, date range within which the message was sent acknowledgement status, messaging process status, and partner and host message types. You can also search for individual messages based on any custom message attribute that you defined for the message type using DataWeave.
+* Partner name
+* Message direction
+* Send and receive dates
+* Messaging processing status
+* Partner and host message type 
+
+You can also search for transactions based on any custom message attributes that you defined for the message type using DataWeave. 
+
+Monitor individual message activity by searching for messages based on criteria such as the:
+
+* Partner name
+* Message direction
+* Date range within which the message was sent 
+* Acknowledgement status
+* Messaging process status
+* Partner and host message types
+
+You can also search for individual messages based on any custom message attribute that you defined for the message type using DataWeave.
 
 For more information, see xref:activity-tracking.adoc[], xref:use-custom-attributes.adoc[], and xref:activity-message-tracking.adoc[].
 
