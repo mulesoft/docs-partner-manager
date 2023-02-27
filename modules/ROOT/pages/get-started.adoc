@@ -1,6 +1,6 @@
 = Getting Started with Partner Manager
 
-Partner Manager offers a simplified, configuration-driven B2B integration solution to manage B2B trading partner ecosystems. To use Partner Manager, follow these steps:
+Partner Manager provides a simplified, configuration-driven B2B integration solution to manage B2B trading partner ecosystems. To use Partner Manager, follow these steps:
 
 . <<assign-permissions,Assign permissions to Partner Manager users>>.
 . <<set-up-env,Set up the Partner Manager environment>>.
@@ -9,7 +9,7 @@ Partner Manager offers a simplified, configuration-driven B2B integration soluti
 . <<configure-partners,Configure a profile for each of your trading partners>>.
 . <<configure-third-party,Optionally configure third-party connections>>.
 . <<configure-message-flows,Configure message flows>>.
-. <<deploy-test-message-flows,Deploy and test the configured message flows>>.
+. <<deploy-test-message-flows,Deploy and test configured message flows>>.
 . <<monitor-transmissions,Monitor transmissions and individual messages>>.
 . <<troubleshoot-acks,Troubleshoot rejected or overdue acknowledgements>>.
 
@@ -114,7 +114,7 @@ Create outbound message flows to receive messages from your backend applications
 For more information, see xref:message-flows.adoc[] and xref:partner-manager-configuration-objects.adoc[]. 
 
 [[deploy-test-message-flows]]
-== Deploy and Test the Configured Message Flows
+== Deploy and Test Configured Message Flows
 
 Deploy and test the message flows in a sandbox environment. After you verify that a message flow is successful, you can undeploy it from the sandbox and redeploy it to your production environment.
 

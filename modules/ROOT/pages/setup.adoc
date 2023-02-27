@@ -9,5 +9,5 @@ Partner Manager uses certificates to establish secure connections with endpoints
 * xref:cloudhub-deploy-options.adoc[]
 * xref:deploy-onpremise.adoc[]
 * xref:setup-payload-storage-API.adoc[]
-* xref:Certificates.adoc[]
+* xref:certificates.adoc[]
 
