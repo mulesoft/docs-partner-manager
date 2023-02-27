@@ -54,7 +54,7 @@ The paths along which a B2B message travels from its source, through a DataWeave
 Inbound message flows receive messages from partners, including messages that go through third-party connections. When you create an inbound message flow, you can validate and transform the inbound messages and then send them to your backend applications.
 * Outbound message flows
 +
-Outbound message flows receive messages from your backend applications, validate and transform these messages to the format your partners expect, and then send them to your partners either directly, or through third-party connections.
+Outbound message flows receive messages from your backend applications, validate and transform these messages to the format your partners expect, and then send them to your partners, either directly or through third-party connections.
 +
 
 Message flows consist of <<endpoints,endpoints>>, <<message-types,message types>>, <<identifiers,sender and receiver identifiers>>, and <<translation-maps,translation maps>> (optional).
