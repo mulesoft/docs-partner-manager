@@ -7,7 +7,7 @@ Partner Manager offers a simplified, configuration-driven B2B integration soluti
 . <<payload-storage-api,Set up the Payload Storage API>>.
 . <<configure-host-profile,Configure a host profile>>.
 . <<configure-partners,Configure a profile for each of your trading partners>>.
-. <<configure-third-party,Optionally configure third party connections>>.
+. <<configure-third-party,Optionally configure third-party connections>>.
 . <<configure-message-flows,Configure message flows>>.
 . <<deploy-test-message-flows,Deploy and test the configured message flows>>.
 . <<monitor-transmissions,Monitor transmissions and individual messages>>.
