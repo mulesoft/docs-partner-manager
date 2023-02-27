@@ -103,7 +103,7 @@ For more information, see xref:configure-third-party.adoc[].
 Message flows contain the following components, which execute end-to-end B2B message processing: 
 
 * Partner identifiers
-* Receive and send endponts
+* Receive and send endpoints
 * Source and target message types
 * DataWeave translation maps
 
