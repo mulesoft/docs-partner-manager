@@ -54,7 +54,7 @@ For more information, see xref:access-management::permissions-by-product.adoc[].
 You can deploy Partner Manager runtime applications to CloudHub 1.0 or you can deploy them on-premises:
 
 * To configure options for deploying to CloudHub, use the *Partner Manager Settings* page in Anypoint Access Management:
-.
+
 +
 For more information, see xref:cloudhub-deploy-options.adoc[].
 +
@@ -76,7 +76,7 @@ For more information, see xref:setup-payload-storage-API.adoc[].
 [[configure-host-profile]]
 == Configure a Host Profile
 
-Use the <*host*> page in Partner Manager to configure a host profile for your Anypoint Platform organization or business group. A host  profile consists of the EDI and AS2 identfiers used by your organization, associated digital certificates, Source at Host and Target at Host endpoints, message types, Payload Storage API details, and global settings for EDIFACT receive messages.
+Use the *<host>* page in Partner Manager to configure a host profile for your Anypoint Platform organization or business group. A host profile consists of the EDI and AS2 identifiers used by your organization, associated digital certificates, Source at Host and Target at Host endpoints, message types, Payload Storage API details, and global settings for EDIFACT receive messages.
 
 For more information, see xref:configure-host.adoc[].
 
@@ -130,7 +130,7 @@ For more information, see xref:deploy-message-flows.adoc[] and xref:undeploy-mes
 [[monitor-transmissions]]
 == Monitor Transmissions and Individual Messages
 
-Monitor transmission activity by searching for transactions based on crieria such as the:
+Monitor transmission activity by searching for transactions based on criteria such as the:
 
 * Partner name
 * Message direction
@@ -156,7 +156,7 @@ For more information, see xref:activity-tracking.adoc[], xref:use-custom-attribu
 [[troubleshoot-acks]]
 == Troubleshoot Rejected or Overdue Acknowledgements
 
-When you monitor transmissions, you can search by acknowledgement status (*Ack Status* field) to find  outbound tranmissions that either received an X12 997 or EDIFACT CONTRL rejection or that are overdue for the functional acknowledgment. Then, you can review the X12 997 or EDIFACT CONTRL payload received from your partners and add a comment to indicate the action taken.
+When you monitor transmissions, you can search by acknowledgement status (*Ack Status* field) to find outbound transmissions that either received an X12 997 or EDIFACT CONTRL rejection or that are overdue for the functional acknowledgment. Then, you can review the X12 997 or EDIFACT CONTRL payload received from your partners and add a comment to indicate the action taken.
 
 For more information, see xref:edi-ack-reconciliation.adoc[].
 

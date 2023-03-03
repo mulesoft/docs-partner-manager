@@ -119,7 +119,7 @@ User-defined attributes that you can associate with a Receive from Partners or S
 [[translation-maps]]
 === Translation Maps
 
-DataWeave maps that transform business transactions between your partner’s message formats and your organization’s enterprise application message formats. You create the maps in Studio and import them into Partner Manager when you configure message flows.
+DataWeave maps transform business transactions between your partner’s message formats and your organization’s enterprise application message formats. You create the maps in Studio and import them into Partner Manager when you configure message flows.
 
 === Templates
 

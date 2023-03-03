@@ -2,7 +2,7 @@
 
 Setting up the Partner Manager environment involves either configuring Partner Manager deployment options or setting up on-premises deployment. In addition, you must configure a payload storage API that provides Partner Manager with a standardized way to connect to your solution for storing transmission content.
 
-Partner Manager uses certificates to establish secure connections with endpoints. You can use a CA-signed certificates or upload your own self-signed certificates.
+Partner Manager uses certificates to establish secure connections with endpoints. You can use CA-signed certificates or upload your own self-signed certificates.
 
 == See Also
 
