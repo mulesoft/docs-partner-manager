@@ -47,7 +47,7 @@ a|
 
 | Map
 | View the associated DataWeave map or import another one.
-|xref:partner-manager-.adoc[Translation Maps]
+|xref:partner-manager-maps.adoc[Translation Maps]
 
 | Target at <host>
 a| * Select a different Target at Host message type.
