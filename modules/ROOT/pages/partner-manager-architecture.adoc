@@ -1,4 +1,4 @@
-= Anypoint Partner Manager Architecture
+= Partner Manager Architecture
 
 With Anypoint Partner Manager, you can deploy B2B integration message flows with your partners, either to your own hosted Mule instances or to a MuleSoft-hosted CloudHub iPaaS platform.
 

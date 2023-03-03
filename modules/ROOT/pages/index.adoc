@@ -21,7 +21,7 @@ Members of your organization can use Partner Manager to perform a variety of fun
 
 Before you begin using Partner Manager, you must have:
 
-* An Anypoint Platform user account with the Anypoint Partner Manager entitlement
+* An Anypoint Platform user account with the Partner Manager entitlement
 * The Partner Manager Administrator role, which assigns permission levels to all users who need access to B2B message flows in their environments (production or sandbox)
 * The required Mule vCore capacity to manage your B2B transaction workload needs
 * Storage for the B2B transmission payloads you send or receive, such as a database, Amazon S3, Azure Blob Storage, and so on
@@ -37,7 +37,7 @@ To use Partner Manager, you must understand the following concepts:
 
 === Host
 
-Your Anypoint Platform or business group. A Partner Manager implementation has a single host for which you define a host profile.
+Your Anypoint Platform organization or business group. A Partner Manager implementation has a single host for which you define a host profile.
 
 === Partners
 The trading partners with whom you send and receive B2B transmissions. You define a partner profile for each partner in your B2B ecosystem.
@@ -119,7 +119,7 @@ User-defined attributes that you can associate with a Receive from Partners or S
 [[translation-maps]]
 === Translation Maps
 
-DataWeave maps that transform business transactions between your partner’s message formats and your organization’s enterprise application message formats. You create the maps in Anypoint Studio and import them into Partner Manager when you configure message flows.
+DataWeave maps that transform business transactions between your partner’s message formats and your organization’s enterprise application message formats. You create the maps in Studio and import them into Partner Manager when you configure message flows.
 
 === Templates
 
