@@ -50,6 +50,7 @@
    *** xref:message-type-target-at-host.adoc[Target at Host Message Type Settings]
  ** xref:endpoints.adoc[Endpoints]
     *** xref:create-endpoint.adoc[Creating Endpoints]
+    *** xref:modify-endpoints.adoc[Modifying Endpoints]
     *** xref:delete-endpoints.adoc[Deleting Endpoints]
     *** xref:receive-endpoints.adoc[Receive Endpoints]
       **** xref:endpoint-as2-receive.adoc[AS2 Receive Endpoint Settings]
