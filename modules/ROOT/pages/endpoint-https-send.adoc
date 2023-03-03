@@ -98,4 +98,4 @@ The client secret provided when registering your application
 
 * xref:endpoints.adoc[Endpoints]
 * xref:create-endpoint.adoc[Creating Endpoints]
-* xref:Certificates.adoc[Certificate Settings]
+* xref:certificates.adoc[Certificate Settings]

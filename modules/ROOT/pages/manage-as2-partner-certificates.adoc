@@ -41,4 +41,4 @@ To delete an AS2 partner certificate:
 
 == See Also
 
-* xref:Certificates.adoc[Certificate Settings]
+* xref:certificates.adoc[Certificate Settings]

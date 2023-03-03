@@ -34,7 +34,7 @@ a|
 
 * xref:create-endpoint.adoc[Creating Endpoints]
 * xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
-* xref:Certificates.adoc[Certificate Settings]
+* xref:certificates.adoc[Certificate Settings]
 
 | Source message
 a|
@@ -47,7 +47,7 @@ a|
 
 | Map
 | View the associated DataWeave map or import another one.
-|xref:partner-manager-maps[Translation Maps]
+|xref:partner-manager-maps.adoc[Translation Maps]
 
 | Target at <host>
 a| * Select a different Target at Host message type.
@@ -102,7 +102,7 @@ a| * xref:partner-manager-create-message-type.adoc[Creating Message Types]
 a| * Select a different send to partner endpoint.
 * (AS2 endpoint) View the AS2  associated with the endpoint.
 a| * xref:create-endpoint.adoc[Creating Endpoints]
-* xref:Certificates.adoc[Certificate Settings]
+* xref:certificates.adoc[Certificate Settings]
 |===
 +
 . Verify that any modified sections of the flow show a green checkmark next to them and then click *Deploy* to deploy the configurations to Mule.

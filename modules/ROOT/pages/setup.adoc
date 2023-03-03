@@ -1,54 +1,13 @@
-= Partner Manager Setup Requirements
+= Setting up the Partner Manager Environment
 
-Before you can deploy message flows from Anypoint Partner Manager, you must set up and configure it for use by your teammates who configure, deploy, and monitor B2B trading partner profiles and message flows.
+Setting up the Partner Manager environment involves either configuring Partner Manager deployment options or setting up on-premises deployment. In addition, you must configure a payload storage API that provides Partner Manager with a standardized way to connect to your solution for storing transmission content.
 
-== Partner Manager Requirements
-
-To set up Partner Manager, you must have:
-
-* An Anypoint Platform user account with the Anypoint Partner Manager entitlement.
-* The Partner Manager Administrator role, which assigns permission levels for all users who need access to B2B message flows in their environments (production or  sandbox).
-* The required Mule vCore capacity to manage your B2B transaction workload needs.
-* Storage for the B2B transmission payloads you send or receive, such as a database, Amazon S3, Azure Blob Storage, and so on.
-* Licenses for the AS2, EDIFACT, or X12 connectors used in your B2B message flows.
-* Anypoint Studio 7.4 or later, to create DataWeave maps for EDI data transformation
-
-If you require assistance, contact your account representative.
-
-== Partner Manager Permissions
-
-For each sandbox and production environment, assign the following permissions to your Partner Manager users:
-
-*  *Partner Manager Administrator* +
-Has full permissions
-* *View Host, Partners, and Message Flows* +
-** Has view-only access to the host, partner, and message flow configurations
-** Cannot view Transactions activity
-* *Manage Partners and Message Flows* +
-** Can create, modify, and delete partners or message flow configurations
-** Can view host partner configurations
-** Cannot view transaction activity
-* *Manage Activity* +
-** Can view and manage transaction activity
-** Cannot view or modify either partner or message flow configurations
-* *Manage Host* +
-** Can create, modify, and delete host configurations
-** Cannot view or modify trading partner configurations or activity +
-This also applies to Partner Manager settings that are under Access Management (when the user also has the Anypoint Platform Org Admin role).
-* *View Activity* +
-** View-only access to transaction activity
-** Cannot view or modify either partner or message flow configurations
-
-== Change the Payload Storage API Configuration
-
-To change the payload storage API configuration, follow these steps:
-
-. Click *Edit* in the Payload Storage section in the Host partner page.
-. Modify the field values you want to change.
-. Click *Save*.
-. Redeploy an existing message flow or deploy a new message flow to implement the changes.
+Partner Manager uses certificates to establish secure connections with endpoints. You can use CA-signed certificates or upload your own self-signed certificates.
 
 == See Also
 
-* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
-* xref:setup-payload-storage-API.adoc[Set up the Payload Storage API for Partner Manager]
+* xref:cloudhub-deploy-options.adoc[]
+* xref:deploy-onpremise.adoc[]
+* xref:setup-payload-storage-API.adoc[]
+* xref:certificates.adoc[]
+

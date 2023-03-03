@@ -1,4 +1,4 @@
-= Download and Deploy a Payload Storage API
+= Configuring a Payload Storage API
 
 Anypoint Partner Manager enables you to configure your own storage solution (for example, a database, Amazon S3, or Azure Blob Storage) to store transmission content.
 
