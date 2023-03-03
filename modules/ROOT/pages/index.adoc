@@ -35,18 +35,18 @@ Before you begin using Partner Manager, you must have:
 
 To use Partner Manager, you must understand the following concepts:
 
-===== Host
+=== Host
 
 Your Anypoint Platform or business group. A Partner Manager implementation has a single host for which you define a host profile.
 
-===== Partners
+=== Partners
 The trading partners with whom you send and receive B2B transmissions. You define a partner profile for each partner in your B2B ecosystem.
 
-===== Payload Storage API
+=== Payload Storage API
 
 An API that provides Partner Manager with a standardized way to connect to your solution for storing transmission content.
 
-===== Message Flows
+=== Message Flows
 The paths along which a B2B message travels from its source, through a DataWeave translation map, to its target. There are two types of message flows:
 
 * Inbound Message Flows
@@ -60,7 +60,7 @@ Outbound message flows receive messages from your backend applications, validate
 Message flows consist of <<endpoints,endpoints>>, <<message-types,message types>>, <<identifiers,sender and receiver identifiers>>, and <<translation-maps,translation maps>> (optional).
 
 [[endpoints]]
-===== Endpoints
+=== Endpoints
 
 Define the transport protocol configurations necessary for:
 
@@ -86,7 +86,7 @@ Send to Partners
 Target endpoint in an outbound message flow through which transformed B2B messages are sent to the partners either directly or via third-party connections
 
 [[message-types]]
-===== Message Types
+=== Message Types
 
 Define the structure of the transactions that Partner Manager receives or sends. Partner Manager supports the following message types:
 	
@@ -107,21 +107,21 @@ Defines the structure of the transactions that the backend sends to the host thr
 Defines the structure of the transactions that the host sends to partners or third-party connections through outbound message flows.
 
 [[identifiers]]
-===== Sender and Receiver Identifiers
+=== Sender and Receiver Identifiers
 
 Identifiers in AS2, EDIFACT, and X12 transactions that identify the message senders and receivers. For X12 messages, the identifiers in the ISA and GS headers provide information that identifies the appropriate flow to process the transaction.
 
 [[custom-attributes]]
-===== Custom Message Attributes
+=== Custom Message Attributes
 
 User-defined attributes that you can associate with a Receive from Partners or Source at Host message type. Using these attributes provides visibility into the full lifecycle of your B2B workflow.
 
 [[translation-maps]]
-===== Translation Maps
+=== Translation Maps
 
 DataWeave maps that transform business transactions between your partner’s message formats and your organization’s enterprise application message formats. You create the maps in Anypoint Studio and import them into Partner Manager when you configure message flows.
 
-===== Templates
+=== Templates
 
 Prebuilt templates that convert your B2B message flow configurations into runtime applications. When MuleSoft upgrades a template, you can upgrade your message flows to use them to take advantage of new capabilities that enable better integration with your trading partner’s ecosystem.
 

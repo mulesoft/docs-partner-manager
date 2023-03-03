@@ -28,7 +28,7 @@ For each sandbox and production environment, use Anypoint Access Management to a
 * *Manage Partners and Message Flows* 
 +
 ** Can create, modify, and delete partners or message flow configurations
-** Can view host partner configurations
+** Can view partner configurations
 ** Cannot view and manage transaction activity
 * *Manage Activity* 
 +
@@ -51,9 +51,10 @@ For more information, see xref:access-management::permissions-by-product.adoc[].
 [[set-up-env]]
 == Set Up the Partner Manager Environment
 
-You can deploy Partner Manager to CloudHub or you can use Partner Manager on-premises:
+You can deploy Partner Manager runtime applications to CloudHub 1.0 or you can deploy them on-premises:
 
-* To deploy Partner Manager to CloudHub, use the *Partner Manager Settings* page in Anypoint Access Management to specify CloudHub deployment options for the Partner Manager sandbox and production environments.
+* To configure options for deploying to CloudHub, use the *Partner Manager Settings* page in Anypoint Access Management:
+.
 +
 For more information, see xref:cloudhub-deploy-options.adoc[].
 +

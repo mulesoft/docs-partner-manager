@@ -43,7 +43,7 @@ image::pm-high-level-arch.png[Partner Manager high-level architecture]
 
 == Partner Manager for CloudHub
 
-When deploying B2B integration message flows to CloudHub, Anypoint MQ uses queues between processing stages to add additional reliability to B2B message processing.
+When deploying B2B integration message flows to CloudHub 1.0, Anypoint MQ uses queues between processing stages to add additional reliability to B2B message processing.
 
 As of the first deployment from Partner Manager, runtime applications deploy to the CloudHub region specified in the business group’s default settings in Runtime Manager by default. Anypoint MQ queues automatically generate during the deployment process in the same or the nearest available region. Any new runtime applications deploy to the same region as the first deployment.
 

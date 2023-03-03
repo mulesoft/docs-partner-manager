@@ -1,7 +1,9 @@
-= Deploying Partner Manager On-Premises
+= Setting up On-Premises Deployment
 
-To deploy Partner Manager on-premises, install and set up Mule runtime engine (Mule) on-premises and register it in Anypoint Runtime Manager in the appropriate environment, then create a server group to which to add the servers you create.
+If you plan to deploy Partner Manager runtime applications on-premises:
 
+. Install and set up Mule runtime engine (Mule) on-premises.
+. Use Anypoint Runtime Manager to register Mule in the appropriate environment.
 . In the appropriate environment within your Anypoint Platform account, create a server group in the Runtime agent and name it `B2BServerGroup`. All Mule B2B-processing apps are deployed to this server group.
 +
 When you create the server group:
