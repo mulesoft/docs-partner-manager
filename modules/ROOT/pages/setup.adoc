@@ -1,4 +1,4 @@
-= Setting Up the Partner Manager Environment
+= Setting up the Partner Manager Environment
 
 Setting up the Partner Manager environment involves either configuring Partner Manager deployment options or setting up on-premises deployment. In addition, you must configure a payload storage API that provides Partner Manager with a standardized way to connect to your solution for storing transmission content.
 

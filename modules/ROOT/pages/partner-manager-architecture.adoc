@@ -49,7 +49,7 @@ As of the first deployment from Partner Manager, runtime applications deploy to 
 
 image::partner-manager-cloud-deployment.png[Deploying Partner Manager on CloudHub]
 
-== Partner Manager for On-Premises Mule Instances
+== Partner Manager for On-premises Mule Instances
 
 When deploying B2B integration message flows to your own hosted on-premises Mule instance, the instance uses HTTP calls between processing stages during B2B message processing.
 

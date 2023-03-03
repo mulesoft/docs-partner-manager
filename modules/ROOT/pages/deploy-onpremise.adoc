@@ -1,4 +1,4 @@
-= Setting up On-Premises Deployment
+= Setting up On-premises Deployment
 
 If you plan to deploy Partner Manager runtime applications on-premises:
 
