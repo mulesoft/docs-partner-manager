@@ -35,6 +35,7 @@ Partner Manager returns a list of transmissions that meet your search criteria a
 ** Click on a transmission to review additional information about the transmission and to view its message flow.
 ** Click on the *messages* link to access the message view, where you can see information about the messages in the transaction, as described in xref:activity-message-tracking.adoc[Activity Message Tracking].
 
+[[view-details]]
 == View Details for an Inbound Transmission
 
 The additional details for an inbound transmission include the following information:
