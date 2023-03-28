@@ -1,8 +1,10 @@
-= Accessing Inbound Message Attributes
+= Access Inbound Message Attributes
 
 When you create a translation map for an inbound message flow, you can add additional message attributes to that map. These attributes will then be visible in the message payload of the transmissions that use the map. Use the *Activity* page to view this payload, as described in xref:activity-tracking.adoc#view-details[View Details for an Inbound Transmission].
 
-The attributes you can add depend on the protocol of the receiving endpoint:
+Additon 
+
+The attributes that you can add depend on the protocol of the receiving endpoint:
 
 |===
 |Endpoint Protocol |Attributes |Example
@@ -78,3 +80,4 @@ a|
   }
 }
 ----
+|====
