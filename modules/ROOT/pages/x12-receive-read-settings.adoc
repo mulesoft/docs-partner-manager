@@ -15,7 +15,7 @@ To configure X12 receive settings:
 . Click *Save*.
 
 [NOTE]
-It can take up to approximately five minutes for your configuration changes to sync with Mule.
+It can take up to about five minutes for your configuration changes to sync with Mule.
 
 [[ack-settings]]
 == Acknowledgment Settings
@@ -32,12 +32,11 @@ a|Provides a Technical Acknowledgment (TA1) to the Interchange sender that repor
 * If the ISA and IEA of a received X12 message are valid, the host sends a positive TA1 ACK, regardless of the status of the other content.
 * If the ISA and IEA of a received X12 message are not valid, the host sends a TA1 ACK with an error code.
 
-The TA1 ACK is sent inside an ISA or IEA envelope. The ISA and IEA are no different than any other interchange.
+The TA1 ACK is sent inside an ISA or IEA envelope. The ISA and IEA are no different from any other interchange.
 |Disabled
 
 |Send 997 functional acknowledgment when messages fail to route to a message flow
 a|Sends a functional acknowledgment (the receipt and syntactical acceptability of a message) when there is a failure to route the message to one of the message flows.
-
 
 |Disabled
 |===
@@ -107,6 +106,10 @@ a|* If selected, Partner Manager rejects transactions containing segments marked
 
 |Enforce code set validations a|  * If selected, Partner Manager enforces X12 code set validations, as defined in the X12 schemas.
 | Disabled
+
+|Acknowledge every transaction
+|If selected, Partner Manager sends acknowledgements for every received transaction set.
+|Disabled
 
 
 |===

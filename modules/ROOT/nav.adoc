@@ -8,6 +8,7 @@
   ** xref:setup-payload-storage-API.adoc[Set Up Payload Storage API]
 * xref:configure-host.adoc[Configuring and Managing a Host Profile]
   ** xref:configure-global-edifact-receive-settings.adoc[Configuring Global EDIFACT Receive Settings]
+  ** xref:configure-global-as2-settings.adoc[Configuring Global AS2 Settings]
   ** xref:manage-as2-host-keystores.adoc[Managing AS2 Host Keystores]
 * xref:configure-partner.adoc[Configuring and Managing Partners]
   ** xref:create-partner.adoc[Creating Partners]

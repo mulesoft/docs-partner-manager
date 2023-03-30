@@ -42,18 +42,27 @@ Enter a well-formed URL (including the path) that specifies where to send the re
 `+https://www.mulesoft.com/sendRequest?name=something+`
 |x
 
+|Response Timeout (in milliseconds)
+|Maximum time, in milliseconds, for which the request element blocks the execution of the flow that is waiting for the HTTP response. The defauilt is 15000 milleseconds seconds.
+|x
+
+|Retry interval (in seconds)
+|Frequency of reconnection attempts when unable to connect to the remote HTTP or HTTPS service. The default is 60 Seconds.
+|x
+
+|Maximum retry attempts
+|Maximum number of reconnection attempts to make. If you don’t want Partner Manager to retry after an initial connection failure, set this value to `0`. The default is 3.
+|x
+
 |Connection Idle Timeout (milliseconds)
 |Connection idle timeout period in milliseconds. The default is `30000`.
 |x
 
-|Response Timeout (milliseconds)
-|Maximum time, in milliseconds, for which the request element blocks the execution of the flow that is waiting for the HTTP response.
-|
 |===
 
 == Authentication Settings
 
-Depending on how you set up your authentication policy, refer to the appropriate authentication type and descriptions here.
+Depending on how you set up your authentication policy, refer to the appropriate authentication type here.
 
 [%header%autowidth.spread]
 |===

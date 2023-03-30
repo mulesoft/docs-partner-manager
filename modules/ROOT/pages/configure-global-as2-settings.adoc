@@ -1,0 +1,17 @@
+= Configuring Global AS2 Endpoint Settings
+
+You can prevent requests with expired certificates from being processed by Anypoint Partner Manager by following these steps:
+
+. Access the <host> page.
+. To prevent inbound requests with expired certificates from being processed by Partner Manager:
+.. In the *Global endpoint settings* section, click *AS2* in the *Inbound endpoint settings* column.
+.. Select *Enforce AS2 certificate expiration date*.
+.. Click *Save*.
+. To prevent outbound requests with expired certificates from being processed by Partner Manager:
+.. In the *Global endpoint settings* section, select *AS2* in the *Outbound endpoint settings* column.
+.. Select *Enforce AS2 certificate expiration date*.
+.. Click *Save*.
+
+== See Also
+
+xref:configure-host.adoc[Configuring and Managing a Host Profile]
