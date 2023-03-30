@@ -27,11 +27,7 @@ Create AS2 endpoints by configuring these settings on the partner or third-party
 |Protocol that the endpoint supports.
 |x
 
-|Partner
-|Partner to whom the transaction is sent.
-|x
-
-|Endpoint Name
+|Endpoint name
 |Automatically generated name used to identify the endpoint, which you can subsequently modify manually.
 |x
 
@@ -39,8 +35,33 @@ Create AS2 endpoints by configuring these settings on the partner or third-party
 |User-supplied value that describes the purpose of the endpoint.
 |
 
+|<Host> AS2 identifier
+|Your organization’s AS2 identifier.
+|x
+
+|Partner AS2 identifier
+|Your partner’s AS2 identifier. Appears if the endpoint is used to send transactions directly to a partner without going through a third-party connection.
+|x
+
+|<VAN> AS2 identifier
+|Your VAN’s AS2 identifier. Appears if the endpoint is used to send transactions to a third-party connection. 
+|x
+
 |Partner AS2 URL
 |Your partner’s or third-party connection's AS2 URL to which outbound EDI transmissions are sent.
+|x
+
+|Authentication type
+a|Authentication type used to access the endpoint. Allowed values:
+
+* None
++
+Does not require backend applications to authenticate when connecting to this endpoint.
++
+* Basic
++
+Requires backend applications to use the username and password provided by your partner to connect to this endpoint.
+Enter this information in the Username and Password fields.
 |x
 
 |Connection timeout
@@ -55,14 +76,6 @@ Create AS2 endpoints by configuring these settings on the partner or third-party
 |Maximum number of reconnection attempts to make. If you don't want Partner Manager to retry after an initial connection failure, set this value to `0`.
 |x
 
-|<Host> AS2 identifier
-|Your organization’s AS2 identifier.
-|x
-
-|Partner AS2 identifier
-|Your partner’s or third-party connection's AS2 identifier.
-|x
-
 |Respond to email address
 |Email address to use as the HTTP 'From' header when sending.
 |x
@@ -73,10 +86,6 @@ Create AS2 endpoints by configuring these settings on the partner or third-party
 
 |Filename pattern
 |Filename pattern required by your partner.
-|x
-
-|Request receipt
-a|Whether you want the partner to return a Message Disposition Notification (MDN) receipt, which confirms the receipt of the message.
 |x
 
 |<Host> keystore
@@ -91,35 +100,26 @@ a|Host keystore file that stores your organization's public certificate and priv
 For more information about host keystores, see xref:manage-as2-host-keystores.adoc[Managing AS2 Host Keystores].
 |x
 
+|Encryption algorithm
+|xref:as2-endpoints-algorithms.adoc[Algorithm] to use when encrypting the message to send.
+|x
+
 |Signature algorithm
 |xref:as2-endpoints-algorithms.adoc[Algorithm] to use when setting the message integrity check value.
 |x
 
-|MDN signature algorithm
-|Request for a partner to respond with a signed Message Disposition Notification (MDN) using this xref:as2-endpoints-algorithms.adoc[algorithm] for calculating MIC.
-|x
-
-|Encryption algorithm
-|xref:as2-endpoints-algorithms.adoc[Algorithm] to use when encrypting the message to send.
+|Request receipt
+a|Whether you want the partner to return a Message Disposition Notification (MDN) receipt, which confirms the receipt of the message.
 |x
 
 |MDN response
 |The AS2 messages sent from Partner Manager always request the receiver to send a Synchronous MDN receipt back. The default is `Sync`.
 |x
 
-|Authentication type
-a| Authentication type used to access the endpoint. Allowed values:
+|MDN signature algorithm
+|Request for a partner to respond with a signed Message Disposition Notification (MDN) using this xref:as2-endpoints-algorithms.adoc[algorithm] for calculating MIC.
+|x
 
-* None
-+
-Does not require backend applications to authenticate when connecting to this endpoint.
-+
-* Basic
-+
-Requires backend applications to use the username and password provided by your partner to connect to this endpoint.
-+
-Enter this information in the *Username* and *Password* fields.
-|
 |===
 
 == See Also
