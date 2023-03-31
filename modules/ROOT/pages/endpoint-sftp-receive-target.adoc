@@ -19,16 +19,21 @@ Create SFTP receive endpoints by configuring these settings on the *<host>* or *
 [%header%autowidth.spread]
 |===
 |Name |Description | Required
-| Endpoint Name
-| Automatically generated name used to identify the endpoint, which you can subsequently modify manually.
-| x
 
 | Owner
 | Partner or host that owns the endpoint.
 | x
 
+|Usage
+|Endpoint function (Receive from Partners or Source at Host).
+|x
+
 | Protocol
 | Protocol that the endpoint supports.
+| x
+
+| Endpoint Name
+| Automatically generated name used to identify the endpoint, which you can subsequently modify manually.
 | x
 
 | Description
@@ -69,16 +74,24 @@ Mule performs two size checks by waiting the amount of time specified in the `Si
 To disable this feature, specify a negative number or omit the value.
 |x
 
-| Supported Format Types
+| Support Format type
 | Indicates whether the endpoint supports EDI messages (EDIFACT, X12) or non-EDI messages (JSON, XML).
 |x
+
+|Associated message type
+|(Applies only to endpoints that support non-EDI formats) Message type to associate with the endpoint. If you select a message type, Partner Manager processes files received via the endpoint as the selected message type, regardless of the file naming convention.
+|
+
+|Associated reference identifier
+|*Vijay*, what is this field? (Applies only to endpoints supporting non-EDI formats that are owned by partners or third-party connections.)
+|
 
 | File name pattern
 | Filename pattern required by your partner.
 |
 
 | Archival Path
-| Specify an SFTP server path at which to store a copy of the file that was obtained from `source path`.
+| SFTP server path at which to store a copy of the file that was obtained from `source path`.
 |
 |===
 
