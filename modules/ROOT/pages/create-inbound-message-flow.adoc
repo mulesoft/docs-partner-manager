@@ -87,7 +87,7 @@ To import the translation map:
 +
 The translation map is added to the message flow.
 
-After you import the translation map for an inbound message flow, you can add additional message attributes to the map. This will make these attributes available in the message playoad. The attributes that you can add depend on the protocol of the receiving endpointCreat. For more information, see xref:access-inbound-message-attributes.adoc[Accessing Inbound Message Attributes]. 
+After you import the translation map for an inbound message flow, you can add additional message attributes to the map. This makes these attributes available in the message playoad. The attributes that you can add depend on the protocol of the receiving endpoint. For more information, see xref:access-inbound-message-attributes.adoc[Accessing Inbound Message Attributes]. 
 
 [[configure-target]]
 == Configure the Target Message Type
@@ -129,4 +129,5 @@ Partner Manager dynamically validates the message flow configuration elements fo
 * xref:inbound-message-flows.adoc[Inbound Message Flows]
 * xref:deploy-message-flows.adoc[Deploying and Testing Message Flows]
 * xref:manage-message-flows.adoc[Modifying Message Flow Settings]
+* xref:access-inbound-message-attributes.adoc[Accessing Inbound Message Attributes]
 * xref:inbound-message-routing.adoc[Inbound Message Routing]

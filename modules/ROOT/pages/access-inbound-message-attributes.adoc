@@ -1,10 +1,12 @@
 = Accessing Inbound Message Attributes
 
-When you create a translation map for an inbound Anypoint Partner Manager message flow, you can add additional attributes to that map. These added attributes show up in the message payload, and you can view them on the activity screen for transmissions that use the map.
+When you create a translation map for an inbound Anypoint Partner Manager message flow, you can add additional message attributes to that map. The added attributes appear in the message payload, and you can view them on the activity screen for transmissions that use the map. 
 
-The attributes you can add depend on the protocol of the endpoint in the message flow:
+Adding additional message attributes to translation maps enables you to pass transmission identifiers to the translated JSON or XML output file to achieve end-to-end tracing. For example, you can pass attributes such as xxx and yyy to store information extracted from AS2 or HTTP headers. *Vijay, please correct what I have and add more context if needed.*
 
-[%header,cols="15,30,55"]
+The attributes that you can add to a translation map depend on the protocol of the endpoint in the message flow:
+
+[%header,cols="15,35,50"]
 |===
 |Protocol |Attributes |Example
 |AS2
@@ -18,21 +20,26 @@ a|
 * as2To
 * fileName
 * as2-subject (if available)
-* Headers that start with `x-apm`
+* Headers that start with `x-apm-`
 a| 
 ----
 {
-  "sourceProtocol": "HTTPS",
-  "transmissionId": "32268139-8c05-4cb3-b1ba-dce07eb57fe2",
+  "sourceProtocol": "AS2",
+  "transmissionId": "043bbc1a-e043-4bf0-8c65-06082caf4d9b",
   "sourceEndpointAttributes": {
-    "path": "/",
-    "fileSize": 2228
+    "as2MessageId": "<2023-03-14T06:04:15.750-9282af1d-a03a-469a-a591-41ef52457e4b@partnera_mythical-as2>",
+    "as2From": "partnera",
+    "as2To": "mythical-as2",
+    "fileName": "\"smime.p7m\"",
+    "subject": "EDI Message via Mule Generic Service",
+    "fileSize": 3831
   },
-    "customProtocolHeaders": {
-    "x-apm-order-number": "ORD12345-A",
-    "x-apm-order-type": "drop-ship"
+  "customProtocolHeaders": {
+    "x-apm-order-type": "drop-ship",
+    "x-apm-tracking-id": "9f0808ad-6503-438a-9f9b-2e65cdacb344"
   },
-    "messageId": "b5a645e7-aa2d-4d37-bb62-0b68e2991356"
+  "messageId": "a79b1939-3cd6-415b-8a3c-83cc2a4f0da4"
+  }
 }
 ----
 
@@ -44,15 +51,16 @@ a|
  * path
  a|
 ----
- {
+{
   "sourceProtocol": "SFTP",
+  "transmissionId": "231839bf-09fa-41f6-a9f4-6f49187f0802",
   "sourceEndpointAttributes": {
     "fileName": "custom-po-xml-sftp_PacificCorp_PO_123.xml",
     "filePath": "/partners/pacific-corp/in-orders",
     "fileSize": 4889,
     "fileTimeStamp": "2023-03-16T20:40:59"
   },
-    "messageId": "c93ca021-4adc-48e4-a147-a8d74ba1dac0"
+  "messageId": "c93ca021-4adc-48e4-a147-a8d74ba1dac0"
 }
 ----
  |HTTP and HTTPS
@@ -64,15 +72,24 @@ a|
  * Headers that start with `x-apm-`
  a|
 ----
- {
+{
   "sourceProtocol": "HTTPS",
-  "transmissionId": "abcd-1234-121121-2323",
-  "messageId": "abcd-1234-1232212-1212",
-  "customProtocolAttributes": {
-    "x-apm-order-type": "drop-ship",
-    "x-apm-order-number": "ORD2o99244",
-    "x-apm-idoc-number": "IDOC-239839131"
-  }
+  "transmissionId": "32268139-8c05-4cb3-b1ba-dce07eb57fe2",
+  "sourceEndpointAttributes": {
+    "path": "/",
+    "fileSize": 2228
+    },
+  "customProtocolHeaders": {
+    "x-apm-order-number": "ORD12345-A",
+    "x-apm-order-type": "drop-ship"
+  },
+  "messageId": "b5a645e7-aa2d-4d37-bb62-0b68e2991356"
 }
 ----
-|====
+|===
+
+== See Also
+
+* xref:partner-manager-maps.adoc[Translation Maps]
+* xref:create-inbound-message-flow.adoc[Creating Inbound Message Flows]
+* xref:activity-tracking.adoc[Tracking Transmissions]
