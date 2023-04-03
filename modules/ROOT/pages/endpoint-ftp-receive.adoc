@@ -81,11 +81,11 @@ To disable this feature, specify a negative number or omit the value.
 | x
 
 |Associated message type
-|(Applies when the format type is non-EDI) Message type to associate with the endpoint. If you select a message type, Partner Manager processes files received via the endpoint as the selected message type, regardless of the file naming convention.
+|(Applies when the format type is non-EDI) Message type to associate with the endpoint. If you select a message type, Partner Manager routes files received via the endpoint based on the selected message type instead of the filename.
 |
 
 |Associated reference identifier
-|*Vijay*, what is this field? (Applies only to non-EDI messages)
+|(Applies to partner and third-party endpoints when the format type is non-EDI) Partner information, such as the partner ID or third-party ID.
 |
 
 | File name pattern

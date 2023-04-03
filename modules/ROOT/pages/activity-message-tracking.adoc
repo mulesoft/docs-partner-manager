@@ -63,6 +63,8 @@ Take any of the following actions to view and download additional information ab
 |===
 |Action |Steps
 
+| View the transmission that contains the message.
+| Click the link in the *Transmission Id* field.
 |View information about the source (Receive from Partner) endpoint.
 a|In the *Source* section, click the link in the *Source endpoint* field.
 |View information about the target (Target at Host) endpoint.

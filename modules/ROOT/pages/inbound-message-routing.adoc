@@ -20,17 +20,24 @@ There are no filename restrictions for EDI files.
 
 == Messages That Use an FTP or SFTP Endpoint
 
-To successfully route inbound messages that use an FTP or SFTP endpoint, your partner does the following:
+The process that Partner Manager uses to route inbound messages differs depending on whether the messages are EDI messages (Edifact or X12) or non-EDI messages (JSON or XML). 
 
-* For EDI messages (Edifact or X12), uses the correct EDI identifiers in the message content.
-* For non-EDI (JSON or XML) messages, uses a filename that begins with `{message-type-id}_` and that has an appropriate file extension:
+=== EDI Messages
+
+Partner Manager routes an inbound EDI message based on the EDI identifier in the message content.
+
+=== Non-EDI Messages
+
+Partner Manager routes an inbound non-EDI message based on either the associated message type or the filename:
+
+* If you specified an associated message type in the endpoint configuration, Partner Manager routes the message based on that message type. 
+
+* If you did not specify an associated message type in the endpoint configuration, Partner Manager routes the message based on the filename. The filename should begin with `{message-type-id}_`, and it should have an appropriate file extension:
 +
 ** `.json` for JSON files
 ** `.xml` for XML files
 
-
-+
-For example, if the message type is named `custom-po` and it is formatted as XML, the filename should begin with `custom-po_` and should end with `.xml`.
+For example, if the message type is named `custom-po` and it is formatted as XML, the filename should begin with `custom-po_` and end with `.xml`.
 
 == Messages That Use an HTTP or HTTPS Receive from Partners Endpoint
 
