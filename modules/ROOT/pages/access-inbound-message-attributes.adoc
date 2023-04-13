@@ -4,7 +4,7 @@ When you create a translation map for an inbound Anypoint Partner Manager messag
 
 Adding additional message attributes to translation maps enables you to pass transmission identifiers to the translated JSON or XML output file to achieve end-to-end tracing. For example, you can pass attributes such as xxx and yyy to store information extracted from AS2 or HTTP headers. *Vijay, please correct what I have and add more context if needed.*
 
-The attributes that you can add to a translation map depend on the protocol of the endpoint in the message flow:
+The attributes that you can add are available within a predefined variable named `b2bMessageContext`. The content of this variable varies based on the receive endpoint's protocol:
 
 [%header,cols="15,35,50"]
 |===
