@@ -1,0 +1,139 @@
+= Accessing Source Message Attributes
+
+When you create a translation map for an inbound or outbound Anypoint Partner Manager message flow, you can add additional source message attributes to that map. The added attributes appear in the message payload, and you can view them on the activity screen for transmissions that use the map. 
+
+Adding additional message attributes to translation maps enables you to achieve end-to-end tracing by passing transmission IDs to the translated JSON or XML output file. You can also add additional message attributes to help Partner Manager make routing decisions and to have Partner Manager perform specific fuctions within the data transformation in the message flow execution. *Vijay, I am not really sure how to add the piece about the field mappings. Isn't this covered below? To me, this does not go with the "perform specific functions."*
+
+Some common use cases include:
+
+* Mapping attributes such as the source filename or a specific header to a field in the translated data payload within a message flow's translation map.
++
+For example, you can map... *Vijay, can you provide a short example here?*
++
+* Applying mapping logic based on the filename prefix or on a pattern within the transformation.
++
+For example, you can ... *Can you provide a short example here?*
++
+* Accessing a specific header filename part through substring operations to map the partner or host Reference ID in the message type level reference mapping (*Vijay, map these to what?*) - making dynamic routing decisions.
+* Mapping the source filename or a specific header as a custom message attribute in the reference mapping.
++
+*Why would you want to do this?*
+
+The attributes that you can add are available within a predefined variable named `b2bMessageContext`. The content of this variable varies based on the source endpoint's protocol.
+
+== AS2 Message Attributes
+
+Messages received via AS2 contain the following fields in the `b2bMessageContext` variable:
+
+* sourceProtocol
+* transmissionId
+* sourceEndpointAttributes:
+** as2MessageId
+** as2From
+** as2To
+** fileName
+** subject
+** fileSize 
+* customProtocolHeaders:
+** x-apm-<header1>
+** x-apm-<header2> +
+   +.+ +
+   +.+ +
+   +.+
+
+For example:
+
+[source,json]
+----
+{
+  "sourceProtocol": "AS2",
+  "transmissionId": "043bbc1a-e043-4bf0-8c65-06082caf4d9b",
+  "sourceEndpointAttributes": {
+    "as2MessageId": "<2023-03-14T06:04:15.750-9282af1d-a03a-469a-a591-41ef52457e4b@partnera_mythical-as2>",
+    "as2From": "partnera",
+    "as2To": "mythical-as2",
+    "fileName": "\"smime.p7m\"",
+    "subject": "EDI Message via Mule Generic Service",
+    "fileSize": 3831
+  },
+  "customProtocolHeaders": {
+    "x-apm-order-type": "drop-ship",
+    "x-apm-tracking-id": "9f0808ad-6503-438a-9f9b-2e65cdacb344"
+  },
+  "messageId": "a79b1939-3cd6-415b-8a3c-83cc2a4f0da4"
+  }
+}
+----
+
+== FTP and SFTP Message Attributes
+ 
+Messages received via AS2 contain the following fields in the `b2bMessageContext` variable:
+
+* sourceProtocol
+* transmissionId
+* sourceEndpointAttributes:
+** fileName
+** filePath
+** fileSize
+** fileTimeStamp
+** partnerReferenceId
++
+Available on Receive from Partner endpoints only, when the partner reference ID is configured for the endpoint
++
+* messageId
+
+For example:
+
+[source,json]
+----
+{
+  "sourceProtocol": "SFTP",
+  "transmissionId": "231839bf-09fa-41f6-a9f4-6f49187f0802",
+  "sourceEndpointAttributes": {
+    "fileName": "custom-po-xml-sftp_PacificCorp_PO_123.xml",
+    "filePath": "/partners/pacific-corp/in-orders",
+    "fileSize": 4889,
+    "fileTimeStamp": "2023-03-16T20:40:59"
+  },
+  "messageId": "c93ca021-4adc-48e4-a147-a8d74ba1dac0"
+}
+----
+
+== HTTP and HTTPS Message Attributes
+
+* sourceProtocol
+* transnmissionId
+* sourceEndpointAttributes
+** path
+** fileSize
+* customProtocolHeaders:
+** x-apm-<header1>
+** x-apm-<header2> +
+   +.+ +
+   +.+ +
+   +.+
+
+For example:
+
+[source,json]
+----
+{
+  "sourceProtocol": "HTTPS",
+  "transmissionId": "32268139-8c05-4cb3-b1ba-dce07eb57fe2",
+  "sourceEndpointAttributes": {
+    "path": "/",
+    "fileSize": 2228
+    },
+  "customProtocolHeaders": {
+    "x-apm-order-number": "ORD12345-A",
+    "x-apm-order-type": "drop-ship"
+  },
+  "messageId": "b5a645e7-aa2d-4d37-bb62-0b68e2991356"
+}
+----
+
+== See Also
+
+* xref:partner-manager-maps.adoc[Translation Maps]
+* xref:create-inbound-message-flow.adoc[Creating Inbound Message Flows]
+* xref:activity-tracking.adoc[Tracking Transmissions]
