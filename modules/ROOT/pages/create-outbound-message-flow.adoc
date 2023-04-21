@@ -64,6 +64,8 @@ To import the translation map:
 . Navigate to the DataWeave map you want to use and click *Open*.
 . Click *Upload mapping*.
 
+After you import the translation map for an outbound message flow, you can add additional source message attributes to the map. This makes these attributes available in the message playoad. The attributes that you can add depend on the protocol of the source endpoint. For more information, see xref:access-source-message-attributes.adoc[Accessing Inbound Message Attributes]. 
+
 [[send-to-partner-message-type]]
 == Configure the Target Message Type
 

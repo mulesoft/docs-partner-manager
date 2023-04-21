@@ -26,7 +26,7 @@
 * xref:message-flows.adoc[Configuring and Managing Message Flows]
  ** xref:inbound-message-flows.adoc[Inbound Message Flows]
  ** xref:create-inbound-message-flow.adoc[Creating Inbound Message Flows]
- ** xref:access-inbound-message-attributes.adoc[Accessing Inbound Message Attributes]
+ ** xref:access-source-message-attributes.adoc[Accessing Inbound Message Attributes]
  ** xref:outbound-message-flows.adoc[Outbound Message Flows]
  ** xref:create-outbound-message-flow.adoc[Creating Outbound Message Flows]
  ** xref:deploy-message-flows.adoc[Deploying and Testing Message Flows]
