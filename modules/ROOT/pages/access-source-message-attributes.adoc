@@ -2,22 +2,21 @@
 
 When you create a translation map for an inbound or outbound Anypoint Partner Manager message flow, you can add additional source message attributes to that map. The added attributes appear in the message payload, and you can view them on the activity screen for transmissions that use the map. 
 
-Adding additional message attributes to translation maps enables you to achieve end-to-end tracing by passing transmission IDs to the translated JSON or XML output file. You can also add additional message attributes to help Partner Manager make routing decisions and to have Partner Manager perform specific fuctions within the data transformation in the message flow execution. *Vijay, I am not really sure how to add the piece about the field mappings. Isn't this covered below? To me, this does not go with the "perform specific functions."*
+Adding additional message attributes to translation maps enables you to achieve end-to-end tracing by passing transmission IDs to the translated JSON or XML output file. You can also add additional message attributes to help Partner Manager make routing decisions and to have Partner Manager perform specific fuctions within the data transformation in the message flow execution.
 
 Some common use cases include:
 
 * Mapping attributes such as the source filename or a specific header to a field in the translated data payload within a message flow's translation map.
 +
-For example, you can map... *Vijay, can you provide a short example here?*
+For example, you can map... 
 +
-* Applying mapping logic based on the filename prefix or on a pattern within the transformation.
+* Applying mapping logic based either on the filename prefix or on a pattern within the transformation.
 +
-For example, you can ... *Can you provide a short example here?*
+For example, you can ... 
 +
 * Accessing a specific header filename part through substring operations to map the partner or host Reference ID in the message type level reference mapping (*Vijay, map these to what?*) - making dynamic routing decisions.
 * Mapping the source filename or a specific header as a custom message attribute in the reference mapping.
 +
-*Why would you want to do this?*
 
 The attributes that you can add are available within a predefined variable named `b2bMessageContext`. The content of this variable varies based on the source endpoint's protocol.
 
