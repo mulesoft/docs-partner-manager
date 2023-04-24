@@ -1,0 +1,62 @@
+= Transmission Replay
+
+Inbound transmissions can fail due to data validation, mapping, or connectivity issues. If a transmission fails after a Partner Manager inbound endpoint secures them, you can replay it. 
+
+You can also replay inbound transmissions or messages that processed successfully. You might want to do this if:
+
+* The translated payload is missing a field. 
++
+In this situation, you can upload a new map and replay the original transmission so that it goes through the updated map.
+* The target system or partner that received the original translated payloads lost data due to a system issue and requested that it be resent. 
+
+Replaying a transmission or message regenerates the source and reprocesses the original transaction as a new transaction. The following rules apply:
+
+* You can replay any transmission that has a status of `Failed` or `Delivered`, except for inbound transmissions that failed AS2 security validation.
+* Partner Manager links replayed transmission instances to the original transmission record.
++
+Therefore, a replay of `transmission-1` creates child transmission `transmission_2`. A replay of `transmission_2` creates `transmission_3` and is the same as replaying `transmission_1`.
++
+* When an original transmission is replayed. Partner Manager sets the status to `Replaying`. Once the replay action completes, Partner Manager sets the status to `Replayed`.
+* Partner Manager processes the transmission payload through the active version of the message flow. Therefore, the transmission uses the current map and endpoint confifgurations for resolution and routing.
++
+If Partner Manager does not find an active message flow for the transmission or message, it returns an error. 
++
+* Partner Manager doesn't check for duplicate control numbers when it replays inbound transmissions.
+* Partner Manager sends acknowledgments for replayed transmissions only if the acknowledgement rules changed in the message flow definition from the previous transmission or if the acknowledgment outcome is different from the previous attempt.
+* The maximum number of transmission that you can replay in a single request is 100. 
+
+You replay transmissions from the Transmissions list or Transmission details pages, as described in xxx.
+
+== Replaying Inbound Transmissions
+
+To replay one or more inbound transmissions from the Transmissions List page:
+
+ In the navigation menu, select *Activity*.
+. Select *Transmissions*.
+. Search for the transmissions to replay.
+. Optionally, filter the search results based on the following criteria:
+
+* Partner name
+* Message direction
+* Date range within which the message was sent
++
+You can retrieve up to one week's worth of messages.
++
+* Acknowledgement status, such as `Overdue`
+* Message processing status, such as `Received`
+* Partner message type, such as `X12 - 850`
+* Host message type, such as `JSON host-purchase-order`
++
+. Select the messages to replay.
+. Click *Replay*.
+
+To replay a single transmission from the Transmission Details page:
+
+. From the Transmission List page, click on the transmission to replay.
+. Click *Replay*.
+
+== Viewing a Transmission's Replay History
+
+
+
+== See Also
