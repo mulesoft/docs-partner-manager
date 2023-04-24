@@ -83,7 +83,7 @@ To disable this feature, specify a negative number or omit the value.
 |
 
 |Associated reference identifier
-|*Vijay*, what is this field? (Applies only to endpoints supporting non-EDI formats that are owned by partners or third-party connections.)
+|(Applies only to endpoints supporting non-EDI formats that are owned by partners or third-party connections.) Partner information, such as the partner ID or third-party ID.
 |
 
 | File name pattern

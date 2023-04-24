@@ -19,8 +19,10 @@ When you create the server group:
 +
 See the Runtime Manager documentation xref:runtime-manager::server-group-create.adoc[Create a Server Group (Hybrid)] for the steps to create a server group.
 +
-. xref:mule-runtime::runtime-installation-task.adoc[Download and Install Mule]. +
-Partner Manager supports Mule 4.3.
+. xref:mule-runtime::runtime-installation-task.adoc[Download and Install Mule]. 
++
+Refer to the release notes to see what version of Mule Partner Manager supports. 
++
 . After you install Mule, navigate to the `wrapper.conf` file, which is located in `$MULE_HOME/conf/`.
 . In the `wrapper.conf` file, add the required parameters and adjust the memory and heap size configuration values for your environment.
 +
