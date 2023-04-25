@@ -12,6 +12,8 @@ For examples of DataWeave maps on Exchange that transform data, see:
 * https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/[Implementing an end to end B2B order to cash workflow from the perspective of a seller]
 * https://www.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-procure-to-pay-mappings/minor/1.0/[Implementing end to end B2B procure to pay workflow from the perspective of a seller]
 
+After you import a map to Partner Manager, you can add additional source attributes to that map. For information, see xref:add-additional-source-attributes.adoc[Adding Additional Source Attributes to Translation Maps]
+
 == See Also
 
 * xref:create-map-inbound-edifact-json-xml.adoc[Creating a Translation Map For Inbound EDIFACT to JSON or XML]
