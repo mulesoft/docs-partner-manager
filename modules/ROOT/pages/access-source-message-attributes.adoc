@@ -8,19 +8,20 @@ Some other common use cases include:
 
 * Mapping attributes to pass them to the backend
 +
-For example, if the backend must see the source filename or an HTTP header, you can add a field in the translation map to pass the filename or HTTP header to the translated data payload.
+For example, if the backend must see the source filename or a specific HTTP header, you can add a field in the translation map to pass the filename or HTTP header to the translated data payload.
 +
-* Applying mapping logic based either on a filename part or on a pattern within the transformation
+* Applying mapping logic based either on a filename part or pattern within the transformation
 +
 For example, you can access a filename prefix through substring operations and can build dynamic mapping logic based on this prefix. 
 +
 * Mapping attributes to make them available in the search
-
++
 For example, you can map the source filename or a specific HTTP header to the translation map so that you can easily search for these values in the Activity screens.
 
 The attributes that you can add are available within a predefined variable named `b2bMessageContext`. The content of this variable varies based on the source endpoint's protocol.
 
 == AS2 Source Endpoint
+
 Messages received via AS2 contain the following fields in the `b2bMessageContext` variable:
 
 * sourceProtocol
@@ -32,33 +33,32 @@ Messages received via AS2 contain the following fields in the `b2bMessageContext
 ** fileName
 ** subject
 ** fileSize 
-* customProtocolHeaders: (The headers always begin with `x-apm-`.)
-** x-apm-<header1>
-** x-apm-<header2> +
-   +.+ +
-   +.+ +
-   +.+
+* customProtocolHeaders
++
+These headers always begin with the prefix `x-apm-`.
 
 For example:
 
 [source,json]
 ----
 {
-  "sourceProtocol": "AS2",
-  "transmissionId": "06bc20c8-475e-4a6f-b010-9b7933b2bfac",
-  "sourceEndpointAttributes": {
-    "as2MessageId": "<2023-04-12T19:37:42.273-46b95696-83f4-4e65-9222-61c40a854200@partnera_mythical-as2>",
-    "as2From": "partnera",
-    "as2To": "mythical-as2",
-    "fileName": "EDI_850_20230401_1245678.edi",
-    "subject": "EDI Message via Mule Generic Service",
-    "fileSize": 3887
-  },
-  "customProtocolHeaders": {
-    "x-apm-order-type": "drop-ship",
-    "x-apm-tracking-id": "9d26d4ce-59ea-4448-8b51-ccc975d4efec"
-  },
-  "messageId": "9bf446f8-4a02-475f-afa3-c8772a340154"
+  "b2bMessageContext": {
+    "sourceProtocol": "AS2",
+    "transmissionId": "06bc20c8-475e-4a6f-b010-9b7933b2bfac",
+    "sourceEndpointAttributes": {
+        "as2MessageId": "<2023-04-12T19:37:42.273-46b95696-83f4-4e65-9222-61c40a854200@partnera_mythical-as2>",
+        "as2From": "partnera",
+        "as2To": "mythical-as2",
+        "fileName": "EDI_850_20230401_1245678.edi",
+        "subject": "EDI Message via Mule Generic Service",
+        "fileSize": 3887
+    },
+    "customProtocolHeaders": {
+      "x-apm-order-type": "drop-ship",
+      "x-apm-tracking-id": "9d26d4ce-59ea-4448-8b51-ccc975d4efec"
+    },
+    "messageId": "9bf446f8-4a02-475f-afa3-c8772a340154"
+  }
 }
 ----
 
@@ -75,7 +75,7 @@ Messages received via FTP or SFTP contain the following fields in the `b2bMessag
 ** fileTimeStamp
 ** partnerReferenceId
 +
-Available only on Receive from Partner endpoints that have the partner reference ID configured
+This attribute is available only for Receive from Partner endpoints that have the partner reference ID configured.
 +
 * messageId
 
@@ -84,16 +84,18 @@ For example:
 [source,json]
 ----
 {
-"sourceProtocol": "SFTP",
-  "transmissionId": "3ef5654a-5cda-41b1-8909-59a28c8b1537",
-  "sourceEndpointAttributes": {
-    "fileName": "RandomMessageType_PO_20230331_1559_003.xml",
-    "filePath": "/partners/pacific-corp/in-orders",
-    "fileSize": 4889,
-    "fileTimeStamp": "2023-04-05T15:16:29",
-    "partnerReferenceId": "PACIFICCORP"
-  },
-  "messageId": "cdaf6c12-bb3b-4978-9ac6-e8ace053f7c5"
+  "b2bMessageContext": {
+    "sourceProtocol": "SFTP",
+    "transmissionId": "3ef5654a-5cda-41b1-8909-59a28c8b1537",
+    "sourceEndpointAttributes": {
+      "fileName": "RandomMessageType_PO_20230331_1559_003.xml",
+      "filePath": "/partners/pacific-corp/in-orders",
+      "fileSize": 4889,
+      "fileTimeStamp": "2023-04-05T15:16:29",
+      "partnerReferenceId": "PACIFICCORP"
+    },
+    "messageId": "cdaf6c12-bb3b-4978-9ac6-e8ace053f7c5"
+  }
 }
 ----
 
@@ -102,34 +104,33 @@ For example:
 Messages received via HTTP or HTTPS contain the following fields in the `b2bMessageContext` variable:
 
 * sourceProtocol
-* transnmissionId
+* transmissionId
 * sourceEndpointAttributes:
 ** path
 ** fileSize
-* customProtocolHeaders: (The headers always begin with `x-apm-`.)
-** x-apm-<header1>
-** x-apm-<header2> +
-   +.+ +
-   +.+ +
-   +.+
+* customProtocolHeaders
++
+These headers always begin with the prefix `x-apm-`.
 * messageId   
 
 For example:
 
 [source,json]
 ----
-{
-  "sourceProtocol": "HTTPS",
-  "transmissionId": "a7a800ad-4117-40c1-98a0-79892c982fd4",
-  "sourceEndpointAttributes": {
+{ 
+  "b2bMessageContext": {
+    "sourceProtocol": "HTTPS",
+    "transmissionId": "a7a800ad-4117-40c1-98a0-79892c982fd4",
+    "sourceEndpointAttributes": {
     "path": "/",
     "fileSize": 866
-  },
-  "customProtocolHeaders": {
-    "x-apm-order-number": "ORD12345-A",
-    "x-apm-order-type": "drop-ship",
-  },
-  "messageId": "cdaf6c12-bb3b-4978-9ac6-e8ace053f7c5"
+    },
+    "customProtocolHeaders": {
+      "x-apm-order-number": "ORD12345-A",
+      "x-apm-order-type": "drop-ship"
+    },  
+    "messageId": "cdaf6c12-bb3b-4978-9ac6-e8ace053f7c5"
+  }
 }
 ----
 
