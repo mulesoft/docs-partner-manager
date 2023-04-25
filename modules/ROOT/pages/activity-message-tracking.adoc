@@ -153,7 +153,7 @@ a|
 | View and download the DataWeave map that transformed the transmission.
 a|
 . In the *Summary* section, click the link in the *Transmission details* field to access the message flow diagram.
-. Click the the *Map* section to expand it.
+. Click the *Map* section to expand it.
 . Click the link in this section.
 . Click *Download*.
 

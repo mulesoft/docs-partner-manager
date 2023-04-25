@@ -64,7 +64,7 @@ The message type and its validation settings are added to the message flow.
 
 If the source message type is X12 or EDIFACT and your partner expects your organization to return functional acknowledgements, perform these additional steps:
 
-. In the *Acknowledgement* section, select the check box next to *Send 997 functional acknowledgment (X12)* or *Send CONTRL functional acknowledgement (EDIFACT)*.
+. In the *Acknowledgement* section, select the checkbox next to *Send 997 functional acknowledgment (X12)* or *Send CONTRL functional acknowledgement (EDIFACT)*.
 . Click *Select*.
 . In the *Select an endpoint: Send acknowledgement to <partner>* window, do either of the following:
 * Select the endpoint to receive the acknowledgment messages from your partner and click *Select*.
@@ -87,7 +87,7 @@ To import the translation map:
 +
 The translation map is added to the message flow.
 
-After you import the translation map for an inbound message flow, you can add additional source message attributes to the map. This makes these attributes available in the message playoad. The attributes that you can add depend on the protocol of the source endpoint. For more information, see xref:add-additional-source-message-attributes.adoc[Adding Additional Source Message Attributes to a Translation Map]. 
+After you import the translation map for an inbound message flow, you can add additional source message attributes to the map. This makes these attributes available in the message playoad. The attributes that you can add depend on the protocol of the source endpoint. For more information, see xref:add-additional-source-message-attributes.adoc[Adding Additional Source Message Attributes to Translation Maps]. 
 
 [[configure-target]]
 == Configure the Target Message Type

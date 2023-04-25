@@ -40,7 +40,7 @@ The configuration of Partner Manager endpoints depends on the endpoint type and 
 
 Using dynamic configurations, Partner Manager deploys generic endpoint services that can receive data from or send data to different endpoint configurations. Endpoint configurations of all supported protocols can be reused across various message flows and trading partners.
 
-Partner Manager’s deployment orchestration service inspects the message flow and associated configuration objects and determines which endpoint services to deploy or update based on whether or not any new endpoint configurations are added, updated, or removed.
+Partner Manager’s deployment orchestration service inspects the message flow and associated configuration objects and determines which endpoint services to deploy or update based on whether any new endpoint configurations are added, updated, or removed.
 
 The number and type of endpoint services deployed to your runtime depend on the transport protocols used to exchange data with your trading partners and backend systems.
 

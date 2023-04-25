@@ -43,15 +43,15 @@ Enter a well-formed URL (including the path) that specifies where to send the re
 |x
 
 |Response Timeout (in milliseconds)
-|Maximum time, in milliseconds, for which the request element blocks the execution of the flow that is waiting for the HTTP response. The defauilt is 15000 milleseconds seconds.
+|Maximum time, in milliseconds, for which the request element blocks the execution of the flow that is waiting for the HTTP response. The defauilt is 15000 milleseconds.
 |x
 
 |Retry interval (in seconds)
-|Frequency of reconnection attempts when unable to connect to the remote HTTP or HTTPS service. The default is 60 Seconds.
+|Frequency of reconnection attempts when unable to connect to the remote HTTP or HTTPS service. The default is 60 seconds.
 |x
 
 |Maximum retry attempts
-|Maximum number of reconnection attempts to make. If you don’t want Partner Manager to retry after an initial connection failure, set this value to `0`. The default is 3.
+|Maximum number of reconnection attempts to make. If you don’t want Partner Manager to retry after an initial connection failure, set this value to `0`. The default is `3`.
 |x
 
 |Connection Idle Timeout (milliseconds)

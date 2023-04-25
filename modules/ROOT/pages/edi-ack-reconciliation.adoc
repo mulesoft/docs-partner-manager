@@ -8,7 +8,7 @@ When your organization receives the functional acknowledgment (X12 997 or EDIFAC
 
 * `Accepted`
 * `Rejected`
-* `Overdue`, if the the functional acknowledgment  is not received within the specified time period
+* `Overdue`, if the functional acknowledgment  is not received within the specified time period
 
 The following are examples of the actions your operations team might take while troubleshooting acknowledgment issues:
 

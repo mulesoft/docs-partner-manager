@@ -2,7 +2,7 @@
 
 When you create translation maps for an inbound or outbound message flows, you can add additional source message attributes to those maps. The added attributes appear in the message payload, and you can view them on the activity screen for transmissions that use the map. 
 
-Adding additional message attributes to translation maps enables you to achieve end-to-end tracing by passing transmission IDs to the translated JSON or XML output file. 
+Adding additional source message attributes to translation maps enables you to achieve end-to-end tracing by passing transmission IDs to the translated JSON or XML output file. 
 
 Some other common use cases include:
 
