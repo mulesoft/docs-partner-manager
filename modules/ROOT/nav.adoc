@@ -70,7 +70,7 @@
       *** xref:create-map-json-xml-to-outbound-edifact.adoc[Creating a Translation Map For XML or JSON to Outbound EDI EDIFACT]
       *** xref:create-map-inbound-x12-json-xml.adoc[Creating a Translation Map for Inbound X12 to JSON or XML]
       *** xref:create-map-json-xml-to-outbound-x12.adoc[Creating a Translation Map For XML or JSON to Outbound EDI X12]
-      *** xref:add-additional-source-message-attributes.adoc[Adding Additional Source Message Attributes to Translation Maps]
+      *** xref:access-source-message-attributes.adoc[Accessing Source Message Attributes in Translation Maps]
 * xref:partner-manager-administration.adoc[Partner Manager Administration]
  ** xref:activity-tracking.adoc[Tracking Transmissions]
  ** xref:activity-message-tracking.adoc[Tracking Individual Messages]
