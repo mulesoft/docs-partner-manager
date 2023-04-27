@@ -1,6 +1,6 @@
 = Accessing Source Message Attributes
 
-When you create translation or reference maps for inbound or outbound message flows, you can access source message attributes in those maps. You can then map the attributes in the translated message payload or use the attribute values in your mapping logic to perform dynamic condition execution.
+When you create translation or reference maps for inbound or outbound message flows, you can access source message attributes in those maps. You can then map the attributes to fields in the translated message payload or use the attribute values in your mapping logic to perform dynamic condition execution.
 
 Some common use cases include:
 
@@ -112,7 +112,7 @@ Messages received via HTTP or HTTPS contain the following fields in the `b2bMess
 ** fileSize
 * customProtocolHeaders
 +
-For security reasons, only the headers with the prefix 'x-apm-' are made available in the 'b2bMessageContext' variable.
+For security reasons, only the headers with the prefix 'x-apm-' are available in the 'b2bMessageContext' variable.
 * messageId   
 
 For example:
