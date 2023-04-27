@@ -59,7 +59,7 @@ If a group contains multiple transaction sets, then the acknowledgment for that 
 [[validation-settings]]
 == Validation Settings
 
-Use these settings to ensure that all X12 messages received from a partner meet validation rules. Parter Manager logs all validation errors and reports them in the CONTRL acknowledgments.
+Use these settings to ensure that all X12 messages received from a partner meet validation rules. Partner Manager logs all validation errors and reports them in the CONTRL acknowledgments.
 
 [%header%autowidth.spread]
 |===
@@ -108,7 +108,8 @@ a|* If selected, Partner Manager rejects transactions containing segments marked
 | Disabled
 
 |Acknowledge every transaction
-|If selected, Partner Manager sends acknowledgements for every received transaction set.
+|If selected, Partner Manager includes a separate AK2/AK5 segment for every received transaction set, even when all transactions are accepted in the 997 functional acknowledgement.
+
 |Disabled
 
 

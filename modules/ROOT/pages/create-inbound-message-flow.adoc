@@ -87,7 +87,7 @@ To import the translation map:
 +
 The translation map is added to the message flow.
 
-After you import the translation map for an inbound message flow, you can access source message attributes in that map. This makes these attributes available in the message playoad. The attributes that you can access depend on the protocol of the source endpoint. For more information, see xref:access-source-message-attributes.adoc[Accessing Source Message Attributes in Translation Maps]. 
+In the translation map you develop for an inbound message flow, you can access source message attributes, which makes them available in the message payload. The attributes that you can access depend on the protocol of the source endpoint. For more information, see xref:access-source-message-attributes.adoc[Accessing Source Message Attributes]. 
 
 [[configure-target]]
 == Configure the Target Message Type

@@ -1,18 +1,16 @@
-= Accessing Source Message Attributes in Translation Maps
+= Accessing Source Message Attributes
 
-*Vijay, I am finding the text describing the use cases awkward when I use the term "accessing." To me, you are adding source attributes to translation maps or maybe exposing them, but not really accessing them. If you agree with "Exposing Source Message Attributes in Translation Maps,"" I will change the use case wording accordingly.* 
-
-When you create translation maps for inbound or outbound message flows, you can access source message attributes in those maps. The source attributes in the maps appear in the translated message payload, and you can view them on the activity screen for transmissions that use the map. 
+When you create translation or reference maps for inbound or outbound message flows, you can access source message attributes in those maps. You can then map the attributes in the translated message payload or use the attribute values in your mapping logic to perform dynamic condition execution.
 
 Some common use cases include:
 
 * Achieving end-to-end tracing
 +
-Accessing transmission IDs in the translation maps enables you to achieve end-to-end tracing becuase these IDs are passed to the translated JSON or XML output file.
+Accessing transmission IDs in the translation maps enables you to achieve end-to-end tracing because these IDs are passed to the translated JSON or XML output file.
 +
 * Mapping attributes to pass them to the backend
 +
-For example, if the backend must see the source filename or a specific HTTP header, you can access the filename or HTTP header in the translation map so that it appears in the translated data payload.
+For example, if the backend must see the source filename or a specific HTTP header, you can access the filename or HTTP header and map the values to the translated message payload fields.
 +
 * Applying mapping logic based either on a filename part or pattern within the transformation
 +
@@ -20,7 +18,7 @@ For example, you can access a filename prefix through substring operations and c
 +
 * Mapping attributes to make them available in the search
 +
-For example, you can access the source filename or a specific HTTP header in the translation map so that you can easily search for these values in the Activity screens.
+For example, you can access the source filename or a specific HTTP header value as a custom message attribute in in the message type's reference map so that you can easily search for these values in the Activity screens.
 
 The source attributes that you can access are available within a predefined variable named `b2bMessageContext`. The content of this variable varies based on the source endpoint's protocol.
 
@@ -39,7 +37,7 @@ Messages received via AS2 contain the following fields in the `b2bMessageContext
 ** fileSize 
 * customProtocolHeaders
 +
-These headers always begin with the prefix `x-apm-`.
+For security reasons, only the headers with the prefix 'x-apm-' are available in the 'b2bMessageContext' variable.
 
 For example:
 
@@ -114,7 +112,7 @@ Messages received via HTTP or HTTPS contain the following fields in the `b2bMess
 ** fileSize
 * customProtocolHeaders
 +
-These headers always begin with the prefix `x-apm-`.
+For security reasons, only the headers with the prefix 'x-apm-' are made available in the 'b2bMessageContext' variable.
 * messageId   
 
 For example:
