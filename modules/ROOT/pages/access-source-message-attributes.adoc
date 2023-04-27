@@ -2,6 +2,10 @@
 
 When you create translation or reference maps for inbound or outbound message flows, you can access source message attributes in those maps. You can then map the attributes to fields in the translated message payload or use the attribute values in your mapping logic to perform dynamic condition execution.
 
+== Common Use Cases
+
+Accessing source message attributes helps in many use cases, such as with performing dynamic message routing decisions, performing specific functions, and mapping fields within the data transformation in the message flow execution. Some common use cases include:
+
 Some common use cases include:
 
 * Achieving end-to-end tracing
@@ -14,11 +18,13 @@ For example, if the backend must see the source filename or a specific HTTP head
 +
 * Applying mapping logic based either on a filename part or pattern within the transformation
 +
-For example, you can access a filename prefix through substring operations and can build dynamic mapping logic based on this prefix. 
+For example, you can access a filename prefix through substring operations and can build dynamic mapping logic based on this prefix: 
 +
 * Mapping attributes to make them available in the search
 +
 For example, you can access the source filename or a specific HTTP header value as a custom message attribute in in the message type's reference map so that you can easily search for these values in the Activity screens.
+
+For more information, see <<implementation-examples>>.
 
 The source attributes that you can access are available within a predefined variable named `b2bMessageContext`. The content of this variable varies based on the source endpoint's protocol.
 
@@ -136,9 +142,109 @@ For example:
 }
 ----
 
+[[implementation-examples]]
+== Use Case Implementation Examples
+
+The following examples show how to implement some common use cases for source message attributes.
+
+This example shows how to map the `messageId` and `fileName` attributes in the translated data payload within a message flow's translation map:
+
+----
+messageId: vars.b2bMessageContext.messageId
+fileName: vars.b2bMessageContext.sourceEndpointAttributes.fileName
+----
+
+This example shows how to apply mapping logic based on the filename prefix message in the message flow's translation map:
+
+----
+POPurpose: 
+substringBefore(vars.b2bMessageContext.sourceEndpointAttributes.fileName, "_") default "PO-CREATE",
+----
+
+This example shows how to perform a `substringBefore` operation on the source filename to get the value before `_` and use it as the partner reference identifier:
+
+----
+%dw 2.0
+output application/json
+import * from dw::core::Strings
+ns ns0 http://xmlns.mulesoft.com/enterpriseobjects/b2b/
+---
+{
+	partnerReferenceId: substringBefore(vars.b2bMessageContext.sourceEndpointAttributes.fileName, "_") default "UNKNOWN" ,
+	hostReferenceId: payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#Seller,
+	businessDocumentKey: payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#PurchaseOrderNumber,
+	customAttributes: [
+		{
+			alias: "purchaseOrderNumber",
+			values: [payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#PurchaseOrderNumber]
+		},
+		{
+			alias: "buyerEmail",
+			values: [payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#BuyerEmailID]
+		}	]
+}
+----
+
+This example shows how to:
+
+* Use the partner identifier associated with an FTP or SFTP Receive from Partners endpoint configuration as the partner reference identifier for routing the message.
+* Map the source filename as a custom message attribute.
+
+----
+%dw 2.0
+output application/json
+ns ns0 http://xmlns.mulesoft.com/enterpriseobjects/b2b/
+---
+{
+	partnerReferenceId: vars.b2bMessageContext.sourceEndpointAttributes.partnerReferenceId,
+	hostReferenceId: payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#Seller,
+	businessDocumentKey: payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#PurchaseOrderNumber,
+	customAttributes: [
+		{
+			alias: "purchaseOrderNumber",
+			values: [payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#PurchaseOrderNumber]
+		},
+		{
+			alias: "buyerEmail",
+			values: [payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#BuyerEmailID]
+		},
+		{
+			alias: "sourceFileName",
+			values: [vars.b2bMessageContext.sourceEndpointAttributes.fileName default “UNKNOWN]
+		}
+	]
+}
+----
+
+This example shows how to map a custom header on the received HTTP message as a custom message attribute:
+
+----
+%dw 2.0
+output application/json
+ns ns0 http://xmlns.mulesoft.com/enterpriseobjects/b2b/
+---
+{
+	partnerReferenceId: payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#Seller,
+	hostReferenceId: payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#Buyer,
+	businessDocumentKey: payload.ns0#B2BMessage.ns0#Data.ns0#PurchaseOrder.ns0#PurchaseOrderNumber,
+	customAttributes: [
+		{
+			alias: "purchaseOrderNumber", 
+			values: payload.ns0#B2BMessage.ns0#Data.*ns0#PurchaseOrder map ( purchaseOrder , indexOfPurchaseOrder ) 
+						-> purchaseOrder.ns0#PurchaseOrderNumber default "UNKNOWN"
+		},
+		{
+			alias: "supplierName", 
+			values: [vars.b2bMessageContext.customProtocolHeaders.'x-apm-supplierName' default "UNKNOWN"]
+		}
+	]
+}
+----
+
 == See Also
 
 * xref:partner-manager-maps.adoc[Translation Maps]
 * xref:create-inbound-message-flow.adoc[Creating Inbound Message Flows]
 * xref:create-outbound-message-flow.adoc[Creating Outbound Message Flows]
+* xref:create-reference-map.adoc[Creating Reference Maps for Message Types]
 * xref:activity-tracking.adoc[Tracking Transmissions]
