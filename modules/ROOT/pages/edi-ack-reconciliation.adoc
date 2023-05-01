@@ -8,7 +8,7 @@ When your organization receives the functional acknowledgement (X12 997 or EDIFA
 
 * `Accepted`
 * `Rejected`
-* `Overdue`, if the functional acknowledgement  is not received within the specified time period
+* `Overdue`, if your organization does not received the functional acknowledgement within the specified time period
 
 The following are examples of the actions your operations team might take while troubleshooting acknowledgement issues:
 

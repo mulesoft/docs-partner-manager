@@ -17,7 +17,7 @@ See the Runtime Manager documentation xref:runtime-manager::server-group-create.
 +
 . xref:mule-runtime::runtime-installation-task.adoc[Download and Install Mule]. 
 +
-See the Partner Manager release notes for information about which Mule version Partner Manager supports.
+See the Partner Manager release notes for information about the Mule version that Partner Manager supports.
 +
 . After you install Mule, navigate to the `wrapper.conf` file, which is located in `$MULE_HOME/conf/`.
 . In the `wrapper.conf` file, add the required parameters and adjust the memory and heap size configuration values for your environment.

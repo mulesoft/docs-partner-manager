@@ -40,11 +40,11 @@ Create AS2 endpoints by configuring these settings on the partner or third-party
 |x
 
 |Partner AS2 identifier
-|Your partner’s AS2 identifier. Appears if the endpoint is used to send transactions directly to a partner without going through a third-party connection.
+|Your partner’s AS2 identifier, which appears if the endpoint is used to send transactions directly to a partner without going through a third-party connection.
 |x
 
 |<VAN> AS2 identifier
-|Your VAN’s AS2 identifier. Appears if the endpoint is used to send transactions to a third-party connection. 
+|Your VAN’s AS2 identifier, which appears if the endpoint is used to send transactions to a third-party connection. 
 |x
 
 |Partner AS2 URL
@@ -61,7 +61,7 @@ Does not require backend applications to authenticate when connecting to this en
 * Basic
 +
 Requires backend applications to use the username and password provided by your partner to connect to this endpoint.
-Enter this information in the Username and Password fields.
+Enter this information in the *Username* and *Password* fields.
 |x
 
 |Connection timeout
@@ -105,11 +105,11 @@ For more information about host keystores, see xref:manage-as2-host-keystores.ad
 |x
 
 |Signature algorithm
-|xref:as2-endpoints-algorithms.adoc[Algorithm] to use when setting the message integrity check value.
+|xref:as2-endpoints-algorithms.adoc[Algorithm] to use when setting the message-integrity check value.
 |x
 
 |Request receipt
-a|Whether you want the partner to return a Message Disposition Notification (MDN) receipt, which confirms the receipt of the message.
+a|Whether you want the partner to return a Message Disposition Notification (MDN) receipt.
 |x
 
 |MDN response

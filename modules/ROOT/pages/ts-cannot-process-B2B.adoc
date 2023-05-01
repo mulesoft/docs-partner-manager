@@ -108,6 +108,6 @@ Consider the following when performing a delete:
 
 ** If you delete the `DocumentProcessingService` or the `APIReplicationService`, deploying any flow results in the redeployment of those apps.
 
-** If you delete any of the inbound, outbound, or ack apps, you have to redeploy the specific flow corresponding to the deleted apps.
+** If you delete any of the inbound, outbound, or ack apps, you must redeploy the specific flow corresponding to the deleted apps.
 
 If you can't access the Support Portal, contact your Customer Success Manager or MuleSoft Account Management team for help.

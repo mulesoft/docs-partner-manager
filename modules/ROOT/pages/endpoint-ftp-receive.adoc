@@ -33,7 +33,7 @@ Create FTP receive endpoints by configuring these settings on the *<host>* or *P
 | x
 
 | Endpoint Name
-| Automatically generated name used to identify the endpoint, which you can modify manually.
+| Automatically generated name used to identify the endpoint, which you can subsequently modify manually.
 |x
 
 | Description

@@ -91,7 +91,7 @@ To disable this feature, specify a negative number or omit the value.
 |
 
 | Archival Path
-| SFTP server path at which to store a copy of the file that was obtained from `source path`.
+| SFTP server path at which to store a copy of the file obtained from `source path`.
 |
 |===
 

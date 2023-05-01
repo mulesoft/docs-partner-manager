@@ -32,7 +32,7 @@ You can retrieve up to one week's worth of messages.
 Partner Manager returns a list of transmissions that meet your search criteria along with related information, such as the date the transmission was received, number of messages in the transmission, message type, control number, and acknowledgement status.
 +
 . Do either of the following:
-** Click on a transmission to review additional information about the transmission and to view its message flow.
+** Click a transmission to review additional information about the transmission and to view its message flow.
 ** Click *messages* to see information about the messages in the transaction, as described in xref:activity-message-tracking.adoc[Activity Message Tracking].
 
 [[view-details]]

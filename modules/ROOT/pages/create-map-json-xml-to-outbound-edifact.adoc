@@ -77,5 +77,5 @@ The application returns the transformed EDIFACT transaction.
 
 == See Also
 
-* https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-procure-to-pay-mappings/[Transform XML to Outbound EDIFACT 850 Purchase Orders Example Project on Exchange]
+* https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-procure-to-pay-mappings/[Transform XML to Outbound EDIFACT 850 Purchase Orders Example Project on Exchange^]
 * xref:create-outbound-message-flow.adoc[Create Outbound Message Flows]

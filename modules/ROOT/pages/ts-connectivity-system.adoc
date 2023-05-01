@@ -4,4 +4,4 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-If you have problems receiving or sending data, the messages and solutions described here can help you resolve your issue.
+If you have problems receiving or sending data, the messages and solutions described here can help resolve your issue.
