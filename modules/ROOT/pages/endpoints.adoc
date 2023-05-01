@@ -7,7 +7,7 @@ Anypoint Partner Manager uses endpoints to:
 * Receive messages from partners
 * Receive messages from backend applications
 * Define transport protocols
-* Specify message or message acknowledgment destinations
+* Specify message or message acknowledgement destinations
 
 == Endpoint Ownership
 

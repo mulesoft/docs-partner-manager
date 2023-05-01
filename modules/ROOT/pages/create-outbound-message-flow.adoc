@@ -92,7 +92,7 @@ These identifiers are configured in the host and partner profiles.
 
 To configure acknowledgement settings for the outbound messages that use the message flow:
 
-. In the *Acknowledgement* section, select *Expect functional acknowledgement* (X12) or *Expect CONTRL functional acknowledgment* (EDIFACT).
+. In the *Acknowledgement* section, select *Expect functional acknowledgement* (X12) or *Expect CONTRL functional acknowledgement* (EDIFACT).
 . Do either of the following:
 * Select an existing endpoint at which to receive your partner's acknowledgement transaction.
 * Click *New* to create a new endpoint, as described in xref:create-endpoint.adoc[Creating Endpoints].

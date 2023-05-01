@@ -1,12 +1,12 @@
-= Missing TA1 acknowledgments for my transmissions
+= Missing TA1 acknowledgements for my transmissions
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
 
-Anypoint Partner Manager sends TA1 acknowledgments for a received transmission if configured to do so.
-Your trading partner might contact you to tell you that they are not receiving TA1 acknowledgments.
+Anypoint Partner Manager sends TA1 acknowledgements for a received transmission if configured to do so.
+Your trading partner might contact you to tell you that they are not receiving TA1 acknowledgements.
 
 == Causes
 
@@ -26,8 +26,8 @@ If you are not receiving TA1 configurations, review the following configuration:
 
 . Within the Acknowledgments section, ensure that the option for _Send TA1 for each transmission from <partner name>_ is selected.
 
-. Configure the acknowledgment endpoint as in xref:endpoints.adoc[Endpoints].
+. Configure the acknowledgement endpoint as in xref:endpoints.adoc[Endpoints].
 
 . Click *Save* when done.
 
-This enables TA1 acknowledgments for all transmissions received by the specific partner.
+This enables TA1 acknowledgements for all transmissions received by the specific partner.

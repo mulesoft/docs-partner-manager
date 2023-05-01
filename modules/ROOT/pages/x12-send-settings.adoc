@@ -6,7 +6,7 @@ To configure a partner's X12 send settings:
 
 . In the navigation menu, select *Partners*.
 . Select the partner for whom you want to configure the settings.
-. In the *Validation and acknowledgment settings* section's *Send to <partner-name>* column, click *X12*.
+. In the *Validation and acknowledgement settings* section's *Send to <partner-name>* column, click *X12*.
 . In the menu, select the setting to configure:
 * <<general-settings,General settings>>
 * <<authorization-settings,Authorization settings>>
@@ -86,24 +86,24 @@ Use the following settings to configure the authorization and security qualifier
 [[ta1-ack-settings]]
 == TA1 Acknowledgment Settings
 
-Use the following settings to configure whether a technical acknowledgment is required, and the receive endpoint for the acknowledgment:
+Use the following settings to configure whether a technical acknowledgement is required, and the receive endpoint for the acknowledgement:
 
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default
 
 |Expect TA1 for each transmission sent to <partner>
-a|If selected, sets the value in ISA14 to 1 on the generated X12 payload, indicating that a Technical acknowledgment (TA1) is required.
+a|If selected, sets the value in ISA14 to 1 on the generated X12 payload, indicating that a Technical acknowledgement (TA1) is required.
 |Disabled
 |Endpoint
-a|When the option to expect a TA1 is selected, click *Select* to specify the *Receive from <partner>* endpoint. The acknowledgment will be received as an inbound transmission.
+a|When the option to expect a TA1 is selected, click *Select* to specify the *Receive from <partner>* endpoint. The e will be received as an inbound transmission.
 |None
 |===
 
 [[global-control-numbers]]
 == Global Control Numbers
 
-Partner Manager applies a global control number at the partner level on the X12 interchanges and functional groups generated from outbound message flows. These control numbers are sequenced across all message types (including functional acknowledgments) that are sent to a partner.
+Partner Manager applies a global control number at the partner level on the X12 interchanges and functional groups generated from outbound message flows. These control numbers are sequenced across all message types (including functional acknowledgements) that are sent to a partner.
 
 The control number starts with a default value of `1`, and is sequentially increased as your organization begins sending outbound transmissions.
 

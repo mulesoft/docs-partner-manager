@@ -64,14 +64,14 @@ The message type and its validation settings are added to the message flow.
 
 If the source message type is X12 or EDIFACT and your partner expects your organization to return functional acknowledgements, perform these additional steps:
 
-. In the *Acknowledgement* section, select the checkbox next to *Send 997 functional acknowledgment (X12)* or *Send CONTRL functional acknowledgement (EDIFACT)*.
+. In the *Acknowledgement* section, select the checkbox next to *Send 997 functional acknowledgement (X12)* or *Send CONTRL functional acknowledgement (EDIFACT)*.
 . Click *Select*.
 . In the *Select an endpoint: Send acknowledgement to <partner>* window, do either of the following:
-* Select the endpoint to receive the acknowledgment messages from your partner and click *Select*.
+* Select the endpoint to receive the acknowledgement messages from your partner and click *Select*.
 * Click *New* to create a new endpoint, as described in xref:create-endpoint.adoc[Creating Endpoints].
 
 +
-The acknowledgment is added to the message flow.
+The acknowledgement is added to the message flow.
 
 [[import-map]]
 == Import the Translation Map

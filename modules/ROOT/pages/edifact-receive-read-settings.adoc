@@ -1,12 +1,12 @@
 = Configuring Receive Settings for Inbound EDIFACT messages
 
-Partner Manager receive settings include the EDIFACT acknowledgments and validation rules to apply when processing an inbound EDIFACT message from the specified partner.
+Partner Manager receive settings include the EDIFACT acknowledgements and validation rules to apply when processing an inbound EDIFACT message from the specified partner.
 
 To configure EDIFACT receive settings:
 
 . In the navigation menu, select *Partners*.
 . Select the partner to which these settings apply.
-. In the *Validation and acknowledgment settings* section's *Receive from <partner-name>* column, click *EDIFACT*.
+. In the *Validation and acknowledgement settings* section's *Receive from <partner-name>* column, click *EDIFACT*.
 . Select a link to configure:
 * <<ack-settings,Acknowledgment settings>>
 * <<validation-settings,Validation settings>>
@@ -19,7 +19,7 @@ It can take up to five minutes or so for your configuration changes to sync with
 [[ack-settings]]
 == Acknowledgment Settings
 
-Optionally configure acknowledgment settings for each Inbound EDIFACT message flow by enabling the *Send CONTRL functional acknowledgment when messages fail to route to a message flow* setting.
+Optionally configure acknowledgement settings for each Inbound EDIFACT message flow by enabling the *Send CONTRL functional acknowledgement when messages fail to route to a message flow* setting.
 
 When there is a routing failure, this acknowledgement indicates that the message is rejected.
 
@@ -71,7 +71,7 @@ a|* If selected, Partner Manager enforces EDIFACT code set validations, as defin
 
 If a message does not meet an enabled rule, Partner Manager rejects it.
 
-Partner Manager logs all errors and reports them in the CONTRL acknowledgments.
+Partner Manager logs all errors and reports them in the CONTRL acknowledgements.
 
 [[control-numbers]]
 == Control Numbers

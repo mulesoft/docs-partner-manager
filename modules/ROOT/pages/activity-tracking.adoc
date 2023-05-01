@@ -33,7 +33,7 @@ Partner Manager returns a list of transmissions that meet your search criteria a
 +
 . Do either of the following:
 ** Click on a transmission to review additional information about the transmission and to view its message flow.
-** Click on the *messages* link to access the message view, where you can see information about the messages in the transaction, as described in xref:activity-message-tracking.adoc[Activity Message Tracking].
+** Click *messages* to see information about the messages in the transaction, as described in xref:activity-message-tracking.adoc[Activity Message Tracking].
 
 [[view-details]]
 == View Details for an Inbound Transmission
