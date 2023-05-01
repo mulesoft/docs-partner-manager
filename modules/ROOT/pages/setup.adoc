@@ -50,5 +50,8 @@ To change the payload storage API configuration, follow these steps:
 
 == See Also
 
-* xref:troubleshooting.adoc[Troubleshooting Anypoint Partner Manager]
-* xref:setup-payload-storage-API.adoc[Set up the Payload Storage API for Partner Manager]
+* xref:cloudhub-deploy-options.adoc[]
+* xref:deploy-onpremise.adoc[]
+* xref:setup-payload-storage-API.adoc[]
+* xref:certificates.adoc[]
+

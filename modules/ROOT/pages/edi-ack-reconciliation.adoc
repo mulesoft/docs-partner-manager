@@ -15,6 +15,7 @@ The following are examples of the actions your operations team might take while 
 * Retriggering the transaction from the backend application when reviewing rejected transactions due to missing data elements
 * Asking your trading partner to confirm the receipt of the outbound transaction when reviewing overdue transactions
 
+[[troubleshoot-rejected-acks]]
 == Troubleshoot Rejected or Overdue Acknowledgments
 You can view all the outbound transactions that have either received an X12 997 or EDIFACT CONTRL rejection or that are overdue for the functional acknowledgment:
 

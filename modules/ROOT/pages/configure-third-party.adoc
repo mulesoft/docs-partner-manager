@@ -6,7 +6,7 @@ Use the *Partners* page to create and manage third-party connections. From this 
 
 * xref:create-third-party.adoc[Create a new third-party connection]
 * xref:partner-manager-identifiers.adoc[Add the AS2 identifiers] used by the third-party connection.
-* Add digital xref:Certificates.adoc[certificates] associated with the third-party connection.
+* Add digital xref:certificates.adoc[certificates] associated with the third-party connection.
 * xref:create-endpoint.adoc[Create] and manage source and target endpoints owned by the third-party connection.
 * xref:modify-third-party-settings.adoc[Modify third-party connection settings]
 * xref:delete-third-party.adoc[Delete a third-party connection]

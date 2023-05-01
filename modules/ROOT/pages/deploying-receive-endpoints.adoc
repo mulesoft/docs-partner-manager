@@ -19,7 +19,7 @@ If your organization uses Anypoint VPC without a dedicated load balancer (DLB), 
 To deploy an AS2, HTTP, or HTTPS receive endpoint with the private port configuration enabled, do either of the following:
 
 * Deploy a message flow that includes the receive endpoint.
-* Set CloudHub to automatically deploy newly created endpoints to a private port, as described in xref:cloudhub-deploy-options.adoc[CloudHub deployment settings].
+* Set CloudHub to automatically deploy newly created endpoints to a private port, as described in xref:cloudhub-deploy-options.adoc[Configuring CloudHub Deployment Options].
 
 Endpoints with the private port configuration enabled are deployed to the private HTTPS port `8092`. You can view the runtime application name, internal URL, and external URL for a deployed endpoint from the endpoint details page, which you can access from the host page (AS2 endpoints) or partner page (HTTP or HTTPS endpoints), or from a message flow.
 
@@ -65,7 +65,7 @@ Your administrator can add a URL mapping rule in the DLB settings like the follo
 
 image::url-mapping-rules-http.png[URL mapping rule for the HTTP endpoint in this example]
 
-== Deploy to an On-Premises Mule Instance
+== Deploy to an On-premises Mule Instance
 
 AS2 and HTTP receive endpoints deployed to on-premises Mule instances are deployed over plain HTTP. Using a load balancer exposes these endpoints to consumers as HTTPS endpoints.
 

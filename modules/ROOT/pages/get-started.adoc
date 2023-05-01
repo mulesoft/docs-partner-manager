@@ -1,0 +1,167 @@
+= Getting Started with Partner Manager
+
+Partner Manager provides a simplified, configuration-driven B2B integration solution to manage B2B trading partner ecosystems. To use Partner Manager, follow these steps:
+
+. <<assign-permissions,Assign permissions to Partner Manager users>>.
+. <<set-up-env,Set up the Partner Manager environment>>.
+. <<payload-storage-api,Set up the Payload Storage API>>.
+. <<configure-host-profile,Configure a host profile>>.
+. <<configure-partners,Configure a profile for each of your trading partners>>.
+. <<configure-third-party,Optionally configure third-party connections>>.
+. <<configure-message-flows,Configure message flows>>.
+. <<deploy-test-message-flows,Deploy and test configured message flows>>.
+. <<monitor-transmissions,Monitor transmissions and individual messages>>.
+. <<troubleshoot-acks,Troubleshoot rejected or overdue acknowledgements>>.
+
+[[assign-permissions]]
+== Assign Permissions to Partner Manager Users
+
+For each sandbox and production environment, use Anypoint Access Management to assign permissions to each Partner Manager user. You can assign the following permissions:
+
+*  *Partner Manager Administrator* 
++
+** Has full permissions
+* *View Host, Partners, and Message Flows* 
++
+** Has view-only access to the host, partner, and message flow configurations
+** Cannot view transaction activity
+* *Manage Partners and Message Flows* 
++
+** Can create, modify, and delete partners or message flow configurations
+** Can view partner configurations
+** Cannot view and manage transaction activity
+* *Manage Activity* 
++
+** Can view and manage transaction activity
+** Cannot view or modify either partner or message flow configurations
+* *Manage Host* 
++
+** Can create, modify, and delete host configurations
+** Cannot view or modify trading partner configurations or transaction activity 
+
++
+This access applies even if the user has the Anypoint Platform Org Admin role.
+* *View Activity* 
++
+** Has view-only access to transaction activity
+** Cannot view or modify either partner or message flow configurations
+
+For more information, see xref:access-management::permissions-by-product.adoc[].
+
+[[set-up-env]]
+== Set Up the Partner Manager Environment
+
+You can deploy Partner Manager runtime applications to CloudHub 1.0 or you can deploy them on-premises:
+
+* To configure options for deploying to CloudHub, use the *Partner Manager Settings* page in Anypoint Access Management:
+
++
+For more information, see xref:cloudhub-deploy-options.adoc[].
++
+* To use Partner Manager on-premises:
+. Install and configure Mule runtime engine (Mule) on-premises.
+. Use Anypoint Runtime Manager to register Partner Manager in the appropriate environment.
+. Create a server group to which to add the servers you create.
+
++
+For more information, see xref:deploy-onpremise.adoc[].
+
+[[payload-storage-api]]
+== Set Up the Payload Storage API
+
+Partner Manager requires that you deploy a payload storage API for storing transmission information. You can connect this API to your choice of a storage location, such as a database, Amazon S3, or a file system.
+
+For more information, see xref:setup-payload-storage-API.adoc[].
+
+[[configure-host-profile]]
+== Configure a Host Profile
+
+Use the *<host>* page in Partner Manager to configure a host profile for your Anypoint Platform organization or business group. A host profile consists of the EDI and AS2 identifiers used by your organization, associated digital certificates, Source at Host and Target at Host endpoints, message types, Payload Storage API details, and global settings for EDIFACT receive messages.
+
+For more information, see xref:configure-host.adoc[].
+
+[[configure-partners]]
+== Configure a Partner Profile for Each of Your Trading Partners
+
+A partner profile consists of partner-specific settings such as:
+
+ * The partner's name
+ * Identifiers (such as the AS2 ID, X12-ISA, X12 GS, and so on)
+ * Digital certificates (such as X.509 certificates) 
+ * Endpoints to use for sending and receiving messages to and from your partner 
+ * The acknowledgements, validations, and control numbers for each message format that the partner uses
+
+Configure a partner profile for each of your trading partners. If you plan to use only host endpoints, you don’t need to create partner-specific endpoints.
+
+For more information, see xref:configure-partner.adoc[].
+
+[[configure-third-party]]
+== Configure Third-Party Connections
+
+If your trading partners use third-party service providers such as VANs or 3PLs (third-party logistics providers) who manage the B2B connectivity with your organization on behalf of your partners, then create configurations for these connections.
+
+Creating third-party connections is similar to configuring partner profiles, except that the acknowledgements, validations, and control numbers associated with message formats are configured only at the partner level.
+
+For more information, see xref:configure-third-party.adoc[].
+
+[[configure-message-flows]]
+== Configure Message Flows
+
+Message flows contain the following components, which execute end-to-end B2B message processing: 
+
+* Partner identifiers
+* Receive and send endpoints
+* Source and target message types
+* DataWeave translation maps
+
+Create inbound message flows to receive messages from your partners, transform the messages into your internal application format, and send the transformed message to your backend system.
+
+Create outbound message flows to receive messages from your backend applications, transform the messages to your partner’s message format, and send the messages to your partner.
+
+For more information, see xref:message-flows.adoc[] and xref:partner-manager-configuration-objects.adoc[]. 
+
+[[deploy-test-message-flows]]
+== Deploy and Test Configured Message Flows
+
+Deploy and test the message flows in a sandbox environment. After you verify that a message flow is successful, you can undeploy it from the sandbox and redeploy it to your production environment.
+
+For more information, see xref:deploy-message-flows.adoc[] and xref:undeploy-message-flows.adoc[Undeploying Message Flows].
+
+[[monitor-transmissions]]
+== Monitor Transmissions and Individual Messages
+
+Monitor transmission activity by searching for transactions based on criteria such as the:
+
+* Partner name
+* Message direction
+* Send and receive dates
+* Messaging processing status
+* Partner and host message type 
+
+You can also search for transactions based on any custom message attributes that you defined for the message type using DataWeave. 
+
+Monitor individual message activity by searching for messages based on criteria such as the:
+
+* Partner name
+* Message direction
+* Date range within which the message was sent 
+* Acknowledgement status
+* Messaging process status
+* Partner and host message types
+
+You can also search for individual messages based on any custom message attribute that you defined for the message type using DataWeave.
+
+For more information, see xref:activity-tracking.adoc[], xref:use-custom-attributes.adoc[], and xref:activity-message-tracking.adoc[].
+
+[[troubleshoot-acks]]
+== Troubleshoot Rejected or Overdue Acknowledgements
+
+When you monitor transmissions, you can search by acknowledgement status (*Ack Status* field) to find outbound transmissions that either received an X12 997 or EDIFACT CONTRL rejection or that are overdue for the functional acknowledgment. Then, you can review the X12 997 or EDIFACT CONTRL payload received from your partners and add a comment to indicate the action taken.
+
+For more information, see xref:edi-ack-reconciliation.adoc[].
+
+== See Also
+
+* xref:index.adoc[Partner Manager Overview]
+* xref:partner-manager-architecture.adoc[]
+* xref:setup.adoc[]

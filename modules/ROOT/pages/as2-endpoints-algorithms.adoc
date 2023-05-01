@@ -25,7 +25,6 @@ AS2 endpoints deployed from Partner Manager support the following signature and 
 ** `CAST5`
 ** `DES_EDE3`
 ** `RC2`
-** `3DES`
 
 == See Also
 
