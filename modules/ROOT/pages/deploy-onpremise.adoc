@@ -6,7 +6,6 @@ To deploy to an on-premises Mule instance that uses a firewall and load balancer
 
 Each Anypoint Partner Manager runtime application is deployed as an HTTP listener that listens on ports starting from port 10090. Leave ports 10090 through to 10100 open from a network standpoint before you deploy message flows on-premises.
 
-
 To set up the on-premises environment:
 
 . In the appropriate environment within your Anypoint Platform account, create a server group in the Runtime agent and name it `B2BServerGroup`. All Mule B2B-processing apps are deployed to this server group.

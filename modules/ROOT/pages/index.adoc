@@ -28,4 +28,5 @@ To get started, ask your Anypoint Platform administrator to follow the setup ins
 
 == See Also
 
+* xref:partner-manager-architecture.adoc[Partner Manager Architecture]
 * xref:setup.adoc[Anypoint Partner Manager Setup]
