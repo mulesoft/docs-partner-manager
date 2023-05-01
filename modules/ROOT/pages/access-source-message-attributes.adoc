@@ -4,7 +4,7 @@ When you create translation or reference maps for inbound or outbound message fl
 
 == Common Use Cases
 
-Accessing source message attributes helps in many use cases, such as with performing dynamic message routing decisions, performing specific functions, and mapping fields within the data transformation in the message flow execution. Some common use cases include:
+Accessing source message attributes helps in many use cases, such as with performing dynamic message routing decisions, performing specific functions, and mapping fields within the data transformation in the message flow execution.
 
 Some common use cases include:
 
