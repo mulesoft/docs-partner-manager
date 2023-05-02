@@ -49,7 +49,7 @@ a|
 | View the associated translation map, add additional source attributes to the map, or import another one.
 a| 
 * xref:partner-manager-maps.adoc[Translation Maps]
-* xref:add_additional_source_message_attributes.adoc[Adding Additional Source Attributes to a Translation Map]
+* xref:access_source_message_attributes.adoc[Adding Additional Source Attributes to a Translation Map]
 
 | Target at <host>
 a| * Select a different Target at Host message type.
