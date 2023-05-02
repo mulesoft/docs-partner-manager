@@ -8,9 +8,9 @@ Accessing source message attributes helps in many use cases, such as with perfor
 
 Some common use cases include:
 
-* Achieving end-to-end tracing
+* Achieving end-to-end transmission tracing
 +
-Accessing transmission IDs in the translation maps enables end-to-end tracing because these IDs are passed to the translated JSON or XML output file.
+Accessing transmission IDs in the translation maps enables end-to-end transmission tracing because these IDs are passed to the translated JSON or XML output file.
 +
 * Mapping attributes to pass them to the back end
 +

@@ -7,9 +7,7 @@ Refer to this information specifically for using ISA with X12.
 |Setting |Description |Required
 
 |Qualifier
-a|The Qualifier types available with Anypoint Partner Manager are listed here.
-
-Valid values::
+a|The following Qualifier types are available with Anypoint Partner Manager:
 
 * `01 (DUNS Number)`
 * `02 (SCAC - Standard Carrier Alpha Code)`
