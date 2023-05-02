@@ -22,7 +22,7 @@ For example, you can access a filename prefix through substring operations and t
 +
 * Mapping attributes to make them available in the search
 +
-For example, you can access the source filename or a specific HTTP header value as a custom message attribute in in the message type's reference map to easily search for these values in the Activity screens.
+For example, you can access the source filename or a specific HTTP header value as a custom message attribute in the message type's reference map to easily search for these values in the Activity screens.
 
 For more information, see <<implementation-examples>>.
 

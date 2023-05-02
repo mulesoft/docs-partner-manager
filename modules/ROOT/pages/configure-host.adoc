@@ -4,7 +4,7 @@ Your Anypoint Platform organization or your business group is referred to as the
 
 Use the *<host>* page in Partner Manager to:
 
-* xref:partner-manager-identifiers.adoc[Add the EDI and AS2 identifiers] used by your organization
+* xref:partner-manager-identifiers.adoc[Add the EDI and AS2 identifiers] used by your organization.
 * xref:Certificates.adoc[Add the digital certificates] associated with your organization.
 * xref:create-endpoint.adoc[Create and manage source and target endpoints].
 * xref:partner-manager-create-message-type.adoc[Create and manager source and target message types].
