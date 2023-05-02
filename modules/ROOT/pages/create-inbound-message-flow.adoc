@@ -64,14 +64,14 @@ The message type and its validation settings are added to the message flow.
 
 If the source message type is X12 or EDIFACT and your partner expects your organization to return functional acknowledgements, perform these additional steps:
 
-. In the *Acknowledgement* section, select the check box next to *Send 997 functional acknowledgment (X12)* or *Send CONTRL functional acknowledgement (EDIFACT)*.
+. In the *Acknowledgement* section, select the checkbox next to *Send 997 functional acknowledgement (X12)* or *Send CONTRL functional acknowledgement (EDIFACT)*.
 . Click *Select*.
 . In the *Select an endpoint: Send acknowledgement to <partner>* window, do either of the following:
-* Select the endpoint to receive the acknowledgment messages from your partner and click *Select*.
+* Select the endpoint to receive the acknowledgement messages from your partner and click *Select*.
 * Click *New* to create a new endpoint, as described in xref:create-endpoint.adoc[Creating Endpoints].
 
 +
-The acknowledgment is added to the message flow.
+The acknowledgement is added to the message flow.
 
 [[import-map]]
 == Import the Translation Map
@@ -86,6 +86,8 @@ To import the translation map:
 . Click *Upload mapping*.
 +
 The translation map is added to the message flow.
+
+In the translation map you develop for an inbound message flow, you can access source message attributes, which makes them available in the message payload. The attributes that you can access depend on the protocol of the source endpoint. For more information, see xref:access-source-message-attributes.adoc[Accessing Source Message Attributes]. 
 
 [[configure-target]]
 == Configure the Target Message Type
@@ -127,4 +129,5 @@ Partner Manager dynamically validates the message flow configuration elements fo
 * xref:inbound-message-flows.adoc[Inbound Message Flows]
 * xref:deploy-message-flows.adoc[Deploying and Testing Message Flows]
 * xref:manage-message-flows.adoc[Modifying Message Flow Settings]
+* xref:access-inbound-message-attributes.adoc[Accessing Inbound Message Attributes]
 * xref:inbound-message-routing.adoc[Inbound Message Routing]

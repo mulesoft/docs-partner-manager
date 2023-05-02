@@ -156,7 +156,7 @@ For more information, see xref:activity-tracking.adoc[], xref:use-custom-attribu
 [[troubleshoot-acks]]
 == Troubleshoot Rejected or Overdue Acknowledgements
 
-When you monitor transmissions, you can search by acknowledgement status (*Ack Status* field) to find outbound transmissions that either received an X12 997 or EDIFACT CONTRL rejection or that are overdue for the functional acknowledgment. Then, you can review the X12 997 or EDIFACT CONTRL payload received from your partners and add a comment to indicate the action taken.
+When you monitor transmissions, you can search by acknowledgement status (*Ack Status* field) to find outbound transmissions that either received an X12 997 or EDIFACT CONTRL rejection or that are overdue for the functional acknowledgement. Then, you can review the X12 997 or EDIFACT CONTRL payload received from your partners and add a comment to indicate the action taken.
 
 For more information, see xref:edi-ack-reconciliation.adoc[].
 

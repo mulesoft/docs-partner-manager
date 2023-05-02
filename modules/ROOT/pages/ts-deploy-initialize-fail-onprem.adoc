@@ -12,7 +12,7 @@ endif::[]
 
 == Solution
 
-. In the deployment environment, log into Anypoint Platform > *Runtime Manager*.
+. In the deployment environment, log in to Anypoint Platform > *Runtime Manager*.
 
 . Click *Servers* and verify that the server group `B2BServerGroup` is configured and in `Running` Status.
 

@@ -53,7 +53,7 @@ This core component of the Partner Manager workflow requires a minimum of 0.2 vC
 
 To have CloudHub automatically deploy newly created HTTP, HTTPS, and AS2 endpoints to a private port, select the *Deploy HTTP/AS2 apps to private port* checkbox.
 
-For assistance with sizing, contact your MuleSoft account representative.
+For help with sizing, contact your MuleSoft Account Team.
 
 == See Also
 

@@ -23,15 +23,19 @@ Select a transmission to view its details and view and download the message cont
 +
 You can retrieve up to one week's worth of messages.
 +
-* Acknowledgement status, such as `Overdue`
 * Message processing status, such as `Received`
+* Acknowledgement status, such as `Overdue`
 * Partner message type, such as `X12 - 850`
 * Host message type, such as `JSON host-purchase-order`
+* Transmission ID
 +
 Partner Manager returns a list of transmissions that meet your search criteria along with related information, such as the date the transmission was received, number of messages in the transmission, message type, control number, and acknowledgement status.
 +
-. Click on a transmission to review additional information about the transmission and to view its message flow.
+. Do either of the following:
+** Click a transmission to review additional information about the transmission and to view its message flow.
+** Click *messages* to see information about the messages in the transaction, as described in xref:activity-message-tracking.adoc[Activity Message Tracking].
 
+[[view-details]]
 == View Details for an Inbound Transmission
 
 The additional details for an inbound transmission include the following information:
@@ -49,12 +53,15 @@ Take any of the following actions to view and download additional information ab
 |===
 |Action |Steps
 
+|View the messages in the transaction.
+|Click *messages*. 
+
 |View and download the transmission payload received from the partner.
 a|
 . In the *Received transmission* field, click *View Payload*.
 . Specify a wrap character, if needed, and click *Apply*.
 . Click *Download*.
-| View and download the MDN message sent to the partner in response to an inbound AS2 transmission.
+| View and download the MDN message sent to the partner in response to an inbound AS2 transmission, if an MDN message exists.
 a|
 . In the *Sent MDN* field, click *View MDN*.
 . Specify a wrap character, if needed, and click *Apply*.
@@ -75,13 +82,14 @@ From the message flow diagram, you can expand the message flow sections to view 
 
 The details for an outbound transmission include the following information:
 
-// * Transmission status (a green checkmark for success or a red exclamation point for failure
+* Transmission status (a green checkmark for success or a red exclamation point for failure)
 * Transmission ID
 * Date and time when the file was sent
 * Control number associated with the transmitted file, if one exists
 * Message type, such as `mythical-po-ack-json: ORD-9892330`
 * Name of the sending (Send to Partners) endpoint
 * Name of the transmitted file
+* Number of messages in the transmission
 
 Take any of the following actions to view and download additional information about the outbound transmission:
 

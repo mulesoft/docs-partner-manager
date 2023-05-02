@@ -19,17 +19,22 @@ Create FTP receive endpoints by configuring these settings on the *<host>* or *P
 [%header%autowidth.spread]
 |===
 |Name |Description |Required
-| Endpoint Name
-| Automatically generated name used to identify the endpoint, which you can modify manually.
-|x
 
 | Owner
 | Host, partner, or third-party connection that owns the endpoint.
 |x
 
+|Usage
+|
+|
+
 | Protocol
 | Protocol that the endpoint supports.
 | x
+
+| Endpoint Name
+| Automatically generated name used to identify the endpoint, which you can subsequently modify manually.
+|x
 
 | Description
 | User-supplied value that describes the purpose of the endpoint.
@@ -60,7 +65,7 @@ Create FTP receive endpoints by configuring these settings on the *<host>* or *P
 | Frequency with which the server checks the source path for new files. The default is `1 minute`.
 | x
 
-| Supported Format Types
+| Supported Format Type
 | Applies only to FTP endpoints owned by partners or third-party connections.
 Indicates whether the endpoint supports EDI messages (EDIFACT, X12) or non-EDI messages (JSON, XML).
 | x
@@ -74,6 +79,14 @@ Mule performs two size checks by waiting the amount of time specified in this fi
 {sp} +
 To disable this feature, specify a negative number or omit the value.
 | x
+
+|Associated message type
+|(Applies when the format type is non-EDI) Message type to associate with the endpoint. If you select a message type, Partner Manager routes files received via the endpoint based on the selected message type instead of the filename.
+|
+
+|Associated reference identifier
+|(Applies to partner and third-party endpoints when the format type is non-EDI) Partner information, such as the partner ID or third-party ID.
+|
 
 | File name pattern
 | Filename pattern required by your partner.

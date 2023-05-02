@@ -116,6 +116,8 @@ If the output of a reference map does not conform to the validation schema, the 
 +
 * https://www.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-procure-to-pay-mappings/[B2B/EDI: Procure to Pay Mapping Examples]
 
+When you create a reference map, you can access other source message attributes in those maps. For information, see xref:access-source-message-attributes.adoc[Accessing Source Message Attributes].
+
 == Example Map for a Receive from Partners Message Type
 
 The following map transforms a partner's inbound X12 payload. The map contains a business document key and two custom message attributes:

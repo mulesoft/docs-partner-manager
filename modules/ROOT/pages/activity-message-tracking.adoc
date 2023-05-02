@@ -33,11 +33,13 @@ Select a message to view its details and view and download its contents:
 +
 You can retrieve up to one week's worth of messages.
 +
-* Acknowledgement status, such as `Overdue`
 * Message processing status, such as `Received`
+* Acknowledgement status, such as `Overdue`
 * Partner message type, such as `X12 - 850`
 * Host message type, such as `JSON host-purchase-order`
 * Message attribute, if the message type associated with the message has custom attributes
+* Message value
+* Transmission or message ID
 
 +
 Partner Manager returns a list of messages that meet your search criteria along with related information such as the date the message was received, message status, message type, partner, document ID, business key, and acknowledgement status.
@@ -61,6 +63,8 @@ Take any of the following actions to view and download additional information ab
 |===
 |Action |Steps
 
+| View the transmission that contains the message.
+| Click the link in the *Transmission Id* field.
 |View information about the source (Receive from Partner) endpoint.
 a|In the *Source* section, click the link in the *Source endpoint* field.
 |View information about the target (Target at Host) endpoint.
@@ -149,7 +153,7 @@ a|
 | View and download the DataWeave map that transformed the transmission.
 a|
 . In the *Summary* section, click the link in the *Transmission details* field to access the message flow diagram.
-. Click the the *Map* section to expand it.
+. Click the *Map* section to expand it.
 . Click the link in this section.
 . Click *Download*.
 

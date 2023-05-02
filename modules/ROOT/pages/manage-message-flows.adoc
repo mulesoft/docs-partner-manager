@@ -40,14 +40,16 @@ a|
 a|
 * Select a different receive from partners message type.
 * (EDIFACT or X12 message type) View current validation settings.
-* (EDIFACT or X12 message type) Indicate whether or not to send a 997 functional acknowledgment, and select the endpoint to which to send the acknowledgment.
+* (EDIFACT or X12 message type) Indicate whether to send a 997 functional acknowledgement and select the endpoint to which to send the acknowledgement.
 a|
 * xref:partner-manager-create-message-type.adoc[Creating Message Types]
 * xref:edi-ack-reconciliation.adoc[EDI Acknowledgement Reconciliation]
 
 | Map
-| View the associated DataWeave map or import another one.
-|xref:partner-manager-maps.adoc[Translation Maps]
+| View the associated translation map, add additional source attributes to the map, or import another one.
+a| 
+* xref:partner-manager-maps.adoc[Translation Maps]
+* xref:access_source_message_attributes.adoc[Adding Additional Source Attributes to a Translation Map]
 
 | Target at <host>
 a| * Select a different Target at Host message type.
@@ -86,12 +88,14 @@ a| * xref:create-endpoint.adoc[Creating Endpoints]
 * xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
 
 | Map
-| View the associated DataWeave map or import another one.
-| xref:partner-manager-maps.adoc[Import a DataWeave map]
+| View the associated translation map, add additional source attributes to the map, or import another one.
+a| 
+* xref:partner-manager-maps.adoc[Translation Maps]
+* xref:add_additional_source_message_attributes.adoc[Adding Additional Source Attributes to a Translation Map]
 
 | Message type
 a| * Select a different Send to Partners message type.
-* (EDIFACT or X12 message type) Indicate whether or not to send a 997 functional acknowledgment, and select the endpoint to which to send the acknowledgment.
+* (EDIFACT or X12 message type) Indicate whether to send a 997 functional acknowledgement and select the endpoint to which to send the acknowledgement.
 * (EDIFACT or X12 message type) View current validation settings.
 * Select different identifiers for the host and partner.
 a| * xref:partner-manager-create-message-type.adoc[Creating Message Types]

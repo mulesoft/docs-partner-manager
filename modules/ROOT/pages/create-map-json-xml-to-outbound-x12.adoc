@@ -69,5 +69,5 @@ Later, when you create and configure outbound message flows, you can import the 
 
 == See Also
 
-* xref:https://anypoint.mulesoft.com/exchange/org.mule.examples/b2b-demo-x12-transform/[Transform XML to Outbound EDI X12 850 Purchase Orders Example Project on Exchange]
+* https://anypoint.mulesoft.com/exchange/org.mule.examples/b2b-demo-x12-transform/[Transform XML to Outbound EDI X12 850 Purchase Orders Example Project on Exchange^]
 * xref:create-outbound-message-flow.adoc[Create Outbound Message Flows]

@@ -1,4 +1,4 @@
-= `Deployed Message flow configuration not found for Message: <name>`
+= Deployed Message flow configuration not found for Message: <name>
 
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
@@ -28,7 +28,7 @@ This information appears in the Activity section when one of the following occur
 Verify that the message type was received via the transmission:
 
 . For the activity that you are viewing, inspect the message to determine the message type received.
-It should contain a message identifier string like this: “v004010-810-1548-000000001”. Parts of this message are:
+The message should contain a message identifier string like this: `v004010-810-1548-000000001`. Parts of this message are:
 
 ** v004010: X12 format version received in a transmission
 

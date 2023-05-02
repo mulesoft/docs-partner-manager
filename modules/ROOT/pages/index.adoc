@@ -132,5 +132,5 @@ Continue to xref:get-started.adoc[].
 
 == See Also
 
-* xref:partner-manager-architecture.adoc[]
-* xref:setup.adoc[]
+* xref:partner-manager-architecture.adoc[Partner Manager Architecture]
+* xref:setup.adoc[Anypoint Partner Manager Setup]

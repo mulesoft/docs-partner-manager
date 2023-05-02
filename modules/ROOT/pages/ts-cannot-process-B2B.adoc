@@ -57,7 +57,7 @@ Verify that your message flow configuration is compatible with that of your part
 
 ** The appropriate document type (such as X12, version - 4010, or message type - 850) is configured.
 
-** Verify that you have the appropriate acknowledgment configuration.
+** Verify that you have the appropriate acknowledgement configuration.
 
 ** Verify that you have an appropriate DataWeave map in the transformation section.
 
@@ -73,7 +73,7 @@ NOTE: It can take up to five minutes for your most recent changes to be effectiv
 
 Verify that your B2B integration apps are active.
 
-. From Anypoint platform, select Anypoint Runtime Manager and *Applications*.
+. From Anypoint Platform, select Anypoint Runtime Manager and *Applications*.
 
 . Verify that the B2B apps on Mule are active by looking for a status of `started`. The list of apps includes:
 
@@ -89,7 +89,7 @@ The names of these apps are prefaced with inbound-
 
 The names of these apps are prefaced with outbound-
 
-* Possibly one or more acknowledgment apps.
+* Possibly one or more acknowledgement apps.
 
 The names of these apps are prefaced with ack-
 
@@ -108,6 +108,6 @@ Consider the following when performing a delete:
 
 ** If you delete the `DocumentProcessingService` or the `APIReplicationService`, deploying any flow results in the redeployment of those apps.
 
-** If you delete any of the inbound and/or outbound and/or ack apps, you have to redeploy the specific flow corresponding to the deleted apps.
+** If you delete any of the inbound, outbound, or ack apps, you must redeploy the specific flow corresponding to the deleted apps.
 
-If you can't access the Support Portal, contact your Customer Success Manager or MuleSoft Account Management team for assistance.
+If you can't access the Support Portal, contact your Customer Success Manager or MuleSoft Account Management team for help.
