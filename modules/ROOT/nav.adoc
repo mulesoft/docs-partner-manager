@@ -1,5 +1,6 @@
 .xref:index.adoc[Anypoint Partner Manager]
 * xref:index.adoc[Anypoint Partner Manager Overview]
+* xref:partner-manager-release-notes.adoc[]
 * xref:get-started.adoc[Getting Started with Partner Manager]
 * xref:partner-manager-architecture.adoc[Partner Manager Architecture]
 * xref:setup.adoc[Setting up the Partner Manager Environment]
