@@ -2,7 +2,26 @@
 
 The Source at Host message type defines the way in which your backend applications transform outbound transactions and send them to your organization.
 
-Use the following settings to define JSON or XML settings for the Source at Host message type:
+You can define the CSV, JSON, or XML format for the Source at Host message type.
+
+== CSV
+
+Use the following settings to define CSV as the format for the Source at Host message type:
+
+[%header%autowidth.spread]
+|===
+| Setting | Description | Default | Required
+| Format | Format of the message. Allowed value is `CSV`.| | Yes
+| Separator character | Character that separates values in the file. | , |Yes
+| Quote character | Character used as a quote character in the file.  | "" |Yes 
+| Escape character | Character used as an escape character in the file. | \ | Yes 
+| Header line | When selected, Partner Manager skips the header row when it processes a CSV file. | Yes |
+| Ignore empty line | When selected, Partner Manager ignores empty lines when it processes a CSV file. | Yes |
+|===
+
+== JSON or XML
+
+Use the following settings to define JSON or XML as the format for the Source at Host message type:
 
 [%header%autowidth.spread]
 |===

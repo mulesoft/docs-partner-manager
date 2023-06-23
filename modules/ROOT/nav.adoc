@@ -75,6 +75,7 @@
       *** xref:create-map-json-xml-to-outbound-x12.adoc[Creating a Translation Map For XML or JSON to Outbound EDI X12]
 * xref:partner-manager-administration.adoc[Partner Manager Administration]
  ** xref:activity-tracking.adoc[Tracking Transmissions]
+ ** xref:replay-inbound-transmissions[Replaying Inbound Transmissions]
  ** xref:activity-message-tracking.adoc[Tracking Individual Messages]
  ** xref:edi-ack-reconciliation.adoc[EDI Acknowledgment Reconciliation]
  ** xref:upgrade-message-flows.adoc[Upgrading Message Flow Runtime Templates]

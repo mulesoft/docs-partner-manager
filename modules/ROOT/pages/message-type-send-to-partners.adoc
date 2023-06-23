@@ -1,10 +1,25 @@
 = Send to Partners Message Type Settings
 
-The Send to Partners message type defines the way in which Anypoint Partner Manager transforms the outbound transactions sent from your organization to your partner. These transactions typically follow EDIFACT, JSON, X12, or XML standards.
+The Send to Partners message type defines the way in which Anypoint Partner Manager transforms the outbound transactions sent from your organization to your partner. You can define the CSV, EDIFACT, JSON, X12, or XML format for a Send to Partners message type..
+
+== CSV
+
+Use the following settings to define CSV as the format for the Send to Partners message type:
+
+[%header%autowidth.spread]
+|===
+| Setting | Description | Default | Required
+| Format | Format of the message. Allowed value is `CSV`.| | Yes
+| Separator character | Character that separates values in the file. | , |Yes
+| Quote character | Character used as a quote character in the file.  | "" |Yes 
+| Escape character | Character used as an escape character in the file. | \ | Yes 
+| Header line | When selected, Partner Manager skips the header row when it processes a CSV file. | Yes |
+| Ignore empty line | When selected, Partner Manager ignores empty lines when it processes a CSV file. | Yes |
+|===
 
 == EDIFACT
 
-Use the following settings to define EDIFACT as the protocol for the Send to Partners message type:
+Use the following settings to define EDIFACT as the format for the Send to Partners message type:
 
 [%header%autowidth.spread]
 |===
@@ -30,7 +45,7 @@ When using a customized EDI schema, you can assign a custom name to the message 
 
 == JSON or XML
 
-Use the following settings to define JSON or XML as the protocol for the Send to Partners message type:
+Use the following settings to define JSON or XML as the format for the Send to Partners message type:
 
 [%header%autowidth.spread]
 |===
@@ -43,7 +58,7 @@ Use the following settings to define JSON or XML as the protocol for the Send to
 
 == X12
 
-Use the following settings to define X12 as the protocol for the Send to Partners message type:
+Use the following settings to define X12 as the format for the Send to Partners message type:
 
 [%header%autowidth.spread]
 |===

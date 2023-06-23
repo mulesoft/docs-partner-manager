@@ -50,7 +50,7 @@ The AS2 identifier and certificate of the selected third-party connection are us
 [[source-message-type]]
 == Configure the Source Message Type
 
-The source message type (Receive from Partners message type) in an inbound message flow defines the structure of the messages that Partner Manager receives from a partner or third-party connection. Partner Manager supports the JSON, EDIFACT, X12, and XML formats for source message types in an inbound message flow.
+The source message type (Receive from Partners message type) in an inbound message flow defines the structure of the messages that Partner Manager receives from a partner or third-party connection. Partner Manager supports the CSV, JSON, EDIFACT, X12, XML formats for source message types in an inbound message flow.
 
 To configure the source message type:
 

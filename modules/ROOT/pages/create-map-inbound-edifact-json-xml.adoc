@@ -8,7 +8,7 @@ To use the template to create the mapping:
 
 . Create a project in Studio based on the template.
 . Set the source EDIFACT message type.
-. Set the Target JSON or XML Message Type
+. Set the target JSON, or CSV message type.
 . Test the map locally.
 
 [[edifact-create-inbound-project]]
