@@ -27,7 +27,7 @@ If you enable one of these options, either select the partner endpoint to which 
 
 == Validation Settings
 
-Select one or more of the following options to ensure that all EDIFACT messages received from the trading partner meet validation rules:
+Select one or more of the following options to ensure that all EDIFACT messages received from the partner meet validation rules:
 
 [%header%autowidth.spread]
 |===

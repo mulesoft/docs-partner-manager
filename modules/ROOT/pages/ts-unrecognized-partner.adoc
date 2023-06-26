@@ -27,9 +27,9 @@ This information appears in the Activity section when one of the following occur
 
 Verify partner and host identifiers.
 
-=== Verify Trading Partner's Identifiers
+=== Verify partner's Identifiers
 
-Verify that your trading partner has the appropriate identifiers configured as needed to support the transmission.
+Verify that your partner has the appropriate identifiers configured as needed to support the transmission.
 
 . From within your Anypoint Partner Manager, Sandbox or Production environment select *Partners* <name of your specific partner related to this transmission>.
 

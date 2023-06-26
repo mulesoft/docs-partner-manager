@@ -31,7 +31,7 @@ a|The following Qualifier types are available with Anypoint Partner Manager:
 |Yes
 
 |Identifier value
-|EDI X12-ISA ID for your trading partner; can be up to 15 characters. Your trading partner should supply you with the proper EDI X12 Interchange Sender and Receiver IDs.
+|EDI X12-ISA ID for your partner; can be up to 15 characters. Your partner should supply you with the proper EDI X12 Interchange Sender and Receiver IDs.
 
 |Yes +
 
@@ -46,7 +46,7 @@ Refer to this information specifically for using GS with X12.
 |Setting |Description |Required
 
 |Identifier Value
-|EDI X12-GS ID for your trading partner; can be up to 15 characters. Your trading partner should supply you with the proper EDI X12 Group Sender/Receiver ID.
+|EDI X12-GS ID for your partner; can be up to 15 characters. Your partner should supply you with the proper EDI X12 Group Sender/Receiver ID.
 
 |Yes +
 
@@ -61,7 +61,7 @@ Refer to this information specifically for using the DUNS number as an identifie
 |Setting |Description |Required
 
 |Identifier Value
-|The DUNS number for your trading partner. The DUNS number is a nine-digit number that your trading partner needs to supply you with that corresponds to the Sender/Receiver ID.
+|The DUNS number for your partner. The DUNS number is a nine-digit number that your partner needs to supply you with that corresponds to the Sender/Receiver ID.
 
 |Yes +
 
@@ -69,14 +69,14 @@ Refer to this information specifically for using the DUNS number as an identifie
 
 == AS2 Identity
 
-Refer to this information specifically for using the AS2 identity to identify a trading partner.
+Refer to this information specifically for using the AS2 identity to identify a partner.
 
 [%header%autowidth.spread]
 |===
 |Setting |Description |Required
 
 |Identifier Value
-|The AS2 identity for your trading partner. Your trading partner should supply you with corresponding to the Sender / Receiver AS2 identity.
+|The AS2 identity for your partner. Your partner should supply you with corresponding to the Sender / Receiver AS2 identity.
 
 |Yes +
 

@@ -71,7 +71,11 @@ In the translation map that you develop for an outbound message flow, you can ac
 
 The target message type (Send to Partners message type) in an outbound message flow defines the structure of the messages that Partner Manager sends to the partner, either directly or via a third-party connection. Partner Manager supports the JSON, EDIFACT, X12, and XML formats for target message types.
 
-For the EDIFACT and X12 message types, configuring the target message type also involves configuring acknowledgements (optional), creating custom EDIFACT settings (optional), and selecting EDIFACT identifiers to use for routing the outbound messages.
+For the EDIFACT and X12 message types, configuring the target message type also involves the following:
+
+* Configuring acknowledgements (optional)
+* Creating custom EDIFACT settings (optional)
+* Selecting EDIFACT identifiers to use for routing the outbound messages
 
 To configure the target message type:
 
@@ -96,7 +100,7 @@ To configure acknowledgement settings for the outbound messages that use the mes
 . Do either of the following:
 * Select an existing endpoint at which to receive your partner's acknowledgement transaction.
 * Click *New* to create a new endpoint, as described in xref:create-endpoint.adoc[Creating Endpoints].
-. In the *Mark overdue after* field, accept the default value of *24 Hours* or configure when you want the outbound transaction to be marked as overdue for an acknowledgement, according to the SLAs you have with your trading partner.
+. In the *Mark overdue after* field, accept the default value of *24 Hours* or configure when you want the outbound transaction to be marked as overdue for an acknowledgement, according to the SLAs you have with your partner.
 
 === Optionally Apply Custom Validation Settings to EDIFACT and X12 Endpoints
 

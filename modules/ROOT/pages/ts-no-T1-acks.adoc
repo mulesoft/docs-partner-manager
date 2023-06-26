@@ -6,13 +6,13 @@ endif::[]
 
 
 Anypoint Partner Manager sends TA1 acknowledgements for a received transmission if configured to do so.
-Your trading partner might contact you to tell you that they are not receiving TA1 acknowledgements.
+Your partner might contact you to tell you that they are not receiving TA1 acknowledgements.
 
 == Causes
 
 Any of the following can lead to this type of error:
 
-* The X12 settings for your trading partners are not configured to send TA1’s back to the partner.
+* The X12 settings for your partners are not configured to send TA1’s back to the partner.
 
 * The endpoint to which you are sending that TA1’s back may be incorrectly configured.
 

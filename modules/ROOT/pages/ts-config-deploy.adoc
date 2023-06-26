@@ -4,5 +4,5 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-If you encounter errors as you set up your trading partners and message flows,
+If you encounter errors as you set up your partners and message flows,
 the messages and solutions described here can help you resolve your issue.

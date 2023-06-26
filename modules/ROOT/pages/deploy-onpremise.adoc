@@ -22,7 +22,7 @@ See the Partner Manager release notes for information about the Mule version tha
 . After you install Mule, navigate to the `wrapper.conf` file, which is located in `$MULE_HOME/conf/`.
 . In the `wrapper.conf` file, add the required parameters and adjust the memory and heap size configuration values for your environment.
 +
-If you are unsure about the Mule capacity you need to manage your B2B transactions, contact your MuleSoft account representative for assistance.
+If you are unsure about the Mule capacity you need to manage your B2B transactions, contact your MuleSoft account representative for help.
 +
 These are example values:
 +

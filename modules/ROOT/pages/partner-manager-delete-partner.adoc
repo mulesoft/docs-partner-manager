@@ -2,7 +2,7 @@
 
 If you are no longer trading with a partner, you can delete the partner.
 
-When you delete a partner, the partner is removed from the Partner Manager's *Partners* page, and all the partner's data is deleted, except for activities for the partner that occurred before the partner was deleted.
+When you delete a partner, the partner is removed from the Partner Manager's *Partners* page, and all of the partner's data is deleted, except for partner activities that occurred before the partner was deleted.
 
 Before you delete a third-party connection in an on-premises deployment, ensure that the on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager named `B2BserverGroup` are active and running. To obtain these statuses, contact your B2B System Administrator. You can check the status of the host servers in Anypoint Runtime Manager.
 

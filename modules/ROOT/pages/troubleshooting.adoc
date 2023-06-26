@@ -10,6 +10,5 @@ including but not limited to Mule, Anypoint Runtime Manager, secrets manager, an
 Because Anypoint Partner Manager is used with other technologies,
 troubleshooting an issue with Partner Manager often involves troubleshooting these other technologies as well.
 
-Look for solutions in the documentation about connectivity and related errors,
-or use the documentation page's navigation pane to locate troubleshooting information specific to either
+Look for solutions in the documentation about connectivity and related errors or use the documentation page's navigation pane to locate troubleshooting information specific to either
 Anypoint Partner Manager or its related technologies.

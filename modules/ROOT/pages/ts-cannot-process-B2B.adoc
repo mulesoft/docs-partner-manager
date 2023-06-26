@@ -49,9 +49,9 @@ Verify that your message flow configuration is compatible with that of your part
 
 . After you locate the message flow, click on the message flow card to open it up.
 
-. From the message flow configurator, verify that the following information is in accordance with your agreement with your trading partner:
+. From the message flow configurator, verify that the following information is in accordance with your agreement with your partner:
 
-** The correct identifiers are associated with the trading partner.
+** The correct identifiers are associated with the partner.
 
 ** The appropriate receive endpoint is configured in the flow.
 

@@ -14,7 +14,7 @@ Accessing transmission IDs in the translation maps enables end-to-end transmissi
 +
 * Mapping attributes to pass them to the back end
 +
-For example, if the back end must see the source filename or a specific HTTP header, you can access the filename or HTTP header and map the values to the translated message payload fields.
+For example, if the backend must see the source filename or a specific HTTP header, you can access the filename or HTTP header and map the values to the translated message payload fields.
 +
 * Applying mapping logic based either on a filename part or pattern within the transformation
 +
