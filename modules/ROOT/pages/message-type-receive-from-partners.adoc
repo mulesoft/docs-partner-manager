@@ -1,21 +1,12 @@
 = Receive from Partners Message Type Settings
 
+:message-type: Receive from Partners
+
 The Receive from Partners message type defines the way in which Anypoint Partner Manager transforms the inbound transactions sent from your partner to your organization. You can define the CSV, JSON, EDIFACT, X12, or XML format for the Receive from Partners message type.
 
 == CSV
 
-Use the following settings to define CSV as the format for the Receive from Partners message type:
-
-[%header%autowidth.spread]
-|===
-| Setting | Description | Default | Required
-| Format | Format of the message. Allowed value is `CSV`.| | Yes
-| Separator character | Character that separates values in the file. | , |Yes
-| Quote character | Character used as a quote character in the file.  | "" |Yes 
-| Escape character | Character used as an escape character in the file. | \ | Yes 
-| Header line | When selected, Partner Manager skips the header row when it processes a CSV file. | Yes |
-| Ignore empty line | When selected, Partner Manager ignores empty lines when it processes a CSV file. | Yes |
-|===
+include::partial$csv-partial.adoc[]
 
 == EDIFACT
 
