@@ -1,8 +1,8 @@
-= Creating a Translation Map For XML or JSON to Outbound EDIFACT
+= Creating a Translation Map to Map an Application Format to Outbound EDIFACT
 
-Use the MuleSoft template named `Template to create inbound and outbound EDIFACT message transformation` to help you map application messages from canonical formats such as XML or JSON to outbound EDI EDIFACT messages to send to your partners.
+Use the MuleSoft template named `Template to create inbound and outbound EDIFACT message transformation` to help you map application messages from canonical formats such as CSV, XML, or JSON to outbound EDIFACT messages to send to your partners.
 
-This template uses DataWeave in Anypoint Studio to create the mapping between the XML or JSON format and the EDIFACT format. To use the template to create the mapping:
+This template uses DataWeave in Anypoint Studio to create the mapping between the CSV, XML, or JSON format and the EDIFACT format. To use the template to create the mapping:
 
 . Create a project in Studio based on the template.
 . Set the source message type.
@@ -24,7 +24,7 @@ Create a template project in Anypoint Studio and import a DataWeave map template
 
 == Set the Source Message Type
 
-Set the source message type to define the metadata structure of your application message, such as XML or JSON:
+Set the source message type to define the metadata structure of your application message, such as CSV, XML, or JSON:
 
 . Copy the schema file of your target application message type into the `<Project-name>/src/main/resources` folder in the template project.
 . Select the *02-outbound-edifact-transform.xml* flow.
@@ -36,8 +36,8 @@ image::pm-outbound-map-1.png[Define Metadata link]
 . Click *Add*.
 . In *Type id*, enter a new message type ID, for example, `outbound-po-ack`.
 . Click *Create type*.
-. In the *Select metadata type* window, from the *Type* field, select `JSON` or `XML`.
-. Browse to the location of the JSON or XML schema file you imported in step 1 and click *Select*.
+. In the *Select metadata type* window, from the *Type* field, select `CSV`, `JSON`, or `XML`.
+. Browse to the location of the CSV, JSON, or XML schema file you imported in step 1 and click *Select*.
 
 == Set the Target EDIFACT Message Type
 
@@ -51,7 +51,7 @@ The template `02-outbound-edifact-transform.xml` is configured with the EDIFACT 
 +
 For example, set *Value* to `/edifact/d96a/INVOIC.esl`, to map to a `D96A Invoice` message.
 +
-The new EDIFACT message structure displays in the output pane, and your application message structure (JSON or XML) displays in the input pane:
+The new EDIFACT message structure displays in the output pane, and your application message structure (CSV, JSON, or XML) displays in the input pane:
 +
 image::pm-outbound-map-2.png[EDIFACT and application message structures]
 +
@@ -69,7 +69,7 @@ The `Template to create inbound and outbound EDIFACT message transformation` con
 Follow these steps to test the map locally in Anypoint Studio:
 
 . In *Package Explorer*, right-click on the project, and click *Run > Run as Mule application*.
-. Use a REST client to post a JSON or an XML payload to `+http://localhost:8081/edifact/outbound+`
+. Use a REST client to post a CSV, JSON, or XML payload to `+http://localhost:8081/edifact/outbound+`
 +
 The application returns the transformed EDIFACT transaction.
 +

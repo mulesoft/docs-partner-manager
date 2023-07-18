@@ -2,7 +2,7 @@
 
 :message-type: Receive from Partners
 
-The Receive from Partners message type defines the way in which Anypoint Partner Manager transforms the inbound transactions sent from your partner to your organization. You can define the CSV, JSON, EDIFACT, X12, or XML format for the Receive from Partners message type.
+The Receive from Partners message type defines the way in which Anypoint Partner Manager transforms the inbound transactions sent from your partner to your organization. You can define the CSV, EDIFACT, JSON, X12, or XML format for the Receive from Partners message type.
 
 == CSV
 

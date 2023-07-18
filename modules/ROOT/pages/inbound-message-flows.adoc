@@ -21,6 +21,7 @@ image::pm-inbound-message-flow.png[Inbound message flow]
 * SFTP
 
 |Source message type |Message type of the received message payload a|
+* CSV
 * EDIFACT
 * JSON
 * X12

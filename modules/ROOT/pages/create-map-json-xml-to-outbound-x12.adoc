@@ -1,6 +1,6 @@
-= Creating a Translation Map For XML or JSON to Outbound X12
+= Creating a Translation Map to Map an Application Format to Outbound X12
 
-Create a template project in Anypoint Studio to import a template that creates a DataWeave map to transform application formats such as XML and JSON to outbound EDI X12 transactions, then test the map locally.
+Create a template project in Anypoint Studio to import a template that creates a DataWeave map to transform application formats such as CSV, JSON, and XMLto outbound X12 transactions, then test the map locally.
 
 == Create a New Project From a Template
 
@@ -17,7 +17,7 @@ You can also download the template to map inbound X12 transactions to the applic
 
 == Set the Source Message Type
 
-To set the source JSON or XML message type for the map:
+To set the source CSV, JSON, or XML message type for the map:
 
 . Copy the schema file of your target application message type into the `<Project-name>/src/main/resources` folder in the template project.
 . From the *Mule Palette* view, click *Transform Message* and drag it on to the Studio canvas.
@@ -28,8 +28,8 @@ image::partner-manager-outbound-map-1.png[Define Metadata link]
 . Click *Add*.
 . In *Type id*, enter a new message type ID, for example, `enterprise-outbound-purchase-order`.
 . Click *Create type*.
-. In the *Select metadata type* dialog window, from the *Type* drop-down menu, select *JSON* or *XML*.
-. Browse to the location of the JSON or XML schema file you imported in Step 1 and click *Select*.
+. In the *Select metadata type* dialog window, from the *Type* drop-down menu, select *CSV*, *JSON*, or *XML*.
+. Browse to the location of the CSV, JSON, or XML schema file you imported in Step 1 and click *Select*.
 
 == Set the Target X12 Message Type
 
@@ -52,7 +52,7 @@ image::xml-to-outbound-x12-edit-schema.png[X12 EDI Config dialog]
 +
 . Change the schema value to the version and transaction set you want to map from, for example, set the value to `/x12/004010/204.esl`, if you want to map to a 4010-204 Load tender transaction.
 +
-The application message structure (JSON or XML) displays in the input pane of the Transform Message graphical view, and the X12 transaction set structure displays in the output pane of this view.
+The application message structure (CSV, JSON, or XML) displays in the input pane of the Transform Message graphical view, and the X12 transaction set structure displays in the output pane of this view.
 . Click *Finish*, then click *OK*. +
 You can now begin mapping from the input to the output.
 

@@ -16,6 +16,7 @@ image::pm-outbound-message-flow.png[Outbound message flow]
 * SFTP
 
 |Source message type |Message type of the message received from the backend a|
+* CSV 
 * JSON
 * XML
 
@@ -24,6 +25,7 @@ image::pm-outbound-message-flow.png[Outbound message flow]
 |Target message type |
 Message type to which to transform the input message
 a|
+* CSV
 * EDIFACT
 * JSON
 * X12

@@ -34,7 +34,7 @@ To configure the receiving endpoint:
 
 The source message type (Source at Host message type) in an outbound message flow defines the structure of the messages that Partner Manager receives from the backend applications. Partner Manager translates these messages to a configured Send to Partners message type, and then sends them to your partners, either directly or through a third-party connection.
 
-Partner Manager supports the JSON and XML source message types in outbound message flows.
+Partner Manager supports the CSV, JSON, and XML source message types in outbound message flows.
 
 To create the source message type:
 
@@ -69,7 +69,7 @@ In the translation map that you develop for an outbound message flow, you can ac
 [[send-to-partner-message-type]]
 == Configure the Target Message Type
 
-The target message type (Send to Partners message type) in an outbound message flow defines the structure of the messages that Partner Manager sends to the partner, either directly or via a third-party connection. Partner Manager supports the JSON, EDIFACT, X12, and XML formats for target message types.
+The target message type (Send to Partners message type) in an outbound message flow defines the structure of the messages that Partner Manager sends to the partner, either directly or via a third-party connection. Partner Manager supports the CSV, EDIFACT, JSON, X12, and XML formats for target message types.
 
 For the EDIFACT and X12 message types, configuring the target message type also involves the following:
 
