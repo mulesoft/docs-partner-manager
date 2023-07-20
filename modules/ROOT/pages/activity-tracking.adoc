@@ -28,6 +28,7 @@ You can retrieve up to one week's worth of messages.
 * Partner message type, such as `X12 - 850`
 * Host message type, such as `JSON host-purchase-order`
 * Transmission ID
+* Whether transmissions are replays
 +
 Partner Manager returns a list of transmissions that meet your search criteria along with related information, such as the date the transmission was received, number of messages in the transmission, message type, control number, and acknowledgement status.
 +
@@ -43,17 +44,23 @@ The additional details for an inbound transmission include the following informa
 * Transmission status (a green checkmark for success or a red exclamation point for failure)
 * Transmission ID
 * Control number associated with the transmitted file, if available
-* Name of the receiving (Receive from Partners) endpoint
-* Date and time when the transmission was received
-* Message type, such as `mythical-po-ack`
+* Information about the message source, including the date and time that the message was received; control number; name and protocol of the receiving (Receive from Partners) endpoint; and message type, such as `mythical-po-ack`
 * Number of received messages for each message type in the transmitted file
+* Custom message attributes, if any.
+
+If the transmission is a replay, the details also include a link to the original (replayed) transmission.
+
+If this transmission was replayed, the details also include the date and time of the most recent replay.
 
 Take any of the following actions to view and download additional information about the inbound transmission:
 
 |===
 |Action |Steps
 
-|View the messages in the transaction.
+| View the original transmission if the message is a replay.
+| Click the link in the *Original Transmission Id field*,
+
+|View the messages in the transmission.
 |Click *messages*. 
 
 |View and download the transmission payload received from the partner.
@@ -75,7 +82,7 @@ a|
 |Click the link in the *Processed message through message flows* field to view the message flow diagram.
 {sp} +
 {sp}+
-From the message flow diagram, you can expand the message flow sections to view additional information, including information about the receiving (Receive from Partners) endpoint, DataWeave translation map, target message type, and target message type and endpoint.
+From the message flow diagram, you can expand the message flow sections to view additional information, including information about the receiving (Receive from Partners) endpoint, source message, DataWeave translation map, and target message type and endpoint.
 |===
 
 == View Details for an Outbound Transmission
@@ -83,6 +90,7 @@ From the message flow diagram, you can expand the message flow sections to view 
 The details for an outbound transmission include the following information:
 
 * Transmission status (a green checkmark for success or a red exclamation point for failure)
+* Message ID
 * Transmission ID
 * Date and time when the file was sent
 * Control number associated with the transmitted file, if one exists
@@ -91,11 +99,17 @@ The details for an outbound transmission include the following information:
 * Name of the transmitted file
 * Number of messages in the transmission
 
+If this transmission is a replay, the details also include the transmission ID of the original (replayed) transmission.
+
+If this transmission was replayed, the details also include the date and time of the most recent replay.
+
 Take any of the following actions to view and download additional information about the outbound transmission:
 
 |===
 |Action |Steps
 
+| View the original transmission if the message is a replay.
+| Click the link in the *Original Transmission Id field*,
 |View information about the sending (Send to Partner) endpoint. | In the *Summary* section, click the link in the *Endpoint* field.
 |View and download the transmission payload.
 a|
@@ -139,6 +153,10 @@ a|
 . In the *Sent transmission* field, click *View payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
+| View the original transmission if the current transmission is a replay. 
+a| 
+. In the message flow diagram, expand the *Last replayed* section.
+. Click the link in this section.
 |===
 
 == See Also

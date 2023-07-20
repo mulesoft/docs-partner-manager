@@ -1,21 +1,14 @@
-= Replaying Inbound Transmissions
+= Replaying Transmissions
 
-Inbound transmissions can fail due to data validation, mapping, or connectivity issues. If an inbound transmission fails after a Partner Manager inbound endpoint secures it, you can replay the transmission. 
+Replaying a transmission regenerates the transmission source and reprocesses the original transmission as a new transmission. You can replay both inbound and outbound transmissions.
 
-You can also replay transmissions that processed successfully. You might want to do this if: *(Do any of these apply to outbound transmissions)*
-
-* The translated payload is missing a field. 
-+
-In this scenario, you can upload a new map and replay the original transmission so that it goes through the updated map.
-* The target system or partner that received the original translated payloads lost data due to a system issue and requested that it be resent. 
-
-Replaying a transmission regenerates the source and reprocesses the original transaction as a new transaction. The following rules apply: *(Which of these rules also apply to oubound transmissions?)*
+The following rules apply to replaying transmissions:
 
 * You can replay any original transmission that has a status of `Failed` or `Delivered`, except for inbound transmissions that failed AS2 security validation.
 * The maximum number of transmissions that you can replay in a single request is 100. 
 * Partner Manager links replayed transmission instances to the original transmission record.
 +
-* When a transmission is replayed. Partner Manager sets its status to `Replaying`. Once the replay action completes, Partner Manager sets its status to `Replayed`.
+* When a transmission is replayed. Partner Manager sets its transmission status to `Replaying`. Once the replay action completes, Partner Manager shows the date of the last replay.
 +
 To check the status of a replayed transmission, refresh the *Activity* screen and locate the transmission.
 +
@@ -26,50 +19,65 @@ If Partner Manager doesn't find an active message flow for the transmission or m
 * Partner Manager doesn't check for duplicate control numbers when it replays inbound transmissions.
 * Partner Manager sends acknowledgments for replayed inbound transmissions only if the acknowledgement rules changed in the message flow definition from the previous transmission or if the acknowledgment outcome is different from the previous attempt.
 
-== Replaying Outbound Transmissions
+== Replay Inbound Transmissions
 
-Outbound transmissions can fail due to non-existing message partner or message flow configurations:
+Inbound transmissions can fail due to data validation, mapping, or connectivity issues. If an inbound transmission fails after a Partner Manager inbound endpoint secures it, you can replay the transmission. 
 
-* You can replay any original transmission that has a status of `Failed` or `Delivered`.
+You can also replay inbound transmissions that processed successfully. You might want to do this if:
 
-== Replaying Inbound Transmissions from the Transmission List View
+* The translated payload is missing a field. 
++
+In this scenario, you can upload a new translation map and replay the original transmission so that it goes through the updated map.
+* The target system or partner that received the original translated payloads lost data due to a system issue and requested that it be resent. 
+
+== Replay Outbound Transmissions
+
+Outbound transmissions can fail due to a non-existing message partner or message flow configuration. 
+
+You can also replay transmissions that processed successfully. You might want to do this if:
+
+* The translated payload is missing a field. 
++
+In this scenario, you can upload a new translation map and replay the original transmission so that it goes through the updated map.
+
+* *Vijay, can you fill in the other reasons for replaying successful outbound transmissions?*
+
+== Replay Transmissions from the Transmission List View
 
 You can replay one or more inbound transmissions from the transmissions list view:
 
 . In the navigation menu, select *Activity*.
-. In the *Messages* field Select *Transmissions*.
-. To replay one transaction:
+. Select *Transmissions*.
+. To replay one transmission:
 .. Locate the transmission.
 .. On the transmission action menu (*...*), click *Replay*.
 . To replay multiple transactions:
 .. Locate and then select the transmissions.
 .. Click *Replay*. 
 
-== Replaying an Inbound Transmission from the Transmission Details View
+== Replay a Transmission from the Transmission Details View
 
-You can replay an inbound transmission from the transmissions details view:
+You can replay a transmission from the transmissions details view:
 
 . In the navigation menu, select *Activity*.
-. In the *Messages* field Select *Transmissions*.
+. In the *Messages* field select *Transmissions*.
 . Locate the transmission to replay. 
 . Click the transmission to bring up the transmission details view.
 . Click *Replay*.
 
-== Viewing a Transmission's Replay History
+== View a Transmission's Replay History
 
-The replay history for a transmission shows the date for each replay and enables you to 
+The replay history for a transmission shows the date for each replay and provides links to the replays.
 
 To view a transmission's replay history:
 
 . In the transmissions list view, locate the transmission for which you want to see the replay history.
 . Click the transmission to bring up the transmission details view.
-. Click the last replayed transmission to see the following information about all replays for the located transmission:
-** ID of the original transmission
-** Replay date
-** Replay status (a green checkmark for successful relay and a red exclamation point for a failed replay)
-. Optionally, click the ID of the original transmission to see...???
+. Click the last replayed date to see the following information about all replays of the transmission:
+** ID of the repayed transmissions
+** Replay dates
+** Replay status (a green checkmark for successful replay and a red exclamation point for a failed replay)
 
 == See Also
 
-xref:activity-tracking[]
-xref:activity-message-tracking[]
+* xref:activity-tracking[]
