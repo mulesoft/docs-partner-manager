@@ -6,7 +6,7 @@ The Send to Partners message type defines the way in which Anypoint Partner Mana
 
 == CSV
 
-include::partial$csv-partial.adoc[]
+include::partial$csv-outbound-partial.adoc[]
 
 == EDIFACT
 

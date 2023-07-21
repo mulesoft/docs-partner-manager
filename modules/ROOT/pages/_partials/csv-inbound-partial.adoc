@@ -9,6 +9,6 @@ Use the following settings to define CSV as the format for the {message-type} me
 | Separator character | Character that separates values in the file. | , |Yes
 | Quote character | Character used as a quote character in the file.  | "" |Yes 
 | Escape character | Character used as an escape character in the file. | \ | Yes 
-| Header line | When selected, Partner Manager skips the header row when it processes a CSV file. | Yes |
-| Ignore empty line | When selected, Partner Manager ignores empty lines when it processes a CSV file. | Yes |
+| Header line | When selected, Partner Manager skips the header row when it processes a CSV file. | Selected |
+| Ignore empty line | When selected, Partner Manager ignores empty lines when it processes a CSV file. | Selected |         
 |===

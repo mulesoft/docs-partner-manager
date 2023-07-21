@@ -6,7 +6,7 @@ The Receive from Partners message type defines the way in which Anypoint Partner
 
 == CSV
 
-include::partial$csv-partial.adoc[]
+include::partial$csv-inbound-partial.adoc[]
 
 == EDIFACT
 

@@ -1,5 +1,14 @@
 = Replaying Transmissions
 
+Transmissions can fail due to data validation, mapping, or connectivity issues. If a transmission fails after an Anypoint Partner Manager endpoint secures it, you can replay the transmission.
+
+You can also replay transmissions that processed successfully. You might want to do this if:
+
+* The translated payload is missing a field. 
++
+In this scenario, you can upload a new translation map and replay the original transmission so that it goes through the updated map.
+* The target system or partner that received the original translated payloads lost data due to a system issue and requested that it be resent. 
+
 Replaying a transmission regenerates the transmission source and reprocesses the original transmission as a new transmission. You can replay both inbound and outbound transmissions.
 
 The following rules apply to replaying transmissions:
@@ -19,32 +28,9 @@ If Partner Manager doesn't find an active message flow for the transmission or m
 * Partner Manager doesn't check for duplicate control numbers when it replays inbound transmissions.
 * Partner Manager sends acknowledgments for replayed inbound transmissions only if the acknowledgement rules changed in the message flow definition from the previous transmission or if the acknowledgment outcome is different from the previous attempt.
 
-== Replay Inbound Transmissions
-
-Inbound transmissions can fail due to data validation, mapping, or connectivity issues. If an inbound transmission fails after a Partner Manager inbound endpoint secures it, you can replay the transmission. 
-
-You can also replay inbound transmissions that processed successfully. You might want to do this if:
-
-* The translated payload is missing a field. 
-+
-In this scenario, you can upload a new translation map and replay the original transmission so that it goes through the updated map.
-* The target system or partner that received the original translated payloads lost data due to a system issue and requested that it be resent. 
-
-== Replay Outbound Transmissions
-
-Outbound transmissions can fail due to a non-existing message partner or message flow configuration. 
-
-You can also replay transmissions that processed successfully. You might want to do this if:
-
-* The translated payload is missing a field. 
-+
-In this scenario, you can upload a new translation map and replay the original transmission so that it goes through the updated map.
-
-* *Vijay, can you fill in the other reasons for replaying successful outbound transmissions?*
-
 == Replay Transmissions from the Transmission List View
 
-You can replay one or more inbound transmissions from the transmissions list view:
+You can replay one or more transmissions from the transmissions list view:
 
 . In the navigation menu, select *Activity*.
 . Select *Transmissions*.
@@ -60,7 +46,7 @@ You can replay one or more inbound transmissions from the transmissions list vie
 You can replay a transmission from the transmissions details view:
 
 . In the navigation menu, select *Activity*.
-. In the *Messages* field select *Transmissions*.
+. Select *Transmissions*.
 . Locate the transmission to replay. 
 . Click the transmission to bring up the transmission details view.
 . Click *Replay*.
