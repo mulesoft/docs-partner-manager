@@ -20,7 +20,7 @@ The values you configure in the partner's settings page are used by default for 
 You can override the settings you configure at the partner level, with the exception of TA1 and control numbers, or at the message flow level by selecting the *Custom* option while creating an outbound message flow.
 
 [NOTE]
-It can take up to five minutes for your configuration changes to sync with Mule.
+It can take up to five minutes for your changes to take effect on the runtime.
 
 [[general-settings]]
 == General Settings
@@ -113,7 +113,7 @@ To set the control number sequence value to a different number to maintain seque
 . Click *Save*.
 
 [NOTE]
-It can take up to five minutes to apply the change at runtime.
+It can take up to five minutes for the changes to take effect on the runtime.
 
 [[character-set]]
 == Character Set & Separators

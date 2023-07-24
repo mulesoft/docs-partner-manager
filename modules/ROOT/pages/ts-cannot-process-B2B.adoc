@@ -67,7 +67,7 @@ Verify that your message flow configuration is compatible with that of your part
 
 . If you observe a Failed status, try to deploy the message flow to ensure all your configurations have persisted on the Mule apps.
 
-NOTE: It can take up to five minutes for your most recent changes to be effective on the runtime B2B Mule apps.
+NOTE: It can take up to five minutes for your changes to take effect on the runtime.
 
 === Verify B2B Integration Apps
 

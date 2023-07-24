@@ -1,20 +1,25 @@
 = Translation Maps
 
-Anypoint Partner Manager uses Dataweave maps to transform business transactions between your partner’s message formats (EDIFACT or X12) and your organization’s enterprise application message formats (CSV, JSON, or XML).
+Anypoint Partner Manager uses Dataweave translation maps to transform business transactions between your partner’s message formats (CSV, EDIFACT, X12, JSON, or XML) and your organization’s enterprise application message formats (CSV, JSON, or XML).
 
-Use Anypoint Connector for X12 or Anypoint Connector for EDIFACT with DataWeave 2.x to:
+To use a translation map:
 
-* Create translation maps in Anypoint Studio. (*Vijay, the sentence about using the connectors was in this original topic, but I'm not sure if it belongs here.*)
+* Create the map in Anypoint Studio.
 
-* Import the maps to Partner Manager when you configure inbound and outbound message flows.
+* Import the map to Partner Manager when you configure an inbound or outbound message flow.
 
-To start with an example of a translation map, download and then customize the xref:https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/minor/1.0/ [B2B/EDI Order to Cash - Mapping Example] from Exchange. This example inludes the following transformations for inbound flows:
+To start with an example of a translation map, download and then customize the https://mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/minor/1.0/[B2B/EDI: Order to Cash - Mapping Examples^] from Exchange. This example inludes the following transformations for message flows:
 
-* X12 4010 850 to JSON
-* EDIFACT D97A to JSON
-* XML to JSON
-
-*Vijay. Maybe you should include an outbound flow in this example.*
+* Inbound message flows:
+** X12 4010 850 to JSON
+** EDIFACT D97A to JSON
+** CSV to JSON
+** XML to JSON
+* Outbound message flows:
+** JSON to X12 4010 855
+** JSON to EDIFACT D97A
+** JSON to CSV
+** JSON to XML
 
 To customize this example:
 
@@ -39,7 +44,7 @@ To open the `.jar` file:
 To change the message type:
 
 . Click the *Global Elements* tab at the base of the Studio canvas.
-. From *Global Configuration Elements*, select `X12 EDI Config` for a map to use in an inbound message flow or `xxx` for a map to use in an outbound message flow.
+. From *Global Configuration Elements*, select the configuration for the map to use in an inbound or outbound message flow.
 . Click *Edit*.
 . In *Name*, change the name of the configuration to something meaningful.
 . If the message flow uses the EDI, JSON, X12, or XML format:
@@ -47,18 +52,17 @@ To change the message type:
 .. In *Value*, enter the version and transaction set that you want to map to or from. 
 +
 
-For example, set *Value* to `/x12/00501/837.esl` to map to or from a `0051-837` transaction. (*Vijay, is this a realistic example?*)
+For example, set *Value* to `/x12/00501/837.esl` to map to or from a `0051-837` transaction. (*Vijay, is this a realistic example? I am looking for a value that is not in the Order to Cash Mapping example.*)
 . Click *OK*.
 
 == Change the Target Message Type
 
 To change the target message type:
 
-. For all target message types except for CSV, copy the schema file of your target application message type into the `<Project-name>/src/main/resources` folder in the project. *Vijay, what do you do for a CSV file?*
+. For all target message types except for CSV, copy the schema file of your target application message type into the `<Project-name>/src/main/resources` folder in the project. *Is this correct?*
 . Select the *Transform Message* component.
 +
 The new transaction set structure displays in one pane of the Transform Message graphical view, and your application message structure (CSV, JSON, or XML) displays in the other pane of this view.
-* Vijay, do you have to enter the message type somewhere here?*
 . Map the input fields to the output fields.
 
 == Test the Map Locally
@@ -66,14 +70,18 @@ The new transaction set structure displays in one pane of the Transform Message 
 To test the map locally:
 
 . In *Package Explorer*, right-click on the template project, and select *Run > Run as Mule application*.
-. Use a REST client to post a message payload to the URL `+http://localhost:8081/x12/in+`. +
-The application returns the transformed CSV, JSON, or XML.
+. Use a REST client to post a message payload to the URL defined in the global element. 
+*Vijay, is there a better way to describe the URL?*
++
+The application returns the transformed payload.
 . After you verify that the map works correctly, copy the DataWeave map from `src/main/resources/x12/IN-X12-version-transaction-to-applicationmessage.dwl` and rename it to something meaningful, such as `IN-X12-4010-850-to-SAP-purchaseorder.dwl`.
 
 == Import the Map to a Partner Manager Message Flow
 
-When you configure message flows, you can import the `dwl` file to the *Map* section of message flow.
+When you configure a message flow, you can import the `dwl` file to the *Map* section of the message flow.
 
 == See Also
 
-* xref:configure-message-flows.adoc[Create Inbound Message Flows]
+* xref:create-inbound-message-flow.adoc[Create Inbound Message Flows]
+* xref:create-outbound-message-flow.adoc[Create Outbound Message Flows]
+* xref:dataweave::dataweave-quickstart.adoc[]

@@ -66,4 +66,4 @@ To view a transmission's replay history:
 
 == See Also
 
-* xref:activity-tracking[]
+* xref:activity-tracking.adoc[]

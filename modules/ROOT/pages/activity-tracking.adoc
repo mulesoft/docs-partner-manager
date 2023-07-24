@@ -161,6 +161,7 @@ a|
 
 == See Also
 
+* xref:replay-transmissions[Replaying Transmissions]
 * xref:inbound-message-flows.adoc[Inbound Message Flows]
 * xref:outbound-message-flows.adoc[Outbound Message Flows]
 * xref:edi-ack-reconciliation.adoc[EDI Acknowledgment Reconciliation]

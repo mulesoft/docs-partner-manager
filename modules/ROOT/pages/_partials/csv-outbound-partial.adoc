@@ -3,7 +3,7 @@ Use the following settings to define CSV as the format for the {message-type} me
 [%header%autowidth.spread]
 |===
 | Setting | Description | Default | Required
-| Usage | Message usage. Allowed value is {message-type}. | | Yes
+| Usage | Message usage. Allowed value is `{message-type}`. | | Yes
 | Format | Format of the message. Allowed value is `CSV`.| | Yes    
 | Message type identifier | ???      
 |===

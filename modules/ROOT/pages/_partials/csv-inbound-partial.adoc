@@ -5,10 +5,16 @@ Use the following settings to define CSV as the format for the {message-type} me
 [%header%autowidth.spread]
 |===
 | Setting | Description | Default | Required
+| Usage | Message usage. Allowed value is `{message-type}`. | | Yes
 | Format | Format of the message. Allowed value is `CSV`.| | Yes
 | Separator character | Character that separates values in the file. | , |Yes
 | Quote character | Character used as a quote character in the file.  | "" |Yes 
 | Escape character | Character used as an escape character in the file. | \ | Yes 
 | Header line | When selected, Partner Manager skips the header row when it processes a CSV file. | Selected |
-| Ignore empty line | When selected, Partner Manager ignores empty lines when it processes a CSV file. | Selected |         
+| Ignore empty line | When selected, Partner Manager ignores empty lines when it processes a CSV file. | Selected | 
+|Reference identifiers and attributes mapping a| Uploaded DataWeave map that extracts the reference identifiers and custom attributes from the payload received from the partner:
+
+* The extracted reference identifier values are used for dynamic routing into the appropriate message flow.
+* The extracted custom attributes enable you to have visibility into the lifecycle of your B2B workflow. For more information, see xref:use-custom-attributes.adoc[Using Custom Messaging Attributes with Message Types].
+| |No        
 |===

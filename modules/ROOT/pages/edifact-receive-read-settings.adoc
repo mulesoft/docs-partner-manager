@@ -14,7 +14,7 @@ To configure EDIFACT receive settings:
 . Click *Save*.
 
 [NOTE]
-It can take up to five minutes or so for your configuration changes to sync with Mule.
+It can take up to five minutes for your changes take effect on the runtime.
 
 [[ack-settings]]
 == Acknowledgment Settings
