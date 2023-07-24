@@ -2,13 +2,9 @@
 
 Anypoint Partner Manager uses Dataweave translation maps to transform business transactions between your partner’s message formats (CSV, EDIFACT, X12, JSON, or XML) and your organization’s enterprise application message formats (CSV, JSON, or XML).
 
-To use a translation map:
+To use a translation map, create the map in Anypoint Studio and then import the map to Partner Manager when you configure an inbound or outbound message flow.
 
-* Create the map in Anypoint Studio.
-
-* Import the map to Partner Manager when you configure an inbound or outbound message flow.
-
-To start with an example of a translation map, download and then customize the https://mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/minor/1.0/[B2B/EDI: Order to Cash - Mapping Examples^] from Exchange. This example inludes the following transformations for message flows:
+To start with an example of a translation map, download and then customize the https://mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/minor/1.0/[B2B/EDI: Order to Cash - Mapping Examples^] from Exchange. This example includes the following transformations for message flows:
 
 * Inbound message flows:
 ** X12 4010 850 to JSON

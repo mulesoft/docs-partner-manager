@@ -35,5 +35,5 @@ Take the following actions to verify the Payload Storage API configuration:
 
 If all these scenarios have been verified successfully, and you still cannot deploy message flows, please raise a case on the MuleSoft Support Portal.
 
-If you have an existing commercial relationship with MuleSoft and are experiencing problems accessing your Anypoint Platform account, you can open a case from the https://help.mulesoft.com/s/support[MuleSoft Support Portal].
+If you have an existing commercial relationship with MuleSoft and are experiencing problems accessing your Anypoint Platform account, you can open a case from the https://help.mulesoft.com/s/support[MuleSoft Support Portal^].
 If you can't access the Support Portal, contact your Customer Success Manager or MuleSoft Account Management team for assistance.
