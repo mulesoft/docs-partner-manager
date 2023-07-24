@@ -70,11 +70,12 @@ The new transaction set structure displays in one pane of the Transform Message 
 To test the map locally:
 
 . In *Package Explorer*, right-click on the template project, and select *Run > Run as Mule application*.
-. Use a REST client to post a message payload to the URL defined in the global element. 
-*Vijay, is there a better way to describe the URL?*
+. Use a REST client to post a message payload. 
++
+For example Postman calls, see the `B2B-Order-to-Cash-Mapping-Studio.postman_collection.json` file in the `examples` folder. 
 +
 The application returns the transformed payload.
-. After you verify that the map works correctly, copy the DataWeave map from `src/main/resources/x12/IN-X12-version-transaction-to-applicationmessage.dwl` and rename it to something meaningful, such as `IN-X12-4010-850-to-SAP-purchaseorder.dwl`.
+. After you verify that the map works correctly, copy the DataWeave map from `src/main/resources` and rename it to something meaningful.
 
 == Import the Map to a Partner Manager Message Flow
 
