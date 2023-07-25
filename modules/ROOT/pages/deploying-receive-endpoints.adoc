@@ -36,7 +36,7 @@ The external URLS for receive endpoints deployed to public or private ports vary
 
 The external URL for an AS2 receive endpoint is `+https://{DLB-domain}/{Input-path}/receive-as2+`.
 
-For example, if the name of your DLB domain is `mythical.lb.anypointdns.net` and the runtime application name is `b2b-inbound-as2-zap3`, then your administrator can add a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC:
+For example, if the name of your DLB domain is `mythical.lb.anypointdns.net` and the runtime application name is `b2b-inbound-as2-zap3`, your administrator can add a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your Anypoint VPC:
 
 image::url-mapping-rules-as2.png[URL mapping rules for AS2 in the DLB settings]
 
@@ -61,7 +61,7 @@ Given these example values:
 * The external URL for the endpoint is `+http://mythical.lb.anypointdns.net/apm/inbound/receive/+`.
 * Your partner sends the application JSON and XML messages to your inbound message flow at `+https://mythical.lb.anypointdns.net/apm/inbound/receive/pacific-purchase-order+`.
 
-Your administrator can add a URL mapping rule in the DLB settings like the following to forward incoming requests to the runtime application within your VPC:
+Your administrator can add a URL mapping rule in the DLB settings like the following to forward incoming requests to the runtime application within your Anypoint VPC:
 
 image::url-mapping-rules-http.png[URL mapping rule for the HTTP endpoint in this example]
 

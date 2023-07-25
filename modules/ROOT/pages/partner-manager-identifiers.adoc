@@ -105,7 +105,7 @@ An outbound payment remittance advice JSON message from your Financials system t
 
 `"PayeeName": "MYTHICAL ENTERPRISES"`
 
-In order for Partner Manager to route these outbound transactions to the appropriate message flows for Mythical Supplier, you must add these values as Partner Reference IDs from the partner’s profile page by <<create-identifier,creating a new identifier>> and selecting the type as *Reference ID*.
+For Partner Manager to route these outbound transactions to the appropriate message flows for Mythical Supplier, you must add these values as Partner Reference IDs from the partner’s profile page. To do this <<create-identifier,create a new identifier>> and select the type as *Reference ID*.
 
 If your backend application sends outbound transactions to partners on behalf of more than one internal line of business, thus requiring you to set different X12 ISA and X12 GS sender identifiers on the transformed outbound data (depending on which LoB is sending the transaction), you can configure partner reference identifiers on your host profile, with the value in the application message’s payload that uniquely identifies the sending LoB.
 

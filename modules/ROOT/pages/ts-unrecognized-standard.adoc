@@ -25,4 +25,4 @@ This information appears in the Activity section when one of the following occur
 
 == Solution
 
-If you encounter any of these situations, then verify with your partner that they are sending valid X12 format files that align with the message flows you have created and associated with that partner.
+If you encounter any of these situations, verify that your partner is sending valid X12 formatted files that align with the message flows that you created and associated with that partner.

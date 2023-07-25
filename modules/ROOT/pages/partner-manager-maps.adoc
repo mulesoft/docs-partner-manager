@@ -1,6 +1,6 @@
 = Translation Maps
 
-Anypoint Partner Manager uses Dataweave translation maps to transform business transactions between your partner’s message formats (CSV, EDIFACT, X12, JSON, or XML) and your organization’s enterprise application message formats (CSV, JSON, or XML).
+Anypoint Partner Manager uses DataWeave translation maps to transform business transactions between your partner’s message formats (CSV, EDIFACT, X12, JSON, or XML) and your organization’s enterprise application message formats (CSV, JSON, or XML).
 
 To use a translation map, create the map in Anypoint Studio and then import the map to Partner Manager when you configure an inbound or outbound message flow.
 

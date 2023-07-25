@@ -30,8 +30,8 @@ You'll need to perform some verifications with your payload storage or flow conf
 
 Verify the appropriate configuration for the payload storage API.
 
-If the payload storage app is functioning, verify that the storage source (the S3 bucket, or Azure Blob store, or database, and so on)
-that you are using as the storage solution is up and functioning.
+If the payload storage app is functioning, verify that the storage source (for example, the S3 bucket, Azure Blob store, or database)
+that you use as the storage solution is up and functioning.
 
 * Open Anypoint Runtime Manager to verify if the related payload storage app is active.
 * Try restarting the app.
