@@ -81,7 +81,7 @@ Use the *<host>* page in Partner Manager to configure a host profile for your An
 For more information, see xref:configure-host.adoc[].
 
 [[configure-partners]]
-== Configure a Partner Profile for Each of Your partners
+== Configure a Partner Profile for Each of Your Partners
 
 A partner profile consists of partner-specific settings such as:
 
