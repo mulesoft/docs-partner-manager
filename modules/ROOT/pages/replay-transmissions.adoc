@@ -17,7 +17,7 @@ The following rules apply to replaying transmissions:
 * The maximum number of transmissions that you can replay in a single request is 100. 
 * Partner Manager links replayed transmission instances to the original transmission record.
 +
-* When a transmission is replayed. Partner Manager sets its transmission status to `Replaying`. Once the replay action completes, Partner Manager shows the date of the last replay.
+* When a transmission is replayed, Partner Manager sets its transmission status to `Replaying`. Once the replay action completes, Partner Manager shows the date of the last replay.
 +
 To check the status of a replayed transmission, refresh the *Activity* screen and locate the transmission.
 +
