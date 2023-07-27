@@ -27,7 +27,7 @@ This information appears in the Activity section when one of the following occur
 
 Verify partner and host identifiers.
 
-=== Verify partner's Identifiers
+=== Verify Partner's Identifiers
 
 Verify that your partner has the appropriate identifiers configured as needed to support the transmission.
 
