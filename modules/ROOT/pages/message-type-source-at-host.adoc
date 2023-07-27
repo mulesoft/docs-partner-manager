@@ -8,7 +8,7 @@ You can define the CSV, JSON, or XML formats for the Source at Host message type
 
 == CSV
 
-include::partial$csv-inbound-partial.adoc[]
+include::partial$csv-outbound-partial.adoc[]
 
 == JSON or XML
 
