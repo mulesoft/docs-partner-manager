@@ -26,7 +26,7 @@ To check the status of a replayed transmission, refresh the *Activity* screen an
 If Partner Manager doesn't find an active message flow for the transmission or message, it returns an error. 
 +
 * Partner Manager doesn't check for duplicate control numbers when it replays inbound transmissions.
-* Partner Manager sends acknowledgments for replayed inbound transmissions only if the acknowledgement rules changed in the message flow definition from the previous transmission or if the acknowledgment outcome is different from the previous attempt.
+* Partner Manager sends acknowledgments for replayed inbound transmissions based on the partner or message flow configurations at the time of replaying.
 
 == Replay Transmissions from the Transmission List View
 

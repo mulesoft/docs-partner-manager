@@ -48,7 +48,7 @@ To change the message type:
 .. In *Value*, enter the version and transaction set that you want to map to or from. 
 +
 
-For example, set *Value* to `/x12/00501/837.esl` to map to or from a `0051-837` transaction. (*Vijay, is this a realistic example? I am looking for a value that is not in the Order to Cash Mapping example.*)
+For example, set *Value* to `/x12/005010/830.esl` to map to or from a `005010-830` transaction.
 . Click *OK*.
 
 == Change the Target Message Type

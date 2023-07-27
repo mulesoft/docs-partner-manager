@@ -137,11 +137,11 @@ a|Segment terminator character.
 | `~`
 
 |Data element separator
-a|Data element separator character.
+a|Data element separator character (can be a hex code).
 | `*`
 
 |Component element separator (ISA16)
-a|Component element separator character.
+a|Component element separator character (can be a hex code).
 | `>`
 
 |Line ending between segments

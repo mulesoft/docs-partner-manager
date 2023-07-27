@@ -71,16 +71,16 @@ Use the following settings to set the character encoding and separators for the 
 a|Character encoding used for messages.
 |ASCII_B
 |Data element separator
-|Character used to separate data elements.
+|Character used to separate data elements (can be a hex code).
 |+
 |Component separator
-|Character used to separate components.
+|Character used to separate components (can be a hex code).
 |:
 |Repetition separator
-|Repetition separator character
+|Repetition separator character (can be a hex code).
 |*
 |Segment terminator
-|Segment terminator character.
+|Segment terminator character (can be a hex code).
 |'
 |Release character
 |Character that acts as an escape for characters used as separators.

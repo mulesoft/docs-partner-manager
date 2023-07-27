@@ -46,14 +46,19 @@ Use the following settings to define JSON or XML as the format for the Receive f
 |Setting |Description |Default | Required
 |Usage | Message usage. Allowed value is `Receive from partners`. | | Yes
 |Format | Format of the message. Allowed value is `JSON` or `XML`. | |Yes
-|Schema | Imported JSON or XSD schema file for the message type. | |Yes
-|Message type identifier a| Message type identifier value used in the dynamic message routing of inbound B2B transactions. Partner Manager automatically generates a message type identifier from the schema filename. You can modify this value.
-{sp} +
-{sp} +
-The partner must pass the message type identifier when sending inbound messages:
+|Schema | Imported JSON or XSD schema file for the message type. | |No
+|Message type identifier a| Message type identifier value used in the dynamic message routing of inbound B2B transactions:
 
-* If you receive the payload via an HTTP-based endpoint, the partner should pass the message type identifier as the relative path in the HTTP request.
-* If you receive the payload via AS2 or a file-based endpoint protocol such as SFTP or FTP, the partner should prefix the message type identifier to the filename (`<message-type-id>_<filename>`).
+* If a schema is associated with the message type, Partner Manager automatically generates the message type identifier from the schema filename.
+{sp} +
+{sp} +
+You can modify this value.
+* If a schema is not assciated with the message type, you must enter the message type identifier manually.
+
+Your partner must pass the message type identifier as follows when sending inbound messages:
+
+* If you receive the payload via an HTTP-based endpoint, your partner must pass the message type identifier as the relative path in the HTTP request.
+* If you receive the payload via AS2 or a file-based endpoint protocol such as SFTP or FTP, your partner must prefix the message type identifier to the filename (`<message-type-id>_<filename>`).
 
 | |Yes
 |Reference identifiers and attributes mapping a| Uploaded DataWeave map that extracts the reference identifiers, business key, and custom messaging attributes from the payload received from the partner:

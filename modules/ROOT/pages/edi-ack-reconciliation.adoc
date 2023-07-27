@@ -7,6 +7,8 @@ If you are expecting to receive functional acknowledgements from your partners, 
 When your organization receives the functional acknowledgement (X12 997 or EDIFACT CONTRL) from the partner, the status of the corresponding outbound transaction is updated. Possible status updates include:
 
 * `Accepted`
+* `Accepted with errors`
+* `Partially accepted`
 * `Rejected`
 * `Overdue`, if your organization does not receive the functional acknowledgement within the specified time period
 
