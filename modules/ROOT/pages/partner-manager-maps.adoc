@@ -55,7 +55,7 @@ For example, set *Value* to `/x12/005010/830.esl` to map to or from a `005010-83
 
 To change the target message type:
 
-. For all target message types except for CSV, copy the schema file of your target application message type into the `<Project-name>/src/main/resources` folder in the project. *Is this correct?*
+. If your target message type has an associated schema, copy the schema file into the `<Project-name>/src/main/resources` folder in the project.
 . Select the *Transform Message* component.
 +
 The new transaction set structure displays in one pane of the Transform Message graphical view, and your application message structure (CSV, JSON, or XML) displays in the other pane of this view.

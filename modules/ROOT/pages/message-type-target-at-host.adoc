@@ -20,7 +20,14 @@ Use the following settings to define JSON or XML as the format for the Target at
 |Format a|Format of the message. Allowed value is `JSON` or `XML`.
 ||Yes
 |Schema |Imported JSON or XSD schema file for the message type. | |No
-|Name |Message type name that Partner Manager automatically generates from the schema filename. You can modify this name. | |Yes
+|Name a|Message type name that Partner Manager automatically generates:
+
+* If a schema is associated with the message type, Partner Manager automatically generates the message type name from the schema filename.
+{sp} +
+{sp} +
+You can modify this value.
+* If a schema is not assciated with the message type, you must enter the message type name manually.
+| |Yes
 |===
 
 == See Also
