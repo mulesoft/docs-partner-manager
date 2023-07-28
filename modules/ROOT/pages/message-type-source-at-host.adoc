@@ -19,7 +19,7 @@ Use the following settings to define JSON or XML as the format for the Source at
 |Setting |Description |Default | Required
 |Format a|Application message structure format. Allowed value is `JSON` or `XML`.
  | |Yes
-|Schema |Imported JSON or XSD schema file for the message type.| |Yes
+|Schema |Imported JSON or XSD schema file for the message type.| |No
 |Message type identifier a|  
 
 See xref:outbound-message-routing.adoc[Outbound Message Routing] to understand how outbound routing is performed and how your backend applications pass the message type identifier when sending application messages to Partner Manager endpoints. | |Yes
