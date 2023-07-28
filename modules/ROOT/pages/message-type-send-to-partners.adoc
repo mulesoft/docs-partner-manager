@@ -43,7 +43,7 @@ Use the following settings to define JSON or XML as the format for the Send to P
 |Setting |Description |Default | Required
 |Usage | Message usage. Allowed value is `Send to partners`. | | Yes
 |Format | Format of the message. Allowed value is `JSON` or `XML`. | |Yes
-|Schema | Imported JSON or XSD schema file for the message type. | |Yes
+|Schema | Imported JSON or XSD schema file for the message type. | |No
 |Name | Name of the new message type |Yes
 |===
 
