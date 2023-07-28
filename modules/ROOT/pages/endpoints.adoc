@@ -1,6 +1,6 @@
 = Endpoints
 
-Endpoints define the transport protocol configurations necessary to receive or send messages with external trading partners or internal backend applications.
+Endpoints define the transport protocol configurations necessary to receive or send messages with external partners or internal backend applications.
 
 Anypoint Partner Manager uses endpoints to:
 
@@ -38,11 +38,11 @@ The configuration of Partner Manager endpoints depends on the endpoint type and 
 
 == Endpoint Runtime Services
 
-Using dynamic configurations, Partner Manager deploys generic endpoint services that can receive data from or send data to different endpoint configurations. Endpoint configurations of all supported protocols can be reused across various message flows and trading partners.
+Using dynamic configurations, Partner Manager deploys generic endpoint services that can receive data from or send data to different endpoint configurations. Endpoint configurations of all supported protocols can be reused across various message flows and partners.
 
 Partner Manager’s deployment orchestration service inspects the message flow and associated configuration objects and determines which endpoint services to deploy or update based on whether any new endpoint configurations are added, updated, or removed.
 
-The number and type of endpoint services deployed to your runtime depend on the transport protocols used to exchange data with your trading partners and backend systems.
+The number and type of endpoint services deployed to your runtime depend on the transport protocols used to exchange data with your partners and backend systems.
 
 Each unique AS2, HTTP, and HTTPS receive endpoint configuration results in the deployment of its own runtime application. You can view the runtime application name corresponding to a given configuration in Partner Manager, from the endpoint details page.
 
@@ -61,7 +61,7 @@ The endpoints for the transport protocols are always managed within a single gen
 |SFTP |Send |b2b-outbound-sftp-
 |===
 
-If you deploy to CloudHub, you can assign static IP addresses to the endpoint applications that connect to external systems from Runtime Manager, if your organization or your trading partners require allowlisting IP addresses. You can share the xref:runtime-manager::managing-applications-on-cloudhub#static-ips[static IP] address assigned to your endpoint application with your partners for them to allowlist the IP address, allowing the application to connect with their server.
+If you deploy to CloudHub, you can assign static IP addresses to the endpoint applications that connect to external systems from Runtime Manager, if your organization or your partners require allowlisting IP addresses. You can share the xref:runtime-manager::managing-applications-on-cloudhub#static-ips[static IP] address assigned to your endpoint application with your partners for them to allowlist the IP address, allowing the application to connect with their server.
 
 == See Also
 

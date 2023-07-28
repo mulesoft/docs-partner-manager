@@ -1,12 +1,12 @@
 = Getting Started with Partner Manager
 
-Partner Manager provides a simplified, configuration-driven B2B integration solution to manage B2B trading partner ecosystems. To use Partner Manager, follow these steps:
+Partner Manager provides a simplified, configuration-driven B2B integration solution to manage B2B partner ecosystems. To use Partner Manager, follow these steps:
 
 . <<assign-permissions,Assign permissions to Partner Manager users>>.
 . <<set-up-env,Set up the Partner Manager environment>>.
 . <<payload-storage-api,Set up the Payload Storage API>>.
 . <<configure-host-profile,Configure a host profile>>.
-. <<configure-partners,Configure a profile for each of your trading partners>>.
+. <<configure-partners,Configure a profile for each of your partners>>.
 . <<configure-third-party,Optionally configure third-party connections>>.
 . <<configure-message-flows,Configure message flows>>.
 . <<deploy-test-message-flows,Deploy and test configured message flows>>.
@@ -37,7 +37,7 @@ For each sandbox and production environment, use Anypoint Access Management to a
 * *Manage Host* 
 +
 ** Can create, modify, and delete host configurations
-** Cannot view or modify trading partner configurations or transaction activity 
+** Cannot view or modify partner configurations or transaction activity 
 
 +
 This access applies even if the user has the Anypoint Platform Org Admin role.
@@ -81,7 +81,7 @@ Use the *<host>* page in Partner Manager to configure a host profile for your An
 For more information, see xref:configure-host.adoc[].
 
 [[configure-partners]]
-== Configure a Partner Profile for Each of Your Trading Partners
+== Configure a Partner Profile for Each of Your Partners
 
 A partner profile consists of partner-specific settings such as:
 
@@ -91,14 +91,14 @@ A partner profile consists of partner-specific settings such as:
  * Endpoints to use for sending and receiving messages to and from your partner 
  * The acknowledgements, validations, and control numbers for each message format that the partner uses
 
-Configure a partner profile for each of your trading partners. If you plan to use only host endpoints, you don’t need to create partner-specific endpoints.
+Configure a partner profile for each of your partners. If you plan to use only host endpoints, you don’t need to create partner-specific endpoints.
 
 For more information, see xref:configure-partner.adoc[].
 
 [[configure-third-party]]
 == Configure Third-Party Connections
 
-If your trading partners use third-party service providers such as VANs or 3PLs (third-party logistics providers) who manage the B2B connectivity with your organization on behalf of your partners, then create configurations for these connections.
+If your partners use third-party service providers such as VANs or 3PLs (third-party logistics providers) who manage the B2B connectivity with your organization on behalf of your partners, then create configurations for these connections.
 
 Creating third-party connections is similar to configuring partner profiles, except that the acknowledgements, validations, and control numbers associated with message formats are configured only at the partner level.
 

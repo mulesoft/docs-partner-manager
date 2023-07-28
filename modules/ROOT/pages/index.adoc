@@ -6,7 +6,7 @@ Anypoint Partner Manager enables you to perform bidirectional Business-to-Busine
 Use Partner Manager to:
 
 * Perform technical onboarding of your partners.
-* Set up, manage, and monitor business message flows between your systems and your trading partners' systems.
+* Set up, manage, and monitor business message flows between your systems and your partners' systems.
 * Track and report on business transactions to achieve greater operational efficiency in B2B transactions.
 * View meta information, validation errors, and all messages included with each transmission payload.
 +
@@ -15,7 +15,7 @@ Transmission payloads can contain one or more business messages.
 Members of your organization can use Partner Manager to perform a variety of functions, including:
 
 * Designing and testing message flows
-* Managing the activity of the business transactions with your trading partners
+* Managing the activity of the business transactions with your partners
 * Optimizing backend services and performance
 
 == Before You Begin Using Partner Manager
@@ -41,7 +41,7 @@ To use Partner Manager, you must understand the following concepts:
 Your Anypoint Platform organization or business group. A Partner Manager implementation has a single host for which you define a host profile.
 
 === Partners
-The trading partners with whom you send and receive B2B transmissions. You define a partner profile for each partner in your B2B ecosystem.
+The partners with whom you send and receive B2B transmissions. You define a partner profile for each partner in your B2B ecosystem.
 
 === Payload Storage API
 
@@ -65,8 +65,8 @@ Message flows consist of <<endpoints,endpoints>>, <<message-types,message types>
 
 Define the transport protocol configurations necessary for:
 
-* Receiving messages from external trading partners or internal backend applications
-* Sending messages to external trading partners or backend applications
+* Receiving messages from external partners or internal backend applications
+* Sending messages to external partners or backend applications
 
 You can configure the following types of endpoints:
 
@@ -124,7 +124,7 @@ DataWeave maps transform business transactions between your partner’s message 
 
 === Templates
 
-Prebuilt templates that convert your B2B message flow configurations into runtime applications. When MuleSoft upgrades a template, you can upgrade your message flows to use them to take advantage of new capabilities that enable better integration with your trading partner’s ecosystem.
+Prebuilt templates that convert your B2B message flow configurations into runtime applications. When MuleSoft upgrades a template, you can upgrade your message flows to use them to take advantage of new capabilities that enable better integration with your partner’s ecosystem.
 
 == Next Step
 

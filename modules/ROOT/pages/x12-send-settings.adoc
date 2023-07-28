@@ -17,10 +17,10 @@ To configure a partner's X12 send settings:
 
 The values you configure in the partner's settings page are used by default for all X12 messages going to that partner.
 
-You can override the settings you configure at the partner level, with the exception of TA1 and control numbers, or at the message flow level by selecting the *Custom* option while creating an outbound message flow.
+You can override the settings you configure at the partner level exept for TA1 and control numbers. You can override the settings you configure at the message flow level by selecting the *Custom* option while creating an outbound message flow.
 
 [NOTE]
-It can take up to five minutes for your configuration changes to sync with Mule.
+It can take up to five minutes for your changes to take effect on the runtime.
 
 [[general-settings]]
 == General Settings
@@ -96,7 +96,7 @@ Use the following settings to configure whether a technical acknowledgement is r
 a|If selected, sets the value in ISA14 to 1 on the generated X12 payload, indicating that a Technical acknowledgement (TA1) is required.
 |Disabled
 |Endpoint
-a|When the option to expect a TA1 is selected, click *Select* to specify the *Receive from <partner>* endpoint. The e will be received as an inbound transmission.
+a|When the option to expect a TA1 is selected, click *Select* to specify the *Receive from <partner>* endpoint. The TA1 will be received as an inbound transmission.
 |None
 |===
 
@@ -113,7 +113,7 @@ To set the control number sequence value to a different number to maintain seque
 . Click *Save*.
 
 [NOTE]
-It can take up to five minutes to apply the change at runtime.
+It can take up to five minutes for the changes to take effect on the runtime.
 
 [[character-set]]
 == Character Set & Separators
@@ -137,11 +137,11 @@ a|Segment terminator character.
 | `~`
 
 |Data element separator
-a|Data element separator character.
+a|Data element separator character (can be a hex code).
 | `*`
 
 |Component element separator (ISA16)
-a|Component element separator character.
+a|Component element separator character (can be a hex code).
 | `>`
 
 |Line ending between segments

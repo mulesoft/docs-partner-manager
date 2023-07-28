@@ -13,10 +13,10 @@ To configure a partner's EDIFACT send settings:
 * <<character-set,Character set & delimiters>>
 . Click *Save*.
 
-The values you configure in the partner's settings page are used by default for all EDIFACT messages sent to that trading partner. You can override the settings you configure at the message flow level by selecting the custom option while creating an outbound message flow.
+The values you configure in the partner's settings page are used by default for all EDIFACT messages sent to that partner. You can override the settings you configure at the message flow level by selecting the custom option while creating an outbound message flow.
 
 [NOTE]
-It can take up to five minutes for your configuration changes to sync with Mule.
+It can take up to five minutes for changes to take effect on the runtime.
 
 [[general-settings]]
 == General Settings
@@ -49,7 +49,7 @@ Use the following settings to configure the general validation rules for outboun
 [[global-control-numbers]]
 == Global Control Numbers
 
-Partner Manager applies a global control number at the partner level on the EDIFACT interchanges generated from outbound message flows. These control numbers are sequenced across all message types sent to a trading partner, including functional acknowledgements. The control number starts with a default value of `1` and increases sequentially each time your organization sends outbound transmissions.
+Partner Manager applies a global control number at the partner level on the EDIFACT interchanges generated from outbound message flows. These control numbers are sequenced across all message types sent to a partner, including functional acknowledgements. The control number starts with a default value of `1` and increases sequentially each time your organization sends outbound transmissions.
 
 To change the initial value to maintain sequencing and avoid duplication:
 
@@ -71,16 +71,16 @@ Use the following settings to set the character encoding and separators for the 
 a|Character encoding used for messages.
 |ASCII_B
 |Data element separator
-|Character used to separate data elements.
+|Character used to separate data elements (can be a hex code).
 |+
 |Component separator
-|Character used to separate components.
+|Character used to separate components (can be a hex code).
 |:
 |Repetition separator
-|Repetition separator character
+|Repetition separator character (can be a hex code).
 |*
 |Segment terminator
-|Segment terminator character.
+|Segment terminator character (can be a hex code).
 |'
 |Release character
 |Character that acts as an escape for characters used as separators.

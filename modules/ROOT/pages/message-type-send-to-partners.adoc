@@ -1,10 +1,16 @@
 = Send to Partners Message Type Settings
 
-The Send to Partners message type defines the way in which Anypoint Partner Manager transforms the outbound transactions sent from your organization to your partner. These transactions typically follow EDIFACT, JSON, X12, or XML standards.
+:message-type: Send to Partners
+
+The Send to Partners message type defines the way in which Anypoint Partner Manager transforms the outbound transactions sent from your organization to your partner. You can define the CSV, EDIFACT, JSON, X12, or XML format for a Send to Partners message type..
+
+== CSV
+
+include::partial$csv-outbound-partial.adoc[]
 
 == EDIFACT
 
-Use the following settings to define EDIFACT as the protocol for the Send to Partners message type:
+Use the following settings to define EDIFACT as the format for the Send to Partners message type:
 
 [%header%autowidth.spread]
 |===
@@ -30,7 +36,7 @@ When using a customized EDI schema, you can assign a custom name to the message 
 
 == JSON or XML
 
-Use the following settings to define JSON or XML as the protocol for the Send to Partners message type:
+Use the following settings to define JSON or XML as the format for the Send to Partners message type:
 
 [%header%autowidth.spread]
 |===
@@ -43,7 +49,7 @@ Use the following settings to define JSON or XML as the protocol for the Send to
 
 == X12
 
-Use the following settings to define X12 as the protocol for the Send to Partners message type:
+Use the following settings to define X12 as the format for the Send to Partners message type:
 
 [%header%autowidth.spread]
 |===

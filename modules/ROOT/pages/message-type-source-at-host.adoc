@@ -1,8 +1,18 @@
 = Source at Host Message Type Settings
 
+:message-type: Source at Host
+
 The Source at Host message type defines the way in which your backend applications transform outbound transactions and send them to your organization.
 
-Use the following settings to define JSON or XML settings for the Source at Host message type:
+You can define the CSV, JSON, or XML formats for the Source at Host message type.
+
+== CSV
+
+include::partial$csv-inbound-partial.adoc[]
+
+== JSON or XML
+
+Use the following settings to define JSON or XML as the format for the Source at Host message type:
 
 [%header%autowidth.spread]
 |===
@@ -10,13 +20,7 @@ Use the following settings to define JSON or XML settings for the Source at Host
 |Format a|Application message structure format. Allowed value is `JSON` or `XML`.
  | |Yes
 |Schema |Imported JSON or XSD schema file for the message type.| |Yes
-|Message type identifier a| Message type identifier value used in the dynamic message routing of outbound B2B transactions. Partner Manager automatically generates a message type identifier from the schema filename. You can modify this value.
-{sp} +
-{sp} +
-The backend application must pass the message type identifier when sending outbound messages:
-
-* If you receive the payload via an HTTP-based endpoint, the backend application should pass the message type identifier as the relative path in the HTTP request.
-* If you receive the payload via a file-based endpoint protocol such as SFTP or FTP, the backend should prefix the message type identifier to the filename (`<message-type-id>_<filename>`).
+|Message type identifier a|  
 
 See xref:outbound-message-routing.adoc[Outbound Message Routing] to understand how outbound routing is performed and how your backend applications pass the message type identifier when sending application messages to Partner Manager endpoints. | |Yes
 

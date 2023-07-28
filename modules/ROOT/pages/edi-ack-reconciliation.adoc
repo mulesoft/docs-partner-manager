@@ -1,19 +1,21 @@
 = EDI Acknowledgment Reconciliation
 
-As your trading partners acknowledge your messages, Partner Manager automatically updates their acknowledgement status. If you want to be notified, you must specifically configure acknowledgement settings when you create the message.
+As your partners acknowledge your messages, Partner Manager automatically updates their acknowledgement status. If you want to be notified, you must specifically configure acknowledgement settings when you create the message.
 
-If you are expecting to receive functional acknowledgements from your trading partners, you must xref:x12-send-settings.adoc[configure the acknowledgement  settings] when creating the outbound message flow.
+If you are expecting to receive functional acknowledgements from your partners, you must xref:x12-send-settings.adoc[configure the acknowledgement  settings] when creating the outbound message flow.
 
-When your organization receives the functional acknowledgement (X12 997 or EDIFACT CONTRL) from the trading partner, the status of the corresponding outbound transaction is updated. Possible status updates include:
+When your organization receives the functional acknowledgement (X12 997 or EDIFACT CONTRL) from the partner, the status of the corresponding outbound transaction is updated. Possible status updates include:
 
 * `Accepted`
+* `Accepted with errors`
+* `Partially accepted`
 * `Rejected`
 * `Overdue`, if your organization does not receive the functional acknowledgement within the specified time period
 
 The following are examples of the actions your operations team might take while troubleshooting acknowledgement issues:
 
 * Retriggering the transaction from the backend application when reviewing rejected transactions due to missing data elements
-* Asking your trading partner to confirm the receipt of the outbound transaction when reviewing overdue transactions
+* Asking your partner to confirm the receipt of the outbound transaction when reviewing overdue transactions
 
 [[troubleshoot-rejected-acks]]
 == Troubleshoot Rejected or Overdue Acknowledgments
@@ -41,7 +43,7 @@ Filter for transmissions based on their acknowledgement status:
 +
 image::partner-manager-review-ack.png[Review a transaction]
 +
-When you review an X12 997 or EDIFACT CONTRL rejection, you see the X12 997 or EDIFACT CONTRL payload received from your trading partner. For example (for X12 997):
+When you review an X12 997 or EDIFACT CONTRL rejection, you see the X12 997 or EDIFACT CONTRL payload received from your partner. For example (for X12 997):
 +
 image::partner-manager-997-ack-review-payload.png[X12 997 payload received from the partner]
 +

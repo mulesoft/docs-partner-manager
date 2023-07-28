@@ -19,10 +19,10 @@ This information appears in the Activity section when one of the following occur
 
 * Partner Manager receives a transmission that is in an unsupported data format: for example, receiving a PDF, image, and so forth on receiving endpoints.
 
-* Your trading partner sends you a valid X12 file but you have not configured a message flow that can accept it.
+* Your partner sends you a valid X12 file but you have not configured a message flow that can accept it.
 
-* You do not recognize the trading partner because they are not set up by you in Anypoint Partner Manager.
+* You do not recognize the partner because they are not set up by you in Anypoint Partner Manager.
 
 == Solution
 
-If you encounter any of these situations, then verify with your partner that they are sending valid X12 format files that align with the message flows you have created and associated with that trading partner.
+If you encounter any of these situations, verify that your partner is sending valid X12 formatted files that align with the message flows that you created and associated with that partner.

@@ -1,16 +1,33 @@
 == Target at Host Message Type
 
+:message-type: Target at Host
+
 The Target at Host message type defines the way in which Anypoint Partner Manager transforms inbound transactions sent from your organization to your backend applications.
 
-Use the following settings to define JSON or XML settings for the Target at Host message type:
+You can define the CSV, JSON, or XML format for the Target at Host message type.
+
+== CSV
+
+include::partial$csv-outbound-partial.adoc[]
+
+== JSON or XML
+
+Use the following settings to define JSON or XML as the format for the Target at host message type:
 
 [%header%autowidth.spread]
 |===
 |Setting |Description |Default | Required
 |Format a|Format of the message. Allowed value is `JSON` or `XML`.
 ||Yes
-|Schema |Imported JSON or XSD schema file for the message type. | |Yes
-|Name |Message type name that Partner Manager automatically generates from the schema filename. You can modify this name. | |Yes
+|Schema |Imported JSON or XSD schema file for the message type. | |No
+|Name a|Message type name that Partner Manager automatically generates:
+
+* If a schema is associated with the message type, Partner Manager automatically generates the message type name from the schema filename.
+{sp} +
+{sp} +
+You can modify this value.
+* If a schema is not assciated with the message type, you must enter the message type name manually.
+| |Yes
 |===
 
 == See Also

@@ -1,0 +1,69 @@
+= Replaying Transmissions
+
+Transmissions can fail due to data validation, mapping, or connectivity issues. If a transmission fails after an Anypoint Partner Manager endpoint secures it, you can replay the transmission.
+
+You can also replay transmissions that processed successfully. You might want to do this if:
+
+* The translated payload is missing a field. 
++
+In this scenario, you can upload a new translation map and replay the original transmission so that it goes through the updated map.
+* The target system or partner that received the original translated payloads lost data due to a system issue and requested that it be resent. 
+
+Replaying a transmission regenerates the transmission source and reprocesses the original transmission as a new transmission. You can replay both inbound and outbound transmissions.
+
+The following rules apply to replaying transmissions:
+
+* You can replay any original transmission that has a status of `Failed` or `Delivered`, except for inbound transmissions that failed AS2 security validation.
+* The maximum number of transmissions that you can replay in a single request is 100. 
+* Partner Manager links replayed transmission instances to the original transmission record.
++
+* When a transmission is replayed, Partner Manager sets its transmission status to `Replaying`. Once the replay action completes, Partner Manager shows the date of the last replay.
++
+To check the status of a replayed transmission, refresh the *Activity* screen and locate the transmission.
++
+* Partner Manager processes the transmission payload through the active version of the message flow. Therefore, the new transmission uses the current map and endpoint configurations for resolution and routing.
++
+If Partner Manager doesn't find an active message flow for the transmission or message, it returns an error. 
++
+* Partner Manager doesn't check for duplicate control numbers when it replays inbound transmissions.
+* Partner Manager sends acknowledgments for replayed inbound transmissions based on the partner or message flow configurations at the time of replaying.
+
+== Replay Transmissions from the Transmission List View
+
+You can replay one or more transmissions from the transmissions list view:
+
+. In the navigation menu, select *Activity*.
+. Select *Transmissions*.
+. To replay one transmission:
+.. Locate the transmission.
+.. On the transmission action menu (*...*), click *Replay*.
+. To replay multiple transactions:
+.. Locate and then select the transmissions.
+.. Click *Replay*. 
+
+== Replay a Transmission from the Transmission Details View
+
+You can replay a transmission from the transmissions details view:
+
+. In the navigation menu, select *Activity*.
+. Select *Transmissions*.
+. Locate the transmission to replay. 
+. Click the transmission to bring up the transmission details view.
+. Click *Replay*.
+
+== View a Transmission's Replay History
+
+The replay history for a transmission shows the date for each replay and provides links to the replays.
+
+To view a transmission's replay history:
+
+. In the transmissions list view, locate the transmission for which you want to see the replay history.
+. Click the transmission to bring up the transmission details view.
+. Click the last replayed date to see the following information about all replays of the transmission:
+** ID of the repayed transmissions
+** Replay dates
+** Replay status (a green checkmark for successful replay and a red exclamation point for a failed replay)
+
+== See Also
+
+* xref:activity-tracking.adoc[]

@@ -1,6 +1,10 @@
 = Inbound Message Flows
 
-An inbound message flow receives application messages from your partner, either directly or through a third-party connection; transforms the messages to the format used by your backend applications; and forwards the messages to those applications.
+An inbound message flow does the following:
+
+. Receives application messages from your partner, either directly or through a third-party connection.
+. Transforms the messages to the format used by your backend applications.
+. Forwards the messages to those applications.
 
 The following diagram shows the components of an inbound message flow:
 
@@ -9,7 +13,7 @@ image::pm-inbound-message-flow.png[Inbound message flow]
 |===
 |Setting |Description |Supported Formats or Protocols
 
-|Receiving endpoint | Endpoint at which a host receives transmissions from a trading partner a|
+|Receiving endpoint | Endpoint at which a host receives transmissions from a partner a|
 * AS2
 * FTP
 * HTTP
@@ -17,6 +21,7 @@ image::pm-inbound-message-flow.png[Inbound message flow]
 * SFTP
 
 |Source message type |Message type of the received message payload a|
+* CSV
 * EDIFACT
 * JSON
 * X12

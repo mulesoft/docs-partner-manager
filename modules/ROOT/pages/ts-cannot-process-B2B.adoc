@@ -30,8 +30,8 @@ You'll need to perform some verifications with your payload storage or flow conf
 
 Verify the appropriate configuration for the payload storage API.
 
-If the payload storage app is functioning, verify that the storage source (the S3 bucket, or Azure Blob store, or database, and so on)
-that you are using as the storage solution is up and functioning.
+If the payload storage app is functioning, verify that the storage source (for example, the S3 bucket, Azure Blob store, or database)
+that you use as the storage solution is up and functioning.
 
 * Open Anypoint Runtime Manager to verify if the related payload storage app is active.
 * Try restarting the app.
@@ -49,9 +49,9 @@ Verify that your message flow configuration is compatible with that of your part
 
 . After you locate the message flow, click on the message flow card to open it up.
 
-. From the message flow configurator, verify that the following information is in accordance with your agreement with your trading partner:
+. From the message flow configurator, verify that the following information is in accordance with your agreement with your partner:
 
-** The correct identifiers are associated with the trading partner.
+** The correct identifiers are associated with the partner.
 
 ** The appropriate receive endpoint is configured in the flow.
 
@@ -67,7 +67,7 @@ Verify that your message flow configuration is compatible with that of your part
 
 . If you observe a Failed status, try to deploy the message flow to ensure all your configurations have persisted on the Mule apps.
 
-NOTE: It can take up to five minutes for your most recent changes to be effective on the runtime B2B Mule apps.
+NOTE: It can take up to five minutes for your changes to take effect on the runtime.
 
 === Verify B2B Integration Apps
 
