@@ -1,5 +1,5 @@
-
 = Setting up On-premises Deployment
+:page-notice-banner-message: The ability to deploy Partner Manager on-premises is deprecated. Plan to deploy Partner Manager to the other available deployment targets, as described in the documentation.
 
 If you plan to deploy Anypoint Partner Manager runtime applications on-premises:
 

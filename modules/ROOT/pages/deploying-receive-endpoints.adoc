@@ -1,4 +1,5 @@
 = Deploying AS2, HTTP, and HTTPS Receive Endpoints
+:page-notice-banner-message: The ability to deploy Partner Manager on-premises is deprecated. Plan to deploy Partner Manager to the other available deployment targets, as described in the documentation.
 
 You can deploy AS2 receive, HTTP receive, and HTTPS receive endpoints on a public port, private port, or on-premises.
 
