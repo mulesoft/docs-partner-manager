@@ -1,4 +1,5 @@
 = Getting Started with Partner Manager
+:page-notice-banner-message: The ability to deploy Partner Manager on-premises is deprecated. Plan to deploy Partner Manager to the other available deployment targets, as described in the documentation.
 
 Partner Manager provides a simplified, configuration-driven B2B integration solution to manage B2B partner ecosystems. To use Partner Manager, follow these steps:
 
