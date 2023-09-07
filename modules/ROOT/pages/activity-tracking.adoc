@@ -24,13 +24,13 @@ Select a transmission to view its details and view and download the message cont
 You can retrieve up to one week's worth of messages.
 +
 * Message processing status, such as `Received`
-* Acknowledgement status, such as `Overdue`
+* Acknowledgment status, such as `Overdue`
 * Partner message type, such as `X12 - 850`
 * Host message type, such as `JSON host-purchase-order`
 * Transmission ID
 * Whether transmissions are replays
 +
-Partner Manager returns a list of transmissions that meet your search criteria along with related information, such as the date the transmission was received, number of messages in the transmission, message type, control number, and acknowledgement status.
+Partner Manager returns a list of transmissions that meet your search criteria along with related information, such as the date the transmission was received, number of messages in the transmission, message type, control number, and acknowledgment status.
 +
 . Do either of the following:
 ** Click a transmission to review additional information about the transmission and to view its message flow.
@@ -73,7 +73,7 @@ a|
 . In the *Sent MDN* field, click *View MDN*.
 . Specify a wrap character, if needed, and click *Apply*.
 . Click *Download*.
-| View and download the EDIFACT CONTRL or X12 997 acknowledgement message sent to the partner, if one exists.
+| View and download the EDIFACT CONTRL or X12 997 acknowledgment message sent to the partner, if one exists.
 a|
 . In the *Processed message through message flows* field, click *View CONTRL* or *View 997* for each message type.
 . Specify a wrap character, if needed, and click *Apply*.
@@ -147,7 +147,7 @@ a|
 . In the *Received MDN* field, click *View payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-|View the EDIFACT CONTRL or X12 997 acknowledgement message received from the partner, if one exists.
+|View the EDIFACT CONTRL or X12 997 acknowledgment message received from the partner, if one exists.
 a|
 . In the message flow diagram, expand the *Sent to* section.
 . In the *Sent transmission* field, click *View payload*.

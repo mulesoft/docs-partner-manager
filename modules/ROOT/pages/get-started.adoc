@@ -90,7 +90,7 @@ A partner profile consists of partner-specific settings such as:
  * Identifiers (such as the AS2 ID, X12-ISA, X12 GS, and so on)
  * Digital certificates (such as X.509 certificates) 
  * Endpoints to use for sending and receiving messages to and from your partner 
- * The acknowledgements, validations, and control numbers for each message format that the partner uses
+ * The acknowledgments, validations, and control numbers for each message format that the partner uses
 
 Configure a partner profile for each of your partners. If you plan to use only host endpoints, you don’t need to create partner-specific endpoints.
 
@@ -155,9 +155,9 @@ You can also search for individual messages based on any custom message attribut
 For more information, see xref:activity-tracking.adoc[], xref:use-custom-attributes.adoc[], and xref:activity-message-tracking.adoc[].
 
 [[troubleshoot-acks]]
-== Troubleshoot Rejected or Overdue Acknowledgements
+== Troubleshoot Rejected or Overdue Acknowledgments
 
-When you monitor transmissions, you can search by acknowledgement status (*Ack Status* field) to find outbound transmissions that either received an X12 997 or EDIFACT CONTRL rejection or that are overdue for the functional acknowledgement. Then, you can review the X12 997 or EDIFACT CONTRL payload received from your partners and add a comment to indicate the action taken.
+When you monitor transmissions, you can search by acknowledgment status (*Ack Status* field) to find outbound transmissions that either received an X12 997 or EDIFACT CONTRL rejection or that are overdue for the functional acknowledgment. Then, you can review the X12 997 or EDIFACT CONTRL payload received from your partners and add a comment to indicate the action taken.
 
 For more information, see xref:edi-ack-reconciliation.adoc[].
 

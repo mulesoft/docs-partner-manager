@@ -57,7 +57,7 @@ Verify that your message flow configuration is compatible with that of your part
 
 ** The appropriate document type (such as X12, version - 4010, or message type - 850) is configured.
 
-** Verify that you have the appropriate acknowledgement configuration.
+** Verify that you have the appropriate acknowledgment configuration.
 
 ** Verify that you have an appropriate DataWeave map in the transformation section.
 
@@ -89,7 +89,7 @@ The names of these apps are prefaced with inbound-
 
 The names of these apps are prefaced with outbound-
 
-* Possibly one or more acknowledgement apps.
+* Possibly one or more acknowledgment apps.
 
 The names of these apps are prefaced with ack-
 

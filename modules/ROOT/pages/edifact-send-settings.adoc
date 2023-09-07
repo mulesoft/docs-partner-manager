@@ -39,7 +39,7 @@ Use the following settings to configure the general validation rules for outboun
 |Validates data elements against length limits defined in the EDI schema used
 |Enabled
 |Expect CONTRL for each transmission sent to <partner>
-|When enabled, sets UNB-09 to `1`, indicating that a technical acknowledgement is expected in the partner's response
+|When enabled, sets UNB-09 to `1`, indicating that a technical acknowledgment is expected in the partner's response
 |Disabled
 |Enforce code set validations
 |If selected, Partner Manager enforces EDIFACT code set validations, as defined in the EDIFACT schemas.
@@ -49,7 +49,7 @@ Use the following settings to configure the general validation rules for outboun
 [[global-control-numbers]]
 == Global Control Numbers
 
-Partner Manager applies a global control number at the partner level on the EDIFACT interchanges generated from outbound message flows. These control numbers are sequenced across all message types sent to a partner, including functional acknowledgements. The control number starts with a default value of `1` and increases sequentially each time your organization sends outbound transmissions.
+Partner Manager applies a global control number at the partner level on the EDIFACT interchanges generated from outbound message flows. These control numbers are sequenced across all message types sent to a partner, including functional acknowledgments. The control number starts with a default value of `1` and increases sequentially each time your organization sends outbound transmissions.
 
 To change the initial value to maintain sequencing and avoid duplication:
 

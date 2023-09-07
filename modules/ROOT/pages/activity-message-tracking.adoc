@@ -42,7 +42,7 @@ You can retrieve up to one week's worth of messages.
 * Transmission or message ID
 
 +
-Partner Manager returns a list of messages that meet your search criteria along with related information such as the date the message was received, message status, message type, partner, document ID, business key, and acknowledgement status.
+Partner Manager returns a list of messages that meet your search criteria along with related information such as the date the message was received, message status, message type, partner, document ID, business key, and acknowledgment status.
 +
 . Click on a message to review additional information about the message and to view its message flow.
 
@@ -53,7 +53,7 @@ The additional details for an inbound message include the following information:
 * Message ID
 * Transmission ID
 * Message flow name
-* Functional acknowledgement name, if one exists
+* Functional acknowledgment name, if one exists
 * Information about the message source, including the date and time when the message was received from the source, partner message type, endpoint name, filename, and target protocol
 * Identifiers and control number associated with the message
 * Information about the message target, including the date and time when the message was delivered, host message type, target endpoint, protocol, and target filename
@@ -87,7 +87,7 @@ a|
 . Specify a wrap character, if needed.
 . Click *Download*.
 | View and download the EDIFACT CONTRL message or X12 997
-acknowledgement message sent to the partner, if one exists.
+acknowledgment message sent to the partner, if one exists.
 a|
 . Click the link in the *Transmission details* field to access the *Transmission Flow* section.
 . In the *Processed message through message flows* section, click *View Control* or *View 997*.
@@ -105,7 +105,7 @@ Expand the message flow diagram sections to view additional information, includi
 The details for an outbound message include the following information:
 
 * Date and time when the file was received from the backend
-* Functional acknowledgement, if one exists
+* Functional acknowledgment, if one exists
 * Name of the transmitted file
 * Information about the message source, including the source message type, source endpoint name, and source protocol
 * Identifiers and control numbers associated with the message
@@ -143,7 +143,7 @@ a|
 . In the *Received MDN* field, click *View payload*.
 . Specify a wrap character, if needed.
 . Click *Download*.
-|View the EDIFACT CONTRL or X12 997 acknowledgement message received from the partner, if one exists.
+|View the EDIFACT CONTRL or X12 997 acknowledgment message received from the partner, if one exists.
 a|
 . In the *Summary* section, click the link in the *Transmission details* field to access the message flow diagram.
 . In the message flow diagram, expand the *Sent to* section.

@@ -2,7 +2,7 @@
 
 Anypoint Partner Manager dynamically validates the message flow configuration elements as you complete them and displays a green checkmark next to each of the validated elements.
 
-After Partner Manager validates the message flow configuration elements, deploy and test the message flow in a sandbox environment. The changes can take up to five minutes from the time the message flow deployment completes in the UI to take effect in the runtime.
+After Partner Manager validates the message flow configuration elements, deploy and test the message flow in a sandbox environment. It can take up to five minutes from the time the message flow deployment completes in the UI for the changes to take effect in the runtime.
 
 == Deploy Message Flows
 
@@ -19,7 +19,7 @@ The message flow is deployed to Mule runtime engine, enabling you to:
 
 After you deploy the message flow, send test messages to verify that:
 
-* You can receive messages and acknowledgements from your partners.
+* You can receive messages and acknowledgments from your partners.
 * The DataWeave map works.
 * Your backend applications receive the transformed messages.
 
@@ -30,7 +30,7 @@ Test your message flow in your Partner Manager sandbox environment by sending a 
 . If the system is set up to view payloads, review the received payload by clicking *View payload* next to the *Received transmission* section.
 +
 If you're not sure about whether you should be able to view a payload, contact your B2B System Administrator.
-. If TA1 and functional acknowledgements (999 or 997) are set, review and confirm that they are present.
+. If TA1 and functional acknowledgments (999 or 997) are set, review and confirm that they are present.
 . Verify that the transmission routed the messages to the correct message flow.
 . Verify that Partner Manager routed the messages to the target system, delivered the messages to the target endpoint,
  and transformed the messages correctly.
