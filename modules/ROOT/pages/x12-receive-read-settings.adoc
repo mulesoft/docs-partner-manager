@@ -41,7 +41,7 @@ a|Sends a functional acknowledgment (the receipt and syntactical acceptability o
 |Disabled
 |===
 
-=== X12 997 Functional Acknowledgement
+=== X12 997 Functional Acknowledgment
 
 The X12 997 functional acknowledgment reports the status of a received interchange. It reports all of the errors encountered while processing the received document.
 As with all X12 transaction sets, the 997 functional acknowledgment is sent inside a GS or GE envelope.

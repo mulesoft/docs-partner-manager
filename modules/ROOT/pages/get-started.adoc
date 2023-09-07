@@ -25,16 +25,16 @@ For each sandbox and production environment, use Anypoint Access Management to a
 * *View Host, Partners, and Message Flows* 
 +
 ** Has view-only access to the host, partner, and message flow configurations
-** Cannot view transaction activity
+** Can't view transaction activity
 * *Manage Partners and Message Flows* 
 +
 ** Can create, modify, and delete partners or message flow configurations
 ** Can view partner configurations
-** Cannot view and manage transaction activity
+** Can't view and manage transaction activity
 * *Manage Activity* 
 +
 ** Can view and manage transaction activity
-** Cannot view or modify either partner or message flow configurations
+** Can't view or modify either partner or message flow configurations
 * *Manage Host* 
 +
 ** Can create, modify, and delete host configurations
@@ -45,7 +45,7 @@ This access applies even if the user has the Anypoint Platform Org Admin role.
 * *View Activity* 
 +
 ** Has view-only access to transaction activity
-** Cannot view or modify either partner or message flow configurations
+** Can't view or modify either partner or message flow configurations
 
 For more information, see xref:access-management::permissions-by-product.adoc[].
 

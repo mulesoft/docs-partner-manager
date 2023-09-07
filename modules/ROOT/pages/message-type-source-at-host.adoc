@@ -24,7 +24,7 @@ Use the following settings to define JSON or XML as the format for the Source at
 
 See xref:outbound-message-routing.adoc[Outbound Message Routing] to understand how Partner Manager performs outbound routing and how your backend applications pass the message type identifier when sending application messages to Partner Manager endpoints. | |Yes
 
-|Reference identifiers and attributes mapping a|Uploaded DataWeave map that extracts the reference identifiers, business key, and custom message attributes from the payload received from the backend application:
+|Reference identifiers and attributes mapping a|Uploaded DataWeave map that extracts the reference identifiers, business key, and custom message attributes from the payload received from the back-end application:
 
 * The extracted reference identifier values are used for dynamic routing into the appropriate message flow.
 * The extracted custom attributes enable you to have visibility into the lifecycle of your B2B workflow. For more information, see xref:use-custom-attributes.adoc[Using Custom Messaging Attributes with Message Types].
