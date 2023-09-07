@@ -2,7 +2,7 @@
 
 Anypoint Partner Manager dynamically validates the message flow configuration elements as you complete them and displays a green checkmark next to each of the validated elements.
 
-After Partner Manager validates the message flow configuration elements, deploy and test the message flow in a sandbox environment. It can take up to five minutes from the time the message flow deployment completes in the UI for the changes to take effect in the runtime.
+After Partner Manager validates the message flow configuration elements, deploy and test the message flow in a sandbox environment. The changes can take up to five minutes from the time the message flow deployment completes in the UI to take effect in the runtime.
 
 == Deploy Message Flows
 

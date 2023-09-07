@@ -1,10 +1,10 @@
 = EDI Acknowledgment Reconciliation
 
-As your partners acknowledge your messages, Partner Manager automatically updates their acknowledgement status. If you want to be notified, you must specifically configure acknowledgement settings when you create the message.
+As your partners acknowledge your messages, Partner Manager automatically updates their acknowledgement status. To be notified, you must specifically configure acknowledgement settings when you create the message.
 
-If you are expecting to receive functional acknowledgements from your partners, you must xref:x12-send-settings.adoc[configure the acknowledgement  settings] when creating the outbound message flow.
+If you expect to receive functional acknowledgements from your partners, you must xref:x12-send-settings.adoc[configure the acknowledgement settings] when you create the outbound message flow.
 
-When your organization receives the functional acknowledgement (X12 997 or EDIFACT CONTRL) from the partner, the status of the corresponding outbound transaction is updated. Possible status updates include:
+When your organization receives the functional acknowledgement (X12 997 or EDIFACT CONTRL) from your partner, Partner Manager updates the status of the corresponding outbound transaction to one of the following:
 
 * `Accepted`
 * `Accepted with errors`
@@ -15,7 +15,7 @@ When your organization receives the functional acknowledgement (X12 997 or EDIFA
 The following are examples of the actions your operations team might take while troubleshooting acknowledgement issues:
 
 * Retriggering the transaction from the backend application when reviewing rejected transactions due to missing data elements
-* Asking your partner to confirm the receipt of the outbound transaction when reviewing overdue transactions
+* Asking your partner to confirm receipt of the outbound transaction when reviewing overdue transactions
 
 [[troubleshoot-rejected-acks]]
 == Troubleshoot Rejected or Overdue Acknowledgments

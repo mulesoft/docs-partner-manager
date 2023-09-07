@@ -13,10 +13,10 @@ To configure a partner's EDIFACT send settings:
 * <<character-set,Character set & delimiters>>
 . Click *Save*.
 
-The values you configure in the partner's settings page are used by default for all EDIFACT messages sent to that partner. You can override the settings you configure at the message flow level by selecting the custom option while creating an outbound message flow.
+The values in the partner's settings page are used by default for all EDIFACT messages sent to that partner. You can override the settings you configure at the message flow level by selecting the custom option while creating an outbound message flow.
 
 [NOTE]
-It can take up to five minutes for changes to take effect on the runtime.
+Your changes can take up to five minutes to take effect on the runtime.
 
 [[general-settings]]
 == General Settings
@@ -56,8 +56,7 @@ To change the initial value to maintain sequencing and avoid duplication:
 . Click *Change* and enter the desired initial control number.
 . Click *Save*.
 
-[NOTE]
-It can take up to five minutes to apply the change at runtime.
+[NOTE: Your changes can take up to five minutes to take effect on the runtime.
 
 [[character-set]]
 == Character Set and Delimiters

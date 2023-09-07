@@ -1,6 +1,6 @@
 = Creating Reference Maps for Message Types
 
-When you create a new Source at Host or Receive from Partners message type with a CSV, JSON, or XML format, you must associate the message type with a DataWeave reference map. This is optional for Receive from Partners message types with an EDFIACT or X12 format. Reference maps can include custom message attributes that get extracted from the message payloads at runtime. The extracted attributes are visible in the payload and are available for searching and tracking.
+When you create a new Source at Host or Receive from Partners message type with a CSV, JSON, or XML format, you must associate the message type with a DataWeave reference map. This is optional for Receive from Partners message types with an EDFIACT or X12 format. Reference maps can include custom message attributes that are extracted from the message payloads at runtime. The extracted attributes are visible in the payload and are available for searching and tracking.
 
 If the definition for the message type includes an uploaded schema, the input of the reference map is the payload that follows the schema.
 

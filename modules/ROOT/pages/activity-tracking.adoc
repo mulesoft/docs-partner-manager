@@ -44,7 +44,7 @@ The additional details for an inbound transmission include the following informa
 * Transmission status (a green checkmark for success or a red exclamation point for failure)
 * Transmission ID
 * Control number associated with the transmitted file, if available
-* Information about the message source, including the date and time that the message was received; control number; name and protocol of the receiving (Receive from Partners) endpoint; and message type, such as `mythical-po-ack`
+* Information about the message source, including the date and time that the message was received, control number, name and protocol of the receiving (Receive from Partners) endpoint, and message type, such as `mythical-po-ack`
 * Number of received messages for each message type in the transmitted file
 * Custom message attributes, if any.
 
@@ -58,7 +58,7 @@ Take any of the following actions to view and download additional information ab
 |Action |Steps
 
 | View the original transmission if the message is a replay.
-| Click the link in the *Original Transmission Id field*,
+| Click the link in the *Original Transmission Id* field.
 
 |View the messages in the transmission.
 |Click *messages*. 

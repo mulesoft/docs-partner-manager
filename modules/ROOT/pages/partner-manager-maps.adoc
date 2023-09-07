@@ -45,7 +45,7 @@ To change the message type:
 . In *Name*, change the name of the configuration to something meaningful.
 . If the message flow uses the EDI, JSON, X12, or XML format:
 .. In *Schema definitions*, select *Edit inline*.
-.. In *Value*, enter the version and transaction set that you want to map to or from. 
+.. In *Value*, enter the version and transaction set to map to or from. 
 +
 
 For example, set *Value* to `/x12/005010/830.esl` to map to or from a `005010-830` transaction.
@@ -75,7 +75,7 @@ The application returns the transformed payload.
 
 == Import the Map to a Partner Manager Message Flow
 
-When you configure a message flow, you can import the `dwl` file to the *Map* section of the message flow.
+When you configure a message flow, you can import the `.dwl` file to the *Map* section of the message flow.
 
 == See Also
 

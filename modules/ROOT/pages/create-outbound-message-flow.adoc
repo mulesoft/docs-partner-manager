@@ -100,7 +100,7 @@ To configure acknowledgement settings for the outbound messages that use the mes
 . Do either of the following:
 * Select an existing endpoint at which to receive your partner's acknowledgement transaction.
 * Click *New* to create a new endpoint, as described in xref:create-endpoint.adoc[Creating Endpoints].
-. In the *Mark overdue after* field, accept the default value of *24 Hours* or configure when you want the outbound transaction to be marked as overdue for an acknowledgement, according to the SLAs you have with your partner.
+. In the *Mark overdue after* field, accept the default value of *24 Hours* or configure when to mark the outbound transaction as overdue for an acknowledgement, according to the SLAs you have with your partner.
 
 === Optionally Apply Custom Validation Settings to EDIFACT and X12 Endpoints
 

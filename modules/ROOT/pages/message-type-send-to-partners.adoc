@@ -2,7 +2,7 @@
 
 :message-type: Send to Partners
 
-The Send to Partners message type defines the way in which Anypoint Partner Manager transforms the outbound transactions sent from your organization to your partner. You can define the CSV, EDIFACT, JSON, X12, or XML format for a Send to Partners message type..
+The Send to Partners message type defines the way in which Anypoint Partner Manager transforms the outbound transactions sent from your organization to your partner. You can define the CSV, EDIFACT, JSON, X12, or XML format for a Send to Partners message type.
 
 == CSV
 

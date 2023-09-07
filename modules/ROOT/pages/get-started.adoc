@@ -38,7 +38,7 @@ For each sandbox and production environment, use Anypoint Access Management to a
 * *Manage Host* 
 +
 ** Can create, modify, and delete host configurations
-** Cannot view or modify partner configurations or transaction activity 
+** Can't view or modify partner configurations or transaction activity 
 
 +
 This access applies even if the user has the Anypoint Platform Org Admin role.
