@@ -37,7 +37,7 @@ Verify that your partner has the appropriate identifiers configured as needed to
 
 . If the desired partner identifier is not present, click *New* and select an identifier type from the Type list to uniquely identify your partner.
 
-. Provide a value for your identifier (and a qualifier for X12-ISA) and click *Create identifier* to save your changes. See xref:x12-identity-settings.adoc[Identifiers] for more information about X12-ISA settings.
+. Provide a value for your identifier (and a qualifier for X12-ISA) and click *Create identifier* to save your changes. See xref:x12-identity-settings.adoc[] for more information about X12-ISA settings.
 
 === Verify Organization (Host) Identifiers
 
@@ -49,4 +49,4 @@ Verify that your organization (the host) has the appropriate identifiers configu
 
 . If the desired host identifier is not present, click *New* and select an identifier type from the Type list to uniquely identify your partner.
 
-. Provide a value for your identifier (and a qualifier for X12-ISA) and click *Create identifier* to save your changes. See xref:x12-identity-settings.adoc[Identifiers] for more information about X12-ISA settings.
+. Provide a value for your identifier (and a qualifier for X12-ISA) and click *Create identifier* to save your changes. See xref:x12-identity-settings.adoc[] for more information about X12-ISA settings.

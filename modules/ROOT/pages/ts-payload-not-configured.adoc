@@ -4,7 +4,6 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-
 == Cause
 
 You have not configured the Payload Storage.
@@ -19,4 +18,4 @@ If your payload storage is configured, verify that it is active:
 
 . Review your payload storage configuration and status.
 
-. If your payload storage is not configured, configure it as described in xref:setup-payload-storage-API.adoc[Download and Deploy a Payload Storage API].
+. If your payload storage is not configured, configure it as described in xref:setup-payload-storage-API.adoc[].

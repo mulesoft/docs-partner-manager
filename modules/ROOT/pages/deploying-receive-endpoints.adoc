@@ -70,7 +70,7 @@ image::url-mapping-rules-http.png[URL mapping rule for the HTTP endpoint in this
 
 AS2 and HTTP receive endpoints deployed to on-premises Mule instances are deployed over plain HTTP. Using a load balancer exposes these endpoints to consumers as HTTPS endpoints.
 
-For information about setting up the on-premises environment, see xref:deploy-onpremise.adoc[Deploying Message Flows On-Premises].
+For information about setting up the on-premises environment, see xref:deploy-onpremise.adoc[Setting up On-premises Deployment].
 
 == See Also
 

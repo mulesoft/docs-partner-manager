@@ -18,4 +18,4 @@ endif::[]
 
 * If the server group is in a `Stopped` status contact your MuleSoft platform operations or administration team to review and restart the server.
 
-* If you do not have this server group setup, refer to https://docs.mulesoft.com/partner-manager/2.0/setup#setup[Setup Anypoint Partner Manager].
+* If you do not have this server group set up, refer to xref:deploy-onpremise.adoc[].

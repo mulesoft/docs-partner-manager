@@ -11,11 +11,11 @@ NOTE: The payload storage API must be publicly accessible for users to be able t
 Before you create your first partner and message flow, you must configure your payload storage API within the host organization in Partner Manager:
 
 . Access and download the following APIs from Anypoint Exchange:
-* https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-api[Partner Manager Content Storage API]
+* https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-api[Partner Manager Content Storage API^]
 +
 RAML specification for the payload storage API, which includes the URI parameters and record ID (contentRecordId) that must be returned from the API implementation's HTTP response header
 +
-* https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-service-s3[Partner Manager Content Storage API - S3 Template]
+* https://www.mulesoft.com/exchange/com.mulesoft.b2b/partner-manager-content-storage-service-s3[Partner Manager Content Storage API - S3 Template^]
 +
 Sample template for creating the payload storage API using Amazon S3
 +
