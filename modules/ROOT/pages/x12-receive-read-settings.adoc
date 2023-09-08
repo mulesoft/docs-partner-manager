@@ -1,6 +1,6 @@
 = Configuring Receive Settings for Inbound X12 Messages
 
-Partner Manager enables you to configure the X12 acknowledgements, validation rules, character encoding, and control numbers to apply when receiving inbound X12 messages from the selected partner.
+Partner Manager enables you to configure the X12 acknowledegments, validation rules, character encoding, and control numbers to apply when receiving inbound X12 messages from the selected partner.
 
 To configure X12 receive settings:
 
@@ -35,26 +35,26 @@ a|Provides a Technical Acknowledgment (TA1) to the Interchange sender that repor
 The TA1 ACK is sent inside an ISA or IEA envelope. The ISA and IEA are no different from any other interchange.
 |Disabled
 
-|Send 997 functional acknowledgement when messages fail to route to a message flow
-a|Sends a functional acknowledgement (the receipt and syntactical acceptability of a message) when there is a failure to route the message to one of the message flows.
+|Send 997 functional acknowledgment when messages fail to route to a message flow
+a|Sends a functional acknowledgment (the receipt and syntactical acceptability of a message) when there is a failure to route the message to one of the message flows.
 
 |Disabled
 |===
 
-=== X12 997 Functional Acknowledgement
+=== X12 997 Functional Acknowledgment
 
-The X12 997 functional acknowledgement reports the status of a received interchange. It reports all of the errors encountered while processing the received document.
-As with all X12 transaction sets, the 997 functional acknowledgement is sent inside a GS or GE envelope.
+The X12 997 functional acknowledgment reports the status of a received interchange. It reports all of the errors encountered while processing the received document.
+As with all X12 transaction sets, the 997 functional acknowledgment is sent inside a GS or GE envelope.
 
-The 997 functional acknowledgement does the following:
+The 997 functional acknowledgment does the following:
 
 * Acknowledges the receipt of an interchange or functional group
 * Accepts or rejects one or more functional groups or transactions
 * Verifies and reports compliance with the standard
 
-If an interchange contains multiple groups, a 997 acknowledgement is returned for each group.
+If an interchange contains multiple groups, a 997 acknowledgment is returned for each group.
 
-If a group contains multiple transaction sets, then the acknowledgement for that group contains one loop for each transaction set. This applies only if AK2 loops are generated for accepted transaction sets.
+If a group contains multiple transaction sets, then the acknowledgment for that group contains one loop for each transaction set. This applies only if AK2 loops are generated for accepted transaction sets.
 
 [[validation-settings]]
 == Validation Settings
@@ -108,7 +108,7 @@ a|* If selected, Partner Manager rejects transactions containing segments marked
 | Disabled
 
 |Acknowledge every transaction
-|If selected, Partner Manager includes a separate AK2/AK5 segment for every received transaction set, even when all transactions are accepted in the 997 functional acknowledgement.
+|If selected, Partner Manager includes a separate AK2/AK5 segment for every received transaction set, even when all transactions are accepted in the 997 functional acknowledgment.
 
 |Disabled
 

@@ -5,7 +5,7 @@ AS2 send endpoint settings determine where to send B2B messages transmitted over
 An AS2 Send to Partners endpoint (the only type of AS2 send endpoint) can act as:
 
 * A target endpoint in an outbound message flow through which transformed B2B messages are sent to partners, either directly or via third-party connections
-* An acknowledgement endpoint in an inbound message flow
+* An acknowledgment endpoint in an inbound message flow
 
 Either a partner or a third-party connection can own AS2 send endpoints.
 

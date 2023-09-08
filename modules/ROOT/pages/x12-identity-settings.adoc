@@ -61,7 +61,7 @@ Refer to this information specifically for using the DUNS number as an identifie
 |Setting |Description |Required
 
 |Identifier Value
-|The DUNS number for your partner. The DUNS number is a nine-digit number that your partner needs to supply you with that corresponds to the Sender/Receiver ID.
+|The DUNS number for your partner. The DUNS number is a nine-digit number that your partner supplies that corresponds to the Sender/Receiver ID.
 
 |Yes +
 
@@ -76,7 +76,7 @@ Refer to this information specifically for using the AS2 identity to identify a 
 |Setting |Description |Required
 
 |Identifier Value
-|The AS2 identity for your partner. Your partner should supply you with corresponding to the Sender / Receiver AS2 identity.
+|The AS2 identity for your partner. Your partner should supply you with the proper Sender/Receiver AS2 identity.
 
 |Yes +
 

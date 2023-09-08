@@ -7,7 +7,7 @@ Anypoint Partner Manager uses endpoints to:
 * Receive messages from partners
 * Receive messages from backend applications
 * Define transport protocols
-* Specify message or message acknowledgement destinations
+* Specify message or message acknowledgment destinations
 
 == Endpoint Ownership
 
@@ -38,7 +38,7 @@ The configuration of Partner Manager endpoints depends on the endpoint type and 
 
 == Endpoint Runtime Services
 
-Using dynamic configurations, Partner Manager deploys generic endpoint services that can receive data from or send data to different endpoint configurations. Endpoint configurations of all supported protocols can be reused across various message flows and partners.
+Using dynamic configurations, Partner Manager deploys generic endpoint services that can receive data from or send data to different endpoint configurations. You can reuse the endpoint configurations of all supported protocols across various message flows and partners.
 
 Partner Manager’s deployment orchestration service inspects the message flow and associated configuration objects and determines which endpoint services to deploy or update based on whether any new endpoint configurations are added, updated, or removed.
 
@@ -61,7 +61,7 @@ The endpoints for the transport protocols are always managed within a single gen
 |SFTP |Send |b2b-outbound-sftp-
 |===
 
-If you deploy to CloudHub, you can assign static IP addresses to the endpoint applications that connect to external systems from Runtime Manager, if your organization or your partners require allowlisting IP addresses. You can share the xref:runtime-manager::managing-applications-on-cloudhub#static-ips[static IP] address assigned to your endpoint application with your partners for them to allowlist the IP address, allowing the application to connect with their server.
+If you deploy to CloudHub, you can assign static IP addresses to the endpoint applications that connect to external systems from Runtime Manager, as long as your organization or your partners require allowlisting IP addresses. You can share the xref:runtime-manager::managing-applications-on-cloudhub#static-ips[static IP] address assigned to your endpoint application with your partners for them to allowlist the IP address, allowing the application to connect with their server.
 
 == See Also
 

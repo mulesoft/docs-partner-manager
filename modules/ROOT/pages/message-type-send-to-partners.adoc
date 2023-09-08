@@ -2,7 +2,7 @@
 
 :message-type: Send to Partners
 
-The Send to Partners message type defines the way in which Anypoint Partner Manager transforms the outbound transactions sent from your organization to your partner. You can define the CSV, EDIFACT, JSON, X12, or XML format for a Send to Partners message type..
+The Send to Partners message type defines the way in which Anypoint Partner Manager transforms the outbound transactions sent from your organization to your partner. You can define the CSV, EDIFACT, JSON, X12, or XML format for a Send to Partners message type.
 
 == CSV
 
@@ -71,7 +71,7 @@ When using the customized EDI schema, you can assign a custom name to the messag
 | Message type name that Partner Manager automatically generates from the schema filename. You can modify this name.  | |Yes
 |===
 
-For an example that shows how to customize an X12 schema, see https://www.mulesoft.com/exchange/works.integration/b2b-x12-custom-schema-example[Customize EDI X12 Schema for B2B Integrations] in Anypoint Exchange.
+For an example that shows how to customize an X12 schema, see https://www.mulesoft.com/exchange/works.integration/b2b-x12-custom-schema-example[Customize EDI X12 Schema for B2B Integrations^] in Anypoint Exchange.
 
 == See Also
 

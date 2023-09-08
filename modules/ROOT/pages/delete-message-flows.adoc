@@ -12,7 +12,7 @@ To delete a message flow:
 . In the navigation menu, select *Message Flows*.
 . Select the message flow to delete and click *Delete* in the upper right of the screen.
 
-Transmissions already sent by a message flow that is subsequently deleted remain recorded in the *Activity page*. Links to the stored payloads (such as the original B2B message), TA1 acknowledgements, the transformed payload, and so on, continue to work.
+Transmissions already sent by a message flow that is subsequently deleted remain recorded in the *Activity page*. Links to the stored payloads (such as the original B2B message), TA1 acknowledgments, the transformed payload, and so on, continue to work.
 
 == See Also
 

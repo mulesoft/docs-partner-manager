@@ -21,8 +21,8 @@ This information appears in the Activity section when one of the following occur
 
 * Your partner sends you a valid X12 file but you have not configured a message flow that can accept it.
 
-* You do not recognize the partner because they are not set up by you in Anypoint Partner Manager.
+* You do not recognize the partner because you did not set them up in Anypoint Partner Manager.
 
 == Solution
 
-If you encounter any of these situations, verify that your partner is sending valid X12 formatted files that align with the message flows that you created and associated with that partner.
+If you encounter any of these situations, verify that your partner is sending valid X12-formatted files that align with the message flows that you associated with that partner.

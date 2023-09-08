@@ -44,7 +44,7 @@ Add the following settings for the new partner, either now or later on:
 | Partner's digital certificates, such as X.509 certificates.
 | Click *New* in the *Certificates* section.
 |
-| Partner-specific endpoints to use for sending and receiving messages to and from your partner, including acknowledgement endpoints. If you plan to use host endpoints only, you don't need to create partner-specific endpoints.
+| Partner-specific endpoints to use for sending and receiving messages to and from your partner, including acknowledgment endpoints. If you plan to use host endpoints only, you don't need to create partner-specific endpoints.
 | Click *New* in the *Endpoints* section.
 | xref:create-endpoint.adoc[Creating Endpoints]
 | Acknowledgements, validations, and control numbers for each message format that the partner uses. For EDIFACT and X12, you can also configure character sets and separators (send formats only).

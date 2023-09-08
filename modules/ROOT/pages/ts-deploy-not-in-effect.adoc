@@ -37,5 +37,6 @@ When the deployment is successfully completed, Anypoint partner manager responds
 
 === Wait for the Synchronization Window to Complete for All Changes
 
-Your runtime B2B integration applications executing on your Mule runtimes receives the latest configuration from the Anypoint Partner Manager control plane at five-minute intervals.
-Depending on when you made the configuration changes to your message flows in Partner Manager and deployed them, it can take up to five minutes for changes to take effect on the runtime.
+Your runtime B2B integration applications executing on your Mule runtimes receive the latest configuration from the Anypoint Partner Manager control plane at five-minute intervals.
+
+Depending on when you made the configuration changes to your message flows in Partner Manager and deployed them, your changes can take up to five minutes to take effect on the runtime.

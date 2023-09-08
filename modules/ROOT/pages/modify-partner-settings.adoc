@@ -1,6 +1,6 @@
 = Modifying Partner Settings
 
-You can modify a partner's settings including contact details, identifiers, digital certificates, acknowledgements, control numbers, and more.
+You can modify a partner's settings including contact details, identifiers, digital certificates, acknowledgments, control numbers, and more.
 
 To modify a partner's settings:
 
