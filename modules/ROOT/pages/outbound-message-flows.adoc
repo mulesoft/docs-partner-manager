@@ -6,23 +6,24 @@ The following diagram shows the components of an outbound message flow:
 
 image::pm-outbound-message-flow.png[Outbound message flow]
 
+[%header%autowidth.spread]
 |===
-|Setting |Description |Supported Formats or Protocols
+|Callout |Setting |Description |Supported Formats or Protocols
 
-|Receiving endpoint |Endpoint where the host receives transmissions from the backend a|
+|image:pm-annotation-1.png[] |Receiving endpoint |Endpoint where the host receives transmissions from the backend a|
 * FTP
 * HTTP
 * HTTPS
 * SFTP
 
-|Source message type |Message type of the message received from the backend a|
+|image:pm-annotation-2.png[] |Source message type |Message type of the message received from the backend a|
 * CSV 
 * JSON
 * XML
 
-|Transform |DataWeave map used to transform the JSON or XML formats to EDIFACT or X12 a| N/A
+|image:pm-annotation-3.png[]|Transform |DataWeave map used to transform the JSON or XML formats to EDIFACT or X12 a| N/A
 
-|Target message type |
+|image:pm-annotation-4.png[]|Target message type |
 Message type to which to transform the input message
 a|
 * CSV
@@ -31,7 +32,7 @@ a|
 * X12
 * XML
 
-|Target endpoint |
+|image:pm-annotation-5.png[] |Target endpoint |
 Partner endpoint to which to send the transformed message
  a|
 * AS2

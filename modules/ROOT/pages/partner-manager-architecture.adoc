@@ -17,27 +17,27 @@ image::pm-high-level-arch.png[Partner Manager high-level architecture]
 [%header%autowidth.spread]
 |===
 |Callout |Name |Description
-|image:pm-arch-diagram-1.png[]
+|image:pm-annotation-1.png[]
 |Partner Manager
 |MuleSoft-hosted cloud control plane enabling users to configure partner profiles, build and deploy B2B integration message flows, and monitor B2B transaction activity
 
-|image:pm-arch-diagram-2.png[]
+|image:pm-annotation-2.png[]
 |Receive Endpoint Services
 |Services to receive inbound B2B or EDI messages from partner transport protocols such as AS2 and SFTP or outbound application messages from your organization’s backend systems via HTTP, HTTPS, or SFTP
 
-|image:pm-arch-diagram-3.png[]
+|image:pm-annotation-3.png[]
 |Document Processing Service
 |Core B2B processing engine responsible for parsing, validating, and translating received B2B messages based on configurations and mapping in Partner Manager
 
-|image:pm-arch-diagram-4.png[]
+|image:pm-annotation-4.png[]
 |API Replication Service
 |Tracking service responsible for updating transmissions and transaction activities to the control plane and the payload storage API
 
-|image:pm-arch-diagram-5.png[]
+|image:pm-annotation-5.png[]
 |Send Endpoint Services
 |Services to deliver transformed inbound application messages to internal applications such as ERP, billing, order management via transport protocols like HTTP, HTTPS, or SFTP; or outbound B2B EDI payloads to your partners via AS2, HTTP, HTTPS, or SFTP
 
-|image:pm-arch-diagram-6.png[]
+|image:pm-annotation-6.png[]
 |Payload Storage API
 |API to store B2B payload data in your storage solution
 |===
