@@ -1,14 +1,12 @@
 = Setting up the Partner Manager Environment
-:page-notice-banner-message: The ability to deploy Partner Manager on-premises is deprecated. Plan to deploy Partner Manager to the other available deployment targets, as described in the documentation.
 
-Setting up the Partner Manager environment involves either configuring Partner Manager deployment options or setting up on-premises deployment. In addition, you must configure a payload storage API that provides Partner Manager with a standardized way to connect to your solution for storing transmission content.
+Setting up the Partner Manager environment involves configuring Partner Manager deployment options. In addition, you must configure a payload storage API that provides Partner Manager with a standardized way to connect to your solution for storing transmission content.
 
 Partner Manager uses certificates to establish secure connections with endpoints. You can use CA-signed certificates or upload your own self-signed certificates.
 
 == See Also
 
 * xref:cloudhub-deploy-options.adoc[]
-* xref:deploy-onpremise.adoc[]
 * xref:setup-payload-storage-API.adoc[]
 * xref:certificates.adoc[]
 

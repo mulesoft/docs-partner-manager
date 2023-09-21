@@ -7,8 +7,6 @@ You can undeploy your message flow from either a sandbox or a production environ
 [IMPORTANT]
 During the undeployment process, do not log out of Anypoint Partner Manager or close your browser window.
 
-Before you undeploy message flows, ensure that your on-premises Mule instances, the servers hosting them, and the server group in Anypoint Runtime Manager called `B2BserverGroup` are active and running.
-
 To undeploy a message flow:
 
 . In the navigation menu, select *Message Flows*.

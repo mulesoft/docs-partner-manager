@@ -1,0 +1,17 @@
+Configuring Runtime Fabric Deployment Options
+
+To configure options for deploying Anypoint Runtime Fabric, use the *Partner Manager Settings* page in Anypoint Access Management. Configure Runtime Fabric deployment options for both the sandbox and production environments, including the Mule runtime engine (Mule) version, CloudHub region, Anypoint MQ region, and so on.
+To configure deployment settings for your organization:
+
+. Log in to Anypoint Platform using an account that has the Organization Administrator permission. *(Do you need this permission to view the deployment settings?)*
+. In the navigation bar or the main Anypoint Platform page, click *Access Management*.
+. In the Access Management navigation menu, click *Business Groups*. 
+. Select the business group for which you want toconfigure Partner Manager settings and then click *Partner Manager*.
+. In *General settings*
+** Select a target runtime fabric from the list.
+** Enter
+. Select *Application* and enter the following:
+** Prefix to add to all application names (optional)
+** For each B2B application, enter the replica count, reserved CPU, CPU limit, and allocated memory. *(what are the units for these?)*
+. Select *JMS Connection* and enter
+** Specify whether to deploy HTTP, HTTPS, and AS2 endpoints to a private port. 

@@ -4,9 +4,6 @@ You can delete message flows that no longer serve their purpose, for example, if
 
 Deleting a message flow automatically undeploys the flow. 
 
-[NOTE]
-For on-premises installations, you must xref:deploy-message-flows#undeploy-message-flows[undeploy a message flow] before you can delete it.
-
 To delete a message flow:
 
 . In the navigation menu, select *Message Flows*.

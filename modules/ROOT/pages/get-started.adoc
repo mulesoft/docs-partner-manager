@@ -1,5 +1,4 @@
 = Getting Started with Partner Manager
-:page-notice-banner-message: The ability to deploy Partner Manager on-premises is deprecated. Plan to deploy Partner Manager to the other available deployment targets, as described in the documentation.
 
 Partner Manager provides a simplified, configuration-driven B2B integration solution to manage B2B partner ecosystems. To use Partner Manager, follow these steps:
 
@@ -52,20 +51,9 @@ For more information, see xref:access-management::permissions-by-product.adoc[].
 [[set-up-env]]
 == Set Up the Partner Manager Environment
 
-You can deploy Partner Manager runtime applications to CloudHub 1.0 or you can deploy them on-premises:
+You can deploy Partner Manager runtime applications to CloudHub 1.0 or Runtime Fabric. To configure deployment options, use the *Partner Manager Settings* page in Anypoint Access Management.
 
-* To configure options for deploying to CloudHub, use the *Partner Manager Settings* page in Anypoint Access Management:
-
-+
-For more information, see xref:cloudhub-deploy-options.adoc[].
-+
-* To use Partner Manager on-premises:
-. Install and configure Mule runtime engine (Mule) on-premises.
-. Use Anypoint Runtime Manager to register Partner Manager in the appropriate environment.
-. Create a server group to which to add the servers you create.
-
-+
-For more information, see xref:deploy-onpremise.adoc[].
+For more information, see xref:cloudhub-deploy-options.adoc[] or rft-deploy-options[].
 
 [[payload-storage-api]]
 == Set Up the Payload Storage API

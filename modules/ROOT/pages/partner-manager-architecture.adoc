@@ -1,5 +1,4 @@
 = Partner Manager Architecture
-:page-notice-banner-message: The ability to deploy Partner Manager on-premises is deprecated. Plan to deploy Partner Manager to the other available deployment targets, as described in the documentation.
 
 With Anypoint Partner Manager, you can deploy B2B integration message flows with your partners, either to your own hosted Mule instances or to a MuleSoft-hosted CloudHub iPaaS platform.
 

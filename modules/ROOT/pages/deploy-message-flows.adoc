@@ -6,8 +6,6 @@ After Partner Manager validates the message flow configuration elements, deploy 
 
 == Deploy Message Flows
 
-In non-CloudHub environments, minimize the impact of the service interruption caused by deploying a message flow by deploying outside of your regular business hours. This issue does not exist on CloudHub because CloudHub provides a zero-downtime update of the AS2 endpoint application.
-
 To deploy a message flow, click the *Deploy* button.
 
 The message flow is deployed to Mule runtime engine, enabling you to:

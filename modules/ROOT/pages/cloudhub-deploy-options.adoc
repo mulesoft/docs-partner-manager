@@ -5,8 +5,22 @@ To configure options for deploying Partner Manager to CloudHub 1.0, use the *Par
 To access the deployment settings for your organization:
 
 . In Anypoint Platform, navigate to *Access Management*.
-. From Access Management navigation menu, select *Settings > Partner Manager*. +
+. From the Access Management navigation menu, select *Settings > Partner Manager*. +
 On the *Partner Manager Settings* page, you can configure the following settings:
+
+[%header%autowidth.spread]
+|===
+| Setting | Description | Default
+| Runtime Version | Mule version to use to deploy your application. | Use latest version
+| CloudHub Region | To change this region, select the new region before you deploy your first message flow. The CloudHub region you specify for the first deployment becomes the default setting for subsequent deployments.
+
+|  Default is automically retrieved from the business group's *Runtime Manager General Settings* region.
+| Anypoint MQ Region | Anypoint MQ region, which you can't change | Automatically assigned based on the CloudHub region
+| Automatically restart app when not responding | Directs Mule to automatically restart your application when the monitoring system discovers an issue | Unchecked
+| Each B2B endpoint (inbound, outbound, and ack) | Generic Mule app deployed to the runtime for each endpoint protocol and direction (receive or send) combination. Each runtime app requires a minimum of 0.1 vCore. |
+
+|===
+
 
 == Mule Version Setting
 
