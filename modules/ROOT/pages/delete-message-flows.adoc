@@ -1,6 +1,6 @@
 == Deleting Message Flows
 
-You can delete message flows that no longer serve their purpose, for example, if your relationship with your partner changes. You can delete message flows from a sandbox or production environment.
+You can delete message flows that no longer serve their purpose, for example, if your relationship with your partner changes. You can delete message flows from any environment.
 
 Deleting a message flow automatically undeploys the flow. 
 

@@ -12,6 +12,4 @@ Your environment is experiencing temporary system or connectivity issues between
 
 * Verify that your deployment server group *B2BServerGroup* is in the `Running` state.
 
-* For on-premises deployments, attempt to redeploy the message flow, wait 10 minutes, and try again.
-
 If the error persists, create a MuleSoft support ticket, including the error reference number.

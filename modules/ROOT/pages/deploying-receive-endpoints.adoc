@@ -1,6 +1,6 @@
 = Deploying AS2, HTTP, and HTTPS Receive Endpoints
 
-You can deploy AS2 receive, HTTP receive, and HTTPS receive endpoints on a public port, private port, or on-premises.
+You can deploy AS2 receive, HTTP receive, and HTTPS receive endpoints on a public or private port.
 
 == Deploy to CloudHub on a Public Port
 
@@ -64,12 +64,6 @@ Given these example values:
 Your administrator can add a URL mapping rule in the DLB settings like the following to forward incoming requests to the runtime application within your Anypoint VPC:
 
 image::url-mapping-rules-http.png[URL mapping rule for the HTTP endpoint in this example]
-
-== Deploy to an On-premises Mule Instance
-
-AS2 and HTTP receive endpoints deployed to on-premises Mule instances are deployed over plain HTTP. Using a load balancer exposes these endpoints to consumers as HTTPS endpoints.
-
-For information about setting up the on-premises environment, see xref:deploy-onpremise.adoc[Setting up On-premises Deployment].
 
 == See Also
 
