@@ -18,6 +18,10 @@ Members of your organization can use Partner Manager to perform a variety of fun
 * Managing the activity of the business transactions with your partners
 * Optimizing backend services and performance
 
+Watch the Partner Manager Product Spotlight video to see a quick overview of Partner Manager.
+
+include::_partials/partner-manager-spotlight-video.html[]
+
 == Before You Begin Using Partner Manager
 
 Before you begin using Partner Manager, you must have:
