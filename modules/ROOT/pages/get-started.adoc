@@ -3,7 +3,7 @@
 Partner Manager provides a simplified, configuration-driven B2B integration solution to manage B2B partner ecosystems. To use Partner Manager, follow these steps:
 
 . <<assign-permissions,Assign permissions to Partner Manager users>>.
-. <<set-up-env,Set up the Partner Manager environment>>.
+. <<deployment-settings,Configure Partner Manager Deployment Settings>>.
 . <<payload-storage-api,Set up the Payload Storage API>>.
 . <<configure-host-profile,Configure a host profile>>.
 . <<configure-partners,Configure a profile for each of your partners>>.
@@ -16,7 +16,7 @@ Partner Manager provides a simplified, configuration-driven B2B integration solu
 [[assign-permissions]]
 == Assign Permissions to Partner Manager Users
 
-For each sandbox and production environment, use Anypoint Access Management to assign permissions to each Partner Manager user. You can assign the following permissions:
+For each environment, use Anypoint Access Management to assign permissions to each Partner Manager user. You can assign the following permissions:
 
 *  *Partner Manager Administrator* 
 +
@@ -48,12 +48,12 @@ This access applies even if the user has the Anypoint Platform Org Admin role.
 
 For more information, see xref:access-management::permissions-by-product.adoc[].
 
-[[set-up-env]]
-== Set Up the Partner Manager Environment
+[[deployment-settings]]
+== Configure Partner Manager Deployment Settings
 
-You can deploy Partner Manager runtime applications to CloudHub 1.0 or Runtime Fabric. To configure deployment options, use the *Partner Manager Settings* page in Anypoint Access Management.
+You can deploy Partner Manager runtime applications to either CloudHub or Anypoint Runtime Fabric. To configure deployment options, use the *Partner Manager Settings* page in Anypoint Access Management.
 
-For more information, see xref:cloudhub-deploy-options.adoc[] or rft-deploy-options[].
+For more information, see xref:access-management::deploying-partner-manager.adoc[Deploying Partner Manager].
 
 [[payload-storage-api]]
 == Set Up the Payload Storage API

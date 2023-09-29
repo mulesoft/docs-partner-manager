@@ -12,7 +12,7 @@ image::pm-receive-endpoint-url.png[Example of a runtime application name and ext
 
 You can share the external URL with the partners that send AS2, HTTP, or HTTPS messages to this endpoint.
 
-If your organization uses Anypoint VPC without a dedicated load balancer (DLB), your organization’s platform administrator can configure the necessary xref:runtime-manager::vpc-firewall-rules-concept.adoc[VPC firewall rules] to allow specific partner or third-party connection IP addresses to access the endpoint.
+If your organization uses Anypoint Virtual Private Cloud without a dedicated load balancer (DLB), your organization’s platform administrator can configure the necessary xref:runtime-manager::vpc-firewall-rules-concept.adoc[VPC firewall rules] to allow specific partner or third-party connection IP addresses to access the endpoint.
 
 == Deploy to CloudHub on a Private Port
 
@@ -46,7 +46,7 @@ With this configuration, the external AS2 endpoint URL is `+https://mythical.lb.
 
 The external URL for an HTTPS endpoint is `+https://{DLB-domain}/{Input-path}/{base-path}/{message-type}+`.
 
-For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, the base path you configured for the endpoint is `send2`, and the runtime application name is `b2b-inbound-http-ognq`, then your administrator can add a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your VPC. For example:
+For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, the base path you configured for the endpoint is `send2`, and the runtime application name is `b2b-inbound-http-ognq`, then your administrator can add a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your Anypoint VPC. For example:
 
 image::url-mapping-rules-https.png[URL mapping rules for HTTPS in the DLB settings]
 
