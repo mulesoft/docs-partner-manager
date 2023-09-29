@@ -20,7 +20,9 @@ Members of your organization can use Partner Manager to perform a variety of fun
 
 Watch the Partner Manager Product Spotlight video to see a quick overview of Partner Manager.
 
+++++
 include::_partials/partner-manager-spotlight-video.html[]
+++++
 
 == Before You Begin Using Partner Manager
 
