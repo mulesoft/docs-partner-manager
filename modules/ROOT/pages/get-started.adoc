@@ -46,7 +46,7 @@ This access applies even if the user has the Anypoint Platform Org Admin role.
 ** Has view-only access to transaction activity
 ** Can't view or modify either partner or message flow configurations
 
-For more information, see xref:access-management::permissions-by-product.adoc[].
+For more information, see xref:access-management::permissions-by-product.adoc[Permissions Available in Anypoint Platform].
 
 [[deployment-settings]]
 == Configure Partner Manager Deployment Settings

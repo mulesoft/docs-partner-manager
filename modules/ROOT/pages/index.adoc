@@ -23,7 +23,7 @@ Members of your organization can use Partner Manager to perform a variety of fun
 Before you begin using Partner Manager, you must have:
 
 * An Anypoint Platform user account with the Partner Manager entitlement
-* The Partner Manager Administrator role, which assigns permission levels to all users who need access to B2B message flows in their environments (production or sandbox)
+* The `Partner Manager Administrator` role, which can assign permission levels to all users who need access to B2B message flows in their environments (sandbox or production)
 * The required Mule vCore capacity to manage your B2B transaction workload needs
 * Storage for the B2B transmission payloads you send or receive, such as a database, Amazon S3, Azure Blob Storage, and so on
 * Licenses for the AS2, EDIFACT, or X12 connectors used in your B2B message flows
@@ -101,7 +101,7 @@ Defines the structure of the transactions that the host sends to the backend thr
 +
 Source at Host 
 +
-Defines the structure of the transactions that the backend sends to the host through outbound message flows. You can define custom message attributes for this message type.
+Defines the structure of the transactions that the backend sends to the host through outbound message flows. You can define custom message attributes for this message type. You can define <<custom-attributes,custom message attributes>> for this message type.
 +
 * Send to Partners
 +

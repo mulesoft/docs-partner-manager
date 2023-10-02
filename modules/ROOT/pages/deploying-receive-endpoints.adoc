@@ -21,7 +21,7 @@ To deploy an AS2, HTTP, or HTTPS receive endpoint with the private port configur
 * Deploy a message flow that includes the receive endpoint.
 * Set CloudHub to automatically deploy newly created endpoints to a private port, as described in xref:cloudhub-deploy-options.adoc[Configuring CloudHub Deployment Options].
 
-Endpoints with the private port configuration enabled are deployed to the private HTTPS port `8092`. You can view the runtime application name, internal URL, and external URL for a deployed endpoint from the endpoint details page, which you can access from the host page (AS2 endpoints) or partner page (HTTP or HTTPS endpoints), or from a message flow.
+Endpoints with the private port configuration enabled are deployed to the private HTTPS port `8092`. You can view the runtime application name, internal URL, and external URL for a deployed endpoint from the endpoint details page, which you can access from the <*host*> page (AS2 endpoints) or partner page (HTTP or HTTPS endpoints), or from a message flow.
 
 Once an endpoint is deployed, follow these steps:
 

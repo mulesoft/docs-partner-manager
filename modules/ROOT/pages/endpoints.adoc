@@ -61,7 +61,7 @@ The endpoints for the transport protocols are always managed within a single gen
 |SFTP |Send |b2b-outbound-sftp-
 |===
 
-If you deploy to CloudHub, you can assign static IP addresses to the endpoint applications that connect to external systems from Runtime Manager, as long as your organization or your partners require allowlisting IP addresses. You can share the xref:runtime-manager::managing-applications-on-cloudhub#static-ips[static IP] address assigned to your endpoint application with your partners for them to allowlist the IP address, allowing the application to connect with their server.
+If you deploy to CloudHub, you can assign static IP addresses to the endpoint applications that connect to external systems from Runtime Manager, if your organization or your partners require allowlisting IP addresses. You can share the xref:runtime-manager::managing-applications-on-cloudhub#static-ips[static IP] address assigned to your endpoint application with your partners for them to allowlist the IP address, allowing the application to connect with their server.
 
 == See Also
 
