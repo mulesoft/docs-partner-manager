@@ -1,6 +1,5 @@
 = Send Endpoints
 
-
 Anypoint Partner Manager send endpoints have the following functions:
 
 * Send to Partners endpoints act as target endpoints in outbound message flows to which transformed messages are sent to partners either directly or via third-party connections.

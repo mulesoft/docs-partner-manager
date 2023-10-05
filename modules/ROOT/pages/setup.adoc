@@ -4,7 +4,7 @@ Setting up the Anypoint Partner Manager environment involves the following:
 
 * Configuring Partner Manager deployment settings.
 +
-You can deploy Partner Manager to either CloudHub or Anypoint Runtime Fabric, and you can configure separate deployment settings for each business group environment. Configure Partner Manager deployment settings in Access Management, as described in xref:access-management::deploying-partner-manager.adoc[Deploying Partner Manager]. To configure these settings, you must have the `Partner Manager Administrator` permission.
+You can deploy Partner Manager to either CloudHub or Anypoint Runtime Fabric, and you can configure separate deployment settings for each business group environment. Configure Partner Manager deployment settings in Access Management, as described in xref:deploy-partner-manager.adoc[Deploying Partner Manager]. To configure these settings, you must have the `Partner Manager Administrator` permission.
 +
 * Configuring a payload storage API.
 +
@@ -12,6 +12,6 @@ You must configure a payload storage API that provides Partner Manager with a st
 +
 * Uploading your own, self-signed certificates, if you want to use them to establish secure connections with endpoints.  
 +
-You can use CA-signed certificates instead of your own certiicates.
+You can use CA-signed certificates instead of your own self-signed certificates.
 +
 For more information, see xref:certificates.adoc[]. 

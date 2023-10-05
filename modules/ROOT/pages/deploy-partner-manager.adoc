@@ -1,0 +1,34 @@
+= Deploying Partner Manager
+
+You can deploy Anypoint Partner Manager to either CloudHub or Anypoint Runtime Fabric. 
+
+To configure Partner Manager deployment settings, use the *Partner Manager Settings* page in Access Management. You can configure separate deployment settings for each business group environment. You must have the `Partner Manager Administrator` permission to configure or modify deployment settings.
+
+== Deploy Partner Manager to a New Environment 
+
+Follow these steps to deploy Partner Manager if there is no Partner Manager configuration in any environment in a business group or if you want to configure settings for the first environment in a business group:
+
+include::partial$access-mgmt-steps-partial.adoc[]
+
+. Click *Partner Manager* and then click *Configure new environment*.
+. Select the environment type and deployment target type.
+. In the *Configure a Partner Manager environment* window, configure either xref:cloudhub-deployment-settings.adoc[CloudHub deployment settings] or xref:rtf-deployment-settings.adoc[Runtime Fabric deployment settings].
+
+== Deploy Partner Manager to an Existing Environment
+
+Follow these steps to deploy Partner Manager to an existing business group environment:
+
+include::partial$access-mgmt-steps-partial.adoc[]
+
+. Click *Partner Manager*.
+. In the *Configure a Partner Manager environment* window, configure settings for either xref:cloudhub-deployment-settings.adoc[deploying Partner Manager to CloudHub] or xref:rtf-deployment-settings.adoc[deploying Partner Manager to Runtime Fabric].
+
+== Modify Partner Manager Deployment Settings
+
+You can modify all Partner Manager deployment settings for an environment if you haven't deployed any message flows in that environment.
+
+If you have deployed message flows, you can modify JMS settings for Runtime Fabric deployments. To modify other deployment settings:
+
+. Undeploy all message flows in the environment.
+. Modify the deployment settings.
+. Redeploy the message flows.

@@ -39,12 +39,13 @@ a| Host, partner, or third-party connection that owns the endpoint.
 
 | Private port (when deploying to VPC)
 a|
-* When enabled, the HTTP receive endpoint runtime application deploys to the private port `8092` in your Anypoint VPC.
+Applies when using Anypoint Virtual Private Cloud (Anypoint VPC) with CloudHub deployments:
+
+* When enabled, the AS2 receive endpoint application deploys to the private port `8092` in your xref:runtime-manager::virtual-private-cloud.adoc[Anypoint VPC]. You can manage the access control to the endpoint via the Anypoint VPC and dedicated load balancer settings.
 +
-You can manage the access control to the endpoint via the Anypoint VPC and dedicated load balancer settings.
-* When disabled, the HTTP receive endpoint application deploys to the public port `8082` by default.
+* When disabled, the AS2 receive endpoint application deploys to the public port `8082` by default. 
 +
-You can access the endpoint URL directly from the internet.
+You can access the endpoint URL directly over the internet.
 |
 
 | Manage with API manager
@@ -58,6 +59,17 @@ When you create this API in API Manager:
 
 NOTE: Using this feature requires an API Manager license.
 |
+
+|HTTPS
+a|Applies to CloudHub deployments.
+
+Indicates whether Partner Manager deploys this endpoint as an HTTPS or HTTP listener:
+
+* If enabled (default), Partner Manager deploys this endpoint as an HTTPS listener.
+* If disabled, Partner Manager deploys this endpoint as an HTTP listener.
+
+When deploying to Anypoint Runtime Fabric, Partner Manager always deploys this endpoint as an HTTP listener. With a Runtime Fabric deployment, you must configure an Ingress controller to provide external consumers with an HTTPS endpoint. For more information, see xref::runtime-fabric:custom-ingress-configuration.adoc[Configuring Ingress for Runtime Fabric].
+|x
 
 |URL
 a|HTTP or HTTPS address where you receive outbound source messages from backend applications or inbound B2B messages from your partners. Partner Manager automatically generates this ID after the first message flow that uses the endpoint is deployed.

@@ -1,6 +1,6 @@
 = Partner Manager Architecture
 
-With Anypoint Partner Manager, you can deploy B2B integration message flows with your partners *Vijay, What does the "with your partners" phrase mean here? Can we remove it?*, to a MuleSoft-hosted CloudHub iPaaS platform or an Anypoint Runtime Fabric...
+With Anypoint Partner Manager, you can deploy B2B integration message flows to a MuleSoft-hosted CloudHub iPaaS platform or an Anypoint Runtime Fabric...
 
 The functional features and user experience in configuring B2B integrations with Partner Manager are deployment-target agnostic; however, differences in the underlying architecture when implementing the functionality in the runtime occur.
 
