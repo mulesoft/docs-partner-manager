@@ -49,7 +49,7 @@ Indicates whether Partner Manager deploys the AS2 receive endpoint as an HTTPS l
 * If enabled (default), Partner Manager deploys the AS2 receive endpoint as an HTTPS listener.
 * If disabled, Partner Manager deploys the AS2 receive endpoint as an HTTP listener.
 
-When deploying to Anypoint Runtime Fabric, Partner Manager always deploys the AS2 receive endpoint as an HTTP listener. With a Runtime Fabric deployment, you must configure an Ingress controller to provide external consumers with an HTTPS endpoint. For more information, see xref::runtime-fabric:custom-ingress-configuration.adoc[Configuring Ingress for Runtime Fabric].
+When deploying to Anypoint Runtime Fabric, Partner Manager always deploys the AS2 receive endpoint as an HTTP listener. With this type of deployment, you must configure an Ingress controller to provide external consumers with an HTTPS endpoint. For more information, see xref:runtime-fabric::custom-ingress-configuration.adoc[Configuring Ingress for Runtime Fabric].
 | x
 
 |Enforce security level

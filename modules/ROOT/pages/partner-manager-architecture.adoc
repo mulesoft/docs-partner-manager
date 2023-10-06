@@ -56,5 +56,5 @@ When deploying B2B integration message flows to Runtime Fabric...
 image::partner-manager-rtf-deployment.png[Architecture that shows a Runtime Fabric deployment]
 
 == See Also
-* xref:access-management::deploying-partner-manager.adoc[Deploying Partner Manager]
+* xref:deploy-partner-manager.adoc[]
 * xref:message-flows.adoc[]

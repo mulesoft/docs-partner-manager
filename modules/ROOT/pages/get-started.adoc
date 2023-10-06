@@ -53,7 +53,7 @@ For more information, see xref:access-management::permissions-by-product.adoc[Pe
 
 You can deploy Partner Manager runtime applications to either CloudHub or Anypoint Runtime Fabric. To configure deployment options, use the *Partner Manager Settings* page in Anypoint Access Management.
 
-For more information, see xref:access-management::deploying-partner-manager.adoc[Deploying Partner Manager].
+For more information, see xref:deploy-partner-manager.adoc[].
 
 [[payload-storage-api]]
 == Set Up the Payload Storage API

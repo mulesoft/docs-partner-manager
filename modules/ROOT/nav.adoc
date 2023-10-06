@@ -4,6 +4,7 @@
 * xref:get-started.adoc[Getting Started with Partner Manager]
 * xref:partner-manager-architecture.adoc[Partner Manager Architecture]
 * xref:setup.adoc[Setting up the Partner Manager Environment]
+  ** xref:deploy-partner-manager.adoc[]
   ** xref:setup-payload-storage-API.adoc[Configuring a Payload Storage API]
   ** xref:certificates.adoc[Certificate Settings]
 * xref:configure-host.adoc[Configuring and Managing a Host Profile]

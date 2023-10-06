@@ -1,4 +1,4 @@
-= Configuring Runtime Fabric Deployment Settings for Partner Manager
+= Configuring Runtime Fabric Deployment Settings
 
 You can deploy Partner Manager to an Anypoint Runtime Fabric configured with Amazon Elastic Kubernetes Service (EKS).
 

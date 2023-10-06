@@ -6,12 +6,12 @@ To configure Partner Manager deployment settings, use the *Partner Manager Setti
 
 == Deploy Partner Manager to a New Environment 
 
-Follow these steps to deploy Partner Manager if there is no Partner Manager configuration in any environment in a business group or if you want to configure settings for the first environment in a business group:
+You must configure Partner Manager settings for a new environment if there is no Partner Manager configuration for any environment in a particular business group:
 
 include::partial$access-mgmt-steps-partial.adoc[]
 
 . Click *Partner Manager* and then click *Configure new environment*.
-. Select the environment type and deployment target type.
+. Select the environment and deployment target types.
 . In the *Configure a Partner Manager environment* window, configure either xref:cloudhub-deployment-settings.adoc[CloudHub deployment settings] or xref:rtf-deployment-settings.adoc[Runtime Fabric deployment settings].
 
 == Deploy Partner Manager to an Existing Environment
@@ -21,14 +21,19 @@ Follow these steps to deploy Partner Manager to an existing business group envir
 include::partial$access-mgmt-steps-partial.adoc[]
 
 . Click *Partner Manager*.
-. In the *Configure a Partner Manager environment* window, configure settings for either xref:cloudhub-deployment-settings.adoc[deploying Partner Manager to CloudHub] or xref:rtf-deployment-settings.adoc[deploying Partner Manager to Runtime Fabric].
+. In the *Configure a Partner Manager environment* window, configure seither xref:cloudhub-deployment-settings.adoc[CloudHub deployment settings] or xref:rtf-deployment-settings.adoc[Runtime Fabric deployment settings].
 
 == Modify Partner Manager Deployment Settings
 
 You can modify all Partner Manager deployment settings for an environment if you haven't deployed any message flows in that environment.
 
-If you have deployed message flows, you can modify JMS settings for Runtime Fabric deployments. To modify other deployment settings:
+If you have deployed message flows to that environment, you can modify the JMS settings for Runtime Fabric deployments. To modify other deployment settings:
 
 . Undeploy all message flows in the environment.
 . Modify the deployment settings.
 . Redeploy the message flows.
+
+== See Also
+
+* xref:deploy-message-flows.adoc[]
+* xref:undeploy-message-flows.adoc[Undeploying Message Flows]

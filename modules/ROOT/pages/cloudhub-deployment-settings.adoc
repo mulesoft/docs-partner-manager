@@ -1,4 +1,4 @@
-= Configuring CloudHub Deployment Settings for Partner Manager
+= Configuring CloudHub Deployment Settings
 
 To configure settings for deploying Anypoint Partner Manager to CloudHub, access the business unit and environment for which you want to deploy Partner Manager and then follow these steps:
 
