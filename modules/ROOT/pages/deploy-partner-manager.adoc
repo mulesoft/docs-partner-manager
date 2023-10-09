@@ -1,10 +1,10 @@
-= Deploying Partner Manager
+= Deploying Partner Manager Runtime Apps
 
-You can deploy Anypoint Partner Manager to either CloudHub or Anypoint Runtime Fabric. 
+You can deploy Anypoint Partner Manager runtime apps to either CloudHub or Anypoint Runtime Fabric. 
 
 To configure Partner Manager deployment settings, use the *Partner Manager Settings* page in Access Management. You can configure separate deployment settings for each business group environment. You must have the `Partner Manager Administrator` permission to configure or modify deployment settings.
 
-== Deploy Partner Manager to a New Environment 
+== Deploy Partner Manager Runtime Apps to a New Environment 
 
 You must configure Partner Manager settings for a new environment if there is no Partner Manager configuration for any environment in a particular business group:
 
@@ -14,7 +14,7 @@ include::partial$access-mgmt-steps-partial.adoc[]
 . Select the environment and deployment target types.
 . In the *Configure a Partner Manager environment* window, configure either xref:cloudhub-deployment-settings.adoc[CloudHub deployment settings] or xref:rtf-deployment-settings.adoc[Runtime Fabric deployment settings].
 
-== Deploy Partner Manager to an Existing Environment
+== Deploy Partner Manager Runtime Apps to an Existing Environment
 
 Follow these steps to deploy Partner Manager to an existing business group environment:
 
@@ -27,7 +27,13 @@ include::partial$access-mgmt-steps-partial.adoc[]
 
 You can modify all Partner Manager deployment settings for an environment if you haven't deployed any message flows in that environment.
 
-If you have deployed message flows to that environment, you can modify the JMS settings for Runtime Fabric deployments. To modify other deployment settings:
+If you've deployed message flows to an environment, you can change the following settings:
+
+* For CloudHub deployments, you can change all settings except for the deployment target (CloudHub to Runtime Fabric) and deployment region.
+
+* For Runtime Fabric deployments, you can change all settings except for the deployment target (Runtime Fabric to CloudHub), application name prefix, and Anypoint MQ region.
+
+To modify other deployment settings:
 
 . Undeploy all message flows in the environment.
 . Modify the deployment settings.

@@ -50,21 +50,6 @@ For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, th
 
 image::url-mapping-rules-https.png[URL mapping rules for HTTPS in the DLB settings]
 
-=== External URL and Mapping Rules for an HTTP Receive Endpoint
-
-The external URL for an HTTP Receive from Partners or Source at Host endpoint is `+http://{DLB-domain}/{Input-path}/{base-path}/{message-type}+`, where the partner supplies the values for `{DLB-domain}` and `{Input-path}`, the value for `{base-path}` is obtained from the endpoint configuration, and the value for `{message-type}` is obtained from the configuration of the associated message flow.
-
-Suppose you configure an HTTP Receive from Partners endpoint to use in an inbound message flow. In this example, the name of your DLB domain is `mythical.lb.anypointdns.net`, the input path is `apm/inbound`, the base path of the endpoint is `receive`, the message type for the message flow is `pacific-purchase-order`, and the runtime application name is `b2b-inbound-http-ognq`.
-
-Given these example values:
-
-* The external URL for the endpoint is `+http://mythical.lb.anypointdns.net/apm/inbound/receive/+`.
-* Your partner sends the application JSON and XML messages to your inbound message flow at `+https://mythical.lb.anypointdns.net/apm/inbound/receive/pacific-purchase-order+`.
-
-Your administrator can add a URL mapping rule in the DLB settings like the following to forward incoming requests to the runtime application within your Anypoint VPC:
-
-image::url-mapping-rules-http.png[URL mapping rule for the HTTP endpoint in this example]
-
 == See Also
 
 * xref:create-endpoint.adoc[Creating Endpoints]

@@ -27,7 +27,10 @@ To configure settings for deploying Partner Manager to Runtime Fabric, access th
 | Deployment Target Type | Target type for your Partner Manager deployment. Select *Runtime Fabric*. | CloudHub 1.0
 | Runtime Fabric | Name of the Runtime Fabric instance to use as your deployment target.  | 
 | Runtime Version | Mule runtime engine version to run your Runtime Fabric instance.| 4.4.0
-| Anypoint MQ Region | Region where Anypoint MQ is deployed.  | US East (N. Virginia)
+| Anypoint MQ Region | Region where Anypoint MQ is deployed. 
+{sp} +
+{sp} +
+When users replay transmission when Partner Manager is deployed to Runtime Fabric, Partner Manager sends the associated transmission IDs to an Anypoint MQ queue. The document processing service app running in your Runtime Fabric reads the transmission IDs from Anypoint MQ to start reprocessing the transmission within your runtime applications. No transaction payload is processed via Anypoint MQ.  | US East (N. Virginia)
 | Enforce deploying replicas across nodes | Directs Runtime Fabric to enforce the deployment of Partner Manager application instances across different nodes. | Selected
 | Use persistent object store | Specifies that Partner Manager application instances must use a persistent object store. This value is always selected and you can't modify it. | Selected
 |===

@@ -4,7 +4,7 @@ Setting up the Anypoint Partner Manager environment involves the following:
 
 * Configuring Partner Manager deployment settings.
 +
-You can deploy Partner Manager to either CloudHub or Anypoint Runtime Fabric, and you can configure separate deployment settings for each business group environment. Configure Partner Manager deployment settings in Access Management, as described in xref:deploy-partner-manager.adoc[Deploying Partner Manager].
+You can deploy Partner Manager to either CloudHub or Anypoint Runtime Fabric, and you can configure separate deployment settings for each business group environment. Configure Partner Manager deployment settings in Access Management, as described in xref:deploy-partner-manager.adoc[].
 +
 * Configuring a payload storage API.
 +
