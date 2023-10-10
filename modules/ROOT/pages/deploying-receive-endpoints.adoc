@@ -30,7 +30,7 @@ Once an endpoint is deployed, follow these steps:
 
 == Deploy to Runtime Fabric
 
-When you deplloy message flows to Anypoint Runtime Fabric, Partner Manager uses Anypoint MQ queues between processing stages to add additional reliability to B2B message processing.
+When you deploy message flows to Anypoint Runtime Fabric, Partner Manager uses Anypoint MQ queues between processing stages to add additional reliability to B2B message processing.
 
 == External URLs and Mapping Rules for Deployed Receive Endpoints
 
