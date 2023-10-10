@@ -21,11 +21,11 @@ Follow these steps to deploy Partner Manager to an existing business group envir
 include::partial$access-mgmt-steps-partial.adoc[]
 
 . Click *Partner Manager*.
-. In the *Configure a Partner Manager environment* window, configure seither xref:cloudhub-deployment-settings.adoc[CloudHub deployment settings] or xref:rtf-deployment-settings.adoc[Runtime Fabric deployment settings].
+. In the *Configure a Partner Manager environment* window, configure either xref:cloudhub-deployment-settings.adoc[CloudHub deployment settings] or xref:rtf-deployment-settings.adoc[Runtime Fabric deployment settings].
 
 == Modify Partner Manager Deployment Settings
 
-You can modify all Partner Manager deployment settings for an environment if you haven't deployed any message flows in that environment.
+You can modify all Partner Manager deployment settings for an environment if you haven't deployed any message flows to that environment.
 
 If you've deployed message flows to an environment, you can change the following settings:
 
