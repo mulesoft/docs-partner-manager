@@ -58,7 +58,7 @@ To successfully route inbound messages that use an HTTP Receive from Partners en
 For example, suppose you have the following scenario in a CloudHub deployment:
 
 ** The base URL of the HTTP or HTTPS Receive from Partners endpoint is `+https://b2b-inbound-http-abcd.us-e2.cloudhub.io:443/receive1/+`.
-** The expected message type ID for the inbound message is `custom-po`
+** The expected message type ID for the inbound message is `custom-po`.
 +
 In this case, your partner should post the message to the `+https://b2b-inbound-http-abcd.us-e2.cloudhub.io:443/receive1/custom-po+` URL.
 

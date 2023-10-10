@@ -51,7 +51,7 @@ When users replay transmissions when Partner Manager is deployed to Runtime Fabr
 * *Reserved CPU*: 100m
 * *CPU Limit*: 500m
 * *Memory*: 1000Mi
-| B2B Document Processing Service | Reserved CPU space, CPU space limit, and memory capacity for the Partner Manager B2B Docunent Processing Service. a| 
+| B2B Document Processing Service | Reserved CPU space, CPU space limit, and memory capacity for the Partner Manager B2B Document Processing Service. a| 
 
 * *Reserved CPU*: 100m
 * *CPU Limit*: 500m
