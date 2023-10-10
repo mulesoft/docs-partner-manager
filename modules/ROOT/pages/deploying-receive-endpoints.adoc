@@ -28,6 +28,10 @@ Once an endpoint is deployed, follow these steps:
 . Configure URL mapping rules to forward the messages received from your partners to an application, as described in the following sections and in xref:runtime-manager::lb-mapping-rules.adoc[Dedicated Load Balancer Mapping Rules].
 . Have your organization's platform administrator add your partner's IP addresses to a list of allowed addresses in the DLB setting, as described in xref:runtime-manager::lb-allowlists.adoc[Dedicated Load Balancer Allowlists].
 
+== Deploy to Runtime Fabric
+
+When you deplloy message flows to Anypoint Runtime Fabric, Partner Manager uses Anypoint MQ queues between processing stages to add additional reliability to B2B message processing.
+
 == External URLs and Mapping Rules for Deployed Receive Endpoints
 
 The external URLS for receive endpoints deployed to public or private ports vary depending on the endpoint type, DLB domain, and input start_paths. You can share external URLs with your partners.
