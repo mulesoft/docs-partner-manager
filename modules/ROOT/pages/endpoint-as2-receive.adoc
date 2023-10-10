@@ -31,23 +31,25 @@ Create an AS2 Receive from Partners endpoint by configuring these settings on th
 |User-supplied value that describes the purpose of the endpoint.
 |
 
-|Private port (when deploying to VPC)
+|Private port (when deploying to Anypoint VPC)
 a|
-* When enabled, the AS2 receive endpoint application deploys to the private port `8092` in your xref:runtime-manager::virtual-private-cloud.adoc[Anypoint VPC]. You can manage the access control to the endpoint via the Anypoint VPC and dedicated load balancer settings.
-* When disabled, the AS2 receive endpoint application deploys to the public port `8082` by default. You can access the endpoint URL directly over the internet.
+Applies when using Anypoint Virtual Private Cloud (Anypoint VPC) with CloudHub deployments:
 
-{sp}
-{sp}
-This configuration applies only to Anypoint VPC deployments from Partner Manager.
+* When enabled, the AS2 receive endpoint application deploys to the private port `8092` in your xref:runtime-manager::virtual-private-cloud.adoc[Anypoint VPC]. You can manage the access control to the endpoint via the Anypoint VPC and dedicated load balancer settings.
++
+* When disabled, the AS2 receive endpoint application deploys to the public port `8082` by default. 
++
+You can access the endpoint URL directly over the internet.
 |
 | HTTPS
-a| Indicates whether Partner Manager deploys the AS2 receive endpoint as an HTTPS listener service:
+a| Applies to CloudHub deployments.
 
-* If enabled (default), Partner Manager deploys the AS2 receive endpoint as an HTTPS listener service.
+Indicates whether Partner Manager deploys the AS2 receive endpoint as an HTTPS listener:
+
+* If enabled (default), Partner Manager deploys the AS2 receive endpoint as an HTTPS listener.
 * If disabled, Partner Manager deploys the AS2 receive endpoint as an HTTP listener.
 
-This field applies only when deploying to CloudHub. When deploying to on-premises Mule runtimes, Partner Manager always deploys the AS2 receive endpoint as an HTTP listener.
-
+When deploying to Anypoint Runtime Fabric, Partner Manager always deploys the AS2 receive endpoint as an HTTP listener. With this type of deployment, you must configure an Ingress controller to provide external consumers with an HTTPS endpoint. For more information, see xref:runtime-fabric::custom-ingress-configuration.adoc[Configuring Ingress for Runtime Fabric].
 | x
 
 |Enforce security level

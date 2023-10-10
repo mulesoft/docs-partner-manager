@@ -18,7 +18,7 @@ To take advantage of new features, click the *Upgrade deployments* button.
 
 The process of updating all your message flows can take several minutes, depending on the number of message flow configurations and runtime applications in your environment.
 
-When your message flows are deployed to CloudHub, your existing message flows are uninterrupted during the upgrade process.
+When you deploy message flows, your existing message flows are uninterrupted during the upgrade process.
 
 When you deploy message flows to your hosted runtimes, your runtime applications stop when the upgrade process begins and restart when the upgrade completes, resulting in downtime.
 

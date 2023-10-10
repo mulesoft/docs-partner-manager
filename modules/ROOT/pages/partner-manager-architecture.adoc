@@ -1,11 +1,10 @@
 = Partner Manager Architecture
-:page-notice-banner-message: The ability to deploy Partner Manager on-premises is deprecated. Plan to deploy Partner Manager to the other available deployment targets, as described in the documentation.
 
-With Anypoint Partner Manager, you can deploy B2B integration message flows with your partners, either to your own hosted Mule instances or to a MuleSoft-hosted CloudHub iPaaS platform.
+With Anypoint Partner Manager, you can deploy B2B integration message flows to a MuleSoft-hosted CloudHub iPaaS platform or an Anypoint Runtime Fabric instance.
 
 The functional features and user experience in configuring B2B integrations with Partner Manager are deployment-target agnostic; however, differences in the underlying architecture when implementing the functionality in the runtime occur.
 
-When you deploy a configured message flow, Partner Manager automatically transforms the configurations used in the message flow and deploys and updates a set of applications necessary to orchestrate end-to-end B2B processing to the Mule instance. These applications include:
+When you deploy a configured message flow, Partner Manager automatically transforms the configurations used in the message flow. It then deploys and updates a set of applications necessary to orchestrate end-to-end B2B processing to the Mule instance. These applications include:
 
 * Receive endpoint services
 * Document processing service
@@ -44,21 +43,18 @@ image::pm-high-level-arch.png[Partner Manager high-level architecture]
 
 == Partner Manager for CloudHub
 
-When deploying B2B integration message flows to CloudHub 1.0, Anypoint MQ uses queues between processing stages to add additional reliability to B2B message processing.
+When deploying B2B integration message flows to CloudHub, Anypoint MQ uses queues between processing stages to add additional reliability to B2B message processing.
 
 As of the first deployment from Partner Manager, runtime applications deploy to the CloudHub region specified in the business group’s default settings in Runtime Manager by default. Anypoint MQ queues automatically generate during the deployment process in the same or the nearest available region. Any new runtime applications deploy to the same region as the first deployment.
 
-image::partner-manager-cloud-deployment.png[Deploying Partner Manager on CloudHub]
+image::cloudhub-deployment.png[Architecture that shows a CloudHub deployment]
 
-== Partner Manager for On-premises Mule Instances
+== Partner Manager for Runtime Fabric
 
-When deploying B2B integration message flows to your own hosted on-premises Mule instance, the instance uses HTTP calls between processing stages during B2B message processing.
+When deploying message flows to Runtime Fabric, Partner Manager uses ActiveMQ queues (set up and configured by the customer) between processing stages to add additional reliability to B2B message processing. ActiveMQ destinations (queues) are automatically created when the first transaction is processed through the runtime applications. 
 
-Runtime applications deployed to the server group (B2BServerGroup) contain configured data in your data center or private cloud.
-
-image::pm-onprem-deployment.png[Deploying Partner Manager on-premises]
+image::rtf-deployment.png[Architecture that shows a Runtime Fabric deployment]
 
 == See Also
-* xref:deploy-onpremise.adoc[]
-* xref:cloudhub-deploy-options.adoc[]
+* xref:deploy-partner-manager.adoc[]
 * xref:message-flows.adoc[]

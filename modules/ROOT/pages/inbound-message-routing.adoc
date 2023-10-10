@@ -17,6 +17,7 @@ There are no filename restrictions for EDI files.
 ** JSON: `application/json`
 ** X12: `application/EDI-X12` or `text/plain`
 ** XML: `application/xml`
+** CSV: `text/csv`
 
 == Messages That Use an FTP or SFTP Endpoint
 
@@ -36,6 +37,7 @@ Partner Manager routes an inbound non-EDI message based on either the associated
 +
 ** `.json` for JSON files
 ** `.xml` for XML files
+** `*.csv` for CSV files
 
 For example, if the message type is named `custom-po` and it is formatted as XML, the filename should begin with `custom-po_` and end with `.xml`.
 
@@ -49,11 +51,16 @@ To successfully route inbound messages that use an HTTP Receive from Partners en
 ** JSON: `application/json`
 ** X12: `application/EDI-X12` or `text/plain`
 ** XML: `application/xml`
-
+** CSV: `text/csv`
 
 * For non-EDI messages (JSON or XML), includes the message type ID in the relative path of the HTTP request.
 +
-For example, if the base URL of the HTTP or HTTPS Receive from Partners endpoint is `+https://b2b-inbound-http-abcd.us-e2.cloudhub.io:443/receive1/+`, and the expected message type ID for the inbound message is `custom-po`, your partner should post the message to the `+https://b2b-inbound-http-2jyw.us-e2.cloudhub.io:443/receive1/custom-po+` URL.
+For example, suppose you have the following scenario in a CloudHub deployment:
+
+** The base URL of the HTTP or HTTPS Receive from Partners endpoint is `+https://b2b-inbound-http-abcd.us-e2.cloudhub.io:443/receive1/+`.
+** The expected message type ID for the inbound message is `custom-po`.
++
+In this case, your partner should post the message to the `+https://b2b-inbound-http-abcd.us-e2.cloudhub.io:443/receive1/custom-po+` URL.
 
 == See Also
 
