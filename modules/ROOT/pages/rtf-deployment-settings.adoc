@@ -8,7 +8,7 @@ Before you deploy Partner Manager to Runtime Fabric, you must:
 
 * Ensure that you have the required permissions for using Runtime Fabric.
 * Create and configure the Runtime Fabric instance into which to deploy Partner Manager services, as described in https://developer.mulesoft.com/tutorials-and-howtos/runtime-fabric/runtime-fabric-aws-elastic-kubernetes-service[Getting Started with Runtime Fabric on Amazon Elastic Kubernetes Service (EKS)].
-* Configure Persistence Gateway in Runtime Fabric, as described in xref::docs-runtime-fabric:persistence-gateway.adoc[Persistence Gateway].
+* Configure Persistence Gateway in Runtime Fabric, as described in xref::runtime-fabric:persistence-gateway.adoc[Persistence Gateway].
 +
 Partner Manager uses a persistent Object Store via Persistence Gateway to store transaction processing information such as EDI control numbers and message routing information, which the Partner Manager runtime applications access.
 * Set up an ActiveMQ (JMS) messaging broker and configure the connection settings while configuring the Partner Manager Runtime Fabric deployment settings.
