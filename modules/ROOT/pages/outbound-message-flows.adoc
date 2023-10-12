@@ -21,7 +21,7 @@ image::pm-outbound-message-flow.png[Outbound message flow]
 * JSON
 * XML
 
-|image:pm-annotation-3.png[]|Transform |DataWeave map used to transform the JSON or XML formats to EDIFACT or X12 a| N/A
+|image:pm-annotation-3.png[]|Transform |DataWeave map used to transform the JSON or XML formats to EDIFACT or X12. The map must have Java output (`output application/java`) to transform JSON or XML to EDIFACT. a| N/A
 
 |image:pm-annotation-4.png[]|Target message type |
 Message type to which to transform the input message
