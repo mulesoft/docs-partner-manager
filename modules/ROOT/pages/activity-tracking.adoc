@@ -4,7 +4,7 @@ In Anypoint Partner Manager, one transmission can consist of one or more message
 
 * Data payloads received from partners or sent to partners via a configured protocol such as AS2, HTTP, SFTP or FTP
 * Message disposition notifications (MDNs), if the payload is exchanged with partners via AS2 protocol
-functional acknowledgements
+functional acknowledgments
 
 To track individual messages, see xref:activity-message-tracking.adoc[Tracking Individual Messages].
 

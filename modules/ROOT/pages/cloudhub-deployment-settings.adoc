@@ -1,4 +1,5 @@
 = Configuring CloudHub Deployment Settings
+:page-aliases: partner-manager::cloudhub-deploy-options.adoc
 
 To configure settings for deploying Anypoint Partner Manager to CloudHub, access the business unit and environment for which you want to deploy Partner Manager and then follow these steps:
 
@@ -22,7 +23,7 @@ To configure settings for deploying Anypoint Partner Manager to CloudHub, access
 | Each B2B endpoint | Reserved CPU space, CPU space limit, and memory capacity for each Partner Manager endpoint. Partner Manager deploys a generic Mule app to the runtime for each endpoint protocol and direction (receive or send) combination. a| 0.1 vCores
 | B2B API Replication Service | Reserved CPU space, CPU space limit, and memory capacity for the B2B API Replication Service. | 0.2 vCores
 | B2B Document Processing Service | Reserved CPU space, CPU space limit, and memory capacity for the B2B Document Processing Service. | 0.2 vCores
-| Deploy HTTP/AS2 apps to private port | Directs CloudHub to automatically deploy newly-created AS2, HTTP, and HTTPS endpoints to a private port.| Selected
+| Deploy HTTP/AS2 apps to private port | Directs CloudHub to automatically deploy newly created AS2, HTTP, and HTTPS endpoints to a private port.| Selected
 |===
 +
 For help with sizing, contact your MuleSoft Account Team. 

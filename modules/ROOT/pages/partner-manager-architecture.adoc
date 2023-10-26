@@ -51,7 +51,7 @@ image::cloudhub-deployment.png[Architecture that shows a CloudHub deployment]
 
 == Partner Manager for Runtime Fabric
 
-When deploying message flows to Runtime Fabric, Partner Manager uses ActiveMQ queues (set up and configured by the customer) between processing stages to add additional reliability to B2B message processing. ActiveMQ destinations (queues) are automatically created when the first transaction is processed through the runtime applications. 
+When deploying message flows to Runtime Fabric, Partner Manager uses ActiveMQ queues (set up and configured by the user) between processing stages to add additional reliability to B2B message processing. ActiveMQ destinations (queues) are automatically created when the first transaction is processed through the runtime applications. 
 
 image::rtf-deployment.png[Architecture that shows a Runtime Fabric deployment]
 

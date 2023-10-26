@@ -71,7 +71,7 @@ a|* If selected, Partner Manager enforces EDIFACT code set validations, as defin
 
 If a message does not meet an enabled rule, Partner Manager rejects it.
 
-Partner Manager logs all errors and reports them in the CONTRL acknowledgements.
+Partner Manager logs all errors and reports them in the CONTRL acknowledgments.
 
 [[control-numbers]]
 == Control Numbers

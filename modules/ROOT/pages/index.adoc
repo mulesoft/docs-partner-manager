@@ -29,7 +29,7 @@ include::_partials/partner-manager-spotlight-video.html[]
 Before you begin using Partner Manager, you must have:
 
 * An Anypoint Platform user account with the Partner Manager entitlement
-* The `Partner Manager Administrator` role, which can assign permission levels to all users who need access to B2B message flows in their environments (sandbox or production)
+* The Partner Manager Administrator role, which can assign permission levels to all users who need access to B2B message flows in their environments (sandbox or production)
 * The required Mule vCore capacity to manage your B2B transaction workload needs
 * Storage for the B2B transmission payloads you send or receive, such as a database, Amazon S3, Azure Blob Storage, and so on
 * Licenses for the AS2, EDIFACT, or X12 connectors used in your B2B message flows

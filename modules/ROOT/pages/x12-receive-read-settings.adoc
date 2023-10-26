@@ -20,7 +20,7 @@ It can take up to about five minutes for your configuration changes to sync with
 [[ack-settings]]
 == Acknowledgment Settings
 
-Use the following settings to configure the acknowledgements to send in response to inbound X12 messages:
+Use the following settings to configure the acknowledgments to send in response to inbound X12 messages:
 
 [%header%autowidth.spread]
 |===
