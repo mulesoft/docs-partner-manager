@@ -16,7 +16,7 @@ Partner Manager provides a simplified, configuration-driven B2B integration solu
 [[assign-permissions]]
 == Assign Permissions to Partner Manager Users
 
-For each environment, use Anypoint Access Management to assign permissions to each Partner Manager user. You can assign the following permissions:
+For each environment, use access management to assign permissions to each Partner Manager user. You can assign the following permissions:
 
 *  *Partner Manager Administrator* 
 +
@@ -51,7 +51,7 @@ For more information, see xref:access-management::permissions-by-product.adoc[Pe
 [[deployment-settings]]
 == Configure Partner Manager Deployment Settings
 
-You can deploy Partner Manager runtime applications to either CloudHub or Anypoint Runtime Fabric. To configure deployment options, use the *Partner Manager Settings* page in Anypoint Access Management.
+You can deploy Partner Manager runtime applications to either CloudHub or Anypoint Runtime Fabric. To configure deployment options, use the *Partner Manager Settings* page in access management.
 
 For more information, see xref:deploy-partner-manager.adoc[].
 

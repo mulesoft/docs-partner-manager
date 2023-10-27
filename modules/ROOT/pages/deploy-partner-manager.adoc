@@ -2,7 +2,7 @@
 
 You can deploy Anypoint Partner Manager runtime apps to either CloudHub or Anypoint Runtime Fabric. 
 
-To configure Partner Manager deployment settings, use the *Partner Manager Settings* page in Access Management. You can configure separate deployment settings for each business group environment. You must have the `Partner Manager Administrator` permission to configure or modify deployment settings.
+To configure Partner Manager deployment settings, use the *Partner Manager Settings* page in access management. You can configure separate deployment settings for each business group environment. You must have the `Partner Manager Administrator` permission to configure or modify deployment settings.
 
 == Deploy Partner Manager Runtime Apps to a New Environment 
 
