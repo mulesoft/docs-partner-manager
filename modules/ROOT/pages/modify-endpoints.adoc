@@ -60,14 +60,13 @@ You can modify the following fields for an AS2 Send to Partners endpoint:
 |Encryption algorithm | No
 |Endpoint name | No
 |Filename pattern | No
-
 |<host> AS2 identifier | No
 |<host> keystore | Yes
 |Maximum retry attempts | No
 |MDN signature algorithm | No
 |Message subject | No
 |<partner> AS2 identifier | No
-|<partner> AS2 URL | No
+|<partner> AS2 URL | Yes, except for changing `HTTP` to `HTTPS` or vice versa
 |Request receipt | No
 |Respond to email address | No
 |Retry interval | No
