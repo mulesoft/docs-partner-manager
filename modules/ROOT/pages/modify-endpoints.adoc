@@ -66,7 +66,7 @@ You can modify the following fields for an AS2 Send to Partners endpoint:
 |MDN signature algorithm | No
 |Message subject | No
 |<partner> AS2 identifier | No
-|<partner> AS2 URL | Yes, except for changing `HTTP` to `HTTPS` or vice versa
+|<partner> AS2 URL, except for changing `HTTP` to `HTTPS` or vice versa | No
 |Request receipt | No
 |Respond to email address | No
 |Retry interval | No
