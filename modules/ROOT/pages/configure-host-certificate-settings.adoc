@@ -1,0 +1,63 @@
+= Configuring Host Certificate Settings
+
+
+== Create a New Host Certificate Configuration
+
+. Access the <host> page.
+. In the *Certificates* section, click *New*.
+. Select a certificate type.
+. Enter the settings for the selected certificate type:
++
+** <<private-key-pair,Private Key Pair>>
+** <<public-certificate,Public Certificate>>
+** <<identity-key,Identity Key>>
++
+. Click *Save*.
+
+[private-key-pair]]
+=== Private Key Pair Certificate Settings
+
+To configure settings for a Private Key Pair certificate:
+
+. In the *Keystore Name* field, enter the name of the keystore file to store your organization's private key.
+. In the *<host> Public Certificate* field, click *Choose file* to select a public certificate. 
+. In the <*host> Private Key File* field, click *Choose file* to select a private certificate.
+. In the *Key Passphrase* field, enter a passphrase for protecting the private key.
+
+=== Public Certificate Settings
+
+To configure settings for a Public certificate:
+
+. In the *Certificate name* field, enter the name of the public certificate.
+. In the *Certificate* field, click *Choose file* to select a public certificate.
+
+=== Identity Key Certificate Settings
+
+To configure settings for an Identity Key certificate:
+
+. In the *Identity Key Name* field, enter the name of the identity key name certificate.
+. In the *<host> Identity Key PEM File* field, click *Choose file* to select an identity key private key file certificate.
+. In the *Key Phassphrase* field, enter a passphrase for protecting the identity key private key file.
+. In  the *Expiration Date* field, optionally enter an expiration date for the certificate.
+
+== Update a Host Certificate Configuration
+
+You can select a different certificate file to associate with a configured host certificate:
+
+. Access the <host> page.
+. In the *Certificates* section, click the name of the host certificate for which you want to update a different certificate file.
+. Click *Edit*.
+. Click *Choose File* to select a different certificate file.
+. Click *Update*.
+
+== Delete a Host Certificate
+
+If you are no longer using a host certificate, you can delete it from Anypoint Partner Manager:
+
+. Access the <host> page.
+. In the *Certificates* section, hover over the name of the host certificate configuration that you want to delete.
+. Click the trash can icon on the right.
+
+= See Also
+
+* xref:configure-host.adoc[Configure global settings for EDIFACT receive messages].

@@ -48,17 +48,27 @@ Create SFTP receive endpoints by configuring these settings on the *<host>* or *
 | Port number of the SFTP server.
 | x
 
-| Username
-| Username for the SFTP server.
-| x (if the server is authenticated)
+| Authentication type
+a| Authenication method used to protect the SFTP endpoint. Values are: 
 
-| Password
-| Password for the SFTP server.
-| x (if the server is authenticated)
-
-| Source path
-| Path on the SFTP server to which your partner sends the inbound files.
+* *None*
++
+Provides no authentication for the endpoint
++
+* *Basic*
++
+Authenticates by using a username and password
++
+* *Identity key*
++
+Authenticates by using public and private SSH keys
++
+* *Basic and Identity key*
++
+Authenticates by using a username, password, and public SSH key
 | x
+
+include::partial$endpoint-authentication-types-partial.adoc[]
 
 | Polling Frequency
 | Frequency at which the server checks the source path for new files. The default value is `1 minute`.

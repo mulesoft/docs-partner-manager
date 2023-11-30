@@ -1,6 +1,5 @@
 = Configuring Global AS2 Endpoint Settings
 
-
 To prevent inbound requests with expired certificates from being processed by Anypoint Partner Manager:
 
 . Access the <host> page.

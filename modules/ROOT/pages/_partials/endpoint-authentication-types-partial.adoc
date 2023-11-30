@@ -1,0 +1,17 @@
+| Username
+| (Used with Basic, Identity key, Basic and Identity key authentication)
+
+Username for the endpoint (or is this for the SFTP server?).
+| x
+
+| Password 
+| (Used with Basic authentication, Identity key authentication, Basic and Identity key authentication) 
+
+Password for the endpoint (or is this for the SFTP server?).
+| x 
+
+| SSH 
+| (Used with Identity key authentication, Basic and Identity Key authentication)
+
+SSH certificate.
+| x
