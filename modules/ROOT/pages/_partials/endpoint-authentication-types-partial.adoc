@@ -1,17 +1,18 @@
 | Username
-| (Used with Basic, Identity key, Basic and Identity key authentication)
+| (Applies to these authentication types: Basic, Identity Key, Basic and Identity Key) 
 
 Username for the endpoint (or is this for the SFTP server?).
 | x
 
 | Password 
-| (Used with Basic authentication, Identity key authentication, Basic and Identity key authentication) 
+| (Applies to these authentication types: Basic, Identity Key, Basic and Identity Key) 
 
 Password for the endpoint (or is this for the SFTP server?).
 | x 
 
 | SSH 
-| (Used with Identity key authentication, Basic and Identity Key authentication)
+| (Applies to these authentication types: Identity key, Basic and Identity key)
 
 SSH certificate.
 | x
+

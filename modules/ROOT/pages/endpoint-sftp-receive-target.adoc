@@ -107,5 +107,5 @@ To disable this feature, specify a negative number or omit the value.
 
 == See Also
 
-* xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Creating Endpoints]
+* xref:endpoints.adoc[]
+* xref:create-endpoint.adoc[]

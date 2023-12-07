@@ -45,13 +45,27 @@ Create SFTP send endpoints by configuring these settings on the *<host>* or *Par
 |Port number of the SFTP.
 |x
 
-|Username
-|Username for the SFTP server.
-|x
+| Authentication type
+a| Authenication method used to protect the SFTP endpoint. Values are: 
 
-|Password
-|Password for the SFTP server.
-|x
+* *None*
++
+Provides no authentication for the endpoint
++
+* *Basic*
++
+Authenticates by using a username and password
++
+* *Identity key*
++
+Authenticates by using public and private SSH keys
++
+* *Basic and Identity key*
++
+Authenticates by using a username, password, and public SSH key
+| x
+
+include::partial$endpoint-authentication-types-partial.adoc[]
 
 |Target Path
 |Path on your SFTP server to EDI files that were generated from outbound message flows. This is also the path on your SFTP server for storing
@@ -65,6 +79,6 @@ transformed JSON and XML files generated from inbound message flows.
 
 == See Also
 
-* xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Creating Endpoints]
-* xref:file-name-pattern.adoc[Filename Patterns for Send Endpoints]
+* xref:endpoints.adoc[]
+* xref:create-endpoint.adoc[]
+* xref:file-name-pattern.adoc[]
