@@ -74,9 +74,9 @@ You can modify the following fields for an AS2 Send to Partners endpoint:
 |===
 
 [[ftp-receive]]
-== FTP and SFTP Receive Endpoints
+== FTP Receive Endpoints
 
-You can modify the following fields for an FTP and SFTP Receive from Partners or Source at Host endpoint:
+You can modify the following fields for an FTP Receive from Partners or Source at Host endpoint:
 
 [%header%autowidth.spread]
 |===
@@ -95,9 +95,9 @@ You can modify the following fields for an FTP and SFTP Receive from Partners or
 |===
 
 [[ftp-send]]
-== FTP and SFTP Send Endpoints
+== FTP Send Endpoints
 
-You can modify the following fields for an FTP and SFTP Send to Partners or Target at Host endpoint:
+You can modify the following fields for an FTP Send to Partners or Target at Host endpoint:
 
 [%header%autowidth.spread]
 |===
@@ -110,6 +110,48 @@ You can modify the following fields for an FTP and SFTP Send to Partners or Targ
 |Port |No
 |Target path |No
 |Username |Yes
+|===
+
+[[sftp-receive]]
+== SFTP Receive Endpoints
+
+You can modify the following fields for an SFTP Receive from Partners or Source at Host endpoint:
+
+[%header%autowidth.spread]
+|===
+|Field |Redeploys the Runtime Application for the Endpoint
+|Endpoint name |Yes
+|Desription | No
+|Host |Yes
+|Port | Yes
+|Authentication type | Yes
+|Username | Yes
+|Password |Yes
+|SSH | Yes
+|Source path |Yes
+|Polling frequency |Yes
+|Size check wait time |Yes
+|File name pattern |Yes
+|Archival path |Yes
+|===
+
+[[sftp-send]]
+== SFTP Send Endpoints
+
+You can modify the following fields for an SFTP Send to Partners or Target at Host endpoint:
+
+|Field |Redeploys the Runtime Application for the Endpoint
+|Endpoint name |No
+|Description |No
+|File name pattern |No
+|Host |No
+|Port |No
+|Authentication type | Yes
+|Username | Yes
+|Password |Yes
+|SSH | Yes
+|Target path |No
+|Filename pattern | No
 |===
 
 [[http-receive]]

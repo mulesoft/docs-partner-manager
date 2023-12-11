@@ -1,0 +1,48 @@
+| Username
+| (Applies to all authentication types exept *None*) 
+
+Username for the SFTP server.
+| x
+
+| Password 
+| (Applies to these authentication types: Basic, Basic and Identity key) 
+
+Password for the SFTP server.
+| x 
+
+| SSH 
+a| (Applies to these authentication types: Identity key, Basic and Identity key)
+
+SSH private key file. The following considersations apply:
+
+* Send and receive endpoints that have the same owner can use the same SSH private key file. 
+* Multiple message flows for the same or different partners can reference endpoints that use the same SSH private key file. 
+
+You can either select a private key file (`.pem`) that's already configured in Anypoint Partner Manager or create a new configuration for a private key file.
+
+To create a new configuration for a private key file:
+
+. In the *SSH* field, click *Select*.
+. In the *Select a <partner-name> ssh* dialog, click *New*.
+. Complete the fields in the *New certificate for <partner-name)* dialog:
++
+
+* *Identity Key name*
++
+Enter the name of the private key file.
++
+* *<partner-name) identity key PEM file*
++
+Click *Choose file* to select the private key file.
++
+* *Key passphrase*
++
+Enter the passphrase for the private key file.
++
+* *Expiration date*
++
+Enter the date on which you want the private key file to expire.
++
+. Click *Create*.
+| x
+

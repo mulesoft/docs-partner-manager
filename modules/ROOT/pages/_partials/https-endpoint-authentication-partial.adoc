@@ -1,0 +1,47 @@
+| Username
+| (Applies to the *Basic* authentication type)
+
+Username for ???.
+| x
+
+| Password 
+| (Applies to all the *Basic* authentication type) 
+
+Password for the ???.
+| x 
+
+| HTTP header name 
+a| (Applies to the API key authentication type)
+| x
+
+| API key
+a|
+
+You can either select a private key file (`.pem`) that's already configured in Anypoint Partner Manager or create a new configuration for a private key file.
+
+To create a new configuration for a private key file:
+
+. In the *SSH* field, click *Select*.
+. In the *Select a <partner-name> ssh* dialog, click *New*.
+. Complete the fields in the *New certificate for <partner-name)* dialog:
++
+
+* *Identity Key name*
++
+Enter the name of the private key file.
++
+* *<partner-name) identity key PEM file*
++
+Click *Choose file* to select the private key file.
++
+* *Key passphrase*
++
+Enter the passphrase for the private key file.
++
+* *Expiration date*
++
+Enter the date on which you want the private key file to expire.
++
+. Click *Create*.
+| x
+

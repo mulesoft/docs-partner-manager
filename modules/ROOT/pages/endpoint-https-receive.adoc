@@ -80,24 +80,27 @@ a|HTTP or HTTPS address where you receive outbound source messages from backend 
 |x
 
 |Authentication type
-a|Type of authentication method used to protect the HTTP receive service. This field is disabled when you manage the endpoint with API Manager.
+a|Type of authentication method used to protect the HTTPS receive service. This field is disabled when you manage the endpoint with API Manager.
 
 |x
 
 |Basic authentication
-a|User name and password that protects the HTTP listener.
+a|Authenticates by using a username and password.
+
+The backend applications that send payloads to the HTTP or HTTPS receive endpoint must pass the credentials in the HTTP request header.
 
 After saving your new or reconfigured endpoint, you cannot subsequently retrieve or modify the password.
 
-The backend applications that send payloads to the HTTP or HTTPS receive endpoint must pass the credentials in the HTTP request header.
 |x
 
 |API Key
 a|API key for the HTTP listener.
 
-After selecting *API Key* in the *Authentication type* list, specify the HTTP header name and API key to protect the HTTP listener. After saving your new or reconfigured endpoint, you cannot subsequently retrieve or modify the API key.
-
 The backend applications that send payloads to the HTTP receive endpoint must pass the API key in the HTTP request with the configured HTTP header name.
+
+After saving your new or reconfigured endpoint, you cannot subsequently retrieve or modify the API key.
+
+After selecting *API Key* in the *Authentication type* list, specify the HTTP header name and API key to protect the HTTP listener. 
 |x
 |===
 

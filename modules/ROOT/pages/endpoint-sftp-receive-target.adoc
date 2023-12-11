@@ -68,7 +68,7 @@ Authenticates by using public and private SSH keys
 Authenticates by using a username, password, and public SSH key
 | x
 
-include::partial$endpoint-authentication-types-partial.adoc[]
+include::partial$sftp-endpoint-authentication-partial.adoc[]
 
 | Polling Frequency
 | Frequency at which the server checks the source path for new files. The default value is `1 minute`.

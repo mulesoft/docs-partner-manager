@@ -65,7 +65,7 @@ Authenticates by using public and private SSH keys
 Authenticates by using a username, password, and public SSH key
 | x
 
-include::partial$endpoint-authentication-types-partial.adoc[]
+include::partial$sftp-endpoint-authentication-partial.adoc[]
 
 |Target Path
 |Path on your SFTP server to EDI files that were generated from outbound message flows. This is also the path on your SFTP server for storing
