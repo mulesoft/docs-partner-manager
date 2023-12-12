@@ -100,7 +100,7 @@ The backend applications that send payloads to the HTTP receive endpoint must pa
 
 After saving your new or reconfigured endpoint, you cannot subsequently retrieve or modify the API key.
 
-After selecting *API Key* in the *Authentication type* list, specify the HTTP header name and API key to protect the HTTP listener. 
+After selecting *API Key* in the *Authentication type* list, specify he HTTP header name and API key to protect the HTTP listener. 
 |x
 |===
 
