@@ -54,53 +54,115 @@ Enter a well-formed URL (including the path) that specifies where to send the re
 |Maximum number of reconnection attempts. To prevent Partner Manager from retrying after an initial connection failure, set this value to `0`. The default is `3`.
 |x
 
-|Connection Idle Timeout (milliseconds)
+|Authentication type
+a|Authentication method used to protect the HTTPS endpoint. Values are:
+
+* *None*
++
+No authentication
++
+* <<api-key,API key>>
+* <<basic,Basic>>
+* <<client-credentials,Client Credentials>>
+* <<oauth-token,OAuth Token>>
++
+|x
+
+|Certificate
+a| SSL certificate. Values are:
+
+* Use CA-signed certificates
++
+With this option, you don't need to upload an additional certificate.
+* Use a self-signed certificate
++
+With this option, you must either select an existing certificate or upload a new certificate in `<certifcate name>.PEM` format).
++ 
+* Allow insecure connection
++
+Enable an insecure connection that doesn’t perform certificate validation.
+|x
+
+|*???Not seeing this* Connection Idle Timeout (milliseconds)
 |Connection idle timeout period in milliseconds. The default is `30000`.
 |x
 
 |===
 
-== Authentication Settings
+[[api-key]]
+== API Key Authentication
 
-Depending on how you set up your authentication policy, refer to the appropriate authentication type here.
+Authentication type that protects the endpoint by requiring an authentication key when calling apps to make a request
 
 [%header%autowidth.spread]
 |===
-|Authentication Type |Description
-|None
-|No authentication
-
+|Name |Description |Required
+| HTTP Header Name 
+| HTTP header parameter associated with the API key value. 
+| x
 |API Key
-a| * HTTP Header Name +
-The HTTP header parameter associated with the *API Key* value. +
-* API Key +
-Value for the access key you set.
+|Value of the API key.
+| x
+|Certificate
+|Certificate to use for authentication.
+|
+|===
 
-|Basic
-a|Specifies a simple authentication policy that protects the API by requiring a username and password when calling apps to make a request.
+[[basic]]
+== Basic Authentication
 
-* Username +
-Username you created for this authentication policy
-* Password +
-Password you created for this authentication policy
+Authentication type that requires a username and password when making a request
 
-|Client Credentials
-a|* Client ID +
-Client ID provided when registering your application
-* Client Secret +
-Client secret provided when registering your application
-* Client Header +
-Client header
-* Client Secret Header +
-Client secret header
+[%header%autowidth.spread]
+|===
+|Name |Description |Required
+|Username
+|Username for this authentication policy
+|x
+|Password
+|Password for this authentication policy
+|x
+|===
 
-|OAuth Token
-a|* Token URL +
-Authorization URL.
-* Client ID +
-Client ID provided when registering your application
-* Client Secret +
-Client secret provided when registering your application
+[[client-credentials]]
+== Client Credentials Authentication
+
+Authentication type that requires a client ID and client secret when makiing a request
+
+[%header%autowidth.spread]
+|===
+|Name |Description |Required
+|Client ID header name
+|Name of the header used to extract the client ID from requests
+|x
+|Client ID header value
+|Value of the client ID
+|x
+|Client secret header name
+|Name of the header used to extract the client secret from requests
+|x
+|Client secret header value
+|Value of the client secret
+|x
+|===
+
+[[oauth-token]]
+== OAuth Token Authentication
+
+Authentication type that requires a valid OAuth token when making a request
+
+[%header%autowidth.spread]
+|===
+|Name |Description |Required
+|Token URL
+|URL of the authentication server that provides access tokens
+|x
+|Client ID 
+|Client ID provided when registering your application with the authorization server
+|x
+|Client Secret
+|Client secret provided when registering your application with the authorization server
+|x
 |===
 
 == See Also
