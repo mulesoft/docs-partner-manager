@@ -55,9 +55,9 @@ Enter a well-formed URL (including the path) that specifies where to send the re
 |x
 
 |Authentication type
-a|Authentication method used to protect the HTTPS endpoint. Values are:
+a|Authentication method used to protect the HTTP or HTTPS endpoint. Values are:
 
-* *None*
+* None
 +
 No authentication
 +
@@ -73,14 +73,14 @@ a| SSL certificate. Values are:
 
 * Use CA-signed certificates
 +
-With this option, you don't need to upload an additional certificate.
+Uses a certificate that was issued and signed by a certificate authority (CA). With this option, you don't need to upload an additional certificate.
 * Use a self-signed certificate
 +
-With this option, you must either select an existing certificate or upload a new certificate in `<certifcate name>.PEM` format).
-+ 
+Uses a certificate that was not issued or signed by a CA. With this option, you must either select an existing certificate or upload a new certificate in `<certifcate name>.PEM` format).
++
 * Allow insecure connection
 +
-Enable an insecure connection that doesn’t perform certificate validation.
+Allows an insecure connection that doesn’t perform certificate validation.
 |x
 
 |*???Not seeing this* Connection Idle Timeout (milliseconds)
@@ -89,81 +89,7 @@ Enable an insecure connection that doesn’t perform certificate validation.
 
 |===
 
-[[api-key]]
-== API Key Authentication
-
-Authentication type that protects the endpoint by requiring an authentication key when calling apps to make a request
-
-[%header%autowidth.spread]
-|===
-|Name |Description |Required
-| HTTP Header Name 
-| HTTP header parameter associated with the API key value. 
-| x
-|API Key
-|Value of the API key.
-| x
-|Certificate
-|Certificate to use for authentication.
-|
-|===
-
-[[basic]]
-== Basic Authentication
-
-Authentication type that requires a username and password when making a request
-
-[%header%autowidth.spread]
-|===
-|Name |Description |Required
-|Username
-|Username for this authentication policy
-|x
-|Password
-|Password for this authentication policy
-|x
-|===
-
-[[client-credentials]]
-== Client Credentials Authentication
-
-Authentication type that requires a client ID and client secret when makiing a request
-
-[%header%autowidth.spread]
-|===
-|Name |Description |Required
-|Client ID header name
-|Name of the header used to extract the client ID from requests
-|x
-|Client ID header value
-|Value of the client ID
-|x
-|Client secret header name
-|Name of the header used to extract the client secret from requests
-|x
-|Client secret header value
-|Value of the client secret
-|x
-|===
-
-[[oauth-token]]
-== OAuth Token Authentication
-
-Authentication type that requires a valid OAuth token when making a request
-
-[%header%autowidth.spread]
-|===
-|Name |Description |Required
-|Token URL
-|URL of the authentication server that provides access tokens
-|x
-|Client ID 
-|Client ID provided when registering your application with the authorization server
-|x
-|Client Secret
-|Client secret provided when registering your application with the authorization server
-|x
-|===
+include::partial$https-endpoint-authentication-partial.adoc[tag=https-send,leveloffset=+1]
 
 == See Also
 

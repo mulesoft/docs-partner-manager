@@ -14,7 +14,7 @@ Source endpoint in an outbound message flow that receives application messages f
 +
 Only a host can own HTTP or HTTPS Source at Host endpoints.
 
-IMPORTANT: Each HTTP and HTTPS receive endpoint configuration is deployed as an individual Mule application in the runtime. Consider reusing existing HTTP and HTTPS receive endpoint configurations across message flows.
+IMPORTANT: Each HTTP and HTTPS receive endpoint configuration is deployed as an individual Mule application in the runtime. Consider reusing existing HTTP and HTTPS receive endpoint confitgurations across message flows.
 
 Create HTTP and HTTPS receive endpoints by configuring these settings on the *<host>* page:
 
@@ -80,29 +80,21 @@ a|HTTP or HTTPS address where you receive outbound source messages from backend 
 |x
 
 |Authentication type
-a|Type of authentication method used to protect the HTTPS receive service. This field is disabled when you manage the endpoint with API Manager.
+a|Authentication method used to protect the HTTP or HTTPS endpoint. This field is disabled when you manage the endpoint with API Manager.
 
-|x
+Valid values are:
 
-|Basic authentication
-a|Authenticates by using a username and password.
+* None
++
+No authentication
++
+* <<api-key,API key>>
+* <<basic,Basic>>
 
-The backend applications that send payloads to the HTTP or HTTPS receive endpoint must pass the credentials in the HTTP request header.
-
-After saving your new or reconfigured endpoint, you cannot subsequently retrieve or modify the password.
-
-|x
-
-|API Key
-a|API key for the HTTP listener.
-
-The backend applications that send payloads to the HTTP receive endpoint must pass the API key in the HTTP request with the configured HTTP header name.
-
-After saving your new or reconfigured endpoint, you cannot subsequently retrieve or modify the API key.
-
-After selecting *API Key* in the *Authentication type* list, specify he HTTP header name and API key to protect the HTTP listener. 
 |x
 |===
+
+include::partial$https-endpoint-authentication-partial.adoc[tag=https-receive,leveloffset=+1]
 
 == Next Step
 

@@ -1,24 +1,89 @@
-| Username
-| (Applies to the *Basic* authentication type)
 
-Username for ???.
+
+// tag::https-send[]
+// tag::https-receive[]
+[[api-key]]
+= API Key Authentication
+
+Authentication type that requires a valid API key in the HTTP request header
+
+[%header%autowidth.spread]
+|===
+|Name |Description |Required
+| HTTP Header Name 
+| HTTP header parameter associated with the API key value. 
 | x
+|API Key
+|Value of the API key.
 
-| Password 
-| (Applies to all the *Basic* authentication type) 
-
-Password for the ???.
-| x 
-
-| HTTP header name 
-a| (Applies to the API key authentication type)
-
-Name of the HTTP header that contains the credentials. 
+After saving your new or reconfigured endpoint, you cannot subsequently retrieve or modify the API key.
 | x
+|Certificate
+|Certificate to use for authentication.
+|
+|===
+// end::https-send;https-receive[]
 
-| API key
-a| (Applies to the API key authentication type)
+// tag::https-send[]
+// tag:https-receive[]
+[[basic]]
+= Basic Authentication
 
-API key for the HTTP listener.
-.| x
+Authentication type that requires a username and password in the HTTP or HTTP request header
 
+[%header%autowidth.spread]
+|===
+|Name |Description |Required
+|Username
+|Username to use when making a request.
+|x
+|Password
+|Password to use when making a request.
+|x
+|===
+// end::https-send;https-receive[]
+
+// tag::https-send[]
+[[client-credentials]]
+= Client Credentials Authentication
+
+Authentication type that requires a valid client ID and client secret in the HTTP or HTTPS request header
+
+[%header%autowidth.spread]
+|===
+|Name |Description |Required
+|Client ID header name
+|Name of the header used to extract the client ID from requests.
+|x
+|Client ID header value
+|Client ID to use when making a request.
+|x
+|Client secret header name
+|Name of the header used to extract the client secret from requests.
+|x
+|Client secret header value
+|Client secret to use when making a request.
+|x
+|===
+// end::https-send[]
+
+// tag::https-send[]
+[[oauth-token]]
+= OAuth Token Authentication
+
+Authentication type that requires a valid OAuth token in the HTTP or HTTPS request header. 
+
+[%header%autowidth.spread]
+|===
+|Name |Description |Required
+|Token URL
+|URL of the authentication server that provides access tokens.
+|x
+|Client ID 
+|Client ID provided when registering your application with the authorization server.
+|x
+|Client Secret
+|Client secret provided when registering your application with the authorization server.
+|x
+|===
+// end::https-send[]

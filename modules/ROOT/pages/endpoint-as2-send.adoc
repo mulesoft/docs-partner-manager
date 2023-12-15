@@ -104,6 +104,9 @@ a|Host keystore file that stores your organization's public certificate and priv
 . Click *Upload Keystore*.
 --
 
+For more information about host keystores, see xref:manage-as2-host-keystores.adoc[Managing AS2 Host Keystores].
+
+|x
 |Encryption algorithm
 | Algorithm to use to encrypt AS2 messages.
 |x
@@ -122,9 +125,6 @@ a|Host keystore file that stores your organization's public certificate and priv
 
 |MDN signature algorithm
 | Algorithm to use to compute the MDN signature.
-|x
-
-For more information about host keystores, see xref:manage-as2-host-keystores.adoc[Managing AS2 Host Keystores].
 |x
 
 |Encryption algorithm
