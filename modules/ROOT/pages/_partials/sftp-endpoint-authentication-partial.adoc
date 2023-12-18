@@ -22,16 +22,15 @@ You can either select a private key file (`.pem`) that's already configured in A
 
 To create a new configuration for a private key file:
 
-. In the *SSH* field, click *Select*.
-. In the *Select a <partner-name> ssh* dialog, click *New*.
-. Complete the fields in the *New certificate for <partner-name)* dialog:
+. In the *<partner> SSH* or *<host> SSH* field, click *Select*.
+. In the *Select a <partner> ssh* or *Select a <host> ssh* dialog, click *New*.
+. Complete the fields in the *New certificate for <partner>* or *New certificate for <host>* dialog:
 +
-
 * *Identity Key name*
 +
 Enter the name of the private key file.
 +
-* *<partner-name) identity key PEM file*
+* *<partner> identity key PEM file* or *<host> identity key PEM file* 
 +
 Click *Choose file* to select the private key file.
 +

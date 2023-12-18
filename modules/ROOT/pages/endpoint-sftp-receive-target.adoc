@@ -25,7 +25,7 @@ Create SFTP receive endpoints by configuring these settings on the *<host>* or *
 | x
 
 |Usage
-|Endpoint function (Receive from Partners or Source at Host).
+|Endpoint function. Allowed values are`Receive from partners` or `Source at host`.
 |x
 
 | Protocol
@@ -70,6 +70,10 @@ Authenticates by using a username, password, and public SSH key
 
 include::partial$sftp-endpoint-authentication-partial.adoc[]
 
+| Source path
+| Path on the SFTP server to which your partner sends the inbound files.
+| x
+
 | Polling Frequency
 | Frequency at which the server checks the source path for new files. The default value is `1 minute`.
 | x
@@ -93,7 +97,7 @@ To disable this feature, specify a negative number or omit the value.
 |
 
 |Associated reference identifier
-|(Applies only to endpoints supporting non-EDI formats that are owned by partners or third-party connections.) Partner information, such as the partner ID or third-party ID.
+|(Applies only to endpoints that support non-EDI formats that are owned by partners or third-party connections.) Partner information, such as the partner ID or third-party ID.
 |
 
 | File name pattern
@@ -101,7 +105,7 @@ To disable this feature, specify a negative number or omit the value.
 |
 
 | Archival Path
-| SFTP server path at which to store a copy of the file obtained from `source path`.
+| SFTP server path at which to store a copy of the file obtained from the source path.
 |
 |===
 

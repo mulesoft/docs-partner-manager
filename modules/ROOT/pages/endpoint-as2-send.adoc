@@ -39,7 +39,7 @@ Create AS2 endpoints by configuring these settings on the partner or third-party
 |Your organization’s AS2 identifier.
 |x
 
-|Partner AS2 identifier
+|<Partner> AS2 identifier
 |Your partner’s AS2 identifier, which appears if the endpoint is used to send transactions directly to a partner without going through a third-party connection.
 |x
 
@@ -49,13 +49,6 @@ Create AS2 endpoints by configuring these settings on the partner or third-party
 
 |Partner AS2 URL
 |Your partner’s or third-party connection's AS2 URL to which outbound EDI transmissions are sent.
-|x
-
-|Certificate
-a|
-* Use CA-signed certificates
-* Use a self-signed certificate
-* Allow insecure connection
 |x
 
 |Authentication type
@@ -105,27 +98,6 @@ a|Host keystore file that stores your organization's public certificate and priv
 --
 
 For more information about host keystores, see xref:manage-as2-host-keystores.adoc[Managing AS2 Host Keystores].
-
-|x
-|Encryption algorithm
-| Algorithm to use to encrypt AS2 messages.
-|x
-
-|Signature algorithm
-| Algorithm to use to compute the digital signature.
-|x
-
-|Request receipt
-|
-|x
-
-|MDN response
-|Message Disposition Notification (MDN). Is this always SYNC??? 
-|x
-
-|MDN signature algorithm
-| Algorithm to use to compute the MDN signature.
-|x
 
 |Encryption algorithm
 |xref:as2-endpoints-algorithms.adoc[Algorithm] to use when encrypting the message to send.

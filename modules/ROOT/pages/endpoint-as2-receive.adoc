@@ -15,12 +15,16 @@ Create an AS2 Receive from Partners endpoint by configuring these settings on th
 |===
 | Setting | Description | Required
 
-|Protocol
-|Protocol that the endpoint supports.
-|x
-
 |Owner
 |Host that owns the endpoint.
+|x
+
+|Usage
+|Endpoint function (`Receive from partners`)
+| x
+
+|Protocol
+|Protocol that the endpoint supports.
 |x
 
 |Endpoint name
@@ -31,7 +35,7 @@ Create an AS2 Receive from Partners endpoint by configuring these settings on th
 |User-supplied value that describes the purpose of the endpoint.
 |
 
-|Private port (when deploying to Anypoint VPC)
+|Private port (when deploying to VPC)
 a|
 Applies when using Anypoint Virtual Private Cloud (Anypoint VPC) with CloudHub deployments:
 
@@ -50,6 +54,10 @@ Indicates whether Partner Manager deploys the AS2 receive endpoint as an HTTPS l
 * If disabled, Partner Manager deploys the AS2 receive endpoint as an HTTP listener.
 
 When deploying to Anypoint Runtime Fabric, Partner Manager always deploys the AS2 receive endpoint as an HTTP listener. With this type of deployment, you must configure an Ingress controller to provide external consumers with an HTTPS endpoint. For more information, see xref:runtime-fabric::custom-ingress-configuration.adoc[Configuring Ingress for Runtime Fabric].
+| x
+
+| AS2 URL
+| URL to the AS2 server (automatically generated) ???
 | x
 
 |Enforce security level
@@ -73,15 +81,14 @@ Accepts messages that aren't signed or encrypted.
 When deploying an AS2 endpoint to CloudHub using the HTTP protocol, you cannot change the default value (`Signed & Encrypted`).
 | x
 |<Host> keystore
-a|Host keystore file that stores your organization's public certificate and private key. To create a new keystore when creating an endpoint:
+a|Host keystore file that stores your organization's public certificate and private key. Select an existing keystore file or create a new one.
 
---
+To create a new keystore file:
+
+. In the *<host> Keystore* field, click *Select*.
 . Click *New*.
-. Complete the fields on the *New keystore for <host> window*.
-. Click *Upload Keystore*.
---
-
-For more information about host keystores, see xref:manage-as2-host-keystores.adoc[Managing AS2 Host Keystores].
+. Complete the fields on the *New certficate for <host> window*, as described in xref:managing-host-certificate-settings.adoc[].
+. Click *Create*.
 |x
 |===
 

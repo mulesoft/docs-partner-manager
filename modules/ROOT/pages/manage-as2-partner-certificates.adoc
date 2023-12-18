@@ -1,6 +1,6 @@
 == Managing AS2 Partner Certificates
 
-If you create an AS2 Receive from Partners or Send to Partners endpoint, you must assign an AS2 partner certificate to the associated partner.
+If you create an AS2 Receive from Partners endpoint, you must assign an AS2 partner certificate to the associated partner.
 
 == Add an AS2 Partner Certificate
 
@@ -63,3 +63,5 @@ To delete an AS2 partner certificate:
 == See Also
 
 * xref:certificates.adoc[Certificate Settings]
+* xref:endpoint-as2-receive.adoc[]
+* xref:endpoint-as2-sned.adoc[]

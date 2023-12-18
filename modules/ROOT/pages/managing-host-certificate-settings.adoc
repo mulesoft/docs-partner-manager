@@ -1,4 +1,4 @@
-= Configuring Host Certificate Settings
+= Managing Host Certificate Settings
 
 
 == Create a New Host Certificate Configuration
