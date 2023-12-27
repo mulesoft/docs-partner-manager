@@ -24,8 +24,12 @@ Create HTTP and HTTPS send endpoints by configuring these settings on the host, 
 | Host, partner, or third-party connection that owns the endpoint.
 | x
 
+| Usage
+|Endpoint function (`Send to partners` or `Target at host`).
+|x
+
 |Protocol
-| Protocol that the endpoint supports.
+| Protocol that the endpoint supports (`HTTP` or `HTTPS`).
 |x
 
 |Endpoint Name
@@ -69,7 +73,7 @@ No authentication
 |x
 
 |Certificate
-a| SSL certificate. Values are:
+a| (Applies to HTTPS endpoints) SSL certificate. Values are:
 
 * Use CA-signed certificates
 +

@@ -1,5 +1,4 @@
 
-
 // tag::https-send[]
 // tag::https-receive[]
 [[api-key]]
@@ -22,7 +21,8 @@ After saving your new or reconfigured endpoint, you cannot subsequently retrieve
 |Certificate to use for authentication.
 |
 |===
-// end::https-send;https-receive[]
+// end::https-send[]
+// https-receive[]
 
 // tag::https-send[]
 // tag:https-receive[]
@@ -41,7 +41,8 @@ Authentication type that requires a username and password in the HTTP or HTTP re
 |Password to use when making a request.
 |x
 |===
-// end::https-send;https-receive[]
+// end::https-send[]]
+// end::https-receive[]
 
 // tag::https-send[]
 [[client-credentials]]

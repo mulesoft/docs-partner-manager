@@ -24,6 +24,7 @@ To configure settings for a Private Key Pair certificate:
 . In the <*host> Private Key File* field, click *Choose file* to select a private certificate.
 . In the *Key Passphrase* field, enter a passphrase for protecting the private key.
 
+[[public-certificate]]
 === Public Certificate Settings
 
 To configure settings for a Public certificate:
@@ -31,6 +32,7 @@ To configure settings for a Public certificate:
 . In the *Certificate name* field, enter the name of the public certificate.
 . In the *Certificate* field, click *Choose file* to select a public certificate.
 
+[[identity-key]]
 === Identity Key Certificate Settings
 
 To configure settings for an Identity Key certificate:

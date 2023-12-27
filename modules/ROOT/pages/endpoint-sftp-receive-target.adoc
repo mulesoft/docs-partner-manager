@@ -25,11 +25,11 @@ Create SFTP receive endpoints by configuring these settings on the *<host>* or *
 | x
 
 |Usage
-|Endpoint function. Allowed values are`Receive from partners` or `Source at host`.
+|Endpoint function (`Receive from partners` or `Source at host`).
 |x
 
 | Protocol
-| Protocol that the endpoint supports.
+| Protocol that the endpoint supports (`SFTP`).
 | x
 
 | Endpoint Name

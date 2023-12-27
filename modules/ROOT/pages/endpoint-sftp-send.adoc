@@ -26,11 +26,11 @@ Create SFTP send endpoints by configuring these settings on the *<host>* or *<pa
 | x
 
 |Usage
-|Endpoint function. Allowed values are`Send to partners` or `Target at host`.
+|Endpoint function (`Send to partners` or `Target at host`).
 |x
 
 | Protocol
-| Protocol that the endpoint supports.
+| Protocol that the endpoint supports (`SFTP`).
 | x
 
 |Endpoint Name
