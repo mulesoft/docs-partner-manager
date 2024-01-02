@@ -22,7 +22,7 @@ To track transmissions instead of individual messages, see xref:activity-trackin
 
 Select a message to view its details and view and download its contents:
 
-. In the navigation menu, select *Activity*.
+. In the sidebar, select *Activity*.
 . Leave the default, *Messages*.
 . Search for the message.
 . Optionally, filter the search results based on the following criteria:

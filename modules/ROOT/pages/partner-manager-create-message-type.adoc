@@ -6,7 +6,7 @@ You can create new message types from the *<host>* page or by using the Message 
 
 To create a message type from the *<host>* page:
 
-. In the navigation menu, select *<host-name>*.
+. In the sidebar, select *<host-name>*.
 . From the *Message types* section, click *New*.
 . In the *Usage* drop-down list, select the message usage.
 . Add values to the remaining settings.

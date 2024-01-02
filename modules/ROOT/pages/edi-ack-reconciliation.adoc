@@ -21,7 +21,7 @@ The following are examples of the actions your operations team might take while 
 == Troubleshoot Rejected or Overdue Acknowledgments
 You can view all the outbound transactions that have either received an X12 997 or EDIFACT CONTRL rejection or that are overdue for the functional acknowledgment:
 
-. In the navigation menu, select *Activity*.
+. In the sidebar, select *Activity*.
 . Use the search filters to filter functional acknowledgments by:
 * *Type* +
 Type of message transmission:

@@ -12,7 +12,7 @@ To track individual messages, see xref:activity-message-tracking.adoc[Tracking I
 
 Select a transmission to view its details and view and download the message contents:
 
-. In the navigation menu, select *Activity*.
+. In the sidebar, select *Activity*.
 . Select *Transmissions*.
 . Search for the transmission.
 . Optionally, filter the search results based on the following criteria:

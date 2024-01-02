@@ -7,7 +7,7 @@ Add identifiers and configure their values in the Partner Manager host page.
 [[create-identifier]]
 == Add and Configure a New Identifier
 
-. In Partner Manager, select the name of your host organization in the navigation menu.
+. In Partner Manager, select the name of your host organization in the sidebar.
 . In the *Identifiers* section, click *New*.
 . In the *New Identifier* dialog, select the identifier type from the drop-down list:
 * <<as2-identifier,AS2 Identity>>

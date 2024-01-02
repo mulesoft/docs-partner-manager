@@ -4,7 +4,7 @@ Partner Manager receive settings include the EDIFACT acknowledgements and valida
 
 To configure EDIFACT receive settings:
 
-. In the navigation menu, select *Partners*.
+. In the sidebar, select *Partners*.
 . Select the partner to which these settings apply.
 . In the *Validation and acknowledgement settings* section's *Receive from <partner-name>* column, click *EDIFACT*.
 . Select a link to configure:

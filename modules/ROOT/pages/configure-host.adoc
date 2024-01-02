@@ -5,12 +5,13 @@ Your Anypoint Platform organization or your business group is referred to as the
 Use the *<host>* page in Partner Manager to:
 
 * Add details about your organization, such as its name, website, logo, corporate address, and contacts.
-* xref:partner-manager-identifiers.adoc[].
-* xref:configure-host-certificate-settings.adoc[].
-* xref:create-endpoint.adoc[].
-* xref:partner-manager-create-message-type.adoc[].
-* xref:setup-payload-storage-API.adoc[] to provide Partner Manager with a standardized way to connect to your storage.
-* xref:configure-global-edifact-receive-settings.adoc[].
+* xref:partner-manager-identifiers.adoc[Add the EDI and AS2 identifiers] used by your organization.
+* xref:configure-host-certificates.adoc[Add the digital certificates] associated with your organization.
+* xref:configure-as2-host-keystores.adoc[Add one or more AS2 host keystores], if you plan to use AS2 endpoints.
+* xref:create-endpoint.adoc[Create and manage source and target endpoints].
+* xref:partner-manager-create-message-type.adoc[Create and manage source and target message types].
+* xref:setup-payload-storage-API.adoc[Configure a payload storage API] to provide Partner Manager with a standardized way to connect to your storage.
+* xref:configure-global-edifact-receive-settings.adoc[Configure global settings to enforce AS2 certificate expiration dates].
 
 == See Also
 

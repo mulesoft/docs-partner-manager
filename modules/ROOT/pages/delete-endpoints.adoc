@@ -4,8 +4,8 @@ You can delete endpoints from the
 host or partner page if the endpoints are not used in message flows:
 
 . From Anypoint Partner Manager, do either of the following:
-* If the host owns the endpoint, select the *<host name>* from the navigation menu.
-* If a partner or third-party connection owns the endpoint, select *Partners* from the navigation menu and then select the owning partner or third-party connection.
+* If the host owns the endpoint, select the *<host name>* from the sidebar.
+* If a partner or third-party connection owns the endpoint, select *Partners* from the sidebar and then select the owning partner or third-party connection.
 . In the *Endpoints* section, locate the endpoint that you want to delete.
 +
 To locate endpoints that don’t have associated message flows, look for `-` in the *Message Flows* column.

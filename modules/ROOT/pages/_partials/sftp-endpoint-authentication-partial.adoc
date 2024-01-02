@@ -40,7 +40,7 @@ Enter the passphrase for the private key file.
 +
 * *Expiration date*
 +
-Enter the date on which you want the private key file to expire.
+Enter the date on which you want the private key file to expire. This date is a reminder for you, but Anypoint Partner Manager doesn't enforce it.
 +
 . Click *Create*.
 | x

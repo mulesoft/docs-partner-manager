@@ -9,7 +9,7 @@ Before you create your first partner, xref:setup-payload-storage-API.adoc[make s
 
 To create a partner:
 
-. In Partner Manager, select *Partners* in the navigation menu.
+. In Partner Manager, select *Partners* in the sidebar.
 . Click *Create partner > Partner*.
 . Enter the following information:
 +

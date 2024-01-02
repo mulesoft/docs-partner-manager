@@ -32,7 +32,7 @@ If Partner Manager doesn't find an active message flow for the transmission or m
 
 To replay one or more transmissions from the transmissions list view:
 
-. In the navigation menu, select *Activity*.
+. In the sidebar, select *Activity*.
 . Select *Transmissions*.
 . To replay one transmission:
 .. Locate the transmission.
@@ -45,7 +45,7 @@ To replay one or more transmissions from the transmissions list view:
 
 You can replay a transmission from the transmissions details view:
 
-. In the navigation menu, select *Activity*.
+. In the sidebar, select *Activity*.
 . Select *Transmissions*.
 . Locate the transmission to replay. 
 . Click the transmission to display the transmission details view.

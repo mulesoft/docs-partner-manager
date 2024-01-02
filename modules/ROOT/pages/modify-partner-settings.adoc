@@ -4,7 +4,7 @@ You can modify a partner's settings including contact details, identifiers, digi
 
 To modify a partner's settings:
 
-. In Partner Manager, select *Partners* in the navigation menu.
+. In Partner Manager, select *Partners* in the sidebar.
 . Click the partner.
 . Change any of the following settings:
 +

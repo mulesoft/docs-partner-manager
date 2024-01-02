@@ -4,7 +4,7 @@ Partner Manager enables you to configure the X12 envelope parameters, delimiters
 
 To configure a partner's X12 send settings:
 
-. In the navigation menu, select *Partners*.
+. In the sidebar, select *Partners*.
 . Select the partner for whom you want to configure the settings.
 . In the *Validation and acknowledgement settings* section's *Send to <partner-name>* column, click *X12*.
 . In the menu, select the setting to configure:

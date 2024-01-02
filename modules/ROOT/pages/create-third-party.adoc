@@ -9,7 +9,7 @@ Before you create your first third-party connection, make sure that you have xre
 
 To create a third-party connection:
 
-. In Partner Manager, select *Partners* in the navigation menu.
+. In Partner Manager, select *Partners* in the sidebar.
 . Click *Create partner > 3rd party connection*.
 . Enter the following information:
 +

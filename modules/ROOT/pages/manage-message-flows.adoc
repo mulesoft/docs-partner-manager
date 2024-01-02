@@ -14,7 +14,7 @@ Before making changes, carefully consider the impact on the message flow.
 
 To modify the settings of an inbound message flow:
 
-. In the navigation menu, select *Message Flows*.
+. In the sidebar, select *Message Flows*.
 . On the *Message flows* page, select the message flow to modify.
 . Change any of the following settings:
 +
@@ -72,7 +72,7 @@ After you confirm the successful deployment of your message flow, you can track 
 
 To modify the settings of an outbound message flow:
 
-. In the navigation menu, select *Message Flows*.
+. In the sidebar, select *Message Flows*.
 . On the *Message flows* page, select *<Message flow name>*.
 . Change any of the following settings:
 +

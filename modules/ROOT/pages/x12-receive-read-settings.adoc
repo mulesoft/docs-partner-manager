@@ -4,7 +4,7 @@ Partner Manager enables you to configure the X12 acknowledegments, validation ru
 
 To configure X12 receive settings:
 
-. In the navigation menu, select *Partners*.
+. In the sidebar, select *Partners*.
 . Select the partner to associate with the settings.
 . In the *Validation and acknowledgement settings* section's *Receive from <partner-name>* column, click *X12*.
 . Select a link to configure:

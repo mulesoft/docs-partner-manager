@@ -23,7 +23,7 @@ After you deploy the message flow, send test messages to verify that:
 
 Test your message flow in your Partner Manager sandbox environment by sending a test file to the receiving endpoint:
 
-. In the navigation menu, select *Activity* and the transmission to test.
+. In the sidebar, select *Activity* and the transmission to test.
 . Scan for an exclamation point (!) in any of the boxes next to the displayed flow stages and address any issues.
 . If the system is set up to view payloads, review the received payload by clicking *View payload* next to the *Received transmission* section.
 +

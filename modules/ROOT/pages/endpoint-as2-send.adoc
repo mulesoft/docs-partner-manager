@@ -114,7 +114,7 @@ a|Whether you want the partner to return a Message Disposition Notification (MDN
 |x
 
 |MDN response
-|The AS2 messages sent from Partner Manager always request the receiver to send a Synchronous MDN receipt back. The default is `Sync`.
+|The AS2 messages sent from Partner Manager always request the receiver to send a Synchronous MDN receipt back. This value is always set to `Sync`.
 |x
 
 |MDN signature algorithm

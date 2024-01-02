@@ -39,7 +39,7 @@ Your payload storage API must be accessible over the internet via HTTPS. Ensure 
 == Add the Payload Storage API to the Host Profile
 
 . In Anypoint Platform, open Anypoint Partner Manager.
-. From the navigation menu, select your organization’s host page.
+. From the sidebar, select your organization’s host page.
 . In the *Payload storage* section of the page, click *Edit* to add the path to your payload storage.
 . Enter the following values:
 * *Endpoint name*: The name of the payload storage API
