@@ -54,14 +54,14 @@ Create AS2 endpoints by configuring these settings on the partner or third-party
 |Certificate (TLS context)
 a| (Applies when the *Partner AS2 URL* field starts with `https`) SSL certificate. Values are:
 
-* Use CA-signed certificates
+* `Use CA-signed certificates`
 +
 Uses a certificate that was issued and signed by a certificate authority (CA). With this option, you don't need to upload an additional certificate.
-* Use a self-signed certificate
+* `Use a self-signed certificate`
 +
 Uses a certificate that was not issued or signed by a CA. With this option, you must either select an existing certificate or upload a new certificate in `.pem` format.
 +
-* Allow insecure connection
+* `Allow insecure connection`
 +
 Allows an insecure connection that doesn’t perform certificate validation.
 |x
@@ -125,7 +125,7 @@ a|Whether you want the partner to return a Message Disposition Notification (MDN
 
 == See Also
 
-* xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Creating Endpoints]
-* xref:file-name-pattern.adoc[Filename Patterns for Send Endpoints]
-* xref:as2-endpoints-algorithms.adoc[Algorithm]
+* xref:endpoints.adoc[]
+* xref:create-endpoint.adoc[]
+* xref:file-name-pattern.adoc[]
+* xref:as2-endpoints-algorithms.adoc[]

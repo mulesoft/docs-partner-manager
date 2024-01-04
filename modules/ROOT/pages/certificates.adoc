@@ -1,6 +1,6 @@
 = Certificate and Keystore Storage
 
-Certificates in Anypoint Partner Manager are securely stored in the Anypoint Platform secrets manager, which uses secure vault technology to store and control access to private keys, passwords, certificates, and other secrets.
+Certificates and keystores in Anypoint Partner Manager are securely stored in the Anypoint Platform secrets manager, which uses secure vault technology to store and control access to private keys, passwords, certificates, and other secrets.
 
 For endpoint type and protocol combinations that use certificates, you can either select an available certificate that works with the endpoint type and protocol or upload a new one to Partner Manager.
 

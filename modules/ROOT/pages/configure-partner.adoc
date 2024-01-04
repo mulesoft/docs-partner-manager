@@ -4,11 +4,12 @@ Use the *Partners* page to create and manage partners. From this page, you can:
 
 * xref:create-partner.adoc[Create a new partner]
 * xref:partner-manager-identifiers.adoc[Add the EDI and AS2 identifiers] used by your partner.
-* Add digital xref:certificates.adoc[certificates] associated with your partner.
+* Add the digital xref:certificates.adoc[certificates] associated with your partner.
 * xref:create-endpoint.adoc[Create] and manage source and target endpoints owned by the partner.
 * Manage EDI validation settings for xref:x12-receive-read-settings.adoc[X12 receive settings], xref:edifact-receive-read-settings.adoc[EDIFACT receive settings], xref:x12-send-settings.adoc[X12 send settings], and xref:edifact-send-settings.adoc[EDIFACT send settings]
 * xref:modify-partner-settings.adoc[Modify partner settings]
 * xref:partner-manager-delete-partner.adoc[Delete a partner]
+* xref:manage-partner-certificates.adoc[Manage Certificates own]
 
 
 == See Also

@@ -69,16 +69,16 @@ a|Indicates whether Partner Manager rejects incoming AS2 messages that aren't si
 
 Allowed values:
 
-* Signed & Encrypted (default)
+* `Signed & Encrypted` (default)
 +
 (Default) Rejects incoming messages that aren't both signed and encrypted.
-* Signed
+* `Signed`
 +
 Rejects incoming messages that aren't signed.
-* Encrypted
+* `Encrypted`
 +
 Rejects incoming messages that aren't encrypted.
-* None
+* `None`
 +
 Accepts messages that aren't signed or encrypted.
 
@@ -91,7 +91,7 @@ To create a new keystore file:
 
 . In the *<host> Keystore* field, click *Select*.
 . Click *New*.
-. Complete the fields on the *New certficate for <host> window*, as described in xref:managing-host-certificate-settings.adoc[].
+. Complete the fields on the *New certficate for <host> window*, as described in xref:manage-host-certificate-settings.adoc[].
 . Click *Create*.
 |x 
 |===
