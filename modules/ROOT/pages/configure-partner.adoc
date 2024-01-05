@@ -9,7 +9,7 @@ Use the *Partners* page to create and manage partners. From this page, you can:
 * Manage EDI validation settings for xref:x12-receive-read-settings.adoc[X12 receive settings], xref:edifact-receive-read-settings.adoc[EDIFACT receive settings], xref:x12-send-settings.adoc[X12 send settings], and xref:edifact-send-settings.adoc[EDIFACT send settings]
 * xref:modify-partner-settings.adoc[Modify partner settings]
 * xref:partner-manager-delete-partner.adoc[Delete a partner]
-* xref:manage-partner-certificates.adoc[Manage Certificates own]
+* xref:manage-partner-certificates.adoc[Manage certificates] owned by partners
 
 
 == See Also

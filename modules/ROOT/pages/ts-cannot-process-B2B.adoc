@@ -24,7 +24,7 @@ For example, your servers can be inactive, the apps might not be functioning cor
 
 == Solutions
 
-You'll need to perform some verifications with your payload storage or flow configurations.
+Perform some verifications with your payload storage or flow configurations.
 
 === Verify Payload Storage
 

@@ -65,7 +65,7 @@ For more information, see xref:setup-payload-storage-API.adoc[].
 [[configure-host-profile]]
 == Configure a Host Profile
 
-Use the *<host>* page in Partner Manager to configure a host profile for your Anypoint Platform organization or business group. A host profile consists of the EDI and AS2 identifiers used by your organization, associated digital certificates, Source at Host and Target at Host endpoints, message types, Payload Storage API details, and global settings for EDIFACT receive messages.
+Use the *<host>* page in Partner Manager to configure a host profile for your Anypoint Platform organization or business group. A host profile consists of the EDI and AS2 identifiers used by your organization, associated digital certificates and keystores, host-owned endpoints, message types, Payload Storage API details, and global settings for EDIFACT receive messages.
 
 For more information, see xref:configure-host.adoc[].
 
@@ -87,7 +87,7 @@ For more information, see xref:configure-partner.adoc[].
 [[configure-third-party]]
 == Configure Third-Party Connections
 
-If your partners use third-party service providers such as VANs or 3PLs (third-party logistics providers) who manage the B2B connectivity with your organization on behalf of your partners, then create configurations for these connections.
+If your partners use third-party service providers such as VANs or 3PLs (third-party logistics providers) that manage the B2B connectivity with your organization on behalf of your partners, then create configurations for these connections.
 
 Creating third-party connections is similar to configuring partner profiles, except that the acknowledgements, validations, and control numbers associated with message formats are configured only at the partner level.
 

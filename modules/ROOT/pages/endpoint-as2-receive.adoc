@@ -57,7 +57,7 @@ When deploying to Anypoint Runtime Fabric, Partner Manager always deploys the AS
 | x
 
 | AS2 URL
-| URL to the AS2 server (automatically generated)
+| URL to the AS2 server (automatically generated).
 | x
 
 | Certificate (TLS Context)
@@ -69,7 +69,7 @@ a|Indicates whether Partner Manager rejects incoming AS2 messages that aren't si
 
 Allowed values:
 
-* `Signed & Encrypted` (default)
+* `Signed & Encrypted`
 +
 (Default) Rejects incoming messages that aren't both signed and encrypted.
 * `Signed`
@@ -91,7 +91,7 @@ To create a new keystore file:
 
 . In the *<host> Keystore* field, click *Select*.
 . Click *New*.
-. Complete the fields on the *New certficate for <host> window*, as described in xref:manage-host-certificate-settings.adoc[].
+. Complete the fields on the *New certficate for <host> window*, as described in xref:manage-host-certificates.adoc[].
 . Click *Create*.
 |x 
 |===

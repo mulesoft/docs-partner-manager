@@ -76,3 +76,4 @@ If you no longer use a partner-owned or third-party-connection-owned certificate
 * xref:certificates.adoc[]
 * xref:configure-partner.adoc[]
 * xref:configure-third-party.adoc[]
+* xref:manage-host-certificates.adoc[]

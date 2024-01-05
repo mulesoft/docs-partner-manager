@@ -4,12 +4,12 @@ If your partners use third-party service providers such as VANs or 3PLs (third-p
 
 Use the *Partners* page to create and manage third-party connections. From this page, you can:
 
-* xref:create-third-party.adoc[Create a new third-party connection]
-* xref:partner-manager-identifiers.adoc[Add the AS2 identifiers] used by the third-party connection.
+* xref:create-third-party.adoc[Create a new third-party connection].
+* xref:partner-manager-identifiers.adoc[Add the EDI and AS2 identifiers] used by the third-party connection.
 * Add digital xref:certificates.adoc[certificates] associated with the third-party connection.
 * xref:create-endpoint.adoc[Create] and manage source and target endpoints owned by the third-party connection.
-* xref:modify-third-party-settings.adoc[Modify third-party connection settings]
-* xref:delete-third-party.adoc[Delete a third-party connection]
+* xref:modify-third-party-settings.adoc[Modify third-party connection settings].
+* xref:delete-third-party.adoc[Delete a third-party connection].
 
 After you create a third-party connection, you can select the endpoints and identifiers configured for that connection in message flows created for your partners.
 
