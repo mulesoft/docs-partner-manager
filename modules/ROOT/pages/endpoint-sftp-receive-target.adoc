@@ -113,3 +113,4 @@ To disable this feature, specify a negative number or omit the value.
 
 * xref:endpoints.adoc[]
 * xref:create-endpoint.adoc[]
+* xref:manage-partner-certificates[]

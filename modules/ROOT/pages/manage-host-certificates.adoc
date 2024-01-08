@@ -23,7 +23,7 @@ NOTE: For AS2 endpoints, you must also configure at least one host keystore, as 
 
 To add a host certificate:
 
-. Access the *<host>* page.
+. In the sidebar, access the *<host>* page.
 . In the *Certificates* section, click *New*.
 . Select a certificate type.
 . Enter the settings for the selected certificate type:
@@ -32,6 +32,14 @@ To add a host certificate:
 ** <<identity-key,Identity key>>
 +
 . Click *Save*.
+
+[[public-certificate]]
+=== Public Certificate Settings
+
+To configure settings for a public certificate:
+
+. In the *Certificate name* field, enter the name of the public certificate.
+. In the *Certificate* field, click *Choose file* and select a public certificate.
 
 [[identity-key]]
 === Identity Key Certificate Settings
@@ -43,19 +51,11 @@ To configure settings for an identity key certificate:
 . In the *Key Phassphrase* field, enter a passphrase for protecting the identity key certificate.
 . In  the *Expiration Date* field, optionally enter an expiration date for the certificate. This date is a reminder for you, but Anypoint Partner Manager doesn't enforce it.
 
-[[public-certificate]]
-=== Public Certificate Settings
-
-To configure settings for a public certificate:
-
-. In the *Certificate name* field, enter the name of the public certificate.
-. In the *Certificate* field, click *Choose file* and select a public certificate.
-
 == Update a Host Certificate
 
 You can update a host certificate by selecting a different certificate file to associate with the certificate:
 
-. Access the *<host>* page.
+. In the sidebar, access the *<host>* page.
 . In the *Certificates* section, click the name of the certificate that you want to update.
 . Click *Edit*.
 . Click *Choose File* and select a certificate file.
@@ -65,13 +65,28 @@ You can update a host certificate by selecting a different certificate file to a
 
 If you no longer use a host certificate, you can remove it from Anypoint Partner Manager:
 
-. Access the *<host>* page.
+. In the sidebar, access the *<host>* page.
 . In the *Certificates* section, hover over the name of the host certificate that you want to removve.
 . Click the trash can icon on the right.
+
+== Enforce Certificate Expiration Dates for AS2 Requests
+
+You can prevent inbound AS2 requests with expired certificates from being processed by Anypoint Partner Manager:
+
+. In the sidebar, access the *<host>* page.
+. In the *Global endpoint settings* section, click *AS2* in the *Inbound endpoint settings* column.
+. Select *Enforce AS2 certificate expiration date*.
+. Click *Save*.
+
+To prevent outbound AS2 requests with expired certificates from being processed by Partner Manager:
+
+. In the sidebar, access the *<host>* page.
+. In the *Global endpoint settings* section, select *AS2* in the *Outbound endpoint settings* column.
+. Select *Enforce AS2 certificate expiration* date.
+. Click *Save*.
 
 == See Also
 
 * xref:certificates.adoc[]
 * xref:configure-host.adoc[]
-* xref:configure-global-as2-settings.adoc[]
 * xref:manage-partner-certificates.adoc[]

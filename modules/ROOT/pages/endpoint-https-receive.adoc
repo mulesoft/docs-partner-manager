@@ -106,5 +106,6 @@ After you create an HTTP or HTTPS receive endpoint, you can deploy it, as descri
 
 == See Also
 
-* xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Creating Endpoints]
+* xref:endpoints.adoc[]
+* xref:create-endpoint.adoc[]
+* xref: manage-partner-certificates.adoc[]

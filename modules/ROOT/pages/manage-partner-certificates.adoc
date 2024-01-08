@@ -16,7 +16,7 @@ HTTPS Send to Partners endpoints
 
 To add a partner-owned or third-party-connection-owned certificate:
 
-. Select *Partners* in the sidebar.
+. In the sidebar, access the *Partners* page.
 . Click the partner or third-party connection that you want to create a certificate for.
 . In the *Certificates* section, click *New*.
 . Select a certificate type.
@@ -31,7 +31,7 @@ After you create a public certificate, you can assign it to the partner to use w
 
 Assigning a certificate to a partner unassigns the previously-assigned certificate.
 
-NOTE: You can also add certificates when you create endpoints. For more information, see xref:endpoint-https-send.adoc[],xref:endpoint-sftp-receive-target.adoc[], and xref:endpoint-sftp-send.adoc[].
+NOTE: You can also add certificates when you create endpoints. For more information, see xref:endpoint-https-send.adoc[], xref:endpoint-sftp-receive-target.adoc[], and xref:endpoint-sftp-send.adoc[].
 
 [[public-certificate]]
 === Public Certificate Settings
@@ -55,7 +55,7 @@ To configure settings for an identity key certificate:
 
 You can update a partner-owned or third-party-connection-owned certificate by selecting a different certificate file to associate with the certificate:
 
-. Select *Partners* in the sidebar.
+. In the sidebar, access the *Partners* page.
 . Click the partner or third-party connection whose certificate you want to update.
 . In the *Certificates* section, click the name of the certificate to update.
 . Click *Edit*.
@@ -66,10 +66,10 @@ You can update a partner-owned or third-party-connection-owned certificate by se
 
 If you no longer use a partner-owned or third-party-connection-owned certificate, you can remove it from Anypoint Partner Manager:
 
-. Select *Partners* in the sidebar.
+. In the sidebar, access the *Partners* page.
 . Click the partner or third-party connection whose certificate you want to remove.
 . In the *Certificates* section, hover over the name of the certificate configuration that you want to remove.
-. Click the trash can icon on the right.
+. Click the trash can icon that appears on the right.
 
 == See Also
 

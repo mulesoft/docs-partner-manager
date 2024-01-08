@@ -12,7 +12,6 @@
 * xref:configure-host.adoc[Configuring and Managing a Host Profile]
   ** xref:manage-host-certificates.adoc[Managing Host Certificates]
   ** xref:manage-as2-host-keystores.adoc[Managing AS2 Host Keystores]
-  ** xref:enforce-certificate-expiration-as2.adoc[Enforcing Certificate Expiration Dates for AS2 Requests]
   ** xref:configure-global-edifact-receive-settings
   .adoc[Configuring Global EDIFACT Receive Settings]
 * xref:configure-partner.adoc[Configuring and Managing Partners]

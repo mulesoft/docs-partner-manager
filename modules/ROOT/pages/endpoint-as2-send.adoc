@@ -120,7 +120,6 @@ a|Whether you want the partner to return a Message Disposition Notification (MDN
 |MDN signature algorithm
 |Request for a partner to respond with a signed Message Disposition Notification (MDN) using this algorithm for calculating MIC.
 |x
-
 |===
 
 == See Also
@@ -129,3 +128,4 @@ a|Whether you want the partner to return a Message Disposition Notification (MDN
 * xref:create-endpoint.adoc[]
 * xref:file-name-pattern.adoc[]
 * xref:as2-endpoints-algorithms.adoc[]
+* xref:manage-host-certificates.adoc[]

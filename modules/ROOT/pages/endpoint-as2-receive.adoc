@@ -91,7 +91,7 @@ To create a new keystore file:
 
 . In the *<host> Keystore* field, click *Select*.
 . Click *New*.
-. Complete the fields on the *New certficate for <host> window*, as described in xref:manage-host-certificates.adoc[].
+. Complete the fields on the *New certficate for <host> window*, as described in xref:manage-as2-host-keystores.adoc[].
 . Click *Create*.
 |x 
 |===
@@ -102,6 +102,7 @@ After you create an AS2 receive endpoint, you can deploy it, as described in xre
 
 == See Also
 
-* xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Creating Endpoints]
-* xref:as2-endpoints-algorithms.adoc[AS2 Signature and Encryption Algorithms]
+* xref:endpoints.adoc[]
+* xref:create-endpoint.adoc[]
+* xref:as2-endpoints-algorithms.adoc[]
+* xref:manage-host-certificates.adoc[]

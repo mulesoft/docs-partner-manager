@@ -43,7 +43,7 @@ Create HTTP and HTTPS send endpoints by configuring these settings on the host, 
 |URL
 |Target HTTP or HTTPS service to which to send transformed EDI, JSON, or XML messages. The URL must be accessible from the runtime environment that processes your B2B integrations.
 Enter a well-formed URL (including the path) that specifies where to send the request, for example:
-`+https://www.mulesoft.com/sendRequest?name=something+`
+`+https://www.mulesoft.com/sendRequest+`
 |x
 
 |Response Timeout (in milliseconds)
@@ -86,17 +86,12 @@ Uses a certificate that was not issued or signed by a CA. With this option, you 
 +
 Allows an insecure connection that doesn’t perform certificate validation.
 |x
-
-|*???Not seeing this* Connection Idle Timeout (milliseconds)
-|Connection idle timeout period in milliseconds. The default is `30000`.
-|x
-
 |===
 
 include::partial$https-endpoint-authentication-partial.adoc[tag=https-send,leveloffset=+1]
 
 == See Also
 
-* xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Creating Endpoints]
-* xref:certificates.adoc[Certificate Settings]
+* xref:endpoints.adoc[]
+* xref:create-endpoint.adoc[]
+* xref:manage-partner-certificates.adoc[]
