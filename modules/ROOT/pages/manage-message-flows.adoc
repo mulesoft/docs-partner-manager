@@ -103,7 +103,7 @@ a| * xref:partner-manager-create-message-type.adoc[Creating Message Types]
 * xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
 
 |Send to <partner>
-a| * Select a different send to partner endpoint.
+a| * Select a different Send to Partners endpoint.
 * (AS2 endpoint) View the AS2  associated with the endpoint.
 a| * xref:create-endpoint.adoc[Creating Endpoints]
 * xref:certificates.adoc[Certificate Settings]

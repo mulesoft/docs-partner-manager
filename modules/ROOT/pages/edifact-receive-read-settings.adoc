@@ -1,4 +1,4 @@
-= Configuring Receive Settings for Inbound EDIFACT messages
+= Configuring Receive Settings for Inbound EDIFACT Messages
 
 Partner Manager receive settings include the EDIFACT acknowledgements and validation rules to apply when processing an inbound EDIFACT message from the specified partner.
 

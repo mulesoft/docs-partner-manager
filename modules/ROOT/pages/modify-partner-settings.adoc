@@ -35,7 +35,7 @@ Because a partner must have at least one identifier, you can't delete the last o
 | xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
 | The partner's digital certificates, such as X.509 certificates
 | Click *New* in the *Certificates* section.
-|
+| xref:manage-partner-certificates.adoc[]
 | Endpoints
 a| * Create a new endpoint
 +
@@ -58,5 +58,6 @@ a|
 
 == See Also
 
-* xref:create-partner.adoc[Creating Partners]
-* xref:partner-manager-delete-partner.adoc[Deleting Partners]
+* xref:configure-partner.adoc[]
+* xref:create-partner.adoc[]
+* xref:partner-manager-delete-partner.adoc[]

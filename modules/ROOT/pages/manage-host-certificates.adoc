@@ -1,4 +1,5 @@
 = Managing Host Certificates
+:page-aliases: configure-global-as2-settings.adoc
 
 Anypoint Partner Manager supports the following types of host certificates:
 
@@ -63,10 +64,10 @@ You can update a host certificate by selecting a different certificate file to a
 
 == Remove a Host Certificate
 
-If you no longer use a host certificate, you can remove it from Anypoint Partner Manager:
+If a host certificate isn't associated with an endpoint, you can remove it from Anypoint Partner Manager:
 
 . In the sidebar, access the *<host>* page.
-. In the *Certificates* section, hover over the name of the host certificate that you want to removve.
+. In the *Certificates* section, hover over the name of the host certificate to removve.
 . Click the trash can icon on the right.
 
 == Enforce Certificate Expiration Dates for AS2 Requests

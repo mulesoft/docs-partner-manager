@@ -14,4 +14,6 @@ After you delete a partner, you can reuse the partner name.
 
 == See Also
 
-* xref:configure-partner.adoc[Creating Partners]
+* xref:configure-partner.adoc[]
+* xref:create-partner.adoc[]
+* xref:modify-partner-settings.adoc[]

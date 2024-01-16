@@ -5,7 +5,7 @@ You can modify third-party connection settings including contact details, identi
 To modify third-party connection settings:
 
 . In Partner Manager, select *Partners* in the sidebar.
-. Click the connection you want to modify.
+. Click the connection to modify.
 . Modify any of the following settings:
 +
 [%header%autowidth.spread]

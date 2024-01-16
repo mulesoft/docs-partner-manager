@@ -14,7 +14,7 @@ Source endpoint in an outbound message flow that receives application messages f
 +
 Only a host can own HTTP or HTTPS Source at Host endpoints.
 
-IMPORTANT: Each AS2 receive endpoint configuration gets deployed as an individual Mule application in the runtime. To minimize the number of vCores needed to run Anypoint Partner Manager, use an existing AS2 receive endpoint configuration across multiple message flows.
+IMPORTANT: Each HTTP and HTTPS receive endpoint configuration gets deployed as an individual Mule application in the runtime. To minimize the number of vCores needed to run Anypoint Partner Manager, use an existing HTTP or HTTPS receive endpoint configuration across multiple message flows.
 
 Create HTTP and HTTPS receive endpoints by configuring these settings on the *<host>* page:
 
@@ -108,4 +108,4 @@ After you create an HTTP or HTTPS receive endpoint, you can deploy it, as descri
 
 * xref:endpoints.adoc[]
 * xref:create-endpoint.adoc[]
-* xref: manage-partner-certificates.adoc[]
+* xref:manage-partner-certificates.adoc[]

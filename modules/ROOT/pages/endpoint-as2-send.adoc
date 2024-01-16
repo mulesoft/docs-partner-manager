@@ -79,7 +79,7 @@ Allows an insecure connection that doesn’t perform certificate validation.
 |x
 
 |Respond to email address
-|Email address to use as the HTTP 'From' header when sending.
+|Email address to use as the HTTP `From` header when sending.
 |x
 
 |Message subject
@@ -118,7 +118,7 @@ a|Whether you want the partner to return a Message Disposition Notification (MDN
 |x
 
 |MDN signature algorithm
-|Request for a partner to respond with a signed Message Disposition Notification (MDN) using this algorithm for calculating MIC.
+|Request for a partner to respond with a signed Message Disposition Notification (MDN) using this algorithm for calculating the Message Integrity Check (MIC).
 |x
 |===
 

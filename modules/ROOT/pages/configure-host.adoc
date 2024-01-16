@@ -6,8 +6,8 @@ Use the *<host>* page in Partner Manager to:
 
 * Add details about your organization, such as its name, website, logo, corporate address, and contacts.
 * xref:partner-manager-identifiers.adoc[Add the EDI and AS2 identifiers] used by your organization.
-* xref:manage-host-certificates.adoc[Manage the digital certificates] associated with your organization.
-* xref:manage-as2-host-keystores.adoc[Manage AS2 host keystores] associated with your organization, if you plan to use AS2 endpoints.
+* xref:manage-host-certificates.adoc[Manage the host certificates] associated with your organization.
+* xref:manage-as2-host-keystores.adoc[Manage the AS2 host keystores] associated with your organization, if you plan to use AS2 endpoints.
 * xref:create-endpoint.adoc[Create and manage source and target endpoints].
 * xref:partner-manager-create-message-type.adoc[Create and manage source and target message types].
 * xref:setup-payload-storage-API.adoc[Configure a payload storage API] to provide Partner Manager with a standardized way to connect to your storage.

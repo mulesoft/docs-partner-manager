@@ -80,7 +80,7 @@ a| (Applies to HTTPS endpoints) SSL certificate. Values are:
 Uses a certificate that was issued and signed by a certificate authority (CA). With this option, you don't need to upload an additional certificate.
 * Use a self-signed certificate
 +
-Uses a certificate that was not issued or signed by a CA. With this option, you must either select an existing certificate or upload a new certificate in `<certifcate name>.PEM` format).
+Uses a certificate that was not issued or signed by a CA. With this option, you must either select an existing certificate or upload a new certificate in `<certifcate name>.PEM` format.
 +
 * Allow insecure connection
 +
