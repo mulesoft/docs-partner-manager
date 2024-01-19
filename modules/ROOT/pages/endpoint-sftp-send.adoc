@@ -60,11 +60,11 @@ Provides no authentication for the endpoint
 +
 Authenticates by using a username and password
 +
-* *Identity key*
+* *Identity Key*
 +
 Authenticates by using public and private SSH keys
 +
-* *Basic and Identity key*
+* *Basic and Identity Key*
 +
 Authenticates by using a username, password, and public SSH key
 | x

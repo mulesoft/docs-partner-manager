@@ -1,17 +1,17 @@
 | Username
-| (Applies to all authentication types exept *None*) 
+| (Applies to all authentication types exept `None`) 
 
 Username for the SFTP server.
 | x
 
 | Password 
-| (Applies to these authentication types: Basic, Basic and Identity key) 
+| (Applies to these authentication types: `Basic`, `Basic and Identity Key`) 
 
 Password for the SFTP server.
 | x 
 
 | SSH 
-a| (Applies to these authentication types: Identity key, Basic and Identity key)
+a| (Applies to these authentication types: `Identity Key`, `Basic and Identity Key`)
 
 SSH private key file. The following considersations apply:
 
