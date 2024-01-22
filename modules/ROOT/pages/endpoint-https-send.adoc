@@ -41,7 +41,7 @@ Create HTTP and HTTPS send endpoints by configuring these settings on the host, 
 |
 
 |URL
-|Target HTTP or HTTPS service to which to send transformed EDI, JSON, or XML messages. The URL must be accessible from the runtime environment that processes your B2B integrations.
+|Target HTTP or HTTPS service to which to send transformed X12, EDIFACT, JSON, XML, or CSV messages. The URL must be accessible from the runtime environment that processes your B2B integrations.
 Enter a well-formed URL (including the path) that specifies where to send the request, for example:
 `+https://www.mulesoft.com/sendRequest+`
 |x
@@ -72,7 +72,7 @@ No authentication
 +
 |x
 
-|Certificate
+|Certificate (TLS Context)
 a| (Applies to HTTPS endpoints) SSL certificate. Values are:
 
 * Use CA-signed certificates

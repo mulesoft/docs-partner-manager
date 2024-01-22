@@ -60,16 +60,16 @@ Use the following settings to configure Credit Credentials authentication:
 |===
 |Name |Description |Required
 |Client ID header name
-|Name of the header used to extract the client ID from requests.
+|HTTP header name that the client ID uses to call the endpoint URL. Default is `"client_id"`.
 |x
 |Client ID header value
-|Client ID to use when making a request.
+|HTTP header value for the client ID.
 |x
 |Client secret header name
-|Name of the header used to extract the client secret from requests.
+|HTTP header name for the client secret. Default is `"client_secret"`.
 |x
 |Client secret header value
-|Client secret to use when making a request.
+|HTTP header value for the client secret.
 |x
 |===
 // end::https-send[]
