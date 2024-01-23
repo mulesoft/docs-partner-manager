@@ -53,7 +53,9 @@ You can access the endpoint URL directly over the internet.
 |
 
 | Manage with API manager
-a| Enable this setting to manage the endpoint with API Manager. To use this functionality, you must create an HTTP API in API Manager in the same environment and organization as the endpoint.
+a| Enable this setting to manage the endpoint with API Manager. 
+
+To use this functionality, you must create an HTTP API in API Manager in the same environment and organization as the endpoint.
 
 When you create this API in API Manager:
 

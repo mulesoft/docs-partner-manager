@@ -49,7 +49,7 @@ Create SFTP receive endpoints by configuring these settings on the *<host>* or *
 | x
 
 | Authentication type
-a| Authenication method used to protect the SFTP endpoint. Values are: 
+a| Authenication method used to secure the SFTP endpoint. Values are: 
 
 * *None*
 +
@@ -61,11 +61,11 @@ Authenticates by using a username and password
 +
 * *Identity Key*
 +
-Authenticates by using public and private SSH keys
+Authenticates by using a private SSH identity key
 +
 * *Basic and Identity Key*
 +
-Authenticates by using a username, password, and public SSH key
+Authenticates by using a username, password, and public SSH identity key
 | x
 
 include::partial$sftp-endpoint-authentication-partial.adoc[]
@@ -105,7 +105,7 @@ To disable this feature, specify a negative number or omit the value.
 |
 
 | Archival Path
-| SFTP server path at which to store a copy of the file obtained from the source path.
+| Directory path on the SFTP server at which to store a copy of the file after processing.
 |
 |===
 
