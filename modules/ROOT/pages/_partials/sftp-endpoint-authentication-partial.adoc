@@ -1,5 +1,5 @@
 | Username
-| (Applies to all authentication types exept `None`) 
+| (Applies to all authentication types except `None`) 
 
 Username for the SFTP server.
 | x
@@ -13,7 +13,7 @@ Password for the SFTP server.
 | SSH 
 a| (Applies to these authentication types: `Identity Key`, `Basic and Identity Key`)
 
-SSH private key file. The following considersations apply:
+SSH private key file. The following considerations apply:
 
 * Send and receive endpoints that have the same owner can use the same SSH private key file. 
 * Multiple message flows for the same or different partners can reference endpoints that use the same SSH private key file. 

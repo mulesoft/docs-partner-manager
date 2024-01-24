@@ -123,7 +123,7 @@ You can modify the following fields for an SFTP Receive from Partners or Source 
 |===
 |Field |Redeploys the Runtime Application for the Endpoint
 |Endpoint name |Yes
-|Desription | No
+|Description | No
 |Host |Yes
 |Port | Yes
 |Authentication type | Yes

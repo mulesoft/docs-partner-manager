@@ -11,7 +11,7 @@ Anypoint Partner Manager supports the following types of partner and third-party
 * HTTPS Send to Partners endpoints
 | Identity key certificate a| Private key used for authentication a| 
 * SFTP Receive from Partners endpoints, when the authentication type is `Identity Key` or `Basic and Identity Key` 
-* SFTP Send to Partners endpoints , when the authentication type is `Identity Key` or `Basic and Identity Key` 
+* SFTP Send to Partners endpoints, when the authentication type is `Identity Key` or `Basic and Identity Key` 
 |===
 
 == Add a Certificate
@@ -50,8 +50,8 @@ To configure settings for an identity key certificate:
 
 . In the *Identity Key Name* field, enter the name of the identity key certificate.
 . In the *<partner> Identity Key PEM File* field, click *Choose file* and select an identity key certificate.
-. In the *Key phassphrase* field, enter a passphrase for protecting the identity key certificate.
-. In  the *Expiration date* field, optionally enter an expiration date for the certificate. This date is a reminder for you, but Anypoint Partner Manager doesn't enforce it.
+. In the *Key passphrase* field, enter a passphrase for protecting the identity key certificate.
+. In the *Expiration date* field, optionally enter an expiration date for the certificate. This date is a reminder for you, but Anypoint Partner Manager doesn't enforce it.
 
 == Update a Certificate
 
@@ -74,7 +74,7 @@ To remove a certificate:
 
 . In the sidebar, access the *Partners* page.
 . Click the partner or third-party connection whose certificate you want to remove.
-. In the *Certificates* section, hover over the name of the certificate configuration that to remove.
+. In the *Certificates* section, hover over the name of the certificate configuration to remove.
 . Click the trash can icon that appears on the right.
 
 == See Also

@@ -48,7 +48,7 @@ To configure settings for an identity key certificate:
 
 . In the *Identity Key Name* field, enter the name of the identity key certificate.
 . In the *<host> Identity Key PEM File* field, click *Choose file* and select an identity key certificate.
-. In the *Key Phassphrase* field, enter a passphrase for protecting the identity key certificate.
+. In the *Key Passphrase* field, enter a passphrase for protecting the identity key certificate.
 . In  the *Expiration Date* field, optionally enter an expiration date for the certificate. This date is a reminder for you, but Anypoint Partner Manager doesn't enforce it.
 
 == Update a Host Certificate
@@ -66,7 +66,7 @@ You can update a host certificate by selecting a different certificate file to a
 If a host certificate isn't associated with an endpoint, you can remove it from Anypoint Partner Manager:
 
 . In the sidebar, access the *<host>* page.
-. In the *Certificates* section, hover over the name of the host certificate to removve.
+. In the *Certificates* section, hover over the name of the host certificate to remove.
 . Click the trash can icon on the right.
 
 == Enforce Certificate Expiration Dates for AS2 Requests

@@ -50,7 +50,7 @@ Create SFTP send endpoints by configuring these settings on the *<host>* or *<pa
 |x
 
 | Authentication type
-a| Authenication method used to secure the SFTP endpoint. Values are: 
+a| Authentication method used to secure the SFTP endpoint. Values are: 
 
 * *None*
 +
