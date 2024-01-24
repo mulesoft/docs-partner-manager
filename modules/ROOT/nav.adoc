@@ -21,7 +21,7 @@
   ** xref:x12-send-settings.adoc[Configuring Send Settings for Outbound X12 Messages]
   ** xref:partner-manager-delete-partner.adoc[Deleting Partners]
   ** xref:modify-partner-settings.adoc[Modifying Partner Settings]
-  ** xref:manage-partner-certificates.adoc[Managing Partner and Third-Party-Connection Certificates]
+  ** xref:manage-partner-certificates.adoc[Managing Partner and Third-Party Connection Certificates]
   * xref:configure-third-party.adoc[Configuring and Managing Third-Party Connections]
     ** xref:create-third-party.adoc[Creating Third-Party Connections]
     ** xref:modify-third-party-settings.adoc[Modifying Third-Party Connection Settings]
