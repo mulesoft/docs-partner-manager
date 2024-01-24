@@ -137,12 +137,12 @@ You can modify the following fields for an SFTP Receive from Partners or Source 
 |Archival path |Yes
 |===
 
-[%header%autowidth.spread]
 [[sftp-send]]
 == SFTP Send Endpoints
 
 You can modify the following fields for an SFTP Send to Partners or Target at Host endpoint:
 
+[%header%autowidth.spread]
 |===
 |Field |Redeploys the Runtime Application for the Endpoint
 |Endpoint name |No

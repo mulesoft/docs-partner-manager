@@ -53,9 +53,9 @@ You can access the endpoint URL directly over the internet.
 |
 
 | Manage with API manager
-a| Enable this setting to manage the endpoint with API Manager. 
+a| Enable this setting to manage the endpoint, including its access control,  with API Manager. When you manage an endpoint with API Manager, you can apply various policies, including authentication and client credentials, and you can configure SLA tiers for the endpoint. You can also leverage Anypoint Exchange to document your message specifications and share them with your partners via public portals by leveraging Anypoint API Experience Hub. (This requires an additional license.)
 
-To use this functionality, you must create an HTTP API in API Manager in the same environment and organization as the endpoint.
+To have an endpoint managed with API Manager, you must create an HTTP API in API Manager in the same environment and organization as the endpoint.
 
 When you create this API in API Manager:
 
