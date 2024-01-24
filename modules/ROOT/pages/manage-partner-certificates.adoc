@@ -1,4 +1,4 @@
-= Managing Partner and Third-Party-Connection Certificates
+= Managing Partner and Third-Party Connection Certificates
 :page-aliases: manage-as2-partner-certificates.adoc
 
 Anypoint Partner Manager supports the following types of partner and third-party-connection certificates:
