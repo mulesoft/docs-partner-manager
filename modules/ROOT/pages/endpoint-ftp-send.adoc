@@ -25,7 +25,7 @@ Create FTP send endpoints by configuring these settings on the *<host>* or *Part
 | Host, partner, or third-party connection that owns the endpoint.
 | x
 
-Usage
+|Usage
 |Endpoint function (`Send to partners` or `Target at host`).
 |x
 
