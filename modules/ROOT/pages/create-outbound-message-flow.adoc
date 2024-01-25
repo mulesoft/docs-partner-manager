@@ -6,7 +6,7 @@ Before you create your first message flow, configure your xref:setup-payload-sto
 
 To create an outbound message flow:
 
-. From the Anypoint Partner Manager navigation menu, select *Message Flows*.
+. From the Anypoint Partner Manager sidebar, select *Message Flows*.
 . Click *New message flow > Send to partner*.
 . Either select an existing partner or select *New* to create a new partner, as described in xref:create-partner.adoc#[Create a Partner].
 . Configure the receiving endpoint.

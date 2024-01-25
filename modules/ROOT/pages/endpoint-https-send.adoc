@@ -24,8 +24,12 @@ Create HTTP and HTTPS send endpoints by configuring these settings on the host, 
 | Host, partner, or third-party connection that owns the endpoint.
 | x
 
+| Usage
+|Endpoint function (`Send to partners` or `Target at host`).
+|x
+
 |Protocol
-| Protocol that the endpoint supports.
+| Protocol that the endpoint supports (`HTTP` or `HTTPS`).
 |x
 
 |Endpoint Name
@@ -37,7 +41,7 @@ Create HTTP and HTTPS send endpoints by configuring these settings on the host, 
 |
 
 |URL
-|Target HTTP or HTTPS service to which to send transformed EDI, JSON, or XML messages. The URL must be accessible from the runtime environment that processes your B2B integrations.
+|Target HTTP or HTTPS service to which to send transformed X12, EDIFACT, JSON, XML, or CSV messages. The URL must be accessible from the runtime environment that processes your B2B integrations.
 Enter a well-formed URL (including the path) that specifies where to send the request, for example:
 `+https://www.mulesoft.com/sendRequest+`
 |x
@@ -54,57 +58,40 @@ Enter a well-formed URL (including the path) that specifies where to send the re
 |Maximum number of reconnection attempts. To prevent Partner Manager from retrying after an initial connection failure, set this value to `0`. The default is `3`.
 |x
 
-|Connection Idle Timeout (milliseconds)
-|Connection idle timeout period in milliseconds. The default is `30000`.
+|Authentication type
+a|Authentication method used to protect the HTTP or HTTPS endpoint. Values are:
+
+* None
++
+No authentication
++
+* <<api-key,API key>>
+* <<basic,Basic>>
+* <<client-credentials,Client Credentials>>
+* <<oauth-token,OAuth Token>>
++
 |x
 
+|Certificate (TLS Context)
+a| (Applies to HTTPS endpoints) SSL certificate. Values are:
+
+* Use CA-signed certificates
++
+Uses a certificate that was issued and signed by a certificate authority (CA). With this option, you don't need to upload an additional certificate.
+* Use a self-signed certificate
++
+Uses a certificate that was not issued or signed by a CA. With this option, you must either select an existing certificate or upload a new certificate in `<certifcate name>.PEM` format.
++
+* Allow insecure connection
++
+Allows an insecure connection that doesn’t perform certificate validation.
+|x
 |===
 
-== Authentication Settings
-
-Depending on how you set up your authentication policy, refer to the appropriate authentication type here.
-
-[%header%autowidth.spread]
-|===
-|Authentication Type |Description
-|None
-|No authentication
-
-|API Key
-a| * HTTP Header Name +
-The HTTP header parameter associated with the *API Key* value. +
-* API Key +
-The value for the access key you set.
-
-|Basic
-a|Specifies a simple authentication policy that protects the API by requiring a username and password when calling apps to make a request.
-
-* Username +
-The username you created for this authentication policy
-* Password +
-The password you created for this authentication policy
-
-|Client Credentials
-a|* Client ID +
-The client ID provided when registering your application
-* Client Secret +
-The client secret provided when registering your application
-* Client Header +
-The client header
-* Client Secret Header +
-The client secret header
-
-|OAuth Token
-a|* Token URL +
-The authorization URL.
-* Client ID +
-The client ID provided when registering your application
-* Client Secret +
-The client secret provided when registering your application
-|===
+include::partial$https-endpoint-authentication-partial.adoc[tag=https-send,leveloffset=+1]
 
 == See Also
 
-* xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Creating Endpoints]
-* xref:certificates.adoc[Certificate Settings]
+* xref:endpoints.adoc[]
+* xref:create-endpoint.adoc[]
+* xref:manage-partner-certificates.adoc[]

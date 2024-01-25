@@ -8,7 +8,7 @@ To successfully route inbound messages that use an AS2 Receive from Partners end
 
 * For non-EDI files (JSON or XML), uses a filename that begins with `{message-type-id}_`.
 +
-For example, if the message type is named `custom-po`, the filename should begin with `custom-po_`.
+For example, if the message type is named `custom-po`, the filename must begin with `custom-po_`.
 +
 There are no filename restrictions for EDI files.
 * Sets the AS2 MIME-Type in the inbound AS2 message as follows, depending on the message type:
@@ -33,13 +33,13 @@ Partner Manager routes an inbound non-EDI message based on either the associated
 
 * If you specified an associated message type in the endpoint configuration, Partner Manager routes the message based on that message type. 
 
-* If you did not specify an associated message type in the endpoint configuration, Partner Manager routes the message based on the filename. The filename should begin with `{message-type-id}_` and have an appropriate file extension:
+* If you did not specify an associated message type in the endpoint configuration, Partner Manager routes the message based on the filename. The filename must begin with `{message-type-id}_` and have an appropriate file extension:
 +
 ** `.json` for JSON files
 ** `.xml` for XML files
 ** `*.csv` for CSV files
 
-For example, if the message type is named `custom-po` and it is formatted as XML, the filename should begin with `custom-po_` and end with `.xml`.
+For example, if the message type is named `custom-po` and it is formatted as XML, the filename must begin with `custom-po_` and end with `.xml`.
 
 == Messages That Use an HTTP or HTTPS Receive from Partners Endpoint
 

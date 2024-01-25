@@ -11,9 +11,9 @@ Before you delete an identifier, consider the following:
 * If you need to replace the identifier with another identifier, record the required values and qualifier type.
 
 == Steps
-. In the navigation menu, select *Partners*.
-. Select the partner containing the identifier you want to delete.
-. In the *Identifiers* row, hover over the identifier you want to delete and click the trash can icon.
+. In the sidebar, select *Partners*.
+. Select the partner containing the identifier to delete.
+. In the *Identifiers* row, hover over the identifier to delete and click the trash can icon.
 
 == See Also
 

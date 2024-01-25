@@ -20,11 +20,11 @@ Create AS2 endpoints by configuring these settings on the partner or third-party
 |x
 
 |Usage
-|`Send to partners`
-|
+|Endpoint function (`Send to partners`)
+|x
 
 |Protocol
-|Protocol that the endpoint supports.
+|Protocol that the endpoint supports (`AS2`)
 |x
 
 |Endpoint name
@@ -39,7 +39,7 @@ Create AS2 endpoints by configuring these settings on the partner or third-party
 |Your organization’s AS2 identifier.
 |x
 
-|Partner AS2 identifier
+|<Partner> AS2 identifier
 |Your partner’s AS2 identifier, which appears if the endpoint is used to send transactions directly to a partner without going through a third-party connection.
 |x
 
@@ -51,17 +51,21 @@ Create AS2 endpoints by configuring these settings on the partner or third-party
 |Your partner’s or third-party connection's AS2 URL to which outbound EDI transmissions are sent.
 |x
 
-|Authentication type
-a|Authentication type used to access the endpoint. Allowed values:
+|Certificate (TLS context)
+a| (Applies when the *Partner AS2 URL* field starts with `https`) SSL certificate. Values are:
 
-* None
+* `Use CA-signed certificates`
 +
-Does not require backend applications to authenticate when connecting to this endpoint.
+Uses a certificate that was issued and signed by a certificate authority (CA). With this option, you don't need to upload an additional certificate.
+* `Use a self-signed certificate`
 +
-* Basic
+Uses a certificate that was not issued or signed by a CA. With this option, you must either select an existing certificate or upload a new certificate in `.pem` format.
 +
-Requires backend applications to use the username and password provided by your partner to connect to this endpoint.
-Enter this information in the *Username* and *Password* fields.
+* `Allow insecure connection`
++
+Allows an insecure connection that doesn’t perform certificate validation. 
++
+Using this option is not recommended in production environments. Use it only during testing.
 |x
 
 |Connection timeout
@@ -77,7 +81,7 @@ Enter this information in the *Username* and *Password* fields.
 |x
 
 |Respond to email address
-|Email address to use as the HTTP 'From' header when sending.
+|Email address to use as the HTTP `From` header when sending.
 |x
 
 |Message subject
@@ -98,14 +102,13 @@ a|Host keystore file that stores your organization's public certificate and priv
 --
 
 For more information about host keystores, see xref:manage-as2-host-keystores.adoc[Managing AS2 Host Keystores].
-|x
-
+|
 |Encryption algorithm
-|xref:as2-endpoints-algorithms.adoc[Algorithm] to use when encrypting the message to send.
+|Algorithm to use when encrypting the message to send.
 |x
 
 |Signature algorithm
-|xref:as2-endpoints-algorithms.adoc[Algorithm] to use when setting the message-integrity check value.
+|Algorithm to use when setting the message-integrity check value.
 |x
 
 |Request receipt
@@ -113,17 +116,18 @@ a|Whether you want the partner to return a Message Disposition Notification (MDN
 |x
 
 |MDN response
-|The AS2 messages sent from Partner Manager always request the receiver to send a Synchronous MDN receipt back. The default is `Sync`.
+|The AS2 messages sent from Partner Manager always request the receiver to send a Synchronous MDN receipt back. This value is always set to `Sync`.
 |x
 
 |MDN signature algorithm
-|Request for a partner to respond with a signed Message Disposition Notification (MDN) using this xref:as2-endpoints-algorithms.adoc[algorithm] for calculating MIC.
+|Request for a partner to respond with a signed Message Disposition Notification (MDN) using this algorithm for calculating the Message Integrity Check (MIC).
 |x
-
 |===
 
 == See Also
 
-* xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Creating Endpoints]
-* xref:file-name-pattern.adoc[Filename Patterns for Send Endpoints]
+* xref:endpoints.adoc[]
+* xref:create-endpoint.adoc[]
+* xref:file-name-pattern.adoc[]
+* xref:as2-endpoints-algorithms.adoc[]
+* xref:manage-host-certificates.adoc[]

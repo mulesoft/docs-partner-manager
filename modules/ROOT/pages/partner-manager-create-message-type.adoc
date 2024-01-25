@@ -6,7 +6,7 @@ You can create new message types from the *<host>* page or by using the Message 
 
 To create a message type from the *<host>* page:
 
-. In the navigation menu, select *<host-name>*.
+. In the sidebar, select *<host-name>*.
 . From the *Message types* section, click *New*.
 . In the *Usage* drop-down list, select the message usage.
 . Add values to the remaining settings.
@@ -18,7 +18,7 @@ For setting descriptions, see the topic that corresponds to the message type usa
 * xref:message-type-target-at-host.adoc[Target at Host Message Type Settings]
 * xref:message-type-source-at-host.adoc[Source at Host Message Type Settings]
 
-After you create Receive from Partner and Source at Host message types, you can add up to five custom message attributes to them. For information, see xref:use-custom-attributes.adoc[Using Custom Message Attributes with Message Types].
+After you create Receive from Partners and Source at Host message types, you can add up to five custom message attributes to them. For information, see xref:use-custom-attributes.adoc[Using Custom Message Attributes with Message Types].
 
 == Create a Message Type by Using the Message Flow Wizard
 

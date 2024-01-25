@@ -2,12 +2,12 @@
 
 AS2, EDIFACT, and X12 transactions use identifiers in messages to identify the senders and receivers of the messages. For X12 messages, the identifiers in the ISA and GS headers provide valuable information that enables identification of the appropriate flow to use to process the transaction.
 
-Add identifiers and configure their values in the Partner Manager host page.
+Add identifiers and configure their values in the *<host>* page.
 
 [[create-identifier]]
 == Add and Configure a New Identifier
 
-. In Partner Manager, select the name of your host organization in the navigation menu.
+. Access the *<host> page*.
 . In the *Identifiers* section, click *New*.
 . In the *New Identifier* dialog, select the identifier type from the drop-down list:
 * <<as2-identifier,AS2 Identity>>

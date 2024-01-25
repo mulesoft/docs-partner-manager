@@ -9,7 +9,7 @@ During the undeployment process, do not log out of Anypoint Partner Manager or c
 
 To undeploy a message flow:
 
-. In the navigation menu, select *Message Flows*.
+. In the sidebar, select *Message Flows*.
 . Select the message flow to undeploy from the list and click *Undeploy*.
 
 Partner Manager checks to see if any of the applications deployed to Mule are orphaned as a result of the undeployment. Partner Manager then cleans up orphaned applications to release any resources that the applications consumed.

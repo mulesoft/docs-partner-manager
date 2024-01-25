@@ -9,7 +9,7 @@ Before you create your first third-party connection, make sure that you have xre
 
 To create a third-party connection:
 
-. In Partner Manager, select *Partners* in the navigation menu.
+. In Partner Manager, select *Partners* in the sidebar.
 . Click *Create partner > 3rd party connection*.
 . Enter the following information:
 +
@@ -41,7 +41,7 @@ Add the following settings for the new third-party connection, either now or lat
 | xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
 | The connection's digital certificates, such as X.509 certificates.
 | Click *New* in the *Certificates* section.
-|
+| xref:manage-partner-certificates.adoc[]
 | The connection-specific endpoints to use for sending and receiving messages through the connection. If you plan to use host-owned endpoints only, you don't need to create connection-specific endpoints.
 | Click *New* in the *Endpoints* section.
 | xref:create-endpoint.adoc[Creating Endpoints]

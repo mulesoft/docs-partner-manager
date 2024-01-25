@@ -9,7 +9,7 @@ Before you create your first partner, xref:setup-payload-storage-API.adoc[make s
 
 To create a partner:
 
-. In Partner Manager, select *Partners* in the navigation menu.
+. In Partner Manager, select *Partners* in the sidebar.
 . Click *Create partner > Partner*.
 . Enter the following information:
 +
@@ -43,7 +43,7 @@ Add the following settings for the new partner, either now or later on:
 | xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]
 | Partner's digital certificates, such as X.509 certificates.
 | Click *New* in the *Certificates* section.
-|
+| xref:manage-partner-certificates.adoc[]
 | Partner-specific endpoints to use for sending and receiving messages to and from your partner, including acknowledgment endpoints. If you plan to use host endpoints only, you don't need to create partner-specific endpoints.
 | Click *New* in the *Endpoints* section.
 | xref:create-endpoint.adoc[Creating Endpoints]
@@ -62,6 +62,7 @@ After you create a partner and configure partner-level endpoints (if needed), yo
 
 == See Also
 
-* xref:message-flows.adoc[Set Up Message Flows]
-* xref:modify-partner-settings.adoc[Modifying Partner Settings]
-* xref:partner-manager-delete-partner.adoc[Deleting Partners]
+* xref:message-flows.adoc[]
+* xref:create-partner.adoc[]
+* xref:modify-partner-settings.adoc[]
+* xref:partner-manager-delete-partner.adoc[]

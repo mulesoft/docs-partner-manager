@@ -6,7 +6,7 @@ When you delete a third-party connection, it is removed from the *Partners* page
 
 To delete a third-party connection:
 
-. In Partner Manager, select *Partners* in the navigation menu.
+. In Partner Manager, select *Partners* in the sidebar.
 . Select the third-party connection to delete and click *Delete*.
 . Confirm the deletion.
 

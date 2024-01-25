@@ -8,7 +8,7 @@ For example, you can define attributes for a message's PO number, Sales order nu
 
 Use the *<host>* page to create new custom message attributes:
 
-. In the navigation menu, select *<host>*.
+. In the sidebar, select *<host>*.
 . From the *Custom message attributes* section, click *New*.
 . Enter the attribute alias and label.
 +
@@ -31,7 +31,7 @@ To dissociate a custom message attribute from a message type, remove it from the
 
 You can delete custom attributes that are not used in reference maps:
 
-. In the navigation menu, select the *<host-name>*.
+. In the sidebar, select the *<host-name>*.
 . In the *Custom message attributes* section, locate the attribute you want to delete.
 . In the row containing the attribute you want to delete, hover over the attribute label, select the trash can that appears, and click *Delete*.
 

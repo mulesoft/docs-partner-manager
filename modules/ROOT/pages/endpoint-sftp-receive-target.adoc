@@ -25,11 +25,11 @@ Create SFTP receive endpoints by configuring these settings on the *<host>* or *
 | x
 
 |Usage
-|Endpoint function (Receive from Partners or Source at Host).
+|Endpoint function (`Receive from partners` or `Source at host`).
 |x
 
 | Protocol
-| Protocol that the endpoint supports.
+| Protocol that the endpoint supports (`SFTP`).
 | x
 
 | Endpoint Name
@@ -48,13 +48,27 @@ Create SFTP receive endpoints by configuring these settings on the *<host>* or *
 | Port number of the SFTP server.
 | x
 
-| Username
-| Username for the SFTP server.
-| x (if the server is authenticated)
+| Authentication type
+a| Authentication method used to secure the SFTP endpoint. Values are: 
 
-| Password
-| Password for the SFTP server.
-| x (if the server is authenticated)
+* *None*
++
+Provides no authentication for the endpoint
++
+* *Basic*
++
+Authenticates by using a username and password
++
+* *Identity Key*
++
+Authenticates by using a private SSH identity key
++
+* *Basic and Identity Key*
++
+Authenticates by using a username, password, and public SSH identity key
+| x
+
+include::partial$sftp-endpoint-authentication-partial.adoc[]
 
 | Source path
 | Path on the SFTP server to which your partner sends the inbound files.
@@ -83,7 +97,7 @@ To disable this feature, specify a negative number or omit the value.
 |
 
 |Associated reference identifier
-|(Applies only to endpoints supporting non-EDI formats that are owned by partners or third-party connections.) Partner information, such as the partner ID or third-party ID.
+|(Applies only to endpoints that support non-EDI formats that are owned by partners or third-party connections.) Partner information, such as the partner ID or third-party ID.
 |
 
 | File name pattern
@@ -91,11 +105,12 @@ To disable this feature, specify a negative number or omit the value.
 |
 
 | Archival Path
-| SFTP server path at which to store a copy of the file obtained from `source path`.
+| Directory path on the SFTP server at which to store a copy of the file after processing.
 |
 |===
 
 == See Also
 
-* xref:endpoints.adoc[Endpoints]
-* xref:create-endpoint.adoc[Creating Endpoints]
+* xref:endpoints.adoc[]
+* xref:create-endpoint.adoc[]
+* xref:manage-partner-certificates.adoc[]

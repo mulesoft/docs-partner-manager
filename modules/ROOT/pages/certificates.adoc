@@ -1,16 +1,11 @@
-= Certificate Settings
+= Certificate and Keystore Storage
 
-All certificates in Anypoint Partner Manager are securely stored in the Anypoint Platform secrets manager, which uses secure vault technology to store and control access to private keys, passwords, certificates, and other secrets.
+Certificates and keystores in Anypoint Partner Manager are securely stored in the Anypoint Platform secrets manager, which uses secure vault technology to store and control access to private keys, passwords, certificates, and other secrets.
 
-In Partner Manager, you can:
-
-* Use a CA-signed certificate. +
-If an endpoint is currently using a CA-signed certificate, you do not need to upload an additional certificate. +
-* Upload your own, self-signed certificate. +
-You can upload a new certificate (in `<certifcate name>.PEM` format) or view all the certificates available for use with this endpoint setup.
-* Enable an insecure connection for local testing that doesn’t perform certificate validation by selecting *Allow insecure connection*.
+For endpoints that use certificates or keystores, you can either select an available certificate or keystore that works with the endpoint type and protocol or upload a new one to Partner Manager.
 
 == See Also
 
-* xref:manage-as2-host-keystores.adoc[Managing AS2 Host Keystores]
-* xref:manage-as2-partner-certificates.adoc[Managing AS2 Partner Certificates]
+* xref:manage-host-certificates.adoc[]
+* xref:manage-as2-host-keystores.adoc[]
+* xref:manage-partner-certificates.adoc[]

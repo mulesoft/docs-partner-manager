@@ -9,7 +9,7 @@ Before you create your first message flow, configure your xref:setup-payload-sto
 
 To create an inbound message flow:
 
-. From the Partner Manager navigation menu, select *Message Flows*.
+. From the Partner Manager sidebar, select *Message Flows*.
 . Click *New message flow > Receive from partner*.
 . Either select an existing partner from the list or select *New* to create a new partner, as described in xref:create-partner.adoc[Create a Partner].
 . Configure the receiving endpoint.

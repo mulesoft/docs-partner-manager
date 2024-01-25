@@ -1,10 +1,10 @@
-= Configuring Receive Settings for Inbound EDIFACT messages
+= Configuring Receive Settings for Inbound EDIFACT Messages
 
 Partner Manager receive settings include the EDIFACT acknowledgements and validation rules to apply when processing an inbound EDIFACT message from the specified partner.
 
 To configure EDIFACT receive settings:
 
-. In the navigation menu, select *Partners*.
+. In the sidebar, select *Partners*.
 . Select the partner to which these settings apply.
 . In the *Validation and acknowledgement settings* section's *Receive from <partner-name>* column, click *EDIFACT*.
 . Select a link to configure:

@@ -6,7 +6,7 @@ When you delete a partner, the partner is removed from the Partner Manager's *Pa
 
 To delete a partner:
 
-. From your Anypoint Partner Manager sandbox or production environment, select *Partners* from the navigation menu.
+. From your Anypoint Partner Manager sandbox or production environment, select *Partners* from the sidebar.
 . Select the partner to delete and click *Delete*.
 . In the confirmation dialog, confirm the deletion.
 
@@ -14,4 +14,6 @@ After you delete a partner, you can reuse the partner name.
 
 == See Also
 
-* xref:configure-partner.adoc[Creating Partners]
+* xref:configure-partner.adoc[]
+* xref:create-partner.adoc[]
+* xref:modify-partner-settings.adoc[]
