@@ -65,7 +65,7 @@ Uses a certificate that was not issued or signed by a CA. With this option, you 
 +
 Allows an insecure connection that doesn’t perform certificate validation. 
 +
-Using this option is not recommended in production environments. Use it only during testing.
+Don't use this option in production environments. Use it only during testing.
 |x
 
 |Connection timeout

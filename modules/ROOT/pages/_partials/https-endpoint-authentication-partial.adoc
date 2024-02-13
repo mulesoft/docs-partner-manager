@@ -24,10 +24,10 @@ After saving your new or reconfigured endpoint, you cannot subsequently retrieve
 |
 |===
 // end::https-send[]
-// https-receive[]
+// end::https-receive[]
 
 // tag::https-send[]
-// tag:https-receive[]
+// tag::https-receive[]
 [[basic]]
 == Basic Authentication
 

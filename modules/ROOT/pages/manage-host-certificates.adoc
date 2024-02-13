@@ -49,11 +49,11 @@ To configure settings for an identity key certificate:
 . In the *Identity Key Name* field, enter the name of the identity key certificate.
 . In the *<host> Identity Key PEM File* field, click *Choose file* and select an identity key certificate.
 . In the *Key Passphrase* field, enter a passphrase for protecting the identity key certificate.
-. In  the *Expiration Date* field, optionally enter an expiration date for the certificate. This date is a reminder for you, but Anypoint Partner Manager doesn't enforce it.
+. In the *Expiration Date* field, optionally enter an expiration date for the certificate. This date is a reminder for you, but Anypoint Partner Manager doesn't enforce it.
 
 == Update a Host Certificate
 
-You can update a host certificate by selecting a different certificate file to associate with the certificate:
+Update a host certificate by selecting a different certificate file to associate with the it:
 
 . In the sidebar, access the *<host>* page.
 . In the *Certificates* section, click the name of the certificate that you want to update.
@@ -71,18 +71,11 @@ If a host certificate isn't associated with an endpoint, you can remove it from 
 
 == Enforce Certificate Expiration Dates for AS2 Requests
 
-You can prevent inbound AS2 requests with expired certificates from being processed by Anypoint Partner Manager:
+To prevent inbound AS2 requests with expired certificates from being processed by Anypoint Partner Manager:
 
 . In the sidebar, access the *<host>* page.
 . In the *Global endpoint settings* section, click *AS2* in the *Inbound endpoint settings* column.
 . Select *Enforce AS2 certificate expiration date*.
-. Click *Save*.
-
-To prevent outbound AS2 requests with expired certificates from being processed by Partner Manager:
-
-. In the sidebar, access the *<host>* page.
-. In the *Global endpoint settings* section, select *AS2* in the *Outbound endpoint settings* column.
-. Select *Enforce AS2 certificate expiration* date.
 . Click *Save*.
 
 == See Also
