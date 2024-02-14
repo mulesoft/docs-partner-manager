@@ -12,7 +12,7 @@ image::pm-receive-endpoint-url.png[Example of a runtime application name and ext
 
 You can share the external URL with the partners that send AS2, HTTP, or HTTPS messages to this endpoint.
 
-If your organization uses Anypoint Virtual Private Cloud without a dedicated load balancer (DLB), your organization’s platform administrator can configure the necessary xref:runtime-manager::vpc-firewall-rules-concept.adoc[VPC firewall rules] to allow specific partner or third-party connection IP addresses to access the endpoint.
+If your organization uses Anypoint Virtual Private Cloud without a dedicated load balancer (DLB), your organization’s platform administrator can configure the necessary xref:runtime-manager::vpc-firewall-rules-concept.adoc[Anypoint VPC firewall rules] to allow specific partner or third-party connection IP addresses to access the endpoint.
 
 == Deploy to CloudHub on a Private Port
 
