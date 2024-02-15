@@ -3,7 +3,7 @@
 
 To configure settings for deploying Anypoint Partner Manager to CloudHub, access the business unit and environment for which you want to deploy Partner Manager and then follow these steps:
 
-. In the *Configure a Partner Manager environment* window, enter the following general settings:
+. From the access management *Configure a Partner Manager environment* window, enter the following general settings:
 +
 [%header%autowidth.spread]
 |===
