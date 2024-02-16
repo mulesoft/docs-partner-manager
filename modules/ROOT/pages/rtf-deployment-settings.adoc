@@ -43,18 +43,18 @@ When users replay transmissions when Partner Manager is deployed to Runtime Fabr
 | Application Name Prefix |  Prefix appended to the Partner Manager application names. Maximum length is five characters. | 
 | Each B2B endpoint | Reserved CPU space, CPU space limit, and memory capacity for each Partner Manager endpoint. Partner Manager deploys a generic Mule app to the runtime for each endpoint protocol and direction (receive or send) combination. For help with sizing, contact your MuleSoft Account Team. a|
 
-* *Reserved CPU*: .08 vCPU
-* *CPU Limit*: .5 vCPU
-* *Memory*: .9 GB
+* *Reserved CPU*: 0.08 vCPU
+* *CPU Limit*: 0.5 vCPU
+* *Memory*: 0.9 GB
 | B2B API Replication Service a| Reserved CPU space, CPU space limit, and memory capacity for the Partner Manager B2B API Replication Service. a| 
 
-* *Reserved CPU*: .1 vCPU
-* *CPU Limit*: .5 vCPU
+* *Reserved CPU*: 0.1 vCPU
+* *CPU Limit*: 0.5 vCPU
 * *Memory*: 1 GB
 | B2B Document Processing Service | Reserved CPU space, CPU space limit, and memory capacity for the Partner Manager B2B Document Processing Service. a| 
 
-* *Reserved CPU*: .1 vCPU
-* *CPU Limit*: .5 vCPU
+* *Reserved CPU*: 0.1 vCPU
+* *CPU Limit*: 0.5 vCPU
 * *Memory*: 1.2 GB
 |===
 +
