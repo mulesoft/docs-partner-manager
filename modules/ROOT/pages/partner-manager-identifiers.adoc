@@ -1,28 +1,44 @@
 = Sender and Receiver Identifiers
+page-aliases: x12-identity-settings.adoc, delete-identifiers.adoc
 
-AS2, EDIFACT, and X12 transactions use identifiers in messages to identify the senders and receivers of the messages. For X12 messages, the identifiers in the ISA and GS headers provide valuable information that enables identification of the appropriate flow to use to process the transaction.
+AS2, EDIFACT, and X12 transactions use identifiers in messages to identify the senders and receivers of those messages. For X12 messages, the identifiers in the ISA and GS headers identify which flow to use to process the transaction.
 
-Add identifiers and configure their values in the *<host>* page.
+You create identifiers at the host level.
 
 [[create-identifier]]
-== Add and Configure a New Identifier
+== Create an Identifier
 
-. Access the *<host> page*.
+To create an identifer:
+
+. Access the *<host>* page.
 . In the *Identifiers* section, click *New*.
-. In the *New Identifier* dialog, select the identifier type from the drop-down list:
+. In the *New Identifier* dialog, select the identifier type:
 * <<as2-identifier,AS2 Identity>>
 * <<edifact-unb, EDIFACT-UNB>>
 * <<reference-id,Reference ID>>
 * <<x12-gs,X12 - GS>>
 * <<x12-isa,X12 - ISA>>
-. In *Identifier Value*, enter a value to uniquely name your identifier.
-. If you selected *EDIFACT-UNB* or *X12-ISA* as the *Type* value, you must also select a *Qualifier* from the list.
+. In *Identifier Value*, enter a value that uniquely names your identifier.
+. If you selected *EDIFACT-UNB* or *X12-ISA* as the *Type* value, you must also select a *Qualifier*.
 . Click *Create identifier*.
 
-[[edifact-unb]]
-== EDIFACT UNB Identifier Values
+[[as2-identifier]]
+=== AS2 Identifier Values
 
-Use the following values to configure the EDIFACT UNB identifier type:
+Complete these fields to configure an AS2 identifier:
+
+[%header%autowidth.spread]
+|===
+|Setting |Description | Required
+|Identifier value
+|AS2 identity for your partner. Your partner supplies you with the corresponding sender and receiver AS2 IDs during the onboarding process.
+|Yes
+|===
+
+[[edifact-unb]]
+=== EDIFACT UNB Identifier Values
+
+Complete these fields to configure an EDIFACT UNB identifier:
 
 [%header%autowidth.spread]
 |===
@@ -30,70 +46,95 @@ Use the following values to configure the EDIFACT UNB identifier type:
 
 |Qualifier
 |
-Select the qualifier types for the partner’s EDIFACT UNB identifier from the drop-down menu.
+Qualifier type for your partner’s EDIFACT-UNB ID.
 |Yes
 | Identifier value
-| Specify the EDIFACT-UNB ID for your partner, which can be up to 15 characters. Your partner supplies you with the proper EDIFACT Interchange Sender and Receiver IDs during onboarding.
+| EDIFACT-UNB ID for your partner, which can be up to 15 characters. Your partner supplies you with the EDIFACT Interchange Sender and Receiver IDs during onboarding.
 | Yes
 
 |===
 
-[[as2-identifier]]
-== AS2 Identifier Values
+=== Reference ID
 
-To use AS2 transport to exchange B2B transactions with your partner, first configure the AS2 identifier for your organization and for your partner.
+Complete these fields to configure to use a reference ID (DUNS number) as an identifier:
 
-Use the following values to configure the AS2 identifier:
+[%header%autowidth.spread]
+|===
+|Setting |Description |Required
+
+|Identifier Value
+|DUNS number for your partner, which is a nine-digit number that corresponds to the sender or receiver ID. Your partner supplies you these numbers during onboarding.
+
+|Yes +
+
+|===
+
+[[x12-gs]]
+=== X12 GS Identifier Values
+
+Complete these fields to configure an X12 GS identifier:
 
 [%header%autowidth.spread]
 |===
 |Setting |Description | Required
+
 |Identifier value
-|The AS2 identity for your partner. Your partner supplies you with the corresponding Sender and Receiver AS2 IDs during the onboarding process.
+|EDI X12-GS ID for your partner, which can be up to 15 characters. Your partner supplies you with the EDI X12 Group Sender and Receiver IDs during onboarding.
 |Yes
 |===
 
 [[x12-isa]]
-== X12 ISA Identifier Values
+=== X12 ISA Identifier Values
 
-Use the following values to configure the X12 ISA identifier type:
+Complete these fields to configure an X12 ISA identifier:
 
 [%header%autowidth.spread]
 |===
-|Setting |Description | Required
+|Setting |Description |Required
 
 |Qualifier
-a| Select the qualifier type for the partner’s X12-ISA identifier from the drop-down menu.
+a|One of the following:
+
+* `01 (DUNS Number)`
+* `02 (SCAC - Standard Carrier Alpha Code)`
+* `03 (FMC - Federal Maritime Commission)`
+* `04 (IATA - International Air Transport Association)`
+* `08 (UCC EDI Number)`
+* `09 (X.121)`
+* `10 (DoD - Department of Defense Activity Address Code)`
+* `11 (DEA - Drug Enforcement Administration)`
+* `12 (Phone Number)`
+* `13 (UCS Code)`
+* `14 (DUNS Number and Suffix Number)`
+* `16 (DUNS Number with a Four Character Suffix)`
+* `19 (EDI Council of Australia Communications ID)`
+* `20 (HIN - Health Industry Number)`
+* `30 (U.S. Federal Tax Identification Number)`
+* `NR (NRMA - National Retail Merchants Association)`
+* `SN (Standard Address Number)`
+* `ZZ (Mutually Defined)`
+
 |Yes
+
 |Identifier value
-|EDI X12-ISA ID for your partner, which can be up to 15 characters. Your partner supplies you with the proper EDI X12 Interchange Sender and Receiver IDs during onboarding.
-|Yes
-|===
+|EDI X12-ISA ID for your partner, which can be up to 15 characters. Your partner supplies you with the EDI X12 Interchange Sender and Receiver IDs.
 
-[[x12-gs]]
-== X12 GS Identifier Values
+|Yes +
 
-Use the following values to configure the X12 GS identifier type:
-
-[%header%autowidth.spread]
-|===
-|Setting |Description | Required
-
-|Identifier value
-|EDI X12-GS ID for your partner, which can be up to 15 characters. Your partner supplies you with the proper EDI X12 Group Sender and Receiver IDs during onboarding.
-|Yes
 |===
 
 [[reference-id]]
 == Outbound Message Flow Partner Reference Identifiers
 
-Outbound message flows that transform your back-end application messages to EDI format use the partner Reference ID when sending data to your partners.
+Outbound message flows that transform your backend application messages to EDI format use the partner Reference ID when sending data to your partner.
 
-Unlike EDI transactions that have well-defined standards for how sender, receiver, and document type information is presented in the data, the source messages for outbound B2B data exchange originating from your enterprise back-end systems typically follow schemas. These schemas are usually defined by your back-end application teams according to your organization’s data models.
+Unlike EDI transactions, which have well-defined standards for how sender, receiver, and document type information is presented in the data, the source messages for outbound B2B data exchange originating from your enterprise backend systems typically follow schemas. These schemas are based on your organization's data models and they are usually defined by your backend application teams.
 
-The receiving partner information about the application message from the back-end application might not necessarily be the same as the name of the partner in Partner Manager. This scenario is similar to how ISA and GS identifiers on an inbound EDI message might not be the same as the profile name of the partner.
+The receiving partner's information about the application message from the backend application might not be the same as the name of the partner in Partner Manager. This scenario is similar to how ISA and GS identifiers on an inbound EDI message might not be the same as the profile name of the partner.
 
-The Partner Manager outbound message processing framework makes a dynamic lookup to determine the receiving partner based on the content in the application message received from the backend systems.
+The Partner Manager outbound message processing framework makes a dynamic lookup to determine the receiving partner based on the content of the application message received from the backend systems.
+
+If your backend application sends outbound transactions to partners on behalf of multiple internal lines of business, you must set different X12 ISA and X12 GS sender identifiers on the transformed outbound data to reflect the sending line of business. In this scenario, configure partner reference identifiers on the host profile by using the value in the application message’s payload that uniquely identifies the sending line of business.
 
 === Example
 
@@ -105,15 +146,23 @@ An outbound payment remittance advice JSON message from your Financials system t
 
 `"PayeeName": "MYTHICAL ENTERPRISES"`
 
-For Partner Manager to route these outbound transactions to the appropriate message flows for Mythical Supplier, you must add these values as Partner Reference IDs from the partner’s profile page. To do this <<create-identifier,create a new identifier>> and select the type as *Reference ID*.
+For Partner Manager to route these outbound transactions to the appropriate message flows for Mythical Supplier, you must add these values as Partner Reference IDs from the partner’s profile page. To do this create a new identifier and select the type as *Reference ID*.
 
-If your back-end application sends outbound transactions to partners on behalf of more than one internal line of business, thus requiring you to set different X12 ISA and X12 GS sender identifiers on the transformed outbound data (depending on which line of business is sending the transaction), you can configure partner reference identifiers on your host profile, with the value in the application message’s payload that uniquely identifies the sending LoB.
+== Deleting Identifiers
 
-The actual usage of partner reference identifiers and how outbound message routing is determined, is explained in the outbound message documentation.
+Although you must always have at least one identifier per message flow, you can delete identifiers that are no longer used in that message flow. Before you delete an identifier, consider the following:
 
+* You cannot delete an identifier that is used in an active message flow.
+* Deleting an existing host or partner identifier impacts the identification and routing of B2B messages to the associated partner.
+* If you must replace the identifier with another identifier, record the required values and qualifier type.
+
+To delete an identifier:
+
+. In the sidebar, select *Partners*.
+. Select the partner cthat contains the identifier to delete.
+. In the *Identifiers* row, hover over the identifier to delete and click the trash can icon.
 
 == See Also
 
-* xref:delete-identifiers.adoc[Delete Identifiers]
 * xref:message-flows.adoc[Message Flows]
 * xref:outbound-message-routing.adoc[Outbound Message Routing]
