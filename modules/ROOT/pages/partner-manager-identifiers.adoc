@@ -23,7 +23,7 @@ To create an identifer:
 . Click *Create identifier*.
 
 [[as2-identifier]]
-=== AS2 Identifier Values
+=== AS2 Identifier
 
 Complete these fields to configure an AS2 identifier:
 
@@ -36,7 +36,7 @@ Complete these fields to configure an AS2 identifier:
 |===
 
 [[edifact-unb]]
-=== EDIFACT UNB Identifier Values
+=== EDIFACT UNB Identifier
 
 Complete these fields to configure an EDIFACT UNB identifier:
 
@@ -56,7 +56,7 @@ Qualifier type for your partner’s EDIFACT-UNB ID.
 
 === Reference ID
 
-Complete these fields to configure to use a reference ID (DUNS number) as an identifier:
+Complete these fields to configure to use a reference ID (DUNS number) identifier:
 
 [%header%autowidth.spread]
 |===
@@ -70,7 +70,7 @@ Complete these fields to configure to use a reference ID (DUNS number) as an ide
 |===
 
 [[x12-gs]]
-=== X12 GS Identifier Values
+=== X12 GS Identifier
 
 Complete these fields to configure an X12 GS identifier:
 
@@ -84,7 +84,7 @@ Complete these fields to configure an X12 GS identifier:
 |===
 
 [[x12-isa]]
-=== X12 ISA Identifier Values
+=== X12 ISA Identifier
 
 Complete these fields to configure an X12 ISA identifier:
 
@@ -123,6 +123,20 @@ a|One of the following:
 
 |===
 
+== Delete Identifiers
+
+If there is at least one identifier per message flow, you can delete identifiers that are no longer used in that message flow. Before you delete an identifier, consider the following:
+
+* You cannot delete an identifier that is used in an active message flow.
+* Deleting an existing host or partner identifier impacts the identification and routing of B2B messages to the associated partner.
+* If you must replace the identifier with another identifier, record the required values and qualifier type.
+
+To delete an identifier:
+
+. In the sidebar, select *Partners*.
+. Select the partner cthat contains the identifier to delete.
+. In the *Identifiers* row, hover over the identifier to delete and click the trash can icon.
+
 [[reference-id]]
 == Outbound Message Flow Partner Reference Identifiers
 
@@ -147,20 +161,6 @@ An outbound payment remittance advice JSON message from your Financials system t
 `"PayeeName": "MYTHICAL ENTERPRISES"`
 
 For Partner Manager to route these outbound transactions to the appropriate message flows for Mythical Supplier, you must add these values as Partner Reference IDs from the partner’s profile page. To do this create a new identifier and select the type as *Reference ID*.
-
-== Deleting Identifiers
-
-Although you must always have at least one identifier per message flow, you can delete identifiers that are no longer used in that message flow. Before you delete an identifier, consider the following:
-
-* You cannot delete an identifier that is used in an active message flow.
-* Deleting an existing host or partner identifier impacts the identification and routing of B2B messages to the associated partner.
-* If you must replace the identifier with another identifier, record the required values and qualifier type.
-
-To delete an identifier:
-
-. In the sidebar, select *Partners*.
-. Select the partner cthat contains the identifier to delete.
-. In the *Identifiers* row, hover over the identifier to delete and click the trash can icon.
 
 == See Also
 
