@@ -10,28 +10,37 @@ To deploy a message flow, click the *Deploy* button.
 
 The message flow is deployed to Mule runtime engine, enabling you to:
 
-* Start receiving messages from your partner
-* Use the *Activity* page to track the processed messages
+* Start receiving messages from your partner.
+* Use the *Activity* page to track the processed messages.
 
 == Test a Deployed Message Flow
 
 After you deploy the message flow, send test messages to verify that:
 
 * You can receive messages and acknowledgments from your partners.
-* The DataWeave map works.
-* Your backend applications receive the transformed messages.
+* The DataWeave map transformed the payload correctly.
+* Your backend applications received the transformed messages.
 
-Test your message flow in your Partner Manager sandbox environment by sending a test file to the receiving endpoint:
+Test your message flow in the Partner Manager sandbox environment by sending a test file to the receiving endpoint:
 
-. In the sidebar, select *Activity* and the transmission to test.
-. Scan for an exclamation point (!) in any of the boxes next to the displayed flow stages and address any issues.
-. If the system is set up to view payloads, review the received payload by clicking *View payload* next to the *Received transmission* section.
+. In the sidebar, select *Activity*.
+. Search for the transmission by specifying the desired filters.
+. In the transmission search results, you can do the following:
+* Verify that the transmission was sent or received. 
+* Verify that Partner Manager sent the transmission to the correct endpoint.
+* If TA1 and functional acknowledgments (999 or 997) were set, review and confirm that they are present in the transmission.
+. Click the transmission to view more summary information. 
 +
-If you're not sure about whether you should be able to view a payload, contact your B2B System Administrator.
-. If TA1 and functional acknowledgments (999 or 997) are set, review and confirm that they are present.
-. Verify that the transmission routed the messages to the correct message flow.
-. Verify that Partner Manager routed the messages to the target system, delivered the messages to the target endpoint,
- and transformed the messages correctly.
+Here, you can verify whether Partner Manager routed the transmission to the correct message flow and whether it sent a message disposition notification (MDN).
++
+. Click the messages link to view summary information for the messages in the transmission and then click a message.
+. Click *Target payload* in the *Target* section to view the message's payload. 
++
+Here, you can verify whether Partner Manager transformed the message correctly.
++
+If you're not sure about whether you have permission to view a payload, contact your B2B System Administrator.
++
+. Repeat steps 5-6 for each message to verify.
 
 == See Also
 
