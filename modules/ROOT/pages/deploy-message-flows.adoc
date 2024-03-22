@@ -28,10 +28,10 @@ Test your message flow in the Partner Manager sandbox environment by sending a t
 . In the transmission search results, you can do the following:
 * Verify that the transmission was sent or received. 
 * Verify that Partner Manager sent the transmission to the correct endpoint.
-* If TA1 and functional acknowledgments (999 or 997) were set, review and confirm that they are present in the transmission.
+* If TA1 and functional acknowledgments (997) were set, review and confirm that they are present in the transmission.
 . Click the transmission to view more summary information. 
 +
-Here, you can verify whether Partner Manager routed the transmission to the correct message flow and whether it sent a message disposition notification (MDN).
+Here, you can verify whether Partner Manager routed the transmission to the correct message flow. If the transmission involves AS2 endpoints, you can also verify whether the transmission sent a message disposition notification (MDN).
 +
 . Click the messages link to view summary information for the messages in the transmission and then click an individual message.
 . Click *Target payload* in the *Target* section to view the message's payload and determine whether Partner Manager transformed the message correctly.
