@@ -77,7 +77,7 @@ transformed JSON and XML files generated from inbound message flows.
 |x
 
 |Filename pattern
-|Filename pattern required by your partner or back-end application.
+|Filename pattern required by your partner or backend application.
 |
 |===
 

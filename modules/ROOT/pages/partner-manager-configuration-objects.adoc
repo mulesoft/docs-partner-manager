@@ -9,4 +9,4 @@ Receive source messages or send transformed messages using a standard transport 
 * xref:partner-manager-create-message-type.adoc[Source and target message types] +
 Settings that define the structures of received messages and of the transformed messages sent to the backend.
 * xref:partner-manager-maps.adoc[Maps] +
-DataWeave translation maps that convert inbound EDI transactions to the back-end application format or transactions outbound from the backend to EDI format
+DataWeave translation maps that convert inbound EDI transactions to the backend application format or transactions outbound from the backend to EDI format
