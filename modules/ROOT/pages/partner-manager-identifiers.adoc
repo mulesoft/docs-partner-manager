@@ -148,16 +148,18 @@ The receiving partner's information about the application message from the backe
 
 The Partner Manager outbound message processing framework makes a dynamic lookup to determine the receiving partner based on the content of the application message received from the backend systems.
 
-If your backend application sends outbound transactions to partners on behalf of multiple internal lines of business, you must set different X12 ISA and X12 GS sender identifiers on the transformed outbound data to reflect the sending line of business. In this scenario, configure partner reference identifiers on the host profile by using the value in the application message’s payload that uniquely identifies the sending line of business.
+If your backend application sends outbound transactions to partners on behalf of multiple internal lines of business, set different X12 ISA and X12 GS sender identifiers on the transformed outbound data to reflect the sending line of business. In this scenario, configure partner reference identifiers on the host profile by using the value in the application message’s payload that uniquely identifies the sending line of business.
 
 === Example
 
-In this example, an outbound purchase order XML message from your ERP system to your partner, Mythical Supplier, has the following content in the payload:
+In this example:
 
+* An outbound purchase order XML message from your ERP system to your partner, Mythical Supplier, has the following content in the payload:
++
 `<VendorName>MYTHICAL SUPPLIER, LLC</VendorName>`
-
-An outbound payment remittance advice JSON message from your financial system to the same partner has the following content in the payload:
-
++
+* An outbound payment remittance advice JSON message from your financial system to the same partner has the following content in the payload:
++
 `"PayeeName": "MYTHICAL ENTERPRISES"`
 
 For Partner Manager to route these outbound transactions to the appropriate message flows for Mythical Supplier, you must add these values as partner reference IDs to the partner’s profile page. To do this, create a new identifier and select the type as *Reference ID*.
