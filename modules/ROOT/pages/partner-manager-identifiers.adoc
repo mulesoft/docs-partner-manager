@@ -111,7 +111,6 @@ If your back-end application sends outbound transactions to partners on behalf o
 
 The actual usage of partner reference identifiers and how outbound message routing is determined, is explained in the outbound message documentation.
 
-
 == See Also
 
 * xref:delete-identifiers.adoc[Delete Identifiers]
