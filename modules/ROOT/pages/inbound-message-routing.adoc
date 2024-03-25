@@ -1,14 +1,24 @@
 = Inbound Message Routing
 
-Depending on the endpoint type and protocol, the successful routing of your partner's send messages to the configured source endpoints uses the message type ID, file-naming pattern, and content type.
+Partner Manager routes inbound messages by using the following criteria:
+
+* Message type (all endpoints)
+* EDI identifiers (optional for EDI endpoints)
+* Reference identifiers (optional for all endpoints)
+
+To use EDI identifiers as routing criteria for an inbound EDI message, select *Route based on <protocol> identifiers* and enter the host and partner EDI identifiers when you define the inbound message flow. 
+
+To use reference identifiers as routing criteria for an inbound message, select *Route based on reference identifiers* and enter the host and partner reference identifiers when you define the inbound the message flow. You must also include the host and partner reference identifiers in the DataWeave reference map. For more information, see xref:create-reference-map.adoc[].
+
+Depending on the endpoint protocol, your partner specifies the message type of the incoming message in different ways.
 
 == Messages That Use an AS2 Receive from Partners Endpoint
 
-To successfully route inbound messages that use an AS2 Receive from Partners endpoint, your partner does the following:
+For incoming AS2 messages, your partner does the following to specify the message type:
 
 * For non-EDI files (JSON or XML), uses a filename that begins with `{message-type-id}_`.
 +
-For example, if the message type is named `custom-po`, the filename must begin with `custom-po_`.
+For example, if the source message type in the endpoint is named `custom-po`, the filename must begin with `custom-po_`.
 +
 There are no filename restrictions for EDI files.
 * Sets the AS2 MIME-Type in the inbound AS2 message as follows, depending on the message type:
@@ -21,29 +31,28 @@ There are no filename restrictions for EDI files.
 
 == Messages That Use an FTP or SFTP Endpoint
 
-The process that Partner Manager uses to route inbound messages differs depending on whether the messages are EDI messages (Edifact or X12) or non-EDI messages (JSON or XML). 
+For incoming FTP or SFTP messages, your partner does the following to specify the message type:
 
-=== EDI Messages
 
-Partner Manager routes an inbound EDI message based on the EDI identifier in the message content.
+Partner Manager routes an inbound EDI message based on the EDI identifier in the message payload. *Question: Now, does the EDI identifier have to match the ones specified in the message flow definition or is this EDI identifier different?*
 
 === Non-EDI Messages
 
 Partner Manager routes an inbound non-EDI message based on either the associated message type or the filename:
 
-* If you specified an associated message type in the endpoint configuration, Partner Manager routes the message based on that message type. 
+* If you specified an associated message type in the endpoint configuration, Partner Manager routes the message based on that message type.
 
 * If you did not specify an associated message type in the endpoint configuration, Partner Manager routes the message based on the filename. The filename must begin with `{message-type-id}_` and have an appropriate file extension:
-+
-** `.json` for JSON files
-** `.xml` for XML files
-** `*.csv` for CSV files
 
-For example, if the message type is named `custom-po` and it is formatted as XML, the filename must begin with `custom-po_` and end with `.xml`.
+** .json for JSON files
+** .xml for XML files
+** .csv for CSV files
+
+For example, if the message type is named `custom-po` and it is formatted as XML, the filename must begin with `custom-po_` and end with ``.xml`.
 
 == Messages That Use an HTTP or HTTPS Receive from Partners Endpoint
 
-To successfully route inbound messages that use an HTTP Receive from Partners endpoint or an HTTPS Receive from Partners endpoint, your partner does the following:
+For incoming HTTP or HTTPS messages, your partner does the following to specify the message type:
 
 * For EDI messages (EDIFACT or X12), posts them to the base URL and sets the Content-Type value in the incoming HTTP request as follows, depending on the message format:
 
@@ -53,14 +62,150 @@ To successfully route inbound messages that use an HTTP Receive from Partners en
 ** XML: `application/xml`
 ** CSV: `text/csv`
 
-* For non-EDI messages (JSON or XML), includes the message type ID in the relative path of the HTTP request.
+* For non-EDI messages, includes the message type ID in the relative path of the HTTP request.
 +
 For example, suppose you have the following scenario in a CloudHub deployment:
 
 ** The base URL of the HTTP or HTTPS Receive from Partners endpoint is `+https://b2b-inbound-http-abcd.us-e2.cloudhub.io:443/receive1/+`.
 ** The expected message type ID for the inbound message is `custom-po`.
 +
-In this case, your partner should post the message to the `+https://b2b-inbound-http-abcd.us-e2.cloudhub.io:443/receive1/custom-po+` URL.
+In this case, your partner must post the message to the `+https://b2b-inbound-http-abcd.us-e2.cloudhub.io:443/receive1/custom-po+` URL.
+
+== Routing Resolution for Inbound Messages
+
+Partner Manager routes inbound EDIFACT messages by looking for a match between the message payload and an inbound message flow.
+
+=== Routing Resolution for Inbound EDIFACT Messages
+
+Partner Manager routes inbound EDIFACT messages by looking for a message flow match in this order.
+
+<add note about reference IDs being exposed in the DataWeave reference map for the endpoint>
+
+==== Scenario 1
+
+Message flow configration:
+
+* *Route based on EDIFACT identifiers* is selected.
+* *Route based on reference identifiers* is selected.
+
+Does a message flow with this configuration match the message type in the message payload, EDIFACT identifier in the UNB section of the message, and reference identifiers in the message payload?
+
+* Yes: Use the matching message flow.
+* No: Go to the next scenario. 
+
+==== Scenario 2
+
+Message flow configuration:
+
+* *Route based on EDIFACT identifiers* is selected.
+* *Route based on reference identifiers* is unselected.
+
+Does a message flow with this configuration match the message type in the message payload and the EDIFACT identifiers in the UNB section of the message payload?
+
+* Yes: Use the matching message flow.
+* No: Go to the next scenario.
+
+==== Scenario 3
+
+Message flow configuration:
+
+* *Route based on EDIFACT identifiers* is unselected.
+* *Route based on reference identifiers* is selected.
+
+Does a message flow with this configuration match the message type and reference identifiers in the message payload?
+
+* Yes: Use the matching message flow.
+* No: Go to the next scenario.
+
+==== Scenario 4
+
+Message flow configuration:
+
+* *Route based on EDIFACT identifiers* is unselected.
+* *Route based on reference identifiers* is unselected.
+
+Does a message flow with this configuration match the message type in the message payload?
+
+* Yes: Use the matching message flow.
+* No: Fail with the error `Message flow not found`.
+
+=== Routing Resolution for Inbound X12 Messages
+
+Partner Manager routes inbound X12 messages by looking for a message flow match in this order.
+
+==== Scenario 1
+
+Message flow configration:
+
+* *Route based on X12 identifiers* is selected.
+* *Route based on reference identifiers* is selected.
+
+Does a message flow with this configuration match the message type in the message payload, X12 identifiers in the ISA and GS sections of the message, and reference identifiers in the message payload?
+
+* Yes: Use the matching message flow.
+* No: Go to the next scenario. 
+
+==== Scenario 2
+
+Message flow configuration:
+
+* *Route based on X12 identifiers* is selected.
+* *Route based on reference identifiers* is unselected.
+
+Does a message flow with this configuration match the message type in the message payload and the X12 identifiers in the ISA and GS sections of the message payload?
+
+* Yes: Use the matching message flow.
+* No: Go to the next scenario.
+
+==== Scenario 3
+
+Message flow configuration:
+
+* *Route based on X12 identifiers* is unselected.
+* *Route based on reference identifiers* is selected.
+
+Does a message flow with this configuration match the message type and reference identifiers in the message payload?
+
+* Yes: Use the matching message flow.
+* No: Go to the next scenario.
+
+==== Scenario 4
+
+Message flow configuration:
+
+* *Route based on EX12 identifiers* is unselected.
+* *Route based on reference identifiers* is unselected.
+
+Does a message flow with this configuration match the message type in the message payload?
+
+* Yes: Use the matching message flow.
+* No: Fail with the error `Message flow not found`.
+
+=== Routing Resolution for Inbound CSV, JSON, and XML Messages
+
+Partner Manager routes inbound CSV, JSON,, and XML messages by looking for a message flow match in this order.
+
+==== Scenario 1
+
+Message flow configuration:
+
+* *Route based on reference identifiers* is selected.
+
+Does a message flow with this configuration match the message type and reference identifiers in the message payload?
+
+* Yes: Use the matching message flow.
+* No: Go to the next scenario.
+
+==== Scenario 2
+
+Message flow configuration:
+
+* *Route based on reference identifiers* is unselected.
+
+Does a message flow with this configuration match the message type in the message payload?
+
+* Yes: Use the matching message flow.
+* No: Fail with the error `Message flow not found`.
 
 == See Also
 
