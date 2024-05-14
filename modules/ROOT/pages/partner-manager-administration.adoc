@@ -1,3 +1,5 @@
 = Partner Manager Administration
 
 Administering Partner Manager involves tracking the activity of transmissions and individual messages, reconciling EDI acknowledgments, and upgrading message flow runtime templates.
+
+For information about assigning permissions, see xref:get-started.adoc[Getting Started with Partner Manager].
