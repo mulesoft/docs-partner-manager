@@ -62,7 +62,7 @@ Create FTP send endpoints by configuring these settings on the *<host>* or *Part
 |x
 
 |File name pattern
-|Filename pattern required by your partner or back-end application.
+|Filename pattern required by your partner or backend application.
 |
 |===
 
