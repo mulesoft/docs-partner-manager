@@ -45,7 +45,7 @@ Use the following settings to configure Basic authentication:
 |Password to use when making a request.
 |x
 |===
-// end::https-send[]]
+// end::https-send[]
 // end::https-receive[]
 
 // tag::https-send[]
