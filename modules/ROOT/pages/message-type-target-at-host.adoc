@@ -1,4 +1,4 @@
-== Target at Host Message Type
+= Target at Host Message Type
 
 :message-type: Target at Host
 
