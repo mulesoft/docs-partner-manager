@@ -48,6 +48,10 @@ Create FTP receive endpoints by configuring these settings on the *<host>* or *P
 | Port number of the FTP server.
 | x
 
+| Character encoding override
+| The character encoding option selected enables inbound endpoints to receive non UTF-8 encoded documents for XML, CSV, and X12 document types.
+| 
+
 | Username
 | Username for connecting to the FTP server.
 | x (if the server is authenticated)
