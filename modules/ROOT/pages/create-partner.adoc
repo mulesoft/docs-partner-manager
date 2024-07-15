@@ -57,7 +57,7 @@ a|
 | Character encoding override option for received AS2 messages.
 | Click *AS2* in *Global endpoint settings*.
 |
-xref:as2-encoding-override.adoc[AS2 Receive Character Encoding Override Settings]
+xref:as2-encoding.adoc[AS2 Receive Character Encoding Override Settings]
 |===
 
 == Next Step
