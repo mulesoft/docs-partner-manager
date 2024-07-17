@@ -19,7 +19,7 @@
   ** xref:edifact-send-settings.adoc[Configuring Send Settings for Outbound EDIFACT Messages]
   ** xref:x12-receive-read-settings.adoc[Configuring Receive Settings for Inbound X12 Messages]
   ** xref:x12-send-settings.adoc[Configuring Send Settings for Outbound X12 Messages]
-  ** xref:as2-encoding.adoc[Configuring Global Endpoint Settings for AS2 Messages]
+  ** xref:as2-encoding.adoc[Configuring Receive Settings for AS2 Inbound Messages]
   ** xref:partner-manager-delete-partner.adoc[Deleting Partners]
   ** xref:modify-partner-settings.adoc[Modifying Partner Settings]
   ** xref:manage-partner-certificates.adoc[Managing Partner and Third-Party Connection Certificates]
