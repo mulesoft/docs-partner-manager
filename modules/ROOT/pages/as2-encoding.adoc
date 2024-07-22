@@ -1,6 +1,6 @@
 = Configuring Receive Settings for AS2 Inbound Messages
 
-The Global AS2 encoding setting determines the character encoding type for all messages received from this partner.
+The AS2 encoding setting determines the character encoding type for all messages received from this partner.
 
 To configure the encoding type:
 
