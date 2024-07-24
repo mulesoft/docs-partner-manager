@@ -54,6 +54,10 @@ a|
 * xref:edifact-send-settings.adoc[EDIFACT Send Settings]
 * xref:x12-receive-read-settings.adoc[X12 Receive Settings]
 * xref:x12-send-settings.adoc[X12 Send Settings]
+| Character encoding override option for received AS2 messages.
+| Click *AS2* in *Global endpoint settings*.
+|
+xref:as2-encoding.adoc[AS2 Receive Settings]
 |===
 
 == Next Step

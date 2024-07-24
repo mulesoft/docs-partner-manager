@@ -48,6 +48,10 @@ Create SFTP receive endpoints by configuring these settings on the *<host>* or *
 | Port number of the SFTP server.
 | x
 
+| Character encoding override
+| Enables inbound endpoints to receive non UTF-8 encoded documents for XML, CSV, and X12 document types.
+| 
+
 | Authentication type
 a| Authentication method used to secure the SFTP endpoint. Values are: 
 
