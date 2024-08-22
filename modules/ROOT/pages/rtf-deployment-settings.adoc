@@ -26,7 +26,7 @@ To configure settings for deploying Partner Manager to Runtime Fabric, access th
 | Setting | Description | Default 
 | Deployment Target Type | Target type for your Partner Manager deployment. Select *Runtime Fabric*. | CloudHub 1.0
 | Runtime Fabric | Name of the Runtime Fabric instance to use as your deployment target.  | 
-| Runtime Version | Mule runtime engine version to run your Runtime Fabric instance.| 4.4.0
+| Runtime Version | Mule runtime engine version to run your Runtime Fabric instance.| 4.4.0, 4.6.0
 | Anypoint MQ Region | Region where Anypoint MQ is deployed. 
 {sp} +
 {sp} +
