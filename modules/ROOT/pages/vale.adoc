@@ -1,0 +1,29 @@
+= Vale Test File
+
+This is a test for the Oxford comma a, b and c.
+Now, I am using the pronoun he.
+Tesing incorrect spelling.
+Mulesoft does this.
+AnyPoint does that.
+that does this.
+I live below the grid.
+Do this, therefore, not that.
+Do this whether or not you want to.
+I will do that.
+You have done this.
+Now, we are done.
+image::partner-manager-inbound-map-1.png[]
+image::partner-manager-inbound-map-1.png[Define Metadata link]
+image::partner-manager-inbound-map-1.png
+image::partner-manager-inbound-map-1.png[Define Metadata, link, and add commas]
+Testing whether commas are inside "quotes."
+Testing whether commas are ouside "quotes".
+NOTE: Test the admonitions.
+Now, I am testing spacing.  There should be one space between sentences instead of two.
+Can I use this module?
+How about an on-premise installation.
+Or an on premise installation.
+Or an on premises installation.
+In order to test this, I sometimes have to reload the VS Code window.
+Let's utilize this file.
+This checkbox is sweet.
