@@ -57,7 +57,7 @@ The paths along which a B2B message travels from its source, through a DataWeave
 Inbound message flows receive messages from partners, including messages that go through third-party connections. When you create an inbound message flow, you can validate and transform the inbound messages and then send them to your backend applications.
 * Outbound message flows
 +
-Outbound message flows receive messages from your backend applications, validate and transform these messages to the format your partners expect, and then send them to your partners, either directly or through third-party connections.
+Outbound message flows receive messages from your backend applications, validate and transform these messages into your partner's expected format, and send them to your partners directly or through third-party connections.
 +
 
 Message flows consist of <<endpoints,endpoints>>, <<message-types,message types>>, <<identifiers,sender and receiver identifiers>>, and <<translation-maps,translation maps>>.
@@ -118,12 +118,12 @@ For X12 messages, the identifiers in the ISA and GS headers provide information 
 
 For EDIFACT messages, the identifiers in the UNB segment provide information that identifies the appropriate flow to process the transaction.
 
-For other formats, such as CSV, JSON, and XML, Partner Manager extracts the identifiers from data payloads or a message contact by dynamically executing the reference mapping supplied with the message type definition.
+For other formats, such as CSV and JSON, Partner Manager extracts the identifiers from data payloads or a message contact by dynamically executing the reference mapping supplied with the message type definition.
 
 [[custom-attributes]]
 === Custom Message Attributes
 
-User-defined attributes that are associated with Receive from Partners or Source at Host message types through reference mapping. As business transactions are processed, key data fields, like Order Number, Invoice Number, and Shipment ID, are extracted from messages. After a transaction is processed, users can find the message attribute label and value by searching transactions on the Activity page in Partner Manager or via API calls.
+User-defined attributes associated with Receive from Partners or Source at Host message types through reference mapping. Messages extract key data fields, like Order Number, Invoice Number, and Shipment ID, as business transactions are processed. After a transaction processes, users can find the message attribute label and value by searching transactions on the Activity page in Partner Manager or via API calls.
 
 [[translation-maps]]
 === Translation Maps
