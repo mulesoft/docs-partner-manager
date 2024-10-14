@@ -25,7 +25,7 @@ include::_partials/partner-manager-spotlight-video.html[]
 Before you begin using Partner Manager, you must have:
 
 * An Anypoint Platform account with the Partner Manager entitlement
-* AS2, EDIFACT, and X12 Connectors, if your organization uses these standards and protocols.
+* AS2, EDIFACT, and X12 Connector entitlements, if your organization uses these standards and protocols.
 * One or more of the user permissions for Partner Manager, assigned by your organization administrator.
 * The Partner Manager Administrator role, which can assign permission levels to all users who need access to B2B message flows in their environments (sandbox or production)
 * The required Mule runtime capacity, either vCore or messages/flows, to manage your B2B transaction workload needs
@@ -118,7 +118,7 @@ For X12 messages, the identifiers in the ISA and GS headers provide information 
 
 For EDIFACT messages, the identifiers in the UNB segment provide information that identifies the appropriate flow to process the transaction.
 
-For other formats, such as XML, JSON, and CSV, - Partner Manager extracts the identifiers from data payloads or a message contact by dynamically executing the reference mapping supplied with the message type definition.
+For other formats, such as XML, JSON, and CSV, Partner Manager extracts the identifiers from data payloads or a message contact by dynamically executing the reference mapping supplied with the message type definition.
 
 [[custom-attributes]]
 === Custom Message Attributes
@@ -128,11 +128,11 @@ User-defined attributes that are associated with Receive from Partners or Source
 [[translation-maps]]
 === Translation Maps
 
-DataWeave maps transform business transactions between your partner’s message formats and your organization’s enterprise application message formats. You create the maps in Studio and import them into Partner Manager when you configure message flows.
+DataWeave maps transform business transactions between your partner's message formats and your organization's enterprise application message formats. You create the maps in Studio and import them into Partner Manager when you configure message flows.
 
 === Templates
 
-Prebuilt templates that convert your B2B message flow configurations into runtime applications. When MuleSoft upgrades a template, you can upgrade your message flows to use them to take advantage of new capabilities that enable better integration with your partner’s ecosystem.
+Prebuilt templates that convert your B2B message flow configurations into runtime applications. When MuleSoft upgrades a template, you can upgrade your message flows to use them to take advantage of new capabilities that enable better integration with your partner's ecosystem.
 
 == Next Step
 
