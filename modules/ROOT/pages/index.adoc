@@ -123,7 +123,7 @@ For other formats, such as CSV, JSON, and XML, Partner Manager extracts the iden
 [[custom-attributes]]
 === Custom Message Attributes
 
-User-defined attributes that are associated with Receive from Partners or Source at Host message types through reference mapping. As business transactions are processed, key data fields like Order Number, Invoice Number, and Shipment ID are extracted from messages. After a transaction is processed, users can find the message attribute label and value by searching transactions on the Activity page in Partner Manager or via API calls.
+User-defined attributes that are associated with Receive from Partners or Source at Host message types through reference mapping. As business transactions are processed, key data fields, like Order Number, Invoice Number, and Shipment ID, are extracted from messages. After a transaction is processed, users can find the message attribute label and value by searching transactions on the Activity page in Partner Manager or via API calls.
 
 [[translation-maps]]
 === Translation Maps
