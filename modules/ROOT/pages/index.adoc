@@ -26,10 +26,10 @@ Before you begin using Partner Manager, you must have:
 
 * An Anypoint Platform account with the Partner Manager entitlement.
 * AS2, EDIFACT, and X12 Connector entitlements, if your organization uses these standards and protocols.
-* One or more of the user permissions for Partner Manager, assigned by your organization administrator.
+* One or more of the user permissions for Partner Manager.
 * The Partner Manager Administrator role, which can assign permission levels to all users who need access to B2B message flows in their sandbox or production environment.
-* The required Mule runtime capacity, either vCore or messages/flows, to manage your B2B transaction workload needs.
-* Storage for the B2B transmission payloads you send or receive, such as a database, Amazon S3, Azure Blob Storage, and so on.
+* The required Mule runtime capacity, either vCore or messages and flows, to manage your B2B transaction workload needs.
+* Storage for the B2B transmission payloads you send or receive, such as a database, Amazon S3, and Azure Blob Storage.
 * Familiarity with EDI message formats.
 * Anypoint Studio 7.4 or later.
 * The ability to create DataWeave maps to use for performing data transformations.
