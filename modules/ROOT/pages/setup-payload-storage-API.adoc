@@ -4,7 +4,7 @@ Anypoint Partner Manager enables you to configure your own storage solution (for
 
 To use your own storage solution, you must implement an API that provides Partner Manager with a standardized way to connect to your storage.
 
-NOTE: If you want the payload to be available from the Partner Manager Activity page, the payload storage API must be publicly accessible. If your payload storage API is accessible only through your network, you must implement the API differently. See <<payload-view, Payload view URL>> for more information.```
+NOTE: If you want the payload to be available from the Partner Manager Activity page, the payload storage API must be publicly accessible. If your payload storage API is accessible only through your network, you must implement the API differently. See <<payload-view, Payload view URL>> for more information.
 
 == Download and Deploy the Payload Storage API
 
