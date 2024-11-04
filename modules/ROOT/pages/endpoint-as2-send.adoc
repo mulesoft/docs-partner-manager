@@ -69,7 +69,7 @@ Don't use this option in production environments. Use it only during testing.
 |x
 
 |Transfer Mode
-|The transfer mode applied when sending AS2 transmissions. Values are:
+a|The transfer mode applied when sending AS2 transmissions. Values are:
 
 * *Auto*
 +
