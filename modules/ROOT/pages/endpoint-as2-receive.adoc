@@ -58,7 +58,7 @@ When deploying to Anypoint Runtime Fabric, Partner Manager always deploys the AS
 
 [[manage-api-manager]]
 |Manage with API Manager
-a|Enable this setting to manage the endpoint and its access control with API Manager, which allows you to apply policies to the endpoint, such as authentication and client credentials, and configure SLA tiers. Document your message specifications by using Exchange and share them with your partners via public Exchange portals or by obtaining an additional license and sharing the specifications in Anypoint API Experience Hub.
+a|Enable this setting to manage the endpoint and its access control with API Manager, which allows you to apply policies to the endpoint, such as authentication and client credentials, and configure SLA tiers. Document your message specifications by using Exchange and share them with your partners via public portals from   Exchange or by obtaining an additional license and sharing the specifications in API Experience Hub.
 
 To manage an endpoint with API Manager, create an HTTP API in API Manager in the same environment and organization as the endpoint.
 
