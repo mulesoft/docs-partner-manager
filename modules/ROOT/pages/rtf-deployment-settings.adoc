@@ -31,7 +31,7 @@ To configure settings for deploying Partner Manager to Runtime Fabric, access th
 
 Configuring the runtime version enables you to apply a xref:mule-runtime::feature-flagging.adoc#configure-feature-flags-for-a-mule-application[feature flagging] mechanism for Partner Manager-deployed Mule runtime applications.
 
-If you want to process cXML messages with <DOCTYPE> tags, you must set the `minMuleVersion` to 4.5.0 or higher. If you're migrating from previous versions, you must perform end-to-end regression testing on your existing workflows before changing the `minMuleVersion`. | None
+If you want to process cXML messages with <DOCTYPE> tags, you must set the `minMuleVersion` to 4.5.0 or higher. If you're migrating from an earlier version, you must perform end-to-end regression testing on your existing workflows before changing the `minMuleVersion`. | None
 (Uses 4.3.0)
 | Anypoint MQ Region | Region where Anypoint MQ is deployed. 
 {sp} +
