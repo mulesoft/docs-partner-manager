@@ -73,11 +73,13 @@ If the source message type is X12 or EDIFACT and your partner expects your organ
 +
 The acknowledgment is added to the message flow.
 
-If the source message type is X12, select the partner and the host organization's ISA (Interchange) identifiers from the dropdown menu.
+If the source message type is:
 
-If the source message type is EDIFACT, select the partner and the host organization's UNA (Interchange) identifiers from the dropdown menu.
+* X12, select the partner and host organization's ISA (Interchange) identifiers from the dropdown menu.
 
-If the source message type is CSV, JSON, or XML, select the partner and host organization's reference identifiers from the dropdown menu.
+* EDIFACT, select the partner and host organization's UNA (Interchange) identifiers from the dropdown menu.
+
+* CSV, JSON, or XML, select the partner and host organization's reference identifiers from the dropdown menu.
 
 To route inbound messages from partners matching any of the partner or host identifiers, select *All identifiers* from the dropdown menu. For more information about the order of precedence in inbound message routing, see xref:inbound-message-routing.adoc[Inbound Message Routing].
 
