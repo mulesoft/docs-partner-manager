@@ -67,7 +67,7 @@ Allows an insecure connection that doesn’t perform certificate validation.
 +
 Don't use this option in production environments. Use it only during testing.
 |x
-
+[[transfer-mode]]
 |Transfer Mode
 a|The transfer mode applied when sending AS2 transmissions. Values are:
 
