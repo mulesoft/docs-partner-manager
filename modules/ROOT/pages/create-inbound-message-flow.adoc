@@ -81,6 +81,7 @@ If the source message type is:
 
 * CSV, JSON, or XML, select the partner and host organization's reference identifiers from the dropdown menu.
 
+[[route-by-identifier]]
 To route inbound messages from partners matching any of the partner or host identifiers, select *All identifiers* from the dropdown menu. For more information about the order of precedence in inbound message routing, see xref:inbound-message-routing.adoc[Inbound Message Routing].
 
 
