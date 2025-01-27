@@ -27,12 +27,6 @@ To configure settings for deploying Partner Manager to Runtime Fabric, access th
 | Deployment Target Type | Target type for your Partner Manager deployment. Select *Runtime Fabric*. | CloudHub 1.0
 | Runtime Fabric | Name of the Runtime Fabric instance to use as your deployment target.  | 
 | Runtime Version | Mule runtime engine version to run your Runtime Fabric instance.| 4.6.0
-// | Min Mule Version override | Minimum Mule runtime version required to deploy the runtime applications.
-//
-//Configuring the runtime version enables you to apply a xref:mule-runtime::feature-flagging.adoc#configure-feature-flags-for-a-mule-application[feature flagging] mechanism for Partner Manager-deployed Mule runtime applications.
-//
-//If you process cXML messages with <DOCTYPE> tags, you must set the `minMuleVersion` to 4.5.0 or higher. If you're migrating from an earlier version, you must perform end-to-end regression testing on your existing workflows before changing the `minMuleVersion`. | None
-//(Uses 4.3.0)
 | Anypoint MQ Region | Region where Anypoint MQ is deployed. 
 {sp} +
 {sp} +
