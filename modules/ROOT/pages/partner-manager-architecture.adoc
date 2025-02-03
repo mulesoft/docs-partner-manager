@@ -11,32 +11,32 @@ When you deploy a configured message flow, Partner Manager automatically transfo
 * Replication service
 * Send endpoint services
 
-image::pm-high-level-arch.png[Partner Manager high-level architecture]
+image::pm-high-level-arch.png["A flowchart showing how data moves between trading partners and backend systems"]
 
 [%header%autowidth.spread]
 |===
 |Callout |Name |Description
-|image:pm-annotation-1.png[]
+|image:pm-annotation-1.png["A circle with a number 1 inside"]
 |Partner Manager
 |MuleSoft-hosted cloud control plane enabling users to configure partner profiles, build and deploy B2B integration message flows, and monitor B2B transaction activity
 
-|image:pm-annotation-2.png[]
+|image:pm-annotation-2.png["A circle with a number 2 inside"]
 |Receive Endpoint Services
 |Services to receive inbound B2B or EDI messages from partner transport protocols such as AS2 and SFTP or outbound application messages from your organization’s backend systems via HTTP, HTTPS, or SFTP
 
-|image:pm-annotation-3.png[]
+|image:pm-annotation-3.png["A circle with a number 3 inside"]
 |Document Processing Service
 |Core B2B processing engine responsible for parsing, validating, and translating received B2B messages based on configurations and mapping in Partner Manager
 
-|image:pm-annotation-4.png[]
+|image:pm-annotation-4.png["A circle with a number 4 inside"]
 |API Replication Service
 |Tracking service responsible for updating transmissions and transaction activities to the control plane and the payload storage API
 
-|image:pm-annotation-5.png[]
+|image:pm-annotation-5.png["A circle with a number 5 inside"]
 |Send Endpoint Services
 |Services to deliver transformed inbound application messages to internal applications such as ERP, billing, order management via transport protocols like HTTP, HTTPS, or SFTP; or outbound B2B EDI payloads to your partners via AS2, HTTP, HTTPS, or SFTP
 
-|image:pm-annotation-6.png[]
+|image:pm-annotation-6.png["A circle with a number 6 inside"]
 |Payload Storage API
 |API to store B2B payload data in your storage solution
 |===
@@ -47,13 +47,13 @@ When deploying B2B integration message flows to CloudHub, Anypoint MQ uses queue
 
 As of the first deployment from Partner Manager, runtime applications deploy to the CloudHub region specified in the business group’s default settings in Runtime Manager by default. Anypoint MQ queues automatically generate during the deployment process in the same or the nearest available region. Any new runtime applications deploy to the same region as the first deployment.
 
-image::cloudhub-deployment.png[Architecture that shows a CloudHub deployment]
+image::cloudhub-deployment.png["A diagram that illustrates how data moves through the CloudHub system"]
 
 == Partner Manager for Runtime Fabric
 
 When deploying message flows to Runtime Fabric, Partner Manager uses ActiveMQ queues (set up and configured by the user) between processing stages to add additional reliability to B2B message processing. ActiveMQ destinations (queues) are automatically created when the first transaction is processed through the runtime applications. 
 
-image::rtf-deployment.png[Architecture that shows a Runtime Fabric deployment]
+image::rtf-deployment.png["A flowchart showing the architecture of a data processing system"]
 
 == See Also
 * xref:deploy-partner-manager.adoc[]

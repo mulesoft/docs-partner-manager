@@ -4,7 +4,7 @@ A message flow is the path along which a message travels from its source, throug
 
 Anypoint Partner Manager message flows consist of objects such as endpoints, message types, identifiers, and mappings. Partner Manager’s message framework orchestrates the processing of your business transactions from source to target using the configuration objects shown in the following diagram:
 
-image::pm-message-flow.png[Partner Manager message flow configuration objects]
+image::pm-message-flow.png["A flowchart showing a message flow configuration and runtime"]
 
 You can create message flows in one of the following contexts:
 
