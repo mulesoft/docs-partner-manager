@@ -47,7 +47,7 @@ When deploying B2B integration message flows to CloudHub, Anypoint MQ uses queue
 
 As of the first deployment from Partner Manager, runtime applications deploy to the CloudHub region specified in the business group’s default settings in Runtime Manager by default. Anypoint MQ queues automatically generate during the deployment process in the same or the nearest available region. Any new runtime applications deploy to the same region as the first deployment.
 
-image::cloudhub-deployment.png["A diagram that illustrates how data moves through the CloudHub system"]
+image::cloudhub-deployment.png["A diagram that illustrates how data moves through CloudHub"]
 
 == Partner Manager for Runtime Fabric
 

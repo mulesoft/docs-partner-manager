@@ -22,7 +22,7 @@ For example, if your message type ID is ar-invoice, then the filename is `ar-inv
 +
 The partner reference ID and host reference ID specify the message flow through which the transaction is processed.
 
-image::pm-outbound-message-routing.png["A flowchart showing how outbound messages are routed through the system"]
+image::pm-outbound-message-routing.png["A flowchart showing how outbound messages are routed"]
 
 == See Also
 
