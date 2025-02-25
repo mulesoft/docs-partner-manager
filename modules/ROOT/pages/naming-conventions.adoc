@@ -1,0 +1,23 @@
+= Naming Conventions and Reuse
+
+Name internal endpoints and message types generically, rather than referencing the associated EDI format, version, and document type. This table shows examples of the recommended naming conventions for Target at Host and Source at Host message types.
+
+|===
+|Message Type or Endpoint |Flow Example |Recommended Naming |Not Recommended Naming |Reasoning
+|Target at Host Message Type |X12 4010 850 |in-tgt-purchase-order |4010-850-json |Future proofs your naming conventions so that when you receive purchase orders from other partners who use different X12 versions, EDIFACT, or non-EDI formats, your message type names give you better context when they are mapped to the same target message type.
+|Source at Host Message Type |JSON |out-ar-invoice | 5010-810-json |Since the same internal JSON format is mapped to other X12 versions, EDIFACT, XML, or JSON based on the message type your partner chooses, use a name that references the application, such as order, order-ack, invoice, or ship-notice instead of referencing the EDI format or message type that was used by the first trading partner you onboarded.
+|Target at Host Endpoint | |HTTP-Target-PurchaseOrder-Proc-API |HTTP-Target-850-JSON-Endpoint |Recommended when sending a translated inbound purchase order to a backend process API.
+|AS2 Receive from Partners Endpoint |AS2-Receive-from-partners-Generic |AS2-Receive-X12-5010-850-from-[Your First Partner’s Name] |Since you’ll reuse the same endpoint to receive data from many other partners as you expand the usage of Partner Manager, use a generic name for this endpoint type, instead naming the endpoint after the first partner you onboard.
+|===
+
+This image shows an implementation that uses the recommended naming convention for message type reuse for your transaction workflows, such as orders and invoices. Apply the same practice for all transaction types to reuse your configurations effectively.
+
+image 
+
+== Source at host endpoint
+Partner Manager offers the ability to configure dynamic message routing rules for all outbound messages through a common framework. You can have one single endpoint that can receive multiple message types (orders, invoices, order acks, ship notices, warehouse orders etc), with the message type identifier on the relative path of the URL (for HTTP) or File name (for SFTP and FTP endpoints). 
+
+* You can create one Source at host endpoint with a generic name such as HTTP-Outbound-Source-All-Message-Types that will serve as the entry point for all your backend applications to post various message types.
+* You can then use the same endpoint to receive source messages from the backend applications for any outbound transactions and configure translation maps, target message type and endpoints to send the data to your partners.
+The image below depicts how you can receive two different message types (Advance ship notice (ASN) and Invoices from your backend systems via the same endpoint, and then transform the data to the required partner message types and deliver to your partners.
+
