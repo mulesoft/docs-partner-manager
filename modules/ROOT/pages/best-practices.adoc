@@ -1,6 +1,4 @@
-
-
-For optimal performance and experience, follow these best practices.
+For optimal Partner Manager performance, follow these best practices.
 
 *** xref:naming-conventions.adoc[Naming Conventions and Reuse]
 *** xref:manage-apis.adoc[Manage APIs for HTTP Inbound Endpoints]

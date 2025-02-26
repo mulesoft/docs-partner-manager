@@ -1,0 +1,6 @@
+= Map Examples
+
+These Anypoint Exchange examples include DataWeave maps for custom message attributes, as well as transformations between X12, EDIFACT, and XML B2B standards and internal application data formats.
+
+* https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/minor/1.0/[B2B/EDI Order to Cash Mapping Examples]
+* https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-procure-to-pay-mappings/minor/1.0/[B2B/EDI Procure to Pay Mapping Examples]
