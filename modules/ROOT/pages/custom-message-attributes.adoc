@@ -20,7 +20,7 @@ Before you associate an attribute label with a message type, define the attribut
 
 image placeholder
 
-== Inbound EDI X12 4010 850 Purchase Order
+=== Inbound EDI X12 4010 850 Purchase Order
 
 Reference mapping for the Receive from Partners X12-4010-850 message type shows how to retrieve fields like Purchase Order Number and Buyer’s Name from different elements in the incoming EDI data payload. 
 
@@ -28,13 +28,13 @@ Notice that the Buyer data is extracted by applying filter criteria to the PER s
 
 image placeholder
 
-== Outbound EDI X12 4010 855 Purchase Order Acknowledgement
+=== Outbound EDI X12 4010 855 Purchase Order Acknowledgement
 
 The reference mapping attached for the Source at Host message type for outbound PO Acknowledgement shows how to retrieve fields like Purchase Order Number andSales Order Number from different fields in the source payload that’s received from the backend. 
 
 image placeholder
 
-== Outbound EDI X12 4010 856 Advance Shipment Notice
+=== Outbound EDI X12 4010 856 Advance Shipment Notice
 
 The reference mapping for the Source at Host message type for outbound Advance Ship Notice shows how to retrieve fields like Shipment ID and Carrier SCAC Code from different fields in the source payload received from the backend system. 
 
@@ -42,13 +42,13 @@ In transactions like Advance Shipment Notice, one shipment notice often referenc
 
 image placeholder
 
-== Outbound EDI X12 4010 810 Invoice
+=== Outbound EDI X12 4010 810 Invoice
 
 The reference mapping for the Source at Host message type for an outbound invoice shows how to retrieve fields like Invoice Number and Invoice Amount from different fields in the source payload that’s received from the backend system. 
 
 image placeholder
 
-== Search by Custom Attributes
+=== Search by Custom Attributes
 
 Key fields, like Purchase Order Number and Sales Order Number, that appear in multiple message types are extracted into the same attribute alias. By using the filter options, users can retrieve all transactions that match the attribute value.
  
