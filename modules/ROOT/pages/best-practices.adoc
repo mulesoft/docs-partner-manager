@@ -1,6 +1,110 @@
-For optimal Partner Manager performance, follow these best practices.
+= Best Practices for Configuring Messages, Endpoints, and Custom Message Attributes
 
-*** xref:naming-conventions.adoc[Naming Conventions and Reuse]
-*** xref:manage-apis.adoc[Manage APIs for HTTP Inbound Endpoints]
-*** xref:custom-message-attributes.adoc[Custom Message Attributes]
-*** xref:map-examples.adoc[Map Examples]
+intro description
+
+== Naming Conventions and Reuse
+
+=== Recommended Naming for Internal Endpoints and Message Types
+
+Use a generic name for internal endpoints and message types instead of referencing the associated EDI format, version, and document type. Follow these examples for naming Target at Host and Source at Host message types.
+
+[%header%autowidth.spread]
+|===
+|Message Type or Endpoint |Flow Example |Recommended |Not Recommended |Reasoning
+|Target at Host Message Type |X12 4010 850 |in-tgt-purchase-order |4010-850-json |Your naming becomes easier to use in the future. When you get purchase orders from other partners that use different X12 versions, EDIFACT, or non-EDI formats, the message type name has more meaning when it's mapped to the same target message type.
+|Source at Host Message Type |JSON |out-ar-invoice | 5010-810-json |The same internal JSON format is mapped to other versions based on your partner's message type, so it's best to use a name that references the application, such as order, order-ack, invoice, or ship-notice, rather than the EDI format or message type used by the first trading partner you onboarded.
+|Target at Host Endpoint | |HTTP-Target-PurchaseOrder-Proc-API |HTTP-Target-850-JSON-Endpoint |Recommended when sending a translated inbound purchase order to a backend process API.
+|AS2 Receive from Partners Endpoint |AS2-Receive-from-partners-Generic |AS2-Receive-X12-5010-850-from-[Your First Partner’s Name] |Because you reuse the same endpoint to receive data from other partners, use a generic name instead of referencing the first partner onboarded.
+|===
+
+The image shows an implementation that uses the recommended naming convention for message type reuse for your transaction workflows, such as orders and invoices. Apply the same practice for all transaction types to reuse your configurations effectively.
+
+image placeholder
+
+=== Recommended Naming for HTTP Receive from Partners Endpoints
+
+When creating HTTP Receive from Partners endpoints from host or partner profiles:
+
+* Use a generic name for the host profile.
+* Reuse the same endpoint for multiple partners and message types.
+
+== Protect HTTP Inbound Endpoints with API Manager
+
+Use API Manager to apply security policies, SLA tiers, and more to your HTTP Receive from Partners and Source at Host endpoints. You can also create a self-service portal for your partners by documenting message specifications in Anypoint Exchange and exposing them on Anypoint Experience Hub.
+ 
+HTTP Receive from Partners and Source at Host endpoints are only secure when configured in API Manager. Be sure to add an Auto discovery ID to an endpoint so that the runtime application deployed by Partner Manager registers the application against the configured API Instance ID.
+
+== Optimize Message Search by Using Custom Message Attributes 
+
+Custom message attributes help your customers find messages faster. When you configure custom message attributes for each message type, you can map the attributes to the respective data payload structure.
+
+Help your partners find messages faster by configuring custom message attributes for each message type and mapping these attributes to the respective data payload structure. Once defined, Partner Manager automatically extracts these custom message attributes from the payload, facilitating efficient and accurate message tracking throughout the B2B transaction lifecycle.
+
+
+Help your partners find messages faster by configuring custom message attributes to define and map key fields, like Purchase Order Number and Shipment ID, from the data payload structure. These fields are essential because B2B workflows often involve multiple transactions of different message types, each with unique data fields that identify the transaction.
+
+Partner Manager’s custom message attributes feature helps you define and map these key fields from the data payload structure. Once defined in the source message type for inbound and outbound flows, Partner Manager automatically extracts these custom attributes from the payload.
+
+The image highlights common custom message attributes by showing two B2B workflows and the sequence of message types exchanged between organizations. Some custom attributes are included in all message types and serve as a key for the entire transaction lifecycle. For example, the Purchase Order Number appears in all transactions in a B2B Purchase Order workflow. In a B2B Load Tender workflow, the Shipment ID remains consistent throughout.
+
+image placeholder
+
+Key attributes often appear in different parts of a transaction payload, making them difficult to locate, such as in consolidated shipment notices where one shipment contains multiple order numbers.  To define the fields you want to extract as custom attributes, upload a reference attributes mapping for each transaction for Receive from Partners and Source at Target message types. Custom attribute values are stored in a flat array, allowing you to link multiple values to the same field.
+
+Custom message attributes  provide an open framework to extract data fields for any B2B transaction workflow, such as order to cash and procurement. This explains how to use the feature for a B2B Purchase Order to Invoice workflow. 
+
+== Purchase Order to Invoice Workflow
+
+These examples show how a simple attribute mapping in your message type definition enhances transaction visibility, making it easier to search for and troubleshoot messages.
+
+Before you associate an attribute label with a message type, define the attribute name and alias and a flag to indicate that you want to make the attribute searchable.
+
+image placeholder
+
+=== Inbound EDI X12 4010 850 Purchase Order
+
+Reference mapping for the Receive from Partners X12-4010-850 message type shows how to retrieve fields like Purchase Order Number and Buyer’s Name from different elements in the incoming EDI data payload. 
+
+Notice that the Buyer data is extracted by applying filter criteria to the PER segment based on the PER-01 Qualifier field. Dataweave maps any complexity level to extract information that simplifies the job functions of your operational user personas.
+
+image placeholder
+
+=== Outbound EDI X12 4010 855 Purchase Order Acknowledgement
+
+The reference mapping attached for the Source at Host message type for outbound PO Acknowledgement shows how to retrieve fields like Purchase Order Number and Sales Order Number from different fields in the source payload that’s received from the backend. 
+
+image placeholder
+
+=== Outbound EDI X12 4010 856 Advance Shipment Notice
+
+The reference mapping for the Source at Host message type for outbound Advance Ship Notice shows how to retrieve fields like Shipment ID and Carrier SCAC Code from different fields in the source payload received from the backend system. 
+
+In transactions like Advance Shipment Notice, one shipment notice often references multiple order numbers, especially in consolidated shipments where items from several purchase orders are sent together. Custom message attribute values are defined as an array to handle these scenarios.
+
+image placeholder
+
+=== Outbound EDI X12 4010 810 Invoice
+
+The reference mapping for the Source at Host message type for an outbound invoice shows how to retrieve fields like Invoice Number and Invoice Amount from different fields in the source payload that’s received from the backend system. 
+
+image placeholder
+
+=== Search by Custom Attributes
+
+Key fields, like Purchase Order Number and Sales Order Number, that appear in multiple message types are extracted into the same attribute alias. By using the filter options, users can retrieve all transactions that match the attribute value.
+ 
+This image shows a search for all transactions that match a partner’s purchase order number.
+
+image placeholder
+
+This image shows a search for all transactions that match a partner’s invoice number. 
+
+image placeholder
+
+== Map Examples for Custom Message Attributes and Transformations
+
+These Anypoint Exchange examples include DataWeave maps for custom message attributes, as well as transformations between X12, EDIFACT, and XML B2B standards and internal application data formats.
+
+* https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/minor/1.0/[B2B/EDI Order to Cash Mapping Examples]
+* https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-procure-to-pay-mappings/minor/1.0/[B2B/EDI Procure to Pay Mapping Examples]
+
