@@ -8,7 +8,7 @@ Before you deploy Partner Manager to Runtime Fabric, you must:
 
 * Ensure that you have the required permissions for using Runtime Fabric.
 * Create and configure the Runtime Fabric instance into which to deploy Partner Manager services. See xref:runtime-fabric::setting-up-runtime-fabric.adoc[Setting Up Runtime Fabric].
-** If you already have an RTF instance, use it to deploy Partner Manager runtime applications.
+** If you already have an RTF instance, you can use it to deploy Partner Manager runtime applications.
 * Configure Persistence Gateway in Runtime Fabric, as described in xref:runtime-fabric::persistence-gateway.adoc[Persistence Gateway].
 +
 Partner Manager uses a persistent Object Store via Persistence Gateway to store transaction processing information such as EDI control numbers and message routing information, which the Partner Manager runtime applications access.
