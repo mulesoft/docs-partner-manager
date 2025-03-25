@@ -19,7 +19,7 @@ Use a generic name for internal endpoints and message types instead of referenci
 
 The image shows an implementation that uses the recommended naming convention for message type reuse for your transaction workflows, such as orders and invoices. Apply the same practice for all transaction types to reuse your configurations effectively.
 
-image placeholder
+image::inbound-outbound-flow.png["A flowchart displays inbound and outbound message flows and types"]
 
 === Recommended Naming for HTTP Receive from Partners Endpoints
 
@@ -107,4 +107,3 @@ These Anypoint Exchange examples include DataWeave maps for custom message attri
 
 * https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/minor/1.0/[B2B/EDI Order to Cash Mapping Examples]
 * https://anypoint.mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-procure-to-pay-mappings/minor/1.0/[B2B/EDI Procure to Pay Mapping Examples]
-
