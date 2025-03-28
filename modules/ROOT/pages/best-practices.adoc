@@ -60,7 +60,7 @@ These examples show how an attribute mapping in your message type definition enh
 
 Before associating an attribute label with a message type, provide the attribute name and alias. To make the attribute searchable, define a flag.
 
-image::define-custom-attribute.png"[A table shows custom message attributes, aliases, and whether each is searchable"]
+image::define-custom-attribute.png["A table shows custom message attributes, aliases, and whether each is searchable"]
 
 ==== Inbound EDI X12-4010-850 Purchase Order
 
