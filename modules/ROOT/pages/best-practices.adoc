@@ -1,10 +1,8 @@
 = Best Practices for Configuring Messages, Endpoints, and Custom Message Attributes
 
-intro description
+These best practices improve the flexibility and security of B2B transaction workflows, simplifying message management and troubleshooting across different partners and formats. Learn
 
-== Naming Conventions and Reuse
-
-=== Recommended Naming for Internal Endpoints and Message Types
+== Recommended Naming for Internal Endpoints and Message Types
 
 Use a generic name for internal endpoints and message types instead of referencing the associated EDI format, version, and document type. Follow these examples for naming Target at Host and Source at Host message types.
 
@@ -21,7 +19,7 @@ The image shows an implementation that uses the recommended naming convention fo
 
 image::inbound-outbound-flow.png["A flowchart displays inbound and outbound message flows and types"]
 
-=== Recommended Naming for HTTP Receive from Partners Endpoints
+== Recommended Naming for HTTP Receive from Partners Endpoints
 
 When creating HTTP Receive from Partners endpoints from host or partner profiles:
 
@@ -34,72 +32,75 @@ Use API Manager to apply security policies, SLA tiers, and more to your HTTP Rec
  
 HTTP Receive from Partners and Source at Host endpoints are only secure when configured in API Manager. Be sure to add an Auto discovery ID to an endpoint so that the runtime application deployed by Partner Manager registers the application against the configured API Instance ID.
 
-== Optimize Message Search by Using Custom Message Attributes 
+image::endpoints-api-manager.png["A form displays API details and policies"]
 
-Custom message attributes help your customers find messages faster. When you configure custom message attributes for each message type, you can map the attributes to the respective data payload structure.
+== Optimize Message Search by Using Custom Message Attributes
 
-Help your partners find messages faster by configuring custom message attributes for each message type and mapping these attributes to the respective data payload structure. Once defined, Partner Manager automatically extracts these custom message attributes from the payload, facilitating efficient and accurate message tracking throughout the B2B transaction lifecycle.
+Help your business and support users find messages faster by using custom message attributes when setting up your integrations.
 
+. Configure custom message attributes for each message type.
+. Map the attributes to the respective data payload structure.
+. Define the attributes in the source message type definition for both inbound and outbound flows.
 
-Help your partners find messages faster by configuring custom message attributes to define and map key fields, like Purchase Order Number and Shipment ID, from the data payload structure. These fields are essential because B2B workflows often involve multiple transactions of different message types, each with unique data fields that identify the transaction.
-
-Partner Manager’s custom message attributes feature helps you define and map these key fields from the data payload structure. Once defined in the source message type for inbound and outbound flows, Partner Manager automatically extracts these custom attributes from the payload.
+After you define the attributes in the flows, Partner Manager automatically extracts the attributes from the payload, facilitating efficient and accurate message tracking throughout the B2B transaction lifecycle. Users can find messages quickly by using key data fields in the search, such as Purchase Order Number, Invoice Number, or Shipment ID.
 
 The image highlights common custom message attributes by showing two B2B workflows and the sequence of message types exchanged between organizations. Some custom attributes are included in all message types and serve as a key for the entire transaction lifecycle. For example, the Purchase Order Number appears in all transactions in a B2B Purchase Order workflow. In a B2B Load Tender workflow, the Shipment ID remains consistent throughout.
 
-image placeholder
+image::custom-message-attributes-b2b-workflow.png["Two workflow diagrams detail purchase order and load tender processes to invoice"]
 
-Key attributes often appear in different parts of a transaction payload, making them difficult to locate, such as in consolidated shipment notices where one shipment contains multiple order numbers.  To define the fields you want to extract as custom attributes, upload a reference attributes mapping for each transaction for Receive from Partners and Source at Target message types. Custom attribute values are stored in a flat array, allowing you to link multiple values to the same field.
+=== Easily Find Fields to Extract as Attributes
 
-Custom message attributes  provide an open framework to extract data fields for any B2B transaction workflow, such as order to cash and procurement. This explains how to use the feature for a B2B Purchase Order to Invoice workflow. 
+Key attributes often appear in different parts of a transaction payload, making them difficult to locate, such as in consolidated shipment notices where one shipment contains multiple order numbers. To make finding the fields you want to extract as custom message attributes easier, upload a reference attributes mapping when configuring the inbound and outbound source message type for transactions. The custom attribute values are stored in a flat array, allowing you to link multiple values to the same field.
 
-== Purchase Order to Invoice Workflow
+Custom message attributes provide an open framework to extract data fields for any B2B transaction workflow, such as order to cash and procurement. The examples explain how to use the feature for a B2B Purchase Order to Invoice workflow. 
 
-These examples show how a simple attribute mapping in your message type definition enhances transaction visibility, making it easier to search for and troubleshoot messages.
+=== Purchase Order to Invoice Workflow Examples
 
-Before you associate an attribute label with a message type, define the attribute name and alias and a flag to indicate that you want to make the attribute searchable.
+These examples show how an attribute mapping in your message type definition enhances transaction visibility, simplifying message search and troubleshooting.
 
-image placeholder
+Before associating an attribute label with a message type, provide the attribute name and alias. To make the attribute searchable, define a flag.
 
-=== Inbound EDI X12 4010 850 Purchase Order
+image::define-custom-attribute.png"[A table shows custom message attributes, aliases, and whether each is searchable"]
 
-Reference mapping for the Receive from Partners X12-4010-850 message type shows how to retrieve fields like Purchase Order Number and Buyer’s Name from different elements in the incoming EDI data payload. 
+==== Inbound EDI X12-4010-850 Purchase Order
 
-Notice that the Buyer data is extracted by applying filter criteria to the PER segment based on the PER-01 Qualifier field. Dataweave maps any complexity level to extract information that simplifies the job functions of your operational user personas.
+Reference mapping for the Receive from Partners X12-4010-850 message type shows how to retrieve fields like *Purchase Order Number* and *Buyer's Name* from different elements in the incoming EDI data payload. 
 
-image placeholder
+Notice that the buyer data is extracted by applying filter criteria to the PER segment based on the *PER-01 Qualifier* field. Dataweave lets you create maps of any complexity level to extract information that simplifies the job functions of your operational user personas.
 
-=== Outbound EDI X12 4010 855 Purchase Order Acknowledgement
+image::ref-map-inbound-edi-po.png["A table shows message details including a delivered status and custom attributes"]
 
-The reference mapping attached for the Source at Host message type for outbound PO Acknowledgement shows how to retrieve fields like Purchase Order Number and Sales Order Number from different fields in the source payload that’s received from the backend. 
+==== Outbound EDI X12-4010 855 Purchase Order Acknowledgement
 
-image placeholder
+The reference mapping attached for the Source at Host message type for outbound PO Acknowledgement shows how to retrieve fields like *Purchase Order Number* and *Sales Order Number* from different fields in the source payload that's received from the backend. 
 
-=== Outbound EDI X12 4010 856 Advance Shipment Notice
+image::rep-map-outbound-edi-po-ack.png["A table shows message details, including status and custom attributes"]
 
-The reference mapping for the Source at Host message type for outbound Advance Ship Notice shows how to retrieve fields like Shipment ID and Carrier SCAC Code from different fields in the source payload received from the backend system. 
+==== Outbound EDI X12 4010 856 Advance Shipment Notice
 
-In transactions like Advance Shipment Notice, one shipment notice often references multiple order numbers, especially in consolidated shipments where items from several purchase orders are sent together. Custom message attribute values are defined as an array to handle these scenarios.
+The reference mapping for the Source at Host message type for outbound Advance Ship Notice shows how to retrieve fields like *Shipment ID* and *Carrier SCAC Code* from different fields in the source payload received from the backend system. 
 
-image placeholder
+In Advance Shipment Notice transactions, for example, one shipment notice often references multiple order numbers, especially in consolidated shipments where items from several purchase orders are sent together. Custom message attribute values are defined as an array to handle these scenarios.
 
-=== Outbound EDI X12 4010 810 Invoice
+image::ref-map-outbound-edi-advanced-ship.png["A table shows a message summary and custom attributes, including shipment and order IDs"]
 
-The reference mapping for the Source at Host message type for an outbound invoice shows how to retrieve fields like Invoice Number and Invoice Amount from different fields in the source payload that’s received from the backend system. 
+==== Outbound EDI X12 4010 810 Invoice
 
-image placeholder
+The reference mapping for the Source at Host message type for an outbound invoice shows how to retrieve fields like *Invoice Number* and *Invoice Amount* from different fields in the source payload that's received from the backend system. 
 
-=== Search by Custom Attributes
+image::ref-map-invoice-delivered.png["A table displays message details, including status and custom attributes"]
 
-Key fields, like Purchase Order Number and Sales Order Number, that appear in multiple message types are extracted into the same attribute alias. By using the filter options, users can retrieve all transactions that match the attribute value.
+==== Search by Custom Attributes
+
+Key fields, like *Purchase Order Number* and *Sales Order Number*, that appear in multiple message types are extracted into the same attribute alias. By using the filter options, you can retrieve all transactions that match the attribute value.
  
-This image shows a search for all transactions that match a partner’s purchase order number.
+The image shows a search for all transactions that match a partner's purchase order number.
 
-image placeholder
+image::search-transactions-by-po.png["A table shows transaction search by purchase order"]
 
-This image shows a search for all transactions that match a partner’s invoice number. 
+The image shows a search for all transactions that match a partner's invoice number. 
 
-image placeholder
+image::search-transactions-by-invoice.png["A table shows transaction search by invoice"]
 
 == Map Examples for Custom Message Attributes and Transformations
 
