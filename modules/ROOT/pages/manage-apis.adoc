@@ -1,6 +1,0 @@
-= Manage APIs for HTTP Inbound Endpoints
-
-Partner Manager lets you configure HTTP Receive from Partners and Source at Host endpoints using API Manager. This enables your organization to use MuleSoft’s Universal API Management features, such as applying security policies, SLA tiers, and more for Partner Manager endpoints. You can also document your message specifications in Anypoint Exchange and optionally expose them through a public portal on Anypoint Experience Hub, providing a self-service portal for your partners.
- 
-
-HTTP Receive from Partners and Source at Host endpoints are only protected if you configure them with API Manager. When you configure the endpoints with an Auto discovery ID, the runtime application deployed by Partner Manager registers the application against the configured API Instance ID.
