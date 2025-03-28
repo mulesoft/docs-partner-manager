@@ -1,6 +1,6 @@
 = Best Practices for Configuring Messages, Endpoints, and Custom Message Attributes
 
-These best practices improve the flexibility and security of B2B transaction workflows, simplifying message management and troubleshooting across different partners and formats. Learn
+These best practices improve the flexibility and security of B2B transaction workflows, simplifying message management and troubleshooting across different partners and formats.
 
 == Recommended Naming for Internal Endpoints and Message Types
 
