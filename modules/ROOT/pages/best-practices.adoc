@@ -94,11 +94,11 @@ image::ref-map-invoice-delivered.png["A table displays message details, includin
 
 Key fields, like *Purchase Order Number* and *Sales Order Number*, that appear in multiple message types are extracted into the same attribute alias. By using the filter options, you can retrieve all transactions that match the attribute value.
  
-The image shows a search for all transactions that match a partner's purchase order number.
+This image shows a search for all transactions that match a partner's purchase order number.
 
 image::search-transactions-by-po.png["A table shows transaction search by purchase order"]
 
-The image shows a search for all transactions that match a partner's invoice number. 
+This image shows a search for all transactions that match a partner's invoice number. 
 
 image::search-transactions-by-invoice.png["A table shows transaction search by invoice"]
 
