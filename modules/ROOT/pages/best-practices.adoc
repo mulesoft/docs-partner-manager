@@ -10,7 +10,7 @@ Use a generic name for internal endpoints and message types instead of referenci
 |===
 |Message Type or Endpoint |Flow Example |Recommended |Not Recommended |Reasoning
 |Target at Host Message Type |X12 4010 850 |in-tgt-purchase-order |4010-850-json |Your naming becomes easier to use in the future. When you get purchase orders from other partners that use different X12 versions, EDIFACT, or non-EDI formats, the message type name has more meaning when it's mapped to the same target message type.
-|Source at Host Message Type |JSON |out-ar-invoice | 5010-810-json |The same internal JSON format is mapped to other versions based on your partner's message type, so it's best to use a name that references the application, such as order, order-ack, invoice, or ship-notice, rather than the EDI format or message type used by the first trading partner you onboarded.
+|Source at Host Message Type |JSON |out-ar-invoice | 5010-810-json |The same internal JSON format maps to other versions based on your partner's message type. Use a name that references the application, such as `order`, `order-ack`, `invoice`, or `ship-notice`, rather than the EDI format or message type used by the first trading partner you onboarded.
 |Target at Host Endpoint | |HTTP-Target-PurchaseOrder-Proc-API |HTTP-Target-850-JSON-Endpoint |Recommended when sending a translated inbound purchase order to a backend process API.
 |AS2 Receive from Partners Endpoint |AS2-Receive-from-partners-Generic |AS2-Receive-X12-5010-850-from-[Your First Partner's Name] |Because you reuse the same endpoint to receive data from other partners, use a generic name instead of referencing the first partner onboarded.
 |===
@@ -42,9 +42,9 @@ Help your business and support users find messages faster by using custom messag
 . Map the attributes to the respective data payload structure.
 . Define the attributes in the source message type definition for both inbound and outbound flows.
 
-After you define the attributes in the flows, Partner Manager automatically extracts the attributes from the payload, facilitating efficient and accurate message tracking throughout the B2B transaction lifecycle. Users can find messages quickly by using key data fields in the search, such as Purchase Order Number, Invoice Number, or Shipment ID.
+After you define the attributes in the flows, Partner Manager automatically extracts the attributes from the payload, facilitating efficient message tracking throughout the B2B transaction lifecycle. Users can find messages quickly by using key data fields in the search, such as Purchase Order Number, Invoice Number, or Shipment ID.
 
-The image highlights common custom message attributes by showing two B2B workflows and the sequence of message types exchanged between organizations. Some custom attributes are included in all message types and serve as a key for the entire transaction lifecycle. For example, the Purchase Order Number appears in all transactions in a B2B Purchase Order workflow. In a B2B Load Tender workflow, the Shipment ID remains consistent throughout.
+The image highlights common custom message attributes by showing two B2B workflows and the sequence of message types exchanged between organizations. All message types include custom attributes, which serve as a key for the entire transaction lifecycle. For example, the `Purchase Order Number` appears in all transactions in a B2B Purchase Order workflow. In a B2B Load Tender workflow, the `Shipment ID` remains consistent throughout.
 
 image::custom-message-attributes-b2b-workflow.png["Two workflow diagrams detail purchase order and load tender processes to invoice"]
 
@@ -64,29 +64,29 @@ image::define-custom-attribute.png["A table shows custom message attributes, ali
 
 ==== Inbound EDI X12-4010-850 Purchase Order
 
-Reference mapping for the Receive from Partners X12-4010-850 message type shows how to retrieve fields like *Purchase Order Number* and *Buyer's Name* from different elements in the incoming EDI data payload. 
+Reference mapping for the Receive from Partners X12-4010-850 message type shows how to retrieve fields like *Purchase Order Number* from different elements in the incoming EDI data payload. 
 
-Notice that the buyer data is extracted by applying filter criteria to the PER segment based on the *PER-01 Qualifier* field. Dataweave lets you create maps of any complexity level to extract information that simplifies the job functions of your operational user personas.
+Applying filter criteria to the PER segment based on the *PER-01 Qualifier* field extracts the buyer data. DataWeave lets you create maps of any complexity level to extract information that simplifies the job functions of your operational user personas.
 
 image::ref-map-inbound-edi-po.png["A table shows message details including a delivered status and custom attributes"]
 
 ==== Outbound EDI X12-4010 855 Purchase Order Acknowledgement
 
-The reference mapping attached for the Source at Host message type for outbound PO Acknowledgement shows how to retrieve fields like *Purchase Order Number* and *Sales Order Number* from different fields in the source payload that's received from the backend. 
+The reference mapping for the Source at Host message type shows how to retrieve fields like *Purchase Order Number* from different fields in the source payload that's received from the backend. 
 
 image::rep-map-outbound-edi-po-ack.png["A table shows message details, including status and custom attributes"]
 
 ==== Outbound EDI X12 4010 856 Advance Shipment Notice
 
-The reference mapping for the Source at Host message type for outbound Advance Ship Notice shows how to retrieve fields like *Shipment ID* and *Carrier SCAC Code* from different fields in the source payload received from the backend system. 
+The reference mapping for the Source at Host message type shows how to retrieve fields like *Shipment ID* from different fields in the source payload received that's from the backend system. 
 
-In Advance Shipment Notice transactions, for example, one shipment notice often references multiple order numbers, especially in consolidated shipments where items from several purchase orders are sent together. Custom message attribute values are defined as an array to handle these scenarios.
+In Advance Shipment Notice transactions, for example, one shipment notice often references multiple order numbers, especially in consolidated shipments where items from several purchase orders are sent together. To handle these scenarios, the system defines custom message attribute values as an array.
 
 image::ref-map-outbound-edi-advanced-ship.png["A table shows a message summary and custom attributes, including shipment and order IDs"]
 
 ==== Outbound EDI X12 4010 810 Invoice
 
-The reference mapping for the Source at Host message type for an outbound invoice shows how to retrieve fields like *Invoice Number* and *Invoice Amount* from different fields in the source payload that's received from the backend system. 
+The reference mapping for the Source at Host message type shows how to retrieve fields like *Invoice Number* from different fields in the source payload that's received from the backend system. 
 
 image::ref-map-invoice-delivered.png["A table displays message details, including status and custom attributes"]
 
