@@ -12,7 +12,7 @@ Use a generic name for internal endpoints and message types instead of referenci
 |Target at Host Message Type |X12 4010 850 |in-tgt-purchase-order |4010-850-json |Your naming becomes easier to use in the future. When you get purchase orders from other partners that use different X12 versions, EDIFACT, or non-EDI formats, the message type name has more meaning when it's mapped to the same target message type.
 |Source at Host Message Type |JSON |out-ar-invoice | 5010-810-json |The same internal JSON format is mapped to other versions based on your partner's message type, so it's best to use a name that references the application, such as order, order-ack, invoice, or ship-notice, rather than the EDI format or message type used by the first trading partner you onboarded.
 |Target at Host Endpoint | |HTTP-Target-PurchaseOrder-Proc-API |HTTP-Target-850-JSON-Endpoint |Recommended when sending a translated inbound purchase order to a backend process API.
-|AS2 Receive from Partners Endpoint |AS2-Receive-from-partners-Generic |AS2-Receive-X12-5010-850-from-[Your First Partner’s Name] |Because you reuse the same endpoint to receive data from other partners, use a generic name instead of referencing the first partner onboarded.
+|AS2 Receive from Partners Endpoint |AS2-Receive-from-partners-Generic |AS2-Receive-X12-5010-850-from-[Your First Partner's Name] |Because you reuse the same endpoint to receive data from other partners, use a generic name instead of referencing the first partner onboarded.
 |===
 
 The image shows an implementation that uses the recommended naming convention for message type reuse for your transaction workflows, such as orders and invoices. Apply the same practice for all transaction types to reuse your configurations effectively.
