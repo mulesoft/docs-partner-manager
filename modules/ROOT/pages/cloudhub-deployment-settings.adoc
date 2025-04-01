@@ -10,6 +10,11 @@ To configure settings for deploying Anypoint Partner Manager to CloudHub, access
 | Setting | Description | Default 
 | Deployment Target Type | Target type for your Partner Manager deployment. Select *CloudHub 1.0*. | CloudHub 1.0
 | Runtime Version | Mule runtime engine version to run Partner Manager applications.| 4.6.0
+| Min Mule Version override | Minimum Mule runtime version required to deploy the runtime applications.
+
+Configuring the runtime version enables you to apply a xref:mule-runtime::feature-flagging.adoc#configure-feature-flags-for-a-mule-application[feature flagging] mechanism for Partner Manager-deployed Mule runtime applications.
+
+If you process cXML messages with <DOCTYPE> tags, you must set the `minMuleVersion` to 4.5.0 or higher. If you're migrating from an earlier version, you must perform end-to-end regression testing on your existing workflows before changing the `minMuleVersion`. | None
 | CloudHub Region |Region in CloudHub to which you want to deploy Partner Manager runtime applications. You can't change the region if active message flows are deployed to the existing region. To change the region in this case, you must undeploy the message flows. You can redeploy the message flows after you change the region.| Retrieved from the business group's Runtime Manager setting
 | Anypoint MQ Region | This value is automatically assigned based on the specified CloudHub region and you can't change it. |  
 | Automatically restart app when not responding | Directs CloudHub to automatically restart your application when the monitoring system discovers an issue. | Selected

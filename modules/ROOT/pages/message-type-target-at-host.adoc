@@ -12,7 +12,9 @@ include::partial$csv-outbound-partial.adoc[]
 
 == JSON or XML
 
-Use the following settings to define JSON or XML as the format for the Target at host message type:
+Use the settings in the table to define JSON or XML as the format for the Receive from Partners message type.
+
+If you want to process cXML messages with <DOCTYPE> tags, you must set the `minMuleVersion` to 4.5.0 or higher and upgrade your runtime environment. For more information, see Partner Manager deployment settings for xref:cloudhub-deployment-settings.adoc[CloudHub] and xref:rtf-deployment-settings.adoc[Runtime Fabric].
 
 [%header%autowidth.spread]
 |===
