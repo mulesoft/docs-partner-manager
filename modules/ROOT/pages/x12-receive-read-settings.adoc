@@ -26,6 +26,18 @@ Use the following settings to configure the acknowledgments to send in response 
 |===
 |Setting |Description |Default
 
+|Report non-fatal errors in acknowledgements
+|When checked, the AK3 segment of the generated 997 functional acknowledgment reports non-fatal errors.
+
+When unchecked, the AK3 segment of the generated 997 functional acknowledgment doesn't report non-fatal errors.
+
+|Enabled
+
+|Report segment details
+||If selected, the details of segment errors are included in the functional acknowledgements generated (997) •
+
+|Enabled
+
 |Send TA1 for each transmission from <recipient>.
 a|Provides a Technical Acknowledgment (TA1) to the Interchange sender that reports the status of the processing of an interchange header and trailer by the address receiver:
 
@@ -70,6 +82,10 @@ a| * If selected, Partner Manager rejects transactions with data element values 
 * If not selected, Partner Manager uses the values.
 | Enabled
 
+|Truncate values exceeding the length limits
+|If selected and *Fail when value length outside allowed range* isn't selected, Partner Manager truncates the data elements that exceed the maximum length limit in the generated output.
+|Disabled
+
 |Fail when invalid character in value
 a| * If selected, Partner Manager rejects transactions with invalid characters.
 * If not selected, the characters are either passed through or substituted.
@@ -112,6 +128,13 @@ a|* If selected, Partner Manager rejects transactions containing segments marked
 
 |Disabled
 
+|Include trailer segment details
+|If selected, Partner Manager includes elements from the Interchange Trailer (IEA) and Group Trailer (GE) segments of the X12 data payload.
+|Disabled
+
+|Ignore included segments
+|If selected, the X12 read operation output includes segments with usage type 'Ignore', and you can use the segment s in message flow maps.
+|Disabled
 
 |===
 
