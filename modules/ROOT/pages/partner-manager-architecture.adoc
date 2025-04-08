@@ -41,11 +41,15 @@ image::pm-high-level-arch.png["A flowchart showing how data moves between tradin
 |API to store B2B payload data in your storage solution
 |===
 
-== Partner Manager for CloudHub
+== Partner Manager for CloudHub 1.0 or 2.0
 
-When deploying B2B integration message flows to CloudHub, Anypoint MQ uses queues between processing stages to add additional reliability to B2B message processing.
+When deploying B2B integration message flows to CloudHub 1.0, CloudHub 2.0, Anypoint MQ uses queues between processing stages to add additional reliability to B2B message processing. Anypoint MQ generates queues automatically in the same or nearest available region during the deployment process.
 
-As of the first deployment from Partner Manager, runtime applications deploy to the CloudHub region specified in the business group’s default settings in Runtime Manager by default. Anypoint MQ queues automatically generate during the deployment process in the same or the nearest available region. Any new runtime applications deploy to the same region as the first deployment.
+Runtime applications for environments configured to deploy to CloudHub 1.0 deploy to the CloudHub region configured in the environment settings in Access Management.
+
+Runtime applications for environments configured to deploy to CloudHub 2.0 deploy to the shared or private space configured in the environment settings in Access Management.
+
+New runtime applications deploy to the same region as the first deployment.
 
 image::cloudhub-deployment.png["A diagram that illustrates how data moves through CloudHub"]
 
