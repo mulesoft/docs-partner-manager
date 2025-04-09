@@ -98,7 +98,7 @@ No authentication
 ** If you want to allow HTTP requests to the HTTP or HTTPS receive endpoint application:
 . Use a private space as the deployment target.
 . On the *Advanced* tab, select `Accept HTTP` in the *HTTP requests* field.
-. Optionally, configure Network-Level Ingress Rules to allow HTTP requests only from specific IP addresses.
+. Optionally, configure Network-Level Ingress Rules to allow HTTP requests from specific IP addresses.
 
 include::partial$https-endpoint-authentication-partial.adoc[tag=https-receive,leveloffset=+1]
 

@@ -2,9 +2,9 @@
 
 You can deploy AS2 receive, HTTP receive, and HTTPS receive endpoints on a public or private port.
 
-== Deploy to CloudHub on a Public Port
+== Deploy to CloudHub 1.0 on a Public Port
 
-When an AS2, HTTP, or HTTPS receive endpoint is deployed to CloudHub with the public port configuration enabled, the endpoint application is deployed on the public HTTPS port (`8082`), with the traffic routed through the xref:runtime-manager::dedicated-load-balancer-tutorial.adoc[shared load balancer]. The value in the URL field is automatically generated when you deploy a message flow that uses this endpoint.
+When an AS2 or HTTPS receive endpoint is deployed to CloudHub with the private port configuration disabled, the endpoint application is deployed on the public HTTPS port (`8082`) or HTTP port (`8081`), with the traffic routed through the xref:runtime-manager::dedicated-load-balancer-tutorial.adoc[shared load balancer]. The value in the URL field is automatically generated when you deploy a message flow that uses this endpoint.
 
 You can view the runtime application name and external URL for a deployed endpoint from the endpoint details page. For example:
 
@@ -14,23 +14,34 @@ You can share the external URL with the partners that send AS2, HTTP, or HTTPS m
 
 If your organization uses Anypoint Virtual Private Cloud without a dedicated load balancer (DLB), your organization’s platform administrator can configure the necessary xref:runtime-manager::vpc-firewall-rules-concept.adoc[Anypoint VPC firewall rules] to allow specific partner or third-party connection IP addresses to access the endpoint.
 
-== Deploy to CloudHub on a Private Port
+== Deploy to CloudHub 1.0 on a Private Port
 
 To deploy an AS2, HTTP, or HTTPS receive endpoint to CloudHub with the private port configuration enabled, do either of the following:
 
 * Deploy a message flow that includes the receive endpoint.
 * Set CloudHub to automatically deploy newly created endpoints to a private port, as described in xref:cloudhub-deployment-settings.adoc[].
 
-Endpoints with the private port configuration enabled are deployed to the private HTTPS port `8092`. You can view the runtime application name, internal URL, and external URL for a deployed endpoint from the endpoint details page, which you can access from the <*host*> page (AS2 endpoints) or partner page (HTTP or HTTPS endpoints), or from a message flow.
+Endpoints with the private port configuration enabled are deployed to the private HTTPS port `8092` or HTTP (only for AS2) port `8091`. You can view the runtime application name, internal URL, and external URL for a deployed endpoint from the endpoint details page, which you can access from the <*host*> page (AS2 endpoints) or partner page (HTTP or HTTPS endpoints), or from a message flow.
 
 Once an endpoint is deployed, follow these steps:
 
 . Configure URL mapping rules to forward the messages received from your partners to an application, as described in the following sections and in xref:runtime-manager::lb-mapping-rules.adoc[Dedicated Load Balancer Mapping Rules].
 . Have your organization's platform administrator add your partner's IP addresses to a list of allowed addresses in the DLB setting, as described in xref:runtime-manager::lb-allowlists.adoc[Dedicated Load Balancer Allowlists].
 
+== Deploy to CloudHub 2.0
+
+Partner Manager deploys AS2 and HTTP inbound endpoints on CloudHub 2.0 with a HTTPS listener. 
+
+* When using a shared space as the deployment target, the endpoints are accessible over the Internet and HTTP requests aren't allowed.
+* When using a private space as the deployment target, you can use CloudHub 2.0 networking configurations, such as Ingress and Firewall rules, to manage and route incoming requests to your runtime applications.  
+** If you want to allow HTTP requests to the AS2, HTTP, or HTTPS inbound endpoint application:
+. Use a private space as the deployment target.
+. On the *Advanced* tab, select `Accept HTTP` in the *HTTP requests* field.
+. Optionally, configure Network-Level Ingress Rules to allow HTTP requests from specific IP addresses.
+
 == Deploy to Runtime Fabric
 
-When you deploy message flows to Anypoint Runtime Fabric, Partner Manager uses Anypoint MQ queues between processing stages to add additional reliability to B2B message processing.
+Partner Manager deploys AS2 and HTTP inbound endpoints to Runtime Fabric with an HTTP listener. You can expose HTTPS endpoints for internal and external users by using RTF network configurations and Ingress rules.
 
 == External URLs and Mapping Rules for Deployed Receive Endpoints
 
@@ -59,4 +70,3 @@ image::url-mapping-rules-https.png["URL mapping rules for HTTPS in the DLB setti
 * xref:create-endpoint.adoc[Creating Endpoints]
 * xref:endpoint-as2-receive.adoc[AS2 Receive Endpoint Settings]
 * xref:endpoint-https-receive.adoc[HTTP and HTTPS Receive Endpoint Settings]
-

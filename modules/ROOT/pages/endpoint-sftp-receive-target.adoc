@@ -78,6 +78,13 @@ include::partial$sftp-endpoint-authentication-partial.adoc[]
 | Path on the SFTP server to which your partner sends the inbound files.
 | x
 
+| Skip Delete
+a| When enabled, Partner Manager keeps the source file after reading and processing.
+
+[NOTE]
+Use this configuration only when connecting to SFTP/FTP hosts that don't allow explicit file deletion after the first read. Using this configuration with other types of SFTP/FTP hosts can result in duplicate file processing.
+|
+
 | Polling Frequency
 | Frequency at which the server checks the source path for new files. The default value is `1 minute`.
 | x
@@ -109,7 +116,11 @@ To disable this feature, specify a negative number or omit the value.
 |
 
 | Archival Path
-| Directory path on the SFTP server at which to store a copy of the file after processing.
+a| Directory path on the SFTP server at which to store a copy of the file after processing.
+
+[NOTE]
+The runtime application attempts to create the archive file up to three times. If permission or connection errors prevent Partner Manager from deleting the file, Partner Manager logs the issue in the runtime application and skips the archival step to prevent duplicate message processing.
+
 |
 |===
 
