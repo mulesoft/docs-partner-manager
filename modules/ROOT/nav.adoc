@@ -6,6 +6,7 @@
 * xref:setup.adoc[Setting up the Partner Manager Environment]
   ** xref:deploy-partner-manager.adoc[]
   ** xref:cloudhub-deployment-settings.adoc[]
+  ** xref:cloudhub2-deployment-settings.adoc[]
   ** xref:rtf-deployment-settings.adoc[]
   ** xref:setup-payload-storage-API.adoc[Configuring a Payload Storage API]
   ** xref:certificates.adoc[Certificate and Keystore Storage]
