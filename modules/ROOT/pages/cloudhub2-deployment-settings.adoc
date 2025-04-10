@@ -25,7 +25,7 @@ If you process cXML messages with <DOCTYPE> tags, you must set the `minMuleVersi
 | Each B2B endpoint a| Reserved CPU space, CPU space limit, and memory capacity for each Partner Manager endpoint application. Partner Manager deploys a generic Mule app to the runtime for each endpoint protocol and direction (receive or send) combination.
 
 [NOTE]
-Each AS2 and HTTPS inbound endpoint configuration is deployed as a separate Mule application. You can reuse the same endpoint configuration across multiple partners and message types.
+Partner manager deploys each AS2 and HTTPS inbound endpoint configuration as a separate Mule application. You can reuse the same endpoint configuration across multiple partners and message types.
 
 | 0.1 vCores
 | B2B API Replication Service | Reserved CPU space, CPU space limit, and memory capacity for the B2B API Replication Service. | 0.2 vCores
