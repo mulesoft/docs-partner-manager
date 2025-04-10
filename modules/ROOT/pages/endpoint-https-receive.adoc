@@ -90,6 +90,7 @@ No authentication
 |===
 
 [NOTE]
+====
 * When deploying to Anypoint Runtime Fabric, Partner Manager deploys the HTTP or HTTPS receive endpoint as an HTTP listener.
 ** You must configure an Ingress controller to provide external consumers with an HTTPS endpoint. For more information, see xref:runtime-fabric::custom-ingress-configuration.adoc[Configuring Ingress for Runtime Fabric].
 
@@ -99,6 +100,7 @@ No authentication
 . Use a private space as the deployment target.
 . On the *Advanced* tab, select `Accept HTTP` in the *HTTP requests* field.
 . Optionally, configure Network-Level Ingress Rules to allow HTTP requests from specific IP addresses.
+====
 
 include::partial$https-endpoint-authentication-partial.adoc[tag=https-receive,leveloffset=+1]
 

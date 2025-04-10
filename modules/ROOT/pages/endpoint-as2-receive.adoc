@@ -121,9 +121,9 @@ Follow these steps to add basic authentication for incoming AS2 messages from yo
 
 . Configure the endpoint with <<manage-api-manager, Manage with API Manager>>.
 . Configure a client credentials policy in API Manager and select *HTTP Basic Authentication Header* as the credentials origin.
-
++
 image::configure-client-credentials-policy.png["Configure client credentials policy in API Manager"]
-
++
 . Add documentation to the HTTP API from Exchange and engage with your partners by publishing it to the xref:exchange::to-share-api-asset-to-portal.adoc[public portal] from Exchange or via API Experience Hub. 
 ** If you publish via a portal, your partners must log in and request access. 
 ** If you follow the xref:api-experience-hub::requesting-access-to-an-api-instance.adoc[API request process] on behalf of your partners, HTTP basic auth headers pass the client ID and client secret upon request.

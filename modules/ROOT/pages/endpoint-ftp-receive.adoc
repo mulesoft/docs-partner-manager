@@ -69,7 +69,7 @@ Create FTP receive endpoints by configuring these settings on the *<host>* or *P
 a| When enabled, Partner Manager keeps the source file after reading and processing.
 
 [NOTE]
-Use this configuration only when connecting to SFTP/FTP hosts that don't allow explicit file deletion after the first read. Using this configuration with other types of SFTP/FTP hosts can result in duplicate file processing.
+Use this configuration only when connecting to SFTP/FTP hosts that don't allow explicit file deletion after the first read. Using this configuration with other SFTP/FTP hosts can result in duplicate file processing.
 |
 
 | Polling Frequency
