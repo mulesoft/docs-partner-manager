@@ -31,3 +31,11 @@ Each AS2 and HTTPS inbound endpoint configuration is deployed as a separate Mule
 | B2B API Replication Service | Reserved CPU space, CPU space limit, and memory capacity for the B2B API Replication Service. | 0.2 vCores
 | B2B Document Processing Service | Reserved CPU space, CPU space limit, and memory capacity for the B2B Document Processing Service. | 0.2 vCores
 |===
++
+For help with sizing, contact your MuleSoft Account Team. 
++
+. Click *Save*.
+
+== See Also
+
+xref:deploy-partner-manager.adoc[]
