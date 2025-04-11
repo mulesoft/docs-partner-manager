@@ -103,6 +103,7 @@ To disable this feature, specify a negative number or omit the value.
 | Filename pattern required by your partner.
 |
 
+[[archive-path]]
 | Archival Path
 a| FTP server path at which to store a copy of the file obtained from the source path.
 
