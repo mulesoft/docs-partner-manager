@@ -39,10 +39,6 @@ Partner Manager deploys AS2 and HTTP inbound endpoints on CloudHub 2.0 with a HT
 . On the *Advanced* tab, select `Accept HTTP` in the *HTTP requests* field.
 . Optionally, configure Network-Level Ingress Rules to allow HTTP requests from specific IP addresses.
 
-== Deploy to Runtime Fabric
-
-Partner Manager deploys AS2 and HTTP inbound endpoints to Runtime Fabric with an HTTP listener. You can expose HTTPS endpoints for internal and external users by using RTF network configurations and Ingress rules.
-
 == External URLs and Mapping Rules for Deployed Receive Endpoints
 
 The external URLS for receive endpoints deployed to public or private ports vary depending on the endpoint type, DLB domain, and input start_paths. You can share external URLs with your partners.
@@ -64,6 +60,10 @@ The external URL for an HTTPS endpoint is `+https://{DLB-domain}/{Input-path}/{b
 For example, if the name of your DLB domain is `mythical.lb.anypointdns.net`, the base path you configured for the endpoint is `send2`, and the runtime application name is `b2b-inbound-http-ognq`, then your administrator can add a URL mapping rule in the DLB settings to forward incoming requests to the runtime application within your Anypoint VPC. For example:
 
 image::url-mapping-rules-https.png["URL mapping rules for HTTPS in the DLB settings"]
+
+== Deploy to Runtime Fabric
+
+Partner Manager deploys AS2 and HTTP inbound endpoints to Runtime Fabric with an HTTP listener. You can expose HTTPS endpoints for internal and external users by using RTF network configurations and Ingress rules.
 
 == See Also
 
