@@ -63,7 +63,7 @@ image::url-mapping-rules-https.png["URL mapping rules for HTTPS in the DLB setti
 
 == Deploy to Runtime Fabric
 
-Partner Manager deploys AS2 and HTTP inbound endpoints to Runtime Fabric with an HTTP listener. You can expose HTTPS endpoints for internal and external users by using RTF network configurations and Ingress rules.
+Partner Manager deploys AS2 and HTTP inbound endpoints to Runtime Fabric with an HTTP listener. You can expose HTTPS endpoints for internal and external users by using Runtime Fabric network configurations and Ingress rules.
 
 == See Also
 
