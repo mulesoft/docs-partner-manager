@@ -1,0 +1,10 @@
+= Apply Environments Settings
+
+When you change your environment's Partner Manager or Access Management settings, follow these steps to apply the changes to all your runtime applications:
+
+. From the Message flows page, click *Manage deployments*.
+* Select *Apply runtime settings*.
+. Check the box to confirm that you understand the effects of these actions.
+* Click *Confirm*.
+
+Applying environment settings updates all the Mule applications in your runtime with the latest available template versions.
