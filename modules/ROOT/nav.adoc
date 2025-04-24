@@ -78,6 +78,7 @@
  ** xref:activity-message-tracking.adoc[Tracking Individual Messages]
  ** xref:edi-ack-reconciliation.adoc[EDI Acknowledgment Reconciliation]
  ** xref:upgrade-message-flows.adoc[Upgrading Message Flow Runtime Templates]
+ ** xref:apply-env-settings.adoc[Apply Environments Settings]
 * xref:troubleshooting.adoc[Troubleshooting]
  ** xref:ts-config-deploy.adoc[Configuration and Deployment Errors]
   *** xref:ts-payload-not-configured.adoc[Payload storage is not properly configured]
