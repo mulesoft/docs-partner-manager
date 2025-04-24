@@ -1,6 +1,6 @@
 = Upgrading Message Flow Runtime Templates
 
-Anypoint Partner Manager uses prebuilt templates to convert your B2B message flow configurations into runtime applications. As these templates are updated, you can upgrade your message flows to use them to take advantage of new capabilities that enable better integration with your partner's ecosystem.
+Anypoint Partner Manager uses prebuilt templates to convert your B2B message flow configurations into generic applications. As these templates are updated, you can upgrade your message flows to use them to take advantage of new capabilities that enable better integration with your partner's ecosystem.
 
 Runtime templates related to Partner Manager are upgraded when:
 
@@ -10,7 +10,7 @@ Runtime templates related to Partner Manager are upgraded when:
 * Functional and performance defects are resolved in the template
 * Flow optimizations are implemented
 
-When new runtime templates are available, the *Manage deployments* button is enabled with these options:
+When new runtime templates are available, the *Manage deployments* button changes color and shows a tooltip to indicate a new version is available. To take advantage of the new features, click *Manage deployments* and select one of these options:
 
 * Upgrade deployments
 +
@@ -27,7 +27,7 @@ When you deploy message flows, your existing message flows continue uninterrupte
 
 * Apply environment settings
 +
-Updates all the Mule applications in your runtime with the latest available template versions.
+Updates the Mule applications in your runtime with the latest available template versions.
 
 To apply your selection, confirm you understand the effects of these actions and click *Confirm*.
 
