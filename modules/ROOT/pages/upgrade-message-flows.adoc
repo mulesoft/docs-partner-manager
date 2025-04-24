@@ -12,7 +12,7 @@ Runtime templates related to Partner Manager are upgraded when:
 
 When new runtime templates are available, a tooltip shows on the *Manage deployments* button to indicate there's a new version available.
 
-To take advantage of new features, click *Manage deployments*, select *Upgrade deployments*, select the option to confirm you understand the effects of these actions, and then click *Confirm*.
+To take advantage of new features, click *Manage deployments*, select *Upgrade deployments*, confirm that you understand the effects of these actions, and then click *Confirm*.
 
 Upgrading deployments updates all the Mule applications in your runtime with the latest template versions that contain new features or bug fixes.
 
