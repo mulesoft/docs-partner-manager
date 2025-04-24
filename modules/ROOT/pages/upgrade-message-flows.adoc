@@ -10,15 +10,26 @@ Runtime templates related to Partner Manager are upgraded when:
 * Functional and performance defects are resolved in the template
 * Flow optimizations are implemented
 
-When new runtime templates are available, the *Upgrade deployments* button next to the search bar in the *Message Flow* page is enabled.
+When new runtime templates are available, the *Manage deployments* button is enabled with these options:
 
+* Upgrade deployments
++
+Updates the Mule applications in your runtime with the latest template versions that contain new features or bug fixes.
+
+[NOTE]
+====
 Before upgrading your production environment, upgrade your nonproduction environments to test the changes on some of your message flows.
 
-To take advantage of new features, click the *Upgrade deployments* button.
+The time it takes to update your message flows depends on the number of message flow configurations and runtime applications in your environment.
 
-The process of updating all your message flows can take several minutes, depending on the number of message flow configurations and runtime applications in your environment.
+When you deploy message flows, your existing message flows continue uninterrupted during the upgrade process.
+====
 
-When you deploy message flows, your existing message flows are uninterrupted during the upgrade process.
+* Apply environment settings
++
+Updates all the Mule applications in your runtime with the latest available template versions.
+
+To apply your selection, confirm you understand the effects of these actions and click *Confirm*.
 
 == See Also
 
