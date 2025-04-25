@@ -1,10 +1,10 @@
 = Apply Environments Settings
 
-When you change your environment's Partner Manager or Access Management settings, follow these steps to apply the changes to all your runtime applications:
+Changes to your environment's Partner Manager or Access Management settings, like Mule runtime version or vCore and ActiveMQ configurations, can be applied to all your runtime applications at once. Follow these steps:
 
 . From the Message flows page, click *Manage deployments*.
-* Select *Apply runtime settings*.
+. Select *Apply runtime settings*.
 . Check the box to confirm that you understand the effects of these actions.
-* Click *Confirm*.
+. Click *Confirm*.
 
 Applying environment settings updates all the Mule applications in your runtime with the latest available template versions.
