@@ -1,4 +1,4 @@
-= Apply Environments Settings
+= Apply Environment Settings
 
 You can apply changes to your environment's Partner Manager or Access Management settings, like Mule runtime version or vCore and ActiveMQ configurations, to all your runtime applications at once. Follow these steps:
 
