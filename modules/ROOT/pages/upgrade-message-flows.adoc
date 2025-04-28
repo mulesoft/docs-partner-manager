@@ -1,6 +1,6 @@
 = Upgrading Message Flow Runtime Templates
 
-Anypoint Partner Manager uses prebuilt templates to convert your B2B message flow configurations into runtime applications. As these templates are updated, you can upgrade your message flows to use them to take advantage of new capabilities that enable better integration with your partner's ecosystem.
+Anypoint Partner Manager uses prebuilt templates to convert your B2B message flow configurations into generic runtime applications. As these templates are updated, you can upgrade your message flows to use them to take advantage of new capabilities that enable better integration with your partner's ecosystem.
 
 Runtime templates related to Partner Manager are upgraded when:
 
@@ -10,15 +10,15 @@ Runtime templates related to Partner Manager are upgraded when:
 * Functional and performance defects are resolved in the template
 * Flow optimizations are implemented
 
-When new runtime templates are available, the *Upgrade deployments* button next to the search bar in the *Message Flow* page is enabled.
+When new runtime templates are available, a tooltip shows on the *Manage deployments* button to indicate there's a new version available.
+
+To take advantage of new features, click *Manage deployments*, select *Upgrade deployments*, confirm that you understand the effects of these actions, and then click *Confirm*.
+
+Upgrading deployments updates all the Mule applications in your runtime with the latest template versions that contain new features or bug fixes.
+
+The process of updating all your message flows can take several minutes, depending on the number of message flow configurations and runtime applications in your environment. Your existing message flows continue uninterrupted during the upgrade process.
 
 Before upgrading your production environment, upgrade your nonproduction environments to test the changes on some of your message flows.
-
-To take advantage of new features, click the *Upgrade deployments* button.
-
-The process of updating all your message flows can take several minutes, depending on the number of message flow configurations and runtime applications in your environment.
-
-When you deploy message flows, your existing message flows are uninterrupted during the upgrade process.
 
 == See Also
 

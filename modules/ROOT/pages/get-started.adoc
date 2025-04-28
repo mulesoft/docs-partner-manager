@@ -51,7 +51,7 @@ For more information, see xref:access-management::permissions-by-product.adoc[Pe
 [[deployment-settings]]
 == Configure Partner Manager Deployment Settings
 
-You can deploy Partner Manager runtime applications to either CloudHub or Anypoint Runtime Fabric. To configure deployment options, use the *Partner Manager Settings* page in access management.
+You can deploy Partner Manager runtime applications to CloudHub 1.0, CloudHub 2.0, or Anypoint Runtime Fabric. To configure deployment options, use the *Partner Manager Settings* page in access management.
 
 For more information, see xref:deploy-partner-manager.adoc[].
 
