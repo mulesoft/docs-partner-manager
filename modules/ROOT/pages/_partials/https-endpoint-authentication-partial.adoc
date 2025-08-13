@@ -95,7 +95,7 @@ Use the following settings to configure OAuth Token authentication:
 |Client secret provided when registering your application with the authorization server.
 |x
 |Scope
-|Permissions granted to a client application. Enter values as a space-separated list, where each string represents a permission requested by the client application.
-|
+|Permissions granted to a client application. Enter values as a space-separated list, where each string represents a permission requested by the client application.  The field only applies to HTTP endpoints.
+|No
 |===
 // end::https-send[]
