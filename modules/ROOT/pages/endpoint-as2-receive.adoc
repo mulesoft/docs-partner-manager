@@ -67,9 +67,9 @@ When deploying to CloudHub 2.0, Partner Manager always deploys the AS2 Receive e
 . Use a private space as the deployment target.
 . On the *Advanced* tab, select `Accept HTTP` in the *HTTP requests* field.
 . Optionally, configure Network-Level Ingress Rules to allow HTTP requests from specific IP addresses.
-
-| x
 ====
+| x
+
 [[manage-api-manager]]
 |Manage with API Manager
 a|Allows you to manage the endpoint in API Manager, where you can apply policies, such as authentication and client credentials, and configure SLA tiers. Document your message specifications by using Exchange and share them with your partners via public portals from Exchange or by obtaining an additional license and sharing the specifications in API Experience Hub.
