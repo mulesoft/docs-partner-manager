@@ -81,6 +81,10 @@ Use this configuration only when connecting to SFTP/FTP hosts that don't allow e
 Indicates whether the endpoint supports EDI messages (EDIFACT, X12) or non-EDI messages (JSON, XML).
 | x
 
+| Use hyphen (-) as the secondary file name delimiter to determine non-EDI message type
+| Allows you to use a hyphen as the secondary file name delimiter to determine the message type from the message's file name. Only shows if the supported format type is non-EDI.
+| No
+
 | Size check wait time
 | Wait time, in seconds, between size checks to determine if a file is ready for processing. The default of `1 second` enables a file write to finish before processing the file.
 {sp} +
