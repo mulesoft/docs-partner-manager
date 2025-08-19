@@ -84,7 +84,7 @@ When you create the API in API Manager:
 |x
 
 | Use hyphen (-) as the secondary file name delimiter to determine non-EDI message type
-| Allows you to use a hyphen as the secondary file name delimiter to determine the message type from the message's file name.
+| Lets you use a hyphen as the secondary file name delimiter to determine the message type from the message's file name.
 | No
 
 | AS2 URL

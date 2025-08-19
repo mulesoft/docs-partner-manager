@@ -82,7 +82,7 @@ Indicates whether the endpoint supports EDI messages (EDIFACT, X12) or non-EDI m
 | x
 
 | Use hyphen (-) as the secondary file name delimiter to determine non-EDI message type
-| Allows you to use a hyphen as the secondary file name delimiter to determine the message type from the message's file name. Only shows if the supported format type is non-EDI.
+| Lets you use a hyphen as the secondary file name delimiter to determine the message type from the message's file name. Only shows if the supported format type is non-EDI.
 | No
 
 | Size check wait time
