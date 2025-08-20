@@ -107,6 +107,10 @@ To disable this feature, specify a negative number or omit the value.
 |(Applies only to endpoints that support non-EDI formats) Message type to associate with the endpoint. If you select a message type, Partner Manager processes files received via the endpoint as the selected message type, regardless of the file naming convention.
 |
 
+| Use hyphen (-) as the secondary file name delimiter to determine non-EDI message type
+| Lets you use a hyphen as the secondary file name delimiter to determine the message type from the message's file name. Only shows if the supported format type is non-EDI.
+| No
+
 |Associated reference identifier
 |(Applies only to endpoints that support non-EDI formats that are owned by partners or third-party connections.) Partner information, such as the partner ID or third-party ID.
 |
