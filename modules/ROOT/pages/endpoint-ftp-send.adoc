@@ -41,6 +41,14 @@ Create FTP send endpoints by configuring these settings on the *<host>* or *Part
 |User-supplied value that describes the purpose of the endpoint.
 |
 
+|Retry interval (in seconds)
+|Frequency of reconnection attempts when unable to connect to the remote AS2 service. The default is `30 Seconds`.
+|No
+
+|Maximum retry attempts
+|Maximum number of reconnection attempts to make. If you don't want Partner Manager to retry after an initial connection failure, set this value to `0`.
+|No
+
 |Host
 | FTP server host, such as `ftp.mulesoft.com`, `localhost`, or `192.168.0.1`. The host must be accessible from your Mule environment.
 |x
