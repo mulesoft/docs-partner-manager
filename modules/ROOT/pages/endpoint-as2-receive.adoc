@@ -70,8 +70,8 @@ When deploying to CloudHub 2.0, Partner Manager always deploys the AS2 Receive e
 ====
 | x
 
-[[manage-api-manager]]
-|Manage with API Manager
+
+|[[manage-api-manager]]Manage with API Manager
 a|Allows you to manage the endpoint in API Manager, where you can apply policies, such as authentication and client credentials, and configure SLA tiers. Document your message specifications by using Exchange and share them with your partners via public portals from Exchange or by obtaining an additional license and sharing the specifications in API Experience Hub.
 
 To manage an endpoint in API Manager, create an HTTP API in API Manager in the same environment and organization as the endpoint.
