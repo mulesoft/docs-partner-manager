@@ -53,6 +53,8 @@ Indicates whether Partner Manager deploys the AS2 receive endpoint as an HTTPS l
 * If enabled (default), Partner Manager deploys the AS2 receive endpoint as an HTTPS listener.
 * If disabled, Partner Manager deploys the AS2 receive endpoint as an HTTP listener.
 
+The *HTTPS* option is disabled when creating Receive from Partners endpoints in CloudHub 2.0.
+
 [NOTE]
 When deploying to Anypoint Runtime Fabric, Partner Manager always deploys the AS2 receive endpoint as an HTTP listener. With this type of deployment, you must configure an Ingress controller to provide external consumers with an HTTPS endpoint. For more information, see xref:runtime-fabric::custom-ingress-configuration.adoc[Configuring Ingress for Runtime Fabric].
 
@@ -65,11 +67,11 @@ When deploying to CloudHub 2.0, Partner Manager always deploys the AS2 Receive e
 . Use a private space as the deployment target.
 . On the *Advanced* tab, select `Accept HTTP` in the *HTTP requests* field.
 . Optionally, configure Network-Level Ingress Rules to allow HTTP requests from specific IP addresses.
-
-| x
 ====
-[[manage-api-manager]]
-|Manage with API Manager
+| x
+
+
+|[[manage-api-manager]]Manage with API Manager
 a|Allows you to manage the endpoint in API Manager, where you can apply policies, such as authentication and client credentials, and configure SLA tiers. Document your message specifications by using Exchange and share them with your partners via public portals from Exchange or by obtaining an additional license and sharing the specifications in API Experience Hub.
 
 To manage an endpoint in API Manager, create an HTTP API in API Manager in the same environment and organization as the endpoint.
@@ -80,6 +82,10 @@ When you create the API in API Manager:
 * Leave the defaults on the *Endpoint configuration* screen.
 * Copy the API instance ID and paste it into the *API Auto discovery id* field in the Partner Manager *New endpoint: Receive from Partners* window.
 |x
+
+| Use hyphen (-) as the secondary file name delimiter to determine non-EDI message type
+| Lets you use a hyphen as the secondary file name delimiter to determine the message type from the message's file name.
+| No
 
 | AS2 URL
 | URL to the AS2 server (automatically generated).

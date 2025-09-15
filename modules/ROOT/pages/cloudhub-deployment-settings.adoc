@@ -9,7 +9,11 @@ To configure settings for deploying Anypoint Partner Manager to CloudHub 1.0, ac
 |===
 | Setting | Description | Default 
 | Deployment Target Type | Target type for your Partner Manager deployment. Select *CloudHub 1.0*. | CloudHub 1.0
-| Runtime Version | Mule runtime engine version to run Partner Manager applications.| 4.6.0
+| Runtime Version | Mule runtime engine version to run Partner Manager applications. a| 4.6.0
+
+[NOTE]
+If you select Mule runtime 4.9.0 LTS using Java 17, test your component versions and SFTP connections that rely on insecure ciphers to make sure they work as expected with Java 17.
+
 | Min Mule Version override | Minimum Mule runtime version required to deploy the runtime applications.
 
 Configuring the Min Mule version enables you to apply a xref:mule-runtime::feature-flagging.adoc#configure-feature-flags-for-a-mule-application[feature flagging] mechanism for Partner Manager-deployed Mule runtime applications.
