@@ -8,7 +8,7 @@
   ** xref:cloudhub-deployment-settings.adoc[]
   ** xref:cloudhub2-deployment-settings.adoc[]
   ** xref:rtf-deployment-settings.adoc[]
-  ** xref:setup-payload-storage-API.adoc[Configuring a Payload Storage API]
+  ** xref:setup-payload-storage-api.adoc[Configuring a Payload Storage API]
   ** xref:certificates.adoc[Certificate and Keystore Storage]
 * xref:configure-host.adoc[Configuring and Managing a Host Profile]
   ** xref:manage-host-certificates.adoc[Managing Host Certificates]
