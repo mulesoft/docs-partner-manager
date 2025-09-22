@@ -102,7 +102,7 @@ No authentication
 . Optionally, configure Network-Level Ingress Rules to allow HTTP requests from specific IP addresses.
 ====
 
-include::partial$https-endpoint-authentication-partial.adoc[tag=https-receive,leveloffset=+1]
+include::partial$https-receive.adoc[]
 
 == Next Step
 
