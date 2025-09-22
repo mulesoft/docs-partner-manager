@@ -88,7 +88,7 @@ Allows an insecure connection that doesn’t perform certificate validation.
 |x
 |===
 
-include::partial$https-endpoint-authentication-partial.adoc[tag=https-send,leveloffset=+1]
+include::partial$https-send.adoc[]
 
 == See Also
 
