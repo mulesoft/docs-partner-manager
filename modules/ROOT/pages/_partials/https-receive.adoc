@@ -20,3 +20,21 @@ After saving your new or reconfigured endpoint, you cannot subsequently retrieve
 |Certificate to use for authentication.
 |
 |===
+
+[[basic]]
+=== Basic Authentication
+
+Authentication type that requires a username and password in the HTTP or HTTP request header.
+
+Use the following settings to configure Basic authentication:
+
+[%header%autowidth.spread]
+|===
+|Name |Description |Required
+|Username
+|Username to use when making a request.
+|x
+|Password
+|Password to use when making a request.
+|x
+|===
