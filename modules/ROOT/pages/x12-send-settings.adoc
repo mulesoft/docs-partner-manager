@@ -109,7 +109,7 @@ The control number starts with a default value of `1`, and is sequentially incre
 
 To set the control number sequence value to a different number to maintain sequencing and avoid duplication:
 
-. Click *Change* and enter the desired control number.
+. Click *Change* and enter the desired control number, up to 14 characters.
 . Click *Save*.
 
 [NOTE]
