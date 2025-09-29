@@ -1,0 +1,40 @@
+= Partner Manager CloudHub 2.0 Migration Guide
+
+To migrate your B2B operations from CloudHub 1.0 to the more advanced CloudHub 2.0, follow the relevant path in this guide based on your deployment scenario.
+
+== Before You Begin
+
+For customers deploying with a Virtual Private Cloud (VPC) and Dedicated Load Balancer (DLB), start by following the prerequisite steps in xref:cloudhub::vpc-upgrade.adoc[].
+
+== Migration With VPC and DLB with URL Preservation
+
+=== Preparation and Initial Setup
+
+. Use the VPC to Private Space Migration Tool to create your new Private Space in CloudHub 2, which is your deployment environment.
+. Stop all inbound applications in CloudHub 1 and ensure no in-flight messages remain in the system.
+. Delete all applications from your CloudHub 1 environment, except for your `inbound-as2` and `inbound-http` apps. These apps are critical for maintaining URL continuity and are used in the migration process.
+
+=== Migration to CloudHub 2
+
+. Using the new API endpoint, which is available in Mule runtime 2.24, change the deployment target for your applications from CloudHub 1 to CloudHub 2.
+. In Access Management, select the Private Space you created in the previous step.
+. Start the `inbound-as2` and `inbound-http` applications in CloudHub 1, which must be in a Running status. Incoming messages are  queued temporarily in Anypoint MQ.
+. Use the CloudHub 1 to CloudHub 2 Migration Tool to perform an upgrade deployment of the `inbound-as2` and `inbound-http` applications. This process creates the applications' counterparts in CloudHub 2 with the same name but using a dummy jar, preserving their ingress URLs. At this point, traffic is 100% on CloudHub 1.
+. In Partner Manager, either apply runtime settings or upgrade your applications. This action triggers the Partner Manager Orchestration service to deploy and update the `inbound-as2` and `inbound-http` applications in CloudHub 2.
+
+=== Traffic Cutover and Finalization
+
+. Keep the `inbound-as2` and `inbound-http` apps in CloudHub 1 running to handle all current traffic while you test the functionality of the new CloudHub 2 apps.
+. In Runtime Manager, incrementally increase the traffic percentage to the CloudHub 2 applications over a period of a few days to allow for a smooth, controlled transition.
+. Once you're confident, increase the traffic to 100% on CloudHub 2.
+. Shut down the CloudHub 1 applications.
+. Once you've stopped all CloudHub 1 apps that use the DLB, failover the DLB domain (anypointdns.net) to point to CloudHub 2.
+. Delete the DLB in CloudHub 1.
+
+From this point on, any new message flow deployments you make in Partner Manager only update the applications in your CloudHub 2 environment.
+
+== Migration With VPC and DLB but Without URL Preservation
+
+
+
+== SLB Migration to a Private Space
