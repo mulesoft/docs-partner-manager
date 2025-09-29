@@ -111,6 +111,15 @@ Accepts messages that aren't signed or encrypted.
 
 When deploying an AS2 endpoint to CloudHub using the HTTP protocol, you cannot change the default value (`Signed & Encrypted`).
 | x
+
+|App Name Substitution Type
+a|Define how the ingress path name is determined within Runtime Fabric endpoint settings.
+
+* Select Default to use `receive-as2` as the path.
+* Select Custom to specify the path name.
+* Select BasePath to use the base path of the endpoint.
+| No
+
 |<Host> keystore
 a|Host keystore file that stores your organization's public certificate and private key. Select an existing keystore file or create a new one.
 
