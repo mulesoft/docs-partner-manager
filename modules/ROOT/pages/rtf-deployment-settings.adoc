@@ -41,6 +41,8 @@ If you process cXML messages with <DOCTYPE> tags, you must set the `minMuleVersi
 [NOTE]
 If you select `None`, Partner Manager defaults to using `4.3.0` as the Min Mule version.
 
+|Host | The ingress template used for Partner Manager application deployments. | Selected by Runtime Manager
+
 | Anypoint MQ Region | Region where Anypoint MQ is deployed. 
 {sp} +
 {sp} +
