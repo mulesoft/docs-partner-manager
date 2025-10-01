@@ -74,6 +74,14 @@ a|HTTP or HTTPS address where you receive outbound source messages from backend 
 |Response timeout period in milliseconds. The default is `15000`.
 |x
 
+|App Name Substitution Type
+a|Defines how the ingress URL template `app-name` is substituted for this AS2 endpoint to generate the Runtime Fabric public endpoint.
+
+* Select Default to use `app-name` as deployment-name.
+* Select Custom to provide a custom name for the `app-name` substitution.
+* Select BasePath to use the editable AS2 base path as the value for the `app-name` substitution.
+| No
+
 |Authentication type
 a|Authentication method used to protect the HTTP or HTTPS endpoint. This field is disabled when you manage the endpoint with API Manager.
 
