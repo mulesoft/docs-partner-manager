@@ -75,7 +75,7 @@ a|HTTP or HTTPS address where you receive outbound source messages from backend 
 |x
 
 |App Name Substitution Type
-a|Define how the ingress path name is determined within Runtime Fabric endpoint settings.
+a|Defines how the ingress path name is determined within Runtime Fabric endpoint settings.
 
 * Select Default to use `receive-as2` as the path.
 * Select Custom to specify the path name.
