@@ -8,33 +8,104 @@ For customers deploying with a Virtual Private Cloud (VPC) and Dedicated Load Ba
 
 == Migration With VPC and DLB with URL Preservation
 
-=== Preparation and Initial Setup
+. Follow the steps on the xref:cloudhub::vpc-upgrade.adoc[CloudHub VPC to CloudHub 2.0 Private Space Upgrade] page to upgrade your CloudHub 1.0 (CH1) Virtual Private Cloud (VPC) to a CloudHub 2.0 (CH2) private space.
+. In Runtime Manager:
+.. Stop all inbound Partner Manager applications deployed to CH1.
+.. Make sure you don't have any inflight messages.
+.. Delete these Partner Manager deployed applications but not the `inbound-as2` and `inbound-http` applications:
+... b2b-outbound-*
+... b2b-document-processing-service-*
+... b2b-api-replication-service-*
+. On the Partner Manager tab in Access Management > Business Groups:
+.. Click *Edit Configuration* for the environment you want to update.
+.. Select CloudHub 2.0 and from the *Deployment Target Type* dropdown.
+.. In the *Deployment Target* dropdown, select the private space that was configured previously.
+.. Before saving, open your browser's developer tools and navigate to the *Network* tab and make sure the Method column is enabled.
+.. Click *Save* in Access Management.
+.. Check the *I understand the effects of this action* box, and then click *Save*. Ignore the error message about the target runtime type.
+. In Developer Tools:
+.. Right-click on the most recent PUT request, hover over *Copy* and select *Copy as CURL*.
+.. Paste the CURL command into your preferred API Client, such as  Postman. Set *forceUpdate* to True by updating the URL.
+.. Send the PUT request.
+. In Access Management, refresh the Partner Manager tab. The deployment target is now CH2.
+. In Runtime Manager, start the `inbound-as2` and `inbound-http` applications.
+[NOTE]
+Incoming messages are delivered to Anypoint MQ but aren't processed until the CH1 app is running. For the app switching to work, ensure the CH1 app is in a Running state.
 
-. Use the VPC to Private Space Migration Tool to create your new Private Space in CloudHub 2, which is your deployment environment.
-. Stop all inbound applications in CloudHub 1 and ensure no in-flight messages remain in the system.
-. Delete all applications from your CloudHub 1 environment, except for your `inbound-as2` and `inbound-http` apps. These apps are critical for maintaining URL continuity and are used in the migration process.
+. Use the CH1 to CH2 migration tool xref:cloudhub::app-migration.adoc[] to upgrade the deployment for the `inbound-as2` applications and `inbound-https` applications, which creates their counterparts in CH2.
+.. Make sure the name remains the same.
+.. Use a dummy jar file with the same name, dummy jar.
+.. Preserve the ingress urls. Initially, the name resolution 0% CH2, 100% CH1.
+. On the Message Flows tab in Partner Manager:
+.. Click Manage Deployments and choose either Upgrade deployments or Apply environment settings.
+.. Check the *I understand the effects of these actions*, and then click *Confirm*.
++
+Partner Manager deploys and updates the corresponding apps in CH2 that were deployed with dummy jar files the apps in CH2.
++
+Before shifting any traffic, keep the CH1 inbound AS2 and HTTP applications running and handling 100% of traffic to confirm their functioning as expected post-migration.
+. In Runtime Manager, increase the traffic on the CH2 app incrementally over a period of a few days to 100%. Keep the CH1 apps in a Shutdown status after traffic reaches 100%.
+. After you've stopped all CH1 applications that use the DLB, failover the DLB domain (anypointdns.net) to CH2 and delete the DLB.
 
-=== Migration to CloudHub 2
+New message flow deployments in Partner Manager beyond this point only update the CH2 apps.
 
-. Using the new API endpoint, which is available in Mule runtime 2.24, change the deployment target for your applications from CloudHub 1 to CloudHub 2.
-. In Access Management, select the Private Space you created in the previous step.
-. Start the `inbound-as2` and `inbound-http` applications in CloudHub 1, which must be in a Running status. Incoming messages are  queued temporarily in Anypoint MQ.
-. Use the CloudHub 1 to CloudHub 2 Migration Tool to perform an upgrade deployment of the `inbound-as2` and `inbound-http` applications. This process creates the applications' counterparts in CloudHub 2 with the same name but using a dummy jar, preserving their ingress URLs. At this point, traffic is 100% on CloudHub 1.
-. In Partner Manager, either apply runtime settings or upgrade your applications. This action triggers the Partner Manager Orchestration service to deploy and update the `inbound-as2` and `inbound-http` applications in CloudHub 2.
-
-=== Traffic Cutover and Finalization
-
-. Keep the `inbound-as2` and `inbound-http` apps in CloudHub 1 running to handle all current traffic while you test the functionality of the new CloudHub 2 apps.
-. In Runtime Manager, incrementally increase the traffic percentage to the CloudHub 2 applications over a period of a few days to allow for a smooth, controlled transition.
-. Once you're confident, increase the traffic to 100% on CloudHub 2.
-. Shut down the CloudHub 1 applications.
-. Once you've stopped all CloudHub 1 apps that use the DLB, failover the DLB domain (anypointdns.net) to point to CloudHub 2.
-. Delete the DLB in CloudHub 1.
-
-From this point on, any new message flow deployments you make in Partner Manager only update the applications in your CloudHub 2 environment.
 
 == Migration With VPC and DLB but Without URL Preservation
 
+. Follow the steps on the xref:cloudhub::vpc-upgrade.adoc[CloudHub VPC to CloudHub 2.0 Private Space Upgrade] page to upgrade your CloudHub 1.0 (CH1) Virtual Private Cloud (VPC) to a CloudHub 2.0 (CH2) private space.
+. In Runtime Manager:
+.. Stop all inbound Partner Manager applications deployed to CH1.
+.. Make sure you don't have any inflight messages.
+.. Delete these Partner Manager deployed applications:
+... b2b-inbound-*
+... b2b-outbound-*
+... b2b-document-processing-service-*
+... b2b-api-replication-service-*
+. On the Partner Manager tab in Access Management > Business Groups:
+.. Click *Edit Configuration* for the environment you want to update.
+.. Select CloudHub 2.0 and from the *Deployment Target Type* dropdown.
+.. In the *Deployment Target* dropdown, select the private space that was configured previously.
+.. Before saving, open your browser's developer tools and navigate to the *Network* tab and make sure the Method column is enabled.
+.. Click *Save* in Access Management.
+.. Check *I understand the effects of this action*, and then click *Save*. Ignore the error message about the target runtime type.
+. In Developer Tools:
+.. Right-click on the most recent PUT request, hover over *Copy* and select *Copy as CURL*.
+.. Paste the CURL command into your preferred API Client, such as  Postman. Update the URL so that *forceUpdate* is set to True.
+.. Send the PUT request.
+. In Access Management, refresh the Partner Manager tab. The deployment target is now CH2.
+. On the Message Flows tab in Partner Manager:
+.. Click *Manage Deployments* and choose either Upgrade deployments or Apply environment settings.
+.. Check the *I understand the effects of these actions*, and then click *Confirm*.
++
+Partner Manager deploys and updates the corresponding apps in CH2 that were deployed with dummy jar files the apps in CH2.
 
+New message flow deployments in Partner Manager beyond this point only update the CH2 apps.
 
 == SLB Migration to a Private Space
+
+. In Runtime Manager:
+.. Stop all inbound Partner Manager applications deployed to CH1.
+.. Make sure you don't have any inflight messages.
+.. Delete these Partner Manager deployed applications:
+... b2b-inbound-*
+... b2b-outbound-*
+... b2b-document-processing-service-*
+... b2b-api-replication-service-*
+. On the Partner Manager tab in Access Management > Business Groups:
+.. Click *Edit Configuration* for the environment you want to update.
+.. Select CloudHub 2.0 and from the *Deployment Target Type* dropdown.
+.. In the *Deployment Target* dropdown, select the private space or shared space.
+.. Before saving, open your browser's developer tools and navigate to the *Network* tab and make sure the Method column is enabled.
+.. Click *Save* in Access Management.
+.. Check the *I understand the effects of this action* box, and then click *Save*. Ignore the error message about the target runtime type.
+. In Developer Tools:
+.. Right-click on the most recent PUT request, hover over *Copy* and select *Copy as CURL*.
+.. Paste the CURL command into your preferred API Client, such as  Postman. Update the URL so that *forceUpdate* is set to True.
+.. Send the PUT request.
+. In Access Management, refresh the Partner Manager tab. The deployment target is now CH2.
+. On the Message Flows tab in Partner Manager:
+.. Click *Manage Deployments* and choose either Upgrade deployments or Apply environment settings.
+.. Check the *I understand the effects of these actions*, and then click *Confirm*.
++
+Partner Manager deploys and updates the corresponding apps in CH2 that were deployed with dummy jar files the apps in CH2.
+
+New message flow deployments in Partner Manager beyond this point only update the CH2 apps.
