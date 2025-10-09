@@ -45,7 +45,7 @@ Before shifting traffic, keep the CH1 inbound AS2 and HTTP applications running 
 New message flow deployments in Partner Manager beyond this point only update the CH2 apps.
 
 
-== Migration With VPC and DLB but Without URL Preservation
+== Migration With VPC and DLB Without URL Preservation
 
 . Follow the steps on the xref:runtime-manager::vpc-upgrade.adoc[] page to upgrade your CH1 Anypoint VPC to a CH2 private space.
 . In Runtime Manager:
