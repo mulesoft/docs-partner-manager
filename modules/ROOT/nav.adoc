@@ -3,6 +3,7 @@
 * xref:partner-manager-release-notes.adoc[Release Notes]
 * xref:get-started.adoc[Getting Started with Partner Manager]
 * xref:partner-manager-architecture.adoc[Partner Manager Architecture]
+* xref:ch2-migration.adoc[Partner Manager CloudHub 2.0 Migration Guide]
 * xref:setup.adoc[Setting up the Partner Manager Environment]
   ** xref:deploy-partner-manager.adoc[]
   ** xref:cloudhub-deployment-settings.adoc[]
