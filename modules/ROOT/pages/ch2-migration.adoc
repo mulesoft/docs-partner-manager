@@ -28,7 +28,7 @@ To migrate your B2B operations from CloudHub 1.0 (CH1) to the more advanced Clou
 [NOTE]
 Incoming messages are delivered to Anypoint MQ but aren't processed until the CH1 app is running. For the app switching to work, ensure the CH1 app is in a Running state.
 
-. Use the CH1 to CH2 migration tool xref:runtime-manager::app-migration.adoc[] to upgrade the deployment for the `inbound-as2` and `inbound-https` applications, which creates their counterparts in CH2.
+. Use the CH1 to CH2 migration tool xref:cloudhub::app-migration.adoc[] to upgrade the deployment for the `inbound-as2` and `inbound-https` applications, which creates their counterparts in CH2.
 .. Make sure the name remains the same.
 .. Use a dummy jar file with the same name, "dummy jar."
 .. Preserve the ingress urls. Initially, the name resolution is 0% for CH2 and 100% for CH1.
@@ -47,7 +47,7 @@ New message flow deployments in Partner Manager beyond this point only update th
 
 == Migration With VPC and DLB Without URL Preservation
 
-. Follow the steps on the xref:runtime-manager::vpc-upgrade.adoc[] page to upgrade your CH1 Anypoint VPC to a CH2 private space.
+. Follow the steps on the xref:cloudhub::vpc-upgrade.adoc[] page to upgrade your CH1 Anypoint VPC to a CH2 private space.
 . In Runtime Manager:
 .. Stop all inbound Partner Manager applications deployed to CH1.
 .. Make sure you don't have any inflight messages.
