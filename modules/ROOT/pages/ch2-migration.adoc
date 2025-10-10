@@ -4,7 +4,7 @@ To migrate your B2B operations from CloudHub 1.0 (CH1) to the more advanced Clou
 
 == Migration With VPC and DLB with URL Preservation
 
-. Follow the steps on the xref:runtime-manager::cloudhub/vpc-upgrade.adoc[] page to upgrade your CH1 Anypoint Virtual Private Cloud (Anypoint VPC) to a CH2 private space.
+. Follow the steps on the xref:cloudhub::vpc-upgrade.adoc[] page to upgrade your CH1 Anypoint Virtual Private Cloud (Anypoint VPC) to a CH2 private space.
 . In Runtime Manager:
 .. Stop all inbound Partner Manager applications deployed to CH1.
 .. Make sure you don't have any inflight messages.
