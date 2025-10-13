@@ -97,7 +97,7 @@ New message flow deployments in Partner Manager beyond this point only update th
 .. Right-click on the most recent PUT request, and then hover over *Copy* and select *Copy as CURL*.
 .. Paste the CURL command into your preferred API Client, such as Postman. Update the URL so that *forceUpdate* is set to True.
 .. Send the PUT request.
-. In Access Management, refresh the Partner Manager tab. The deployment target is now CH2.
+. In Access Management, refresh the *Partner Manager* tab. The deployment target is now CH2.
 . On the Message Flows tab in Partner Manager:
 .. Click *Manage Deployments* and choose either Upgrade deployments or Apply environment settings.
 .. Check *I understand the effects of these actions* and click *Confirm*.
