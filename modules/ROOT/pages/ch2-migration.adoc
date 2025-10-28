@@ -12,7 +12,12 @@ To migrate your B2B operations from CloudHub 1.0 (CH1) to the more advanced Clou
 ... b2b-outbound-*
 ... b2b-document-processing-service-*
 ... b2b-api-replication-service-*
-. On the Partner Manager tab in Access Management > Business Groups:
+
+[NOTE]
+Don't undeploy your message flows in Partner Manager as part of this process.
+
+[start=2]
+. On the Business Groups > Partner Manager tab in Access Management:
 .. Click *Edit Configuration* for the environment you want to update.
 .. Select CloudHub 2.0 from the *Deployment Target Type* dropdown.
 .. In the *Deployment Target* dropdown, select the private space that was configured previously.
@@ -29,11 +34,11 @@ To migrate your B2B operations from CloudHub 1.0 (CH1) to the more advanced Clou
 Incoming messages are delivered to Anypoint MQ but aren't processed until the CH1 app is running. For the app switching to work, ensure the CH1 app is in a Running state.
 
 . Use the CH1 to CH2 migration tool xref:cloudhub::app-migration.adoc[] to upgrade the deployment for the `inbound-as2` and `inbound-https` applications, which creates their counterparts in CH2.
-.. Make sure the name remains the same.
-.. Use a dummy jar file with the same name, "dummy jar."
+.. Make sure the application name remains the same.
+.. Use a dummy jar file with the same name, "dummy jar." You can use any placeholder jar file, since the file is overwritten in a later step with the correct jar file.
 .. Preserve the ingress urls. Initially, the name resolution is 0% for CH2 and 100% for CH1.
 . On the Message Flows tab in Partner Manager:
-.. Click Manage Deployments and choose either Upgrade deployments or Apply environment settings.
+.. Click *Manage Deployments* and choose either *Upgrade deployments* or *Apply environment settings*, which redeploys all Partner Manager applications without requiring you to redeploy each individual message flow.
 .. Check *I understand the effects of these actions* and click *Confirm*.
 +
 Partner Manager deploys and updates the corresponding apps in CH2 that were deployed with dummy jar files.
@@ -56,7 +61,7 @@ New message flow deployments in Partner Manager beyond this point only update th
 ... b2b-outbound-*
 ... b2b-document-processing-service-*
 ... b2b-api-replication-service-*
-. On the Partner Manager tab in Access Management > Business Groups:
+. On the Business Groups > Partner Manager tab in Access Management:
 .. Click *Edit Configuration* for the environment you want to update.
 .. Select CloudHub 2.0 from the *Deployment Target Type* dropdown.
 .. In the *Deployment Target* dropdown, select the private space that was configured previously.
@@ -86,7 +91,7 @@ New message flow deployments in Partner Manager beyond this point only update th
 ... b2b-outbound-*
 ... b2b-document-processing-service-*
 ... b2b-api-replication-service-*
-. On the Partner Manager tab in Access Management > Business Groups:
+. On the Business Groups > Partner Manager tab in Access Management:
 .. Click *Edit Configuration* for the environment you want to update.
 .. Select CloudHub 2.0 from the *Deployment Target Type* dropdown.
 .. In the *Deployment Target* dropdown, select the private space or shared space.
