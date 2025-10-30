@@ -12,3 +12,7 @@ troubleshooting an issue with Partner Manager often involves troubleshooting the
 
 Look for solutions in the documentation about connectivity and related errors or use the documentation page's navigation pane to locate troubleshooting information specific to either
 Anypoint Partner Manager or its related technologies.
+
+== See Also
+
+* include::partial$release-notes/rn-known-issues.adoc[tag=knownIssuesSeeAlsoLink]
