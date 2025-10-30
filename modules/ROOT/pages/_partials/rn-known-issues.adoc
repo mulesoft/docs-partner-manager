@@ -1,0 +1,5 @@
+// Bullet for See Also - link to KI site
+// include::partial$release-notes/rn-known-issues.adoc[tag=knownIssuesSeeAlsoLink]
+// tag::knownIssuesSeeAlsoLink[]
+* https://help.salesforce.com/s/issues[Known Issues]
+// end::knownIssuesSeeAlsoLink[]
