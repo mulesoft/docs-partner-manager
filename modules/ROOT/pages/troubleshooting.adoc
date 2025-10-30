@@ -15,4 +15,4 @@ Anypoint Partner Manager or its related technologies.
 
 == See Also
 
-* include::partial$release-notes/rn-known-issues.adoc[tag=knownIssuesSeeAlsoLink]
+include::partial$release-notes/rn-known-issues.adoc[tag=knownIssuesSeeAlsoLink]
