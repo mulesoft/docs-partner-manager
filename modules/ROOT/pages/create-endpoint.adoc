@@ -16,7 +16,7 @@ Use the *Partners* page to create new send and receive endpoints owned by partne
 
 Ownership of endpoints is automatically assigned based on the partner or third-party connection from which you are creating the endpoint.
 
-A single Partner Manager environment supports a maximum of 2,000 endpoints. To maximize your environment's capacity, reuse endpoint configurations across partners and message flows.
+Partner Manager environments support up to 2,000 endpoints. To maximize your environment's capacity, reuse endpoint configurations across partners and message flows.
 
 == Create Endpoints from the Host Page
 
