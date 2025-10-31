@@ -28,6 +28,8 @@ To create a partner:
 +
 . Click *Create partner*.
 
+Partner Manager environments support a maximum of 1,000 partners each. To onboard more partners, create an additional environment.
+
 == Configure Additional Partner Settings
 
 Add the following settings for the new partner, either now or later on:
