@@ -21,7 +21,7 @@ Don't undeploy your message flows in Partner Manager as part of this process.
 .. Click *Edit Configuration* for the environment you want to update.
 .. Select CloudHub 2.0 from the *Deployment Target Type* dropdown.
 .. In the *Deployment Target* dropdown, select the private space that was configured previously.
-.. Before saving, open your browser's developer tools and navigate to the *Network* tab to make sure the Method column is enabled.
+.. Before saving, open your browser's developer tools and navigate to the *Network* or equivalent tab to make sure the Method column is enabled.
 .. Click *Save* in Access Management.
 .. Check the *I understand the effects of this action* box and click *Save*. Ignore the error message about the target runtime type.
 . In your browser's developer tools:
@@ -38,7 +38,7 @@ Incoming messages are delivered to Anypoint MQ but aren't processed until the CH
 .. Use a dummy jar file with the same name, "dummy jar." You can use any placeholder jar file, since the file is overwritten in a later step with the correct jar file.
 .. Preserve the ingress urls. Initially, the name resolution is 0% for CH2 and 100% for CH1.
 . On the Message Flows tab in Partner Manager:
-.. Click *Manage Deployments* and choose either *Upgrade deployments* or *Apply environment settings*, which redeploys all Partner Manager applications without requiring you to redeploy each individual message flow.
+.. Click *Manage Deployments* and choose either *Upgrade deployments* or *Apply environment settings*, which redeploys all Partner Manager applications without requiring you to redeploy individual message flow.
 .. Check *I understand the effects of these actions* and click *Confirm*.
 +
 Partner Manager deploys and updates the corresponding apps in CH2 that were deployed with dummy jar files.
@@ -65,7 +65,7 @@ New message flow deployments in Partner Manager beyond this point only update th
 .. Click *Edit Configuration* for the environment you want to update.
 .. Select CloudHub 2.0 from the *Deployment Target Type* dropdown.
 .. In the *Deployment Target* dropdown, select the private space that was configured previously.
-.. Before saving, open your browser's developer tools and navigate to the *Network* tab to make sure the Method column is enabled.
+.. Before saving, open your browser's developer tools and navigate to the *Network* or equivalent tab to make sure the Method column is enabled.
 .. Click *Save* in Access Management.
 .. Check *I understand the effects of this action* and click *Save*. Ignore the error message about the target runtime type.
 . In Developer Tools:
@@ -74,7 +74,7 @@ New message flow deployments in Partner Manager beyond this point only update th
 .. Send the PUT request.
 . In Access Management, refresh the Partner Manager tab. The deployment target is now CH2.
 . On the Message Flows tab in Partner Manager:
-.. Click *Manage Deployments* and choose either Upgrade deployments or Apply environment settings.
+.. Click *Manage Deployments* and choose either *Upgrade deployments* or *Apply environment settings*, which redeploys all Partner Manager applications without requiring you to redeploy individual message flow.
 .. Check *I understand the effects of these actions* and click *Confirm*.
 +
 Partner Manager deploys and updates the corresponding apps in CH2 that were deployed with dummy jar files.
@@ -95,7 +95,7 @@ New message flow deployments in Partner Manager beyond this point only update th
 .. Click *Edit Configuration* for the environment you want to update.
 .. Select CloudHub 2.0 from the *Deployment Target Type* dropdown.
 .. In the *Deployment Target* dropdown, select the private space or shared space.
-.. Before saving, open your browser's developer tools and navigate to the *Network* tab to make sure the Method column is enabled.
+.. Before saving, open your browser's developer tools and navigate to the *Network* or equivalent tab to make sure the Method column is enabled.
 .. Click *Save* in Access Management.
 .. Check the *I understand the effects of this action* box and click *Save*. Ignore the error message about the target runtime type.
 . In Developer Tools:
@@ -104,7 +104,7 @@ New message flow deployments in Partner Manager beyond this point only update th
 .. Send the PUT request.
 . In Access Management, refresh the *Partner Manager* tab. The deployment target is now CH2.
 . On the Message Flows tab in Partner Manager:
-.. Click *Manage Deployments* and choose either Upgrade deployments or Apply environment settings.
+.. Click *Manage Deployments* and choose either *Upgrade deployments* or *Apply environment settings*, which redeploys all Partner Manager applications without requiring you to redeploy individual message flow.
 .. Check *I understand the effects of these actions* and click *Confirm*.
 +
 Partner Manager deploys and updates the corresponding apps in CH2 that were deployed with dummy jar files.
