@@ -4,10 +4,12 @@ To migrate your B2B operations from CloudHub 1.0 (CH1) to the more advanced Clou
 
 * <<migration-with-vpc-and-dlb-with-url-preservation>>
 * <<migration-with-vpc-and-dlb-without-url-preservation>>
-* <<slb-migration-to-a-private-space>>  
+* <<shared-load-balancer-migration-to-a-private-space>>  
 
 [#migration-with-vpc-and-dlb-with-url-preservation]
 == Migration With VPC and DLB with URL Preservation
+
+This path is for customers migrating from a CH1 Virtual Private Cloud (VPC) with a Dedicated Load Balancer (DLB) who must preserve their external URLs for zero-downtime transition. The process keeps critical CH1 inbound apps active, updates the target environment via API, and uses the CH1 to CH2 Migration Tool to create CH2 counterparts that inherit existing URLs. Finally, traffic is incrementally shifted from CH1 to CH2 before the DLB is failed over and retired.
 
 . Follow the steps on the xref:cloudhub::vpc-upgrade.adoc[] page to upgrade your CH1 Anypoint Virtual Private Cloud (Anypoint VPC) to a CH2 private space.
 . In Runtime Manager:
@@ -58,6 +60,8 @@ New message flow deployments in Partner Manager beyond this point only update th
 [#migration-with-vpc-and-dlb-without-url-preservation]
 == Migration With VPC and DLB Without URL Preservation
 
+This path is for customers who choose not to preserve external URLs when migrating from a CH1 Anypoint VPC with a DLB. Migration involves decommissioning all existing CH1 applications, upgrading the environment target via an API call, and then redeploying all applications directly to a new CH2 Private Space by using Partner Manager's deployment management tool.
+
 . Follow the steps on the xref:cloudhub::vpc-upgrade.adoc[] page to upgrade your CH1 Anypoint VPC to a CH2 private space.
 . In Runtime Manager:
 .. Stop all inbound Partner Manager applications deployed to CH1.
@@ -87,8 +91,10 @@ Partner Manager deploys and updates the corresponding apps in CH2 that were depl
 
 New message flow deployments in Partner Manager beyond this point only update the CH2 apps.
 
-[#slb-migration-to-a-private-space]
-== SLB Migration to a Private Space
+[#shared-load-balancer-migration-to-a-private-space]
+== Shared Load Balancer Migration to a Private Space
+
+This section details the straightforward path for customers moving applications from CH1 with a Shared Load Balancer (SLB) to a CH2 Private or Shared Space. Migration involves stopping and deleting all applications in CH1, updating the environment target via API, and then redeploying all applications directly to the new CH2 space by using the deployment management tool.
 
 . In Runtime Manager:
 .. Stop all inbound Partner Manager applications deployed to CH1.
