@@ -2,6 +2,11 @@
 
 To migrate your B2B operations from CloudHub 1.0 (CH1) to the more advanced CloudHub 2.0 (CH2), follow the relevant path in this guide based on your deployment scenario.
 
+* <<migration-with-vpc-and-dlb-with-url-preservation>>
+* <<migration-with-vpc-and-dlb-without-url-preservation>>
+* <<slb-migration-to-a-private-space>>  
+
+[#migration-with-vpc-and-dlb-with-url-preservation]
 == Migration With VPC and DLB with URL Preservation
 
 . Follow the steps on the xref:cloudhub::vpc-upgrade.adoc[] page to upgrade your CH1 Anypoint Virtual Private Cloud (Anypoint VPC) to a CH2 private space.
@@ -50,6 +55,7 @@ Before shifting traffic, keep the CH1 inbound AS2 and HTTP applications running 
 New message flow deployments in Partner Manager beyond this point only update the CH2 apps.
 
 
+[#migration-with-vpc-and-dlb-without-url-preservation]
 == Migration With VPC and DLB Without URL Preservation
 
 . Follow the steps on the xref:cloudhub::vpc-upgrade.adoc[] page to upgrade your CH1 Anypoint VPC to a CH2 private space.
@@ -81,6 +87,7 @@ Partner Manager deploys and updates the corresponding apps in CH2 that were depl
 
 New message flow deployments in Partner Manager beyond this point only update the CH2 apps.
 
+[#slb-migration-to-a-private-space]
 == SLB Migration to a Private Space
 
 . In Runtime Manager:
