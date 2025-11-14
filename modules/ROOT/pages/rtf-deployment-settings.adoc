@@ -41,7 +41,12 @@ If you process cXML messages with <DOCTYPE> tags, you must set the `minMuleVersi
 [NOTE]
 If you select `None`, Partner Manager defaults to using `4.3.0` as the Min Mule version.
 
-|Host | The ingress template used for Partner Manager application deployments. For more information about ingress templates, see xref:runtime-fabric::custom-ingress-configuration.adoc[Ingress Templates]. | Selected by Runtime Manager
+|Host a| The ingress template used for Partner Manager application deployments. For more information about ingress templates, see xref:runtime-fabric::custom-ingress-configuration.adoc[Ingress Templates]. 
+
+[NOTE]
+In the *URL* column of the Endpoints section on the Partner Manager host page, the ingress URL is replaced by a placeholder because the platform lacks visibility into the Runtime Fabric configuration.
+
+| Selected by Runtime Manager
 
 | Anypoint MQ Region | Region where Anypoint MQ is deployed. 
 {sp} +
