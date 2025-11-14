@@ -44,7 +44,7 @@ If you select `None`, Partner Manager defaults to using `4.3.0` as the Min Mule 
 |Host a| The ingress template used for Partner Manager application deployments. For more information about ingress templates, see xref:runtime-fabric::custom-ingress-configuration.adoc[Ingress Templates]. 
 
 [NOTE]
-In the *URL* column of the Endpoints section on the Partner Manager host page, the ingress URL is replaced by a placeholder because the platform doesn't have visibility into the Runtime Fabric configuration.
+In the *URL* column of the Endpoints section on the Partner Manager host page, the ingress URL is replaced by a placeholder.
 
 | Selected by Runtime Manager
 
