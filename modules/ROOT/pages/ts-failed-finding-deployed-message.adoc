@@ -1,0 +1,20 @@
+= Failed to Find Deployed Message Flow Configurations
+
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+You might see the following error message when you try to find a deployed message flow on the Activity page in Anypoint Partner Manager:
+
+[source,text]
+----
+Failed to find deployed message flow configurations.
+----
+
+== Cause
+
+The system is still processing the deployment of the message flow.
+
+== Solution
+
+Wait 10 to 15 minutes for the deployment to complete.
