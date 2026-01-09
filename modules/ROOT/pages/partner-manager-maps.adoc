@@ -1,10 +1,10 @@
-= Translation Maps
+= Creating Translation Maps
 
-Anypoint Partner Manager uses DataWeave translation maps to transform business transactions between your partner’s message formats (CSV, EDIFACT, X12, JSON, or XML) and your organization’s enterprise application message formats (CSV, JSON, or XML).
+Anypoint Partner Manager uses DataWeave translation maps to transform business transactions between your partner's message formats (CSV, EDIFACT, X12, JSON, or XML) and your organization's enterprise application message formats (CSV, JSON, or XML).
 
-To use a translation map, create the map in Anypoint Studio and then import the map to Partner Manager when you configure an inbound or outbound message flow.
+To use a map, create the map in Anypoint Studio and then import the map to the xref:maps.adoc[Maps] page in Partner Manager.
 
-To start with an example of a translation map, download and then customize the https://mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/minor/1.0/[B2B/EDI: Order to Cash - Mapping Examples^] from Exchange. This example includes the following transformations for message flows:
+To start with an example of a map, download and then customize the https://mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/minor/1.0/[B2B/EDI: Order to Cash - Mapping Examples^] from Exchange. This example includes the following transformations for message flows:
 
 * Inbound message flows:
 ** X12 4010 850 to JSON
@@ -73,12 +73,14 @@ For example Postman calls, see the `B2B-Order-to-Cash-Mapping-Studio.postman_col
 The application returns the transformed payload.
 . After you verify that the map works correctly, copy the DataWeave map from `src/main/resources` and rename it to something meaningful.
 
-== Import the Map to a Partner Manager Message Flow
+[change-map]
+== Select the Map for a Partner Manager Message Flow
 
-When you configure a message flow, you can import the `.dwl` file to the *Map* section of the message flow.
+When you configure a message flow, you can select the `.dwl` file on the *Select a map* page of the message flow. You can also change the map selection on a deployed message flow.
 
 == See Also
 
 * xref:create-inbound-message-flow.adoc[Create Inbound Message Flows]
 * xref:create-outbound-message-flow.adoc[Create Outbound Message Flows]
 * xref:dataweave::dataweave-quickstart.adoc[]
+* xref:maps.adoc[Adding and Versioning Maps]

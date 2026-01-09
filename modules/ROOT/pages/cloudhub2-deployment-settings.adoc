@@ -23,6 +23,7 @@ If you process cXML messages with <DOCTYPE> tags, you must set the `minMuleVersi
 If you select `None`, Partner Manager defaults to using `4.3.0` as the Min Mule version.
 
 | Deployment Target | Shared or private space to which you want to deploy Partner Manager runtime applications. You can change the deployment target after all active message flows are no longer deployed to an existing target. To change the region in these instances, undeploy the message flows, change the region, and then redeploy the message flows. | None
+| Einstein enabled | Enables Einstein features in Partner Manager, such as the message summarization feature for source and target payloads. | Not selected
 |===
 
 . Select *Applications* and enter these application settings:

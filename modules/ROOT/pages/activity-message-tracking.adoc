@@ -159,6 +159,14 @@ a|
 
 |===
 
+== Message Summaries
+
+Use AI to view a summary of the message payload. Make sure you've enabled Einstein in xref:cloudhub-deployment-settings.adoc[CloudHub 1.0 Deployment Settings], xref:cloudhub2-deployment-settings.adoc[CloudHub 2.0 Deployment Settings], or xref:rtf-deployment-settings.adoc[Runtime Fabric Deployment Settings].
+
+To view a summary, open the source or target payload on the message details page and click *Summarize*. If this is the first time you're viewing a summary, accept the conditions to allow the use of Einstein.
+
+The summary shows key details of the message, such as the message type, sender, and receiver, as well as the contents of the message like the order number, customer name, and order details.
+
 == See Also
 
 * xref:inbound-message-flows.adoc[Inbound Message Flows]

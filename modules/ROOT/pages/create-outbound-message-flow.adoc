@@ -52,19 +52,16 @@ To configure a partner reference ID, either select *All available identifiers* o
 
 To configure a host reference ID, either select *Ignore* or select your organization's internal reference ID (such as the business unit name) as it appears in the data element of the source JSON or XML message from your backend applications.
 
-[[translation-map]]
-== Import the Translation Map
+== Select the Translation Map
 
-A translation map in an outbound message flow transforms outbound messages from your organization's enterprise application format to the format your partners expect. Create a translation map by using DataWeave. For more information, see xref:partner-manager-maps.adoc[Translation Maps].
+A translation map in an outbound message flow transforms outbound messages from your organization's enterprise application format to the format your partners expect. Maps are created by using DataWeave and are imported to the xref:maps.adoc[Maps] page. For more information about creating maps, see xref:partner-manager-maps.adoc[Translation Maps].
 
-To import the translation map:
+To select the map:
 
 . In the message flow, expand the *Map* section.
-. Click *Import > Choose file*.
-. Navigate to the DataWeave map you want to use and click *Open*.
-. Click *Upload mapping*.
+. Click *Select* and select the map from the table.
 
-In the translation map that you develop for an outbound message flow, you can access source message attributes, which makes them available in the message payload. The attributes that you can access depend on the protocol of the source endpoint. For more information, see xref:access-source-message-attributes.adoc[Accessing Source Message Attributes]. 
+In the map for an outbound message flow, you can access source message attributes, which makes them available in the message payload. The attributes that you can access depend on the protocol of the source endpoint. For more information, see xref:access-source-message-attributes.adoc[Accessing Source Message Attributes]. 
 
 [[send-to-partner-message-type]]
 == Configure the Target Message Type
