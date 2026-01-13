@@ -25,10 +25,10 @@ To import a new version of a map:
 
 . From the Partner Manager sidebar, select *Maps*.
 . Click the name of the map to open the details page.
-. Click *Select* in the Map section.
+. Click *Select* in the *Map* section.
 . Click *Import new file* in the *Select a Map File* window.
 . Navigate to the `.dwl` file you want to import and click *Open*. The new version of the map is selected as the active version by default.
-. Click *Set as Active* to activate the new version.
+. Click *Set as Active*.
 . Click *Confirm*.
 
 == Delete a Map
@@ -41,7 +41,7 @@ To delete a map:
 
 == View Message Flows for a Map
 
-To view the message flows for a map, click the number in the *Message flows* column. This opens a message flow details window that shows the message flow name and deployment status.
+To view the message flows that use a particular map, click the number in the *Message flows* column for the map. This opens a message flow details window that shows the message flow name and deployment status.
 
 == See Also
 
