@@ -12,14 +12,14 @@ To add a map:
 . From the Partner Manager sidebar, select *Maps*.
 . Click *New Map* and select *Send to partner* or *Receive from partner*.
 . Enter a unique name for the map and click *Save*. This adds the map to the Maps page without any configuration.
-. On the map details page, welect the message types. For more information about message types, see xref:create-inbound-message-flow.adoc[Create Inbound Message Flows] or xref:create-outbound-message-flow.adoc[Create Outbound Message Flows].
+. On the map details page, select the message types. For more information about message types, see xref:create-inbound-message-flow.adoc[Create Inbound Message Flows] or xref:create-outbound-message-flow.adoc[Create Outbound Message Flows].
 . In the Map section, click *Import* and select the `.dwl` file to import.
 . Enter a description by clicking the pencil icon next to the *Description* field.
 . Click *Save*.
 
 == Version a Map
 
-If you make changes to a DataWeave map, you can import a new version of the map and set it as active to apply the changes across your deployed message flows or runtime applications.
+Creating a new version of a map is a quick way to apply map changes across your deployed message flows or runtime applications without needing to redeploy individual message flows.
 
 To import a new version of a map:
 

@@ -28,7 +28,7 @@
     ** xref:create-third-party.adoc[Creating Third-Party Connections]
     ** xref:modify-third-party-settings.adoc[Modifying Third-Party Connection Settings]
     ** xref:delete-third-party.adoc[Deleting Third-Party Connections]
-* xref:maps-overview.adoc[Translation Maps]
+* xref:maps-overview.adoc[Creating and AddingTranslation Maps]
   ** xref:partner-manager-maps.adoc[Creating Translation Maps]
   ** xref:maps.adoc[Adding and Versioning Maps]
 * xref:message-flows.adoc[Configuring and Managing Message Flows]

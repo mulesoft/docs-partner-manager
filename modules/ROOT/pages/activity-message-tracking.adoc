@@ -159,7 +159,8 @@ a|
 
 |===
 
-== Message Summaries
+[[message-summaries]]
+== View Message Summaries
 
 Use AI to view a summary of the message payload. Make sure you've enabled Einstein in xref:cloudhub-deployment-settings.adoc[CloudHub 1.0 Deployment Settings], xref:cloudhub2-deployment-settings.adoc[CloudHub 2.0 Deployment Settings], or xref:rtf-deployment-settings.adoc[Runtime Fabric Deployment Settings].
 

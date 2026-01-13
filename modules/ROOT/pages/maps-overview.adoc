@@ -16,22 +16,13 @@ To use translation maps in Partner Manager:
 
 Partner Manager supports maps in these formats:
 
-* *Partner formats*: CSV, EDIFACT, X12, JSON, or XML
-* *Enterprise application formats*: CSV, JSON, or XML
+* *Partner formats*
++
+CSV, EDIFACT, X12, JSON, or XML
 
-Common transformation scenarios include:
-
-* Inbound message flows:
-** X12 4010 850 to JSON
-** EDIFACT D97A to JSON  
-** CSV to JSON
-** XML to JSON
-
-* Outbound message flows:
-** JSON to X12 4010 855
-** JSON to EDIFACT D97A
-** JSON to CSV
-** JSON to XML
+* *Enterprise application formats*
++
+CSV, JSON, or XML
 
 == See Also
 
