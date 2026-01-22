@@ -49,6 +49,7 @@ If you select `None`, Partner Manager defaults to using `4.3.0` as the Min Mule 
 When users replay transmissions when Partner Manager is deployed to Runtime Fabric, Partner Manager sends the associated transmission IDs to an Anypoint MQ queue. The document processing service app running in your Runtime Fabric instance reads the transmission IDs from Anypoint MQ to start reprocessing the transmission within your runtime applications. No transaction payload is processed via Anypoint MQ.  | US East (N. Virginia)
 | Enforce deploying replicas across nodes | Whether Runtime Fabric enforces the deployment of Partner Manager application instances across different nodes. | Selected
 | Use persistent object store | Whether Partner Manager application instances must use a persistent object store. This value is always selected and you can't modify it. | Selected
+| Einstein enabled | Enables Einstein features in Partner Manager, such as the xref:activity-message-tracking.adoc#message-summaries[message summarization] feature for source and target payloads. | Not selected
 |===
 +
 . Select *Applications* and enter the following application settings:
