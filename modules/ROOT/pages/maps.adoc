@@ -11,9 +11,9 @@ To add a map:
 
 . From the Partner Manager sidebar, select *Maps*.
 . Click *New Map* and select *Send to partner* or *Receive from partner*.
-. Enter a unique name for the map and click *Save*. This adds the map to the Maps page without any configuration.
+. Enter a unique name for the map and click *Save*. This adds the map to the *Maps* page without any configuration.
 . On the map details page, select the message types. For more information about message types, see xref:create-inbound-message-flow.adoc[Create Inbound Message Flows] or xref:create-outbound-message-flow.adoc[Create Outbound Message Flows].
-. In the Map section, click *Import* and select the `.dwl` file to import.
+. In the *Map* section, click *Import* and select the `.dwl` file to import.
 . Assign a unique version label and optionally add a note.
 . Enter a description by clicking the pencil icon next to the *Description* field.
 . Click *Save*.
@@ -24,7 +24,7 @@ Adding a new version of a map is a quick way to apply map changes across your de
 
 To import a new version of a map:
 
-. From the Partner Manager sidebar, select *Maps*. If you don't have the Maps tab, update your Partner Manager applications to the latest runtime templates from version 2.25.0 or later.
+. From the Partner Manager sidebar, select *Maps*. If you don't have the *Maps* tab, update your Partner Manager applications to the latest runtime templates from version 2.25.0 or later.
 . Click the name of the map to open the details page.
 . Click *Select* in the *Map* section.
 . Click *Import new file* in the *Select a Map File* window.

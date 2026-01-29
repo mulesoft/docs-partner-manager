@@ -76,7 +76,7 @@ The application returns the transformed payload.
 [[change-map]]
 == Select the Map for a Partner Manager Message Flow
 
-When you configure a message flow, you can select the `.dwl` file when adding the map from the Maps page or on the *Select a map* page of the message flow. You can also xref:maps.adoc#version-a-map[version the map] and change the map selection on a deployed message flow.
+When you configure a message flow, you can select the `.dwl` file when adding the map from the *Maps* page or on the *Select a map* page of the message flow. You can also xref:maps.adoc#version-a-map[version the map] and change the map selection on a deployed message flow.
 
 == See Also
 
