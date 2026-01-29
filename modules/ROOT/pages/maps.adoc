@@ -29,7 +29,7 @@ To import a new version of a map:
 . Click *Select* in the *Map* section.
 . Click *Import new file* in the *Select a Map File* window.
 . Navigate to the `.dwl` file you want to import and click *Open* to add the new version of the map.
-. Select the new version as the active version or keep the current active version.
+. To replace the currently active map, select the radio button next to the version that you just uploaded.
 . Click *Set as Active*.
 . Click *Confirm*.
 
