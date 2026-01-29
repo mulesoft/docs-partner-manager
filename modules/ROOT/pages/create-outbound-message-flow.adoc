@@ -12,7 +12,7 @@ To create an outbound message flow:
 . Configure the receiving endpoint.
 . Configure the source message type.
 . Configure reference IDs for the partner and host.
-. Import the translation map.
+. Select the translation map.
 . Configure the target message type.
 . Configure the target endpoint.
 . Verify that the message flow is complete.
@@ -60,6 +60,8 @@ To select the map:
 
 . In the message flow, expand the *Map* section.
 . Click *Select* and select the map from the table.
+
+The map is added to the message flow. Only the mapping configurations that match your source and target message types are shown. Choosing a map configuration with a different source and target message type updates the corresponding message type in your message flow.
 
 In the map for an outbound message flow, you can access source message attributes, which makes them available in the message payload. The attributes that you can access depend on the protocol of the source endpoint. For more information, see xref:access-source-message-attributes.adoc[Accessing Source Message Attributes]. 
 
