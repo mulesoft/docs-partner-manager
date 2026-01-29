@@ -86,7 +86,7 @@ To route inbound messages from partners matching any of the partner or host iden
 
 == Select the Translation Map
 
-A translation map in an inbound message flow transforms your inbound message format to your organization's enterprise application format. Maps are created by using DataWeave and are imported to the xref:maps.adoc[Maps] page. For more information about creating maps, see xref:partner-manager-maps.adoc[Translation Maps].
+A translation map in an inbound message flow transforms your inbound message format to your organization's enterprise application format. Maps are created using DataWeave and are imported to the xref:maps.adoc[Maps] page. For more information about creating maps, see xref:partner-manager-maps.adoc[Translation Maps].
 
 To select the map:
 
