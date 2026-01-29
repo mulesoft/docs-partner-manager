@@ -54,7 +54,7 @@ To configure a host reference ID, either select *Ignore* or select your organiza
 
 == Select the Translation Map
 
-A translation map in an outbound message flow transforms outbound messages from your organization's enterprise application format to the format your partners expect. Maps are created by using DataWeave and are imported to the xref:maps.adoc[Maps] page. For more information about creating maps, see xref:partner-manager-maps.adoc[Translation Maps].
+A translation map in an outbound message flow transforms outbound messages from your organization's enterprise application format to the format your partners expect. Maps are created using DataWeave and are imported to the xref:maps.adoc[Maps] page. For more information about creating maps, see xref:partner-manager-maps.adoc[Translation Maps].
 
 To select the map:
 
