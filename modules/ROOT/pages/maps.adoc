@@ -3,7 +3,7 @@
 Translation maps are used to transform messages between different formats. You can add maps to the Maps page and version them to apply changes across your deployed message flows.
 
 [NOTE]
-You can change the map in a message flow after the message flow is deployed. See xref:partner-manager-maps.adoc#change-map[Select the Map for a Partner Manager Message Flow] for more information.
+You can apply mapping changes across deployed message flows by setting new versions as active without needing to upload the updated file to each message flow and redeploy. See xref:partner-manager-maps.adoc#change-map[Select the Map for a Partner Manager Message Flow] for more information.
 
 == Add a Map
 
