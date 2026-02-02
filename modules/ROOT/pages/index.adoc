@@ -1,9 +1,11 @@
 = Anypoint Partner Manager for B2B Integration
 page-aliases: docs.mulesoft.com/partner-manager/latest
 
-Perform bidirectional Business-to-Business (B2B) message exchanges with your external business partner ecosystem. Anypoint Partner Manager supports multiple transport protocols including AS2, HTTP, HTTPS, SFTP, and FTP, and handles various message formats such as CSV, EDIFACT, EDI X12, JSON, and XML. Partner Manager enables use cases such as order to cash, procure to pay, logistics planning, warehouse management, and transportation execution.
+Perform bidirectional Business-to-Business (B2B) message exchanges with your external business partner ecosystem. Anypoint Partner Manager supports multiple transport protocols, including AS2, HTTP, HTTPS, SFTP, and FTP, and handles various message formats such as CSV, EDIFACT, EDI X12, JSON, and XML. Partner Manager enables use cases such as order to cash, procure to pay, logistics planning, warehouse management, and transportation execution.
 
 == Partner Manager Capabilities
+
+Use Partner Manager to:
 
 * Perform technical onboarding of your partners.
 * Set up, manage, and monitor business message flows between your systems and your partners' systems.
