@@ -1,15 +1,8 @@
-= Partner Manager Architecture
+= Partner Manager Deployment Architecture
 
-With Anypoint Partner Manager, you can deploy B2B integration message flows to a MuleSoft-hosted CloudHub iPaaS platform or an Anypoint Runtime Fabric instance.
+Understanding how Partner Manager deploys runtime applications helps you choose the right deployment target for your B2B integrations. The runtime architecture differs between CloudHub and Runtime Fabric, though the configuration experience remains the same.
 
-The functional features and user experience in configuring B2B integrations with Partner Manager are deployment-target agnostic; however, differences in the underlying architecture when implementing the functionality in the runtime occur.
-
-When you deploy a configured message flow, Partner Manager automatically transforms the configurations used in the message flow. It then deploys and updates a set of applications necessary to orchestrate end-to-end B2B processing to the Mule instance. These applications include:
-
-* Receive endpoint services
-* Document processing service
-* Replication service
-* Send endpoint services
+When you deploy a message flow, Partner Manager automatically transforms your configurations and deploys runtime applications to orchestrate end-to-end B2B processing. These applications include receive endpoint services for inbound messages, document processing for parsing and translation, replication service for transaction tracking, and send endpoint services for delivering messages to partners or internal systems.
 
 image::pm-high-level-arch.png["A flowchart showing how data moves between trading partners and backend systems"]
 

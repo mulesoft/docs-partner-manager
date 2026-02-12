@@ -1,0 +1,33 @@
+= Translation Maps
+
+Translation maps are DataWeave transformation files that enable Anypoint Partner Manager to convert business transactions between your partner's message formats and your organization's enterprise application message formats. These maps are essential for B2B integration, allowing seamless data exchange between different systems and formats.
+
+== Get Started with Translation Maps
+
+To use translation maps in Partner Manager:
+
+. Start by creating or customizing a DataWeave maps in Anypoint Studio.
+. Import the completed map to the xref:maps.adoc[Maps] page in Partner Manager.
+. Select and deploy the map in message flows.
+. Version the map as your business requirements evolve.
+. Apply updated versions of your translation maps without needing to individually upload the map file to each message flow.
+
+== Supported Map Formats and Transformations
+
+Partner Manager supports mapping translations between these formats:
+
+* *Partner formats*
++
+CSV, EDIFACT, X12, JSON, or XML
+
+* *Enterprise application formats*
++
+CSV, JSON, or XML
+
+== See Also
+
+* xref:partner-manager-maps.adoc[Creating Translation Maps]
+* xref:maps.adoc[Adding and Versioning Maps]
+* xref:create-inbound-message-flow.adoc[Creating Inbound Message Flows]
+* xref:create-outbound-message-flow.adoc[Creating Outbound Message Flows]
+* xref:dataweave::dataweave-quickstart.adoc[]
