@@ -4,7 +4,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You might see the following error message when you try to find a deployed message flow on the Activity page in Anypoint Partner Manager:
+This error sometimes occurs when you try to find a deployed message flow on the Activity page in Anypoint Partner Manager:
 
 [source,text]
 ----
