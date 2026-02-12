@@ -1,0 +1,53 @@
+= Adding and Versioning Translation Maps
+
+Translation maps are used to transform messages between different formats. You can add maps to the Maps page and version them to apply changes across your deployed message flows.
+
+[NOTE]
+You can apply mapping changes across deployed message flows by setting new versions as active without needing to upload the updated file to each message flow and redeploy. See xref:partner-manager-maps.adoc#change-map[Select the Map for a Partner Manager Message Flow] for more information.
+
+== Add a Map
+
+To add a map:
+
+. From the Partner Manager sidebar, select *Maps*.
+. Click *New Map* and select *Send to partner* or *Receive from partner*.
+. Enter a unique name for the map and click *Save*. This adds the map to the *Maps* page without any configuration.
+. On the map details page, select the message types. For more information about message types, see xref:create-inbound-message-flow.adoc[Create Inbound Message Flows] or xref:create-outbound-message-flow.adoc[Create Outbound Message Flows].
+. In the *Map* section, click *Import* and select the `.dwl` file to import.
+. Assign a unique version label and optionally add a note.
+. Enter a description by clicking the pencil icon next to the *Description* field.
+. Click *Save*.
+
+== Add a New Map Version
+
+Adding a new version of a map is a quick way to apply map changes across your deployed message flows or runtime applications without needing to redeploy individual message flows. Up to 10 versions of a map can be stored per mapping configuration.
+
+To import a new version of a map:
+
+. From the Partner Manager sidebar, select *Maps*. If you don't have the *Maps* tab, update your Partner Manager applications to the latest runtime templates from version 2.25.0 or later.
+. Click the name of the map to open the details page.
+. Click *Select* in the *Map* section.
+. Click *Import new file* in the *Select a Map File* window.
+. Navigate to the `.dwl` file you want to import and click *Open* to add the new version of the map.
+. To replace the currently active map, select the radio button next to the version that you just uploaded.
+. Click *Set as Active*.
+. Click *Confirm*.
+
+== Delete a Map
+
+To delete a map:
+
+. From the Partner Manager sidebar, select *Maps*.
+. Click the name of the map to open the details page.
+. Click *Delete*.
+
+[NOTE]
+Only inactive versions of a map can be deleted. To avoid disruption to existing message flows, the current active version can't be deleted.
+
+== View Message Flows for a Map
+
+To view the message flows that use a particular map, click the number in the *Message flows* column for the map. This opens a message flow details window that shows the message flow name and deployment status.
+
+== See Also
+
+* xref:partner-manager-maps.adoc[Creating Translation Maps]

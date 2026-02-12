@@ -85,6 +85,8 @@ a| When enabled, Partner Manager keeps the source file after reading and process
 Use this configuration only when connecting to SFTP/FTP hosts that don't allow explicit file deletion after the first read. Using this configuration with other types of SFTP/FTP hosts can result in duplicate file processing.
 |
 
+| Skip empty files | Skip empty files during processing. | No
+
 | Polling Frequency
 | Frequency at which the server checks the source path for new files. The default value is `1 minute`.
 | x
