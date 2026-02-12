@@ -17,4 +17,4 @@ The system is still processing the deployment of the message flow.
 
 == Solution
 
-Wait 10 to 15 minutes for the deployment to complete.
+Wait for the deployment to complete. This process can take up to 15 minutes.
