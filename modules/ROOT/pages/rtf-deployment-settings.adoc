@@ -48,6 +48,8 @@ On the Partner Manager host page, the *URL* column of the *Endpoints* section sh
 
 | Selected by Runtime Manager
 
+| Payload compression | Select not to compress the payload, always compress the payload, or adaptively compress the payload only when Anypoint MQ fails because the payload size exceeds a certain threshold. | None (not compressed)
+
 | Anypoint MQ Region | Region where Anypoint MQ is deployed. 
 {sp} +
 {sp} +
