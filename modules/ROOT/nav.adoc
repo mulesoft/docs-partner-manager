@@ -86,6 +86,7 @@
   *** xref:ts-payload-not-configured.adoc[Payload storage is not properly configured]
   *** xref:ts-failed2deploy-no-capacity.adoc[Not enough capacity in this environment]
   *** xref:ts-deploy-not-in-effect.adoc[Deployment Not in Effect]
+  *** xref:ts-failed-finding-deployed-message.adoc[Failed to Find Deployed Message Flow Configurations]
  ** xref:ts-connectivity-system.adoc[Connectivity or System Errors]
   *** xref:ts-failure2store-msg-payload.adoc[Failure to Store Message Payload]
  ** xref:ts-data-processing.adoc[Data Processing Errors]
