@@ -4,7 +4,7 @@ Anypoint Partner Manager uses DataWeave translation maps to transform business t
 
 To use a map, create the map in Anypoint Studio and then import the map to the xref:maps.adoc[Maps] page in Partner Manager.
 
-To start with an example of a map, download and then customize the https://mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/minor/1.0/[B2B/EDI: Order to Cash - Mapping Examples^] from Exchange. This example includes the following transformations for message flows:
+To start with an example of a map, download and then customize the https://mulesoft.com/exchange/com.mulesoft.muleesb.modules/b2b-order-to-cash-mapping/minor/1.0/[B2B/EDI: Order to Cash - Mapping Examples] from Exchange. This example includes the following transformations for message flows:
 
 * Inbound message flows:
 ** X12 4010 850 to JSON
