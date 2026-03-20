@@ -20,7 +20,7 @@ To create an outbound message flow:
 [[source-at-host-endpoint]]
 == Configure the Receiving Endpoint
 
-The receiving endpoint (Source at Host endpoint) in an outbound message flow receives application messages from the backend applications. Partner Manager supports the FTP, HTTP, HTTPS, and SFTP formats for the receiving endpoint.
+The receiving endpoint (Source at Host endpoint) in an outbound message flow receives application messages from the backend applications. Partner Manager supports the FTP, HTTP, HTTPS, and SFTP protocols for the receiving endpoint.
 
 To configure the receiving endpoint:
 
@@ -50,7 +50,7 @@ Partner Manager uses the partner reference ID and host reference ID to locate th
 
 To configure a partner reference ID, either select *All available identifiers* or select a specific partner identifier.
 
-To configure a host reference ID, either select *Ignore* or select your organization's internal reference ID (such as the business unit name) as it appears in the data element of the source JSON or XML message from your backend applications.
+To configure a host reference ID, either select *Ignore* or select your organization's internal reference ID (such as the business unit name) as it appears in the data element of the source CSV, JSON, or XML message from your backend applications.
 
 == Select the Translation Map
 
@@ -73,8 +73,8 @@ The target message type (Send to Partners message type) in an outbound message f
 For the EDIFACT and X12 message types, configuring the target message type also involves the following:
 
 * Configuring acknowledgments (optional)
-* Creating custom EDIFACT settings (optional)
-* Selecting EDIFACT identifiers to use for routing the outbound messages
+* Creating custom X12 or EDIFACT settings (optional)
+* Selecting X12 or EDIFACT identifiers to use for routing the outbound messages
 
 To configure the target message type:
 
@@ -87,7 +87,7 @@ To configure the target message type:
 The message type and its validation settings are added to the message flow.
 . Optionally configure acknowledgment settings for the outbound message.
 . Optionally apply custom validation settings delimiters and character encoding to the outbound message flow.
-. In the *<protocol> Identifiers* section, select the sender and receiver identifiers to use on either the X12 ISA and GS segments or the EDIFACT UNB segments.
+. In the *<format> Identifiers* section, select the sender and receiver identifiers to use on either the X12 ISA and GS segments or the EDIFACT UNB segments.
 +
 These identifiers are configured in the host and partner profiles.
 
@@ -101,23 +101,35 @@ To configure acknowledgment settings for the outbound messages that use the mess
 * Click *New* to create a new endpoint, as described in xref:create-endpoint.adoc[Creating Endpoints].
 . In the *Mark overdue after* field, accept the default value of *24 Hours* or configure when to mark the outbound transaction as overdue for an acknowledgment, according to the SLAs you have with your partner.
 
-=== Optionally Apply Custom Validation Settings to EDIFACT and X12 Endpoints
+=== Optionally Apply Custom Validation Settings to EDIFACT and X12 Formats
 
 By default, Partner Manager uses the EDIFACT or X12 send settings configured for the partner or third-party connection for message validation, delimiters, and character encoding.
 
 To apply custom validation settings and delimiters to the outbound message flow, follow these steps:
 
-. In the *EDIFACT Settings* section, select either *Custom X12 settings* or *Custom EDIFACT settings* and provide custom configuration values.
-. In the *<protocol> Identifiers* section, select the sender and receiver identifiers to use on either the X12 ISA and GS segments or the EDIFACT UNB segments.
+. In the *X12 orEDIFACT Settings* section, select either *Custom X12 settings* or *Custom EDIFACT settings* and provide custom configuration values.
+. In the *<format> Identifiers* section, select the sender and receiver identifiers to use on either the X12 ISA and GS segments or the EDIFACT UNB segments.
 +
 These identifiers are configured in the host and partner profiles.
+
+==== Apply Custom Settings for ISA11 Elements
+
+Use X12custom settings to configure the ISA11 element values for outbound X12 messages.
+
+For ISA 4010 or earlier, set the ISA11 interchange control standards identifier on the *General* tab.
+
+image::pm-custom-x12-settings-general.png["The ISA11 interchange control standards identifier in the custom X12 settings"]
+
+For ISA 4020 or later, set the ISA11 repetition separator on the *Character set & separators* tab.
+
+image::pm-custom-x12-settings-character-set.png["The ISA11 repetition separator in the custom X12 settings"]
 
 [[send-to-partner-endpoint]]
 == Configure the Target Endpoint
 
 The Target endpoint (Send to Partners endpoint) is the target endpoint to which transformed messages are sent to partners, either directly or via third-party connections. Use a third-party-owned Send to Partners endpoint for partners that use a third-party connection.
 
-Partner Manager supports the EDIFACT and X12 protocols for Send to Partners endpoints.
+Partner Manager supports the AS2, FTP, SFTP, HTTP, and HTTPS protocols for Send to Partners endpoints.
 
 To configure the target endpoint:
 
