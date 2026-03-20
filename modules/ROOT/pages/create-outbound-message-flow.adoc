@@ -25,7 +25,7 @@ The receiving endpoint (Source at Host endpoint) in an outbound message flow rec
 To configure the receiving endpoint:
 
 . In the message flow, expand the *Source at <host-name>* section and click *Select*.
-. In the *Select an endpoint: Source at <host-name>* window, do either of the following:
+. In the *Select an endpoint: Source at <host-name>* window, complete either of these steps:
 * Select an existing Source at Host endpoint and click *Select*.
 * Click *New* to create a new Source at Host endpoint, as described in xref:create-endpoint.adoc[Creating Endpoints].
 
@@ -39,7 +39,7 @@ Partner Manager supports the CSV, JSON, and XML source message types in outbound
 To create the source message type:
 
 . In the message flow, expand the *Source message type* section and click *Select*.
-. In the *Source message type* window, do either of the following:
+. In the *Source message type* window, complete either of these steps:
 * Select an existing Source at Host message type and click *Select*.
 * Click *New* to create a new Source at Host message type, as described in xref:partner-manager-create-message-type.adoc[Creating Message Types].
 
@@ -70,16 +70,16 @@ In the map for an outbound message flow, you can access source message attribute
 
 The target message type (Send to Partners message type) in an outbound message flow defines the structure of the messages that Partner Manager sends to the partner, either directly or via a third-party connection. Partner Manager supports the CSV, EDIFACT, JSON, X12, and XML formats for target message types.
 
-For the EDIFACT and X12 message types, configuring the target message type also involves the following:
+For the X12 and EDIFACT message types, configuring the target message type also involves these additional steps:
 
-* Configuring acknowledgments (optional)
-* Creating custom X12 or EDIFACT settings (optional)
+* Optionally configuring acknowledgments
+* Optionally creating custom X12 or EDIFACT settings
 * Selecting X12 or EDIFACT identifiers to use for routing the outbound messages
 
 To configure the target message type:
 
 . Expand the *Message type* section and click *Select*.
-. In the *Select message type* window, do either of the following:
+. In the *Select message type* window, complete either of these steps:
 * Select an existing Send to Partners message type and click *Select*.
 * Click *New* to create a new Send to Partners message type, as described in xref:partner-manager-create-message-type.adoc[Creating Message Types].
 . Click *Save*.
@@ -96,7 +96,7 @@ These identifiers are configured in the host and partner profiles.
 To configure acknowledgment settings for the outbound messages that use the message flow:
 
 . In the *Acknowledgement* section, select *Expect functional acknowledgement* (X12) or *Expect CONTRL functional acknowledgement* (EDIFACT).
-. Do either of the following:
+. Complete either of these steps:
 * Select an existing endpoint at which to receive your partner's acknowledgment transaction.
 * Click *New* to create a new endpoint, as described in xref:create-endpoint.adoc[Creating Endpoints].
 . In the *Mark overdue after* field, accept the default value of *24 Hours* or configure when to mark the outbound transaction as overdue for an acknowledgment, according to the SLAs you have with your partner.
@@ -134,7 +134,7 @@ Partner Manager supports the AS2, FTP, SFTP, HTTP, and HTTPS protocols for Send 
 To configure the target endpoint:
 
 . In the message flow, expand the *Send to <partner>* section and click *Select*.
-. Do either of the following:
+. Complete either of these steps:
 * Select an existing Send to Partners endpoint and click *Select*.
 +
 You can select any previously configured Send to Partners endpoints owned by the host, the partner for whom the message flow is configured, or a third-party connection.
