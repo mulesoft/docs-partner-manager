@@ -107,22 +107,22 @@ By default, Partner Manager uses the EDIFACT or X12 send settings configured for
 
 To apply custom validation settings and delimiters to the outbound message flow, follow these steps:
 
-. In the *X12 orEDIFACT Settings* section, select either *Custom X12 settings* or *Custom EDIFACT settings* and provide custom configuration values.
-. In the *<format> Identifiers* section, select the sender and receiver identifiers to use on either the X12 ISA and GS segments or the EDIFACT UNB segments.
+. In the *X12 or EDIFACT Settings* section, select either *Custom X12 settings* or *Custom EDIFACT settings* and provide custom configuration values.
+. In the *<format> Identifiers* section, select the sender and receiver identifiers to use on the X12 ISA and GS segments or the EDIFACT UNB segments.
 +
 These identifiers are configured in the host and partner profiles.
 
-==== Apply Custom Settings for ISA11 Elements
+==== Configure Custom Settings for the ISA11 Element
 
-Use X12custom settings to configure the ISA11 element values for outbound X12 messages.
+Configure the ISA11 element values for outbound X12 messages in X12 custom settings.
 
-For ISA 4010 or earlier, set the ISA11 interchange control standards identifier on the *General* tab.
+* For ISA 4010 or earlier, set the ISA11 interchange control standards identifier on the *General* tab.
 
 image::pm-custom-x12-settings-general.png["The ISA11 interchange control standards identifier in the custom X12 settings"]
 
-For ISA 4020 or later, set the ISA11 repetition separator on the *Character set & separators* tab.
+* For ISA 4020 or later, set the ISA11 repetition separator on the *Character set & separators* tab.
 
-image::pm-custom-x12-settings-character-set.png["The ISA11 repetition separator in the custom X12 settings"]
+image::pm-custom-x12-settings-char-set.png["The ISA11 repetition separator in the custom X12 settings"]
 
 [[send-to-partner-endpoint]]
 == Configure the Target Endpoint
