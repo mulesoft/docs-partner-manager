@@ -101,9 +101,9 @@ To configure acknowledgment settings for the outbound messages that use the mess
 * Click *New* to create a new endpoint, as described in xref:create-endpoint.adoc[Creating Endpoints].
 . In the *Mark overdue after* field, accept the default value of *24 Hours* or configure when to mark the outbound transaction as overdue for an acknowledgment, according to the SLAs you have with your partner.
 
-=== Optionally Apply Custom Validation Settings to EDIFACT and X12 Formats
+=== Optionally Apply Custom Validation Settings to X12 and EDIFACT Formats
 
-By default, Partner Manager uses the EDIFACT or X12 send settings configured for the partner or third-party connection for message validation, delimiters, and character encoding.
+By default, Partner Manager uses the X12 or EDIFACT send settings configured for the partner or third-party connection for message validation, delimiters, and character encoding.
 
 To apply custom validation settings and delimiters to the outbound message flow, follow these steps:
 
@@ -117,11 +117,11 @@ These identifiers are configured in the host and partner profiles.
 Configure the ISA11 element values for outbound X12 messages in X12 custom settings.
 
 * For ISA 4010 or earlier, set the ISA11 interchange control standards identifier on the *General* tab.
-
++
 image::pm-custom-x12-settings-general.png["The ISA11 interchange control standards identifier in the custom X12 settings"]
 
 * For ISA 4020 or later, set the ISA11 repetition separator on the *Character set & separators* tab.
-
++
 image::pm-custom-x12-settings-char-set.png["The ISA11 repetition separator in the custom X12 settings"]
 
 [[send-to-partner-endpoint]]
