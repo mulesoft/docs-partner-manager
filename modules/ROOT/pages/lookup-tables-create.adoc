@@ -1,0 +1,62 @@
+= Creating and Managing Lookup Tables
+
+Lookup tables are centralized repositories of reference data used to translate data between different systems. They act as a mapping tool to make sure that data remains consistent as it moves between your internal database and your external partners.
+
+[NOTE]
+Each lookup results in an Object Store v2 call. If you anticipate processing a high volume of transactions that use lookup tables, you'll need an Object Store v2 premium subscription. This removes the standard 10 TPS cap, making sure your message flows remain fast and reliable during peak processing times. For more information about rate limiting, see xref:object-store::osv2-usage.adoc[].
+
+== Supported Lookup Table Types
+
+Up to 200 lookup tables can be created per environment. Two types of lookup tables are supported:
+
+* *Composite Key Lookup*
++
+A composite key lookup table is used to search for a single row in the table by using a combination of columns. This type uses AND logic, so both Value A and Value B must be provided to get a result.
++
+* *Cross-Reference Lookup*
++
+A cross-reference lookup table is used to search for multiple rows in the table by using a combination of columns. Choose this type when you have multiple unique identifiers for the same thing and need to find the record using any one of them. This type uses OR logic, so Value A, B, or C can be provided to get the result.
+
+== View and Search Lookup Tables
+
+To access lookup tables, select *Lookup Tables* from the Partner Manager sidebar. You can search for a lookup table by name or description and filter by type.
+
+== Create a Lookup Table
+
+To create a lookup table:
+
+. From the Partner Manager sidebar, select *Lookup Tables*.
+. Click *New Lookup Table* and select *Composite Key Lookup* or *Cross-Reference Lookup*.
+. Enter a unique name with no spaces and a maximum of 50 characters. Names can include _ and - characters.
+. Optionally add a description.
+. Click *Next*.
+. Optionally select the option to enable generic lookup so that the search is performed by using any combination of columns to find one or more matching rows.
+. Configure up to 10 columns. Give each column a unique name and use no more than 30 characters. For both table types, the *Mandatory* and *Key* options are selected by default for the first column and can't be unselected. For cross-reference lookup tables, both options are also selected by default for the second column.
+. Click *Save*.
+
+[NOTE]
+Columns can't be added or modified after the table has at least one row.
+
+== Add Rows to a Lookup Table
+
+After creating a lookup table, you can add up to 10,000 rows. You can also import data from a CSV file and export or delete the table.
+
+To add a row, click *Add Row* and enter up to 200 characters for the value in each column. New rows are added to the top of the table.
+
+Duplicate values aren't permitted in key and unique columns.
+
+== Import Data from a CSV File
+
+To import data from a CSV file:
+
+. Click *Import CSV* and select the file.
+. Choose to append the data to the existing table or replace the existing table. If you replace the table, the existing data is deleted and can't be recovered.
+. Click *Import*.
+
+== Export a Lookup Table
+
+To export a lookup table, click *Export CSV*. The table is exported immediately and can be downloaded as a CSV file.
+
+== Delete a Lookup Table
+
+To delete a lookup table, click *Delete*. Indicate that you understand that this action can't be undone and click *Delete*.
