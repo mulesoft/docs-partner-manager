@@ -7,15 +7,15 @@ Each lookup results in an Object Store v2 call. If you anticipate processing a h
 
 == Supported Lookup Table Types
 
-Up to 200 lookup tables can be created per environment. Two types of lookup tables are supported:
+Up to 200 lookup tables can be created per environment. These lookup table types are supported:
 
 * *Composite Key Lookup*
 +
-A composite key lookup table is used to search for a single row in the table by using a combination of columns. This type uses AND logic, so both Value A and Value B must be provided to get a result.
+A composite key lookup table is used to search for a single row in the lookup table by using a combination of columns. This type uses AND logic, so both Value A and Value B must be provided to get a result.
 +
 * *Cross-Reference Lookup*
 +
-A cross-reference lookup table is used to search for multiple rows in the table by using a combination of columns. Choose this type when you have multiple unique identifiers for the same thing and need to find the record using any one of them. This type uses OR logic, so Value A, B, or C can be provided to get the result.
+A cross-reference lookup table is used to search for multiple rows in the lookup table by using a combination of columns. Choose this type when you have multiple unique identifiers for the same thing and need to find the record using any one of them. This type uses OR logic, so Value A, B, or C can be provided to get a result.
 
 == View and Search Lookup Tables
 
@@ -39,9 +39,9 @@ Columns can't be added or modified after the table has at least one row.
 
 == Add Rows to a Lookup Table
 
-After creating a lookup table, you can add up to 10,000 rows. You can also import data from a CSV file and export or delete the table.
+After creating a lookup table, you can add up to 10,000 rows.
 
-To add a row, click *Add Row* and enter up to 200 characters for the value in each column. New rows are added to the top of the table.
+To add a row, click *Add Row* and enter up to 200 characters for the value in each column. New rows are added to the top of the lookup table.
 
 Duplicate values aren't permitted in key and unique columns.
 
@@ -50,12 +50,12 @@ Duplicate values aren't permitted in key and unique columns.
 To import data from a CSV file:
 
 . Click *Import CSV* and select the file.
-. Choose to append the data to the existing table or replace the existing table. If you replace the table, the existing data is deleted and can't be recovered.
+. Choose to append the data to the existing lookup table or replace the existing lookup table. If you replace the lookup table, the existing data is deleted and can't be recovered.
 . Click *Import*.
 
 == Export a Lookup Table
 
-To export a lookup table, click *Export CSV*. The table is exported immediately and can be downloaded as a CSV file.
+To export a lookup table, click *Export CSV*. The lookup table is exported immediately and can be downloaded as a CSV file.
 
 == Delete a Lookup Table
 
