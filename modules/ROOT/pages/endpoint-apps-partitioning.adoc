@@ -47,15 +47,8 @@ You can modify the replica size and count for the default partition.
 
 == Delete a Partition
 
-Partitions can be deleted if they don't have any endpoint configurations deployed to them. Deletion removes the associated runtime application and is irreversible after confirming the deletion.
+You can delete a partition as long as it doesn't have any endpoint configurations deployed to it. Deleting a partition also removes its associated runtime application, a permanent action that can't be undone once you've confirmed it.
 
 == See Also
 
-* xref:deploy-partner-manager.adoc[Deploying Partner Manager Runtime Apps]
-* xref:endpoints.adoc[Endpoints]
-* xref:endpoint-https-receive.adoc[HTTP and HTTPS Receive Endpoint Settings]
-* xref:endpoint-as2-receive.adoc[AS2 Receive Endpoint Settings]
-* xref:endpoint-ftp-receive.adoc[FTP Receive Endpoint Settings]
-* xref:endpoint-sftp-receive.adoc[SFTP Receive Endpoint Settings]
-* xref:endpoint-http-send.adoc[HTTP Send Endpoint Settings]
-* xref:endpoint-https-send.adoc[HTTPS Send Endpoint Settings]
+* xref:create-endpoint.adoc[Creating Endpoints]
