@@ -1,0 +1,54 @@
+= Creating and Managing Endpoint App Partitions
+
+Create partitions in your global endpoint settings to distribute inbound and outbound endpoint configurations across multiple, independently managed runtime applications within Partner Manager.
+
+With endpoint partitons, you can:
+
+* Protect your network by isolating connections so that a single failing endpoint doesn't impact all your partners.
+* Assign the specific compute power your high-volume traffic requires to make sure you have the right amount of resources.
+* Gain better visibility into partner-specific traffic and resource usage to troubleshoot errors and meet strict compliance requirements more easily.
+* Give your most important message flows the dedicated resources and security they need to stay online.
+
+== Create Endpoint Partitions
+
+To create a new endpoint partition:
+
+. In the sidebar, access the *<host>* page.
+. In the *Global endpoint settings* section, select the endpoint application to configure.
+. Select the *Partitions* tab and click *Add partition*.
+. Provide a name for the partition. The name can't be changed after the partition is saved.
+. Provide an app name suffix, which determines the runtime app name. Use only lowercase letters, numbers, and hyphens. For example, if the app name suffix is `critical` and the partition is for the outbound SFTP endpoint, the runtime app name is `b2b-outbound-sftp-critical`.
+. Select the vCore allocation for the runtime app and the number of replicas to deploy.
+[NOTE]
+SFTP and FTP inbound endpoints are always deployed with 1 replica count.
+. Click *Save*.
+
+[NOTE]
+After an endpoint is deployed to a partition, it can't be moved to a different partition.
+
+== View Endpoint Partition Details
+
+Selecting an endpoint partition in your global endpoint settings shows these details about the partition:
+
+* Runtime application name
+* Number of endpoints in the partition
+* Replica size and count
+* Endpoints assigned to the partition
+
+== Add Endpoints to a Partition
+
+You can add new inbound and outbound endpoints to a partition when creating the endpoint. Partitions can accept up to 500 endpoints. For more information, see the xref:create-endpoint.adoc#configure-endpoint[configuration settings] for the specific endpoint type and protocol.
+
+=== Manage the Default Endpoint Partition
+
+The default partition is preconfigured and used for all endpoints that aren't assigned to a specific partition. The runtime application name is `b2b-<protocol>-<direction>-<protocol>-<suffix>` and can't be changed.
+
+You can modify the replica size and count for the default partition.
+
+== Delete a Partition
+
+You can delete a partition as long as it doesn't have any endpoint configurations deployed to it. Deleting a partition also removes its associated runtime application, a permanent action that can't be undone once you've confirmed it.
+
+== See Also
+
+* xref:create-endpoint.adoc[Creating Endpoints]

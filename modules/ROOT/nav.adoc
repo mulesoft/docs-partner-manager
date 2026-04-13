@@ -31,6 +31,7 @@
 * xref:maps-overview.adoc[Creating and AddingTranslation Maps]
   ** xref:partner-manager-maps.adoc[Creating Translation Maps]
   ** xref:maps.adoc[Adding and Versioning Maps]
+* xref:endpoint-apps-partitioning.adoc[Creating and Managing Endpoint App Partitions]
 * xref:message-flows.adoc[Configuring and Managing Message Flows]
  ** xref:inbound-message-flows.adoc[Inbound Message Flows]
  ** xref:create-inbound-message-flow.adoc[Creating Inbound Message Flows]
