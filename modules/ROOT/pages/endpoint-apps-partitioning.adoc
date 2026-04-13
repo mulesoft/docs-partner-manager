@@ -1,4 +1,4 @@
-= Endpoint App Partitioning
+= Creating and Managing Endpoint App Partitions
 
 Create partitions in your global endpoint settings to distribute inbound and outbound endpoint configurations across multiple, independently managed runtime applications within Partner Manager.
 
