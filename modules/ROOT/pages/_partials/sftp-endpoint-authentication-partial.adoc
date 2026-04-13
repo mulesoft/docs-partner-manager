@@ -45,3 +45,6 @@ Enter the date on which you want the private key file to expire. This date is a 
 . Click *Create*.
 | x
 
+| Partition
+| Assign the endpoint to a partition. If you don't assign the endpoint to a partition, it's assigned to the default partition. The assignment can't be changed after the endpoint is deployed to the partition.
+| No

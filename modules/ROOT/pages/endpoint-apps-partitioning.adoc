@@ -1,0 +1,61 @@
+= Endpoint App Partitioning
+
+Create partitions in your global endpoint settings to distribute inbound and outbound endpoint configurations across multiple, independently managed runtime applications within Partner Manager.
+
+App partitioning lets you:
+
+* Protect your network by isolating connections so that a single failing endpoint doesn't impact all your partners.
+* Assign the specific compute power your high-volume traffic requires to make sure you have the right amount of resources.
+* Gain better visibility into partner-specific traffic and resource usage to troubleshoot errors and meet strict compliance requirements more easily.
+* Give your most important message flows the dedicated resources and security they need to stay online.
+
+== Default Endpoint Partition
+
+The default partition is preconfigured and used for all endpoints that aren't assigned to a specific partition. The runtime application name is `b2b-<protocol>-<direction>-<protocol>-<suffix>` and can't be changed.
+
+You can modify the replica size and count for the default partition.
+
+== Create Endpoint Partitions
+
+To create a new endpoint partition:
+
+. In the sidebar, access the *<host>* page.
+. In the *Global endpoint settings* section, select the endpoint application to configure.
+. Select the *Partitions* tab and click *Add partition*.
+. Provide a name for the partition. The name can't be changed after saving the partition.
+. Provide an app name suffix, which determines the runtime app name. Use only lowercase letters, numbers, and hyphens. For example, if the app name suffix is `critical` and the partition is for the outbound SFTP endpoint, the runtime app name is `b2b-outbound-sftp-critical`.
+. Select the vCore allocation for the runtime app and the number of replicas to deploy.
+[NOTE]
+SFTP and FTP inbound endpoints are always deployed with 1 replica count.
+. Click *Save*.
+
+[NOTE]
+Endpoint configurations cannot be moved between partitions once deployed.
+
+== View Endpoint Partition Details
+
+Selecting an endpoint partition in your global endpoint settings shows these details:
+
+* Runtime application name
+* Number of endpoints in the partition
+* Replica size and count
+* Specific endpoints assigned to the partition
+
+== Add Endpoints to a Partition
+
+Add new inbound and outbound endpoints to a partition when creating the endpoint. Partitions can accept up to 500 endpoints. For more information, see the configuration settings for the specific endpoint type and protocol.
+
+== Delete a Partition
+
+Partitions can be deleted if they don't have any endpoint configurations deployed to them. Deletion removes the associated runtime application and is irreversible after confirming the deletion.
+
+== See Also
+
+* xref:deploy-partner-manager.adoc[Deploying Partner Manager Runtime Apps]
+* xref:endpoints.adoc[Endpoints]
+* xref:endpoint-https-receive.adoc[HTTP and HTTPS Receive Endpoint Settings]
+* xref:endpoint-as2-receive.adoc[AS2 Receive Endpoint Settings]
+* xref:endpoint-ftp-receive.adoc[FTP Receive Endpoint Settings]
+* xref:endpoint-sftp-receive.adoc[SFTP Receive Endpoint Settings]
+* xref:endpoint-http-send.adoc[HTTP Send Endpoint Settings]
+* xref:endpoint-https-send.adoc[HTTPS Send Endpoint Settings]
