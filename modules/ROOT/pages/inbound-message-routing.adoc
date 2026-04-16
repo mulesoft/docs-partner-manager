@@ -1,6 +1,6 @@
 = Inbound Message Routing
 
-Partner Manager routes inbound messages by using the following criteria:
+Partner Manager uses this criteria to route inbound messages:
 
 * Message type (all endpoints)
 * EDI identifiers (optional for EDI endpoints)
@@ -8,15 +8,15 @@ Partner Manager routes inbound messages by using the following criteria:
 
 To use EDI identifiers as routing criteria for an inbound EDI message, select *Route based on <protocol> identifiers* and enter the host and partner EDI identifiers when you define the inbound message flow. 
 
-To use reference identifiers as routing criteria for an inbound message, select *Route based on reference identifiers* and enter the host and partner reference identifiers when you define the inbound the message flow. You must also include the host and partner reference identifiers in the DataWeave reference map. For more information, see xref:create-reference-map.adoc[].
+To use reference identifiers as routing criteria for an inbound message, select *Route based on reference identifiers* and enter the host and partner reference identifiers when you define the inbound the message flow. Include the host and partner reference identifiers in the DataWeave reference map. For more information, see xref:create-reference-map.adoc[].
 
 Depending on the endpoint protocol, your partner specifies the message type of the incoming message in different ways.
 
 == Messages That Use an AS2 Receive from Partners Endpoint
 
-For incoming AS2 messages, your partner does the following to specify the message type:
+To specify the message type for incoming AS2 messages, your partner:
 
-* For non-EDI files (JSON or XML), uses a filename that begins with `{message-type-id}_`.
+* Uses a filename that begins with `{message-type-id}_` for non-EDI files (JSON or XML).
 +
 For example, if the source message type in the endpoint is named `custom-po`, the filename must begin with `custom-po_`.
 +
@@ -53,9 +53,9 @@ For example, if the message type is named `custom-po` and it's formatted as XML,
 
 == Messages That Use an HTTP or HTTPS Receive from Partners Endpoint
 
-For incoming HTTP or HTTPS messages, your partner does the following to specify the message type:
+To specify the message type for incoming HTTP or HTTPS messages, your partner:
 
-* For EDI messages (EDIFACT or X12), posts them to the base URL and sets the Content-Type value in the incoming HTTP request as follows, depending on the message format:
+* Posts EDI messages (EDIFACT or X12) to the base URL and sets the Content-Type value in the incoming HTTP request as follows, depending on the message format:
 
 ** EDIFACT: `application/EDIFACT` or `text/plain`
 ** JSON: `application/json`
@@ -65,7 +65,7 @@ For incoming HTTP or HTTPS messages, your partner does the following to specify 
 
 * For non-EDI messages, includes the message type ID in the relative path of the HTTP request.
 +
-For example, suppose you have the following scenario in a CloudHub deployment:
+For example, if you have this scenario in a CloudHub deployment:
 
 ** The base URL of the HTTP or HTTPS Receive from Partners endpoint is `+https://b2b-inbound-http-abcd.us-e2.cloudhub.io:443/receive1/+`.
 ** The expected message type ID for the inbound message is `custom-po`.
