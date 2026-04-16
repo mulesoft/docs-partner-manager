@@ -8,7 +8,7 @@ Partner Manager uses this criteria to route inbound messages:
 
 To use EDI identifiers as routing criteria for an inbound EDI message, select *Route based on <protocol> identifiers* and enter the host and partner EDI identifiers when you define the inbound message flow. 
 
-To use reference identifiers as routing criteria for an inbound message, select *Route based on reference identifiers* and enter the host and partner reference identifiers when you define the inbound the message flow. Include the host and partner reference identifiers in the DataWeave reference map. For more information, see xref:create-reference-map.adoc[].
+To use reference identifiers as routing criteria for an inbound message, select *Route based on reference identifiers* and enter the host and partner reference identifiers when you define the inbound message flow. Include the host and partner reference identifiers in the DataWeave reference map. For more information, see xref:create-reference-map.adoc[].
 
 Depending on the endpoint protocol, your partner specifies the message type of the incoming message in different ways.
 
@@ -49,7 +49,7 @@ Partner Manager routes an inbound non-EDI message, such as CSV, JSON, or XML, ba
 ** .xml for XML files
 ** .csv for CSV files
 
-For example, if the message type is named `custom-po` and it's formatted as XML, the filename must begin with `custom-po_` and end with ``.xml`.
+For example, if the message type is named `custom-po` and it's formatted as XML, the filename must begin with `custom-po_` and end with `.xml`.
 
 == Messages That Use an HTTP or HTTPS Receive from Partners Endpoint
 
@@ -80,11 +80,12 @@ Partner Manager routes inbound EDIFACT messages by looking for a match between t
 
 Partner Manager routes inbound EDIFACT messages by looking for a message flow match in this order.
 
-<add note about reference IDs being exposed in the DataWeave reference map for the endpoint>
+[NOTE]
+When creating a Reference Map for an endpoint, the Partner and Host Reference IDs are automatically accessible within the DataWeave script. You can use these IDs to dynamically assign the sender and receiver identifiers or to apply conditional logic based on the specific partner configuration.
 
 ==== Scenario 1
 
-Message flow configration:
+Message flow configuration:
 
 * *Route based on EDIFACT identifiers* is selected.
 * *Route based on reference identifiers* is selected.
@@ -136,7 +137,7 @@ Partner Manager routes inbound X12 messages by looking for a message flow match 
 
 ==== Scenario 1
 
-Message flow configration:
+Message flow configuration:
 
 * *Route based on X12 identifiers* is selected.
 * *Route based on reference identifiers* is selected.
@@ -184,7 +185,7 @@ Does a message flow with this configuration match the message type in the messag
 
 === Routing Resolution for Inbound CSV, JSON, and XML Messages
 
-Partner Manager routes inbound CSV, JSON,, and XML messages by looking for a message flow match in this order.
+Partner Manager routes inbound CSV, JSON, and XML messages by looking for a message flow match in this order.
 
 ==== Scenario 1
 
