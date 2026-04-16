@@ -97,7 +97,7 @@ a|
 a| * Select a different Send to Partners message type.
 * (EDIFACT or X12 message type) Indicate whether to send a 997 functional acknowledgment and select the endpoint to which to send the acknowledgment.
 * (EDIFACT or X12 message type) View current validation settings.
-* Select different identifiers for the host and partner.
+* Select a different identifier for the host and partner. Each identifier field accepts one value and doesn't allow multiple identifiers. 
 a| * xref:partner-manager-create-message-type.adoc[Creating Message Types]
 * xref:edi-ack-reconciliation.adoc[EDI Acknowledgment Reconciliation]
 * xref:partner-manager-identifiers.adoc[Sender and Receiver Identifiers]

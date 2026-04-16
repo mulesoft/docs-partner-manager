@@ -1,0 +1,40 @@
+[[api-key]]
+== API Key Authentication
+
+Authentication type that requires a valid API key in the HTTP request header. 
+
+Use the following settings to configure API Key authentication:
+
+[%header%autowidth.spread]
+|===
+|Name |Description |Required
+| HTTP Header Name 
+| HTTP header parameter associated with the API key value. 
+| x
+|API Key
+|Value of the API key.
+
+After saving your new or reconfigured endpoint, you cannot subsequently retrieve or modify the API key.
+| x
+|Certificate
+|Certificate to use for authentication.
+|
+|===
+
+[[basic]]
+=== Basic Authentication
+
+Authentication type that requires a username and password in the HTTP or HTTP request header.
+
+Use the following settings to configure Basic authentication:
+
+[%header%autowidth.spread]
+|===
+|Name |Description |Required
+|Username
+|Username to use when making a request.
+|x
+|Password
+|Password to use when making a request.
+|x
+|===

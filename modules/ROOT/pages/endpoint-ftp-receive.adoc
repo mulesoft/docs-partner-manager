@@ -48,6 +48,10 @@ Create FTP receive endpoints by configuring these settings on the *<host>* or *P
 | Port number of the FTP server.
 | x
 
+| Character encoding override
+| Enables inbound endpoints to receive non UTF-8 encoded documents.
+| 
+
 | Username
 | Username for connecting to the FTP server.
 | x (if the server is authenticated)
@@ -61,6 +65,15 @@ Create FTP receive endpoints by configuring these settings on the *<host>* or *P
 | Path on the FTP server to which the partner or third-party connection sends the inbound files.
 | x
 
+| Skip Delete
+a| When enabled, Partner Manager keeps the source file after reading and processing.
+
+[NOTE]
+Use this configuration only when connecting to SFTP/FTP hosts that don't allow explicit file deletion after the first read. Using this configuration with other SFTP/FTP hosts can result in duplicate file processing.
+|
+
+| Skip empty files | Skip empty files during processing. | No
+
 | Polling Frequency
 | Frequency with which the server checks the source path for new files. The default is `1 minute`.
 | x
@@ -69,6 +82,10 @@ Create FTP receive endpoints by configuring these settings on the *<host>* or *P
 | Applies only to FTP endpoints owned by partners or third-party connections.
 Indicates whether the endpoint supports EDI messages (EDIFACT, X12) or non-EDI messages (JSON, XML).
 | x
+
+| Use hyphen (-) as the secondary file name delimiter to determine non-EDI message type
+| Lets you use a hyphen as the secondary file name delimiter to determine the message type from the message's file name. Only shows if the supported format type is non-EDI.
+| No
 
 | Size check wait time
 | Wait time, in seconds, between size checks to determine if a file is ready for processing. The default of `1 second` enables a file write to finish before processing the file.
@@ -93,7 +110,11 @@ To disable this feature, specify a negative number or omit the value.
 |
 
 | Archival Path
-| FTP server path at which to store a copy of the file obtained from the source path.
+a| FTP server path at which to store a copy of the file obtained from the source path.
+
+[NOTE]
+The runtime application attempts to create the archive file up to three times. If permission or connection errors prevent Partner Manager from deleting the file, Partner Manager logs the issue in the runtime application and skips the archival step to prevent duplicate message processing.
+
 |
 |===
 

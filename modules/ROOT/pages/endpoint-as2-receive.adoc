@@ -37,7 +37,7 @@ Create an AS2 Receive from Partners endpoint by configuring these settings on th
 
 |Private port (when deploying to VPC)
 a|
-Applies when using Anypoint Virtual Private Cloud (Anypoint VPC) with CloudHub deployments:
+Applies when using Anypoint Virtual Private Cloud (Anypoint VPC) with CloudHub 1.0 deployments:
 
 * When enabled, the AS2 receive endpoint application deploys to the private port `8092` in your xref:runtime-manager::virtual-private-cloud.adoc[Anypoint VPC]. You can manage the access control to the endpoint via the Anypoint VPC and dedicated load balancer settings.
 +
@@ -46,23 +46,50 @@ Applies when using Anypoint Virtual Private Cloud (Anypoint VPC) with CloudHub d
 You can access the endpoint URL directly over the internet.
 |
 | HTTPS
-a| Applies to CloudHub deployments.
+a| Applies to CloudHub 1.0 deployments.
 
 Indicates whether Partner Manager deploys the AS2 receive endpoint as an HTTPS listener:
 
 * If enabled (default), Partner Manager deploys the AS2 receive endpoint as an HTTPS listener.
 * If disabled, Partner Manager deploys the AS2 receive endpoint as an HTTP listener.
 
+The *HTTPS* option is disabled when creating Receive from Partners endpoints in CloudHub 2.0.
+
+[NOTE]
 When deploying to Anypoint Runtime Fabric, Partner Manager always deploys the AS2 receive endpoint as an HTTP listener. With this type of deployment, you must configure an Ingress controller to provide external consumers with an HTTPS endpoint. For more information, see xref:runtime-fabric::custom-ingress-configuration.adoc[Configuring Ingress for Runtime Fabric].
+
+[NOTE]
+====
+When deploying to CloudHub 2.0, Partner Manager always deploys the AS2 Receive endpoint as an HTTPS listener.
+
+* When using a shared space as a deployment target, HTTP requests aren't allowed.
+* If you want to allow HTTP requests to the AS2 receive endpoint application:
+. Use a private space as the deployment target.
+. On the *Advanced* tab, select `Accept HTTP` in the *HTTP requests* field.
+. Optionally, configure Network-Level Ingress Rules to allow HTTP requests from specific IP addresses.
+====
 | x
+
+
+|[[manage-api-manager]]Manage with API Manager
+a|Allows you to manage the endpoint in API Manager, where you can apply policies, such as authentication and client credentials, and configure SLA tiers. Document your message specifications by using Exchange and share them with your partners via public portals from Exchange or by obtaining an additional license and sharing the specifications in API Experience Hub.
+
+To manage an endpoint in API Manager, create an HTTP API in API Manager in the same environment and organization as the endpoint.
+
+When you create the API in API Manager:
+
+* Select `HTTP API` as the asset type.
+* Leave the defaults on the *Endpoint configuration* screen.
+* Copy the API instance ID and paste it into the *API Auto discovery id* field in the Partner Manager *New endpoint: Receive from Partners* window.
+|x
+
+| Use hyphen (-) as the secondary file name delimiter to determine non-EDI message type
+| Lets you use a hyphen as the secondary file name delimiter to determine the message type from the message's file name.
+| No
 
 | AS2 URL
 | URL to the AS2 server (automatically generated).
 | x
-
-| Certificate (TLS Context)
-| Applies if the *AS2 URL* field starts with `HTTPS:\\`. 
-|
 
 |Enforce security level
 a|Indicates whether Partner Manager rejects incoming AS2 messages that aren't signed, encrypted, or both. When Partner Manager rejects a message, it returns a negative Message Disposition Notification (MDN) to the sender.
@@ -84,6 +111,15 @@ Accepts messages that aren't signed or encrypted.
 
 When deploying an AS2 endpoint to CloudHub using the HTTP protocol, you cannot change the default value (`Signed & Encrypted`).
 | x
+
+|App Name Substitution Type
+a|Defines how the ingress URL template `app-name` is substituted for this AS2 endpoint to generate the Runtime Fabric public endpoint.
+
+* Select Default to use `app-name` as deployment-name.
+* Select Custom to provide a custom name for the `app-name` substitution.
+* Select BasePath to use the editable AS2 base path as the value for the `app-name` substitution.
+| No
+
 |<Host> keystore
 a|Host keystore file that stores your organization's public certificate and private key. Select an existing keystore file or create a new one.
 
@@ -95,6 +131,17 @@ To create a new keystore file:
 . Click *Create*.
 |x 
 |===
+
+Follow these steps to add basic authentication for incoming AS2 messages from your partners:
+
+. Configure the endpoint with <<manage-api-manager, Manage with API Manager>>.
+. Configure a client credentials policy in API Manager and select *HTTP Basic Authentication Header* as the credentials origin.
++
+image::configure-client-credentials-policy.png["Configure client credentials policy in API Manager"]
++
+. Add documentation to the HTTP API from Exchange and engage with your partners by publishing it to the xref:exchange::to-share-api-asset-to-portal.adoc[public portal] from Exchange or via API Experience Hub. 
+** If you publish via a portal, your partners must log in and request access. 
+** If you follow the xref:api-experience-hub::requesting-access-to-an-api-instance.adoc[API request process] on behalf of your partners, HTTP basic auth headers pass the client ID and client secret upon request.
 
 == Next Step
 

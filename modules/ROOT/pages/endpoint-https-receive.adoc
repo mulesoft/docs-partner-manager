@@ -66,17 +66,6 @@ When you create this API in API Manager:
 NOTE: Using this feature requires an API Manager license.
 |
 
-|HTTPS
-a|Applies to CloudHub deployments.
-
-Indicates whether Partner Manager deploys this endpoint as an HTTPS or HTTP listener:
-
-* If enabled (default), Partner Manager deploys this endpoint as an HTTPS listener.
-* If disabled, Partner Manager deploys this endpoint as an HTTP listener.
-
-When deploying to Anypoint Runtime Fabric, Partner Manager always deploys this endpoint as an HTTP listener. With this type of deployment, you must configure an Ingress controller to provide external consumers with an HTTPS endpoint. For more information, see xref:runtime-fabric::custom-ingress-configuration.adoc[Configuring Ingress for Runtime Fabric].
-|x
-
 |URL
 a|HTTP or HTTPS address where you receive outbound source messages from backend applications or inbound B2B messages from your partners. Partner Manager automatically generates this ID after the first message flow that uses the endpoint is deployed.
 |x
@@ -84,6 +73,14 @@ a|HTTP or HTTPS address where you receive outbound source messages from backend 
 |Response timeout (in milliseconds)
 |Response timeout period in milliseconds. The default is `15000`.
 |x
+
+|App Name Substitution Type
+a|Defines how the ingress URL template `app-name` is substituted for this AS2 endpoint to generate the Runtime Fabric public endpoint.
+
+* Select Default to use `app-name` as deployment-name.
+* Select Custom to provide a custom name for the `app-name` substitution.
+* Select BasePath to use the editable AS2 base path as the value for the `app-name` substitution.
+| No
 
 |Authentication type
 a|Authentication method used to protect the HTTP or HTTPS endpoint. This field is disabled when you manage the endpoint with API Manager.
@@ -100,7 +97,20 @@ No authentication
 |x
 |===
 
-include::partial$https-endpoint-authentication-partial.adoc[tag=https-receive,leveloffset=+1]
+[NOTE]
+====
+* When deploying to Anypoint Runtime Fabric, Partner Manager deploys the HTTP or HTTPS receive endpoint as an HTTP listener.
+** You must configure an Ingress controller to provide external consumers with an HTTPS endpoint. For more information, see xref:runtime-fabric::custom-ingress-configuration.adoc[Configuring Ingress for Runtime Fabric].
+
+* When deploying to CloudHub 2.0, Partner Manager deploys the HTTP or HTTPS Receive endpoint as an HTTPS listener. 
+** When using a shared space as a deployment target, HTTP requests aren't allowed.
+** If you want to allow HTTP requests to the HTTP or HTTPS receive endpoint application:
+. Use a private space as the deployment target.
+. On the *Advanced* tab, select `Accept HTTP` in the *HTTP requests* field.
+. Optionally, configure Network-Level Ingress Rules to allow HTTP requests from specific IP addresses.
+====
+
+include::partial$https-receive.adoc[]
 
 == Next Step
 

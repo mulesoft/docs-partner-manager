@@ -31,24 +31,25 @@ There are no filename restrictions for EDI files.
 
 == Messages That Use an FTP or SFTP Endpoint
 
-For incoming FTP or SFTP messages, your partner does the following to specify the message type:
+The process that Partner Manager uses to route inbound messages differs depending on whether the messages are EDIFACT or X12 EDI messages or non-EDI messages, such as CSV, JSON, or XML. 
 
+=== EDI Messages
 
-Partner Manager routes an inbound EDI message based on the EDI identifier in the message payload. *Question: Now, does the EDI identifier have to match the ones specified in the message flow definition or is this EDI identifier different?*
+Partner Manager routes an inbound EDIFACT or X12 EDI message based on the EDI identifier, such as ISA identifier for X12 or UNB identifier for EDIFACT, in the message content.
 
 === Non-EDI Messages
 
-Partner Manager routes an inbound non-EDI message based on either the associated message type or the filename:
+Partner Manager routes an inbound non-EDI message, such as CSV, JSON, or XML, based on either the associated message type or the filename:
 
 * If you specified an associated message type in the endpoint configuration, Partner Manager routes the message based on that message type.
 
-* If you did not specify an associated message type in the endpoint configuration, Partner Manager routes the message based on the filename. The filename must begin with `{message-type-id}_` and have an appropriate file extension:
+* If you didn't specify an associated message type in the endpoint configuration, Partner Manager routes the message based on the filename. The filename must begin with `{message-type-id}_` and have an appropriate file extension:
 
 ** .json for JSON files
 ** .xml for XML files
 ** .csv for CSV files
 
-For example, if the message type is named `custom-po` and it is formatted as XML, the filename must begin with `custom-po_` and end with ``.xml`.
+For example, if the message type is named `custom-po` and it's formatted as XML, the filename must begin with `custom-po_` and end with ``.xml`.
 
 == Messages That Use an HTTP or HTTPS Receive from Partners Endpoint
 

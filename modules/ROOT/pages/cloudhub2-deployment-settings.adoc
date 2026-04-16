@@ -1,0 +1,52 @@
+= Configuring CloudHub 2.0 Deployment Settings
+
+To configure settings for deploying Anypoint Partner Manager to CloudHub 2.0, access the business unit and environment for which you want to deploy Partner Manager and then follow these steps:
+
+. From the Access Management *Configure a Partner Manager environment* window, enter these general settings:
++
+[%header%autowidth.spread]
+|===
+| Setting | Description | Default 
+| Deployment Target Type | Target type for your Partner Manager deployment. Select *CloudHub 2.0*. | None
+| Runtime Version | Mule runtime engine version to run Partner Manager applications. a| 4.6.0 LTS using Java 8
+
+[NOTE]
+If you select Mule runtime 4.9.0 LTS using Java 17, test your component versions and SFTP connections that rely on insecure ciphers to make sure they work as expected with Java 17.
+
+| Min Mule Version override | Minimum Mule runtime version required to deploy the runtime applications.
+
+Configuring the Min Mule version enables you to apply a xref:mule-runtime::feature-flagging.adoc#configure-feature-flags-for-a-mule-application[feature flagging] mechanism for Partner Manager-deployed Mule runtime applications.
+
+If you process cXML messages with <DOCTYPE> tags, you must set the `minMuleVersion` to 4.5.0 or higher. If you're migrating from an earlier version, you must perform end-to-end regression testing on your existing workflows before changing the `minMuleVersion`. a| None (Uses 4.3.0)
+
+[NOTE]
+If you select `None`, Partner Manager defaults to using `4.3.0` as the Min Mule version.
+
+| Payload compression | Select not to compress the payload, always compress the payload, or adaptively compress the payload only when Anypoint MQ fails because the payload size exceeds a certain threshold. | None (not compressed)
+
+| Deployment Target | Shared or private space to which you want to deploy Partner Manager runtime applications. You can change the deployment target after all active message flows are no longer deployed to an existing target. To change the region in these instances, undeploy the message flows, change the region, and then redeploy the message flows. | None
+| Einstein enabled | Enables Einstein features in Partner Manager, such as the xref:activity-message-tracking.adoc#message-summaries[message summarization] feature for source and target payloads. | Not selected
+|===
+
+. Select *Applications* and enter these application settings:
++
+[%header%autowidth.spread]
+|===
+| Setting |Description | Default
+| Each B2B endpoint a| Reserved CPU space, CPU space limit, and memory capacity for each Partner Manager endpoint application. Partner Manager deploys a generic Mule app to the runtime for each endpoint protocol and direction (receive or send) combination.
+
+[NOTE]
+Partner manager deploys each AS2 and HTTPS inbound endpoint configuration as a separate Mule application. You can reuse the same endpoint configuration across multiple partners and message types.
+
+| 0.1 vCores
+| B2B API Replication Service | Reserved CPU space, CPU space limit, and memory capacity for the B2B API Replication Service. | 0.2 vCores
+| B2B Document Processing Service | Reserved CPU space, CPU space limit, and memory capacity for the B2B Document Processing Service. | 0.2 vCores
+|===
++
+For help with sizing, contact your MuleSoft Account Team. 
++
+. Click *Save*.
+
+== See Also
+
+xref:deploy-partner-manager.adoc[]

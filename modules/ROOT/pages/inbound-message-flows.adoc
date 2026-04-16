@@ -8,33 +8,33 @@ An inbound message flow does the following:
 
 The following diagram shows the components of an inbound message flow:
 
-image::pm-inbound-message-flow.png[Inbound message flow]
+image::pm-inbound-message-flow.png["A flowchart showing an inbound message flow"]
 
 [%header%autowidth.spread]
 |===
 |Callout |Setting |Description |Supported Formats or Protocols
 
-|image:pm-annotation-1.png[]|Receiving endpoint | Endpoint at which a host receives transmissions from a partner a|
+|image:pm-annotation-1.png["A circle with a number 1 inside"]|Receiving endpoint | Endpoint at which a host receives transmissions from a partner a|
 * AS2
 * FTP
 * HTTP
 * HTTPS
 * SFTP
 
-|image:pm-annotation-2.png[] |Source message type |Message type of the received message payload a|
+|image:pm-annotation-2.png["A circle with a number 2 inside"] |Source message type |Message type of the received message payload a|
 * CSV
 * EDIFACT
 * JSON
 * X12
 * XML
 
-|image:pm-annotation-3.png[] |Map |DataWeave map used to transform the source message type to the target message type a| N/A
+|image:pm-annotation-3.png["A circle with a number 3 inside"] |Map |DataWeave map used to transform the source message type to the target message type a| N/A
 
-|image:pm-annotation-4.png[] |Target message type |Format into which the DataWeave map transforms received messages a|
+|image:pm-annotation-4.png["A circle with a number 4 inside"] |Target message type |Format into which the DataWeave map transforms received messages a|
 * JSON
 * XML
 
-|image:pm-annotation-5.png[] |Target endpoint | Endpoint to which the transformed message is sent (typically, a process API)
+|image:pm-annotation-5.png["A circle with a number 5 inside"] |Target endpoint | Endpoint to which the transformed message is sent (typically, a process API)
  a|
 * FTP
 * HTTP

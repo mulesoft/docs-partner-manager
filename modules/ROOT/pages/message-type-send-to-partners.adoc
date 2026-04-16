@@ -36,7 +36,9 @@ When using a customized EDI schema, you can assign a custom name to the message 
 
 == JSON or XML
 
-Use the following settings to define JSON or XML as the format for the Send to Partners message type:
+Use the settings in the table to define JSON or XML as the format for the Receive from Partners message type.
+
+If you process cXML messages with <DOCTYPE> tags, you must set the `minMuleVersion` to 4.5.0 or higher and upgrade your runtime environment. For more information, see Partner Manager deployment settings for xref:cloudhub-deployment-settings.adoc[CloudHub], xref:cloudhub2-deployment-settings.adoc[CloudHub 2.0], and xref:rtf-deployment-settings.adoc[Runtime Fabric].
 
 [%header%autowidth.spread]
 |===
@@ -71,7 +73,7 @@ When using the customized EDI schema, you can assign a custom name to the messag
 | Message type name that Partner Manager automatically generates from the schema filename. You can modify this name.  | |Yes
 |===
 
-For an example that shows how to customize an X12 schema, see https://www.mulesoft.com/exchange/works.integration/b2b-x12-custom-schema-example[Customize EDI X12 Schema for B2B Integrations^] in Anypoint Exchange.
+For an example that shows how to customize an X12 schema, see https://www.mulesoft.com/exchange/works.integration/b2b-x12-custom-schema-example[Customize EDI X12 Schema for B2B Integrations] in Anypoint Exchange.
 
 == See Also
 

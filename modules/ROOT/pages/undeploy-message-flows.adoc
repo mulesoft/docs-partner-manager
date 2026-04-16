@@ -1,4 +1,4 @@
-== Undeploying Message Flows
+= Undeploying Message Flows
 
 Undeploying a message flow prevents future messages from being processed and enables you to recover resources that are consumed by a message flow that you no longer need.
 

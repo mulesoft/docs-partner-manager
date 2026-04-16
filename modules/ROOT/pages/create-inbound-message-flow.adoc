@@ -14,7 +14,7 @@ To create an inbound message flow:
 . Either select an existing partner from the list or select *New* to create a new partner, as described in xref:create-partner.adoc[Create a Partner].
 . Configure the receiving endpoint.
 . Configure the source message type.
-. Import the translation map.
+. Select the translation map.
 . Configure the target message type.
 . Configure the target endpoint.
 . Verify that the message flow is complete.
@@ -73,21 +73,29 @@ If the source message type is X12 or EDIFACT and your partner expects your organ
 +
 The acknowledgment is added to the message flow.
 
-[[import-map]]
-== Import the Translation Map
+If the source message type is:
 
-A translation map in an inbound message flow transforms your inbound message format to your organization's enterprise application format. Create a translation map by using DataWeave. For more information, see xref:partner-manager-maps.adoc[Translation Maps].
+* X12, select the partner and host organization's ISA (Interchange) identifiers from the dropdown menu.
 
-To import the translation map:
+* EDIFACT, select the partner and host organization's UNA (Interchange) identifiers from the dropdown menu.
+
+* CSV, JSON, or XML, select the partner and host organization's reference identifiers from the dropdown menu.
+
+To route inbound messages from partners matching any of the partner or host identifiers, select *All identifiers* from the dropdown menu. For more information about the order of precedence in inbound message routing, see xref:inbound-message-routing.adoc[Inbound Message Routing].
+
+
+== Select the Translation Map
+
+A translation map in an inbound message flow transforms your inbound message format to your organization's enterprise application format. Maps are created using DataWeave and are imported to the xref:maps.adoc[Maps] page. For more information about creating maps, see xref:partner-manager-maps.adoc[Translation Maps].
+
+To select the map:
 
 . In the message flow, expand the *Map* section.
-. Click *Import > Choose file*.
-. Navigate to the DataWeave map you want to use and click *Open*.
-. Click *Upload mapping*.
-+
-The translation map is added to the message flow.
+. Click *Select* and select the map from the table.
 
-In the translation map you develop for an inbound message flow, you can access source message attributes, which makes them available in the message payload. The attributes that you can access depend on the protocol of the source endpoint. For more information, see xref:access-source-message-attributes.adoc[Accessing Source Message Attributes]. 
+The map is added to the message flow. Only the mapping configurations that match your source and target message types are shown. Choosing a map configuration with a different source and target message type updates the corresponding message type in your message flow.
+
+In the map for an inbound message flow, you can access source message attributes, which makes them available in the message payload. The attributes that you can access depend on the protocol of the source endpoint. For more information, see xref:access-source-message-attributes.adoc[Accessing Source Message Attributes]. 
 
 [[configure-target]]
 == Configure the Target Message Type

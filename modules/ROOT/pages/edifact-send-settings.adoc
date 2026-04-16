@@ -53,7 +53,7 @@ Partner Manager applies a global control number at the partner level on the EDIF
 
 To change the initial value to maintain sequencing and avoid duplication:
 
-. Click *Change* and enter the desired initial control number.
+. Click *Change* and enter the desired initial control number, up to 14 characters.
 . Click *Save*.
 
 [NOTE] Your changes can take up to five minutes to take effect on the runtime.

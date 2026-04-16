@@ -12,7 +12,7 @@ include::partial$access-mgmt-steps-partial.adoc[]
 
 . Click *Partner Manager* and then click *Configure new environment*.
 . Select the environment and deployment target types.
-. In the *Configure a Partner Manager environment* window, configure either xref:cloudhub-deployment-settings.adoc[CloudHub deployment settings] or xref:rtf-deployment-settings.adoc[Runtime Fabric deployment settings].
+. In the *Configure a Partner Manager environment* window, configure either xref:cloudhub-deployment-settings.adoc[CloudHub 1.0 deployment settings], xref:cloudhub2-deployment-settings.adoc[CloudHub 2.0 deployment settings], or xref:rtf-deployment-settings.adoc[Runtime Fabric deployment settings].
 
 == Deploy Partner Manager Runtime Apps to an Existing Environment
 
@@ -21,7 +21,7 @@ Follow these steps to deploy Partner Manager to an existing business group envir
 include::partial$access-mgmt-steps-partial.adoc[]
 
 . Click *Partner Manager*.
-. In the *Configure a Partner Manager environment* window, configure either xref:cloudhub-deployment-settings.adoc[CloudHub deployment settings] or xref:rtf-deployment-settings.adoc[Runtime Fabric deployment settings].
+. In the *Configure a Partner Manager environment* window, configure xref:cloudhub-deployment-settings.adoc[CloudHub 1.0 deployment settings], xref:cloudhub2-deployment-settings.adoc[CloudHub 2.0 deployment settings], or xref:rtf-deployment-settings.adoc[Runtime Fabric deployment settings].
 
 == Modify Partner Manager Deployment Settings
 

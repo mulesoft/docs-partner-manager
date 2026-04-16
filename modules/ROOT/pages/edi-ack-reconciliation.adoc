@@ -41,11 +41,11 @@ Filter for transmissions based on their acknowledgment status:
 . From the transaction detail page, in the *Transmission* section, expand the *Sent to <partner name>* section.
 . Click *Review*.
 +
-image::partner-manager-review-ack.png[Review a transaction]
+image::partner-manager-review-ack.png["A transmission log that tracks all sent and received messages"]
 +
 When you review an X12 997 or EDIFACT CONTRL rejection, you see the X12 997 or EDIFACT CONTRL payload received from your partner. For example (for X12 997):
 +
-image::partner-manager-997-ack-review-payload.png[X12 997 payload received from the partner]
+image::partner-manager-997-ack-review-payload.png["X12 997 payload received from the partner"]
 +
 . Enter a review comment to indicate the action taken on the transaction’s acknowledgment status and then click *Mark reviewed*.
 . Optionally, download the X12 payload by clicking *Download*.

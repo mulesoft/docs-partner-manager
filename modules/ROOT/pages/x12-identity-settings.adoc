@@ -13,6 +13,7 @@ a|The following Qualifier types are available with Anypoint Partner Manager:
 * `02 (SCAC - Standard Carrier Alpha Code)`
 * `03 (FMC - Federal Maritime Commission)`
 * `04 (IATA - International Air Transport Association)`
+* `07 (Global Location Number (GLN))`
 * `08 (UCC EDI Number)`
 * `09 (X.121)`
 * `10 (DoD - Department of Defense Activity Address Code)`
@@ -20,11 +21,33 @@ a|The following Qualifier types are available with Anypoint Partner Manager:
 * `12 (Phone Number)`
 * `13 (UCS Code)`
 * `14 (DUNS Number and Suffix Number)`
+* `15 (Petroleum Accountants Society of Canada Company Code)`
 * `16 (DUNS Number with a Four Character Suffix)`
+* `17 (American Bankers Association (ABA) Transit Routing Number (Including Check Digit, 9 Digit))`
+* `18 (Association of American Railroads (AAR) Standard Distribution Code)`
 * `19 (EDI Council of Australia Communications ID)`
 * `20 (HIN - Health Industry Number)`
+* `21 (Integrated Postsecondary Education Data System, or (IPEDS))`
+* `22 (Federal Interagency Commission on Education, or FICE)`
+* `23 (National Center for Education Statistics Common Core of Data 12-Digit Number for Pre-K-Grade 12 Institutes, or NCES)`
+* `24 (The College Board's Admission Testing Program 4-Digit Code of Postsecondary Institutes, or ATP)`
+* `25 (ACT, Inc. 4-Digit Code of Postsecondary Institutions.)`
+* `26 (Statistics of Canada List of Postsecondary Institutions)`
+* `27 (Carrier Identification Number)`
+* `28 (Fiscal Intermediary Identification Number)`
+* `29 (Medicare Provider and Supplier Identification Number)`
 * `30 (U.S. Federal Tax Identification Number)`
+* `31 (Jurisdiction Identification Number Plus 4)`
+* `32 (U.S. Federal Employer Identification Number (FEIN))`
+* `33 (National Association of Insurance Commissioners Company Code (NAIC))`
+* `34 (Medicaid Provider and Supplier Identification Number)`
+* `35 (Statistics Canada Canadian College Student Information System Institution Codes)`
+* `36 (Statistics Canada University Student Information System Institution Codes)`
+* `37 (Society of Property Information Compilers and Analysts)`
+* `38 (The College Board and ACT, Inc. 6-Digit Code List of Secondary Institutions)`
+* `AM (Association Mexicana del Codigo de Producto (AMECOP) Communication ID)`
 * `NR (NRMA - National Retail Merchants Association)`
+* `SA (User Identification Number)`
 * `SN (Standard Address Number)`
 * `ZZ (Mutually Defined)`
 

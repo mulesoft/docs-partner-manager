@@ -85,12 +85,13 @@ You can modify the following fields for an FTP Receive from Partners or Source a
 |Field |Redeploys the Runtime Application for the Endpoint
 |Archival path |Yes
 |Endpoint name |Yes
-|Desription | No
+|Description | No
 |File name pattern |Yes
 |Host |Yes
 |Password |Yes
 |Polling frequency |Yes
 |Port | Yes
+|Character encoding override | Yes
 |Size check wait time |Yes
 |Source path |Yes
 |Username | Yes
@@ -126,6 +127,7 @@ You can modify the following fields for an SFTP Receive from Partners or Source 
 |Description | No
 |Host |Yes
 |Port | Yes
+|Character encoding override | Yes
 |Authentication type | Yes
 |Username | Yes
 |Password |Yes

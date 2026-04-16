@@ -48,6 +48,10 @@ Create SFTP receive endpoints by configuring these settings on the *<host>* or *
 | Port number of the SFTP server.
 | x
 
+| Character encoding override
+| Enables inbound endpoints to receive non UTF-8 encoded documents for XML, CSV, and X12 document types.
+| 
+
 | Authentication type
 a| Authentication method used to secure the SFTP endpoint. Values are: 
 
@@ -74,6 +78,15 @@ include::partial$sftp-endpoint-authentication-partial.adoc[]
 | Path on the SFTP server to which your partner sends the inbound files.
 | x
 
+| Skip Delete
+a| When enabled, Partner Manager keeps the source file after reading and processing.
+
+[NOTE]
+Use this configuration only when connecting to SFTP/FTP hosts that don't allow explicit file deletion after the first read. Using this configuration with other types of SFTP/FTP hosts can result in duplicate file processing.
+|
+
+| Skip empty files | Skip empty files during processing. | No
+
 | Polling Frequency
 | Frequency at which the server checks the source path for new files. The default value is `1 minute`.
 | x
@@ -96,6 +109,10 @@ To disable this feature, specify a negative number or omit the value.
 |(Applies only to endpoints that support non-EDI formats) Message type to associate with the endpoint. If you select a message type, Partner Manager processes files received via the endpoint as the selected message type, regardless of the file naming convention.
 |
 
+| Use hyphen (-) as the secondary file name delimiter to determine non-EDI message type
+| Lets you use a hyphen as the secondary file name delimiter to determine the message type from the message's file name. Only shows if the supported format type is non-EDI.
+| No
+
 |Associated reference identifier
 |(Applies only to endpoints that support non-EDI formats that are owned by partners or third-party connections.) Partner information, such as the partner ID or third-party ID.
 |
@@ -105,7 +122,11 @@ To disable this feature, specify a negative number or omit the value.
 |
 
 | Archival Path
-| Directory path on the SFTP server at which to store a copy of the file after processing.
+a| Directory path on the SFTP server at which to store a copy of the file after processing.
+
+[NOTE]
+The runtime application attempts to create the archive file up to three times. If permission or connection errors prevent Partner Manager from deleting the file, Partner Manager logs the issue in the runtime application and skips the archival step to prevent duplicate message processing.
+
 |
 |===
 
