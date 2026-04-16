@@ -19,7 +19,7 @@ To create an identifer:
 * <<x12-gs,X12 - GS>>
 * <<x12-isa,X12 - ISA>>
 . In *Identifier Value*, enter a value that uniquely names your identifier.
-. If you selected `EDIFACT-UNB` or `X12-ISA` as the identifier type, you must also select a qualifier.
+. If you selected `EDIFACT-UNB` or `X12-ISA` as the identifier type, you also need to select a qualifier.
 . Click *Create identifier*.
 
 [[as2-identifier]]
@@ -46,24 +46,24 @@ Complete these fields to configure an EDIFACT UNB identifier:
 
 |Qualifier
 |
-Qualifier type for your partner’s EDIFACT-UNB ID.
+Qualifier type for your partner's EDIFACT-UNB ID.
 |Yes
 | Identifier value
-| EDIFACT-UNB ID for your partner, which can be up to 15 characters. Your partner supplies you with the EDIFACT Interchange Sender and Receiver IDs during onboarding.
+| EDIFACT-UNB ID for your partner, which can be up to 15 characters. Your partner supplies the EDIFACT Interchange Sender and Receiver IDs during onboarding.
 | Yes
 
 |===
 
 === Reference ID
 
-Complete this field to configure to use a reference ID (DUNS number) identifier:
+Complete this field to configure a reference ID (DUNS number) identifier:
 
 [%header%autowidth.spread]
 |===
 |Setting |Description |Required
 
 |Identifier Value
-|DUNS number for your partner, which is a nine-digit number that corresponds to the sender or receiver ID. Your partner supplies you with this number during onboarding.
+|DUNS number for your partner, which is a nine-digit number that corresponds to the sender or receiver ID. Your partner supplies this number during onboarding.
 
 |Yes +
 
@@ -79,7 +79,7 @@ Complete this field to configure an X12 GS identifier:
 |Setting |Description | Required
 
 |Identifier value
-|EDI X12-GS ID for your partner, which can be up to 15 characters. Your partner supplies you with the EDI X12 Group Sender and Receiver IDs during onboarding.
+|EDI X12-GS ID for your partner, which can be up to 15 characters. Your partner supplies the EDI X12 Group Sender and Receiver IDs during onboarding.
 |Yes
 |===
 
@@ -93,7 +93,7 @@ Complete these fields to configure an X12 ISA identifier:
 |Setting |Description |Required
 
 |Qualifier
-a|One of the following:
+a|One of these qualifiers:
 
 * `01 (DUNS Number)`
 * `02 (SCAC - Standard Carrier Alpha Code)`
@@ -140,7 +140,7 @@ a|One of the following:
 |Yes
 
 |Identifier value
-|EDI X12-ISA ID for your partner, which can be up to 15 characters. Your partner supplies you with the EDI X12 Interchange Sender and Receiver IDs.
+|EDI X12-ISA ID for your partner, which can be up to 15 characters. Your partner supplies the EDI X12 Interchange Sender and Receiver IDs.
 
 |Yes +
 
@@ -148,11 +148,11 @@ a|One of the following:
 
 == Delete Identifiers
 
-You can delete identifiers that are no longer used in a message flow. Before you delete an identifier, consider the following:
+You can delete identifiers that are no longer used in a message flow. Review these considerations prior to deleting an identifier:
 
 * You can't delete the last host identifier of its type.
-* Deleting an existing host or partner identifier impacts the identification and routing of B2B messages to the associated partner.
-* If you must replace the identifier with another identifier, record the existing identifier's value and qualifier type.
+* Deleting an existing host or partner identifier affects the identification and routing of B2B messages to the associated partner.
+* If you replace an identifier with another identifier, record the existing identifier's value and qualifier type.
 
 To delete an identifier:
 
@@ -177,15 +177,15 @@ If your backend application sends outbound transactions to partners on behalf of
 
 In this example:
 
-* An outbound purchase order XML message from your ERP system to your partner, Mythical Supplier, has the following content in the payload:
+* An outbound purchase order XML message from your ERP system to your partner, Mythical Supplier, has this content in the payload:
 +
 `<VendorName>MYTHICAL SUPPLIER, LLC</VendorName>`
 +
-* An outbound payment remittance advice JSON message from your financial system to the same partner has the following content in the payload:
+* An outbound payment remittance advice JSON message from your financial system to the same partner has this content in the payload:
 +
 `"PayeeName": "MYTHICAL ENTERPRISES"`
 
-For Partner Manager to route these outbound transactions to the appropriate message flows for Mythical Supplier, you must add these values as partner reference IDs to the partner’s profile page. To do this, create a new identifier and select the type as *Reference ID*.
+For Partner Manager to route these outbound transactions to the appropriate message flows for Mythical Supplier, add these values as partner reference IDs to the partner's profile page. Create a new identifier and select the type as *Reference ID*.
 
 == See Also
 
