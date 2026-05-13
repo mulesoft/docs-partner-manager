@@ -1,0 +1,131 @@
+= Using Lookup Tables in DataWeave
+
+Use DataWeave lookup utility functions to retrieve values from Partner Manager lookup tables during map execution.
+
+To call lookup tables from DataWeave, import the lookup utilities module:
+
+[source,dwl]
+----
+import * from modules::apmlookuputils
+----
+
+== Composite Key Lookup
+
+Function: `apmCompositeKeyLookup(tableName, lookupObject, failIfNoMatchFound)`
+
+Parameters:
+
+* `tableName` (String, required): Lookup table name.
+* `lookupObject` (Object, required): Key-value pairs where each key is a table column name and each value is the value to match.
+* `failIfNoMatchFound` (Boolean, optional, default `true`): If `false`, the function returns empty data when no match is found.
+
+Response:
+
+* `status` (String)
+* `errorMessage` (String)
+* `data` (Object): Matching row data.
+
+Example:
+
+[source,dwl]
+----
+%dw 2.0
+output application/json
+import * from modules::apmlookuputils
+---
+apmCompositeKeyLookup(
+  "B2B-Customer-Order-Profile",
+  {"PARTNER_ID": "PARTNER_001", "CUSTOMER_NAME": "ACME_RETAIL"},
+  true
+)
+----
+
+== Cross-Reference Lookup
+
+Function: `apmCrossReferenceLookup(tableName, columnName, columnValue, failIfNoMatchFound)`
+
+Parameters:
+
+* `tableName` (String, required): Lookup table name.
+* `columnName` (String, required): Key column name.
+* `columnValue` (String, required): Value to search in the key column.
+* `failIfNoMatchFound` (Boolean, optional, default `true`): If `false`, the function returns empty data when no match is found.
+
+Response:
+
+* `status` (String)
+* `errorMessage` (String)
+* `data` (Object): Matching row data.
+
+Example:
+
+[source,dwl]
+----
+%dw 2.0
+output application/json
+import * from modules::apmlookuputils
+---
+apmCrossReferenceLookup("Item Code Mapping", "Internal SKU", "SKU-5520", true)
+----
+
+== Generic Lookup
+
+Function: `apmGenericLookup(tableName, failIfNoMatchFound)`
+
+Parameters:
+
+* `tableName` (String, required): Lookup table name.
+* `failIfNoMatchFound` (Boolean, optional, default `true`): If `false`, the function returns empty data when no match is found.
+
+Response:
+
+* `status` (String)
+* `errorMessage` (String)
+* `data` (Array<Object>): Entire table data.
+
+Example:
+
+[source,dwl]
+----
+%dw 2.0
+output application/json
+import * from modules::apmlookuputils
+---
+apmGenericLookup("Payment Terms Mapping", true)
+----
+
+== Generic Lookup with Filter
+
+Function: `apmGenericLookupWithFilter(tableName, lookupObject, failIfNoMatchFound)`
+
+Parameters:
+
+* `tableName` (String, required): Lookup table name.
+* `lookupObject` (Object, required): Key-value pairs used as filters.
+* `failIfNoMatchFound` (Boolean, optional, default `true`): If `false`, the function returns empty data when no match is found.
+
+Response:
+
+* `status` (String)
+* `errorMessage` (String)
+* `data` (Array<Object>): One or more rows matching the provided filters.
+
+Example:
+
+[source,dwl]
+----
+%dw 2.0
+output application/json
+import * from modules::apmlookuputils
+---
+apmGenericLookupWithFilter(
+  "Payment Terms Mapping",
+  {"Internal Terms Code": "NET30", "Salesforce Payment Term": "Net 30"},
+  true
+)
+----
+
+[TIP]
+If a transformation requires multiple lookups from the same table, retrieve table data once with `apmGenericLookup` and then filter locally in DataWeave.
+
+For lookup table concepts and type selection guidance, see xref:lookup-tables-overview.adoc[].
