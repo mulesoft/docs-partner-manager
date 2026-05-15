@@ -3,7 +3,7 @@
 Create lookup tables in Partner Manager to support value translation across systems. For an overview of lookup table types and benefits, see xref:lookup-tables-overview.adoc[].
 
 [NOTE]
-Each lookup results in an Object Store v2 call. If you anticipate processing a high volume of transactions that use lookup tables, you'll need an Object Store v2 premium subscription. This removes the standard 10 TPS cap, making sure your message flows remain fast and reliable during peak processing times. For more information about rate limiting, see xref:object-store::osv2-usage.adoc[].
+Each lookup results in an Object Store v2 call. If you anticipate processing a high volume of transactions that use lookup tables, consider an Object Store v2 premium subscription. This subscription level removes the standard 10 TPS cap, making sure your message flows remain fast and reliable during peak processing times. For more information about rate limiting, see xref:object-store::osv2-usage.adoc[].
 
 == Create a Lookup Table
 
@@ -38,7 +38,7 @@ To add a row, click *Add Row* and enter up to 200 characters for the value in ea
 [NOTE]
 Duplicate values aren't permitted in key and unique columns.
 
-For DataWeave function reference and examples, see xref:lookup-tables-dataweave.adoc[].
+For DataWeave functions and examples, see xref:lookup-tables-dataweave.adoc[].
 
 == Import Data from a CSV File
 
