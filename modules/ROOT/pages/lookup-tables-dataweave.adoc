@@ -13,17 +13,46 @@ import * from modules::apmlookuputils
 
 Function: `apmCompositeKeyLookup(tableName, lookupObject, failIfNoMatchFound)`
 
-Parameters:
+=== Parameters
 
-* `tableName` (String, required): Lookup table name.
-* `lookupObject` (Object, required): Key-value pairs where each key is a table column name and each value is the value to match.
-* `failIfNoMatchFound` (Boolean, optional, default `true`): If `false`, the function returns empty data when no match is found.
+[%header,cols="1,1,1,3"]
+|===
+|Parameter |Type |Required |Description
 
-Response:
+|`tableName`
+|String
+|Yes
+|Lookup table name.
 
-* `status` (String)
-* `errorMessage` (String)
-* `data` (Object): Matching row data.
+|`lookupObject`
+|Object
+|Yes
+|Key-value pairs where each key is a table column name and each value is the value to match.
+
+|`failIfNoMatchFound`
+|Boolean (default `true`)
+|No
+|If `false`, the function returns empty data when no match is found.
+|===
+
+=== Response
+
+[%header,cols="1,1,3"]
+|===
+|Field |Type |Description
+
+|`status`
+|String
+|Lookup operation status.
+
+|`errorMessage`
+|String
+|Error details when the operation fails.
+
+|`data`
+|Object
+|Matching row data.
+|===
 
 Example:
 
@@ -44,18 +73,51 @@ apmCompositeKeyLookup(
 
 Function: `apmCrossReferenceLookup(tableName, columnName, columnValue, failIfNoMatchFound)`
 
-Parameters:
+=== Parameters
 
-* `tableName` (String, required): Lookup table name.
-* `columnName` (String, required): Key column name.
-* `columnValue` (String, required): Value to search in the key column.
-* `failIfNoMatchFound` (Boolean, optional, default `true`): If `false`, the function returns empty data when no match is found.
+[%header,cols="1,1,1,3"]
+|===
+|Parameter |Type |Required |Description
 
-Response:
+|`tableName`
+|String
+|Yes
+|Lookup table name.
 
-* `status` (String)
-* `errorMessage` (String)
-* `data` (Object): Matching row data.
+|`columnName`
+|String
+|Yes
+|Key column name.
+
+|`columnValue`
+|String
+|Yes
+|Value to search in the key column.
+
+|`failIfNoMatchFound`
+|Boolean (default `true`)
+|No
+|If `false`, the function returns empty data when no match is found.
+|===
+
+=== Response
+
+[%header,cols="1,1,3"]
+|===
+|Field |Type |Description
+
+|`status`
+|String
+|Lookup operation status.
+
+|`errorMessage`
+|String
+|Error details when the operation fails.
+
+|`data`
+|Object
+|Matching row data.
+|===
 
 Example:
 
@@ -72,16 +134,41 @@ apmCrossReferenceLookup("Item Code Mapping", "Internal SKU", "SKU-5520", true)
 
 Function: `apmGenericLookup(tableName, failIfNoMatchFound)`
 
-Parameters:
+=== Parameters
 
-* `tableName` (String, required): Lookup table name.
-* `failIfNoMatchFound` (Boolean, optional, default `true`): If `false`, the function returns empty data when no match is found.
+[%header,cols="1,1,1,3"]
+|===
+|Parameter |Type |Required |Description
 
-Response:
+|`tableName`
+|String
+|Yes
+|Lookup table name.
 
-* `status` (String)
-* `errorMessage` (String)
-* `data` (Array<Object>): Entire table data.
+|`failIfNoMatchFound`
+|Boolean (default `true`)
+|No
+|If `false`, the function returns empty data when no match is found.
+|===
+
+=== Response
+
+[%header,cols="1,1,3"]
+|===
+|Field |Type |Description
+
+|`status`
+|String
+|Lookup operation status.
+
+|`errorMessage`
+|String
+|Error details when the operation fails.
+
+|`data`
+|Array<Object>
+|Entire table data.
+|===
 
 Example:
 
@@ -98,17 +185,46 @@ apmGenericLookup("Payment Terms Mapping", true)
 
 Function: `apmGenericLookupWithFilter(tableName, lookupObject, failIfNoMatchFound)`
 
-Parameters:
+=== Parameters
 
-* `tableName` (String, required): Lookup table name.
-* `lookupObject` (Object, required): Key-value pairs used as filters.
-* `failIfNoMatchFound` (Boolean, optional, default `true`): If `false`, the function returns empty data when no match is found.
+[%header,cols="1,1,1,3"]
+|===
+|Parameter |Type |Required |Description
 
-Response:
+|`tableName`
+|String
+|Yes
+|Lookup table name.
 
-* `status` (String)
-* `errorMessage` (String)
-* `data` (Array<Object>): One or more rows matching the provided filters.
+|`lookupObject`
+|Object
+|Yes
+|Key-value pairs used as filters.
+
+|`failIfNoMatchFound`
+|Boolean (default `true`)
+|No
+|If `false`, the function returns empty data when no match is found.
+|===
+
+=== Response
+
+[%header,cols="1,1,3"]
+|===
+|Field |Type |Description
+
+|`status`
+|String
+|Lookup operation status.
+
+|`errorMessage`
+|String
+|Error details when the operation fails.
+
+|`data`
+|Array<Object>
+|One or more rows matching the provided filters.
+|===
 
 Example:
 

@@ -1,8 +1,8 @@
 = Configuring and Managing Lookup Tables
 
-Lookup tables are centralized reference data used to translate values between systems in Partner Manager mappings. They keep inbound and outbound transformations consistent, reduce repeated mapping logic, and make translation updates easier because table data is managed separately from map definitions.
+Lookup tables are centralized reference values that mappings use to translate data between systems in Partner Manager. They help you keep inbound and outbound transformations consistent and avoid repeating translation logic in each map.
 
-Use lookup tables when mappings depend on reusable value translation, such as partner-specific codes, internal IDs, or system-specific terminology. This approach improves maintainability, supports bidirectional translation scenarios, and helps scale mapping operations as partner and system values evolve.
+Use lookup tables when mappings depend on reusable code or ID translations across partners and systems. This approach simplifies updates, supports bidirectional translation scenarios, and scales as integrations grow.
 
 == Lookup Table Types
 
@@ -28,7 +28,7 @@ Result: zero, one, or many matching rows.
 
 == View and Search Lookup Tables
 
-To access lookup tables, select *Lookup Tables* from the Partner Manager sidebar. You can search for a lookup table by name or description and filter by type.
+To access lookup tables, select *Lookup Tables* from the Partner Manager sidebar. You can search by name or description and filter by type.
 
 == Lookup Table Limitations
 
@@ -46,5 +46,5 @@ Each lookup results in an Object Store v2 call. If you anticipate high transacti
 
 == Next Steps
 
-* To create and manage lookup tables, see xref:lookup-tables-create.adoc[].
+* To create lookup tables, see xref:lookup-tables-create.adoc[].
 * To use lookup tables in DataWeave mappings, see xref:lookup-tables-dataweave.adoc[].

@@ -1,6 +1,6 @@
-= Creating and Managing Lookup Tables
+= Creating Lookup Tables
 
-Create and manage lookup tables in Partner Manager to support value translation across systems. For an overview of lookup table types and benefits, see xref:lookup-tables-overview.adoc[].
+Create lookup tables in Partner Manager to support value translation across systems. For an overview of lookup table types and benefits, see xref:lookup-tables-overview.adoc[].
 
 [NOTE]
 Each lookup results in an Object Store v2 call. If you anticipate processing a high volume of transactions that use lookup tables, you'll need an Object Store v2 premium subscription. This removes the standard 10 TPS cap, making sure your message flows remain fast and reliable during peak processing times. For more information about rate limiting, see xref:object-store::osv2-usage.adoc[].
@@ -11,7 +11,7 @@ To create a lookup table:
 
 . From the Partner Manager sidebar, select *Lookup Tables*.
 . Click *New Lookup Table* and select *Composite Key Lookup* or *Cross-Reference Lookup*.
-. Enter a unique name with no spaces and a maximum of 50 characters. Names can include _ and - characters.
+. Enter a unique name with no spaces and a maximum of 50 characters. Names can include *_* and *-* characters.
 . Optionally add a description.
 . Click *Next*.
 . Optionally enable generic lookup so that searches can use any combination of columns to find one or more matching rows.
@@ -35,6 +35,7 @@ After creating a lookup table, you can add up to 10,000 rows.
 
 To add a row, click *Add Row* and enter up to 200 characters for the value in each column. New rows are added to the top of the lookup table.
 
+[NOTE]
 Duplicate values aren't permitted in key and unique columns.
 
 For DataWeave function reference and examples, see xref:lookup-tables-dataweave.adoc[].
