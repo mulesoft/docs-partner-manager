@@ -6,12 +6,38 @@ To call lookup tables from DataWeave, import the lookup utilities module:
 
 [source,dwl]
 ----
-import * from modules::apmlookuputils
+import * from modules::b2blookuputils
 ----
+
+== Function Compatibility by Lookup Table Type
+
+Lookup functions are type-specific and can't be used interchangeably.
+
+[%header,cols="2,2"]
+|===
+|Function |Supported table type
+
+|`b2bCompositeKeyLookup`
+|Composite Key Lookup only
+
+|`b2bCrossReferenceLookup`
+|Cross-Reference Lookup only
+
+|`b2bGenericLookup`
+|Generic-enabled tables only
+
+|`b2bGenericLookupWithFilter`
+|Generic-enabled tables only
+|===
+
+[IMPORTANT]
+If a function is called with an unsupported table type, the lookup call fails.
 
 == Composite Key Lookup
 
-Function: `apmCompositeKeyLookup(tableName, lookupObject, failIfNoMatchFound)`
+Function: `b2bCompositeKeyLookup(tableName, lookupObject, failIfNoMatchFound)`
+
+Use this function only with tables of type *Composite Key Lookup*.
 
 === Parameters
 
@@ -60,9 +86,9 @@ Example:
 ----
 %dw 2.0
 output application/json
-import * from modules::apmlookuputils
+import * from modules::b2blookuputils
 ---
-apmCompositeKeyLookup(
+b2bCompositeKeyLookup(
   "B2B-Customer-Order-Profile",
   {"PARTNER_ID": "PARTNER_001", "CUSTOMER_NAME": "ACME_RETAIL"},
   true
@@ -71,7 +97,9 @@ apmCompositeKeyLookup(
 
 == Cross-Reference Lookup
 
-Function: `apmCrossReferenceLookup(tableName, columnName, columnValue, failIfNoMatchFound)`
+Function: `b2bCrossReferenceLookup(tableName, columnName, columnValue, failIfNoMatchFound)`
+
+Use this function only with tables of type *Cross-Reference Lookup*.
 
 === Parameters
 
@@ -125,14 +153,16 @@ Example:
 ----
 %dw 2.0
 output application/json
-import * from modules::apmlookuputils
+import * from modules::b2blookuputils
 ---
-apmCrossReferenceLookup("Item Code Mapping", "Internal SKU", "SKU-5520", true)
+b2bCrossReferenceLookup("Item Code Mapping", "Internal SKU", "SKU-5520", true)
 ----
 
 == Generic Lookup
 
-Function: `apmGenericLookup(tableName, failIfNoMatchFound)`
+Function: `b2bGenericLookup(tableName, failIfNoMatchFound)`
+
+Use this function only with tables where generic lookup is enabled.
 
 === Parameters
 
@@ -176,14 +206,16 @@ Example:
 ----
 %dw 2.0
 output application/json
-import * from modules::apmlookuputils
+import * from modules::b2blookuputils
 ---
-apmGenericLookup("Payment Terms Mapping", true)
+b2bGenericLookup("Payment Terms Mapping", true)
 ----
 
 == Generic Lookup with Filter
 
-Function: `apmGenericLookupWithFilter(tableName, lookupObject, failIfNoMatchFound)`
+Function: `b2bGenericLookupWithFilter(tableName, lookupObject, failIfNoMatchFound)`
+
+Use this function only with tables where generic lookup is enabled.
 
 === Parameters
 
@@ -232,9 +264,9 @@ Example:
 ----
 %dw 2.0
 output application/json
-import * from modules::apmlookuputils
+import * from modules::b2blookuputils
 ---
-apmGenericLookupWithFilter(
+b2bGenericLookupWithFilter(
   "Payment Terms Mapping",
   {"Internal Terms Code": "NET30", "Salesforce Payment Term": "Net 30"},
   true
@@ -242,6 +274,6 @@ apmGenericLookupWithFilter(
 ----
 
 [TIP]
-If a transformation requires multiple lookups from the same table, retrieve table data once with `apmGenericLookup` and then filter locally in DataWeave.
+If a transformation requires multiple lookups from the same table, retrieve table data once with `b2bGenericLookup` and then filter locally in DataWeave.
 
 For lookup table concepts and type selection guidance, see xref:lookup-tables-overview.adoc[].
