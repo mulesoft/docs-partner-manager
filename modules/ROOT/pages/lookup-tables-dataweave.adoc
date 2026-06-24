@@ -155,7 +155,7 @@ Example:
 output application/json
 import * from modules::b2blookuputils
 ---
-b2bCrossReferenceLookup("Item Code Mapping", "Internal SKU", "SKU-5520", true)
+b2bCrossReferenceLookup("Item_Code_Mapping", "Internal_SKU", "SKU-5520", true)
 ----
 
 == Generic Lookup
@@ -208,7 +208,7 @@ Example:
 output application/json
 import * from modules::b2blookuputils
 ---
-b2bGenericLookup("Payment Terms Mapping", true)
+b2bGenericLookup("Payment_Terms_Mapping", true)
 ----
 
 == Generic Lookup with Filter
@@ -267,8 +267,8 @@ output application/json
 import * from modules::b2blookuputils
 ---
 b2bGenericLookupWithFilter(
-  "Payment Terms Mapping",
-  {"Internal Terms Code": "NET30", "Salesforce Payment Term": "Net 30"},
+  "Payment_Terms_Mapping",
+  {"Internal_Terms_Code": "NET30", "Salesforce_Payment_Term": "Net 30"},
   true
 )
 ----
