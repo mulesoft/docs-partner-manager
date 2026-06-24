@@ -10,13 +10,13 @@ These lookup table types are available:
 
 * *Composite Key Lookup*
 +
-Use composite key lookup when the result depends on multiple key columns together. This type uses AND logic, so all required key values must be provided for a match.
+Use composite key lookup when the result depends on one or more key columns together. This type uses AND logic, so all required key values must be provided for a match.
 +
 Result: zero or one matching row.
 
 * *Cross-Reference Lookup*
 +
-Use cross-reference lookup when a row can be identified by any one of multiple key columns. This type uses OR logic across key columns.
+Use cross-reference lookup when a row can be identified by any one of one or more key columns. This type uses OR logic across key columns.
 +
 Result: zero or one matching row.
 
