@@ -99,7 +99,7 @@ b2bCompositeKeyLookup(
 
 Function: `b2bCrossReferenceLookup(tableName, columnName, columnValue, failIfNoMatchFound)`
 
-Use this function only with tables of type *Cross-Reference Lookup*.
+Use this function only with *Cross-Reference Lookup* table types.
 
 === Parameters
 
