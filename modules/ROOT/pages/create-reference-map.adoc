@@ -26,6 +26,9 @@ a|
 ** All Source at Host message types
 
 You can hardcode this value as a static value, depending on your data processing and routing needs.
+
+[NOTE]
+While this schema allows `hostReferenceId` to be nullable to accommodate all message types, the field remains mandatory for Receive from Partners flows using JSON, CSV, or XML formats. Refer to the field requirements table above for message-type-specific requirements.
 | businessDocumentKey.
 |Key reference value, such as `Order Number` or `Invoice number`
 | Optional
