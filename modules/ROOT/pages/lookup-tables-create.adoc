@@ -55,4 +55,6 @@ To export a lookup table, click *Export CSV*. The lookup table is exported and c
 
 == Delete a Lookup Table
 
-To delete a lookup table, click *Delete*. Indicate that you understand that this action can't be undone and click *Delete*.
+To delete a lookup table:
+. Click *Delete*. 
+. Indicate that you understand that this action can't be undone and click *Delete*.
