@@ -44,7 +44,9 @@ For DataWeave functions and examples, see xref:lookup-tables-dataweave.adoc[].
 To import data from a CSV file:
 
 . Click *Import CSV* and select the file.
-. Choose to append the data to the existing lookup table or replace the existing lookup table. If you replace the lookup table, the existing data is deleted and can't be recovered.
+. Append the data to the existing lookup table or replace the existing lookup table. 
++
+If you replace the lookup table, the existing data is deleted and can't be recovered.
 . Click *Import*.
 
 == Export a Lookup Table
