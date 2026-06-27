@@ -1,0 +1,61 @@
+= Creating Lookup Tables
+
+Create lookup tables in Partner Manager to support value translation across systems. For an overview of lookup table types and benefits, see xref:lookup-tables-overview.adoc[].
+
+[NOTE]
+Each lookup results in an Object Store v2 call. If you anticipate processing a high volume of transactions that use lookup tables, consider an Object Store v2 premium subscription. This subscription level removes the standard 10 TPS cap, making sure your message flows remain fast and reliable during peak processing times. For more information about rate limiting, see xref:object-store::osv2-usage.adoc[].
+
+== Create a Lookup Table
+
+To create a lookup table:
+
+. From the Partner Manager sidebar, select *Lookup Tables*.
+. Click *New Lookup Table* and select *Composite Key Lookup* or *Cross-Reference Lookup*.
+. Enter a unique name with no spaces and a maximum of 50 characters. Names can include *_* and *-* characters.
+. Optionally add a description.
+. Click *Next*.
+. Optionally enable generic lookup so that searches can use any combination of columns to find one or more matching rows.
+. Configure up to 10 columns. Give each column a unique name and use no more than 30 characters. For both table types, the *Mandatory* and *Key* options are selected by default for the first column and can't be unselected. For cross-reference lookup tables, both options are also selected by default for the second column.
+. For each column, configure options as needed:
++
+* *Mandatory* - Column value is required when you add or import rows.
+* *Key* - Column can be used as a lookup input.
+. Click *Save*.
+
+[NOTE]
+Columns can't be added or modified after the table has at least one row.
+
+[NOTE]
+If generic lookup is enabled, table limits are lower. A generic lookup table supports up to 1,000 rows and 6 columns.
+
+== Add Rows to a Lookup Table
+
+After creating a lookup table, you can add up to 10,000 rows.
+
+To add a row, click *Add Row* and enter up to 200 characters for the value in each column. New rows are added to the top of the lookup table.
+
+[NOTE]
+Duplicate values aren't permitted in key columns.
+
+For DataWeave functions and examples, see xref:lookup-tables-dataweave.adoc[].
+
+== Import Data from a CSV File
+
+To import data from a CSV file:
+
+. Click *Import CSV* and select the file.
+. Append the data to the existing lookup table or replace the existing lookup table. 
++
+If you replace the lookup table, the existing data is deleted and can't be recovered.
+. Click *Import*.
+
+== Export a Lookup Table
+
+To export a lookup table, click *Export CSV*. The lookup table is exported and can then be downloaded as a CSV file.
+
+== Delete a Lookup Table
+
+To delete a lookup table:
+
+. Click *Delete*. 
+. Indicate that you understand that this action can't be undone and click *Delete*.

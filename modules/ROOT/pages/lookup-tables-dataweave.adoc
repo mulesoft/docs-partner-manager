@@ -1,0 +1,279 @@
+= Using Lookup Tables in DataWeave
+
+Use DataWeave lookup utility functions to retrieve values from Partner Manager lookup tables during map execution.
+
+To call lookup tables from DataWeave, import the lookup utilities module:
+
+[source,dwl]
+----
+import * from modules::b2blookuputils
+----
+
+== Function Compatibility by Lookup Table Type
+
+Lookup functions are type-specific and can't be used interchangeably.
+
+[%header,cols="2,2"]
+|===
+|Function |Supported table type
+
+|`b2bCompositeKeyLookup`
+|Composite Key Lookup only
+
+|`b2bCrossReferenceLookup`
+|Cross-Reference Lookup only
+
+|`b2bGenericLookup`
+|Generic-enabled tables only
+
+|`b2bGenericLookupWithFilter`
+|Generic-enabled tables only
+|===
+
+[IMPORTANT]
+If a function is called with an unsupported table type, the lookup call fails.
+
+== Composite Key Lookup
+
+Function: `b2bCompositeKeyLookup(tableName, lookupObject, failIfNoMatchFound)`
+
+Use this function only with *Composite Key Lookup* table types.
+
+=== Parameters
+
+[%header,cols="1,1,1,3"]
+|===
+|Parameter |Type |Required |Description
+
+|`tableName`
+|String
+|Yes
+|Lookup table name.
+
+|`lookupObject`
+|Object
+|Yes
+|Key-value pairs where each key is a table column name and each value is the value to match.
+
+|`failIfNoMatchFound`
+|Boolean (default `true`)
+|No
+|If `false`, the function returns empty data when no match is found.
+|===
+
+=== Response
+
+[%header,cols="1,1,3"]
+|===
+|Field |Type |Description
+
+|`status`
+|String
+|Lookup operation status.
+
+|`errorMessage`
+|String
+|Error details when the operation fails.
+
+|`data`
+|Object
+|Matching row data.
+|===
+
+Example:
+
+[source,dwl]
+----
+%dw 2.0
+output application/json
+import * from modules::b2blookuputils
+---
+b2bCompositeKeyLookup(
+  "B2B-Customer-Order-Profile",
+  {"PARTNER_ID": "PARTNER_001", "CUSTOMER_NAME": "ACME_RETAIL"},
+  true
+)
+----
+
+== Cross-Reference Lookup
+
+Function: `b2bCrossReferenceLookup(tableName, columnName, columnValue, failIfNoMatchFound)`
+
+Use this function only with *Cross-Reference Lookup* table types.
+
+=== Parameters
+
+[%header,cols="1,1,1,3"]
+|===
+|Parameter |Type |Required |Description
+
+|`tableName`
+|String
+|Yes
+|Lookup table name.
+
+|`columnName`
+|String
+|Yes
+|Key column name.
+
+|`columnValue`
+|String
+|Yes
+|Value to search in the key column.
+
+|`failIfNoMatchFound`
+|Boolean (default `true`)
+|No
+|If `false`, the function returns empty data when no match is found.
+|===
+
+=== Response
+
+[%header,cols="1,1,3"]
+|===
+|Field |Type |Description
+
+|`status`
+|String
+|Lookup operation status.
+
+|`errorMessage`
+|String
+|Error details when the operation fails.
+
+|`data`
+|Object
+|Matching row data.
+|===
+
+Example:
+
+[source,dwl]
+----
+%dw 2.0
+output application/json
+import * from modules::b2blookuputils
+---
+b2bCrossReferenceLookup("Item_Code_Mapping", "Internal_SKU", "SKU-5520", true)
+----
+
+== Generic Lookup
+
+Function: `b2bGenericLookup(tableName, failIfNoMatchFound)`
+
+Use this function only with tables where generic lookup is enabled.
+
+=== Parameters
+
+[%header,cols="1,1,1,3"]
+|===
+|Parameter |Type |Required |Description
+
+|`tableName`
+|String
+|Yes
+|Lookup table name.
+
+|`failIfNoMatchFound`
+|Boolean (default `true`)
+|No
+|If `false`, the function returns empty data when no match is found.
+|===
+
+=== Response
+
+[%header,cols="1,1,3"]
+|===
+|Field |Type |Description
+
+|`status`
+|String
+|Lookup operation status.
+
+|`errorMessage`
+|String
+|Error details when the operation fails.
+
+|`data`
+|Array<Object>
+|Entire table data.
+|===
+
+Example:
+
+[source,dwl]
+----
+%dw 2.0
+output application/json
+import * from modules::b2blookuputils
+---
+b2bGenericLookup("Payment_Terms_Mapping", true)
+----
+
+== Generic Lookup with Filter
+
+Function: `b2bGenericLookupWithFilter(tableName, lookupObject, failIfNoMatchFound)`
+
+Use this function only with tables where generic lookup is enabled.
+
+=== Parameters
+
+[%header,cols="1,1,1,3"]
+|===
+|Parameter |Type |Required |Description
+
+|`tableName`
+|String
+|Yes
+|Lookup table name.
+
+|`lookupObject`
+|Object
+|Yes
+|Key-value pairs used as filters.
+
+|`failIfNoMatchFound`
+|Boolean (default `true`)
+|No
+|If `false`, the function returns empty data when no match is found.
+|===
+
+=== Response
+
+[%header,cols="1,1,3"]
+|===
+|Field |Type |Description
+
+|`status`
+|String
+|Lookup operation status.
+
+|`errorMessage`
+|String
+|Error details when the operation fails.
+
+|`data`
+|Array<Object>
+|One or more rows matching the provided filters.
+|===
+
+Example:
+
+[source,dwl]
+----
+%dw 2.0
+output application/json
+import * from modules::b2blookuputils
+---
+b2bGenericLookupWithFilter(
+  "Payment_Terms_Mapping",
+  {"Internal_Terms_Code": "NET30", "Salesforce_Payment_Term": "Net 30"},
+  true
+)
+----
+
+[TIP]
+If a transformation requires multiple lookups from the same table, retrieve table data once with `b2bGenericLookup` and then filter locally in DataWeave.
+
+For lookup table concepts and type selection guidance, see xref:lookup-tables-overview.adoc[].

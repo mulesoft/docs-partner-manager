@@ -1,0 +1,50 @@
+= Configuring and Managing Lookup Tables
+
+Lookup tables are centralized reference values that mappings use to translate data between systems in Partner Manager. They help you keep inbound and outbound transformations consistent and avoid repeating translation logic in each map.
+
+Use lookup tables when mappings depend on reusable code or ID translations across partners and systems. This approach simplifies updates, supports bidirectional translation scenarios, and scales as integrations grow.
+
+== Lookup Table Types
+
+These lookup table types are available:
+
+* *Composite Key Lookup*
++
+Use composite key lookup when the result depends on one or more key columns together. This type uses AND logic, so all required key values must be provided for a match.
++
+Result: zero or one matching row.
+
+* *Cross-Reference Lookup*
++
+Use cross-reference lookup when a row can be identified by any one of one or more key columns. This type uses OR logic across key columns.
++
+Result: zero or one matching row.
+
+* *Generic Lookup (optional)*
++
+Enable generic lookup when you need flexible filtering by one or more columns and might need multiple matching rows.
++
+Result: zero, one, or many matching rows.
+
+== View and Search Lookup Tables
+
+To access lookup tables, select *Lookup Tables* from the Partner Manager sidebar. You can search by name or description and filter by type.
+
+== Lookup Table Limitations
+
+Lookup table limits by environment include:
+
+* Maximum lookup tables: 200
+* Maximum columns per table: 10
+* Maximum rows per table: 10,000
+* Maximum lookup table name length: 50 characters
+* Maximum column name length: 30 characters
+* Maximum value length per cell: 200 characters
+
+[NOTE]
+Each lookup results in an Object Store v2 call. If you anticipate high transaction volume, consider an Object Store v2 premium subscription. For details, see xref:object-store::osv2-usage.adoc[].
+
+== Next Steps
+
+* To create lookup tables, see xref:lookup-tables-create.adoc[].
+* To use lookup tables in DataWeave mappings, see xref:lookup-tables-dataweave.adoc[].
