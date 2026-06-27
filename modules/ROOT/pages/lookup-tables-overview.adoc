@@ -34,7 +34,7 @@ To access lookup tables, select *Lookup Tables* from the Partner Manager sidebar
 
 Lookup table limits by environment include:
 
-* Maximum lookup tables: 200
+* Maximum lookup tables: 100
 * Maximum columns per table: 10
 * Maximum rows per table: 10,000
 * Maximum lookup table name length: 50 characters
