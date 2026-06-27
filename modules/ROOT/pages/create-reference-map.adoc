@@ -26,6 +26,9 @@ a|
 ** All Source at Host message types
 
 You can hardcode this value as a static value, depending on your data processing and routing needs.
+
+[NOTE]
+The JSON schema allows `hostReferenceId` to be null because it's shared across message types. For Receive from Partners message types that use JSON, CSV, or XML, `hostReferenceId` is still required.
 | businessDocumentKey.
 |Key reference value, such as `Order Number` or `Invoice number`
 | Optional
