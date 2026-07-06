@@ -39,8 +39,7 @@ Partner Manager deploys AS2 and HTTP inbound endpoints on CloudHub 2.0 with a HT
 . On the *Advanced* tab, select `Accept HTTP` in the *HTTP requests* field.
 . Optionally, configure Network-Level Ingress Rules to allow HTTP requests from specific IP addresses.
 * To keep a custom public ingress URL stable across redeployments for AS2 or HTTP inbound endpoints, enable *Preserve Public URL of Ingress application* in the endpoint settings.
-+
-If this option isn't enabled, Partner Manager can regenerate the public ingress URL when redeploying the endpoint or message flow.
+* If this option isn't enabled, Partner Manager can regenerate the public ingress URL when redeploying the endpoint or message flow.
 
 == External URLs and Mapping Rules for Deployed Receive Endpoints
 
