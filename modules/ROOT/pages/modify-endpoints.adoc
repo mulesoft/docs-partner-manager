@@ -172,6 +172,7 @@ You can modify the following fields for an HTTP Receive from Partners or Source 
 |Description | Yes
 |Endpoint name | Yes
 |Manage with API Manager and API Auto discovery ID | Yes 
+|Preserve Public URL of Ingress application | Yes
 |===
 
 [[http-send]]
@@ -203,6 +204,7 @@ You can modify the following fields for an HTTPS Receive from Partners or Source
 |Description | Yes
 |Endpoint name | Yes
 |Manage with API Manager and API Auto discovery ID | Yes
+|Preserve Public URL of Ingress application | Yes
 |===
 
 [[https-send]]
