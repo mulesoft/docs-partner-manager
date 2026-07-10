@@ -1,7 +1,7 @@
 = Accessing Source Message Attributes
 
 When you create translation or reference maps for inbound or outbound message flows, you can access source message attributes in those maps. You can then map the attributes to fields in the translated message payload or use the attribute values in your mapping logic to perform dynamic condition execution.
-
+DELETE THIS
 == Common Use Cases
 
 Accessing source message attributes helps in many use cases, such as with performing dynamic message routing decisions, performing specific functions, and mapping fields within the data transformation in the message flow execution.
