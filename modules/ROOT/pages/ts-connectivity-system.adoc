@@ -5,3 +5,7 @@ include::_attributes.adoc[]
 endif::[]
 
 If you have problems receiving or sending data, the messages and solutions described here can help resolve your issue.
+
+== See Also
+
+include::_partials/rn-known-issues.adoc[tag=knownIssuesSeeAlsoLink]
