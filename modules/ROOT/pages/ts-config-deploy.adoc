@@ -6,3 +6,7 @@ endif::[]
 
 If you encounter errors as you set up your partners and message flows,
 the messages and solutions described here can help you resolve your issue.
+
+== See Also
+
+include::_partials/rn-known-issues.adoc[tag=knownIssuesSeeAlsoLink]
