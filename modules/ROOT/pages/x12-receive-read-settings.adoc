@@ -34,7 +34,7 @@ When unchecked, the AK3 segment of the generated 997 functional acknowledgment d
 |Enabled
 
 |Report segment details
-||If selected, the details of segment errors are included in the functional acknowledgements generated (997) •
+|If selected, the details of segment errors are included in the functional acknowledgements generated (997).
 
 |Enabled
 

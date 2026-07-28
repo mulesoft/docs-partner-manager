@@ -67,6 +67,7 @@ a|* If selected, Partner Manager rejects a message that contains segments that r
 |Enforce code set validations
 a|* If selected, Partner Manager enforces EDIFACT code set validations, as defined in the EDIFACT schemas.
 * If not selected, Partner Manager accepts the message.
+|Disabled
 |===
 
 If a message does not meet an enabled rule, Partner Manager rejects it.
