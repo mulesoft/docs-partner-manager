@@ -4,7 +4,7 @@ An outbound message flow receives application messages from the backend, transfo
 
 The following diagram shows the components of an outbound message flow:
 
-image::pm-outbound-message-flow.png["A flowchart showing how outbound messages are configured"]
+image::pm-outbound-message-flow.png["How outbound messages are configured"]
 
 [%header%autowidth.spread]
 |===

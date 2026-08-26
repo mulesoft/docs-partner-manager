@@ -4,7 +4,7 @@ Understanding how Partner Manager deploys runtime applications helps you choose 
 
 When you deploy a message flow, Partner Manager automatically transforms your configurations and deploys runtime applications to orchestrate end-to-end B2B processing. These applications include receive endpoint services for inbound messages, document processing for parsing and translation, replication service for transaction tracking, and send endpoint services for delivering messages to partners or internal systems.
 
-image::pm-high-level-arch.png["A flowchart showing how data moves between trading partners and backend systems"]
+image::pm-high-level-arch.png["How data moves between trading partners and backend systems"]
 
 [%header%autowidth.spread]
 |===
@@ -29,7 +29,7 @@ image::pm-high-level-arch.png["A flowchart showing how data moves between tradin
 |Send Endpoint Services
 |Services to deliver transformed inbound application messages to internal applications such as ERP, billing, order management via transport protocols like HTTP, HTTPS, or SFTP; or outbound B2B EDI payloads to your partners via AS2, HTTP, HTTPS, or SFTP
 
-|image:pm-annotation-6.png["A circle with a number 6 inside"]
+|image:pm-annotation-6.png[""]
 |Payload Storage API
 |API to store B2B payload data in your storage solution
 |===
@@ -44,13 +44,13 @@ Runtime applications for environments configured to deploy to CloudHub 2.0 deplo
 
 New runtime applications deploy to the same region as the first deployment.
 
-image::cloudhub-deployment.png["A diagram that illustrates how data moves through CloudHub"]
+image::cloudhub-deployment.png["How data moves through CloudHub"]
 
 == Partner Manager for Runtime Fabric
 
 When deploying message flows to Runtime Fabric, Partner Manager uses ActiveMQ queues (set up and configured by the user) between processing stages to add additional reliability to B2B message processing. ActiveMQ destinations (queues) are automatically created when the first transaction is processed through the runtime applications. 
 
-image::rtf-deployment.png["A flowchart showing the architecture of a data processing system"]
+image::rtf-deployment.png["Architecture of a data processing system"]
 
 == See Also
 * xref:deploy-partner-manager.adoc[]
