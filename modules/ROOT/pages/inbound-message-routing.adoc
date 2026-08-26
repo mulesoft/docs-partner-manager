@@ -45,13 +45,13 @@ For example, if the message type is named `custom-po` and it's formatted as XML,
 
 When Partner Manager deploys endpoint applications in  Mule runtime, the protocol and endpoint configurations dictate the steps the applications follow, as shown in the diagram. Next, the document processing service routes the message via the `dps-inbound-queue`. The API replication service receives a copy of the message via the `tracking-queue`, stores the message payload in your storage, and updates the tracking information in Partner Manager.
 
-image::pm-inbound-message-routing2.png["A flowchart of the inbound message processing for AS2, HTTP, and SFTP/FTP protocols", window=_blank, link={imagesdir}/pm-inbound-message-routing2.png]
+image::pm-inbound-message-routing2.png["Inbound message processing for AS2, HTTP, and SFTP/FTP protocols", window=_blank, link={imagesdir}/pm-inbound-message-routing2.png]
 
 === Document Processing
 
 The document processing application uses the inbound message's attributes, such as content-type header, URL relative path, file name, and payload, to route the message, as shown in the diagram. If Partner Manager doesn't find a matching message flow, the transmission receives a *Failed* status and an error message shows.
 
-image::pm-dps-inbound-processing2.png["A flowchart that depicts message flow processing and matching"]
+image::pm-dps-inbound-processing2.png["Message flow processing and matching"]
 
 == Messages That Use an HTTP or HTTPS Receive from Partners Endpoint
 
