@@ -20,7 +20,7 @@ RAML specification for the payload storage API, which includes the URI parameter
 +
 Sample template for creating the payload storage API using Amazon S3
 +
-. xref:general::api-led-develop.adoc[Implement the API] to connect with your choice of storage location; for example, a database, Amazon S3, or filesystem.
+. xref:apim-home::api-led-develop.adoc[Implement the API] to connect with your choice of storage location; for example, a database, Amazon S3, or filesystem.
 . xref:runtime-manager::deployment-strategies.adoc[Deploy the API] on a runtime that can access the storage solution.
 
 . Make a note of the API URL and configuration values:
